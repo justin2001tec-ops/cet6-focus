@@ -25,6 +25,8 @@
 
 GitHub Pages deployment ID `6047386387` reported `state: success`, and its deployed SHA is exactly `7aa93ea1caf67f6621878ea5f8737407c6d16070`. The Pages environment is configured for `main`, workflow deployment, HTTPS, and the `/cet6-focus/` subpath.
 
+After this report and its evidence were pushed, the final evidence commit `ded751cac5cf5a271dd5a3b69362bb7c96ff8d77` also passed [quality run 32637406536](https://github.com/justin2001tec-ops/cet6-focus/actions/runs/32637406536) and [Pages run 32637406497](https://github.com/justin2001tec-ops/cet6-focus/actions/runs/32637406497). The resulting Pages deployment `6047580526` reported `state: success`, pointed to that evidence commit, and served the same runtime bundle. A fresh full online smoke run against that latest deployment completed successfully at 2026-08-23 11:48Z.
+
 ## Production online smoke
 
 The final run used a fresh Playwright Chromium context against the real Pages URL. It exited with code 0.
