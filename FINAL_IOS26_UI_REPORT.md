@@ -7,7 +7,7 @@
 - 分支：`ui/ios26-liquid-glass`
 - 基线：`main` / `v1.0.0`，基线提交 `9eb6a60`
 - PR：<https://github.com/justin2001tec-ops/cet6-focus/pull/1>
-- 在线地址：未部署；本次仅使用本地 production preview 做验收
+- 现有 v1.0.0 在线 Demo（main）：<https://justin2001tec-ops.github.io/cet6-focus/>；本 UI 分支未部署
 - 合并状态：未合并
 
 本次只处理展示层、布局层和导航层。没有改写 FSRS 调度、IndexedDB schema / migration、学习队列、听写判定、薄弱词算法、备份恢复、PWA 缓存策略、词库内容或图片来源。
@@ -87,7 +87,7 @@
 
 - 截图是 Chromium headless 视觉证据，不等同于真机 iOS Safari；建议验收时重点看 375×812、390×844、430×932 的真实触摸和安全区表现。
 - `dictation-iphone-keyboard.png` 是“输入已聚焦、底部栏退让”的 keyboard-ready 状态；无头浏览器不会绘制真实系统软键盘。
-- 未部署在线网站，也没有创建 `v1.1.0` tag；等待验收后再决定是否合并和发布。
+- 本 UI 分支尚未部署，也没有创建 `v1.1.0` tag；现有在线地址仍是 main 上的 v1.0.0，等待验收后再决定是否合并和发布。
 - 玻璃材料在真实设备上会随背景和系统渲染略有差异，fallback 已提供稳定可读的实色层。
 - 本报告没有替代验收；请直接检查 PR diff、实际行为和上述截图。
 
