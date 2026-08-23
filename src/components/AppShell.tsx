@@ -109,7 +109,7 @@ function MinimalHomeNav({ hidden }: { hidden: boolean }) {
     { to: '/more', label: '更多', icon: MoreHorizontal },
   ]
   return (
-    <nav className="immersive-home__bottom-nav" style={hidden ? { opacity: 0, pointerEvents: 'none', transform: 'translate(-50%, calc(100% + 24px))' } : undefined} aria-label="首页主导航">
+    <nav className="immersive-home__bottom-nav" style={hidden ? { opacity: 0, pointerEvents: 'none', transform: 'translateY(calc(100% + 24px))' } : undefined} aria-label="首页主导航">
       {items.map((item) => {
         const Icon = item.icon
         const active = isRouteActive(item.to, location.pathname)

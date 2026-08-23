@@ -9,8 +9,8 @@
 
 .app-frame--immersive-home .app-background {
   display: block;
-  filter: saturate(1.04) contrast(.98);
-  transform: scale(1.015);
+  filter: saturate(1.02) contrast(.98);
+  transform: scale(1.012);
 }
 
 .app-frame--immersive-home .app-background img {
@@ -19,8 +19,8 @@
 
 .app-frame--immersive-home .app-background::after {
   background:
-    linear-gradient(180deg, rgba(5, 11, 8, .18) 0%, rgba(5, 11, 8, .04) 37%, rgba(5, 11, 8, .34) 100%),
-    rgba(5, 11, 8, var(--scene-overlay, .24));
+    linear-gradient(180deg, rgba(5, 11, 8, .12) 0%, rgba(5, 11, 8, .02) 38%, rgba(5, 11, 8, .30) 100%),
+    rgba(5, 11, 8, var(--scene-overlay, .20));
 }
 
 .app-frame--immersive-home .main-content {
@@ -52,7 +52,7 @@
   width: 100%;
   min-height: 100svh;
   margin: 0;
-  padding: max(28px, env(safe-area-inset-top)) clamp(16px, 5vw, 7%) calc(112px + env(safe-area-inset-bottom));
+  padding: max(24px, env(safe-area-inset-top)) clamp(16px, 4vw, 6vw) calc(clamp(112px, 15vh, 164px) + env(safe-area-inset-bottom));
   color: inherit;
 }
 
@@ -61,180 +61,116 @@
   align-content: start;
   justify-items: center;
   min-height: 0;
-  padding-top: clamp(92px, 25vh, 286px);
+  padding-top: clamp(88px, 24vh, 260px);
   text-align: center;
-}
-
-.immersive-home__kicker {
-  color: rgba(255, 255, 255, .76);
-  font-size: 10px;
-  font-weight: 760;
-  letter-spacing: .16em;
-  line-height: 1.4;
-  text-transform: uppercase;
-  text-shadow: 0 1px 18px rgba(0, 0, 0, .22);
 }
 
 .immersive-home__word-link {
   max-width: min(100%, 920px);
-  margin-top: 18px;
-  border-radius: 12px;
+  margin: 0;
+  border-radius: 10px;
+  color: inherit;
 }
 
 .immersive-home__featured-word {
   max-width: min(100%, 920px);
   color: #fff;
-  font-family: var(--font-word, Georgia, serif);
-  font-size: clamp(48px, 5.4vw, 86px);
-  font-weight: 680;
-  letter-spacing: -.055em;
-  line-height: .98;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", "Noto Sans CJK SC", Arial, sans-serif;
+  font-size: clamp(46px, 5vw, 78px);
+  font-weight: 700;
+  letter-spacing: -.025em;
+  line-height: 1;
   overflow-wrap: anywhere;
-  text-shadow: 0 3px 28px rgba(0, 0, 0, .28);
+  text-shadow: 0 2px 16px rgba(0, 0, 0, .24);
 }
 
 .immersive-home__word-link:hover .immersive-home__featured-word {
-  color: #fff4d8;
-}
-
-.immersive-home__word-meta {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 14px;
-  color: rgba(255, 255, 255, .84);
-  font-size: 13px;
-  line-height: 1.4;
-  text-shadow: 0 1px 16px rgba(0, 0, 0, .22);
-}
-
-.immersive-home__scene-note {
-  margin-top: 12px;
-  color: rgba(255, 255, 255, .62);
-  font-size: 11px;
-  line-height: 1.5;
-  text-shadow: 0 1px 14px rgba(0, 0, 0, .22);
+  color: #fff8e8;
 }
 
 .immersive-home__actions {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(8px, 1.4vw, 16px);
-  width: min(900px, 100%);
+  gap: 12px;
+  width: min(880px, 100%);
   margin: 0 auto;
 }
 
 .immersive-home__task-card {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto auto;
-  align-items: center;
-  gap: 12px;
-  min-height: 102px;
-  padding: 17px clamp(14px, 2vw, 24px);
-  border: 1px solid rgba(255, 255, 255, .14);
-  border-radius: 18px;
-  background: rgba(17, 23, 19, .47);
-  box-shadow: 0 14px 38px rgba(0, 0, 0, .18), inset 0 1px 0 rgba(255, 255, 255, .08);
-  -webkit-backdrop-filter: blur(12px) saturate(115%);
-  backdrop-filter: blur(12px) saturate(115%);
+  align-content: center;
+  justify-items: start;
+  min-height: 90px;
+  padding: 16px 20px;
+  border: 1px solid rgba(255, 255, 255, .075);
+  border-radius: 15px;
+  background: rgba(20, 24, 22, .48);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, .14);
+  -webkit-backdrop-filter: blur(18px) saturate(112%);
+  backdrop-filter: blur(18px) saturate(112%);
   color: #fff;
 }
 
 .immersive-home__task-card:hover {
-  border-color: rgba(255, 255, 255, .28);
-  background: rgba(17, 23, 19, .58);
+  background: rgba(20, 24, 22, .54);
 }
 
 .immersive-home__task-card:focus-visible,
 .immersive-home__word-link:focus-visible,
 .immersive-home__nav-item:focus-visible {
-  outline-color: rgba(255, 226, 159, .95);
+  outline: 2px solid rgba(255, 226, 159, .95);
+  outline-offset: 4px;
 }
 
-.immersive-home__task-icon {
-  display: grid;
-  place-items: center;
-  width: 34px;
-  height: 34px;
-  border: 1px solid rgba(255, 255, 255, .15);
-  border-radius: 11px;
-  background: rgba(255, 255, 255, .09);
-  color: #ffe29f;
-}
-
-.immersive-home__task-copy {
-  display: grid;
-  gap: 4px;
-  min-width: 0;
-}
-
-.immersive-home__task-copy strong {
+.immersive-home__task-label {
+  color: rgba(255, 255, 255, .92);
   font-size: 15px;
-  font-weight: 710;
-  letter-spacing: .01em;
-}
-
-.immersive-home__task-copy small {
-  overflow: hidden;
-  color: rgba(255, 255, 255, .64);
-  font-size: 10px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  font-weight: 650;
+  line-height: 1.2;
 }
 
 .immersive-home__task-value {
-  color: #f3a712;
-  font-size: clamp(24px, 3vw, 36px);
-  font-weight: 720;
-  letter-spacing: -.06em;
-}
-
-.immersive-home__task-arrow {
-  color: rgba(255, 255, 255, .48);
+  margin-top: 4px;
+  color: #f0aa38;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -.035em;
+  line-height: 1;
 }
 
 .immersive-home__bottom-nav {
   position: fixed;
   z-index: 10;
-  right: auto;
+  right: 0;
   bottom: calc(16px + env(safe-area-inset-bottom));
-  left: 50%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3px;
-  width: 164px;
-  min-height: 52px;
-  padding: 5px;
-  border: 1px solid rgba(255, 255, 255, .14);
-  border-radius: 999px;
-  background: rgba(14, 20, 17, .48);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, .2), inset 0 1px 0 rgba(255, 255, 255, .08);
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
-  transform: translateX(-50%);
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-inline: max(12px, calc(8.5vw - 16px));
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
   transition: opacity .2s ease, transform .2s ease;
 }
 
 .immersive-home__nav-item {
   display: grid;
   place-items: center;
-  min-height: 40px;
-  border-radius: 999px;
-  color: rgba(255, 255, 255, .62);
+  width: 32px;
+  height: 32px;
+  color: rgba(255, 255, 255, .72);
+  transition: color .18s ease, opacity .18s ease;
 }
 
 .immersive-home__nav-item:hover,
 .immersive-home__nav-item.is-active {
-  background: rgba(255, 255, 255, .12);
+  background: transparent;
   color: #fff;
-}
-
-.app-frame--immersive-home.app-frame--plain .immersive-home__kicker,
-.app-frame--immersive-home.app-frame--plain .immersive-home__scene-note,
-.app-frame--immersive-home.app-frame--plain .immersive-home__word-meta {
-  color: var(--muted);
-  text-shadow: none;
+  opacity: 1;
 }
 
 .app-frame--immersive-home.app-frame--plain .immersive-home__featured-word {
@@ -253,21 +189,12 @@
   color: var(--ink);
 }
 
-.app-frame--immersive-home.app-frame--plain .immersive-home__task-copy small,
-.app-frame--immersive-home.app-frame--plain .immersive-home__task-arrow {
-  color: var(--muted);
+.app-frame--immersive-home.app-frame--plain .immersive-home__task-label {
+  color: var(--ink);
 }
 
-.app-frame--immersive-home.app-frame--plain .immersive-home__task-icon {
-  border-color: var(--line);
-  background: var(--accent-soft);
+.app-frame--immersive-home.app-frame--plain .immersive-home__task-value {
   color: var(--accent-strong);
-}
-
-.app-frame--immersive-home.app-frame--plain .immersive-home__bottom-nav {
-  border-color: var(--line);
-  background: color-mix(in srgb, var(--surface-solid) 82%, transparent);
-  box-shadow: var(--shadow-soft);
 }
 
 .app-frame--immersive-home.app-frame--plain .immersive-home__nav-item {
@@ -276,8 +203,8 @@
 
 .app-frame--immersive-home.app-frame--plain .immersive-home__nav-item:hover,
 .app-frame--immersive-home.app-frame--plain .immersive-home__nav-item.is-active {
-  background: var(--accent-soft);
-  color: var(--accent-strong);
+  background: transparent;
+  color: var(--ink);
 }
 
 @media (max-width: 700px) {
@@ -291,32 +218,11 @@
   }
 
   .immersive-home__stage {
-    padding-top: clamp(86px, 21vh, 190px);
-  }
-
-  .immersive-home__kicker {
-    font-size: 9px;
-    letter-spacing: .12em;
-  }
-
-  .immersive-home__word-link {
-    margin-top: 15px;
+    padding-top: clamp(88px, 23vh, 196px);
   }
 
   .immersive-home__featured-word {
-    font-size: clamp(38px, 11vw, 54px);
-  }
-
-  .immersive-home__word-meta {
-    gap: 8px;
-    margin-top: 11px;
-    font-size: 12px;
-  }
-
-  .immersive-home__scene-note {
-    max-width: 280px;
-    margin-top: 9px;
-    font-size: 10px;
+    font-size: clamp(40px, 11vw, 56px);
   }
 
   .immersive-home__actions {
@@ -324,49 +230,28 @@
   }
 
   .immersive-home__task-card {
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    gap: 8px;
-    min-height: 82px;
-    padding: 12px 11px;
-    border-radius: 15px;
+    min-height: 78px;
+    padding: 13px 14px;
+    border-radius: 14px;
   }
 
-  .immersive-home__task-icon {
-    width: 29px;
-    height: 29px;
-    border-radius: 9px;
-  }
-
-  .immersive-home__task-copy strong {
+  .immersive-home__task-label {
     font-size: 13px;
   }
 
-  .immersive-home__task-copy small {
-    font-size: 9px;
-  }
-
   .immersive-home__task-value {
-    grid-column: 3;
-    grid-row: 1;
-    font-size: 25px;
-  }
-
-  .immersive-home__task-arrow {
-    display: none;
+    margin-top: 3px;
+    font-size: 23px;
   }
 
   .immersive-home__bottom-nav {
     bottom: calc(12px + env(safe-area-inset-bottom));
-    min-height: 48px;
-  }
-
-  .immersive-home__nav-item {
-    min-height: 36px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .immersive-home__bottom-nav {
+  .immersive-home__bottom-nav,
+  .immersive-home__nav-item {
     transition: none;
   }
 }

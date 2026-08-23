@@ -62,12 +62,12 @@ await mkdir(screenshotDir, { recursive: true })
 const browser = await chromium.launch()
 
 try {
-  const { context, page } = await setup(browser, { width: 1440, height: 900 })
+  const { context, page } = await setup(browser, { width: 1920, height: 1080 })
   for (const [id, filename] of [
     ['aurora-01', 'home-desktop-aurora.png'],
     ['altiplano-02', 'home-desktop-plateau.png'],
-    ['lighthouse-01', 'home-desktop-lighthouse.png'],
-    ['waterfall-01', 'home-desktop-waterfall.png'],
+    ['lighthouse-02', 'home-desktop-lighthouse.png'],
+    ['waterfall-02', 'home-desktop-waterfall.png'],
     ['penguins-01', 'home-desktop-animal.png'],
   ]) {
     await setBackground(page, 'fixed', id)

@@ -45,11 +45,25 @@ test('BBDCD home removes dashboard chrome and keeps real learning links', async 
   await expect(page.locator('.page--immersive-home')).toHaveAttribute('data-scene-id', /.+/)
   await expect(page.locator('.immersive-home__featured-word')).toBeVisible()
   await expect(page.locator('.immersive-home__word-link')).toHaveAttribute('href', /#\/word\//)
+  await expect(page.locator('.immersive-home__featured-word')).toHaveCount(1)
+  await expect(page.locator('.immersive-home__kicker, .immersive-home__word-meta, .immersive-home__scene-note')).toHaveCount(0)
   await expect(page.locator('.immersive-home__task-card--learn')).toHaveAttribute('href', '#/study')
   await expect(page.locator('.immersive-home__task-card--review')).toHaveAttribute('href', '#/review')
+  await expect(page.locator('.immersive-home__task-card--learn > span')).toHaveCount(2)
+  await expect(page.locator('.immersive-home__task-card--review > span')).toHaveCount(2)
+  await expect(page.locator('.immersive-home__task-icon, .immersive-home__task-copy, .immersive-home__task-arrow')).toHaveCount(0)
   await expect(page.locator('.immersive-home__bottom-nav .immersive-home__nav-item')).toHaveCount(3)
+  await expect(page.locator('.immersive-home__bottom-nav svg')).toHaveCount(3)
   await expect(page.locator('.sidebar, .mobile-topbar, .mobile-nav')).toHaveCount(0)
   await expect(page.locator('.dashboard-hero, .dashboard-grid--tasks, .page-header')).toHaveCount(0)
+
+  const navStyle = await page.locator('.immersive-home__bottom-nav').evaluate((element) => {
+    const style = window.getComputedStyle(element)
+    return { background: style.backgroundColor, border: style.borderTopWidth, backdrop: style.backdropFilter }
+  })
+  expect(navStyle.background).toBe('rgba(0, 0, 0, 0)')
+  expect(navStyle.border).toBe('0px')
+  expect(navStyle.backdrop).toBe('none')
 
   await page.locator('.immersive-home__task-card--learn').click()
   await expect(page.locator('.page--study')).toBeVisible({ timeout: 15_000 })
