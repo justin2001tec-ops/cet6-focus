@@ -54,6 +54,7 @@ export function AppRouter() {
               <Route path="/dictation" element={<Dictation />} />
               <Route path="/words" element={<Vocabulary />} />
               <Route path="/word/:id" element={<WordDetail />} />
+              <Route path="/words/:id" element={<WordDetail />} />
               <Route path="/mistakes" element={<Mistakes />} />
               <Route path="/stats" element={<Stats />} />
               <Route path="/settings" element={<Settings />} />

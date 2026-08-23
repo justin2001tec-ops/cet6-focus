@@ -15,6 +15,7 @@ import {
 } from 'lucide-react'
 import { useApp } from '@/app/providers'
 import { Notice } from '@/components/ui'
+import { getRoutePresentation, isRouteActive } from '@/lib/route-presentation'
 
 const desktopNav = [
   { to: '/', label: '今日', icon: Home, end: true },
@@ -74,7 +75,7 @@ export function AppShell() {
       <main className="main-content">
         <div className="mobile-topbar liquid-glass">
           <NavBrand compact />
-          <span className="mobile-topbar__title">{pageLabel(location.pathname)}</span>
+          <span className="mobile-topbar__title">{getRoutePresentation(location.pathname).title}</span>
           <NavLink to="/settings" className="icon-button" aria-label="打开设置"><Settings2 size={19} /></NavLink>
         </div>
         {notice && <Notice message={notice} onClose={clearNotice} />}
@@ -123,23 +124,6 @@ function NavigationLink({ to, label, icon: Icon, end }: { to: string; label: str
 
 function CheckCircleIcon() {
   return <CheckCircle2 size={16} aria-hidden="true" />
-}
-
-function isRouteActive(to: string, pathname: string): boolean {
-  if (to === '/') return pathname === '/'
-  if (to === '/learn') return ['/learn', '/study', '/review', '/dictation', '/mistakes', '/mistakes/study'].some((path) => pathname === path || pathname.startsWith(`${path}/`))
-  if (to === '/more') return ['/more', '/stats', '/settings'].some((path) => pathname === path || pathname.startsWith(`${path}/`))
-  return pathname === to || pathname.startsWith(`${to}/`)
-}
-
-function pageLabel(pathname: string): string {
-  if (pathname === '/') return '今日'
-  if (pathname === '/words') return '词库'
-  if (pathname === '/stats') return '统计'
-  if (pathname === '/settings') return '设置'
-  if (pathname === '/dictation') return '听写'
-  if (pathname === '/review') return '复习'
-  return '学习'
 }
 
 export function PageHeader({ eyebrow, title, description, action }: { eyebrow?: string; title: string; description?: string; action?: React.ReactNode }) {

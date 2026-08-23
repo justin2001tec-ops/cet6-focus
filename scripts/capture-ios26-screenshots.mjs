@@ -115,6 +115,11 @@ await mkdir(screenshotDir, { recursive: true })
   await route(page, '/words', '.page--vocabulary')
   await page.locator('.word-row').first().waitFor({ state: 'visible', timeout: 15_000 })
   await shot(page, 'vocabulary-iphone.png')
+  await page.locator('.word-row').first().click()
+  await page.locator('.bottom-sheet').waitFor({ state: 'visible', timeout: 15_000 })
+  await page.waitForTimeout(150)
+  await shot(page, 'word-detail-sheet-iphone.png')
+  await page.getByRole('dialog').getByRole('button', { name: '关闭词条详情' }).click()
   await route(page, '/settings', '.page--settings')
   await shot(page, 'settings-iphone.png')
   await context.close()
@@ -128,6 +133,22 @@ await mkdir(screenshotDir, { recursive: true })
   await page.waitForTimeout(150)
   await route(page, '/', '.page--dashboard')
   await shot(page, 'dashboard-iphone-dark.png')
+  await context.close()
+  await browser.close()
+}
+
+{
+  const { browser, context, page } = await setup({ width: 430, height: 932 })
+  await route(page, '/', '.page--dashboard')
+  await shot(page, 'safe-area-iphone-430.png')
+  await context.close()
+  await browser.close()
+}
+
+{
+  const { browser, context, page } = await setup({ width: 375, height: 812 })
+  await route(page, '/', '.page--dashboard')
+  await shot(page, 'safe-area-iphone-375.png')
   await context.close()
   await browser.close()
 }
