@@ -96,3 +96,60 @@
 1. 先验收 PR diff 和截图。
 2. 如通过，再合并 `ui/ios26-liquid-glass` 到 `main`。
 3. 合并后再执行发布 / 部署，并单独创建 `v1.1.0`。
+
+## Remediation Round 2
+
+本轮严格限定在交接单要求的收尾修复、可访问呈现、安全区、路由语义和正式 E2E 证据，没有新增产品功能，也没有改动 IndexedDB schema、FSRS 调度、学习队列、听写判定或词库内容。
+
+### 修复内容
+
+- Vocabulary 移动端词条行现在打开真实的 `role="dialog"` Bottom Sheet；保留原有 `/word/:id` 深链接，并增加 `/words/:id` 兼容入口。Sheet 支持遮罩 / Escape / 关闭按钮 / 下拉手势、焦点恢复、背景滚动锁定、发音、重点标记、个人笔记、进入学习和完整详情。
+- `index.html` 增加 `viewport-fit=cover`；移动端主内容、顶部 compact bar、底部导航和 Bottom Sheet 使用 `env(safe-area-inset-top/bottom)`，覆盖 375×812、390×844、430×932 验证尺寸。
+- 学习入口保持独立卡片；Settings / More 的 grouped list 恢复连续分组圆角和边界。
+- 路由标题和主 Tab 统一由 `src/lib/route-presentation.ts` 驱动，覆盖今日、学习、复习、听写、薄弱词、词库、词条详情、统计、设置、更多及嵌套路由。
+- `.github/workflows/quality.yml` 新增 Ubuntu Playwright E2E job，使用 Chromium、单 worker、失败时上传 artifacts；新增 presentation E2E 覆盖 Sheet、深链接标题 / Tab、安全区和横向溢出。
+
+### 本轮文件
+
+- UI：`src/components/presentation/BottomSheet.tsx`、`src/features/vocabulary/WordDetailSheet.tsx`、`src/features/vocabulary/Vocabulary.tsx`、`src/app/router.tsx`、`src/components/AppShell.tsx`、`src/lib/route-presentation.ts`。
+- 样式 / 页面：`index.html`、`src/styles/ios26-layout.css`、`src/styles/ios26-materials.css`。
+- 测试 / CI：`tests/e2e/presentation.spec.ts`、`package.json`、`.github/workflows/quality.yml`、`vitest.config.ts`、`scripts/capture-ios26-screenshots.mjs`。
+- 证据：`audit/ios26-ui/` 中的现有截图已按 production preview 重新生成，并新增 Bottom Sheet 与安全区截图。
+
+### 本地验证
+
+| Gate | 结果 | 证据 |
+| --- | --- | --- |
+| `pnpm vocab:validate` | PASS | 2219 unique CET-6 entries；missingMeaning=0；missingDefinition=0 |
+| `pnpm lint` | PASS | ESLint clean |
+| `pnpm typecheck` | PASS | `tsc -b --pretty false` clean |
+| `pnpm test` | PASS | 10 files / 23 tests passed |
+| `pnpm build` | PASS | 1614 modules transformed；production `dist` generated |
+| `pnpm run test:e2e:presentation` | PASS | 3 mobile presentation tests passed individually |
+| `pnpm run capture:ios26` | PASS | 15 production-preview screenshots generated |
+| `git diff --check` | PASS | no whitespace errors |
+
+### GitHub Actions 正式证据
+
+同一提交 `4cc7f6b2d703f85f6ca58b4810a22a5d84acabb8` 的 push workflow 已完成：
+
+- [quality workflow run 32635130202](https://github.com/justin2001tec-ops/cet6-focus/actions/runs/32635130202)：`quality` job PASS；词库、typecheck、lint、unit tests、build 全部成功。
+- [quality job 97183613656](https://github.com/justin2001tec-ops/cet6-focus/actions/runs/32635130202/job/97183613656)：PASS。
+- [Playwright E2E job 97183613541](https://github.com/justin2001tec-ops/cet6-focus/actions/runs/32635130202/job/97183613541)：Ubuntu 24.04 + Node 22 + Chromium，`28 tests using 1 worker`，`15 passed`、`13 skipped`、`0 failed`。
+- 同一提交的 [pull_request workflow run 32635133156](https://github.com/justin2001tec-ops/cet6-focus/actions/runs/32635133156) 也已完成，`quality` 与 `e2e` 均 PASS。
+
+因此，原报告中“Windows runner 完成后没有正式汇总”的环境限制已由上述 Linux Actions 正式汇总覆盖；不把 skipped 测试计入 passed，且没有失败测试。
+
+### 新增截图
+
+| 场景 | 尺寸 | 文件 |
+| --- | ---: | --- |
+| Vocabulary → Word Detail Bottom Sheet · iPhone | 390×844 | [`word-detail-sheet-iphone.png`](audit/ios26-ui/word-detail-sheet-iphone.png) |
+| Safe Area · iPhone | 430×932 | [`safe-area-iphone-430.png`](audit/ios26-ui/safe-area-iphone-430.png) |
+| Safe Area · iPhone | 375×812 | [`safe-area-iphone-375.png`](audit/ios26-ui/safe-area-iphone-375.png) |
+
+### 本轮交付状态
+
+**PR OPEN / NOT MERGED / NO `v1.1.0` TAG / WAITING FOR SECOND REVIEW**
+
+本分支未部署；现有在线 Demo 仍是 main 上的 v1.0.0：<https://justin2001tec-ops.github.io/cet6-focus/>。请先检查 PR diff、真实交互和截图，验收通过后再决定合并、部署和创建 `v1.1.0`。
