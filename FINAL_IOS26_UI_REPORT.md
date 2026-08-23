@@ -6,7 +6,7 @@
 
 - 分支：`ui/ios26-liquid-glass`
 - 基线：`main` / `v1.0.0`，基线提交 `9eb6a60`
-- PR：待推送后回填
+- PR：<https://github.com/justin2001tec-ops/cet6-focus/pull/1>
 - 在线地址：未部署；本次仅使用本地 production preview 做验收
 - 合并状态：未合并
 
