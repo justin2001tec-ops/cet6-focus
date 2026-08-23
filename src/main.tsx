@@ -6,6 +6,7 @@ import '@/styles/global.css'
 import '@/styles/ios26-tokens.css'
 import '@/styles/ios26-materials.css'
 import '@/styles/ios26-layout.css'
+import '@/styles/bbdcd-home.css'
 
 if ('serviceWorker' in navigator && import.meta.env.PROD) {
   window.addEventListener('load', () => {

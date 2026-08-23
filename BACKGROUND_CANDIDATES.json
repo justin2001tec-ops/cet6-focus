@@ -1,0 +1,362 @@
+{
+  "version": "1.0",
+  "note": "Candidate pool only. Download highest-resolution originals from source pages, verify color/no visible watermark/min width >=2560px, then tune crop and overlay after local visual QA.",
+  "rejected": [
+    "dramatic mountain + dense pine forest",
+    "mountain lake reflection + pine forest"
+  ],
+  "candidates": [
+    {
+      "id": "plateau-kiang-01",
+      "cat": "高原 / 动物远景",
+      "name": "Ladakh Changthang 高原 + 藏野驴",
+      "url": "https://unsplash.com/photos/a-mountain-range-with-a-body-of-water-in-the-foreground-FP-LQo1AGTA",
+      "words": [
+        "remote",
+        "vast",
+        "plateau",
+        "graze"
+      ],
+      "pos": "50% 52%",
+      "mobile": "54% 52%",
+      "overlay": 0.22,
+      "priority": "A"
+    },
+    {
+      "id": "altiplano-01",
+      "cat": "高原 / 荒山",
+      "name": "Bolivia Altiplano 荒原群山",
+      "url": "https://unsplash.com/photos/a-barren-landscape-with-mountains-in-the-background-VCmVqsnoCyY",
+      "words": [
+        "barren",
+        "rugged",
+        "arid",
+        "desolate"
+      ],
+      "pos": "50% 50%",
+      "mobile": "52% 50%",
+      "overlay": 0.2,
+      "priority": "A"
+    },
+    {
+      "id": "altiplano-02",
+      "cat": "高原 / 荒山",
+      "name": "Laguna Blanca 高海拔火山荒原",
+      "url": "https://unsplash.com/photos/a-mountain-range-in-the-middle-of-a-desert-yweLOOSW9Do",
+      "words": [
+        "vast",
+        "harsh",
+        "remote",
+        "rugged"
+      ],
+      "pos": "50% 50%",
+      "mobile": "50% 50%",
+      "overlay": 0.18,
+      "priority": "A"
+    },
+    {
+      "id": "ladakh-plateau-01",
+      "cat": "高原 / 荒山",
+      "name": "Ladakh 蓝天与棕色高原山体",
+      "url": "https://unsplash.com/photos/a-landscape-with-mountains-in-the-back-RMn0hMj-46A",
+      "words": [
+        "angular",
+        "rugged",
+        "remote",
+        "vast"
+      ],
+      "pos": "50% 52%",
+      "mobile": "50% 54%",
+      "overlay": 0.2,
+      "priority": "A"
+    },
+    {
+      "id": "pangong-01",
+      "cat": "高原湖",
+      "name": "Pangong Lake 开阔高原湖 + 裸山",
+      "url": "https://unsplash.com/photos/mountains-rise-above-a-tranquil-lake-4XwOG6Ah4cU",
+      "words": [
+        "tranquil",
+        "vast",
+        "remote",
+        "reflect"
+      ],
+      "pos": "50% 48%",
+      "mobile": "54% 50%",
+      "overlay": 0.18,
+      "priority": "A"
+    },
+    {
+      "id": "aurora-01",
+      "cat": "极光 / 星空",
+      "name": "Aurora + 山地",
+      "url": "https://unsplash.com/photos/aurora-borealis-dances-over-a-mountain-landscape-DwPo-SA3Fjw",
+      "words": [
+        "luminous",
+        "glow",
+        "radiant",
+        "ethereal"
+      ],
+      "pos": "50% 50%",
+      "mobile": "50% 52%",
+      "overlay": 0.18,
+      "priority": "A"
+    },
+    {
+      "id": "aurora-02",
+      "cat": "极光 / 星空",
+      "name": "Aurora + 山 + 水面",
+      "url": "https://unsplash.com/photos/aurora-borealis-above-mountain-and-body-of-water-l9cneQNE03Y",
+      "words": [
+        "aurora",
+        "glow",
+        "serene",
+        "radiant"
+      ],
+      "pos": "50% 48%",
+      "mobile": "54% 50%",
+      "overlay": 0.2,
+      "priority": "A"
+    },
+    {
+      "id": "stars-01",
+      "cat": "极光 / 星空",
+      "name": "原野 + 树群 + 星空",
+      "url": "https://unsplash.com/photos/a-field-with-trees-and-stars-in-the-sky-2rqZj69xpdQ",
+      "words": [
+        "cosmic",
+        "vast",
+        "serene",
+        "infinite"
+      ],
+      "pos": "50% 46%",
+      "mobile": "50% 48%",
+      "overlay": 0.2,
+      "priority": "A"
+    },
+    {
+      "id": "stars-02",
+      "cat": "极光 / 星空",
+      "name": "蓝色夜空 / 银河 + 原野",
+      "url": "https://unsplash.com/photos/a-field-with-trees-and-stars-in-the-sky-e_bmabLuhOE",
+      "words": [
+        "cosmic",
+        "night",
+        "vast",
+        "distant"
+      ],
+      "pos": "50% 46%",
+      "mobile": "50% 48%",
+      "overlay": 0.2,
+      "priority": "B"
+    },
+    {
+      "id": "waterfall-01",
+      "cat": "水景 / 瀑布",
+      "name": "绿色山谷中的瀑布",
+      "url": "https://unsplash.com/photos/waterfall-cascades-through-a-lush-green-valley-TVjCD27ykxQ",
+      "words": [
+        "cascade",
+        "waterfall",
+        "lush",
+        "vertical"
+      ],
+      "pos": "64% 50%",
+      "mobile": "66% 50%",
+      "overlay": 0.2,
+      "priority": "A"
+    },
+    {
+      "id": "waterfall-02",
+      "cat": "水景 / 瀑布",
+      "name": "玄武岩峡谷高瀑布",
+      "url": "https://unsplash.com/photos/tall-waterfall-cascades-down-basalt-columns-in-green-valley-lKdnVgBjc48",
+      "words": [
+        "plunge",
+        "vertical",
+        "cascade",
+        "cliff"
+      ],
+      "pos": "62% 50%",
+      "mobile": "65% 50%",
+      "overlay": 0.22,
+      "priority": "A"
+    },
+    {
+      "id": "waterfall-03",
+      "cat": "水景 / 瀑布",
+      "name": "开阔绿色山谷瀑布",
+      "url": "https://unsplash.com/photos/a-waterfall-in-the-middle-of-a-lush-green-valley-7Bd8sGIjqvc",
+      "words": [
+        "lush",
+        "valley",
+        "cascade",
+        "scenic"
+      ],
+      "pos": "58% 50%",
+      "mobile": "62% 50%",
+      "overlay": 0.2,
+      "priority": "A"
+    },
+    {
+      "id": "waterfall-04",
+      "cat": "水景 / 瀑布",
+      "name": "绿色谷地 + 远处瀑布",
+      "url": "https://unsplash.com/photos/a-lush-green-valley-with-a-waterfall-in-the-background-ZUHt0yYoUrQ",
+      "words": [
+        "lush",
+        "meadow",
+        "flow",
+        "remote"
+      ],
+      "pos": "55% 50%",
+      "mobile": "58% 50%",
+      "overlay": 0.18,
+      "priority": "B"
+    },
+    {
+      "id": "penguins-01",
+      "cat": "动物环境摄影",
+      "name": "绿色草地上的企鹅群",
+      "url": "https://unsplash.com/photos/a-group-of-penguins-standing-on-top-of-a-lush-green-field-h3JubFOr_Is",
+      "words": [
+        "waddle",
+        "group",
+        "stride",
+        "playful"
+      ],
+      "pos": "50% 56%",
+      "mobile": "50% 58%",
+      "overlay": 0.18,
+      "priority": "A"
+    },
+    {
+      "id": "donkeys-01",
+      "cat": "动物环境摄影",
+      "name": "Jujuy 山地荒原中的驴群",
+      "url": "https://www.pexels.com/photo/donkeys-grazing-in-jujuy-argentina-mountains-32121935/",
+      "words": [
+        "graze",
+        "herd",
+        "remote",
+        "pastoral"
+      ],
+      "pos": "50% 54%",
+      "mobile": "50% 56%",
+      "overlay": 0.16,
+      "priority": "A"
+    },
+    {
+      "id": "sheep-01",
+      "cat": "动物环境摄影",
+      "name": "Bolivia Altiplano 草地羊群",
+      "url": "https://unsplash.com/photos/a-group-of-sheep-grazing-in-a-field-Ra_rH21vRLs",
+      "words": [
+        "graze",
+        "herd",
+        "pastoral",
+        "range"
+      ],
+      "pos": "50% 52%",
+      "mobile": "50% 54%",
+      "overlay": 0.18,
+      "priority": "B"
+    },
+    {
+      "id": "daisy-01",
+      "cat": "花草近景",
+      "name": "明亮白色雏菊花田",
+      "url": "https://unsplash.com/photos/beautiful-field-of-vibrant-white-daisies-6HFKwwmWl20",
+      "words": [
+        "daisy",
+        "bloom",
+        "floral",
+        "fresh"
+      ],
+      "pos": "50% 52%",
+      "mobile": "50% 54%",
+      "overlay": 0.18,
+      "priority": "A"
+    },
+    {
+      "id": "daisy-02",
+      "cat": "花草近景",
+      "name": "草地雏菊群",
+      "url": "https://unsplash.com/photos/a-bunch-of-daisies-in-a-field-of-grass-5nPu3UY94RA",
+      "words": [
+        "daisy",
+        "gentle",
+        "bloom",
+        "spring"
+      ],
+      "pos": "50% 52%",
+      "mobile": "50% 54%",
+      "overlay": 0.18,
+      "priority": "B"
+    },
+    {
+      "id": "lighthouse-01",
+      "cat": "灯塔 / 独立建筑",
+      "name": "橙色灯塔 + 草坡 + 海岸",
+      "url": "https://unsplash.com/photos/orange-lighthouse-on-a-grassy-hill-by-the-sea-FaXoqw1yAL4",
+      "words": [
+        "beacon",
+        "guide",
+        "signal",
+        "solitary"
+      ],
+      "pos": "50% 48%",
+      "mobile": "54% 48%",
+      "overlay": 0.18,
+      "priority": "A"
+    },
+    {
+      "id": "lighthouse-02",
+      "cat": "灯塔 / 独立建筑",
+      "name": "草坡上的独立灯塔",
+      "url": "https://unsplash.com/photos/a-lighthouse-on-a-grassy-hill-Qk6MMA7YeFE",
+      "words": [
+        "beacon",
+        "horizon",
+        "guide",
+        "remote"
+      ],
+      "pos": "50% 48%",
+      "mobile": "52% 50%",
+      "overlay": 0.18,
+      "priority": "A"
+    },
+    {
+      "id": "volcano-01",
+      "cat": "火山 / 极端自然",
+      "name": "冰岛夜间火山喷发",
+      "url": "https://unsplash.com/photos/a-volcano-erupting-at-night--zrMXErqBwA",
+      "words": [
+        "eruption",
+        "blaze",
+        "fierce",
+        "intense"
+      ],
+      "pos": "50% 58%",
+      "mobile": "50% 60%",
+      "overlay": 0.2,
+      "priority": "A"
+    },
+    {
+      "id": "volcano-02",
+      "cat": "火山 / 极端自然",
+      "name": "Acatenango 夜间火山喷发",
+      "url": "https://unsplash.com/photos/a-volcano-erupting-at-night-JChyrFPcWd4",
+      "words": [
+        "eruption",
+        "ignite",
+        "intense",
+        "dramatic"
+      ],
+      "pos": "50% 58%",
+      "mobile": "50% 60%",
+      "overlay": 0.22,
+      "priority": "A"
+    }
+  ]
+}

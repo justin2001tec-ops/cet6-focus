@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { AppProvider, useApp } from '@/app/providers'
 import { AppShell } from '@/components/AppShell'
 import { BootScreen, ErrorScreen } from '@/components/States'
-import { Dashboard } from '@/features/dashboard/Dashboard'
+import { ImmersiveHome } from '@/features/home/ImmersiveHome'
 import { TodayFlow } from '@/features/today/TodayFlow'
 import { Dictation } from '@/features/dictation/Dictation'
 import { Mistakes } from '@/features/mistakes/Mistakes'
@@ -44,7 +44,7 @@ export function AppRouter() {
           <Route element={<ReadyGate />}>
             <Route path="/onboarding" element={<Onboarding />} />
             <Route element={<AppShell />}>
-              <Route path="/" element={<Dashboard />} />
+              <Route path="/" element={<ImmersiveHome />} />
               <Route path="/learn" element={<LearningHub />} />
               <Route path="/more" element={<More />} />
               <Route path="/today" element={<TodayFlow />} />
