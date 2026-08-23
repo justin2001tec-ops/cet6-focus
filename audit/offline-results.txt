@@ -1,0 +1,17 @@
+PWA / offline evidence
+Date: 2026-08-22
+
+Command:
+  CET6_PREVIEW_URL=http://127.0.0.1:4177 pnpm test:e2e --workers=1
+
+Result:
+  PASS — production-preview offline test passed in Chromium and Pixel 5.
+
+Procedure:
+  - Load the production preview online and wait for navigator.serviceWorker.ready/controller.
+  - Reload online so runtime JS/CSS and the app shell are warm in Cache Storage.
+  - Set the Playwright browser context offline.
+  - Reload and verify the onboarding shell renders.
+  - Verify the service worker controls the page and /data/cet6-vocab.v1.json is cached.
+
+Boundary: this verifies a warm-cache offline reload, not a first-visit cold start with no prior network access.

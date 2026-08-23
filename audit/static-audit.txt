@@ -1,0 +1,26 @@
+Static remediation audit
+Date: 2026-08-22
+
+Architecture:
+  React + TypeScript strict mode; HashRouter; Dexie tables for words/cards/reviewLogs/sessions/settings.
+  FSRS calls are isolated in src/lib/fsrs.ts; migration and learning transactions are isolated in src/lib/migration.ts and src/db/db.ts.
+  Weak signals are centralized in src/lib/weak.ts; Review/Dictation statistics are centralized in src/lib/stats.ts.
+  Dictation rotation is centralized in src/lib/dictation.ts; session completion is idempotent through src/lib/sessions.ts.
+
+P0 migration checks:
+  No words.clear() or cards.clear() in vocabulary initialization.
+  Existing cards, review logs, sessions, personal notes, stars, and spelling fields survive dataVersion/card-count reconciliation.
+  Removed words are archived; missing new cards are created only for missing word IDs; orphan cards are retained.
+
+Assets:
+  10 AVIF files and 10 WebP files exist under public/backgrounds/.
+  Each background has a source URL, author, license, local AVIF/WebP paths, object-position and overlay configuration.
+  IMAGE_SOURCES.md contains the corresponding public Wikimedia Commons pages and license links.
+
+Data quality:
+  public/data/cet6-vocab.v1.json validates as 2,219 unique entries.
+  missingMeaning=0; missingDefinition=0; missingPhonetic=2; missingPos=177.
+
+Repository boundary:
+  No .git metadata or usable remote exists in the project path; the delivery does not claim a clean Git state or GitHub URL.
+  .gitignore and .github/workflows/quality.yml are present for the next GitHub/Deployment step.

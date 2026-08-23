@@ -1,0 +1,15 @@
+Backup / restore evidence
+Date: 2026-08-22
+
+The Chromium Playwright round-trip test uses the real Settings UI and IndexedDB:
+  1. Onboard and rate one Study card.
+  2. Add a star and personal note directly to that learning card fixture.
+  3. Export JSON through the Settings UI.
+  4. Change the backup dataVersion to a legacy value for the migration-on-reload case.
+  5. Confirm RESET and wait for the real reload; reviewLogs count becomes 0.
+  6. Import the JSON through the file input and confirm the restore modal.
+  7. Wait for restore reload and inspect IndexedDB.
+
+Assertions passed: ReviewLog/session restored, star and personal note restored, FSRS snapshot preserved, onboarded settings preserved, and legacy dataVersion reconciled to cet6-vocab.v1.
+
+Backup schema validation rejects unsupported versions, malformed dates, invalid FSRS card numbers/states, invalid session/settings values, and malformed review records before transaction restore.

@@ -1,0 +1,24 @@
+CET6 Focus release candidate quality gates
+Date: 2026-08-22
+
+pnpm vocab:validate
+PASS — 2,219 unique CET-6 entries; missingMeaning=0; missingPhonetic=2; missingPos=177; missingDefinition=0.
+
+pnpm typecheck
+PASS — tsc -b --pretty false.
+
+pnpm lint
+PASS — eslint .
+
+pnpm test
+PASS — Vitest 3.2.7; 10 test files, 23 tests.
+
+pnpm build
+PASS — tsc -b + Vite 8.2.2; 1,605 modules transformed.
+
+CET6_PREVIEW_URL=http://127.0.0.1:4177 pnpm test:e2e --workers=1
+PASS — 22 tests: 14 passed, 8 intentionally skipped by project boundary.
+Passed: production-preview offline Chromium + Pixel 5, Today full flow, final-card Undo, dictation FSRS isolation, no-New dictation, dictation timestamp rotation, Word Detail navigation, migration, backup round-trip, fixed background persistence, and Pixel 5 overflow.
+Skipped: desktop-only flow tests in the mobile project and the mobile-only overflow test in the Chromium project.
+
+The full Vitest/build commands used the approved project-scoped elevated process permission because the restricted sandbox denied the local bundler child process. This is an execution-environment note, not a product failure.

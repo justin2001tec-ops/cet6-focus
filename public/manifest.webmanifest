@@ -1,0 +1,12 @@
+{
+  "name": "CET6 Focus",
+  "short_name": "CET6 Focus",
+  "description": "安静、可靠、离线优先的 CET-6 词汇学习工具。",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f3ef",
+  "theme_color": "#2f6559",
+  "lang": "zh-CN",
+  "icons": [{ "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

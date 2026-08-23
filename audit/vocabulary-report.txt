@@ -1,0 +1,25 @@
+CET-6 vocabulary final report
+Date: 2026-08-22
+
+Build command:
+  pnpm vocab:build
+
+Validation command:
+  pnpm vocab:validate
+
+Result:
+  PASS — 2,219 unique entries
+  missingMeaning=0
+  missingPhonetic=2
+  missingPos=177
+  missingDefinition=0
+
+Cleaning verified:
+  Literal escaped line breaks in the ECDICT snapshot are normalized before output.
+  POS uses the source pos field when present and otherwise derives prefixes such as n./v./a. from English definitions.
+  The output is public/data/cet6-vocab.v1.json and contains no duplicate word IDs or spellings.
+
+Sources and licenses:
+  OpenEtymology CET6.txt — CC BY-SA 4.0.
+  ECDICT snapshot — MIT.
+  Details: data-source/README.md and data-source/LICENSES.md.

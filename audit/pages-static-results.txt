@@ -1,0 +1,20 @@
+GitHub Pages subpath compatibility audit
+Date: 2026-08-22
+
+Build:
+  VITE_PUBLIC_BASE=/cet6-focus/ pnpm build
+  PASS — Vite output references /cet6-focus/assets/; 1,606 modules transformed.
+
+Static checks:
+  dist/index.html uses ./manifest.webmanifest and /cet6-focus/assets/.
+  dist/manifest.webmanifest uses start_url=./, scope=./, and ./icon.svg.
+  dist/sw.js derives its base from self.location and uses cache v2.
+  No root-absolute /data/, /backgrounds/, /sw.js, /manifest.webmanifest, or /icon.svg references remain in non-source-map dist output.
+
+Subpath HTTP server:
+  Local server mounts dist under /cet6-focus/.
+  PASS — index.html, manifest.webmanifest, sw.js, data/cet6-vocab.v1.json, JS bundle, and study-05.webp returned HTTP 200 with expected content types.
+
+Subpath PWA:
+  CET6_PREVIEW_URL=http://127.0.0.1:4179/cet6-focus/ pnpm test:e2e --workers=1 --grep "production PWA"
+  PASS — Chromium and Pixel 5, 2 passed.

@@ -1,0 +1,12 @@
+Responsive browser audit
+Date: 2026-08-22
+
+Measured document scrollWidth versus viewport width on the production preview dashboard:
+  375 x 812  -> scrollWidth 360; PASS no horizontal overflow.
+  390 x 844  -> scrollWidth 375; PASS no horizontal overflow.
+  768 x 1024 -> scrollWidth 753; PASS no horizontal overflow.
+  1366 x 768 -> scrollWidth 1351; PASS no horizontal overflow.
+  1440 x 900 -> scrollWidth 1425; PASS no horizontal overflow.
+  1920 x 1080 -> scrollWidth 1905; PASS no horizontal overflow.
+
+Playwright also passed the mobile overflow assertion in the Pixel 5 project. Current RC screenshots include 375px and 1440px views; prior JPG evidence is archived under audit/screenshots/archive/.

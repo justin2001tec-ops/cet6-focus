@@ -1,0 +1,11 @@
+Production build evidence
+Date: 2026-08-22
+
+Command: pnpm build
+Result: PASS
+Toolchain: tsc -b + Vite 8.2.2
+Modules transformed: 1,605
+
+dist/index.html: 0.62 kB (gzip 0.42 kB)
+dist/assets/index-DeXc6h7v.css: 38.36 kB (gzip 8.05 kB)
+dist/assets/index-KXFW4o-_.js: 442.81 kB (gzip 138.92 kB)

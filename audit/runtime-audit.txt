@@ -1,0 +1,15 @@
+Runtime release candidate evidence
+Date: 2026-08-22
+
+Current browser-level evidence is recorded by tests/e2e/smoke.spec.ts and the production offline test:
+  - Today Review -> Study -> Dictation -> completion follows real state transitions.
+  - Final-card Undo restores the same card and removes the ReviewLog.
+  - Dictation wrong/correction changes spelling/session signals and updates lastDictationAt without changing FSRS or ReviewLog.
+  - Dictation completion records lastDictationAt and rotates into the next never-dictated batch.
+  - Word Detail's 进入学习 action navigates to the Study route.
+  - Vocabulary reconciliation preserves fields and repairs only the missing card.
+  - Backup restore survives the scheduled reload and legacy dataVersion reconciliation.
+  - Fixed background ID persists across reload.
+  - Pixel 5 has no document horizontal overflow.
+
+Current screenshots are regenerated from the final production build under audit/screenshots/; older JPGs are under audit/screenshots/archive/. See FINAL_RC_REPORT.md for command-level evidence and known limits.
