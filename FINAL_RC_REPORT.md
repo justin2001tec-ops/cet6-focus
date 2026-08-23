@@ -91,9 +91,9 @@ E2E 通过项包括：
 
 ## 交付状态与边界
 
-- 项目目录没有 `.git` 元数据，也没有配置可用 GitHub remote；本轮没有未经授权地创建仓库或推送外部服务。
-- 已完成 GitHub/CI 准备：`.gitignore`、`packageManager` 和质量工作流已在项目中，项目可交给下一步 GitHub/Deployment 流程。
-- 当前没有在线部署地址；交付完整项目 ZIP `CET6_Focus_Release_Candidate.zip`，包含源码、词库、测试、审计文本、当前截图和最新 `dist`，不包含 `node_modules`、`test-results`、`work` 等本地临时产物。
+- 本报告记录的是 2026-08-22 RC freeze 快照；授权 GitHub 发布和线上部署已在其后完成，当前入口与证据以 `FINAL_DEPLOYMENT_REPORT.md` 为准。
+- 当前公开仓库为 `https://github.com/justin2001tec-ops/cet6-focus`，在线地址为 `https://justin2001tec-ops.github.io/cet6-focus/`。
+- 由于仓库和在线地址均已可用，本次不重复上传 ZIP；完整源码、词库、测试、审计文本和截图均在仓库中。
 - 离线门禁验证的是“在线预热应用壳后离线 reload”，不是首次冷启动完全断网。
 - 词库仍有 2 条缺音标、177 条缺词性，属于校验报告中的源数据可选字段；没有在应用中伪造补齐。
 - Web Speech API 的声音可用性依赖验收机器的浏览器和操作系统。

@@ -1,0 +1,24 @@
+CET6 Focus online Pages smoke
+Date: 2026-08-23
+URL: https://justin2001tec-ops.github.io/cet6-focus/
+Commit: 443afcf3889b842575df459428e6f4baf0ae2e0f
+
+Result: PASS
+
+Verified with a fresh Playwright Chromium context:
+- Root HTTP 200 and onboarding completion after the data-ready gate
+- manifest.webmanifest, sw.js, vocabulary JSON, and study-05.webp reachable under /cet6-focus/
+- Service Worker scope /cet6-focus/ and cet6-focus-shell-v3 cache
+- Vocabulary present in Cache Storage
+- Study rating writes ReviewLog and StudySession
+- Final-card Undo restores the same word and removes its ReviewLog
+- Dictation wrong-answer correction completes and records a Dictation session
+- /stats, /settings, /mistakes, and /words routes render
+- Backup export download starts
+- Fixed background loads from the Pages subpath and persists after reload
+- Service Worker controls reload and warm-cache offline reload succeeds
+- Console errors: 0
+- Page errors: 0
+- Failed network requests: 0
+
+Boundary: offline verification starts after an online warm-up; cold-start fully disconnected launch was not claimed.

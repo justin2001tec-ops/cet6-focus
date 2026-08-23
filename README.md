@@ -20,6 +20,12 @@ pnpm preview
 pnpm test:e2e
 ```
 
+## 在线交付
+
+- GitHub：[justin2001tec-ops/cet6-focus](https://github.com/justin2001tec-ops/cet6-focus)
+- Live Demo：[https://justin2001tec-ops.github.io/cet6-focus/](https://justin2001tec-ops.github.io/cet6-focus/)
+- 最终部署报告：`FINAL_DEPLOYMENT_REPORT.md`
+
 首次打开会加载 `public/data/cet6-vocab.v1.json` 到 IndexedDB。完成 onboarding 后，首页会按 FSRS 到期状态组织“复习 → 新词 → 听写”的学习链路。
 
 ## 结构
@@ -31,6 +37,7 @@ pnpm test:e2e
 - `scripts/`：可重复的词库构建和校验脚本。
 - `IMAGE_SOURCES.md`：背景图片的来源与许可证记录。
 - `FINAL_RC_REPORT.md`：本次 Release Candidate 的修补、门禁、截图和交付边界。
+- `FINAL_DEPLOYMENT_REPORT.md`：GitHub、Pages、Actions 和线上 smoke 证据。
 
 ## 数据与隐私
 
