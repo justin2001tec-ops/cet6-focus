@@ -13,6 +13,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
+    "test:e2e:serial": "playwright test --workers=1 --timeout=60000",
+    "capture:ios26": "tsx scripts/capture-ios26-screenshots.mjs",
     "vocab:build": "tsx scripts/build-vocabulary.ts",
     "vocab:validate": "tsx scripts/validate-vocabulary.ts"
   },

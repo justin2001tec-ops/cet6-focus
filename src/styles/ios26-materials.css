@@ -1,0 +1,97 @@
+/* Material primitives: large functional surfaces use real blur; dense content stays stable. */
+.liquid-glass {
+  border: 1px solid var(--glass-border);
+  background: var(--glass-regular-bg);
+  -webkit-backdrop-filter: blur(var(--glass-blur-regular)) saturate(var(--glass-saturation));
+  backdrop-filter: blur(var(--glass-blur-regular)) saturate(var(--glass-saturation));
+  box-shadow: var(--glass-shadow-soft), inset 0 1px 0 var(--glass-highlight);
+}
+
+.material-panel,
+.card-surface {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-panel);
+  background: var(--material-content-bg);
+  box-shadow: var(--glass-shadow-soft);
+  -webkit-backdrop-filter: blur(var(--glass-blur-content)) saturate(118%);
+  backdrop-filter: blur(var(--glass-blur-content)) saturate(118%);
+}
+
+.button {
+  min-height: 44px;
+  padding: 0 17px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-control);
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 730;
+  letter-spacing: -.01em;
+  transition: transform .2s cubic-bezier(.2, .8, .2, 1), background .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.button:hover:not(:disabled) { transform: translateY(-1px); }
+.button:active:not(:disabled) { transform: scale(.985); }
+.button--primary { border-color: color-mix(in srgb, var(--accent) 45%, transparent); background: color-mix(in srgb, var(--accent) 88%, var(--glass-clear-bg)); color: #f7fbf8; box-shadow: 0 10px 24px color-mix(in srgb, var(--accent) 21%, transparent), inset 0 1px 0 rgba(255,255,255,.28); }
+.button--primary:hover:not(:disabled) { background: var(--accent-strong); }
+.button--secondary { border-color: var(--glass-border); background: var(--glass-clear-bg); color: var(--ink); box-shadow: inset 0 1px 0 var(--glass-highlight); }
+.button--secondary:hover:not(:disabled), .button--ghost:hover:not(:disabled) { background: var(--surface-muted); }
+.button--soft { border-color: transparent; background: color-mix(in srgb, var(--accent-soft) 80%, transparent); color: var(--accent-strong); }
+.button--ghost { color: var(--ink-soft); }
+.button--danger { background: var(--rose-soft); color: var(--rose); }
+.button--sm { min-height: 37px; padding: 0 13px; border-radius: 15px; font-size: 12px; }
+.button--lg { min-height: 52px; padding-inline: 22px; border-radius: 20px; }
+
+.icon-button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background: var(--glass-clear-bg);
+  color: var(--ink-soft);
+  transition: transform .2s cubic-bezier(.2, .8, .2, 1), background .2s ease, color .2s ease;
+}
+.icon-button:hover:not(:disabled) { transform: translateY(-1px); background: var(--surface-muted); color: var(--ink); }
+.icon-button--secondary { background: var(--accent-soft); color: var(--accent-strong); }
+.icon-button--danger { background: var(--rose-soft); color: var(--rose); }
+
+.badge { min-height: 25px; padding: 0 9px; border-radius: var(--radius-capsule); font-size: 10px; font-weight: 760; letter-spacing: .06em; }
+.badge--neutral { background: color-mix(in srgb, var(--ink-soft) 12%, transparent); color: var(--ink-soft); }
+.badge--green { background: color-mix(in srgb, var(--accent-soft) 88%, transparent); color: var(--accent-strong); }
+.badge--blue { background: color-mix(in srgb, var(--blue-soft) 88%, transparent); color: var(--blue); }
+.badge--amber { background: color-mix(in srgb, var(--warm-soft) 88%, transparent); color: var(--warm); }
+.badge--rose { background: color-mix(in srgb, var(--rose-soft) 88%, transparent); color: var(--rose); }
+
+.notice {
+  top: 24px;
+  right: 28px;
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  background: var(--glass-regular-bg);
+  box-shadow: var(--glass-shadow);
+  -webkit-backdrop-filter: blur(var(--glass-blur-regular)) saturate(var(--glass-saturation));
+  backdrop-filter: blur(var(--glass-blur-regular)) saturate(var(--glass-saturation));
+}
+
+.text-input,
+.dictation-input,
+.search-box input,
+.note-card textarea {
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-control);
+  background: color-mix(in srgb, var(--surface-solid) 62%, transparent);
+  color: var(--ink);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.18);
+}
+.text-input:focus, .dictation-input:focus, .search-box input:focus, .note-card textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 16%, transparent); }
+
+.progress-track { height: 7px; background: color-mix(in srgb, var(--ink-soft) 14%, transparent); }
+.progress-fill { background: linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--accent) 65%, white)); }
+
+.modal-backdrop { background: color-mix(in srgb, var(--ink) 34%, transparent); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+.modal { border: 1px solid var(--glass-border); border-radius: var(--radius-panel); background: var(--material-content-strong); box-shadow: var(--glass-shadow); -webkit-backdrop-filter: blur(var(--glass-blur-regular)); backdrop-filter: blur(var(--glass-blur-regular)); }
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .liquid-glass { background: color-mix(in srgb, var(--surface-solid) 92%, transparent); }
+  .material-panel, .card-surface { background: color-mix(in srgb, var(--surface-solid) 96%, transparent); }
+  .modal-backdrop { background: color-mix(in srgb, var(--ink) 46%, transparent); }
+}
