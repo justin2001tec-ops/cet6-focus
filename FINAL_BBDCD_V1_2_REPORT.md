@@ -4,7 +4,7 @@
 
 - Branch: `ui/bbdcd-benchmark-v1.2`
 - Base: stable `v1.1.0` line; no changes to `main`
-- PR: to be opened after this branch is pushed
+- PR: [#2 — BBDCD v1.2 immersive home benchmark](https://github.com/justin2001tec-ops/cet6-focus/pull/2)
 - Merge: **NOT MERGED**
 - Tag: **NO `v1.2.0` TAG**
 - Acceptance state: **WAITING FOR VISUAL REVIEW**
@@ -70,4 +70,4 @@ Required screenshots are in `audit/bbdcd-v1.2/`:
 
 ## Explicit handoff boundary
 
-This branch is prepared for visual and code acceptance. It must remain **PR OPEN / NOT MERGED / NO `v1.2.0` TAG / WAITING FOR VISUAL REVIEW** until the owner approves the screenshots and behavior. No GitHub Pages deployment was made because that would exceed the master handoff’s PR-only acceptance stage.
+This branch is prepared for visual and code acceptance. PR [#2](https://github.com/justin2001tec-ops/cet6-focus/pull/2) is **OPEN / NOT MERGED / NO `v1.2.0` TAG / WAITING FOR VISUAL REVIEW** until the owner approves the screenshots and behavior. No GitHub Pages deployment was made because that would exceed the master handoff’s PR-only acceptance stage.
