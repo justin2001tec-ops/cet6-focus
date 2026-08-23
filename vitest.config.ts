@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitest/config'
-import { resolve } from 'node:path'
+import { fileURLToPath, URL } from 'node:url'
 
 export default defineConfig({
-  resolve: { alias: { '@': resolve(process.cwd(), 'src') } },
+  resolve: { alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) } },
   test: { environment: 'node', include: ['tests/unit/**/*.test.ts'] },
 })

@@ -3,6 +3,9 @@ import { createRoot } from 'react-dom/client'
 import { AppRouter } from '@/app/router'
 import { withBase } from '@/lib/public-path'
 import '@/styles/global.css'
+import '@/styles/ios26-tokens.css'
+import '@/styles/ios26-materials.css'
+import '@/styles/ios26-layout.css'
 
 if ('serviceWorker' in navigator && import.meta.env.PROD) {
   window.addEventListener('load', () => {

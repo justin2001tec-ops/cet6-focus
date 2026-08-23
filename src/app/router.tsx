@@ -1,4 +1,5 @@
 import { HashRouter, Navigate, Outlet, Route, Routes, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 import { AppProvider, useApp } from '@/app/providers'
 import { AppShell } from '@/components/AppShell'
 import { BootScreen, ErrorScreen } from '@/components/States'
@@ -12,6 +13,8 @@ import { Stats } from '@/features/stats/Stats'
 import { Study } from '@/features/study/Study'
 import { Vocabulary } from '@/features/vocabulary/Vocabulary'
 import { WordDetail } from '@/features/vocabulary/WordDetail'
+import { LearningHub } from '@/features/learn/LearningHub'
+import { More } from '@/features/more/More'
 
 function ReadyGate() {
   const { ready, dataReady, error, settings } = useApp()
@@ -24,15 +27,26 @@ function ReadyGate() {
   return <Outlet />
 }
 
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+  }, [pathname])
+  return null
+}
+
 export function AppRouter() {
   return (
     <AppProvider>
       <HashRouter>
+        <ScrollToTop />
         <Routes>
           <Route element={<ReadyGate />}>
             <Route path="/onboarding" element={<Onboarding />} />
             <Route element={<AppShell />}>
               <Route path="/" element={<Dashboard />} />
+              <Route path="/learn" element={<LearningHub />} />
+              <Route path="/more" element={<More />} />
               <Route path="/today" element={<TodayFlow />} />
               <Route path="/study" element={<Study mode="study" />} />
               <Route path="/review" element={<Study mode="review" />} />
@@ -40,6 +54,7 @@ export function AppRouter() {
               <Route path="/dictation" element={<Dictation />} />
               <Route path="/words" element={<Vocabulary />} />
               <Route path="/word/:id" element={<WordDetail />} />
+              <Route path="/words/:id" element={<WordDetail />} />
               <Route path="/mistakes" element={<Mistakes />} />
               <Route path="/stats" element={<Stats />} />
               <Route path="/settings" element={<Settings />} />
