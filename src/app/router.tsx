@@ -18,8 +18,8 @@ function ReadyGate() {
   const location = useLocation()
   if (!ready && !error) return <BootScreen />
   if (error) return <ErrorScreen message={error} />
+  if (!dataReady) return <BootScreen />
   if (!settings.onboarded && location.pathname !== '/onboarding') return <Navigate to="/onboarding" replace />
-  if (!dataReady && location.pathname !== '/onboarding') return <BootScreen />
   if (settings.onboarded && location.pathname === '/onboarding') return <Navigate to="/" replace />
   return <Outlet />
 }
