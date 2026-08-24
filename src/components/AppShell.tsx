@@ -1,5 +1,5 @@
 import { Outlet, NavLink, useLocation } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, type CSSProperties } from 'react'
 import {
   BarChart3,
   BookOpen,
@@ -36,7 +36,12 @@ export function AppShell() {
   const { background, notice, clearNotice } = useApp()
   const location = useLocation()
   const [keyboardInputFocused, setKeyboardInputFocused] = useState(false)
-  const backgroundStyle = background ? { objectPosition: background.objectPosition ?? 'center' } : undefined
+  const isImmersiveHome = location.pathname === '/'
+  const backgroundStyle = background ? {
+    '--scene-position': background.desktopPosition,
+    '--scene-mobile-position': background.mobilePosition,
+    '--scene-overlay': String(background.overlayOpacity),
+  } as CSSProperties : undefined
 
   useEffect(() => {
     const handleFocusIn = (event: FocusEvent) => {
@@ -52,9 +57,9 @@ export function AppShell() {
   }, [])
 
   return (
-    <div className={`app-frame ${background ? 'app-frame--with-background' : 'app-frame--plain'} ${keyboardInputFocused ? 'app-frame--keyboard-input' : ''}`}>
-      <div className="app-background" aria-hidden="true">{background && <picture style={backgroundStyle}><source srcSet={background.avif} type="image/avif" /><img src={background.webp} alt="" style={{ objectPosition: background.objectPosition ?? 'center' }} /></picture>}</div>
-      <aside className="sidebar liquid-glass">
+    <div className={`app-frame ${background ? 'app-frame--with-background' : 'app-frame--plain'} ${isImmersiveHome ? 'app-frame--immersive-home' : ''} ${keyboardInputFocused ? 'app-frame--keyboard-input' : ''}`} style={backgroundStyle}>
+      <div className="app-background" aria-hidden="true">{background && <picture><source srcSet={background.avif} type="image/avif" /><img src={background.webp} alt="" /></picture>}</div>
+      {!isImmersiveHome && <aside className="sidebar liquid-glass">
         <NavBrand />
         <nav className="sidebar__nav" aria-label="主导航">
           <NavGroup label="Workspace">
@@ -70,19 +75,19 @@ export function AppShell() {
         <div className="sidebar__bottom">
           <div className="sidebar__signature"><span className="status-dot" /> Local-first · UI preview</div>
         </div>
-      </aside>
+      </aside>}
 
       <main className="main-content">
-        <div className="mobile-topbar liquid-glass">
+        {!isImmersiveHome && <div className="mobile-topbar liquid-glass">
           <NavBrand compact />
           <span className="mobile-topbar__title">{getRoutePresentation(location.pathname).title}</span>
           <NavLink to="/settings" className="icon-button" aria-label="打开设置"><Settings2 size={19} /></NavLink>
-        </div>
+        </div>}
         {notice && <Notice message={notice} onClose={clearNotice} />}
         <Outlet />
       </main>
 
-      <nav className="mobile-nav liquid-glass" style={keyboardInputFocused ? { opacity: 0, pointerEvents: 'none', transform: 'translateY(calc(100% + 24px))' } : undefined} aria-label="移动端主导航">
+      {!isImmersiveHome && <nav className="mobile-nav liquid-glass" style={keyboardInputFocused ? { opacity: 0, pointerEvents: 'none', transform: 'translateY(calc(100% + 24px))' } : undefined} aria-label="移动端主导航">
         {mobileNav.map((item) => {
           const Icon = item.icon
           const active = isRouteActive(item.to, location.pathname)
@@ -90,8 +95,30 @@ export function AppShell() {
             <span className="mobile-nav__icon"><Icon size={19} /></span><span>{item.label}</span>
           </NavLink>
         })}
-      </nav>
+      </nav>}
+      {isImmersiveHome && <MinimalHomeNav hidden={keyboardInputFocused} />}
     </div>
+  )
+}
+
+function MinimalHomeNav({ hidden }: { hidden: boolean }) {
+  const location = useLocation()
+  const items = [
+    { to: '/', label: '首页', icon: Home, end: true },
+    { to: '/words', label: '词库', icon: ListChecks },
+    { to: '/more', label: '更多', icon: MoreHorizontal },
+  ]
+  return (
+    <nav className="immersive-home__bottom-nav" style={hidden ? { opacity: 0, pointerEvents: 'none', transform: 'translateY(calc(100% + 24px))' } : undefined} aria-label="首页主导航">
+      {items.map((item) => {
+        const Icon = item.icon
+        const active = isRouteActive(item.to, location.pathname)
+        return <NavLink key={item.to} to={item.to} end={item.end} className={`immersive-home__nav-item ${active ? 'is-active' : ''}`} aria-label={item.label}>
+          <Icon size={20} strokeWidth={1.8} aria-hidden="true" />
+          <span className="sr-only">{item.label}</span>
+        </NavLink>
+      })}
+    </nav>
   )
 }
 

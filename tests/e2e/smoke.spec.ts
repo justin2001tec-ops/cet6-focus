@@ -60,12 +60,59 @@ async function gotoRoute(page: Page, route: string): Promise<void> {
   await page.goto(`/#${route}`, { waitUntil: 'domcontentloaded' })
 }
 
+async function selectOptionStable(page: Page, selector: string, value: string): Promise<void> {
+  for (let attempt = 0; attempt < 8; attempt += 1) {
+    const control = page.locator(selector).first()
+    await control.waitFor({ state: 'visible', timeout: 5_000 })
+    try {
+      await control.selectOption(value)
+      return
+    } catch {
+      await page.waitForTimeout(150)
+    }
+  }
+  throw new Error(`Could not select ${value} from ${selector}`)
+}
+
+async function resetLearningCardsToNew(page: Page): Promise<void> {
+  await page.evaluate(() => new Promise<void>((resolve, reject) => {
+    const request = indexedDB.open('cet6-focus')
+    request.onerror = () => reject(request.error ?? new Error('IndexedDB open failed'))
+    request.onsuccess = () => {
+      const database = request.result
+      const transaction = database.transaction(['cards', 'reviewLogs', 'sessions'], 'readwrite')
+      const cards = transaction.objectStore('cards')
+      const cardsRequest = cards.getAll()
+      cardsRequest.onerror = () => reject(cardsRequest.error ?? new Error('Cards read failed'))
+      cardsRequest.onsuccess = () => {
+        const now = new Date().toISOString()
+        for (const card of cardsRequest.result) {
+          cards.put({
+            ...card,
+            due: now,
+            fsrsCard: { ...card.fsrsCard, due: now, state: 0, reps: 0, lapses: 0, lastReview: undefined },
+            spellingWrongCount: 0,
+            lastSpellingAt: undefined,
+            lastDictationAt: undefined,
+            updatedAt: now,
+          })
+        }
+      }
+      transaction.objectStore('reviewLogs').clear()
+      transaction.objectStore('sessions').clear()
+      transaction.oncomplete = () => { database.close(); resolve() }
+      transaction.onerror = () => reject(transaction.error ?? new Error('Learning reset failed'))
+    }
+  }))
+  await page.reload({ waitUntil: 'domcontentloaded' })
+}
+
 async function completeOnboarding(page: Page): Promise<void> {
   await page.goto('/', { waitUntil: 'domcontentloaded' })
   await expect(page.getByRole('heading', { name: '每天打开，都知道下一步做什么。' })).toBeVisible({ timeout: 15_000 })
   for (let step = 0; step < 3; step += 1) await page.getByRole('button', { name: /继续/ }).click()
   await page.getByRole('button', { name: /开始备考/ }).click()
-  await expect(page.getByRole('button', { name: /开始今日学习/ })).toBeVisible({ timeout: 15_000 })
+  await expect(page.locator('.immersive-home__featured-word')).toBeVisible({ timeout: 15_000 })
 }
 
 async function readDb(page: Page): Promise<DbSnapshot> {
@@ -236,9 +283,7 @@ test('Today flow orders review, new study, dictation, and reaches completion', a
   const encounteredId = afterStudy.cards.find((card) => card.fsrsCard.state !== 0 || card.fsrsCard.reps > 0)?.wordId
   expect(encounteredId).toBeTruthy()
   await patchCardDue(page, encounteredId!)
-  await gotoRoute(page, '/')
-  await expect(page.getByRole('button', { name: /开始今日学习/ })).toBeVisible({ timeout: 15_000 })
-  await page.getByRole('button', { name: /开始今日学习/ }).click()
+  await gotoRoute(page, '/today')
 
   await expect(page.locator('.study-toolbar .eyebrow')).toHaveText('到期复习', { timeout: 10_000 })
   await finishCurrentStudyCard(page)
@@ -324,6 +369,7 @@ test('Dictation has no fallback to untouched New cards', async ({ page }, testIn
   test.skip(testInfo.project.name === 'mobile', 'The flow is covered on desktop; mobile has a dedicated overflow gate.')
   await preparePage(page)
   await completeOnboarding(page)
+  await resetLearningCardsToNew(page)
   await gotoRoute(page, '/dictation')
   await expect(page.getByRole('heading', { name: '还没有可听写的词。' })).toBeVisible({ timeout: 10_000 })
   const snapshot = await readDb(page)
@@ -393,7 +439,7 @@ test('Vocabulary migration preserves learning data and repairs only the missing 
   const removedId = await patchMigrationState(page, target!.wordId)
   await page.reload({ waitUntil: 'domcontentloaded' })
   await gotoRoute(page, '/')
-  await expect(page.getByRole('button', { name: /开始今日学习/ })).toBeVisible({ timeout: 15_000 })
+  await expect(page.locator('.immersive-home__featured-word')).toBeVisible({ timeout: 15_000 })
 
   const after = await readDb(page)
   const preserved = after.cards.find((card) => card.wordId === target!.wordId)
@@ -472,15 +518,16 @@ test('Fixed-current background persists across reload', async ({ page }, testInf
   await preparePage(page)
   await completeOnboarding(page)
   await gotoRoute(page, '/settings')
-  const backgroundMode = page.locator('.background-options select').first()
-  await backgroundMode.selectOption('fixed')
+  await expect(page.locator('.page--settings')).toBeVisible({ timeout: 15_000 })
+  await selectOptionStable(page, '.background-options select', 'fixed')
   await expect(page.locator('.background-options select')).toHaveCount(2)
   const fixed = await readDb(page)
   expect(fixed.settings?.backgroundMode).toBe('fixed')
-  expect(fixed.settings?.backgroundId).toMatch(/^study-/)
+  expect(fixed.settings?.backgroundId).toBeTruthy()
+  expect(fixed.settings?.backgroundId).not.toMatch(/^study-/)
   const fixedId = fixed.settings!.backgroundId!
   await page.reload({ waitUntil: 'domcontentloaded' })
-  await expect(page.locator('.app-frame--with-background .app-background img')).toHaveAttribute('src', new RegExp(`${fixedId}\\.webp$`))
+  await expect(page.locator('.app-frame--with-background .app-background img')).toHaveAttribute('src', new RegExp(`backgrounds/v1\\.2/webp/${fixedId}\\.webp$`))
   expect((await readDb(page)).settings?.backgroundId).toBe(fixedId)
 })
 

@@ -1,0 +1,262 @@
+/* BBDCD v1.2: the home is a quiet photo, a word, two actions, and three icons. */
+.app-frame--immersive-home {
+  display: block;
+  min-height: 100svh;
+  overflow: hidden;
+  background: #101612;
+  color: #fff;
+}
+
+.app-frame--immersive-home .app-background {
+  display: block;
+  filter: saturate(1.02) contrast(.98);
+  transform: scale(1.012);
+}
+
+.app-frame--immersive-home .app-background img {
+  object-position: var(--scene-position, 50% 50%);
+}
+
+.app-frame--immersive-home .app-background::after {
+  background:
+    linear-gradient(180deg, rgba(5, 11, 8, .12) 0%, rgba(5, 11, 8, .02) 38%, rgba(5, 11, 8, .30) 100%),
+    rgba(5, 11, 8, var(--scene-overlay, .20));
+}
+
+.app-frame--immersive-home .main-content {
+  width: 100%;
+  min-height: 100svh;
+  margin-left: 0;
+  padding: 0;
+}
+
+.app-frame--immersive-home.app-frame--plain {
+  background: var(--canvas);
+  color: var(--ink);
+}
+
+.app-frame--immersive-home.app-frame--plain .app-background {
+  display: block;
+  background: var(--canvas);
+  filter: none;
+  transform: none;
+}
+
+.app-frame--immersive-home.app-frame--plain .app-background::after {
+  background: transparent;
+}
+
+.page.page--immersive-home {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  width: 100%;
+  min-height: 100svh;
+  margin: 0;
+  padding: max(24px, env(safe-area-inset-top)) clamp(16px, 4vw, 6vw) calc(clamp(112px, 15vh, 164px) + env(safe-area-inset-bottom));
+  color: inherit;
+}
+
+.immersive-home__stage {
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  min-height: 0;
+  padding-top: clamp(88px, 24vh, 260px);
+  text-align: center;
+}
+
+.immersive-home__word-link {
+  max-width: min(100%, 920px);
+  margin: 0;
+  border-radius: 10px;
+  color: inherit;
+}
+
+.immersive-home__featured-word {
+  max-width: min(100%, 920px);
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", "Noto Sans CJK SC", Arial, sans-serif;
+  font-size: clamp(46px, 5vw, 78px);
+  font-weight: 700;
+  letter-spacing: -.025em;
+  line-height: 1;
+  overflow-wrap: anywhere;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, .24);
+}
+
+.immersive-home__word-link:hover .immersive-home__featured-word {
+  color: #fff8e8;
+}
+
+.immersive-home__actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(16px, 1.4vw, 28px);
+  width: min(88vw, 1680px);
+  margin: 0 auto;
+}
+
+.immersive-home__task-card {
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  min-height: 104px;
+  padding: 18px 24px;
+  border: 1px solid rgba(255, 255, 255, .075);
+  border-radius: 15px;
+  background: rgba(20, 24, 22, .48);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, .14);
+  -webkit-backdrop-filter: blur(18px) saturate(112%);
+  backdrop-filter: blur(18px) saturate(112%);
+  color: #fff;
+}
+
+.immersive-home__task-card:hover {
+  background: rgba(20, 24, 22, .54);
+}
+
+.immersive-home__task-card:focus-visible,
+.immersive-home__word-link:focus-visible,
+.immersive-home__nav-item:focus-visible {
+  outline: 2px solid rgba(255, 226, 159, .95);
+  outline-offset: 4px;
+}
+
+.immersive-home__task-label {
+  color: rgba(255, 255, 255, .92);
+  font-size: clamp(23px, 1.5vw, 28px);
+  font-weight: 650;
+  line-height: 1.2;
+}
+
+.immersive-home__task-value {
+  margin-top: 4px;
+  color: #f0aa38;
+  font-size: clamp(18px, 1.15vw, 22px);
+  font-weight: 500;
+  letter-spacing: -.035em;
+  line-height: 1;
+}
+
+.immersive-home__bottom-nav {
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  bottom: calc(16px + env(safe-area-inset-bottom));
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-inline: max(12px, calc(8.5vw - 16px));
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+.immersive-home__nav-item {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  color: rgba(255, 255, 255, .68);
+  transition: color .18s ease, opacity .18s ease;
+}
+
+.immersive-home__nav-item:hover {
+  background: transparent;
+  color: rgba(255, 255, 255, .78);
+  opacity: 1;
+}
+
+.immersive-home__nav-item.is-active {
+  background: transparent;
+  color: rgba(255, 255, 255, .9);
+  opacity: 1;
+}
+
+.app-frame--immersive-home.app-frame--plain .immersive-home__featured-word {
+  color: var(--ink);
+  text-shadow: none;
+}
+
+.app-frame--immersive-home.app-frame--plain .immersive-home__word-link:hover .immersive-home__featured-word {
+  color: var(--accent-strong);
+}
+
+.app-frame--immersive-home.app-frame--plain .immersive-home__task-card {
+  border-color: var(--line);
+  background: color-mix(in srgb, var(--surface-solid) 76%, transparent);
+  box-shadow: var(--shadow-soft);
+  color: var(--ink);
+}
+
+.app-frame--immersive-home.app-frame--plain .immersive-home__task-label {
+  color: var(--ink);
+}
+
+.app-frame--immersive-home.app-frame--plain .immersive-home__task-value {
+  color: var(--accent-strong);
+}
+
+.app-frame--immersive-home.app-frame--plain .immersive-home__nav-item {
+  color: var(--muted);
+}
+
+.app-frame--immersive-home.app-frame--plain .immersive-home__nav-item:hover,
+.app-frame--immersive-home.app-frame--plain .immersive-home__nav-item.is-active {
+  background: transparent;
+  color: var(--ink);
+}
+
+@media (max-width: 700px) {
+  .app-frame--immersive-home .app-background img {
+    object-position: var(--scene-mobile-position, var(--scene-position, 50% 50%));
+  }
+
+  .page.page--immersive-home {
+    padding-inline: 16px;
+    padding-bottom: calc(96px + env(safe-area-inset-bottom));
+  }
+
+  .immersive-home__stage {
+    padding-top: clamp(88px, 23vh, 196px);
+  }
+
+  .immersive-home__featured-word {
+    font-size: clamp(40px, 11vw, 56px);
+  }
+
+  .immersive-home__actions {
+    gap: 8px;
+  }
+
+  .immersive-home__task-card {
+    min-height: 78px;
+    padding: 13px 14px;
+    border-radius: 14px;
+  }
+
+  .immersive-home__task-label {
+    font-size: clamp(17px, 4.2vw, 20px);
+  }
+
+  .immersive-home__task-value {
+    margin-top: 3px;
+    font-size: clamp(15px, 3.5vw, 17px);
+  }
+
+  .immersive-home__bottom-nav {
+    bottom: calc(12px + env(safe-area-inset-bottom));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .immersive-home__bottom-nav,
+  .immersive-home__nav-item {
+    transition: none;
+  }
+}

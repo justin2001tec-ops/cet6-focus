@@ -15,12 +15,16 @@ async function completeOnboarding(page: Page): Promise<void> {
   await expect(page.getByRole('heading', { name: '每天打开，都知道下一步做什么。' })).toBeVisible({ timeout: 15_000 })
   for (let step = 0; step < 3; step += 1) await page.getByRole('button', { name: /继续/ }).click()
   await page.getByRole('button', { name: /开始备考/ }).click()
-  await expect(page.getByRole('button', { name: /开始今日学习/ })).toBeVisible({ timeout: 15_000 })
+  await expect(page.locator('.immersive-home__featured-word')).toBeVisible({ timeout: 15_000 })
 }
 
 async function gotoRoute(page: Page, route: string): Promise<void> {
   await page.goto(`/#${route}`, { waitUntil: 'domcontentloaded' })
-  await expect(page.locator('.mobile-topbar__title')).toBeVisible({ timeout: 15_000 })
+  if (route === '/') {
+    await expect(page.locator('.immersive-home__featured-word')).toBeVisible({ timeout: 15_000 })
+  } else {
+    await expect(page.locator('.mobile-topbar__title')).toBeVisible({ timeout: 15_000 })
+  }
 }
 
 test('Mobile Vocabulary presents Word Detail as a dismissible bottom sheet', async ({ page }, testInfo) => {
@@ -77,6 +81,11 @@ test('Mobile route titles and primary tabs follow the presentation map', async (
 
   for (const [route, title, tab] of routes) {
     await gotoRoute(page, route)
+    if (route === '/') {
+      await expect(page.locator('.immersive-home__bottom-nav .is-active')).toHaveAttribute('aria-label', '首页')
+      await expect(page.locator('.app-frame .sidebar')).toHaveCount(0)
+      continue
+    }
     await expect(page.locator('.mobile-topbar__title')).toHaveText(title)
     await expect(page.locator('.mobile-nav__item.is-active')).toContainText(tab)
   }
@@ -91,20 +100,19 @@ test('Mobile edge-to-edge layouts stay inside the viewport at required sizes', a
     await page.setViewportSize(viewport)
     await gotoRoute(page, '/')
     const metrics = await page.evaluate(() => {
-      const topbar = document.querySelector('.mobile-topbar')?.getBoundingClientRect()
-      const nav = document.querySelector('.mobile-nav')?.getBoundingClientRect()
+      const nav = document.querySelector('.immersive-home__bottom-nav')?.getBoundingClientRect()
       return {
         innerWidth: window.innerWidth,
         innerHeight: window.innerHeight,
         scrollWidth: document.documentElement.scrollWidth,
-        topbarLeft: topbar?.left ?? 0,
-        topbarRight: topbar?.right ?? 0,
+        navLeft: nav?.left ?? 0,
+        navRight: nav?.right ?? 0,
         navBottom: nav?.bottom ?? 0,
       }
     })
     expect(metrics.scrollWidth - metrics.innerWidth).toBeLessThanOrEqual(1)
-    expect(metrics.topbarLeft).toBeGreaterThanOrEqual(0)
-    expect(metrics.topbarRight).toBeLessThanOrEqual(metrics.innerWidth + 1)
+    expect(metrics.navLeft).toBeGreaterThanOrEqual(0)
+    expect(metrics.navRight).toBeLessThanOrEqual(metrics.innerWidth + 1)
     expect(metrics.navBottom).toBeLessThanOrEqual(metrics.innerHeight + 1)
   }
 })

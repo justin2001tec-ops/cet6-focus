@@ -15,6 +15,7 @@
     "test:e2e": "playwright test",
     "test:e2e:serial": "playwright test --workers=1 --timeout=60000",
     "test:e2e:presentation": "playwright test tests/e2e/presentation.spec.ts --project=mobile --workers=1 --reporter=list",
+    "capture:bbdcd": "tsx scripts/capture-bbdcd-v1.2.mjs",
     "capture:ios26": "tsx scripts/capture-ios26-screenshots.mjs",
     "vocab:build": "tsx scripts/build-vocabulary.ts",
     "vocab:validate": "tsx scripts/validate-vocabulary.ts"

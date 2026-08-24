@@ -1,6 +1,6 @@
 const BASE_URL = new URL('./', self.location.href).pathname
 const withBase = (path) => `${BASE_URL}${path.replace(/^\/+/, '')}`
-const CACHE_NAME = 'cet6-focus-shell-v3'
+const CACHE_NAME = 'cet6-focus-shell-v4'
 const APP_SHELL = [withBase(''), withBase('index.html'), withBase('manifest.webmanifest'), withBase('icon.svg'), withBase('data/cet6-vocab.v1.json')]
 
 self.addEventListener('install', (event) => {
