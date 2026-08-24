@@ -8,7 +8,16 @@ The shipped examples are an offline, deterministic subset of the official Tatoeb
 - Retrieved: 2026-08-24
 - Attribution: not legally required under CC0; this project credits Tatoeba.org and its contributors.
 
-The compressed download is retained beside the extracted snapshot so the source can be independently rechecked. `scripts/build-examples.ts` selects at most one sentence for each CET-6 headword using an exact whole-word match. It rejects URLs, digits, markup, non-ASCII text after normalization, repeated target words, sentences outside the 7-24 token range, and a conservative list of explicit profanity/adult/sensitive-content terms, including current political and culture-war references. The selection is deterministic and does not call an online API.
+The compressed download is retained beside the extracted snapshot so the source can be independently rechecked. `scripts/build-examples.ts` implements the R3 selector v2 and selects at most one sentence for each CET-6 headword using an exact whole-word match. Its hard and scored dimensions are:
+
+- 6-18 tokens, with only clear 19-20 token exceptions; 8-14 tokens and 45-120 characters are preferred.
+- Simple punctuation: semicolons, colons, brackets, em-dash structures, stacked commas, and excessive quotation are rejected.
+- Mid-sentence capitalization and adjacent capitalized tokens are penalized or rejected to reduce names, institutions, brands, and acronyms.
+- Non-target vocabulary difficulty is estimated from token frequencies derived from this same CC0 corpus. More than two low-frequency context tokens or more than one unseen context token is rejected.
+- Topic neutrality and standalone readability are scored. Severe explicit, violent, adult, self-harm, and terrorism content is rejected; ordinary identity words are not blanket-filtered.
+- Target position and sentence simplicity contribute to an explainable 0-100 quality score. A fixed regression blacklist prevents the eleven R2 problem sentences from returning.
+
+The selector writes `selected-examples.json` for runtime, `example-provenance.json` with the Tatoeba sentence ID and quality metrics for every selected example, and `build-report.json` with raw candidate coverage, quality-approved coverage, and rejection counts. `scripts/build-context-audit.ts` writes the fixed-seed 250-example audit under `audit/v1.3-context-quality/`. The selection is deterministic and does not call an online API.
 
 Chinese translations are intentionally not included: the CC0 sentence export supplies English sentences only, and the product keeps the existing sourced Chinese meaning on the Meaning stage.
 
@@ -20,4 +29,4 @@ pnpm vocab:build
 pnpm vocab:validate
 ```
 
-The generated intermediate mapping is `data-source/examples/selected-examples.json`; the shipped application data is `public/data/cet6-vocab.v1.json`.
+The generated intermediate mapping is `data-source/examples/selected-examples.json`; provenance and selector metrics are adjacent to it; the shipped application data is `public/data/cet6-vocab.v1.json`. `pnpm examples:build` also regenerates the R3 audit package.

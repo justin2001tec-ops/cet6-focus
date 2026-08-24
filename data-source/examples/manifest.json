@@ -7,5 +7,7 @@
   "attribution": "Attribution is not legally required under CC0; this project credits Tatoeba.org and its contributors for the source corpus.",
   "retrievedAt": "2026-08-24",
   "translationPolicy": "Examples are shipped in English only. No Chinese translations are imported or generated.",
-  "selectionPolicy": "One deterministic, medium-length English sentence per covered CET-6 headword; exact whole-word match; ASCII-normalized; URL, digit, profanity, adult, and obviously sensitive-content filters; 7-24 tokens; no runtime network access."
+  "selectionPolicy": "Selector v2 chooses at most one deterministic English sentence per covered CET-6 headword; exact whole-word match; 6-18 tokens preferred, with only clear 19-20 token exceptions; 8-14 tokens and 45-120 characters preferred; simple punctuation; proper-noun, rare-context, topic-neutrality, standalone-context, and target-position scoring; severe sensitive-content rejection; no runtime network access.",
+  "provenanceFile": "data-source/examples/example-provenance.json",
+  "buildReportFile": "data-source/examples/build-report.json"
 }

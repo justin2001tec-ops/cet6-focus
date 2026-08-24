@@ -10,11 +10,11 @@ const words = JSON.parse(readFileSync(resolve(root, 'public/data/cet6-vocab.v1.j
 const manifest = JSON.parse(readFileSync(resolve(root, 'data-source/examples/manifest.json'), 'utf8')) as { source: string; license: string; sourceUrl: string }
 
 describe('offline formal example corpus', () => {
-  it('keeps the frozen 2219-word vocabulary and clears the R2 coverage gate', () => {
+  it('keeps the frozen 2219-word vocabulary and clears the R3 quality coverage gate', () => {
     const covered = words.filter((word) => word.examples?.length)
     expect(words).toHaveLength(2219)
     expect(covered.length / words.length).toBeGreaterThanOrEqual(0.6)
-    expect(covered.length).toBeGreaterThanOrEqual(1500)
+    expect(covered.length).toBeGreaterThanOrEqual(1332)
   })
 
   it('ships traceable English-only examples without fixtures or fabricated translations', () => {

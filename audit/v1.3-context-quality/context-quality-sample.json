@@ -1,0 +1,4202 @@
+{
+  "seed": 216489987,
+  "sampleSize": 250,
+  "records": [
+    {
+      "word": "treaty",
+      "en": "Ratification of the treaty by all parties is required before it can go into effect.",
+      "sentenceId": 11644990,
+      "qualityScore": 85,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "volume",
+      "en": "The sheer volume of disinformation is difficult to rebut.",
+      "sentenceId": 9995314,
+      "qualityScore": 93,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "peak",
+      "en": "Even if we do not immediately succeed in leading the Kabyle to its peak, others will succeed.",
+      "sentenceId": 8908904,
+      "qualityScore": 62,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "proper-noun penalty=1"
+      ]
+    },
+    {
+      "word": "sticky",
+      "en": "When flaxseeds are wet they become very sticky on the outside.",
+      "sentenceId": 11545071,
+      "qualityScore": 90,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "command",
+      "en": "His Majesty's command was swift and resolute.",
+      "sentenceId": 12775863,
+      "qualityScore": 82,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "unfold",
+      "en": "Fold and unfold along each of the lines to make a crease.",
+      "sentenceId": 10765107,
+      "qualityScore": 95,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "absence",
+      "en": "Can peace be found in the absence of conflict?",
+      "sentenceId": 12777813,
+      "qualityScore": 92,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "formidable",
+      "en": "It's a formidable asset against amnesia and colonizability.",
+      "sentenceId": 12807976,
+      "qualityScore": 64,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=2",
+        "standalone penalty=10"
+      ]
+    },
+    {
+      "word": "witness",
+      "en": "The mountains stand tall, bearing witness to time.",
+      "sentenceId": 12769231,
+      "qualityScore": 85,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "petition",
+      "en": "Victory Holdsworth says the secretariat has put together a team to review the petition.",
+      "sentenceId": 12045723,
+      "qualityScore": 62,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "proper-noun penalty=1",
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "stab",
+      "en": "It's a bit rude to stab a stranger in the leg, don't you think?",
+      "sentenceId": 13035646,
+      "qualityScore": 76,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "standalone penalty=10"
+      ]
+    },
+    {
+      "word": "ego",
+      "en": "Elevation requires letting go of ego.",
+      "sentenceId": 12766820,
+      "qualityScore": 63,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "liable",
+      "en": "The problem with monarchy is you're liable to end up with a king who believes in homeopathy.",
+      "sentenceId": 11129769,
+      "qualityScore": 79,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "appropriate",
+      "en": "Nazis marching outside libraries are not appropriate for children to see.",
+      "sentenceId": 11844548,
+      "qualityScore": 99,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "recover",
+      "en": "Will the economy recover from the global recession?",
+      "sentenceId": 12766071,
+      "qualityScore": 90,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "redundant",
+      "en": "Our redundant infrastructure ensures the highest levels of service availability.",
+      "sentenceId": 10723392,
+      "qualityScore": 93,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "combination",
+      "en": "I forgot the combination to my locker.",
+      "sentenceId": 10016622,
+      "qualityScore": 76,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "administration",
+      "en": "The president has promised a more austere administration than that of his predecessor.",
+      "sentenceId": 12063836,
+      "qualityScore": 67,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": false,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": false,
+      "notes": [
+        "topic penalty=20",
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "coincidence",
+      "en": "Was this all just a coincidence?",
+      "sentenceId": 12772635,
+      "qualityScore": 63,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "execute",
+      "en": "Mass shootings require a high amount of executive function to plan and execute.",
+      "sentenceId": 11765250,
+      "qualityScore": 85,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "account",
+      "en": "Someone hacked into my account and changed the password.",
+      "sentenceId": 10054440,
+      "qualityScore": 93,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "faith",
+      "en": "Science builds planes and skyscrapers, but faith brings them together.",
+      "sentenceId": 6036907,
+      "qualityScore": 91,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "stroll",
+      "en": "Would you care for a stroll in the gardens, my lady?",
+      "sentenceId": 12775893,
+      "qualityScore": 92,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "object",
+      "en": "If money was no object, what would you do all day?",
+      "sentenceId": 9805807,
+      "qualityScore": 92,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "preference",
+      "en": "Fascists are enabled by liberals' preference for abstractions over people.",
+      "sentenceId": 5700933,
+      "qualityScore": 97,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "rational",
+      "en": "But how can you find rational pleasure in spinning round like a teetotum in a room of eighty degrees temperature?",
+      "sentenceId": 11537836,
+      "qualityScore": 62,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "breach",
+      "en": "Did the cybersecurity breach affect the whole network?",
+      "sentenceId": 12766137,
+      "qualityScore": 90,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "boring",
+      "en": "The lecture was pretty boring, so I started to doze off.",
+      "sentenceId": 12406383,
+      "qualityScore": 93,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "magnificent",
+      "en": "But this magnificent appellation was all she gained by her marriage.",
+      "sentenceId": 10650947,
+      "qualityScore": 99,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "tissue",
+      "en": "Surgeons can use the adhesive to reconnect skin and tissue inside the body.",
+      "sentenceId": 11165195,
+      "qualityScore": 94,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "species",
+      "en": "How do you know humans are the only species using the Internet?",
+      "sentenceId": 12479338,
+      "qualityScore": 96,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "contaminate",
+      "en": "David Paige says it is important not to contaminate Mars with a microbe that could spread.",
+      "sentenceId": 11148934,
+      "qualityScore": 50,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "proper-noun penalty=2",
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "implication",
+      "en": "I resent your implication that I am engaged to you only because of your money.",
+      "sentenceId": 12095704,
+      "qualityScore": 85,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "minimize",
+      "en": "Crisis planning helps minimize the impact of unexpected events.",
+      "sentenceId": 12767977,
+      "qualityScore": 93,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "furthermore",
+      "en": "Furthermore, I believe that the filibuster must be destroyed.",
+      "sentenceId": 10485485,
+      "qualityScore": 70,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "van",
+      "en": "I just saw this van going full pelt down the middle of the road...",
+      "sentenceId": 11075994,
+      "qualityScore": 91,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "symposium",
+      "en": "Tom is attending a writers' symposium in Boston.",
+      "sentenceId": 12272801,
+      "qualityScore": 77,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "proper-noun penalty=1"
+      ]
+    },
+    {
+      "word": "shatter",
+      "en": "I stopped by the weed store and got us some more shatter.",
+      "sentenceId": 11478878,
+      "qualityScore": 85,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "force",
+      "en": "Is love the most powerful force in the universe?",
+      "sentenceId": 12778540,
+      "qualityScore": 92,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "clamp",
+      "en": "Her head was shaved and secured in a three-pronged skull clamp.",
+      "sentenceId": 10724631,
+      "qualityScore": 80,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "inventory",
+      "en": "I stock items and take inventory.",
+      "sentenceId": 11885113,
+      "qualityScore": 63,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "pledge",
+      "en": "Five is too young to pledge allegiance to a flag.",
+      "sentenceId": 11516152,
+      "qualityScore": 95,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "burden",
+      "en": "To know the truth is both a gift and a burden.",
+      "sentenceId": 12773473,
+      "qualityScore": 87,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "internal",
+      "en": "If you think you have control over your own life, you have an internal locus of control.",
+      "sentenceId": 10538151,
+      "qualityScore": 74,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "foresee",
+      "en": "I don't foresee ever being able to go to Boston.",
+      "sentenceId": 10094907,
+      "qualityScore": 82,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "proper-noun penalty=1"
+      ]
+    },
+    {
+      "word": "cope",
+      "en": "She found healing through teaching others to cope.",
+      "sentenceId": 12764976,
+      "qualityScore": 70,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "standalone penalty=10"
+      ]
+    },
+    {
+      "word": "summon",
+      "en": "Be careful when writing in Latin, or you might summon a demon.",
+      "sentenceId": 9669228,
+      "qualityScore": 79,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "proper-noun penalty=1"
+      ]
+    },
+    {
+      "word": "slippery",
+      "en": "Patricia's car skidded on a slippery spot on the road and spun completely around twice.",
+      "sentenceId": 11663738,
+      "qualityScore": 77,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "graduate",
+      "en": "Sandra began her community service after earning a graduate degree in gerontology.",
+      "sentenceId": 11829784,
+      "qualityScore": 98,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "merit",
+      "en": "This rare merit even the most fastidious critic must allow.",
+      "sentenceId": 11476006,
+      "qualityScore": 85,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "standalone penalty=10"
+      ]
+    },
+    {
+      "word": "occur",
+      "en": "Ejective consonants occur more often in languages from mountainous regions.",
+      "sentenceId": 10761946,
+      "qualityScore": 97,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "toss",
+      "en": "I'm going to toss another log on the fire.",
+      "sentenceId": 11011223,
+      "qualityScore": 86,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "melody",
+      "en": "The teacher may also choose some melody free from accidentals and play it slowly while the student notates.",
+      "sentenceId": 11305424,
+      "qualityScore": 59,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=2"
+      ]
+    },
+    {
+      "word": "flatter",
+      "en": "People flatter the elephant and trample the ant.",
+      "sentenceId": 8208358,
+      "qualityScore": 85,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "versus",
+      "en": "There is no difference between how children fare with straight parents versus gay ones.",
+      "sentenceId": 12336055,
+      "qualityScore": 92,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "overhead",
+      "en": "Migrant birds such as the sandhill crane fly overhead, moving south.",
+      "sentenceId": 12364859,
+      "qualityScore": 86,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "warrant",
+      "en": "Tom told the cop to come back when he had a warrant.",
+      "sentenceId": 10143061,
+      "qualityScore": 85,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "prone",
+      "en": "People are prone to believe disparaging lies about people they don't like.",
+      "sentenceId": 9316997,
+      "qualityScore": 89,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "mental",
+      "en": "Tom is a patient advocate for people with mental health conditions.",
+      "sentenceId": 12187297,
+      "qualityScore": 99,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "analysis",
+      "en": "Based on initial data analysis, the collared bears rarely forayed outside the park.",
+      "sentenceId": 12034469,
+      "qualityScore": 82,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "endurance",
+      "en": "The space journey tested their skills and endurance.",
+      "sentenceId": 12765387,
+      "qualityScore": 80,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "institution",
+      "en": "American democracy is a kakistocratic institution.",
+      "sentenceId": 8849707,
+      "qualityScore": 70,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "mutual",
+      "en": "Tom thinks that open communication is key to mutual learning.",
+      "sentenceId": 12759817,
+      "qualityScore": 92,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "invest",
+      "en": "I can't decide whether to invest in a corporate bond or a gilt.",
+      "sentenceId": 9004057,
+      "qualityScore": 93,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "parasite",
+      "en": "People find out they are infected after passing the parasite in their stool or vomit.",
+      "sentenceId": 12327352,
+      "qualityScore": 85,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "overhear",
+      "en": "How charmed I am when I overhear a German word which I understand!",
+      "sentenceId": 552742,
+      "qualityScore": 82,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "proper-noun penalty=1"
+      ]
+    },
+    {
+      "word": "prosperous",
+      "en": "If he were still of this world, his offspring would be prosperous.",
+      "sentenceId": 8488055,
+      "qualityScore": 81,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "concept",
+      "en": "The concept of space tourism is becoming more realistic each year.",
+      "sentenceId": 12759709,
+      "qualityScore": 95,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "cereal",
+      "en": "To each his own cereal! Who peas, who lentils!",
+      "sentenceId": 9903103,
+      "qualityScore": 87,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "abnormal",
+      "en": "Mental illness is a normal response to abnormal circumstances.",
+      "sentenceId": 12188741,
+      "qualityScore": 71,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": false,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": false,
+      "notes": [
+        "topic penalty=18"
+      ]
+    },
+    {
+      "word": "sprinkle",
+      "en": "As a final touch, sprinkle some chocolate chips on top of the cookies.",
+      "sentenceId": 8773731,
+      "qualityScore": 89,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "classification",
+      "en": "Not every racist country has the same racial classification system.",
+      "sentenceId": 11358495,
+      "qualityScore": 72,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": false,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": false,
+      "notes": [
+        "topic penalty=20"
+      ]
+    },
+    {
+      "word": "cocaine",
+      "en": "The study suggests two possible ways that cocaine might lead to an aneurism.",
+      "sentenceId": 12391805,
+      "qualityScore": 86,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "recognition",
+      "en": "Together we can make voice recognition better for everyone.",
+      "sentenceId": 8310504,
+      "qualityScore": 93,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "commonwealth",
+      "en": "Bangladesh military ranks, essentially corresponds to those used by the armed forces of the commonwealth nations.",
+      "sentenceId": 11502104,
+      "qualityScore": 47,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": false,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": false,
+      "notes": [
+        "topic penalty=24"
+      ]
+    },
+    {
+      "word": "therefore",
+      "en": "I therefore admonish you to give the defendant the benefit of every reasonable doubt.",
+      "sentenceId": 10775728,
+      "qualityScore": 80,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "staple",
+      "en": "Staple a note on the bag that says it's your lunch.",
+      "sentenceId": 10722091,
+      "qualityScore": 87,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "cognitive",
+      "en": "Cognitive behavioral therapy doesn't work for everything or everyone.",
+      "sentenceId": 11969319,
+      "qualityScore": 66,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": false,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": false,
+      "notes": [
+        "topic penalty=18"
+      ]
+    },
+    {
+      "word": "optimum",
+      "en": "Tom writes in Esperanto for optimum expressiveness.",
+      "sentenceId": 9980903,
+      "qualityScore": 66,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "proper-noun penalty=1"
+      ]
+    },
+    {
+      "word": "scrap",
+      "en": "You are like someone who builds a house from scrap lumber.",
+      "sentenceId": 8781948,
+      "qualityScore": 94,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "pudding",
+      "en": "Nasa's aerogels are made from a special silica glass gel that's been mixed to the consistency of pudding.",
+      "sentenceId": 12372699,
+      "qualityScore": 57,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "norm",
+      "en": "She questions the norm with courage.",
+      "sentenceId": 12776599,
+      "qualityScore": 63,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "standalone penalty=10"
+      ]
+    },
+    {
+      "word": "migrate",
+      "en": "Some birds migrate to roost during specific seasons.",
+      "sentenceId": 9935723,
+      "qualityScore": 90,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "scratch",
+      "en": "What are the symptoms of cat scratch fever?",
+      "sentenceId": 11448803,
+      "qualityScore": 80,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "pope",
+      "en": "Why does the Pope live in a palace?",
+      "sentenceId": 11561193,
+      "qualityScore": 71,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "proper-noun penalty=1"
+      ]
+    },
+    {
+      "word": "aspect",
+      "en": "The right wants to dictate every aspect of your life.",
+      "sentenceId": 11767591,
+      "qualityScore": 95,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "orient",
+      "en": "You need a map to orient yourself.",
+      "sentenceId": 10930666,
+      "qualityScore": 72,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "incident",
+      "en": "It's been three years since Tom's incident in Boston.",
+      "sentenceId": 11937839,
+      "qualityScore": 70,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "proper-noun penalty=1",
+        "standalone penalty=10"
+      ]
+    },
+    {
+      "word": "recede",
+      "en": "Spain is following Italy in talking about scaling back coronavirus restrictions as its numbers start to recede.",
+      "sentenceId": 11165121,
+      "qualityScore": 55,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "proper-noun penalty=1"
+      ]
+    },
+    {
+      "word": "strive",
+      "en": "Do you strive to be the best version of yourself?",
+      "sentenceId": 12776148,
+      "qualityScore": 95,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "transfer",
+      "en": "Tom is hoping to transfer from his community college to a four-year college.",
+      "sentenceId": 10234390,
+      "qualityScore": 94,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "optimistic",
+      "en": "Being optimistic could lengthen your life, a new study suggests.",
+      "sentenceId": 11473150,
+      "qualityScore": 79,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "plaster",
+      "en": "Can I travel on a plane if I have a plaster cast?",
+      "sentenceId": 9805498,
+      "qualityScore": 91,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "compare",
+      "en": "Tom often shares his notes with Mary to compare their interpretations.",
+      "sentenceId": 12759852,
+      "qualityScore": 87,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "proper-noun penalty=1"
+      ]
+    },
+    {
+      "word": "buck",
+      "en": "The burgers cost a buck apiece.",
+      "sentenceId": 12331145,
+      "qualityScore": 61,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "interpret",
+      "en": "I decided to interpret your remark in the most literal way possible.",
+      "sentenceId": 10129480,
+      "qualityScore": 96,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "current",
+      "en": "What do you know about the current trends in our nation's healthcare system?",
+      "sentenceId": 9805546,
+      "qualityScore": 94,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "opponent",
+      "en": "Tom made his opponent tap out.",
+      "sentenceId": 10819676,
+      "qualityScore": 73,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "vocal",
+      "en": "Only male insects sing and they don't sing like humans or birds. They don't have vocal chords.",
+      "sentenceId": 12395454,
+      "qualityScore": 75,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "flip",
+      "en": "Tom replaced his smartphone with a cheap flip phone.",
+      "sentenceId": 10059979,
+      "qualityScore": 88,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "release",
+      "en": "The prisoner died of natural causes one day before his scheduled release.",
+      "sentenceId": 11260218,
+      "qualityScore": 87,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "tariff",
+      "en": "The four pacts include simplification of visa and customs rules to boost trade and reduce tariff barriers.",
+      "sentenceId": 11739145,
+      "qualityScore": 58,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=2"
+      ]
+    },
+    {
+      "word": "deny",
+      "en": "A fair society doesn't deny gay people what it gives to straight people.",
+      "sentenceId": 10726983,
+      "qualityScore": 94,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "collision",
+      "en": "After the collision, Tom and Mary exchanged insurance information.",
+      "sentenceId": 10142197,
+      "qualityScore": 65,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "proper-noun penalty=2"
+      ]
+    },
+    {
+      "word": "effective",
+      "en": "What are the most effective ways to manage a crisis?",
+      "sentenceId": 12768009,
+      "qualityScore": 95,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "tile",
+      "en": "The wind tore the ridge tile from me.",
+      "sentenceId": 9181186,
+      "qualityScore": 83,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "advocate",
+      "en": "Tom is a patient advocate for people with mental health conditions.",
+      "sentenceId": 12187297,
+      "qualityScore": 99,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "insight",
+      "en": "Fungi talk, but it's mostly a mix of nonsense and penetrating insight into your life.",
+      "sentenceId": 11566217,
+      "qualityScore": 80,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "refute",
+      "en": "It is much harder to refute a lie than to tell one.",
+      "sentenceId": 11986639,
+      "qualityScore": 85,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "standalone penalty=10"
+      ]
+    },
+    {
+      "word": "vary",
+      "en": "My thoughts on life vary with my mood, and I have a mood disorder.",
+      "sentenceId": 12128440,
+      "qualityScore": 86,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "vice",
+      "en": "Sane people are more of a threat to mentally ill people than vice versa.",
+      "sentenceId": 10923883,
+      "qualityScore": 88,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "barren",
+      "en": "The war left the land barren and lifeless.",
+      "sentenceId": 12764977,
+      "qualityScore": 60,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": false,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": false,
+      "notes": [
+        "topic penalty=24"
+      ]
+    },
+    {
+      "word": "immune",
+      "en": "You are not immune to propaganda.",
+      "sentenceId": 9101344,
+      "qualityScore": 73,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "orbit",
+      "en": "Space stations are like floating laboratories in orbit around Earth.",
+      "sentenceId": 12759671,
+      "qualityScore": 96,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "texture",
+      "en": "The taste is fine, but the texture is awful.",
+      "sentenceId": 11696287,
+      "qualityScore": 82,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "negative",
+      "en": "What is one negative thing your last boss say about you?",
+      "sentenceId": 9805726,
+      "qualityScore": 98,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "profession",
+      "en": "Tom left the ministerial profession after suffering a crisis of faith.",
+      "sentenceId": 12146348,
+      "qualityScore": 99,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "liner",
+      "en": "The ill-fated cruise liner has now left Australian waters, but many questions remain.",
+      "sentenceId": 11152936,
+      "qualityScore": 78,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "proper-noun penalty=1"
+      ]
+    },
+    {
+      "word": "verdict",
+      "en": "Will the court reach a fair verdict?",
+      "sentenceId": 12766041,
+      "qualityScore": 42,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": false,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": false,
+      "notes": [
+        "topic penalty=24"
+      ]
+    },
+    {
+      "word": "gracious",
+      "en": "What a gracious speech, what a daring pledge to a world whelmed in tyranny and wrong!",
+      "sentenceId": 11819800,
+      "qualityScore": 69,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "desire",
+      "en": "I wish you lots of bright stars and all the flowers you desire.",
+      "sentenceId": 8738510,
+      "qualityScore": 83,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "predecessor",
+      "en": "The president has promised a more austere administration than that of his predecessor.",
+      "sentenceId": 12063836,
+      "qualityScore": 57,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": false,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": false,
+      "notes": [
+        "topic penalty=20",
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "specialty",
+      "en": "You know that I now have made hijacking my specialty.",
+      "sentenceId": 9813893,
+      "qualityScore": 77,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "blaze",
+      "en": "Tom wanted to go out in a blaze of glory.",
+      "sentenceId": 10844059,
+      "qualityScore": 89,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "electronic",
+      "en": "It can be used as a lubricant for machines or electronic parts.",
+      "sentenceId": 11100971,
+      "qualityScore": 82,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "standalone penalty=10"
+      ]
+    },
+    {
+      "word": "annual",
+      "en": "The royal family gathered for the annual portrait.",
+      "sentenceId": 12775977,
+      "qualityScore": 86,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "tow",
+      "en": "How much money can you make as a tow truck driver?",
+      "sentenceId": 12308532,
+      "qualityScore": 97,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "rely",
+      "en": "Antisemitic conspiracy theories rely on the myth of Jewish unity.",
+      "sentenceId": 11242378,
+      "qualityScore": 84,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "proper-noun penalty=1"
+      ]
+    },
+    {
+      "word": "acceptance",
+      "en": "Reading this sentence constitutes acceptance of its terms and conditions.",
+      "sentenceId": 11558339,
+      "qualityScore": 97,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "resume",
+      "en": "I've made some changes to my resume.",
+      "sentenceId": 10087374,
+      "qualityScore": 66,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "spouse",
+      "en": "Mary is my spouse, and I am their husband.",
+      "sentenceId": 8811887,
+      "qualityScore": 81,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "grief",
+      "en": "Grief can mess you up if you're not careful.",
+      "sentenceId": 11558944,
+      "qualityScore": 77,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "beneficial",
+      "en": "Further discussion of this topic is unlikely to be beneficial.",
+      "sentenceId": 10770595,
+      "qualityScore": 86,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "linen",
+      "en": "Through a piece of linen he punched holes with a porcupine quill.",
+      "sentenceId": 10968851,
+      "qualityScore": 96,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "infinite",
+      "en": "Do we live in a world of infinite possibilities?",
+      "sentenceId": 12778581,
+      "qualityScore": 88,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "commit",
+      "en": "We all have to commit to getting rid of this perversion to our culture.",
+      "sentenceId": 11678600,
+      "qualityScore": 74,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1",
+        "standalone penalty=10"
+      ]
+    },
+    {
+      "word": "legend",
+      "en": "Biologists view the chupacabras as a contemporary legend.",
+      "sentenceId": 1566359,
+      "qualityScore": 80,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "chord",
+      "en": "Jazz is characterized by improvisation on chord progressions.",
+      "sentenceId": 12267769,
+      "qualityScore": 71,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=2"
+      ]
+    },
+    {
+      "word": "finite",
+      "en": "Great... another day of learning about nondeterministic finite automata.",
+      "sentenceId": 11148401,
+      "qualityScore": 82,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "adhere",
+      "en": "Security forces fear that hardliners among the demonstrators may not adhere to such promises.",
+      "sentenceId": 11986511,
+      "qualityScore": 84,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "gorgeous",
+      "en": "Have you ever hated someone for being gorgeous?",
+      "sentenceId": 12260989,
+      "qualityScore": 79,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "brilliant",
+      "en": "It's not a particularly brilliant revelation of mine.",
+      "sentenceId": 10545401,
+      "qualityScore": 80,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "standalone penalty=10"
+      ]
+    },
+    {
+      "word": "imperative",
+      "en": "Punching Nazis is a moral imperative.",
+      "sentenceId": 11364538,
+      "qualityScore": 43,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "proper-noun penalty=1",
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "decent",
+      "en": "It's hard to get decent information about what you're supposed to do.",
+      "sentenceId": 12003516,
+      "qualityScore": 86,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "standalone penalty=10"
+      ]
+    },
+    {
+      "word": "poverty",
+      "en": "Abject poverty and lack of work has led people to go to extreme measures.",
+      "sentenceId": 11170398,
+      "qualityScore": 88,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "design",
+      "en": "I do graphic design for some T-shirt sites.",
+      "sentenceId": 10363149,
+      "qualityScore": 76,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "complain",
+      "en": "How do I complain about my dental treatment?",
+      "sentenceId": 9805215,
+      "qualityScore": 84,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "attitude",
+      "en": "His maverick attitude toward generally-accepted best practices didn't endear him to his superiors.",
+      "sentenceId": 10104692,
+      "qualityScore": 86,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "impose",
+      "en": "Schools have no right to impose cis ideology on children.",
+      "sentenceId": 11690636,
+      "qualityScore": 95,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "predict",
+      "en": "Futurists try to predict how changes in the world will impact society.",
+      "sentenceId": 12034353,
+      "qualityScore": 88,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "indefinite",
+      "en": "The indefinite article is used before countable nouns.",
+      "sentenceId": 9934956,
+      "qualityScore": 78,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "acquire",
+      "en": "You can't acquire a language without consuming it.",
+      "sentenceId": 13036756,
+      "qualityScore": 90,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "heighten",
+      "en": "Humanitarian organizations fear the ongoing impasse and the hostile rhetoric could heighten local xenophobia.",
+      "sentenceId": 11095203,
+      "qualityScore": 74,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=2"
+      ]
+    },
+    {
+      "word": "detection",
+      "en": "I'm testing whether the language detection works again.",
+      "sentenceId": 3289035,
+      "qualityScore": 90,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "commitment",
+      "en": "Improvement is a commitment to yourself.",
+      "sentenceId": 12767818,
+      "qualityScore": 74,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "contribute",
+      "en": "Tom believes every garden should contribute to the ecosystem.",
+      "sentenceId": 12768002,
+      "qualityScore": 93,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "spectator",
+      "en": "The position of being holier than thou is really easy to take when you are a spectator.",
+      "sentenceId": 11989297,
+      "qualityScore": 62,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "swamp",
+      "en": "I don't mean to swamp you.",
+      "sentenceId": 10545400,
+      "qualityScore": 68,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "bypass",
+      "en": "Exposing bad ideas doesn't kill them because people aren't perfectly rational, and propaganda is designed to bypass reason.",
+      "sentenceId": 10249063,
+      "qualityScore": 36,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": false,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": false,
+      "notes": [
+        "topic penalty=24"
+      ]
+    },
+    {
+      "word": "aid",
+      "en": "Tom provided first aid to injured civilians during the emergency.",
+      "sentenceId": 12765295,
+      "qualityScore": 96,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "whereby",
+      "en": "Scientists say a new geologic epoch has begun whereby humans are causing major damage to global water systems.",
+      "sentenceId": 11044319,
+      "qualityScore": 75,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "academic",
+      "en": "Jordan Peterson's academic work is extremely postmodern.",
+      "sentenceId": 11881622,
+      "qualityScore": 83,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "anonymous",
+      "en": "Alcoholics Anonymous is a faith healing program.",
+      "sentenceId": 11076401,
+      "qualityScore": 66,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "proper-noun penalty=1"
+      ]
+    },
+    {
+      "word": "brink",
+      "en": "The crisis had pushed them to the brink of despair.",
+      "sentenceId": 12765073,
+      "qualityScore": 95,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "enclosure",
+      "en": "Tom fell into the lion enclosure.",
+      "sentenceId": 12308182,
+      "qualityScore": 63,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "intersection",
+      "en": "The light was still yellow when the car entered the intersection.",
+      "sentenceId": 11166818,
+      "qualityScore": 88,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "rigorous",
+      "en": "Tom is following a rigorous training regimen.",
+      "sentenceId": 9986010,
+      "qualityScore": 82,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "coarse",
+      "en": "When the coarse sieve laughs at the fine sieve, the sheepskin rug smiles mischievously.",
+      "sentenceId": 11355272,
+      "qualityScore": 87,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "lane",
+      "en": "This is the right lane to be in.",
+      "sentenceId": 11021342,
+      "qualityScore": 73,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "standalone penalty=10"
+      ]
+    },
+    {
+      "word": "corporate",
+      "en": "You're not likely to hear about this from the corporate media.",
+      "sentenceId": 12480067,
+      "qualityScore": 94,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "ore",
+      "en": "Where do you find tungsten ore?",
+      "sentenceId": 10206143,
+      "qualityScore": 63,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "similar",
+      "en": "Pollock's early works are similar to his teacher's kind of painting.",
+      "sentenceId": 12411756,
+      "qualityScore": 91,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "survival",
+      "en": "Is there enough food for survival on the island?",
+      "sentenceId": 12766032,
+      "qualityScore": 92,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "classical",
+      "en": "Do you enjoy listening to classical music?",
+      "sentenceId": 12777190,
+      "qualityScore": 72,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "privacy",
+      "en": "For security and privacy reasons, I don't have Facebook on my phone.",
+      "sentenceId": 11720165,
+      "qualityScore": 79,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "proper-noun penalty=1"
+      ]
+    },
+    {
+      "word": "cylinder",
+      "en": "The hydraulic cylinder was the main problem and was changed to a new one.",
+      "sentenceId": 10723434,
+      "qualityScore": 92,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "imaginary",
+      "en": "Tom isn't real, John. He's your imaginary friend.",
+      "sentenceId": 12335008,
+      "qualityScore": 69,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "proper-noun penalty=1"
+      ]
+    },
+    {
+      "word": "drag",
+      "en": "More drag shows need to be protected by armed antifascists.",
+      "sentenceId": 11352143,
+      "qualityScore": 91,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "invert",
+      "en": "Tap the \"A\" button to add a blue filter and invert colors so light becomes dark and dark becomes light.",
+      "sentenceId": 11224170,
+      "qualityScore": 68,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "graphic",
+      "en": "I do graphic design for some T-shirt sites.",
+      "sentenceId": 10363149,
+      "qualityScore": 76,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "accessory",
+      "en": "Tom wears glasses purely as a fashion accessory.",
+      "sentenceId": 12490216,
+      "qualityScore": 79,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "arbitrary",
+      "en": "A fetal \"heartbeat\" is a more arbitrary standard than viability.",
+      "sentenceId": 12050919,
+      "qualityScore": 93,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "lease",
+      "en": "We're signing a new lease on Sunday.",
+      "sentenceId": 10054477,
+      "qualityScore": 66,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "standalone penalty=10"
+      ]
+    },
+    {
+      "word": "perfume",
+      "en": "Ambergris is the foundation of nearly every perfume, and in ancient times was used for spicing wine.",
+      "sentenceId": 11919494,
+      "qualityScore": 65,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "discipline",
+      "en": "The popular conception of evolutionary psychology is even less scientific than the discipline itself.",
+      "sentenceId": 11168053,
+      "qualityScore": 87,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "comply",
+      "en": "You have a duty not to comply with an unlawful order.",
+      "sentenceId": 12470588,
+      "qualityScore": 97,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "destination",
+      "en": "Is happiness found in the journey or the destination?",
+      "sentenceId": 12778564,
+      "qualityScore": 82,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "procedure",
+      "en": "The procedure is called catheter ablation because it burns off a small amount of heart muscle.",
+      "sentenceId": 11248357,
+      "qualityScore": 69,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "trend",
+      "en": "The gap between the rich and poor widens, and it is a concerning trend.",
+      "sentenceId": 11111945,
+      "qualityScore": 69,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "denial",
+      "en": "I was in denial of being an emo kid.",
+      "sentenceId": 11538966,
+      "qualityScore": 78,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "prototype",
+      "en": "The test launch and landing of the starship prototype Tuesday ended in a crash for the second time since December.",
+      "sentenceId": 11017157,
+      "qualityScore": 70,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "instance",
+      "en": "You can't access an instance variable from a static method.",
+      "sentenceId": 12197780,
+      "qualityScore": 95,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "depression",
+      "en": "I've been experiencing depression and dissociation.",
+      "sentenceId": 11080977,
+      "qualityScore": 80,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "jog",
+      "en": "Tom accidentally stepped in dog poop on his morning jog.",
+      "sentenceId": 11653905,
+      "qualityScore": 85,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "regulation",
+      "en": "The President shall promulgate a regulation providing for the mandatory allocation of crude oil.",
+      "sentenceId": 10781042,
+      "qualityScore": 59,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": false,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": false,
+      "notes": [
+        "proper-noun penalty=1",
+        "topic penalty=20"
+      ]
+    },
+    {
+      "word": "occupy",
+      "en": "It's only a matter of time before Putin sends little green men to occupy the moon.",
+      "sentenceId": 11044594,
+      "qualityScore": 35,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": false,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": false,
+      "notes": [
+        "proper-noun penalty=1",
+        "topic penalty=26",
+        "standalone penalty=10"
+      ]
+    },
+    {
+      "word": "bull",
+      "en": "Its father was a very good bull, and I am expecting her to give me a very good heifer.",
+      "sentenceId": 10786896,
+      "qualityScore": 62,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "virtue",
+      "en": "The beauty of virtue is utterly self-evident to me.",
+      "sentenceId": 10092449,
+      "qualityScore": 92,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "bulk",
+      "en": "It's cheaper if you buy in bulk.",
+      "sentenceId": 10750477,
+      "qualityScore": 55,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "standalone penalty=10"
+      ]
+    },
+    {
+      "word": "clan",
+      "en": "A clan of fairies lives under there.",
+      "sentenceId": 11411054,
+      "qualityScore": 72,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "terrain",
+      "en": "The stunning photos reveal a complex and varied terrain on the icy dwarf planet.",
+      "sentenceId": 10820386,
+      "qualityScore": 92,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "accumulate",
+      "en": "Local business owners clean the beach each morning, but the trash begins to accumulate shortly after.",
+      "sentenceId": 11178247,
+      "qualityScore": 76,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "setback",
+      "en": "He sees opportunity in every setback.",
+      "sentenceId": 12776199,
+      "qualityScore": 53,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "standalone penalty=10"
+      ]
+    },
+    {
+      "word": "trademark",
+      "en": "Trademark protection extends only to national borders.",
+      "sentenceId": 11466947,
+      "qualityScore": 72,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "lever",
+      "en": "The machine gives a food reward when your rat presses a lever.",
+      "sentenceId": 10723407,
+      "qualityScore": 86,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "drain",
+      "en": "I pulled a huge hair clog out of the bathroom sink drain.",
+      "sentenceId": 12401431,
+      "qualityScore": 85,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "supplementary",
+      "en": "You may need a supplementary dose after six months.",
+      "sentenceId": 10352324,
+      "qualityScore": 92,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "variation",
+      "en": "The latest variation of the classic tinfoil hat is the tinfoil beret.",
+      "sentenceId": 9454240,
+      "qualityScore": 96,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "pitch",
+      "en": "The sales pitch didn't go well.",
+      "sentenceId": 11237474,
+      "qualityScore": 73,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "compete",
+      "en": "The Kabyle language can therefore compete with others, when it is necessary!",
+      "sentenceId": 9005062,
+      "qualityScore": 80,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "proper-noun penalty=1"
+      ]
+    },
+    {
+      "word": "electric",
+      "en": "Electric motors deliver strong acceleration because they offer more torque than equivalent gasoline engines.",
+      "sentenceId": 10274991,
+      "qualityScore": 80,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "vegetation",
+      "en": "The vegetation changes and becomes sparser as temperatures rise and conditions get drier.",
+      "sentenceId": 12382543,
+      "qualityScore": 82,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "midst",
+      "en": "I seek calm in the midst of chaos.",
+      "sentenceId": 12770660,
+      "qualityScore": 83,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "successive",
+      "en": "Successive owners have tinkered the place since then, but they cannot quite spoil it.",
+      "sentenceId": 11327471,
+      "qualityScore": 69,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "initial",
+      "en": "Based on initial data analysis, the collared bears rarely forayed outside the park.",
+      "sentenceId": 12034469,
+      "qualityScore": 82,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "stalk",
+      "en": "There's a website where people stalk Tom obsessively.",
+      "sentenceId": 10371291,
+      "qualityScore": 70,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "proper-noun penalty=1",
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "vast",
+      "en": "The people were subjugated by a vast empire.",
+      "sentenceId": 9359755,
+      "qualityScore": 80,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "peg",
+      "en": "I took Tom down a peg.",
+      "sentenceId": 10159859,
+      "qualityScore": 50,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "proper-noun penalty=1"
+      ]
+    },
+    {
+      "word": "financial",
+      "en": "I am once again asking for your financial support.",
+      "sentenceId": 9949953,
+      "qualityScore": 88,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "alleviate",
+      "en": "Tom has to perform elaborate rituals to alleviate his fear of spontaneous combustion.",
+      "sentenceId": 6121835,
+      "qualityScore": 95,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "majority",
+      "en": "The wonder is that the majority of the emigrants continued their westward journey.",
+      "sentenceId": 12364652,
+      "qualityScore": 95,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "reject",
+      "en": "Tom rejected Mary before she could reject him.",
+      "sentenceId": 11621317,
+      "qualityScore": 73,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "proper-noun penalty=1"
+      ]
+    },
+    {
+      "word": "oxygen",
+      "en": "Do we need more oxygen tanks?",
+      "sentenceId": 12774938,
+      "qualityScore": 69,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "persistent",
+      "en": "We have been speaking against the persistent callous attacks in the country.",
+      "sentenceId": 11140283,
+      "qualityScore": 87,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "standalone penalty=10"
+      ]
+    },
+    {
+      "word": "available",
+      "en": "Mental healthcare isn't available to most of the working poor under neoliberalism.",
+      "sentenceId": 9189050,
+      "qualityScore": 98,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "schedule",
+      "en": "I'm still trying to sort my schedule out.",
+      "sentenceId": 10101905,
+      "qualityScore": 80,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "disguise",
+      "en": "Nowadays, a lot of imperialists disguise their true intentions in the language of anti-imperialism.",
+      "sentenceId": 11053297,
+      "qualityScore": 86,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "smash",
+      "en": "Smash the boiled pumpkin pieces then add some salt and spices.",
+      "sentenceId": 8289410,
+      "qualityScore": 88,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "dispose",
+      "en": "How should I dispose of used needles or sharps?",
+      "sentenceId": 9805157,
+      "qualityScore": 92,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "scandal",
+      "en": "A cheating scandal threatens to blemish the university's reputation for excellence.",
+      "sentenceId": 11462429,
+      "qualityScore": 100,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "violent",
+      "en": "Jews owe our lives to the violent antifascist resistance of our grandparents.",
+      "sentenceId": 8808650,
+      "qualityScore": 73,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": false,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": false,
+      "notes": [
+        "topic penalty=24"
+      ]
+    },
+    {
+      "word": "pressure",
+      "en": "Can they resist the pressure of the revolution?",
+      "sentenceId": 12765487,
+      "qualityScore": 89,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "vulnerable",
+      "en": "The world is full of bipolar people who don't threaten vulnerable minorities.",
+      "sentenceId": 11270819,
+      "qualityScore": 93,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "alien",
+      "en": "Landing on an alien planet is a dream many scientists hope to achieve.",
+      "sentenceId": 12759640,
+      "qualityScore": 94,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "cater",
+      "en": "This restaurant does not cater for vegans.",
+      "sentenceId": 9004022,
+      "qualityScore": 66,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "standalone penalty=10"
+      ]
+    },
+    {
+      "word": "masculine",
+      "en": "In Moabite, the masculine plural ending was -in instead of -im.",
+      "sentenceId": 8805634,
+      "qualityScore": 81,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "proper-noun penalty=1"
+      ]
+    },
+    {
+      "word": "author",
+      "en": "The author let down a lot of her fans with her transphobia.",
+      "sentenceId": 8700856,
+      "qualityScore": 91,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "exchange",
+      "en": "Can you exchange any cryptocurrencies for a fixed amount of gold or silver?",
+      "sentenceId": 11951448,
+      "qualityScore": 94,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "fertilizer",
+      "en": "Algal overload is common in waterways worldwide caused by fertilizer runoff and poor sewage management.",
+      "sentenceId": 11233041,
+      "qualityScore": 75,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "virtual",
+      "en": "Tom's bird learned to turn on his virtual assistant.",
+      "sentenceId": 10349071,
+      "qualityScore": 88,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "cemetery",
+      "en": "Every grave in this cemetery is identical. It must be where they bury suburbanites.",
+      "sentenceId": 11264536,
+      "qualityScore": 84,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "velvet",
+      "en": "The palace windows were draped with velvet curtains.",
+      "sentenceId": 12775955,
+      "qualityScore": 86,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "cable",
+      "en": "Could graphene be used to make a cable for a space elevator?",
+      "sentenceId": 11211329,
+      "qualityScore": 96,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "cycle",
+      "en": "Can we ever break free from the cycle of existence?",
+      "sentenceId": 12778582,
+      "qualityScore": 95,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "deserve",
+      "en": "What did this company's hardworking employees do to deserve such bosses?",
+      "sentenceId": 12187601,
+      "qualityScore": 91,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "compartment",
+      "en": "Tom's duffel bag didn't fit in the overhead compartment.",
+      "sentenceId": 10220448,
+      "qualityScore": 75,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "credit",
+      "en": "I took out a loan to consolidate my credit card debt.",
+      "sentenceId": 11076065,
+      "qualityScore": 97,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "collapse",
+      "en": "What is causing colony collapse disorder?",
+      "sentenceId": 11988241,
+      "qualityScore": 70,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "routine",
+      "en": "Mary's skincare routine is her daily moment of peace.",
+      "sentenceId": 12768410,
+      "qualityScore": 92,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "appeal",
+      "en": "I'm trying to appeal to the reasonable side of people.",
+      "sentenceId": 11051474,
+      "qualityScore": 95,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    }
+  ]
+}
