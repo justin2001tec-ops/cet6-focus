@@ -29,6 +29,15 @@
 - Re-screened the local candidate pool to 14 scenes. Removed `stars-01`, `waterfall-01`, `waterfall-04`, `sheep-01`, `daisy-01`, and `lighthouse-01` for forest density, tourist/ordinary wallpaper feel, visual clutter, or weak subject framing; original source files remain retained for traceability.
 - Tightened semantic featured-word matching for `beacon`, `waddle`, `eruption`, `daisy`, and `cascade`; no FSRS, IndexedDB, Today Flow, Study, Review, Dictation, or PWA business behavior was changed.
 
+### Visual Refinement Round 3
+
+- Widened the two-card action region from the R2 `880px` cap to `min(88vw, 1680px)`. At 1920×1080 the measured width is 1680px (87.5%), with 120px outer margins and a 28px inter-card gap; iPad and iPhone remain two-column without horizontal overflow.
+- Increased desktop card height to 104px with restrained padding, preserving the low-reflection dark translucent material and the minimal title + number structure.
+- Reversed the typography hierarchy to **title > number**: desktop Learn/Review render at 28px/650 weight while the warm-orange number renders at 22px/500 weight; mobile uses 17–18px titles over 15px numbers.
+- Weakened the bottom navigation one step only: three independent icons remain in place, with inactive white at 0.68 alpha and active white at 0.90 alpha; no container, background, scale, shadow, or labels were added.
+- Featured Word and the 14-scene runtime background pool were frozen; no background, route, business, PWA, or architecture changes were made in R3.
+- Stop Conditions reached after the final screenshot and gate pass. No Round 4 exploration was started.
+
 ### Local background pool
 
 - 14 selected scenes from the handoff candidate pool after Round 2 visual review.
@@ -84,6 +93,12 @@ Required screenshots are in `audit/bbdcd-v1.2/` (desktop captures are 1920×1080
 - R2 screenshots regenerated after the final build: 10 files, 0 console errors, 0 page errors.
 - Browser DOM/layout review confirmed zero legacy home elements, no horizontal/vertical overflow at required sizes, and a transparent borderless bottom navigation.
 - Current state remains **OPEN / NOT MERGED / NO `v1.2.0` TAG / WAITING FOR FINAL VISUAL REVIEW**.
+
+## Visual Refinement Round 3 acceptance state
+
+- Final R3 captures regenerated after the final build: 10 files covering five 1920×1080 desktop scenes, iPhone 390/430, iPad, Background Off, and Study regression; capture reported 0 console errors and 0 page errors.
+- Browser measurements confirmed the 1920×1080 card region at 87.5% viewport width, 104px card height, title size greater than number size, three weak independent nav icons, and zero horizontal/vertical overflow at 1920×1080, 834×1112, 430×932, and 390×844.
+- All R3 Stop Conditions are met. The branch is now frozen for owner review: **OPEN / NOT MERGED / NO `v1.2.0` TAG / NO DEPLOYMENT / WAITING FOR FINAL VISUAL ACCEPTANCE**.
 
 ## Explicit handoff boundary
 

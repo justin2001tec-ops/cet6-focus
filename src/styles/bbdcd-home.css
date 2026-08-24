@@ -91,8 +91,8 @@
 .immersive-home__actions {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-  width: min(880px, 100%);
+  gap: clamp(16px, 1.4vw, 28px);
+  width: min(88vw, 1680px);
   margin: 0 auto;
 }
 
@@ -100,8 +100,8 @@
   display: grid;
   align-content: center;
   justify-items: start;
-  min-height: 90px;
-  padding: 16px 20px;
+  min-height: 104px;
+  padding: 18px 24px;
   border: 1px solid rgba(255, 255, 255, .075);
   border-radius: 15px;
   background: rgba(20, 24, 22, .48);
@@ -124,7 +124,7 @@
 
 .immersive-home__task-label {
   color: rgba(255, 255, 255, .92);
-  font-size: 15px;
+  font-size: clamp(23px, 1.5vw, 28px);
   font-weight: 650;
   line-height: 1.2;
 }
@@ -132,8 +132,8 @@
 .immersive-home__task-value {
   margin-top: 4px;
   color: #f0aa38;
-  font-size: 26px;
-  font-weight: 700;
+  font-size: clamp(18px, 1.15vw, 22px);
+  font-weight: 500;
   letter-spacing: -.035em;
   line-height: 1;
 }
@@ -162,14 +162,19 @@
   place-items: center;
   width: 32px;
   height: 32px;
-  color: rgba(255, 255, 255, .72);
+  color: rgba(255, 255, 255, .68);
   transition: color .18s ease, opacity .18s ease;
 }
 
-.immersive-home__nav-item:hover,
+.immersive-home__nav-item:hover {
+  background: transparent;
+  color: rgba(255, 255, 255, .78);
+  opacity: 1;
+}
+
 .immersive-home__nav-item.is-active {
   background: transparent;
-  color: #fff;
+  color: rgba(255, 255, 255, .9);
   opacity: 1;
 }
 
@@ -236,12 +241,12 @@
   }
 
   .immersive-home__task-label {
-    font-size: 13px;
+    font-size: clamp(17px, 4.2vw, 20px);
   }
 
   .immersive-home__task-value {
     margin-top: 3px;
-    font-size: 23px;
+    font-size: clamp(15px, 3.5vw, 17px);
   }
 
   .immersive-home__bottom-nav {
