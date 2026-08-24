@@ -262,11 +262,11 @@ async function patchMigrationState(page: Page, targetWordId: string): Promise<st
 }
 
 async function finishCurrentStudyCard(page: Page): Promise<string> {
-  const word = await page.locator('h2').textContent()
+  const word = await page.locator('.learning-word-header h1').textContent()
   expect(word).toBeTruthy()
-  await page.getByRole('button', { name: /显示释义/ }).click()
-  await page.getByRole('button', { name: /良好/ }).click()
-  await expect(page.getByRole('heading', { name: '这一段，完成了。' })).toBeVisible({ timeout: 10_000 })
+  await page.getByRole('button', { name: /^认识/ }).click()
+  await page.getByRole('button', { name: /确认认识并继续/ }).click()
+  await expect(page.getByRole('heading', { name: '这一组，完成了。' })).toBeVisible({ timeout: 10_000 })
   return word!
 }
 
@@ -276,7 +276,7 @@ test('Today flow orders review, new study, dictation, and reaches completion', a
   await completeOnboarding(page)
   await updateSettings(page, { dailyNewWords: 1 })
   await gotoRoute(page, '/study')
-  await expect(page.locator('h2')).toBeVisible()
+  await expect(page.locator('.learning-word-header h1')).toBeVisible()
   await finishCurrentStudyCard(page)
 
   const afterStudy = await readDb(page)
@@ -285,10 +285,10 @@ test('Today flow orders review, new study, dictation, and reaches completion', a
   await patchCardDue(page, encounteredId!)
   await gotoRoute(page, '/today')
 
-  await expect(page.locator('.study-toolbar .eyebrow')).toHaveText('到期复习', { timeout: 10_000 })
+  await expect(page.locator('.learning-progress__mode')).toHaveText('到期复习', { timeout: 10_000 })
   await finishCurrentStudyCard(page)
   await page.getByRole('button', { name: '继续今日学习' }).click()
-  await expect(page.locator('.study-toolbar .eyebrow')).toHaveText('今日学习', { timeout: 10_000 })
+  await expect(page.locator('.learning-progress__mode')).toHaveText('今日学习', { timeout: 10_000 })
   await finishCurrentStudyCard(page)
   await page.getByRole('button', { name: '进入听写强化' }).click()
   await expect(page.getByRole('heading', { name: '听写，把认识变成会写。' })).toBeVisible({ timeout: 10_000 })
@@ -307,7 +307,7 @@ test('Today flow orders review, new study, dictation, and reaches completion', a
       await expect(page.getByRole('button', { name: /提交/ })).toBeVisible()
     }
   }
-  await expect(page.getByRole('heading', { name: '今日学习完成。' })).toBeVisible({ timeout: 10_000 })
+  await expect(page.getByRole('heading', { name: '这一组，完成了。' })).toBeVisible({ timeout: 10_000 })
 
   const finished = await readDb(page)
   expect(finished.sessions.map((session) => session.type)).toEqual(expect.arrayContaining(['review', 'study', 'dictation']))
@@ -323,9 +323,9 @@ test('Undo from the final-card completion state restores that same card', async 
   await updateSettings(page, { dailyNewWords: 1 })
   await gotoRoute(page, '/study')
   const word = await finishCurrentStudyCard(page)
-  await page.getByRole('button', { name: /撤销上一张/ }).click()
-  await expect(page.locator('h2')).toHaveText(word)
-  await expect(page.getByRole('button', { name: /显示释义/ })).toBeVisible()
+  await page.getByRole('button', { name: /撤销上一词/ }).click()
+  await expect(page.locator('.learning-word-header h1')).toHaveText(word)
+  await expect(page.getByRole('button', { name: /^认识/ })).toBeVisible()
 
   const restored = await readDb(page)
   expect(restored.reviewLogs).toHaveLength(0)
@@ -423,7 +423,7 @@ test('Word Detail action copy matches its study navigation behavior', async ({ p
   const enterStudy = page.getByRole('button', { name: '进入学习' })
   await expect(enterStudy).toBeVisible()
   await enterStudy.click()
-  await expect(page.locator('.page--study')).toBeVisible({ timeout: 10_000 })
+  await expect(page.locator('.learning-shell')).toBeVisible({ timeout: 10_000 })
 })
 
 test('Vocabulary migration preserves learning data and repairs only the missing card', async ({ page }, testInfo) => {

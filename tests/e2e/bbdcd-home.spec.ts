@@ -66,11 +66,11 @@ test('BBDCD home removes dashboard chrome and keeps real learning links', async 
   expect(navStyle.backdrop).toBe('none')
 
   await page.locator('.immersive-home__task-card--learn').click()
-  await expect(page.locator('.page--study')).toBeVisible({ timeout: 15_000 })
+  await expect(page.locator('.learning-shell')).toBeVisible({ timeout: 15_000 })
   await page.goto('/#/', { waitUntil: 'domcontentloaded' })
   await page.locator('.immersive-home__task-card--review').click()
   await expect(page).toHaveURL(/#\/review$/)
-  await expect(page.locator('.page--study, .page')).toBeVisible({ timeout: 15_000 })
+  await expect(page.locator('.learning-shell, .page')).toBeVisible({ timeout: 15_000 })
 })
 
 test('BBDCD fixed and off background modes use local scene assets', async ({ page }, testInfo) => {

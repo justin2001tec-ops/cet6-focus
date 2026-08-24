@@ -22,6 +22,8 @@ async function gotoRoute(page: Page, route: string): Promise<void> {
   await page.goto(`/#${route}`, { waitUntil: 'domcontentloaded' })
   if (route === '/') {
     await expect(page.locator('.immersive-home__featured-word')).toBeVisible({ timeout: 15_000 })
+  } else if (['/study', '/review', '/mistakes/study'].includes(route)) {
+    await expect(page.locator('.learning-shell')).toBeVisible({ timeout: 15_000 })
   } else {
     await expect(page.locator('.mobile-topbar__title')).toBeVisible({ timeout: 15_000 })
   }
@@ -86,8 +88,15 @@ test('Mobile route titles and primary tabs follow the presentation map', async (
       await expect(page.locator('.app-frame .sidebar')).toHaveCount(0)
       continue
     }
-    await expect(page.locator('.mobile-topbar__title')).toHaveText(title)
-    await expect(page.locator('.mobile-nav__item.is-active')).toContainText(tab)
+    if (['/study', '/review', '/mistakes/study'].includes(route)) {
+      const expectedLearningMode = route === '/review' ? '到期复习' : route === '/mistakes/study' ? '薄弱词强化' : '今日学习'
+      await expect(page.locator('.learning-progress__mode, .learning-empty .learning-section-kicker').filter({ hasText: expectedLearningMode })).toBeVisible()
+      await expect(page.locator('.mobile-topbar__title')).toHaveCount(0)
+      await expect(page.locator('.mobile-nav')).toHaveCount(0)
+    } else {
+      await expect(page.locator('.mobile-topbar__title')).toHaveText(title)
+      await expect(page.locator('.mobile-nav__item.is-active')).toContainText(tab)
+    }
   }
 })
 

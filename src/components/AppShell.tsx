@@ -37,6 +37,7 @@ export function AppShell() {
   const location = useLocation()
   const [keyboardInputFocused, setKeyboardInputFocused] = useState(false)
   const isImmersiveHome = location.pathname === '/'
+  const isLearningRoute = ['/study', '/review', '/mistakes/study'].includes(location.pathname)
   const backgroundStyle = background ? {
     '--scene-position': background.desktopPosition,
     '--scene-mobile-position': background.mobilePosition,
@@ -57,9 +58,9 @@ export function AppShell() {
   }, [])
 
   return (
-    <div className={`app-frame ${background ? 'app-frame--with-background' : 'app-frame--plain'} ${isImmersiveHome ? 'app-frame--immersive-home' : ''} ${keyboardInputFocused ? 'app-frame--keyboard-input' : ''}`} style={backgroundStyle}>
+    <div className={`app-frame ${background ? 'app-frame--with-background' : 'app-frame--plain'} ${isImmersiveHome ? 'app-frame--immersive-home' : ''} ${isLearningRoute ? 'app-frame--learning' : ''} ${keyboardInputFocused ? 'app-frame--keyboard-input' : ''}`} style={backgroundStyle}>
       <div className="app-background" aria-hidden="true">{background && <picture><source srcSet={background.avif} type="image/avif" /><img src={background.webp} alt="" /></picture>}</div>
-      {!isImmersiveHome && <aside className="sidebar liquid-glass">
+      {!isImmersiveHome && !isLearningRoute && <aside className="sidebar liquid-glass">
         <NavBrand />
         <nav className="sidebar__nav" aria-label="主导航">
           <NavGroup label="Workspace">
@@ -78,7 +79,7 @@ export function AppShell() {
       </aside>}
 
       <main className="main-content">
-        {!isImmersiveHome && <div className="mobile-topbar liquid-glass">
+        {!isImmersiveHome && !isLearningRoute && <div className="mobile-topbar liquid-glass">
           <NavBrand compact />
           <span className="mobile-topbar__title">{getRoutePresentation(location.pathname).title}</span>
           <NavLink to="/settings" className="icon-button" aria-label="打开设置"><Settings2 size={19} /></NavLink>
@@ -87,7 +88,7 @@ export function AppShell() {
         <Outlet />
       </main>
 
-      {!isImmersiveHome && <nav className="mobile-nav liquid-glass" style={keyboardInputFocused ? { opacity: 0, pointerEvents: 'none', transform: 'translateY(calc(100% + 24px))' } : undefined} aria-label="移动端主导航">
+      {!isImmersiveHome && !isLearningRoute && <nav className="mobile-nav liquid-glass" style={keyboardInputFocused ? { opacity: 0, pointerEvents: 'none', transform: 'translateY(calc(100% + 24px))' } : undefined} aria-label="移动端主导航">
         {mobileNav.map((item) => {
           const Icon = item.icon
           const active = isRouteActive(item.to, location.pathname)
