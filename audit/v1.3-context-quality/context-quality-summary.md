@@ -13,10 +13,10 @@
 | Gate | Result |
 | --- | --- |
 | Sample size >= 200 | PASS (250) |
-| Sample quality pass rate >= 90% | PASS (95.2%, 238/250) |
+| Sample quality pass rate >= 90% | PASS (98.0%, 245/250) |
 | Severe inappropriate sample count = 0 | PASS (0) |
 | Provenance coverage = 100% | PASS (100.0%) |
-| Quality-approved coverage >= 60% | PASS (60.3%) |
+| Quality-approved coverage >= 60% | FAIL (50%) |
 
 ## Five-dimension rubric
 

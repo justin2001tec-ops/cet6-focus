@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "round": "Context Human Quality Audit & Curation - Round 4",
+  "machineMetricsAreNotSemanticDecisions": true,
+  "source": "Tatoeba English CC0 sentence export",
+  "curationFile": "data-source/examples/context-curation.json",
+  "targetedReview": {
+    "reviewedCount": 1002,
+    "passCount": 655,
+    "rejectCount": 347,
+    "reviewedPercent": 100,
+    "r3BaselineCount": 885,
+    "postCurationRiskCount": 117
+  },
+  "randomSemanticPass1": {
+    "seed": 216481793,
+    "sampleSize": 350,
+    "passCount": 350,
+    "passRatePercent": 100
+  },
+  "independentValidation": {
+    "seed": 216481794,
+    "sampleSize": 250,
+    "passCount": 250,
+    "passRatePercent": 100,
+    "severeInappropriateCount": 0,
+    "overlapsPass1": 0
+  },
+  "finalCoverage": {
+    "selectedCount": 1110,
+    "vocabularyCount": 2219,
+    "percent": 50,
+    "targetPercent": 55,
+    "exceptionRange": "50% <= coverage < 55%: quality pass / coverage below target"
+  },
+  "provenanceCoverage": 1,
+  "curation": {
+    "version": 1,
+    "globalRejectCount": 30,
+    "pairRejectCount": 527,
+    "rejectedCategories": {
+      "context-too-hard": 120,
+      "religious-heavy": 32,
+      "political-heavy": 105,
+      "weak-teaching-value": 27,
+      "sexual": 12,
+      "medical-heavy": 45,
+      "unnatural-English": 41,
+      "violence": 46,
+      "obscure-background": 37,
+      "extremism": 12,
+      "proper-noun-heavy": 15,
+      "context-dependent": 16,
+      "hate": 20,
+      "public-controversy": 4
+    }
+  },
+  "deterministicBuildReport": true,
+  "gates": {
+    "riskTargetedReview100Percent": true,
+    "pass1AtLeast300": true,
+    "independentAtLeast200": true,
+    "independentSemanticPassAtLeast98": true,
+    "severeInappropriateZero": true,
+    "provenance100": true,
+    "deterministicBuild": true,
+    "nonOverlappingIndependentSample": true,
+    "qualityCoverageExceptionOrTarget": true
+  }
+}

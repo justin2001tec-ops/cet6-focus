@@ -72,6 +72,29 @@ interface ExampleBuildReport {
     minimumQualityScore: number
   }
   deterministic: boolean
+  curation: {
+    version: number
+    globalRejectCount: number
+    pairRejectCount: number
+    rejectedCandidateCount: number
+    noFallbackCount: number
+  }
+}
+
+interface CurationGlobalReject {
+  sentenceId: number
+  categories: string[]
+  reason: string
+}
+
+interface CurationPairReject extends CurationGlobalReject {
+  word: string
+}
+
+interface ContextCuration {
+  version: number
+  globalReject: CurationGlobalReject[]
+  pairReject: CurationPairReject[]
 }
 
 const root = resolve(import.meta.dirname, '..')
@@ -80,6 +103,7 @@ const sourcePath = resolve(root, 'data-source/examples/tatoeba/eng_sentences_CC0
 const outputPath = resolve(root, 'data-source/examples/selected-examples.json')
 const provenancePath = resolve(root, 'data-source/examples/example-provenance.json')
 const buildReportPath = resolve(root, 'data-source/examples/build-report.json')
+const curationPath = resolve(root, 'data-source/examples/context-curation.json')
 
 const MIN_TOKENS = 6
 const MAX_TOKENS = 18
@@ -280,6 +304,9 @@ function incrementRejectionCounts(target: Record<string, number>, reasons: strin
 
 const vocabulary = JSON.parse(await readFile(vocabularyPath, 'utf8')) as WordRecord[]
 const words = new Map(vocabulary.map(({ word }) => [word.toLocaleLowerCase(), word.toLocaleLowerCase()]))
+const curation = JSON.parse(await readFile(curationPath, 'utf8')) as ContextCuration
+const globalRejectIds = new Set(curation.globalReject.map((entry) => entry.sentenceId))
+const pairRejectKeys = new Set(curation.pairReject.map((entry) => `${entry.word.toLocaleLowerCase()}::${entry.sentenceId}`))
 const source = await readFile(sourcePath, 'utf8')
 const lines = source.split(/\r?\n/)
 const tokenFrequency = new Map<string, number>()
@@ -296,7 +323,7 @@ for (const line of lines) {
   }
 }
 
-const candidates = new Map<string, Candidate>()
+const candidates = new Map<string, Candidate[]>()
 const rawWords = new Set<string>()
 const rejectionCounts: Record<string, number> = {}
 let matchedTargetCandidates = 0
@@ -354,25 +381,47 @@ for (const line of lines) {
       score: evaluation.candidate.score,
       metrics: evaluation.candidate.metrics,
     }
-    const previous = candidates.get(word)
-    if (!previous || candidate.score > previous.score || (candidate.score === previous.score && (candidate.en < previous.en || (candidate.en === previous.en && candidate.sentenceId < previous.sentenceId)))) {
-      candidates.set(word, candidate)
-    }
+    const wordCandidates = candidates.get(word) ?? []
+    wordCandidates.push(candidate)
+    candidates.set(word, wordCandidates)
   }
 }
 
-const sortedCandidates = [...candidates.entries()].sort(([a], [b]) => a.localeCompare(b))
-const selected = Object.fromEntries(sortedCandidates.map(([word, candidate]) => [word, { en: candidate.en } satisfies WordExample]))
-const provenance = Object.fromEntries(sortedCandidates.map(([word, candidate]) => [word, {
+function compareCandidates(a: Candidate, b: Candidate): number {
+  return b.score - a.score || a.en.localeCompare(b.en) || a.sentenceId - b.sentenceId
+}
+
+let rejectedCandidateCount = 0
+let noFallbackCount = 0
+const selectedCandidates = [...candidates.entries()]
+  .map(([word, wordCandidates]) => {
+    const ranked = [...wordCandidates].sort(compareCandidates)
+    const candidate = ranked.find((entry) => {
+      const globalRejected = globalRejectIds.has(entry.sentenceId)
+      const pairRejected = pairRejectKeys.has(`${word.toLocaleLowerCase()}::${entry.sentenceId}`)
+      if (globalRejected || pairRejected) {
+        rejectedCandidateCount += 1
+        return false
+      }
+      return true
+    })
+    if (!candidate) noFallbackCount += 1
+    return candidate ? [word, candidate] as const : undefined
+  })
+  .filter((entry): entry is readonly [string, Candidate] => Boolean(entry))
+  .sort(([a], [b]) => a.localeCompare(b))
+
+const selected = Object.fromEntries(selectedCandidates.map(([word, candidate]) => [word, { en: candidate.en } satisfies WordExample]))
+const provenance = Object.fromEntries(selectedCandidates.map(([word, candidate]) => [word, {
   sentenceId: candidate.sentenceId,
   source: 'tatoeba-cc0' as const,
   qualityScore: candidate.score,
   ...candidate.metrics,
 } satisfies Provenance]))
 const rawCandidateCoverage = rawWords.size / vocabulary.length
-const qualityApprovedCoverage = sortedCandidates.length / vocabulary.length
+const qualityApprovedCoverage = selectedCandidates.length / vocabulary.length
 const report: ExampleBuildReport = {
-  selectorVersion: 'v2-context-quality',
+  selectorVersion: 'v3-context-quality-curation',
   source: 'Tatoeba English CC0 sentence export',
   sourceFile: 'data-source/examples/tatoeba/eng_sentences_CC0.tsv',
   totalSourceSentences,
@@ -380,7 +429,7 @@ const report: ExampleBuildReport = {
   matchedTargetCandidates,
   rawCandidatePairs,
   rawCandidateWordCount: rawWords.size,
-  selectedCount: sortedCandidates.length,
+  selectedCount: selectedCandidates.length,
   rawCandidateCoverage,
   rawCandidateCoveragePercent: Number((rawCandidateCoverage * 100).toFixed(1)),
   qualityApprovedCoverage,
@@ -398,13 +447,21 @@ const report: ExampleBuildReport = {
     minimumQualityScore: MIN_QUALITY_SCORE,
   },
   deterministic: true,
+  curation: {
+    version: curation.version,
+    globalRejectCount: curation.globalReject.length,
+    pairRejectCount: curation.pairReject.length,
+    rejectedCandidateCount,
+    noFallbackCount,
+  },
 }
 
 await writeFile(outputPath, `${JSON.stringify(selected, null, 2)}\n`, 'utf8')
 await writeFile(provenancePath, `${JSON.stringify(provenance, null, 2)}\n`, 'utf8')
 await writeFile(buildReportPath, `${JSON.stringify(report, null, 2)}\n`, 'utf8')
 
-console.log(`Example candidates selected: ${sortedCandidates.length} / ${vocabulary.length} (${(qualityApprovedCoverage * 100).toFixed(1)}%)`)
+console.log(`Example candidates selected: ${selectedCandidates.length} / ${vocabulary.length} (${(qualityApprovedCoverage * 100).toFixed(1)}%)`)
 console.log(`Raw candidate coverage: ${rawWords.size} / ${vocabulary.length} (${(rawCandidateCoverage * 100).toFixed(1)}%)`)
+console.log(`Durable curation: ${curation.globalReject.length} global rejects, ${curation.pairReject.length} pair rejects; ${rejectedCandidateCount} candidates skipped; ${noFallbackCount} words without a fallback`)
 console.log(`Source sentences scanned: ${totalSourceSentences}`)
 console.log(`Example source: ${sourcePath}`)

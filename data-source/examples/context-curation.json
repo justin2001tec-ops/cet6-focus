@@ -1,0 +1,4764 @@
+{
+  "version": 1,
+  "source": "Tatoeba English CC0 sentence export",
+  "reviewer": "Lula-agent",
+  "reviewMethod": "Sentence-read semantic rubric; machine metrics are retained only as risk signals.",
+  "globalReject": [
+    {
+      "sentenceId": 5268344,
+      "categories": [
+        "sexual"
+      ],
+      "reason": "The sentence is ambiguous with a sex-work meaning and is not suitable as a default example."
+    },
+    {
+      "sentenceId": 8022209,
+      "categories": [
+        "sexual"
+      ],
+      "reason": "The sentence includes explicit sexual activity."
+    },
+    {
+      "sentenceId": 8022246,
+      "categories": [
+        "sexual"
+      ],
+      "reason": "The sentence uses explicit sexual activity as the example context."
+    },
+    {
+      "sentenceId": 8111594,
+      "categories": [
+        "violence",
+        "hate"
+      ],
+      "reason": "The sentence describes beating women in an identity-based generalization."
+    },
+    {
+      "sentenceId": 8111597,
+      "categories": [
+        "sexual"
+      ],
+      "reason": "The sentence includes pornographic material."
+    },
+    {
+      "sentenceId": 8114983,
+      "categories": [
+        "violence",
+        "religious-heavy"
+      ],
+      "reason": "The sentence describes slaughtering animals in front of children as a religious practice."
+    },
+    {
+      "sentenceId": 8214536,
+      "categories": [
+        "violence"
+      ],
+      "reason": "The sentence pairs commit with atrocities and is not a neutral default context."
+    },
+    {
+      "sentenceId": 8832211,
+      "categories": [
+        "violence",
+        "hate"
+      ],
+      "reason": "The sentence describes the slaughter of Jews in an antisemitic historical context."
+    },
+    {
+      "sentenceId": 9511536,
+      "categories": [
+        "extremism",
+        "religious-heavy",
+        "violence"
+      ],
+      "reason": "The sentence uses beheading as a threat in a religious conflict."
+    },
+    {
+      "sentenceId": 9956770,
+      "categories": [
+        "violence"
+      ],
+      "reason": "The sentence describes a violent gang turf war."
+    },
+    {
+      "sentenceId": 10161554,
+      "categories": [
+        "hate"
+      ],
+      "reason": "The sentence explicitly uses a racial epithet."
+    },
+    {
+      "sentenceId": 10228651,
+      "categories": [
+        "violence",
+        "religious-heavy"
+      ],
+      "reason": "The sentence describes child sacrifice."
+    },
+    {
+      "sentenceId": 11034211,
+      "categories": [
+        "sexual",
+        "medical-heavy"
+      ],
+      "reason": "The sentence describes an explicit medical treatment involving the anus and piles."
+    },
+    {
+      "sentenceId": 11150718,
+      "categories": [
+        "violence"
+      ],
+      "reason": "The sentence is a literary stabbing reference and is not appropriate as a default context."
+    },
+    {
+      "sentenceId": 11364538,
+      "categories": [
+        "extremism",
+        "violence"
+      ],
+      "reason": "The sentence endorses punching Nazis."
+    },
+    {
+      "sentenceId": 11451337,
+      "categories": [
+        "extremism",
+        "political-heavy"
+      ],
+      "reason": "The sentence centers propaganda and fascists in a partisan political claim."
+    },
+    {
+      "sentenceId": 11595487,
+      "categories": [
+        "sexual"
+      ],
+      "reason": "The sentence describes sexual trysts in a default example."
+    },
+    {
+      "sentenceId": 11740270,
+      "categories": [
+        "violence",
+        "political-heavy"
+      ],
+      "reason": "The sentence describes mass killings under political regimes."
+    },
+    {
+      "sentenceId": 11765250,
+      "categories": [
+        "violence"
+      ],
+      "reason": "The sentence frames mass shootings as the example context."
+    },
+    {
+      "sentenceId": 11765251,
+      "categories": [
+        "violence"
+      ],
+      "reason": "The sentence frames mass shootings as the learning context for executive function."
+    },
+    {
+      "sentenceId": 11779076,
+      "categories": [
+        "violence"
+      ],
+      "reason": "The sentence explicitly describes pulling a trigger."
+    },
+    {
+      "sentenceId": 11790283,
+      "categories": [
+        "extremism",
+        "violence"
+      ],
+      "reason": "The sentence describes violent fascist threats."
+    },
+    {
+      "sentenceId": 11807420,
+      "categories": [
+        "extremism",
+        "political-heavy"
+      ],
+      "reason": "The sentence centers Nazis in a partisan political comparison."
+    },
+    {
+      "sentenceId": 11844548,
+      "categories": [
+        "extremism",
+        "political-heavy"
+      ],
+      "reason": "The sentence places Nazis in a default child-facing context and is not a neutral teaching example."
+    },
+    {
+      "sentenceId": 11928120,
+      "categories": [
+        "violence"
+      ],
+      "reason": "The sentence describes aggravated assault and mayhem."
+    },
+    {
+      "sentenceId": 11948142,
+      "categories": [
+        "extremism",
+        "violence"
+      ],
+      "reason": "The sentence describes Mussolini's corpse being displayed in a public square."
+    },
+    {
+      "sentenceId": 12000276,
+      "categories": [
+        "sexual",
+        "medical-heavy"
+      ],
+      "reason": "The sentence describes a sexually transmitted fatal disease."
+    },
+    {
+      "sentenceId": 12154787,
+      "categories": [
+        "sexual",
+        "violence",
+        "hate"
+      ],
+      "reason": "The sentence describes sexual assault in an identity-based political dispute."
+    },
+    {
+      "sentenceId": 13035646,
+      "categories": [
+        "violence"
+      ],
+      "reason": "The sentence contains unnecessary interpersonal stabbing."
+    },
+    {
+      "sentenceId": 13267046,
+      "categories": [
+        "sexual"
+      ],
+      "reason": "The sentence describes explicit photos used for blackmail."
+    }
+  ],
+  "pairReject": [
+    {
+      "word": "abandon",
+      "sentenceId": 12338135,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "abolish",
+      "sentenceId": 5059670,
+      "categories": [
+        "religious-heavy"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word."
+    },
+    {
+      "word": "abundant",
+      "sentenceId": 9954436,
+      "categories": [
+        "context-too-hard",
+        "political-heavy"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "abuse",
+      "sentenceId": 8654520,
+      "categories": [
+        "public-controversy",
+        "weak-teaching-value"
+      ],
+      "reason": "The sentence still centers abuse as a sensitive social issue and does not provide a sufficiently neutral default context."
+    },
+    {
+      "word": "abuse",
+      "sentenceId": 11274444,
+      "categories": [
+        "violence",
+        "public-controversy"
+      ],
+      "reason": "The sentence centers child abuse and is not suitable as a default learning context."
+    },
+    {
+      "word": "abuse",
+      "sentenceId": 11986231,
+      "categories": [
+        "public-controversy",
+        "weak-teaching-value"
+      ],
+      "reason": "The sentence centers an emotionally charged abuse and defamation dispute rather than a neutral default context for the target word."
+    },
+    {
+      "word": "additional",
+      "sentenceId": 11689796,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "administration",
+      "sentenceId": 11462440,
+      "categories": [
+        "political-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "administration",
+      "sentenceId": 12063836,
+      "categories": [
+        "political-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "adopt",
+      "sentenceId": 11702461,
+      "categories": [
+        "political-heavy",
+        "weak-teaching-value"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "advantage",
+      "sentenceId": 11380634,
+      "categories": [
+        "context-too-hard",
+        "weak-teaching-value"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word. The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "advantage",
+      "sentenceId": 11878545,
+      "categories": [
+        "public-controversy"
+      ],
+      "reason": "The sentence depends on a current public-figure or culture-war controversy that is unnecessary for the target word."
+    },
+    {
+      "word": "aggressive",
+      "sentenceId": 11541536,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "alienate",
+      "sentenceId": 12015551,
+      "categories": [
+        "context-too-hard",
+        "weak-teaching-value"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word. The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "alternative",
+      "sentenceId": 13148347,
+      "categories": [
+        "unnatural-English"
+      ],
+      "reason": "The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "ambition",
+      "sentenceId": 11676112,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "ammunition",
+      "sentenceId": 11891468,
+      "categories": [
+        "violence"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "analysis",
+      "sentenceId": 12034469,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "anonymous",
+      "sentenceId": 9673899,
+      "categories": [
+        "public-controversy",
+        "proper-noun-heavy"
+      ],
+      "reason": "The sentence depends on a current public-figure or culture-war controversy that is unnecessary for the target word. The proper names or named institutions create unnecessary cognitive load for this target word."
+    },
+    {
+      "word": "anonymous",
+      "sentenceId": 11076401,
+      "categories": [
+        "obscure-background",
+        "context-too-hard"
+      ],
+      "reason": "The sentence requires obscure names, places, history, or specialist background before it can be understood. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "anonymous",
+      "sentenceId": 12437930,
+      "categories": [
+        "public-controversy",
+        "proper-noun-heavy"
+      ],
+      "reason": "The sentence depends on a current public-figure or culture-war controversy that is unnecessary for the target word. The proper names or named institutions create unnecessary cognitive load for this target word."
+    },
+    {
+      "word": "appropriate",
+      "sentenceId": 11844546,
+      "categories": [
+        "public-controversy",
+        "context-dependent"
+      ],
+      "reason": "The sentence is tied to a current culture-war controversy and is not a neutral, context-independent default example."
+    },
+    {
+      "word": "arrangement",
+      "sentenceId": 11354864,
+      "categories": [
+        "political-heavy",
+        "proper-noun-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence is a news-style government and visa-policy report with unnecessary country and institutional background."
+    },
+    {
+      "word": "arrest",
+      "sentenceId": 10009479,
+      "categories": [
+        "obscure-background",
+        "context-dependent"
+      ],
+      "reason": "The sentence requires obscure names, places, history, or specialist background before it can be understood. The sentence is not sufficiently standalone or leaves a key reference unresolved."
+    },
+    {
+      "word": "ascend",
+      "sentenceId": 10722100,
+      "categories": [
+        "religious-heavy",
+        "unnatural-English"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word. The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "assault",
+      "sentenceId": 9416101,
+      "categories": [
+        "violence"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "assert",
+      "sentenceId": 9141055,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "assert",
+      "sentenceId": 11532790,
+      "categories": [
+        "political-heavy",
+        "hate"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence contains an identity-based generalization or hateful conflict that is not needed for teaching."
+    },
+    {
+      "word": "attach",
+      "sentenceId": 11109115,
+      "categories": [
+        "medical-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence requires specialist surgical and anatomical background that overwhelms the ordinary target-word use."
+    },
+    {
+      "word": "attain",
+      "sentenceId": 9801023,
+      "categories": [
+        "unnatural-English",
+        "context-too-hard"
+      ],
+      "reason": "The wording is awkward, archaic, or unnatural for a modern default teaching example. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "attitude",
+      "sentenceId": 10104692,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "attractive",
+      "sentenceId": 11081976,
+      "categories": [
+        "political-heavy",
+        "weak-teaching-value"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "authentic",
+      "sentenceId": 8108994,
+      "categories": [
+        "religious-heavy",
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "author",
+      "sentenceId": 8700856,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "author",
+      "sentenceId": 8700874,
+      "categories": [
+        "public-controversy"
+      ],
+      "reason": "The sentence depends on a current public-figure or culture-war controversy that is unnecessary for the target word."
+    },
+    {
+      "word": "author",
+      "sentenceId": 11559218,
+      "categories": [
+        "public-controversy"
+      ],
+      "reason": "The sentence depends on a current public-figure or culture-war controversy that is unnecessary for the target word."
+    },
+    {
+      "word": "author",
+      "sentenceId": 12052583,
+      "categories": [
+        "public-controversy"
+      ],
+      "reason": "The sentence depends on a current public-figure or culture-war controversy that is unnecessary for the target word."
+    },
+    {
+      "word": "autonomy",
+      "sentenceId": 10018041,
+      "categories": [
+        "context-dependent"
+      ],
+      "reason": "The sentence is not sufficiently standalone or leaves a key reference unresolved."
+    },
+    {
+      "word": "autonomy",
+      "sentenceId": 12131359,
+      "categories": [
+        "obscure-background",
+        "proper-noun-heavy",
+        "political-heavy"
+      ],
+      "reason": "The sentence requires obscure names, places, history, or specialist background before it can be understood. The proper names or named institutions create unnecessary cognitive load for this target word. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "axis",
+      "sentenceId": 8622843,
+      "categories": [
+        "political-heavy",
+        "obscure-background"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence requires obscure names, places, history, or specialist background before it can be understood."
+    },
+    {
+      "word": "barren",
+      "sentenceId": 12764977,
+      "categories": [
+        "violence"
+      ],
+      "reason": "The sentence places the target in an unnecessary war aftermath context."
+    },
+    {
+      "word": "behave",
+      "sentenceId": 8111692,
+      "categories": [
+        "hate"
+      ],
+      "reason": "The sentence contains an identity-based generalization, slur-adjacent framing, or hateful conflict that is not needed for teaching."
+    },
+    {
+      "word": "bleed",
+      "sentenceId": 9805509,
+      "categories": [
+        "sexual",
+        "medical-heavy"
+      ],
+      "reason": "The sentence asks about bleeding after sex and is not appropriate as a default learning context."
+    },
+    {
+      "word": "blossom",
+      "sentenceId": 11068644,
+      "categories": [
+        "weak-teaching-value"
+      ],
+      "reason": "The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "brisk",
+      "sentenceId": 10844733,
+      "categories": [
+        "unnatural-English",
+        "context-too-hard"
+      ],
+      "reason": "The wording is awkward, archaic, or unnatural for a modern default teaching example. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "budget",
+      "sentenceId": 11976447,
+      "categories": [
+        "political-heavy",
+        "violence"
+      ],
+      "reason": "The sentence is a partisan military-spending prescription rather than a neutral example of budget."
+    },
+    {
+      "word": "bull",
+      "sentenceId": 10786896,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "bully",
+      "sentenceId": 10021723,
+      "categories": [
+        "violence",
+        "context-too-hard"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "bureaucracy",
+      "sentenceId": 8801510,
+      "categories": [
+        "extremism",
+        "obscure-background"
+      ],
+      "reason": "The sentence requires extremist or Nazi-related context that is not necessary to teach the target word. The sentence requires obscure names, places, history, or specialist background before it can be understood."
+    },
+    {
+      "word": "bypass",
+      "sentenceId": 10249063,
+      "categories": [
+        "extremism",
+        "political-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence requires extremist or Nazi-related context that is not necessary to teach the target word. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "cancer",
+      "sentenceId": 10806002,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "candidate",
+      "sentenceId": 11026484,
+      "categories": [
+        "political-heavy",
+        "proper-noun-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The proper names or named institutions create unnecessary cognitive load for this target word."
+    },
+    {
+      "word": "cane",
+      "sentenceId": 11686683,
+      "categories": [
+        "obscure-background",
+        "context-too-hard"
+      ],
+      "reason": "The sentence requires obscure names, places, history, or specialist background before it can be understood. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "casual",
+      "sentenceId": 11863884,
+      "categories": [
+        "unnatural-English"
+      ],
+      "reason": "The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "certainty",
+      "sentenceId": 12060096,
+      "categories": [
+        "unnatural-English",
+        "context-too-hard"
+      ],
+      "reason": "The wording is awkward, archaic, or unnatural for a modern default teaching example. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "champagne",
+      "sentenceId": 8736656,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "chief",
+      "sentenceId": 11889584,
+      "categories": [
+        "obscure-background",
+        "context-too-hard"
+      ],
+      "reason": "The sentence requires obscure names, places, history, or specialist background before it can be understood. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "clamp",
+      "sentenceId": 10724631,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "classification",
+      "sentenceId": 11358495,
+      "categories": [
+        "hate",
+        "political-heavy"
+      ],
+      "reason": "The sentence contains an identity-based generalization, slur-adjacent framing, or hateful conflict that is not needed for teaching. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "cling",
+      "sentenceId": 11899770,
+      "categories": [
+        "obscure-background",
+        "context-too-hard"
+      ],
+      "reason": "The sentence requires obscure names, places, history, or specialist background before it can be understood. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "cocaine",
+      "sentenceId": 10280164,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary drug or medical history instead of the target word."
+    },
+    {
+      "word": "cocaine",
+      "sentenceId": 11934950,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "cocaine",
+      "sentenceId": 12391805,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "cognitive",
+      "sentenceId": 12154399,
+      "categories": [
+        "medical-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "collapse",
+      "sentenceId": 11988241,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "colonial",
+      "sentenceId": 8421512,
+      "categories": [
+        "political-heavy",
+        "religious-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence depends on a religious controversy or background that is unnecessary for the target word."
+    },
+    {
+      "word": "combine",
+      "sentenceId": 11598375,
+      "categories": [
+        "weak-teaching-value",
+        "obscure-background"
+      ],
+      "reason": "The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden. The sentence requires obscure names, places, history, or specialist background before it can be understood."
+    },
+    {
+      "word": "commit",
+      "sentenceId": 11678600,
+      "categories": [
+        "political-heavy",
+        "weak-teaching-value"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "committee",
+      "sentenceId": 11121049,
+      "categories": [
+        "political-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "committee",
+      "sentenceId": 12272805,
+      "categories": [
+        "political-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "commonwealth",
+      "sentenceId": 11502104,
+      "categories": [
+        "political-heavy",
+        "unnatural-English"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "comparable",
+      "sentenceId": 9267873,
+      "categories": [
+        "political-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "comparable",
+      "sentenceId": 12025045,
+      "categories": [
+        "political-heavy",
+        "obscure-background"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence requires obscure names, places, history, or specialist background before it can be understood."
+    },
+    {
+      "word": "compete",
+      "sentenceId": 9005062,
+      "categories": [
+        "obscure-background"
+      ],
+      "reason": "The sentence requires obscure names, places, history, or specialist background before it can be understood."
+    },
+    {
+      "word": "compete",
+      "sentenceId": 11976271,
+      "categories": [
+        "public-controversy"
+      ],
+      "reason": "The sentence depends on a current public-figure or culture-war controversy that is unnecessary for the target word."
+    },
+    {
+      "word": "compete",
+      "sentenceId": 11976560,
+      "categories": [
+        "public-controversy"
+      ],
+      "reason": "The sentence depends on a current public-figure or culture-war controversy that is unnecessary for the target word."
+    },
+    {
+      "word": "component",
+      "sentenceId": 10087290,
+      "categories": [
+        "weak-teaching-value",
+        "context-dependent"
+      ],
+      "reason": "The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden. The sentence is not sufficiently standalone or leaves a key reference unresolved."
+    },
+    {
+      "word": "comprehensive",
+      "sentenceId": 11062578,
+      "categories": [
+        "sexual",
+        "medical-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence contains sexual or explicit material that is not appropriate as a default learning context. The sentence makes the learner process unnecessary medical detail instead of the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "concentrate",
+      "sentenceId": 11409906,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "concentrate",
+      "sentenceId": 11409910,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "concentration",
+      "sentenceId": 12034453,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "concern",
+      "sentenceId": 11074647,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "concise",
+      "sentenceId": 11265727,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "congress",
+      "sentenceId": 1569413,
+      "categories": [
+        "political-heavy",
+        "public-controversy"
+      ],
+      "reason": "The sentence is a political insult involving Congress rather than a neutral default use of the target."
+    },
+    {
+      "word": "congress",
+      "sentenceId": 8732340,
+      "categories": [
+        "political-heavy",
+        "weak-teaching-value"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "congress",
+      "sentenceId": 9588518,
+      "categories": [
+        "obscure-background",
+        "proper-noun-heavy"
+      ],
+      "reason": "The sentence requires obscure names, places, history, or specialist background before it can be understood. The proper names or named institutions create unnecessary cognitive load for this target word."
+    },
+    {
+      "word": "congress",
+      "sentenceId": 11997364,
+      "categories": [
+        "proper-noun-heavy",
+        "political-heavy",
+        "context-dependent"
+      ],
+      "reason": "The target is used as a specific political institution in a news-like sentence with unnecessary background."
+    },
+    {
+      "word": "conscientious",
+      "sentenceId": 10791371,
+      "categories": [
+        "unnatural-English",
+        "context-too-hard"
+      ],
+      "reason": "The wording is awkward, archaic, or unnatural for a modern default teaching example. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "conservative",
+      "sentenceId": 11523859,
+      "categories": [
+        "political-heavy",
+        "public-controversy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence depends on a current public-figure or culture-war controversy that is unnecessary for the target word."
+    },
+    {
+      "word": "conservative",
+      "sentenceId": 11699350,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "conservative",
+      "sentenceId": 11997650,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "considerable",
+      "sentenceId": 10009511,
+      "categories": [
+        "political-heavy",
+        "proper-noun-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The proper names or named institutions create unnecessary cognitive load for this target word."
+    },
+    {
+      "word": "considerable",
+      "sentenceId": 11813252,
+      "categories": [
+        "context-too-hard",
+        "unnatural-English"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word. The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "constitution",
+      "sentenceId": 9433268,
+      "categories": [
+        "obscure-background",
+        "political-heavy"
+      ],
+      "reason": "The sentence requires an obscure geopolitical reference to the Kabyle state and an institutional political context."
+    },
+    {
+      "word": "constitution",
+      "sentenceId": 9484575,
+      "categories": [
+        "obscure-background",
+        "political-heavy"
+      ],
+      "reason": "The sentence requires obscure names, places, history, or specialist background before it can be understood. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "constitution",
+      "sentenceId": 10059733,
+      "categories": [
+        "political-heavy",
+        "obscure-background"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence requires obscure names, places, history, or specialist background before it can be understood."
+    },
+    {
+      "word": "constitution",
+      "sentenceId": 11559028,
+      "categories": [
+        "political-heavy",
+        "public-controversy"
+      ],
+      "reason": "The sentence is a bare political judgment about a national constitution, not a neutral default context."
+    },
+    {
+      "word": "construct",
+      "sentenceId": 8578557,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "contempt",
+      "sentenceId": 11560905,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "contract",
+      "sentenceId": 8180110,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "convention",
+      "sentenceId": 8991458,
+      "categories": [
+        "public-controversy"
+      ],
+      "reason": "The sentence depends on a current public-figure or culture-war controversy that is unnecessary for the target word."
+    },
+    {
+      "word": "convention",
+      "sentenceId": 9588355,
+      "categories": [
+        "obscure-background"
+      ],
+      "reason": "The sentence requires obscure names, places, history, or specialist background before it can be understood."
+    },
+    {
+      "word": "conversion",
+      "sentenceId": 11379023,
+      "categories": [
+        "medical-heavy",
+        "political-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "conversion",
+      "sentenceId": 11630018,
+      "categories": [
+        "medical-heavy",
+        "political-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "conversion",
+      "sentenceId": 11763486,
+      "categories": [
+        "medical-heavy",
+        "political-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "convert",
+      "sentenceId": 6119151,
+      "categories": [
+        "religious-heavy",
+        "public-controversy"
+      ],
+      "reason": "The target appears inside a personal argument about religion and carries unnecessary controversy."
+    },
+    {
+      "word": "convert",
+      "sentenceId": 11592849,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "convert",
+      "sentenceId": 12143561,
+      "categories": [
+        "religious-heavy",
+        "public-controversy"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word. The sentence depends on a current public-figure or culture-war controversy that is unnecessary for the target word."
+    },
+    {
+      "word": "convert",
+      "sentenceId": 12274190,
+      "categories": [
+        "religious-heavy",
+        "public-controversy"
+      ],
+      "reason": "The sentence fails the religious-heavy semantic review dimension. The sentence depends on a current public-figure or culture-war controversy that is unnecessary for the target word."
+    },
+    {
+      "word": "corpse",
+      "sentenceId": 11218157,
+      "categories": [
+        "violence",
+        "unnatural-English"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context. The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "credible",
+      "sentenceId": 12051844,
+      "categories": [
+        "political-heavy",
+        "obscure-background"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence requires obscure names, places, history, or specialist background before it can be understood."
+    },
+    {
+      "word": "criminal",
+      "sentenceId": 8111679,
+      "categories": [
+        "hate",
+        "political-heavy",
+        "obscure-background"
+      ],
+      "reason": "The sentence contains an identity-based generalization, slur-adjacent framing, or hateful conflict that is not needed for teaching. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence requires obscure names, places, history, or specialist background before it can be understood."
+    },
+    {
+      "word": "critic",
+      "sentenceId": 11476006,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "criticism",
+      "sentenceId": 11977209,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "crowd",
+      "sentenceId": 12363632,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "default",
+      "sentenceId": 12296189,
+      "categories": [
+        "religious-heavy"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word."
+    },
+    {
+      "word": "defendant",
+      "sentenceId": 10775728,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "defendant",
+      "sentenceId": 11986313,
+      "categories": [
+        "hate",
+        "political-heavy"
+      ],
+      "reason": "The sentence contains an identity-based generalization or hateful conflict that is not needed for teaching. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "definitely",
+      "sentenceId": 8608127,
+      "categories": [
+        "weak-teaching-value",
+        "political-heavy"
+      ],
+      "reason": "The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "definitely",
+      "sentenceId": 11520805,
+      "categories": [
+        "context-dependent"
+      ],
+      "reason": "The sentence is not sufficiently standalone or leaves a key reference unresolved."
+    },
+    {
+      "word": "definition",
+      "sentenceId": 11581611,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "defy",
+      "sentenceId": 12351506,
+      "categories": [
+        "obscure-background",
+        "unnatural-English"
+      ],
+      "reason": "The sentence requires obscure names, places, history, or specialist background before it can be understood. The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "degenerate",
+      "sentenceId": 12115322,
+      "categories": [
+        "context-too-hard",
+        "unnatural-English"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word. The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "demand",
+      "sentenceId": 11807063,
+      "categories": [
+        "context-too-hard",
+        "violence"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word. The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "demonstrate",
+      "sentenceId": 11488281,
+      "categories": [
+        "context-dependent"
+      ],
+      "reason": "The sentence is not sufficiently standalone or leaves a key reference unresolved."
+    },
+    {
+      "word": "deny",
+      "sentenceId": 10726983,
+      "categories": [
+        "public-controversy",
+        "political-heavy"
+      ],
+      "reason": "The sentence is a contemporary social-policy comparison about sexual orientation, not a neutral default context."
+    },
+    {
+      "word": "depress",
+      "sentenceId": 11290486,
+      "categories": [
+        "political-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "deprive",
+      "sentenceId": 11047785,
+      "categories": [
+        "unnatural-English",
+        "context-too-hard"
+      ],
+      "reason": "The wording is awkward, archaic, or unnatural for a modern default teaching example. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "derive",
+      "sentenceId": 11168919,
+      "categories": [
+        "proper-noun-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "descendant",
+      "sentenceId": 12267992,
+      "categories": [
+        "obscure-background",
+        "context-too-hard"
+      ],
+      "reason": "The sentence requires obscure names, places, history, or specialist background before it can be understood. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "despite",
+      "sentenceId": 12131263,
+      "categories": [
+        "sexual"
+      ],
+      "reason": "The sentence explicitly discusses sex drive and repeated sexual references without teaching the target beyond a charged context."
+    },
+    {
+      "word": "destruction",
+      "sentenceId": 8613695,
+      "categories": [
+        "religious-heavy",
+        "obscure-background"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word. The sentence requires obscure names, places, history, or specialist background before it can be understood."
+    },
+    {
+      "word": "destruction",
+      "sentenceId": 12134948,
+      "categories": [
+        "medical-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "destruction",
+      "sentenceId": 12765080,
+      "categories": [
+        "violence"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "disease",
+      "sentenceId": 9243507,
+      "categories": [
+        "medical-heavy",
+        "political-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "disease",
+      "sentenceId": 10792517,
+      "categories": [
+        "medical-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The example lists epilepsy, infection, stroke, and Alzheimer's disease, creating unnecessary medical background for the target."
+    },
+    {
+      "word": "disease",
+      "sentenceId": 11485019,
+      "categories": [
+        "political-heavy",
+        "medical-heavy"
+      ],
+      "reason": "The metaphor equates nationalism with a disease of the brain, adding a contentious political judgment rather than a neutral target-word context."
+    },
+    {
+      "word": "disease",
+      "sentenceId": 12112987,
+      "categories": [
+        "medical-heavy",
+        "context-dependent"
+      ],
+      "reason": "The sentence is an elliptical conversational remark about celiac disease and an implied food choice, so it is not a clean standalone default example."
+    },
+    {
+      "word": "dismiss",
+      "sentenceId": 12038108,
+      "categories": [
+        "political-heavy",
+        "public-controversy"
+      ],
+      "reason": "The sentence is a news-style allegation about government supporters and adds unnecessary political controversy."
+    },
+    {
+      "word": "distinguish",
+      "sentenceId": 5153393,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "divine",
+      "sentenceId": 8578933,
+      "categories": [
+        "religious-heavy"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word."
+    },
+    {
+      "word": "divine",
+      "sentenceId": 9193752,
+      "categories": [
+        "religious-heavy"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word."
+    },
+    {
+      "word": "doubtless",
+      "sentenceId": 12038284,
+      "categories": [
+        "medical-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "drag",
+      "sentenceId": 11352143,
+      "categories": [
+        "sexual",
+        "political-heavy",
+        "violence"
+      ],
+      "reason": "The sentence contains sexual or explicit material that is not appropriate as a default learning context. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "drag",
+      "sentenceId": 11523882,
+      "categories": [
+        "sexual",
+        "weak-teaching-value"
+      ],
+      "reason": "The sentence contains sexual or explicit material that is not appropriate as a default learning context. The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "drag",
+      "sentenceId": 11844542,
+      "categories": [
+        "sexual",
+        "political-heavy"
+      ],
+      "reason": "The sentence contains sexual or explicit material that is not appropriate as a default learning context. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "drill",
+      "sentenceId": 12382550,
+      "categories": [
+        "obscure-background",
+        "context-too-hard"
+      ],
+      "reason": "The sentence requires obscure names, places, history, or specialist background before it can be understood. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "element",
+      "sentenceId": 12434464,
+      "categories": [
+        "religious-heavy",
+        "weak-teaching-value"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word. The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "elementary",
+      "sentenceId": 11518080,
+      "categories": [
+        "sexual"
+      ],
+      "reason": "The sentence contains sexual or explicit material that is not appropriate as a default learning context."
+    },
+    {
+      "word": "elementary",
+      "sentenceId": 11690637,
+      "categories": [
+        "sexual",
+        "political-heavy"
+      ],
+      "reason": "The sentence contains sexual or explicit material that is not appropriate as a default learning context. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "eliminate",
+      "sentenceId": 11489654,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "eliminate",
+      "sentenceId": 11997754,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "embed",
+      "sentenceId": 9452996,
+      "categories": [
+        "obscure-background",
+        "context-too-hard"
+      ],
+      "reason": "The sentence requires obscure names, places, history, or specialist background before it can be understood. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "emotion",
+      "sentenceId": 10804111,
+      "categories": [
+        "medical-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "encounter",
+      "sentenceId": 12138360,
+      "categories": [
+        "medical-heavy",
+        "context-dependent"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word. The sentence is not sufficiently standalone or leaves a key reference unresolved."
+    },
+    {
+      "word": "endeavor",
+      "sentenceId": 11944884,
+      "categories": [
+        "political-heavy",
+        "weak-teaching-value"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "enrich",
+      "sentenceId": 7530201,
+      "categories": [
+        "political-heavy",
+        "weak-teaching-value"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "ensue",
+      "sentenceId": 11906254,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "envisage",
+      "sentenceId": 11419146,
+      "categories": [
+        "context-too-hard",
+        "violence"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word. The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "equality",
+      "sentenceId": 11607426,
+      "categories": [
+        "political-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "eternal",
+      "sentenceId": 12777830,
+      "categories": [
+        "religious-heavy"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word."
+    },
+    {
+      "word": "eternal",
+      "sentenceId": 12778572,
+      "categories": [
+        "religious-heavy"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word."
+    },
+    {
+      "word": "ethnic",
+      "sentenceId": 11034377,
+      "categories": [
+        "political-heavy",
+        "hate"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence contains an identity-based generalization, slur-adjacent framing, or hateful conflict that is not needed for teaching."
+    },
+    {
+      "word": "exceptional",
+      "sentenceId": 11626783,
+      "categories": [
+        "unnatural-English",
+        "context-too-hard"
+      ],
+      "reason": "The wording is awkward, archaic, or unnatural for a modern default teaching example. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "excess",
+      "sentenceId": 9715179,
+      "categories": [
+        "religious-heavy"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word."
+    },
+    {
+      "word": "executive",
+      "sentenceId": 12052026,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "existence",
+      "sentenceId": 11863427,
+      "categories": [
+        "public-controversy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence depends on a contemporary gender-identity terminology dispute rather than a neutral standalone use."
+    },
+    {
+      "word": "existence",
+      "sentenceId": 11899527,
+      "categories": [
+        "public-controversy",
+        "weak-teaching-value"
+      ],
+      "reason": "The sentence is awkward and centers a sensitive social-identity controversy rather than a useful default use of existence."
+    },
+    {
+      "word": "existence",
+      "sentenceId": 12386366,
+      "categories": [
+        "public-controversy",
+        "context-dependent"
+      ],
+      "reason": "The sentence depends on a contemporary sexual-identity controversy and is not a neutral standalone default example."
+    },
+    {
+      "word": "explicit",
+      "sentenceId": 12029263,
+      "categories": [
+        "sexual"
+      ],
+      "reason": "The sentence contains sexual or explicit material that is not appropriate as a default learning context."
+    },
+    {
+      "word": "factor",
+      "sentenceId": 11245993,
+      "categories": [
+        "religious-heavy",
+        "obscure-background"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word. The sentence requires obscure names, places, history, or specialist background before it can be understood."
+    },
+    {
+      "word": "fatal",
+      "sentenceId": 12073701,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "fatigue",
+      "sentenceId": 11576413,
+      "categories": [
+        "unnatural-English",
+        "context-too-hard"
+      ],
+      "reason": "The wording is awkward, archaic, or unnatural for a modern default teaching example. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "federal",
+      "sentenceId": 11984703,
+      "categories": [
+        "political-heavy",
+        "context-dependent"
+      ],
+      "reason": "The sentence depends on an unexplained informant and allegation scenario, making the target context opaque and politically loaded."
+    },
+    {
+      "word": "federal",
+      "sentenceId": 12111780,
+      "categories": [
+        "political-heavy",
+        "obscure-background",
+        "context-too-hard"
+      ],
+      "reason": "The sentence requires colonial history, tribal politics, and an unexplained sign-language background beyond the target word."
+    },
+    {
+      "word": "federal",
+      "sentenceId": 12487311,
+      "categories": [
+        "context-too-hard",
+        "public-controversy"
+      ],
+      "reason": "The target is embedded in unexplained criminal-procedure language and is not a clean default learning example."
+    },
+    {
+      "word": "finite",
+      "sentenceId": 11146425,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "finite",
+      "sentenceId": 11148401,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "flap",
+      "sentenceId": 11247774,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "flare",
+      "sentenceId": 11152976,
+      "categories": [
+        "violence",
+        "context-too-hard"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "flexible",
+      "sentenceId": 11152907,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "formidable",
+      "sentenceId": 12807976,
+      "categories": [
+        "context-too-hard",
+        "unnatural-English"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word. The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "forum",
+      "sentenceId": 11167366,
+      "categories": [
+        "obscure-background",
+        "political-heavy"
+      ],
+      "reason": "The sentence requires obscure names, places, history, or specialist background before it can be understood. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "fraction",
+      "sentenceId": 11984575,
+      "categories": [
+        "extremism",
+        "political-heavy"
+      ],
+      "reason": "The sentence requires extremist or Nazi-related context that is not necessary to teach the target word. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "furthermore",
+      "sentenceId": 10485485,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "garment",
+      "sentenceId": 10096275,
+      "categories": [
+        "context-too-hard",
+        "hate"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word. The sentence contains an identity-based generalization or hateful conflict that is not needed for teaching."
+    },
+    {
+      "word": "garment",
+      "sentenceId": 11553812,
+      "categories": [
+        "obscure-background",
+        "context-too-hard"
+      ],
+      "reason": "The sentence requires obscure names, places, history, or specialist background before it can be understood. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "genuine",
+      "sentenceId": 11967133,
+      "categories": [
+        "political-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "gland",
+      "sentenceId": 10957274,
+      "categories": [
+        "medical-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "gleam",
+      "sentenceId": 11822323,
+      "categories": [
+        "unnatural-English",
+        "context-too-hard"
+      ],
+      "reason": "The wording is awkward, archaic, or unnatural for a modern default teaching example. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "gloom",
+      "sentenceId": 10820417,
+      "categories": [
+        "weak-teaching-value"
+      ],
+      "reason": "The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "gracious",
+      "sentenceId": 11819800,
+      "categories": [
+        "political-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "grave",
+      "sentenceId": 11264536,
+      "categories": [
+        "weak-teaching-value"
+      ],
+      "reason": "The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "grieve",
+      "sentenceId": 7728420,
+      "categories": [
+        "political-heavy",
+        "proper-noun-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "grip",
+      "sentenceId": 11076045,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "grip",
+      "sentenceId": 12424709,
+      "categories": [
+        "public-controversy",
+        "proper-noun-heavy"
+      ],
+      "reason": "The sentence depends on a current public-figure or culture-war controversy that is unnecessary for the target word. The proper names or named institutions create unnecessary cognitive load for this target word."
+    },
+    {
+      "word": "gross",
+      "sentenceId": 9695409,
+      "categories": [
+        "political-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "gross",
+      "sentenceId": 12368524,
+      "categories": [
+        "religious-heavy",
+        "unnatural-English"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word. The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "hatred",
+      "sentenceId": 8111631,
+      "categories": [
+        "hate",
+        "obscure-background"
+      ],
+      "reason": "The sentence contains an identity-based generalization or hateful conflict that is not needed for teaching. The sentence requires obscure names, places, history, or specialist background before it can be understood."
+    },
+    {
+      "word": "hatred",
+      "sentenceId": 9635725,
+      "categories": [
+        "hate",
+        "extremism"
+      ],
+      "reason": "The sentence contains an identity-based generalization or hateful conflict that is not needed for teaching. The sentence requires extremist or Nazi-related context that is not necessary to teach the target word."
+    },
+    {
+      "word": "hatred",
+      "sentenceId": 10511603,
+      "categories": [
+        "hate"
+      ],
+      "reason": "The sentence contains an identity-based generalization, slur-adjacent framing, or hateful conflict that is not needed for teaching."
+    },
+    {
+      "word": "hatred",
+      "sentenceId": 10538183,
+      "categories": [
+        "religious-heavy",
+        "obscure-background"
+      ],
+      "reason": "The sentence requires religious and ancient historical background that is unnecessary for the target word."
+    },
+    {
+      "word": "hatred",
+      "sentenceId": 10813060,
+      "categories": [
+        "hate",
+        "violence"
+      ],
+      "reason": "The sentence combines hatred with callous violence, adding unnecessary harmful content to the default context."
+    },
+    {
+      "word": "hatred",
+      "sentenceId": 11277440,
+      "categories": [
+        "hate",
+        "public-controversy"
+      ],
+      "reason": "The sentence contains an identity-based generalization or hateful conflict that is not needed for teaching. The sentence depends on a current public-figure or culture-war controversy that is unnecessary for the target word."
+    },
+    {
+      "word": "heighten",
+      "sentenceId": 11095203,
+      "categories": [
+        "political-heavy",
+        "hate"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence contains an identity-based generalization, slur-adjacent framing, or hateful conflict that is not needed for teaching."
+    },
+    {
+      "word": "hitherto",
+      "sentenceId": 10971182,
+      "categories": [
+        "unnatural-English",
+        "context-too-hard"
+      ],
+      "reason": "The wording is awkward, archaic, or unnatural for a modern default teaching example. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "humanity",
+      "sentenceId": 12044268,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "idiot",
+      "sentenceId": 9839996,
+      "categories": [
+        "weak-teaching-value",
+        "unnatural-English"
+      ],
+      "reason": "The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden. The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "idiot",
+      "sentenceId": 11279780,
+      "categories": [
+        "weak-teaching-value",
+        "unnatural-English"
+      ],
+      "reason": "The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden. The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "idiot",
+      "sentenceId": 11608838,
+      "categories": [
+        "weak-teaching-value",
+        "unnatural-English"
+      ],
+      "reason": "The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden. The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "ignore",
+      "sentenceId": 11762798,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "ignore",
+      "sentenceId": 11830874,
+      "categories": [
+        "context-dependent"
+      ],
+      "reason": "The sentence is not sufficiently standalone or leaves a key reference unresolved."
+    },
+    {
+      "word": "illegal",
+      "sentenceId": 11523859,
+      "categories": [
+        "political-heavy",
+        "public-controversy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence depends on a current public-figure or culture-war controversy that is unnecessary for the target word."
+    },
+    {
+      "word": "illegal",
+      "sentenceId": 12102138,
+      "categories": [
+        "violence"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "imaginative",
+      "sentenceId": 11007878,
+      "categories": [
+        "proper-noun-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "immigrant",
+      "sentenceId": 12099281,
+      "categories": [
+        "political-heavy",
+        "proper-noun-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "immune",
+      "sentenceId": 9101344,
+      "categories": [
+        "extremism",
+        "political-heavy"
+      ],
+      "reason": "The sentence requires extremist or Nazi-related context that is not necessary to teach the target word. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "incident",
+      "sentenceId": 11937839,
+      "categories": [
+        "context-dependent"
+      ],
+      "reason": "The sentence is not sufficiently standalone or leaves a key reference unresolved."
+    },
+    {
+      "word": "incident",
+      "sentenceId": 11937841,
+      "categories": [
+        "context-dependent"
+      ],
+      "reason": "The sentence is not sufficiently standalone or leaves a key reference unresolved."
+    },
+    {
+      "word": "indefinite",
+      "sentenceId": 9934956,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "independence",
+      "sentenceId": 8994913,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "independence",
+      "sentenceId": 9484584,
+      "categories": [
+        "political-heavy",
+        "obscure-background"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence requires obscure names, places, history, or specialist background before it can be understood."
+    },
+    {
+      "word": "inhabit",
+      "sentenceId": 10473638,
+      "categories": [
+        "medical-heavy",
+        "weak-teaching-value"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word. The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "inherent",
+      "sentenceId": 11605309,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "inhibit",
+      "sentenceId": 11542165,
+      "categories": [
+        "medical-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "initial",
+      "sentenceId": 12034469,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "initiate",
+      "sentenceId": 11248105,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "initiate",
+      "sentenceId": 11455114,
+      "categories": [
+        "violence",
+        "medical-heavy"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context. The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "input",
+      "sentenceId": 11566091,
+      "categories": [
+        "hate",
+        "political-heavy"
+      ],
+      "reason": "The sentence contains an identity-based generalization, slur-adjacent framing, or hateful conflict that is not needed for teaching. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "insight",
+      "sentenceId": 11566217,
+      "categories": [
+        "unnatural-English",
+        "weak-teaching-value"
+      ],
+      "reason": "The wording is awkward, archaic, or unnatural for a modern default teaching example. The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "institution",
+      "sentenceId": 8849707,
+      "categories": [
+        "political-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "intellect",
+      "sentenceId": 12386290,
+      "categories": [
+        "religious-heavy",
+        "obscure-background"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word. The sentence requires obscure names, places, history, or specialist background before it can be understood."
+    },
+    {
+      "word": "intelligible",
+      "sentenceId": 11972590,
+      "categories": [
+        "obscure-background",
+        "context-too-hard"
+      ],
+      "reason": "The sentence requires obscure names, places, history, or specialist background before it can be understood. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "intensify",
+      "sentenceId": 12238252,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "intensive",
+      "sentenceId": 11045845,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "intensive",
+      "sentenceId": 11725953,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "intensive",
+      "sentenceId": 12061800,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "interaction",
+      "sentenceId": 9475763,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "interaction",
+      "sentenceId": 11003321,
+      "categories": [
+        "medical-heavy",
+        "context-dependent"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word. The sentence is not sufficiently standalone or leaves a key reference unresolved."
+    },
+    {
+      "word": "interfere",
+      "sentenceId": 11759771,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "internal",
+      "sentenceId": 8095614,
+      "categories": [
+        "violence",
+        "medical-heavy"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context. The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "internal",
+      "sentenceId": 10538151,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "internal",
+      "sentenceId": 11610552,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "internal",
+      "sentenceId": 11610553,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "intrinsic",
+      "sentenceId": 11043404,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "isolate",
+      "sentenceId": 11051158,
+      "categories": [
+        "religious-heavy"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word."
+    },
+    {
+      "word": "jerk",
+      "sentenceId": 8167966,
+      "categories": [
+        "violence",
+        "unnatural-English"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context. The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "junction",
+      "sentenceId": 10640483,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "junk",
+      "sentenceId": 7954842,
+      "categories": [
+        "medical-heavy",
+        "context-dependent"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word. The sentence is not sufficiently standalone or leaves a key reference unresolved."
+    },
+    {
+      "word": "junk",
+      "sentenceId": 8805546,
+      "categories": [
+        "obscure-background",
+        "context-too-hard"
+      ],
+      "reason": "The sentence requires obscure names, places, history, or specialist background before it can be understood. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "junk",
+      "sentenceId": 8805547,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "lame",
+      "sentenceId": 8883585,
+      "categories": [
+        "weak-teaching-value",
+        "political-heavy"
+      ],
+      "reason": "The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "lash",
+      "sentenceId": 8792307,
+      "categories": [
+        "unnatural-English"
+      ],
+      "reason": "The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "layman",
+      "sentenceId": 11582398,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "leather",
+      "sentenceId": 10370415,
+      "categories": [
+        "unnatural-English"
+      ],
+      "reason": "The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "legend",
+      "sentenceId": 1566359,
+      "categories": [
+        "obscure-background"
+      ],
+      "reason": "The sentence requires obscure names, places, history, or specialist background before it can be understood."
+    },
+    {
+      "word": "legitimate",
+      "sentenceId": 8769328,
+      "categories": [
+        "extremism",
+        "political-heavy"
+      ],
+      "reason": "The sentence requires extremist or Nazi-related context that is not necessary to teach the target word. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "legitimate",
+      "sentenceId": 11044209,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "legitimate",
+      "sentenceId": 11938841,
+      "categories": [
+        "political-heavy",
+        "public-controversy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence depends on a current public-figure or culture-war controversy that is unnecessary for the target word."
+    },
+    {
+      "word": "leisure",
+      "sentenceId": 11917447,
+      "categories": [
+        "context-too-hard",
+        "unnatural-English"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word. The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "liable",
+      "sentenceId": 11129769,
+      "categories": [
+        "political-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "liberal",
+      "sentenceId": 8108982,
+      "categories": [
+        "political-heavy",
+        "religious-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence depends on a religious controversy or background that is unnecessary for the target word."
+    },
+    {
+      "word": "liberal",
+      "sentenceId": 11989505,
+      "categories": [
+        "political-heavy",
+        "religious-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence depends on a religious controversy or background that is unnecessary for the target word."
+    },
+    {
+      "word": "limb",
+      "sentenceId": 8148317,
+      "categories": [
+        "violence",
+        "weak-teaching-value"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context. The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "literary",
+      "sentenceId": 8736667,
+      "categories": [
+        "religious-heavy"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word."
+    },
+    {
+      "word": "literary",
+      "sentenceId": 8736668,
+      "categories": [
+        "religious-heavy"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word."
+    },
+    {
+      "word": "literature",
+      "sentenceId": 8832256,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "literature",
+      "sentenceId": 11179890,
+      "categories": [
+        "obscure-background"
+      ],
+      "reason": "The sentence requires obscure names, places, history, or specialist background before it can be understood."
+    },
+    {
+      "word": "logical",
+      "sentenceId": 9952838,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "machinery",
+      "sentenceId": 12300167,
+      "categories": [
+        "context-too-hard",
+        "obscure-background"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word. The sentence requires obscure names, places, history, or specialist background before it can be understood."
+    },
+    {
+      "word": "majesty",
+      "sentenceId": 12775801,
+      "categories": [
+        "proper-noun-heavy"
+      ],
+      "reason": "The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "majesty",
+      "sentenceId": 12775913,
+      "categories": [
+        "proper-noun-heavy",
+        "obscure-background"
+      ],
+      "reason": "The sentence depends on royal and courtly background and is not a common standalone default context."
+    },
+    {
+      "word": "manual",
+      "sentenceId": 7713825,
+      "categories": [
+        "context-dependent",
+        "unnatural-English"
+      ],
+      "reason": "The sentence is not sufficiently standalone or leaves a key reference unresolved. The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "masculine",
+      "sentenceId": 8805634,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "mass",
+      "sentenceId": 5342483,
+      "categories": [
+        "political-heavy",
+        "violence"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "medieval",
+      "sentenceId": 11624364,
+      "categories": [
+        "violence",
+        "hate"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context. The sentence contains an identity-based generalization, slur-adjacent framing, or hateful conflict that is not needed for teaching."
+    },
+    {
+      "word": "medieval",
+      "sentenceId": 12230038,
+      "categories": [
+        "religious-heavy",
+        "political-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "menace",
+      "sentenceId": 10723382,
+      "categories": [
+        "violence",
+        "medical-heavy"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context. The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "messenger",
+      "sentenceId": 8613695,
+      "categories": [
+        "religious-heavy",
+        "obscure-background"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word. The sentence requires obscure names, places, history, or specialist background before it can be understood."
+    },
+    {
+      "word": "militant",
+      "sentenceId": 9635671,
+      "categories": [
+        "extremism",
+        "political-heavy"
+      ],
+      "reason": "The sentence requires extremist or Nazi-related context that is not necessary to teach the target word. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "military",
+      "sentenceId": 11074599,
+      "categories": [
+        "political-heavy",
+        "violence"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "military",
+      "sentenceId": 11250872,
+      "categories": [
+        "proper-noun-heavy",
+        "weak-teaching-value"
+      ],
+      "reason": "The target is an incidental modifier in a geographically specific sentence about Alaska installations."
+    },
+    {
+      "word": "military",
+      "sentenceId": 11462404,
+      "categories": [
+        "weak-teaching-value"
+      ],
+      "reason": "The target is only an incidental modifier in a veteran compost-business anecdote and does not provide strong teaching value."
+    },
+    {
+      "word": "military",
+      "sentenceId": 11501846,
+      "categories": [
+        "political-heavy",
+        "proper-noun-heavy"
+      ],
+      "reason": "The sentence is a geopolitically specific statement about military equipment and China, not a neutral default context."
+    },
+    {
+      "word": "military",
+      "sentenceId": 11502104,
+      "categories": [
+        "context-too-hard",
+        "proper-noun-heavy"
+      ],
+      "reason": "The sentence is a specialist institutional comparison about military ranks and Commonwealth forces, not a clear default context."
+    },
+    {
+      "word": "military",
+      "sentenceId": 11956751,
+      "categories": [
+        "political-heavy",
+        "public-controversy"
+      ],
+      "reason": "The sentence makes a politically charged accusation about military recruitment and indoctrination."
+    },
+    {
+      "word": "military",
+      "sentenceId": 11976447,
+      "categories": [
+        "political-heavy",
+        "violence"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "military",
+      "sentenceId": 11976449,
+      "categories": [
+        "political-heavy",
+        "violence"
+      ],
+      "reason": "The sentence is a U.S. military-spending prescription and carries unnecessary political and military framing."
+    },
+    {
+      "word": "military",
+      "sentenceId": 11997672,
+      "categories": [
+        "political-heavy",
+        "violence"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "minimal",
+      "sentenceId": 9018760,
+      "categories": [
+        "religious-heavy",
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "minority",
+      "sentenceId": 11011363,
+      "categories": [
+        "religious-heavy"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word."
+    },
+    {
+      "word": "misery",
+      "sentenceId": 9996955,
+      "categories": [
+        "violence"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "mob",
+      "sentenceId": 10795816,
+      "categories": [
+        "violence"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "mob",
+      "sentenceId": 11696352,
+      "categories": [
+        "violence"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "mob",
+      "sentenceId": 11696355,
+      "categories": [
+        "violence"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "mobile",
+      "sentenceId": 10943928,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "mobile",
+      "sentenceId": 11107228,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "morality",
+      "sentenceId": 8603296,
+      "categories": [
+        "religious-heavy",
+        "hate"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word. The sentence contains an identity-based generalization, slur-adjacent framing, or hateful conflict that is not needed for teaching."
+    },
+    {
+      "word": "motive",
+      "sentenceId": 11119100,
+      "categories": [
+        "violence"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "motive",
+      "sentenceId": 11977290,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "mourn",
+      "sentenceId": 552682,
+      "categories": [
+        "religious-heavy",
+        "unnatural-English"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word. The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "municipal",
+      "sentenceId": 11039206,
+      "categories": [
+        "political-heavy",
+        "medical-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "myth",
+      "sentenceId": 11242378,
+      "categories": [
+        "hate"
+      ],
+      "reason": "The sentence contains an identity-based generalization, slur-adjacent framing, or hateful conflict that is not needed for teaching."
+    },
+    {
+      "word": "notion",
+      "sentenceId": 8773945,
+      "categories": [
+        "religious-heavy",
+        "hate"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word. The sentence contains an identity-based generalization, slur-adjacent framing, or hateful conflict that is not needed for teaching."
+    },
+    {
+      "word": "obscure",
+      "sentenceId": 11014134,
+      "categories": [
+        "political-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "obtain",
+      "sentenceId": 12069636,
+      "categories": [
+        "extremism",
+        "medical-heavy"
+      ],
+      "reason": "The sentence requires extremist or Nazi-related context that is not necessary to teach the target word. The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "occasional",
+      "sentenceId": 9477210,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "occupation",
+      "sentenceId": 8610733,
+      "categories": [
+        "extremism",
+        "political-heavy"
+      ],
+      "reason": "The sentence requires extremist or Nazi-related context that is not necessary to teach the target word. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "occupation",
+      "sentenceId": 8622832,
+      "categories": [
+        "extremism",
+        "political-heavy"
+      ],
+      "reason": "The sentence requires extremist or Nazi-related context that is not necessary to teach the target word. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "occupation",
+      "sentenceId": 8622834,
+      "categories": [
+        "extremism",
+        "political-heavy"
+      ],
+      "reason": "The sentence requires extremist or Nazi-related context that is not necessary to teach the target word. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "occupation",
+      "sentenceId": 8622838,
+      "categories": [
+        "extremism",
+        "political-heavy"
+      ],
+      "reason": "The sentence requires extremist or Nazi-related context that is not necessary to teach the target word. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "occupation",
+      "sentenceId": 8622843,
+      "categories": [
+        "political-heavy",
+        "obscure-background"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence requires obscure names, places, history, or specialist background before it can be understood."
+    },
+    {
+      "word": "occupation",
+      "sentenceId": 12496397,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "occupy",
+      "sentenceId": 11044594,
+      "categories": [
+        "political-heavy",
+        "obscure-background"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence requires obscure names, places, history, or specialist background before it can be understood."
+    },
+    {
+      "word": "oppress",
+      "sentenceId": 8135230,
+      "categories": [
+        "hate",
+        "political-heavy"
+      ],
+      "reason": "The sentence contains an identity-based generalization, slur-adjacent framing, or hateful conflict that is not needed for teaching. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "optimum",
+      "sentenceId": 9980903,
+      "categories": [
+        "obscure-background"
+      ],
+      "reason": "The sentence requires obscure names, places, history, or specialist background before it can be understood."
+    },
+    {
+      "word": "optimum",
+      "sentenceId": 11168801,
+      "categories": [
+        "obscure-background",
+        "proper-noun-heavy"
+      ],
+      "reason": "The sentence requires obscure names, places, history, or specialist background before it can be understood. The proper names or named institutions create unnecessary cognitive load for this target word."
+    },
+    {
+      "word": "option",
+      "sentenceId": 10841956,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "orientation",
+      "sentenceId": 12080121,
+      "categories": [
+        "sexual",
+        "political-heavy"
+      ],
+      "reason": "The sentence contains sexual or explicit material that is not appropriate as a default learning context. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "orthodox",
+      "sentenceId": 8988056,
+      "categories": [
+        "religious-heavy",
+        "context-dependent"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word. The sentence is not sufficiently standalone or leaves a key reference unresolved."
+    },
+    {
+      "word": "outbreak",
+      "sentenceId": 11048125,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "outward",
+      "sentenceId": 11034377,
+      "categories": [
+        "political-heavy",
+        "hate"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence contains an identity-based generalization, slur-adjacent framing, or hateful conflict that is not needed for teaching."
+    },
+    {
+      "word": "overwhelm",
+      "sentenceId": 11178203,
+      "categories": [
+        "medical-heavy",
+        "political-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "panic",
+      "sentenceId": 8755474,
+      "categories": [
+        "sexual",
+        "political-heavy"
+      ],
+      "reason": "The sentence contains sexual or explicit material that is not appropriate as a default learning context. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "panic",
+      "sentenceId": 11537552,
+      "categories": [
+        "medical-heavy",
+        "context-dependent"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word. The sentence is not sufficiently standalone or leaves a key reference unresolved."
+    },
+    {
+      "word": "parasite",
+      "sentenceId": 10786588,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "parasite",
+      "sentenceId": 12327352,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "pastime",
+      "sentenceId": 8022208,
+      "categories": [
+        "sexual"
+      ],
+      "reason": "The sentence contains sexual or explicit material that is not appropriate as a default learning context."
+    },
+    {
+      "word": "pave",
+      "sentenceId": 12311448,
+      "categories": [
+        "medical-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "peak",
+      "sentenceId": 8908904,
+      "categories": [
+        "obscure-background",
+        "weak-teaching-value"
+      ],
+      "reason": "The sentence requires obscure names, places, history, or specialist background before it can be understood. The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "peg",
+      "sentenceId": 10159859,
+      "categories": [
+        "context-dependent",
+        "weak-teaching-value"
+      ],
+      "reason": "The sentence is not sufficiently standalone or leaves a key reference unresolved. The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "penalty",
+      "sentenceId": 12411736,
+      "categories": [
+        "political-heavy",
+        "violence"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "penguin",
+      "sentenceId": 10007125,
+      "categories": [
+        "weak-teaching-value",
+        "unnatural-English"
+      ],
+      "reason": "The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden. The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "perfume",
+      "sentenceId": 11919494,
+      "categories": [
+        "obscure-background",
+        "context-too-hard"
+      ],
+      "reason": "The sentence requires obscure names, places, history, or specialist background before it can be understood. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "petition",
+      "sentenceId": 9995644,
+      "categories": [
+        "political-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "petition",
+      "sentenceId": 12045723,
+      "categories": [
+        "proper-noun-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "phenomenon",
+      "sentenceId": 12150313,
+      "categories": [
+        "obscure-background",
+        "context-too-hard"
+      ],
+      "reason": "The sentence requires obscure names, places, history, or specialist background before it can be understood. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "pistol",
+      "sentenceId": 12775252,
+      "categories": [
+        "violence"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "plausible",
+      "sentenceId": 12061522,
+      "categories": [
+        "political-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "poke",
+      "sentenceId": 11247766,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "pole",
+      "sentenceId": 11696382,
+      "categories": [
+        "violence",
+        "unnatural-English"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context. The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "polish",
+      "sentenceId": 11252737,
+      "categories": [
+        "proper-noun-heavy",
+        "weak-teaching-value"
+      ],
+      "reason": "The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden. The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "pope",
+      "sentenceId": 11561193,
+      "categories": [
+        "religious-heavy",
+        "proper-noun-heavy"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word. The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "pore",
+      "sentenceId": 10786588,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "pore",
+      "sentenceId": 10928260,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "poverty",
+      "sentenceId": 11170398,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "predecessor",
+      "sentenceId": 10709469,
+      "categories": [
+        "religious-heavy",
+        "obscure-background"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word. The sentence requires obscure names, places, history, or specialist background before it can be understood."
+    },
+    {
+      "word": "predecessor",
+      "sentenceId": 12063836,
+      "categories": [
+        "political-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "preliminary",
+      "sentenceId": 12102058,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "presumably",
+      "sentenceId": 5128446,
+      "categories": [
+        "medical-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "prevail",
+      "sentenceId": 12766066,
+      "categories": [
+        "political-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "priest",
+      "sentenceId": 9936800,
+      "categories": [
+        "religious-heavy"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word."
+    },
+    {
+      "word": "priest",
+      "sentenceId": 10522568,
+      "categories": [
+        "religious-heavy"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word."
+    },
+    {
+      "word": "priest",
+      "sentenceId": 11928692,
+      "categories": [
+        "sexual",
+        "public-controversy"
+      ],
+      "reason": "The sentence contains sexual or explicit material that is not appropriate as a default learning context. The sentence depends on a current public-figure or culture-war controversy that is unnecessary for the target word."
+    },
+    {
+      "word": "priest",
+      "sentenceId": 12043579,
+      "categories": [
+        "sexual",
+        "public-controversy"
+      ],
+      "reason": "The sentence contains sexual or explicit material that is not appropriate as a default learning context. The sentence depends on a current public-figure or culture-war controversy that is unnecessary for the target word."
+    },
+    {
+      "word": "primarily",
+      "sentenceId": 11633645,
+      "categories": [
+        "medical-heavy",
+        "violence"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word. The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "primarily",
+      "sentenceId": 12125848,
+      "categories": [
+        "medical-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "prime",
+      "sentenceId": 7792237,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "prime",
+      "sentenceId": 8014168,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "principal",
+      "sentenceId": 8813368,
+      "categories": [
+        "unnatural-English",
+        "context-too-hard"
+      ],
+      "reason": "The wording is awkward, archaic, or unnatural for a modern default teaching example. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "principal",
+      "sentenceId": 11840846,
+      "categories": [
+        "context-too-hard",
+        "unnatural-English"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word. The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "principle",
+      "sentenceId": 8105907,
+      "categories": [
+        "obscure-background"
+      ],
+      "reason": "The sentence requires obscure names, places, history, or specialist background before it can be understood."
+    },
+    {
+      "word": "privacy",
+      "sentenceId": 11720165,
+      "categories": [
+        "proper-noun-heavy"
+      ],
+      "reason": "The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "procedure",
+      "sentenceId": 11248357,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "professional",
+      "sentenceId": 12148999,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "progressive",
+      "sentenceId": 11123420,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "prominent",
+      "sentenceId": 8931349,
+      "categories": [
+        "proper-noun-heavy",
+        "political-heavy"
+      ],
+      "reason": "The proper names or named institutions create unnecessary cognitive load for this target word. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "prominent",
+      "sentenceId": 11089826,
+      "categories": [
+        "proper-noun-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The proper names or named institutions create unnecessary cognitive load for this target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "proof",
+      "sentenceId": 11921018,
+      "categories": [
+        "medical-heavy",
+        "public-controversy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence combines an unfamiliar drug, a heroin epidemic, and an unsupported conspiracy claim."
+    },
+    {
+      "word": "propaganda",
+      "sentenceId": 9323488,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "propaganda",
+      "sentenceId": 10095178,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence makes a broad geopolitical propaganda claim and is not a neutral default learning context."
+    },
+    {
+      "word": "propaganda",
+      "sentenceId": 10095186,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "propaganda",
+      "sentenceId": 10113994,
+      "categories": [
+        "political-heavy",
+        "sexual"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence contains sexual or explicit material that is not appropriate as a default learning context."
+    },
+    {
+      "word": "propaganda",
+      "sentenceId": 10126322,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "propaganda",
+      "sentenceId": 11467274,
+      "categories": [
+        "political-heavy",
+        "public-controversy"
+      ],
+      "reason": "The sentence makes a partisan global-left/global-right accusation and is not a neutral default context."
+    },
+    {
+      "word": "propaganda",
+      "sentenceId": 12029067,
+      "categories": [
+        "political-heavy",
+        "public-controversy"
+      ],
+      "reason": "The sentence is a partisan accusation about right-wing media and is not a neutral default teaching context."
+    },
+    {
+      "word": "prophet",
+      "sentenceId": 11524513,
+      "categories": [
+        "religious-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "prospect",
+      "sentenceId": 11576413,
+      "categories": [
+        "unnatural-English",
+        "context-too-hard"
+      ],
+      "reason": "The wording is awkward, archaic, or unnatural for a modern default teaching example. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "provision",
+      "sentenceId": 11035776,
+      "categories": [
+        "unnatural-English",
+        "context-too-hard"
+      ],
+      "reason": "The wording is awkward, archaic, or unnatural for a modern default teaching example. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "racial",
+      "sentenceId": 10161553,
+      "categories": [
+        "hate"
+      ],
+      "reason": "The sentence contains an identity-based generalization or hateful conflict that is not needed for teaching."
+    },
+    {
+      "word": "racial",
+      "sentenceId": 11266415,
+      "categories": [
+        "sexual",
+        "political-heavy"
+      ],
+      "reason": "The sentence contains sexual or explicit material that is not appropriate as a default learning context. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "racial",
+      "sentenceId": 11358495,
+      "categories": [
+        "hate",
+        "political-heavy"
+      ],
+      "reason": "The sentence contains an identity-based generalization, slur-adjacent framing, or hateful conflict that is not needed for teaching. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "racial",
+      "sentenceId": 11987917,
+      "categories": [
+        "hate",
+        "political-heavy"
+      ],
+      "reason": "The sentence contains an identity-based generalization or hateful conflict that is not needed for teaching. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "rank",
+      "sentenceId": 10077687,
+      "categories": [
+        "political-heavy",
+        "violence"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "rap",
+      "sentenceId": 11959395,
+      "categories": [
+        "violence"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "rap",
+      "sentenceId": 12113937,
+      "categories": [
+        "violence"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "rational",
+      "sentenceId": 10249063,
+      "categories": [
+        "extremism",
+        "political-heavy"
+      ],
+      "reason": "The sentence requires extremist or Nazi-related context that is not necessary to teach the target word. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "rational",
+      "sentenceId": 11537836,
+      "categories": [
+        "unnatural-English",
+        "context-too-hard"
+      ],
+      "reason": "The wording is awkward, archaic, or unnatural for a modern default teaching example. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "rebellion",
+      "sentenceId": 12319714,
+      "categories": [
+        "context-dependent"
+      ],
+      "reason": "The sentence is not sufficiently standalone or leaves a key reference unresolved."
+    },
+    {
+      "word": "recall",
+      "sentenceId": 12770999,
+      "categories": [
+        "context-dependent"
+      ],
+      "reason": "The sentence is not sufficiently standalone or leaves a key reference unresolved."
+    },
+    {
+      "word": "recite",
+      "sentenceId": 10059733,
+      "categories": [
+        "political-heavy",
+        "obscure-background"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence requires obscure names, places, history, or specialist background before it can be understood."
+    },
+    {
+      "word": "reckon",
+      "sentenceId": 10525226,
+      "categories": [
+        "context-dependent"
+      ],
+      "reason": "The sentence is not sufficiently standalone or leaves a key reference unresolved."
+    },
+    {
+      "word": "recreation",
+      "sentenceId": 13282982,
+      "categories": [
+        "obscure-background",
+        "context-too-hard"
+      ],
+      "reason": "The sentence requires obscure names, places, history, or specialist background before it can be understood. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "reform",
+      "sentenceId": 11944748,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "refrain",
+      "sentenceId": 8246720,
+      "categories": [
+        "religious-heavy"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word."
+    },
+    {
+      "word": "refusal",
+      "sentenceId": 10790674,
+      "categories": [
+        "violence"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "refusal",
+      "sentenceId": 12111974,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "regime",
+      "sentenceId": 11535201,
+      "categories": [
+        "political-heavy",
+        "violence"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "regime",
+      "sentenceId": 12381084,
+      "categories": [
+        "political-heavy",
+        "violence"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "region",
+      "sentenceId": 11462415,
+      "categories": [
+        "violence",
+        "political-heavy"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "regulation",
+      "sentenceId": 10781042,
+      "categories": [
+        "political-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "relative",
+      "sentenceId": 11091007,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "relative",
+      "sentenceId": 11459133,
+      "categories": [
+        "context-too-hard",
+        "unnatural-English"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word. The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "religion",
+      "sentenceId": 6036927,
+      "categories": [
+        "religious-heavy",
+        "violence"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word. The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "religion",
+      "sentenceId": 9801001,
+      "categories": [
+        "religious-heavy",
+        "violence"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word. The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "religion",
+      "sentenceId": 11246589,
+      "categories": [
+        "religious-heavy",
+        "public-controversy"
+      ],
+      "reason": "The sentence makes a dismissive philosophical judgment about religion rather than giving a neutral default use."
+    },
+    {
+      "word": "religion",
+      "sentenceId": 11857039,
+      "categories": [
+        "religious-heavy",
+        "public-controversy"
+      ],
+      "reason": "The sentence is dismissive and confrontational toward religion rather than a neutral example of the target word."
+    },
+    {
+      "word": "religion",
+      "sentenceId": 11996608,
+      "categories": [
+        "religious-heavy",
+        "public-controversy"
+      ],
+      "reason": "The sentence is a confrontational statement about imposing religion on children rather than a neutral use of religion."
+    },
+    {
+      "word": "religious",
+      "sentenceId": 12113797,
+      "categories": [
+        "religious-heavy",
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "rely",
+      "sentenceId": 11242378,
+      "categories": [
+        "hate"
+      ],
+      "reason": "The sentence contains an identity-based generalization, slur-adjacent framing, or hateful conflict that is not needed for teaching."
+    },
+    {
+      "word": "rely",
+      "sentenceId": 11906243,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "render",
+      "sentenceId": 10802144,
+      "categories": [
+        "violence"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "repay",
+      "sentenceId": 9766892,
+      "categories": [
+        "unnatural-English"
+      ],
+      "reason": "The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "reserve",
+      "sentenceId": 10478490,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "restrain",
+      "sentenceId": 11017570,
+      "categories": [
+        "unnatural-English"
+      ],
+      "reason": "The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "restrain",
+      "sentenceId": 11017571,
+      "categories": [
+        "unnatural-English"
+      ],
+      "reason": "The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "reverse",
+      "sentenceId": 11919032,
+      "categories": [
+        "obscure-background"
+      ],
+      "reason": "The sentence requires obscure names, places, history, or specialist background before it can be understood."
+    },
+    {
+      "word": "revolutionary",
+      "sentenceId": 9267873,
+      "categories": [
+        "political-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "royalty",
+      "sentenceId": 11748267,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "savage",
+      "sentenceId": 11319213,
+      "categories": [
+        "proper-noun-heavy"
+      ],
+      "reason": "The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "senator",
+      "sentenceId": 10005713,
+      "categories": [
+        "political-heavy",
+        "proper-noun-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "senator",
+      "sentenceId": 11450529,
+      "categories": [
+        "political-heavy",
+        "proper-noun-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The proper names or named institutions create unnecessary cognitive load for this target word."
+    },
+    {
+      "word": "sensible",
+      "sentenceId": 11074656,
+      "categories": [
+        "religious-heavy"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word."
+    },
+    {
+      "word": "shark",
+      "sentenceId": 11330720,
+      "categories": [
+        "violence"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "shatter",
+      "sentenceId": 11478878,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "sheer",
+      "sentenceId": 9995314,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "sheer",
+      "sentenceId": 12113816,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "silicon",
+      "sentenceId": 11845619,
+      "categories": [
+        "public-controversy"
+      ],
+      "reason": "The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "similar",
+      "sentenceId": 12411756,
+      "categories": [
+        "proper-noun-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "skull",
+      "sentenceId": 10724631,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "slap",
+      "sentenceId": 10946919,
+      "categories": [
+        "violence"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "slash",
+      "sentenceId": 12419034,
+      "categories": [
+        "violence"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "slaughter",
+      "sentenceId": 8114981,
+      "categories": [
+        "violence",
+        "religious-heavy"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context. The sentence fails the religious-heavy semantic review dimension."
+    },
+    {
+      "word": "slip",
+      "sentenceId": 11955555,
+      "categories": [
+        "unnatural-English"
+      ],
+      "reason": "The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "specialty",
+      "sentenceId": 9813893,
+      "categories": [
+        "violence"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "spectator",
+      "sentenceId": 11989297,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "spine",
+      "sentenceId": 12190656,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "spite",
+      "sentenceId": 12090674,
+      "categories": [
+        "public-controversy",
+        "weak-teaching-value"
+      ],
+      "reason": "The sentence relies on an emotionally charged abuse context that is unnecessary for teaching spite."
+    },
+    {
+      "word": "spoil",
+      "sentenceId": 11327471,
+      "categories": [
+        "unnatural-English"
+      ],
+      "reason": "The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "spontaneous",
+      "sentenceId": 6121835,
+      "categories": [
+        "medical-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "stalk",
+      "sentenceId": 10371291,
+      "categories": [
+        "violence"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "stalk",
+      "sentenceId": 11686683,
+      "categories": [
+        "proper-noun-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The proper names or named institutions create unnecessary cognitive load for this target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "standpoint",
+      "sentenceId": 9805551,
+      "categories": [
+        "medical-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "stern",
+      "sentenceId": 9835502,
+      "categories": [
+        "extremism",
+        "proper-noun-heavy"
+      ],
+      "reason": "The sentence requires extremist or Nazi-related context that is not necessary to teach the target word. The proper names or named institutions create unnecessary cognitive load for this target word."
+    },
+    {
+      "word": "stern",
+      "sentenceId": 9835515,
+      "categories": [
+        "political-heavy",
+        "proper-noun-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "stern",
+      "sentenceId": 11608539,
+      "categories": [
+        "violence"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "stroke",
+      "sentenceId": 10792517,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "stroke",
+      "sentenceId": 12127602,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "substance",
+      "sentenceId": 11524508,
+      "categories": [
+        "context-too-hard",
+        "unnatural-English"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word. The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "successive",
+      "sentenceId": 11327471,
+      "categories": [
+        "unnatural-English"
+      ],
+      "reason": "The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "summit",
+      "sentenceId": 10820417,
+      "categories": [
+        "weak-teaching-value"
+      ],
+      "reason": "The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "summit",
+      "sentenceId": 12765986,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "summon",
+      "sentenceId": 9669228,
+      "categories": [
+        "religious-heavy"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word."
+    },
+    {
+      "word": "summon",
+      "sentenceId": 9669229,
+      "categories": [
+        "religious-heavy"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word."
+    },
+    {
+      "word": "superintendent",
+      "sentenceId": 11657381,
+      "categories": [
+        "medical-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "supreme",
+      "sentenceId": 11732902,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "supreme",
+      "sentenceId": 11890020,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "supreme",
+      "sentenceId": 11890024,
+      "categories": [
+        "political-heavy",
+        "public-controversy",
+        "proper-noun-heavy"
+      ],
+      "reason": "The sentence is a partisan allegation about the U.S. Supreme Court and billionaire influence."
+    },
+    {
+      "word": "supreme",
+      "sentenceId": 11938841,
+      "categories": [
+        "political-heavy",
+        "public-controversy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence depends on a current public-figure or culture-war controversy that is unnecessary for the target word."
+    },
+    {
+      "word": "supreme",
+      "sentenceId": 11980668,
+      "categories": [
+        "hate"
+      ],
+      "reason": "The sentence contains an identity-based generalization, slur-adjacent framing, or hateful conflict that is not needed for teaching."
+    },
+    {
+      "word": "supreme",
+      "sentenceId": 12002475,
+      "categories": [
+        "extremism",
+        "political-heavy"
+      ],
+      "reason": "The sentence requires extremist or Nazi-related context that is not necessary to teach the target word. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "surgery",
+      "sentenceId": 11470747,
+      "categories": [
+        "medical-heavy",
+        "political-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "surgery",
+      "sentenceId": 11504710,
+      "categories": [
+        "medical-heavy",
+        "political-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "surgery",
+      "sentenceId": 11844539,
+      "categories": [
+        "medical-heavy",
+        "public-controversy"
+      ],
+      "reason": "The sentence combines gender identity, dysphoria, and bottom surgery in a sensitive medical and social-policy context."
+    },
+    {
+      "word": "surgery",
+      "sentenceId": 12277713,
+      "categories": [
+        "medical-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The target is embedded in a specialist medical facility phrase that adds unnecessary jargon for a default example."
+    },
+    {
+      "word": "sympathy",
+      "sentenceId": 12093688,
+      "categories": [
+        "context-dependent"
+      ],
+      "reason": "The sentence is not sufficiently standalone or leaves a key reference unresolved."
+    },
+    {
+      "word": "syndrome",
+      "sentenceId": 7247280,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "syndrome",
+      "sentenceId": 8033451,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "tariff",
+      "sentenceId": 11739145,
+      "categories": [
+        "political-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The sentence is dense trade-policy news language with several unrelated institutional terms."
+    },
+    {
+      "word": "terminate",
+      "sentenceId": 11313255,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "territory",
+      "sentenceId": 6543413,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "testimony",
+      "sentenceId": 11183810,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "therefore",
+      "sentenceId": 9005062,
+      "categories": [
+        "obscure-background",
+        "context-too-hard"
+      ],
+      "reason": "The sentence requires obscure names, places, history, or specialist background before it can be understood. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "therefore",
+      "sentenceId": 10775728,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "thorn",
+      "sentenceId": 11172870,
+      "categories": [
+        "unnatural-English",
+        "context-too-hard"
+      ],
+      "reason": "The wording is awkward, archaic, or unnatural for a modern default teaching example. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "timid",
+      "sentenceId": 11477339,
+      "categories": [
+        "unnatural-English",
+        "context-too-hard"
+      ],
+      "reason": "The wording is awkward, archaic, or unnatural for a modern default teaching example. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "tolerant",
+      "sentenceId": 8122521,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "tolerant",
+      "sentenceId": 9519161,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "tolerant",
+      "sentenceId": 11280599,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "tolerant",
+      "sentenceId": 11899402,
+      "categories": [
+        "religious-heavy",
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "tragic",
+      "sentenceId": 10147283,
+      "categories": [
+        "weak-teaching-value"
+      ],
+      "reason": "The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "transcend",
+      "sentenceId": 12777804,
+      "categories": [
+        "religious-heavy"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word."
+    },
+    {
+      "word": "transcend",
+      "sentenceId": 12777822,
+      "categories": [
+        "weak-teaching-value"
+      ],
+      "reason": "The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "transmission",
+      "sentenceId": 11671205,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "tremendous",
+      "sentenceId": 10126629,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "tremendous",
+      "sentenceId": 11952162,
+      "categories": [
+        "context-too-hard",
+        "unnatural-English"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word. The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "trial",
+      "sentenceId": 8257498,
+      "categories": [
+        "public-controversy",
+        "political-heavy"
+      ],
+      "reason": "The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "tribe",
+      "sentenceId": 8755294,
+      "categories": [
+        "religious-heavy",
+        "proper-noun-heavy"
+      ],
+      "reason": "The sentence depends on a religious controversy or background that is unnecessary for the target word. The proper names or named institutions create unnecessary cognitive load for this target word."
+    },
+    {
+      "word": "tribe",
+      "sentenceId": 10627733,
+      "categories": [
+        "context-too-hard",
+        "unnatural-English"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word. The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "tribute",
+      "sentenceId": 8530287,
+      "categories": [
+        "proper-noun-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "tribute",
+      "sentenceId": 11699281,
+      "categories": [
+        "proper-noun-heavy"
+      ],
+      "reason": "The proper names or named institutions create unnecessary cognitive load for this target word."
+    },
+    {
+      "word": "trigger",
+      "sentenceId": 10062867,
+      "categories": [
+        "violence",
+        "context-dependent"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context. The sentence is not sufficiently standalone or leaves a key reference unresolved."
+    },
+    {
+      "word": "trigger",
+      "sentenceId": 11779076,
+      "categories": [
+        "violence"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "undermine",
+      "sentenceId": 10096145,
+      "categories": [
+        "political-heavy",
+        "obscure-background"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence requires obscure names, places, history, or specialist background before it can be understood."
+    },
+    {
+      "word": "urban",
+      "sentenceId": 11135334,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "vain",
+      "sentenceId": 9325066,
+      "categories": [
+        "unnatural-English",
+        "context-too-hard"
+      ],
+      "reason": "The wording is awkward, archaic, or unnatural for a modern default teaching example. The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "vain",
+      "sentenceId": 11081976,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "vast",
+      "sentenceId": 9359755,
+      "categories": [
+        "political-heavy",
+        "violence"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "vast",
+      "sentenceId": 11566091,
+      "categories": [
+        "hate",
+        "political-heavy"
+      ],
+      "reason": "The sentence contains an identity-based generalization or hateful conflict that is not needed for teaching. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "vast",
+      "sentenceId": 11994717,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "vast",
+      "sentenceId": 12013682,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "veil",
+      "sentenceId": 8111597,
+      "categories": [
+        "sexual",
+        "hate"
+      ],
+      "reason": "The sentence contains sexual or explicit material that is not appropriate as a default learning context. The sentence contains an identity-based generalization or hateful conflict that is not needed for teaching."
+    },
+    {
+      "word": "veil",
+      "sentenceId": 8135012,
+      "categories": [
+        "hate"
+      ],
+      "reason": "The sentence contains an identity-based generalization, slur-adjacent framing, or hateful conflict that is not needed for teaching."
+    },
+    {
+      "word": "velocity",
+      "sentenceId": 11206816,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "venture",
+      "sentenceId": 9956556,
+      "categories": [
+        "obscure-background"
+      ],
+      "reason": "The sentence requires obscure names, places, history, or specialist background before it can be understood."
+    },
+    {
+      "word": "versus",
+      "sentenceId": 12336055,
+      "categories": [
+        "public-controversy",
+        "political-heavy"
+      ],
+      "reason": "The sentence centers a sensitive social-policy comparison about sexual orientation rather than a neutral contrast."
+    },
+    {
+      "word": "victim",
+      "sentenceId": 11541533,
+      "categories": [
+        "public-controversy"
+      ],
+      "reason": "The sentence depends on a current public-figure or culture-war controversy that is unnecessary for the target word."
+    },
+    {
+      "word": "victim",
+      "sentenceId": 11541551,
+      "categories": [
+        "public-controversy"
+      ],
+      "reason": "The target word is incidental, ambiguous, or too weakly illustrated to justify the context burden."
+    },
+    {
+      "word": "victim",
+      "sentenceId": 11996005,
+      "categories": [
+        "political-heavy",
+        "public-controversy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word. The sentence depends on a public-figure or current geopolitical controversy that is unnecessary for the target word."
+    },
+    {
+      "word": "victim",
+      "sentenceId": 12134940,
+      "categories": [
+        "hate",
+        "public-controversy"
+      ],
+      "reason": "The sentence contains an identity-based generalization or hateful conflict that is not needed for teaching. The sentence depends on a public-figure or culture-war controversy that is unnecessary for the target word."
+    },
+    {
+      "word": "violent",
+      "sentenceId": 8582085,
+      "categories": [
+        "violence",
+        "political-heavy",
+        "public-controversy"
+      ],
+      "reason": "The sentence is a politically charged characterization of a named public figure and antifascist violence."
+    },
+    {
+      "word": "violent",
+      "sentenceId": 8808650,
+      "categories": [
+        "violence",
+        "political-heavy"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "violent",
+      "sentenceId": 9635788,
+      "categories": [
+        "violence",
+        "political-heavy"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context. The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "violent",
+      "sentenceId": 9956770,
+      "categories": [
+        "violence"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context."
+    },
+    {
+      "word": "violent",
+      "sentenceId": 11152976,
+      "categories": [
+        "context-too-hard",
+        "weak-teaching-value"
+      ],
+      "reason": "The target is used in a specialist vaporization and flare description whose technical background obscures the ordinary sense."
+    },
+    {
+      "word": "violent",
+      "sentenceId": 11333469,
+      "categories": [
+        "violence",
+        "public-controversy"
+      ],
+      "reason": "The sentence combines a sensitive gender-identity comparison with violent crime and is not a neutral default context."
+    },
+    {
+      "word": "violent",
+      "sentenceId": 11789211,
+      "categories": [
+        "violence",
+        "medical-heavy"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context. The sentence makes the learner process unnecessary medical detail instead of the target word."
+    },
+    {
+      "word": "violent",
+      "sentenceId": 11789212,
+      "categories": [
+        "medical-heavy",
+        "violence"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word. The sentence fails the violence semantic review dimension."
+    },
+    {
+      "word": "violent",
+      "sentenceId": 12095429,
+      "categories": [
+        "violence",
+        "public-controversy"
+      ],
+      "reason": "The sentence makes a stigmatizing claim about mental illness and violence, which is inappropriate as a default context."
+    },
+    {
+      "word": "violent",
+      "sentenceId": 12180686,
+      "categories": [
+        "violence",
+        "public-controversy"
+      ],
+      "reason": "The sentence frames the target through a crime-rate news context that is unnecessary for a default learning example."
+    },
+    {
+      "word": "violent",
+      "sentenceId": 12765607,
+      "categories": [
+        "violence",
+        "political-heavy"
+      ],
+      "reason": "The sentence frames the target in an unspecified revolution and violence-related political context rather than a neutral default example."
+    },
+    {
+      "word": "visa",
+      "sentenceId": 11182508,
+      "categories": [
+        "obscure-background"
+      ],
+      "reason": "The sentence requires obscure names, places, history, or specialist background before it can be understood."
+    },
+    {
+      "word": "vulgar",
+      "sentenceId": 11253810,
+      "categories": [
+        "violence",
+        "unnatural-English"
+      ],
+      "reason": "The sentence adds unnecessary violence, weapons, threats, or graphic harm to a default learning context. The wording is awkward, archaic, or unnatural for a modern default teaching example."
+    },
+    {
+      "word": "vulnerable",
+      "sentenceId": 11270819,
+      "categories": [
+        "medical-heavy",
+        "hate"
+      ],
+      "reason": "The sentence makes the learner process unnecessary medical detail instead of the target word. The sentence contains an identity-based generalization, slur-adjacent framing, or hateful conflict that is not needed for teaching."
+    },
+    {
+      "word": "wealthy",
+      "sentenceId": 11921012,
+      "categories": [
+        "political-heavy"
+      ],
+      "reason": "The sentence depends on a politically charged dispute or institutional background that is unnecessary for the target word."
+    },
+    {
+      "word": "whereby",
+      "sentenceId": 11044319,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "The surrounding vocabulary or technical background is substantially harder than the target word."
+    },
+    {
+      "word": "yield",
+      "sentenceId": 11756596,
+      "categories": [
+        "unnatural-English",
+        "context-too-hard"
+      ],
+      "reason": "The wording is awkward, archaic, or unnatural for a modern default teaching example. The surrounding vocabulary or technical background is substantially harder than the target word."
+    }
+  ]
+}

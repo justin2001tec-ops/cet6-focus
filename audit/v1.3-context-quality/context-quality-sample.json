@@ -35,24 +35,6 @@
       "notes": []
     },
     {
-      "word": "peak",
-      "en": "Even if we do not immediately succeed in leading the Kabyle to its peak, others will succeed.",
-      "sentenceId": 8908904,
-      "qualityScore": 62,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": [
-        "proper-noun penalty=1"
-      ]
-    },
-    {
       "word": "sticky",
       "en": "When flaxseeds are wet they become very sticky on the outside.",
       "sentenceId": 11545071,
@@ -119,25 +101,6 @@
       "notes": []
     },
     {
-      "word": "formidable",
-      "en": "It's a formidable asset against amnesia and colonizability.",
-      "sentenceId": 12807976,
-      "qualityScore": 64,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": [
-        "rare context tokens=2",
-        "standalone penalty=10"
-      ]
-    },
-    {
       "word": "witness",
       "en": "The mountains stand tall, bearing witness to time.",
       "sentenceId": 12769231,
@@ -152,43 +115,6 @@
       "severeInappropriate": false,
       "passed": true,
       "notes": []
-    },
-    {
-      "word": "petition",
-      "en": "Victory Holdsworth says the secretariat has put together a team to review the petition.",
-      "sentenceId": 12045723,
-      "qualityScore": 62,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": [
-        "proper-noun penalty=1",
-        "rare context tokens=1"
-      ]
-    },
-    {
-      "word": "stab",
-      "en": "It's a bit rude to stab a stranger in the leg, don't you think?",
-      "sentenceId": 13035646,
-      "qualityScore": 76,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": [
-        "standalone penalty=10"
-      ]
     },
     {
       "word": "ego",
@@ -207,26 +133,10 @@
       "notes": []
     },
     {
-      "word": "liable",
-      "en": "The problem with monarchy is you're liable to end up with a king who believes in homeopathy.",
-      "sentenceId": 11129769,
-      "qualityScore": 79,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": []
-    },
-    {
       "word": "appropriate",
-      "en": "Nazis marching outside libraries are not appropriate for children to see.",
-      "sentenceId": 11844548,
-      "qualityScore": 99,
+      "en": "People marching with swastika flags are not appropriate for children.",
+      "sentenceId": 11844549,
+      "qualityScore": 96,
       "dimensions": {
         "standalone": true,
         "nonTargetVocabulary": true,
@@ -287,45 +197,10 @@
       "notes": []
     },
     {
-      "word": "administration",
-      "en": "The president has promised a more austere administration than that of his predecessor.",
-      "sentenceId": 12063836,
-      "qualityScore": 67,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": false,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": false,
-      "notes": [
-        "topic penalty=20",
-        "rare context tokens=1"
-      ]
-    },
-    {
       "word": "coincidence",
       "en": "Was this all just a coincidence?",
       "sentenceId": 12772635,
       "qualityScore": 63,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": []
-    },
-    {
-      "word": "execute",
-      "en": "Mass shootings require a high amount of executive function to plan and execute.",
-      "sentenceId": 11765250,
-      "qualityScore": 85,
       "dimensions": {
         "standalone": true,
         "nonTargetVocabulary": true,
@@ -416,24 +291,6 @@
       "severeInappropriate": false,
       "passed": true,
       "notes": []
-    },
-    {
-      "word": "rational",
-      "en": "But how can you find rational pleasure in spinning round like a teetotum in a room of eighty degrees temperature?",
-      "sentenceId": 11537836,
-      "qualityScore": 62,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": [
-        "rare context tokens=1"
-      ]
     },
     {
       "word": "breach",
@@ -568,9 +425,9 @@
     },
     {
       "word": "furthermore",
-      "en": "Furthermore, I believe that the filibuster must be destroyed.",
-      "sentenceId": 10485485,
-      "qualityScore": 70,
+      "en": "Furthermore, the frog's external appearance and skeletal shape add to its distinctiveness.",
+      "sentenceId": 10951294,
+      "qualityScore": 66,
       "dimensions": {
         "standalone": true,
         "nonTargetVocabulary": true,
@@ -581,7 +438,7 @@
       "severeInappropriate": false,
       "passed": true,
       "notes": [
-        "rare context tokens=1"
+        "rare context tokens=2"
       ]
     },
     {
@@ -619,22 +476,6 @@
       ]
     },
     {
-      "word": "shatter",
-      "en": "I stopped by the weed store and got us some more shatter.",
-      "sentenceId": 11478878,
-      "qualityScore": 85,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": []
-    },
-    {
       "word": "force",
       "en": "Is love the most powerful force in the universe?",
       "sentenceId": 12778540,
@@ -649,24 +490,6 @@
       "severeInappropriate": false,
       "passed": true,
       "notes": []
-    },
-    {
-      "word": "clamp",
-      "en": "Her head was shaved and secured in a three-pronged skull clamp.",
-      "sentenceId": 10724631,
-      "qualityScore": 80,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": [
-        "rare context tokens=1"
-      ]
     },
     {
       "word": "inventory",
@@ -717,22 +540,6 @@
       "notes": []
     },
     {
-      "word": "internal",
-      "en": "If you think you have control over your own life, you have an internal locus of control.",
-      "sentenceId": 10538151,
-      "qualityScore": 74,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": []
-    },
-    {
       "word": "foresee",
       "en": "I don't foresee ever being able to go to Boston.",
       "sentenceId": 10094907,
@@ -766,24 +573,6 @@
       "passed": true,
       "notes": [
         "standalone penalty=10"
-      ]
-    },
-    {
-      "word": "summon",
-      "en": "Be careful when writing in Latin, or you might summon a demon.",
-      "sentenceId": 9669228,
-      "qualityScore": 79,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": [
-        "proper-noun penalty=1"
       ]
     },
     {
@@ -906,9 +695,9 @@
     },
     {
       "word": "versus",
-      "en": "There is no difference between how children fare with straight parents versus gay ones.",
-      "sentenceId": 12336055,
-      "qualityScore": 92,
+      "en": "She found what she called a \"small but significant\" difference in reading text from screen versus paper.",
+      "sentenceId": 10873733,
+      "qualityScore": 61,
       "dimensions": {
         "standalone": true,
         "nonTargetVocabulary": true,
@@ -918,7 +707,9 @@
       },
       "severeInappropriate": false,
       "passed": true,
-      "notes": []
+      "notes": [
+        "standalone penalty=10"
+      ]
     },
     {
       "word": "overhead",
@@ -990,9 +781,9 @@
     },
     {
       "word": "analysis",
-      "en": "Based on initial data analysis, the collared bears rarely forayed outside the park.",
-      "sentenceId": 12034469,
-      "qualityScore": 82,
+      "en": "Should we remove the outliers from our analysis?",
+      "sentenceId": 9962947,
+      "qualityScore": 71,
       "dimensions": {
         "standalone": true,
         "nonTargetVocabulary": true,
@@ -1011,22 +802,6 @@
       "en": "The space journey tested their skills and endurance.",
       "sentenceId": 12765387,
       "qualityScore": 80,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": []
-    },
-    {
-      "word": "institution",
-      "en": "American democracy is a kakistocratic institution.",
-      "sentenceId": 8849707,
-      "qualityScore": 70,
       "dimensions": {
         "standalone": true,
         "nonTargetVocabulary": true,
@@ -1059,22 +834,6 @@
       "en": "I can't decide whether to invest in a corporate bond or a gilt.",
       "sentenceId": 9004057,
       "qualityScore": 93,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": []
-    },
-    {
-      "word": "parasite",
-      "en": "People find out they are infected after passing the parasite in their stool or vomit.",
-      "sentenceId": 12327352,
-      "qualityScore": 85,
       "dimensions": {
         "standalone": true,
         "nonTargetVocabulary": true,
@@ -1187,42 +946,6 @@
       "notes": []
     },
     {
-      "word": "classification",
-      "en": "Not every racist country has the same racial classification system.",
-      "sentenceId": 11358495,
-      "qualityScore": 72,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": false,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": false,
-      "notes": [
-        "topic penalty=20"
-      ]
-    },
-    {
-      "word": "cocaine",
-      "en": "The study suggests two possible ways that cocaine might lead to an aneurism.",
-      "sentenceId": 12391805,
-      "qualityScore": 86,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": [
-        "rare context tokens=1"
-      ]
-    },
-    {
       "word": "recognition",
       "en": "Together we can make voice recognition better for everyone.",
       "sentenceId": 8310504,
@@ -1237,42 +960,6 @@
       "severeInappropriate": false,
       "passed": true,
       "notes": []
-    },
-    {
-      "word": "commonwealth",
-      "en": "Bangladesh military ranks, essentially corresponds to those used by the armed forces of the commonwealth nations.",
-      "sentenceId": 11502104,
-      "qualityScore": 47,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": false,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": false,
-      "notes": [
-        "topic penalty=24"
-      ]
-    },
-    {
-      "word": "therefore",
-      "en": "I therefore admonish you to give the defendant the benefit of every reasonable doubt.",
-      "sentenceId": 10775728,
-      "qualityScore": 80,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": [
-        "rare context tokens=1"
-      ]
     },
     {
       "word": "staple",
@@ -1306,24 +993,6 @@
       "passed": false,
       "notes": [
         "topic penalty=18"
-      ]
-    },
-    {
-      "word": "optimum",
-      "en": "Tom writes in Esperanto for optimum expressiveness.",
-      "sentenceId": 9980903,
-      "qualityScore": 66,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": [
-        "proper-noun penalty=1"
       ]
     },
     {
@@ -1411,24 +1080,6 @@
       "notes": []
     },
     {
-      "word": "pope",
-      "en": "Why does the Pope live in a palace?",
-      "sentenceId": 11561193,
-      "qualityScore": 71,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": [
-        "proper-noun penalty=1"
-      ]
-    },
-    {
       "word": "aspect",
       "en": "The right wants to dictate every aspect of your life.",
       "sentenceId": 11767591,
@@ -1462,9 +1113,9 @@
     },
     {
       "word": "incident",
-      "en": "It's been three years since Tom's incident in Boston.",
-      "sentenceId": 11937839,
-      "qualityScore": 70,
+      "en": "It's been three years since the incident.",
+      "sentenceId": 11937838,
+      "qualityScore": 56,
       "dimensions": {
         "standalone": true,
         "nonTargetVocabulary": true,
@@ -1475,7 +1126,6 @@
       "severeInappropriate": false,
       "passed": true,
       "notes": [
-        "proper-noun penalty=1",
         "standalone penalty=10"
       ]
     },
@@ -1696,27 +1346,9 @@
       "notes": []
     },
     {
-      "word": "tariff",
-      "en": "The four pacts include simplification of visa and customs rules to boost trade and reduce tariff barriers.",
-      "sentenceId": 11739145,
-      "qualityScore": 58,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": [
-        "rare context tokens=2"
-      ]
-    },
-    {
       "word": "deny",
-      "en": "A fair society doesn't deny gay people what it gives to straight people.",
-      "sentenceId": 10726983,
+      "en": "Tom can neither confirm nor deny any of the claims made about him.",
+      "sentenceId": 12141775,
       "qualityScore": 94,
       "dimensions": {
         "standalone": true,
@@ -1797,9 +1429,9 @@
     },
     {
       "word": "insight",
-      "en": "Fungi talk, but it's mostly a mix of nonsense and penetrating insight into your life.",
-      "sentenceId": 11566217,
-      "qualityScore": 80,
+      "en": "Whenever I've felt there was no hope, I waited and gained new insight.",
+      "sentenceId": 8993583,
+      "qualityScore": 79,
       "dimensions": {
         "standalone": true,
         "nonTargetVocabulary": true,
@@ -1862,27 +1494,9 @@
       "notes": []
     },
     {
-      "word": "barren",
-      "en": "The war left the land barren and lifeless.",
-      "sentenceId": 12764977,
-      "qualityScore": 60,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": false,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": false,
-      "notes": [
-        "topic penalty=24"
-      ]
-    },
-    {
       "word": "immune",
-      "en": "You are not immune to propaganda.",
-      "sentenceId": 9101344,
+      "en": "You're not immune to the virus.",
+      "sentenceId": 10354036,
       "qualityScore": 73,
       "dimensions": {
         "standalone": true,
@@ -1996,24 +1610,6 @@
       ]
     },
     {
-      "word": "gracious",
-      "en": "What a gracious speech, what a daring pledge to a world whelmed in tyranny and wrong!",
-      "sentenceId": 11819800,
-      "qualityScore": 69,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": [
-        "rare context tokens=1"
-      ]
-    },
-    {
       "word": "desire",
       "en": "I wish you lots of bright stars and all the flowers you desire.",
       "sentenceId": 8738510,
@@ -2028,43 +1624,6 @@
       "severeInappropriate": false,
       "passed": true,
       "notes": []
-    },
-    {
-      "word": "predecessor",
-      "en": "The president has promised a more austere administration than that of his predecessor.",
-      "sentenceId": 12063836,
-      "qualityScore": 57,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": false,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": false,
-      "notes": [
-        "topic penalty=20",
-        "rare context tokens=1"
-      ]
-    },
-    {
-      "word": "specialty",
-      "en": "You know that I now have made hijacking my specialty.",
-      "sentenceId": 9813893,
-      "qualityScore": 77,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": [
-        "rare context tokens=1"
-      ]
     },
     {
       "word": "blaze",
@@ -2134,9 +1693,9 @@
     },
     {
       "word": "rely",
-      "en": "Antisemitic conspiracy theories rely on the myth of Jewish unity.",
-      "sentenceId": 11242378,
-      "qualityScore": 84,
+      "en": "People rely on ferries for transportation in Bangladesh, a low-lying nation with hundreds of rivers.",
+      "sentenceId": 12042018,
+      "qualityScore": 62,
       "dimensions": {
         "standalone": true,
         "nonTargetVocabulary": true,
@@ -2264,8 +1823,26 @@
     },
     {
       "word": "commit",
-      "en": "We all have to commit to getting rid of this perversion to our culture.",
-      "sentenceId": 11678600,
+      "en": "If you commit a crime, don't post about it online.",
+      "sentenceId": 11563914,
+      "qualityScore": 66,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": false,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": false,
+      "notes": [
+        "topic penalty=24"
+      ]
+    },
+    {
+      "word": "legend",
+      "en": "Tom is the reincarnation of the hero of legend.",
+      "sentenceId": 11695490,
       "qualityScore": 74,
       "dimensions": {
         "standalone": true,
@@ -2277,25 +1854,8 @@
       "severeInappropriate": false,
       "passed": true,
       "notes": [
-        "rare context tokens=1",
-        "standalone penalty=10"
+        "rare context tokens=1"
       ]
-    },
-    {
-      "word": "legend",
-      "en": "Biologists view the chupacabras as a contemporary legend.",
-      "sentenceId": 1566359,
-      "qualityScore": 80,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": []
     },
     {
       "word": "chord",
@@ -2317,9 +1877,9 @@
     },
     {
       "word": "finite",
-      "en": "Great... another day of learning about nondeterministic finite automata.",
-      "sentenceId": 11148401,
-      "qualityScore": 82,
+      "en": "Is the universe infinite or finite?",
+      "sentenceId": 12777760,
+      "qualityScore": 63,
       "dimensions": {
         "standalone": true,
         "nonTargetVocabulary": true,
@@ -2329,9 +1889,7 @@
       },
       "severeInappropriate": false,
       "passed": true,
-      "notes": [
-        "rare context tokens=1"
-      ]
+      "notes": []
     },
     {
       "word": "adhere",
@@ -2386,25 +1944,6 @@
       ]
     },
     {
-      "word": "imperative",
-      "en": "Punching Nazis is a moral imperative.",
-      "sentenceId": 11364538,
-      "qualityScore": 43,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": [
-        "proper-noun penalty=1",
-        "rare context tokens=1"
-      ]
-    },
-    {
       "word": "decent",
       "en": "It's hard to get decent information about what you're supposed to do.",
       "sentenceId": 12003516,
@@ -2424,9 +1963,9 @@
     },
     {
       "word": "poverty",
-      "en": "Abject poverty and lack of work has led people to go to extreme measures.",
-      "sentenceId": 11170398,
-      "qualityScore": 88,
+      "en": "A society that allows poverty hates children.",
+      "sentenceId": 12153697,
+      "qualityScore": 82,
       "dimensions": {
         "standalone": true,
         "nonTargetVocabulary": true,
@@ -2474,8 +2013,8 @@
     },
     {
       "word": "attitude",
-      "en": "His maverick attitude toward generally-accepted best practices didn't endear him to his superiors.",
-      "sentenceId": 10104692,
+      "en": "Unmasked and helpless, she maintained an attitude of challenge and defiance.",
+      "sentenceId": 11056703,
       "qualityScore": 86,
       "dimensions": {
         "standalone": true,
@@ -2526,9 +2065,9 @@
     },
     {
       "word": "indefinite",
-      "en": "The indefinite article is used before countable nouns.",
-      "sentenceId": 9934956,
-      "qualityScore": 78,
+      "en": "Tom's band is on an indefinite hiatus.",
+      "sentenceId": 9416088,
+      "qualityScore": 72,
       "dimensions": {
         "standalone": true,
         "nonTargetVocabulary": true,
@@ -2538,9 +2077,7 @@
       },
       "severeInappropriate": false,
       "passed": true,
-      "notes": [
-        "rare context tokens=1"
-      ]
+      "notes": []
     },
     {
       "word": "acquire",
@@ -2557,24 +2094,6 @@
       "severeInappropriate": false,
       "passed": true,
       "notes": []
-    },
-    {
-      "word": "heighten",
-      "en": "Humanitarian organizations fear the ongoing impasse and the hostile rhetoric could heighten local xenophobia.",
-      "sentenceId": 11095203,
-      "qualityScore": 74,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": [
-        "rare context tokens=2"
-      ]
     },
     {
       "word": "detection",
@@ -2625,24 +2144,6 @@
       "notes": []
     },
     {
-      "word": "spectator",
-      "en": "The position of being holier than thou is really easy to take when you are a spectator.",
-      "sentenceId": 11989297,
-      "qualityScore": 62,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": [
-        "rare context tokens=1"
-      ]
-    },
-    {
       "word": "swamp",
       "en": "I don't mean to swamp you.",
       "sentenceId": 10545400,
@@ -2659,44 +2160,10 @@
       "notes": []
     },
     {
-      "word": "bypass",
-      "en": "Exposing bad ideas doesn't kill them because people aren't perfectly rational, and propaganda is designed to bypass reason.",
-      "sentenceId": 10249063,
-      "qualityScore": 36,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": false,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": false,
-      "notes": [
-        "topic penalty=24"
-      ]
-    },
-    {
       "word": "aid",
       "en": "Tom provided first aid to injured civilians during the emergency.",
       "sentenceId": 12765295,
       "qualityScore": 96,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": []
-    },
-    {
-      "word": "whereby",
-      "en": "Scientists say a new geologic epoch has begun whereby humans are causing major damage to global water systems.",
-      "sentenceId": 11044319,
-      "qualityScore": 75,
       "dimensions": {
         "standalone": true,
         "nonTargetVocabulary": true,
@@ -2723,24 +2190,6 @@
       "severeInappropriate": false,
       "passed": true,
       "notes": []
-    },
-    {
-      "word": "anonymous",
-      "en": "Alcoholics Anonymous is a faith healing program.",
-      "sentenceId": 11076401,
-      "qualityScore": 66,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": [
-        "proper-noun penalty=1"
-      ]
     },
     {
       "word": "brink",
@@ -2874,9 +2323,9 @@
     },
     {
       "word": "similar",
-      "en": "Pollock's early works are similar to his teacher's kind of painting.",
-      "sentenceId": 12411756,
-      "qualityScore": 91,
+      "en": "I'm here to help you as someone who has gone through similar experiences.",
+      "sentenceId": 12140227,
+      "qualityScore": 90,
       "dimensions": {
         "standalone": true,
         "nonTargetVocabulary": true,
@@ -2886,9 +2335,7 @@
       },
       "severeInappropriate": false,
       "passed": true,
-      "notes": [
-        "rare context tokens=1"
-      ]
+      "notes": []
     },
     {
       "word": "survival",
@@ -2924,9 +2371,9 @@
     },
     {
       "word": "privacy",
-      "en": "For security and privacy reasons, I don't have Facebook on my phone.",
-      "sentenceId": 11720165,
-      "qualityScore": 79,
+      "en": "Privacy protects the essence of who we are.",
+      "sentenceId": 12767857,
+      "qualityScore": 74,
       "dimensions": {
         "standalone": true,
         "nonTargetVocabulary": true,
@@ -2936,9 +2383,7 @@
       },
       "severeInappropriate": false,
       "passed": true,
-      "notes": [
-        "proper-noun penalty=1"
-      ]
+      "notes": []
     },
     {
       "word": "cylinder",
@@ -2976,9 +2421,9 @@
     },
     {
       "word": "drag",
-      "en": "More drag shows need to be protected by armed antifascists.",
-      "sentenceId": 11352143,
-      "qualityScore": 91,
+      "en": "Drag queen story hour is designed to be appropriate for children.",
+      "sentenceId": 11844546,
+      "qualityScore": 88,
       "dimensions": {
         "standalone": true,
         "nonTargetVocabulary": true,
@@ -3075,24 +2520,6 @@
       ]
     },
     {
-      "word": "perfume",
-      "en": "Ambergris is the foundation of nearly every perfume, and in ancient times was used for spicing wine.",
-      "sentenceId": 11919494,
-      "qualityScore": 65,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": [
-        "rare context tokens=1"
-      ]
-    },
-    {
       "word": "discipline",
       "en": "The popular conception of evolutionary psychology is even less scientific than the discipline itself.",
       "sentenceId": 11168053,
@@ -3139,24 +2566,6 @@
       "severeInappropriate": false,
       "passed": true,
       "notes": []
-    },
-    {
-      "word": "procedure",
-      "en": "The procedure is called catheter ablation because it burns off a small amount of heart muscle.",
-      "sentenceId": 11248357,
-      "qualityScore": 69,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": [
-        "rare context tokens=1"
-      ]
     },
     {
       "word": "trend",
@@ -3257,63 +2666,6 @@
       "severeInappropriate": false,
       "passed": true,
       "notes": []
-    },
-    {
-      "word": "regulation",
-      "en": "The President shall promulgate a regulation providing for the mandatory allocation of crude oil.",
-      "sentenceId": 10781042,
-      "qualityScore": 59,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": false,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": false,
-      "notes": [
-        "proper-noun penalty=1",
-        "topic penalty=20"
-      ]
-    },
-    {
-      "word": "occupy",
-      "en": "It's only a matter of time before Putin sends little green men to occupy the moon.",
-      "sentenceId": 11044594,
-      "qualityScore": 35,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": false,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": false,
-      "notes": [
-        "proper-noun penalty=1",
-        "topic penalty=26",
-        "standalone penalty=10"
-      ]
-    },
-    {
-      "word": "bull",
-      "en": "Its father was a very good bull, and I am expecting her to give me a very good heifer.",
-      "sentenceId": 10786896,
-      "qualityScore": 62,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": [
-        "rare context tokens=1"
-      ]
     },
     {
       "word": "virtue",
@@ -3512,24 +2864,6 @@
       "notes": []
     },
     {
-      "word": "compete",
-      "en": "The Kabyle language can therefore compete with others, when it is necessary!",
-      "sentenceId": 9005062,
-      "qualityScore": 80,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": [
-        "proper-noun penalty=1"
-      ]
-    },
-    {
       "word": "electric",
       "en": "Electric motors deliver strong acceleration because they offer more torque than equivalent gasoline engines.",
       "sentenceId": 10274991,
@@ -3580,64 +2914,9 @@
       "notes": []
     },
     {
-      "word": "successive",
-      "en": "Successive owners have tinkered the place since then, but they cannot quite spoil it.",
-      "sentenceId": 11327471,
-      "qualityScore": 69,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": [
-        "rare context tokens=1"
-      ]
-    },
-    {
       "word": "initial",
-      "en": "Based on initial data analysis, the collared bears rarely forayed outside the park.",
-      "sentenceId": 12034469,
-      "qualityScore": 82,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": [
-        "rare context tokens=1"
-      ]
-    },
-    {
-      "word": "stalk",
-      "en": "There's a website where people stalk Tom obsessively.",
-      "sentenceId": 10371291,
-      "qualityScore": 70,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": [
-        "proper-noun penalty=1",
-        "rare context tokens=1"
-      ]
-    },
-    {
-      "word": "vast",
-      "en": "The people were subjugated by a vast empire.",
-      "sentenceId": 9359755,
+      "en": "It's not the initial cost that worries me. It's the upkeep.",
+      "sentenceId": 10463318,
       "qualityScore": 80,
       "dimensions": {
         "standalone": true,
@@ -3648,13 +2927,16 @@
       },
       "severeInappropriate": false,
       "passed": true,
-      "notes": []
+      "notes": [
+        "rare context tokens=1",
+        "standalone penalty=10"
+      ]
     },
     {
-      "word": "peg",
-      "en": "I took Tom down a peg.",
-      "sentenceId": 10159859,
-      "qualityScore": 50,
+      "word": "vast",
+      "en": "One of the great things about the Internet is the vast array of websites that cater to every conceivable interest.",
+      "sentenceId": 10986615,
+      "qualityScore": 62,
       "dimensions": {
         "standalone": true,
         "nonTargetVocabulary": true,
@@ -3665,7 +2947,7 @@
       "severeInappropriate": false,
       "passed": true,
       "notes": [
-        "proper-noun penalty=1"
+        "rare context tokens=1"
       ]
     },
     {
@@ -3865,24 +3147,6 @@
       "notes": []
     },
     {
-      "word": "violent",
-      "en": "Jews owe our lives to the violent antifascist resistance of our grandparents.",
-      "sentenceId": 8808650,
-      "qualityScore": 73,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": false,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": false,
-      "notes": [
-        "topic penalty=24"
-      ]
-    },
-    {
       "word": "pressure",
       "en": "Can they resist the pressure of the revolution?",
       "sentenceId": 12765487,
@@ -3900,9 +3164,9 @@
     },
     {
       "word": "vulnerable",
-      "en": "The world is full of bipolar people who don't threaten vulnerable minorities.",
-      "sentenceId": 11270819,
-      "qualityScore": 93,
+      "en": "Did the mission reach the most vulnerable?",
+      "sentenceId": 12765982,
+      "qualityScore": 66,
       "dimensions": {
         "standalone": true,
         "nonTargetVocabulary": true,
@@ -3950,9 +3214,9 @@
     },
     {
       "word": "masculine",
-      "en": "In Moabite, the masculine plural ending was -in instead of -im.",
-      "sentenceId": 8805634,
-      "qualityScore": 81,
+      "en": "She has a masculine way of talking.",
+      "sentenceId": 10689028,
+      "qualityScore": 66,
       "dimensions": {
         "standalone": true,
         "nonTargetVocabulary": true,
@@ -3963,24 +3227,8 @@
       "severeInappropriate": false,
       "passed": true,
       "notes": [
-        "proper-noun penalty=1"
+        "standalone penalty=10"
       ]
-    },
-    {
-      "word": "author",
-      "en": "The author let down a lot of her fans with her transphobia.",
-      "sentenceId": 8700856,
-      "qualityScore": 91,
-      "dimensions": {
-        "standalone": true,
-        "nonTargetVocabulary": true,
-        "neutralTopic": true,
-        "simpleSyntax": true,
-        "teachingValue": true
-      },
-      "severeInappropriate": false,
-      "passed": true,
-      "notes": []
     },
     {
       "word": "exchange",
@@ -4152,9 +3400,9 @@
     },
     {
       "word": "collapse",
-      "en": "What is causing colony collapse disorder?",
-      "sentenceId": 11988241,
-      "qualityScore": 70,
+      "en": "The whole thing is about to collapse.",
+      "sentenceId": 10320564,
+      "qualityScore": 66,
       "dimensions": {
         "standalone": true,
         "nonTargetVocabulary": true,
@@ -4187,6 +3435,696 @@
       "en": "I'm trying to appeal to the reasonable side of people.",
       "sentenceId": 11051474,
       "qualityScore": 95,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "endure",
+      "en": "The mountains endure, as we must.",
+      "sentenceId": 12769181,
+      "qualityScore": 68,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "figure",
+      "en": "I'm trying to figure out whether I can leave the state.",
+      "sentenceId": 8790862,
+      "qualityScore": 98,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "threaten",
+      "en": "The world is full of bipolar people who don't threaten vulnerable minorities.",
+      "sentenceId": 11270819,
+      "qualityScore": 97,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "essence",
+      "en": "Privacy protects the essence of who we are.",
+      "sentenceId": 12767857,
+      "qualityScore": 84,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "preclude",
+      "en": "But for the moment his sense of relief was so great as to preclude all other feelings.",
+      "sentenceId": 11261835,
+      "qualityScore": 80,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "intrinsic",
+      "en": "Tom lacks intrinsic motivation to study French.",
+      "sentenceId": 9694653,
+      "qualityScore": 70,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "proper-noun penalty=1"
+      ]
+    },
+    {
+      "word": "sue",
+      "en": "We're going to sue your pants off!",
+      "sentenceId": 11764741,
+      "qualityScore": 66,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "standalone penalty=10"
+      ]
+    },
+    {
+      "word": "clockwise",
+      "en": "Rotating it clockwise will tighten it, while rotating it counterclockwise will loosen it.",
+      "sentenceId": 12382826,
+      "qualityScore": 81,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "ambition",
+      "en": "Is there a limit to human ambition?",
+      "sentenceId": 12775028,
+      "qualityScore": 66,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "band",
+      "en": "The band played a mix of covers and original songs.",
+      "sentenceId": 11751685,
+      "qualityScore": 91,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "community",
+      "en": "Sandra began her community service after earning a graduate degree in gerontology.",
+      "sentenceId": 11829784,
+      "qualityScore": 98,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "respective",
+      "en": "Our respective favorite shows are doing a crossover episode.",
+      "sentenceId": 12338125,
+      "qualityScore": 89,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "jeopardize",
+      "en": "This could jeopardize the whole operation.",
+      "sentenceId": 12399987,
+      "qualityScore": 64,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "standalone penalty=10"
+      ]
+    },
+    {
+      "word": "complex",
+      "en": "The stunning photos reveal a complex and varied terrain on the icy dwarf planet.",
+      "sentenceId": 10820386,
+      "qualityScore": 92,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "mall",
+      "en": "Most of the U.S. is just the same big strip mall.",
+      "sentenceId": 10053972,
+      "qualityScore": 85,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "ingredient",
+      "en": "You can use any ingredient that can be skewered on a stick.",
+      "sentenceId": 11495155,
+      "qualityScore": 95,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "feast",
+      "en": "The royal banquet was a feast for the senses.",
+      "sentenceId": 12775929,
+      "qualityScore": 92,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "evaluate",
+      "en": "I don't understand French well enough to evaluate poetry in the language.",
+      "sentenceId": 12262025,
+      "qualityScore": 85,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "proper-noun penalty=1"
+      ]
+    },
+    {
+      "word": "unique",
+      "en": "Floating in zero gravity is a unique experience for astronauts.",
+      "sentenceId": 12759588,
+      "qualityScore": 96,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "confirm",
+      "en": "Tom can neither confirm nor deny any of the claims made about him.",
+      "sentenceId": 12141775,
+      "qualityScore": 94,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "mansion",
+      "en": "Tom grew up in a terraced house just down the road from a ginormous mansion.",
+      "sentenceId": 9004046,
+      "qualityScore": 74,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "protein",
+      "en": "How do you get your protein?",
+      "sentenceId": 12334989,
+      "qualityScore": 63,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "epoch",
+      "en": "Scientists say a new geologic epoch has begun whereby humans are causing major damage to global water systems.",
+      "sentenceId": 11044319,
+      "qualityScore": 75,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "enormous",
+      "en": "This enormous longhorn beetle is found around mango and fig trees.",
+      "sentenceId": 9998017,
+      "qualityScore": 85,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "standalone penalty=10"
+      ]
+    },
+    {
+      "word": "monitor",
+      "en": "Whoever invented the touchscreen monitor did not have a cat.",
+      "sentenceId": 11600981,
+      "qualityScore": 96,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "initiative",
+      "en": "Since launching their initiative in April, residents agree the district is much tidier.",
+      "sentenceId": 12105187,
+      "qualityScore": 82,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "enthusiastic",
+      "en": "While some were more enthusiastic about the job than others, she says nearly all agreed waitressing is hard work.",
+      "sentenceId": 12042057,
+      "qualityScore": 59,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": [
+        "rare context tokens=1"
+      ]
+    },
+    {
+      "word": "chapel",
+      "en": "The priest is in the chapel.",
+      "sentenceId": 10101638,
+      "qualityScore": 45,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": false,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": false,
+      "notes": [
+        "topic penalty=18"
+      ]
+    },
+    {
+      "word": "fascinate",
+      "en": "His baboon story will fascinate and entertain you for sure.",
+      "sentenceId": 11167170,
+      "qualityScore": 95,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "assign",
+      "en": "You can't assign a string to a variable of type integer.",
+      "sentenceId": 12465773,
+      "qualityScore": 98,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "rivalry",
+      "en": "There's a rivalry between our schools.",
+      "sentenceId": 10162430,
+      "qualityScore": 74,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "background",
+      "en": "The man in the background is my grandfather, and my father is in the foreground.",
+      "sentenceId": 9489982,
+      "qualityScore": 80,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "pasture",
+      "en": "The above ground pool and deck overlook the pasture and rolling hills.",
+      "sentenceId": 10722017,
+      "qualityScore": 96,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "sturdy",
+      "en": "Their characteristic waddle and playful appearance make these sturdy marsupials one of the country's most endearing native creatures.",
+      "sentenceId": 12267079,
+      "qualityScore": 68,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "nasty",
+      "en": "A pair of mischievous children used a stick to write nasty words in the wet cement.",
+      "sentenceId": 11778593,
+      "qualityScore": 82,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "elite",
+      "en": "Tom went to an elite preparatory school.",
+      "sentenceId": 9365572,
+      "qualityScore": 76,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "clarity",
+      "en": "I find clarity in the quiet of dawn.",
+      "sentenceId": 12770617,
+      "qualityScore": 83,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "severe",
+      "en": "A common side effect of amphetamines is severe diarrhea of the mouth.",
+      "sentenceId": 12130064,
+      "qualityScore": 96,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "consensus",
+      "en": "There doesn't seem to be consensus on this among speakers.",
+      "sentenceId": 12321418,
+      "qualityScore": 95,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "generate",
+      "en": "Researchers have devised a way to generate electricity using raw sewage and special bacteria.",
+      "sentenceId": 10903593,
+      "qualityScore": 92,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "ideal",
+      "en": "Are there things you could start doing now to make your ideal future closer to becoming a reality?",
+      "sentenceId": 12131446,
+      "qualityScore": 76,
+      "dimensions": {
+        "standalone": true,
+        "nonTargetVocabulary": true,
+        "neutralTopic": true,
+        "simpleSyntax": true,
+        "teachingValue": true
+      },
+      "severeInappropriate": false,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "word": "discount",
+      "en": "You'll get a discount on your next order.",
+      "sentenceId": 12105706,
+      "qualityScore": 84,
       "dimensions": {
         "standalone": true,
         "nonTargetVocabulary": true,

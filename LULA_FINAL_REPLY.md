@@ -1,19 +1,21 @@
-# Lula 的最终回复
+# Lula 的最终回复 — Round 4
 
-CET6 Focus 已完成最终 polish、自检、测试、GitHub 发布、GitHub Pages 部署和真实线上 smoke，可以开始第三方正式验收。
+CET6 Focus v1.3 Round 4 已完成 Context 真实语义审核与 durable curation，达到停止条件，现等待最终验收。
 
-**CET6 Focus is deployed and ready for independent audit.**
+- 风险定向逐句审核：1002 条，含 R3 基线 885 条，覆盖 100%。
+- Pass 1：350 条；独立验证：250 条，使用不同 seed 且与 Pass 1 不重叠。
+- 独立语义 PASS：250/250 = 100.0%；严重不适宜：0。
+- provenance：1110/1110 = 100%。
+- 最终 Context 覆盖：1110/2219 = 50.0%，按交接文档报告为 `QUALITY PASS / COVERAGE BELOW TARGET`；没有为了补数字恢复被拒句子。
+- durable curation：30 条 global reject、527 条 pair reject；没有写入人工替代句或生成例句。
+- typecheck、lint、unit、串行 E2E、production build、vocabulary validator、data-only smoke 均通过；截图 smoke 的 console/page/横向 overflow 错误均为 0。
+- UI、Motion、Study/Review、业务逻辑全部冻结；scope check 通过。
 
-- GitHub 仓库：[https://github.com/justin2001tec-ops/cet6-focus](https://github.com/justin2001tec-ops/cet6-focus)
-- 在线网站：[https://justin2001tec-ops.github.io/cet6-focus/](https://justin2001tec-ops.github.io/cet6-focus/)
-- 最终提交：`443afcf3889b842575df459428e6f4baf0ae2e0f`
-- 最终 Pages 工作流：[32628087659](https://github.com/justin2001tec-ops/cet6-focus/actions/runs/32628087659)；quality 工作流：[32628087724](https://github.com/justin2001tec-ops/cet6-focus/actions/runs/32628087724)，均成功。
-- 词库校验：2,219 条，通过。
-- 单元测试：10 个文件、23 项，通过。
-- 最终本地 E2E：22 项中 12 项通过、10 项按既有桌面/移动边界跳过，无失败。
-- 线上 smoke：onboarding、Study/Undo、Dictation、Stats、Settings、Mistakes、词库、备份导出、固定背景持久化、Pages 子路径资源、Service Worker 和预热离线 reload 均通过；无 console/page/network 错误。
-- 最小部署修复已包含：数据未 ready 前禁止提交 onboarding，以及 Service Worker shell cache v3。
+## GitHub
 
-详细报告见 `FINAL_DEPLOYMENT_REPORT.md`；线上截图和文字证据见 `audit/screenshots/online-pages-smoke.png` 与 `audit/online-pages-results.txt`。
+- 仓库：[https://github.com/justin2001tec-ops/cet6-focus](https://github.com/justin2001tec-ops/cet6-focus)
+- PR #3：[https://github.com/justin2001tec-ops/cet6-focus/pull/3](https://github.com/justin2001tec-ops/cet6-focus/pull/3)
 
-GitHub 仓库和在线网站均已提供，因此不再重复上传 ZIP。已知边界仍包括预热后离线验证、Web Speech API 依赖验收机器，以及源词库的 2 条缺音标和 177 条缺词性。
+PR #3 保持 OPEN、未合并。本轮未部署生产、未创建 `v1.3.0` tag；因此没有线上网站地址可提供。
+
+详细证据见 [`FINAL_V1_3_CORE_LEARNING_REPORT.md`](FINAL_V1_3_CORE_LEARNING_REPORT.md) 与 [`audit/v1.3-context-human-quality/`](audit/v1.3-context-human-quality/)。

@@ -20,8 +20,9 @@
     "capture:context-quality": "node scripts/capture-v1.3-context-quality.mjs",
     "capture:ios26": "tsx scripts/capture-ios26-screenshots.mjs",
     "context:audit": "tsx scripts/build-context-audit.ts",
+    "context:human-audit": "tsx scripts/build-context-human-quality.ts",
     "examples:build": "tsx scripts/build-examples.ts && pnpm context:audit",
-    "vocab:build": "pnpm examples:build && tsx scripts/build-vocabulary.ts",
+    "vocab:build": "pnpm examples:build && tsx scripts/build-vocabulary.ts && pnpm context:human-audit",
     "vocab:validate": "tsx scripts/validate-vocabulary.ts"
   },
   "dependencies": {

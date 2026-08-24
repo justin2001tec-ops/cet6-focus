@@ -6,6 +6,7 @@ const baseURL = process.env.CET6_PREVIEW_URL ?? 'http://127.0.0.1:4173'
 const screenshotDir = join(process.cwd(), 'audit', 'v1.3-context-quality')
 const consoleErrors = []
 const pageErrors = []
+const overflowErrors = []
 
 async function setup(browser, viewport, resetKey) {
   const context = await browser.newContext({ viewport, colorScheme: 'light', deviceScaleFactor: 1, locale: 'zh-CN' })
@@ -123,6 +124,8 @@ async function gotoStudy(page) {
 
 async function capture(page, filename) {
   await page.waitForTimeout(500)
+  const overflow = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth + 1)
+  if (overflow) overflowErrors.push(filename)
   await page.screenshot({ path: join(screenshotDir, filename), fullPage: false })
 }
 
@@ -159,8 +162,8 @@ try {
   await fallback.page.getByRole('region', { name: '核心词义' }).waitFor({ state: 'visible', timeout: 10_000 })
   await capture(fallback.page, 'meaning-fallback-iphone-390.png')
 
-  if (consoleErrors.length || pageErrors.length) throw new Error(JSON.stringify({ consoleErrors, pageErrors }))
-  console.log(JSON.stringify({ baseURL, screenshotDir, screenshots: 3, consoleErrors, pageErrors }, null, 2))
+  if (consoleErrors.length || pageErrors.length || overflowErrors.length) throw new Error(JSON.stringify({ consoleErrors, pageErrors, overflowErrors }))
+  console.log(JSON.stringify({ baseURL, screenshotDir, screenshots: 3, consoleErrors, pageErrors, overflowErrors }, null, 2))
 } finally {
   for (const context of contexts) await context.close().catch(() => {})
   await browser.close()

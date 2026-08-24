@@ -1,5 +1,5 @@
 {
-  "selectorVersion": "v2-context-quality",
+  "selectorVersion": "v3-context-quality-curation",
   "source": "Tatoeba English CC0 sentence export",
   "sourceFile": "data-source/examples/tatoeba/eng_sentences_CC0.tsv",
   "totalSourceSentences": 41503,
@@ -7,11 +7,11 @@
   "matchedTargetCandidates": 21655,
   "rawCandidatePairs": 7284,
   "rawCandidateWordCount": 1563,
-  "selectedCount": 1339,
+  "selectedCount": 1110,
   "rawCandidateCoverage": 0.7043713384407391,
   "rawCandidateCoveragePercent": 70.4,
-  "qualityApprovedCoverage": 0.6034249662009914,
-  "qualityApprovedCoveragePercent": 60.3,
+  "qualityApprovedCoverage": 0.5002253267237494,
+  "qualityApprovedCoveragePercent": 50,
   "rejectionCounts": {
     "length": 14479,
     "properNoun": 768,
@@ -48,11 +48,18 @@
     "minimumQualityScore": 29
   },
   "deterministic": true,
+  "curation": {
+    "version": 1,
+    "globalRejectCount": 30,
+    "pairRejectCount": 527,
+    "rejectedCandidateCount": 550,
+    "noFallbackCount": 229
+  },
   "audit": {
     "seed": 216489987,
     "sampleSize": 250,
-    "samplePassCount": 238,
-    "sampleQualityPassRate": 95.2,
+    "samplePassCount": 245,
+    "sampleQualityPassRate": 98,
     "severeInappropriateSampleCount": 0,
     "provenanceCoverage": 1,
     "provenanceCoveragePercent": 100,
