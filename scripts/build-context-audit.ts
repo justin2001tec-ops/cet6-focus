@@ -1,4 +1,3 @@
-import { execFileSync } from 'node:child_process'
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { resolve } from 'node:path'
 
@@ -67,6 +66,7 @@ const root = resolve(import.meta.dirname, '..')
 const selectedPath = resolve(root, 'data-source/examples/selected-examples.json')
 const provenancePath = resolve(root, 'data-source/examples/example-provenance.json')
 const buildReportPath = resolve(root, 'data-source/examples/build-report.json')
+const baselinePath = resolve(root, 'data-source/examples/r2-regression-baseline.json')
 const auditRoot = resolve(root, 'audit/v1.3-context-quality')
 const seed = 0xCE76003
 const sampleLimit = 250
@@ -84,18 +84,10 @@ function csvCell(value: string | number | boolean): string {
   return /[",\n]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text
 }
 
-function getBaselineExamples(): Record<string, Example> {
-  const commit = process.env.CONTEXT_R2_BASELINE ?? 'f5ab0b66659271cc453b301b8d1dd4aa16100deb'
-  try {
-    return JSON.parse(execFileSync('git', ['show', `${commit}:data-source/examples/selected-examples.json`], { cwd: root, encoding: 'utf8' })) as Record<string, Example>
-  } catch {
-    return {}
-  }
-}
-
 const selected = JSON.parse(await readFile(selectedPath, 'utf8')) as Record<string, Example>
 const provenance = JSON.parse(await readFile(provenancePath, 'utf8')) as Record<string, Provenance>
 const buildReport = JSON.parse(await readFile(buildReportPath, 'utf8')) as BuildReport
+const baseline = JSON.parse(await readFile(baselinePath, 'utf8')) as Record<string, Example>
 const words = Object.keys(selected).sort((a, b) => a.localeCompare(b))
 const sampleWords = words
   .map((word) => ({ word, rank: seededRank(word) }))
@@ -135,7 +127,6 @@ const sample: AuditRecord[] = sampleWords.map((word) => {
 const samplePassCount = sample.filter((record) => record.passed).length
 const severeCount = sample.filter((record) => record.severeInappropriate).length
 const samplePassRate = sample.length ? samplePassCount / sample.length : 0
-const baseline = getBaselineExamples()
 const regressionRows = regressionWords.map((word) => ({
   word,
   r2: baseline[word]?.en ?? '无 R2 例句',
@@ -156,7 +147,7 @@ const auditBuildReport = {
     severeInappropriateSampleCount: severeCount,
     provenanceCoverage: Number(provenanceCoverage.toFixed(4)),
     provenanceCoveragePercent: Number((provenanceCoverage * 100).toFixed(1)),
-    baselineCommit: process.env.CONTEXT_R2_BASELINE ?? 'f5ab0b66659271cc453b301b8d1dd4aa16100deb',
+    baselineFile: 'data-source/examples/r2-regression-baseline.json',
   },
 }
 

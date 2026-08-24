@@ -56,6 +56,6 @@
     "severeInappropriateSampleCount": 0,
     "provenanceCoverage": 1,
     "provenanceCoveragePercent": 100,
-    "baselineCommit": "f5ab0b66659271cc453b301b8d1dd4aa16100deb"
+    "baselineFile": "data-source/examples/r2-regression-baseline.json"
   }
 }

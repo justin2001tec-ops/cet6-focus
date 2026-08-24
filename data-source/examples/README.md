@@ -29,4 +29,4 @@ pnpm vocab:build
 pnpm vocab:validate
 ```
 
-The generated intermediate mapping is `data-source/examples/selected-examples.json`; provenance and selector metrics are adjacent to it; the shipped application data is `public/data/cet6-vocab.v1.json`. `pnpm examples:build` also regenerates the R3 audit package.
+The generated intermediate mapping is `data-source/examples/selected-examples.json`; provenance and selector metrics are adjacent to it; the shipped application data is `public/data/cet6-vocab.v1.json`. `r2-regression-baseline.json` is the committed 11-word comparison snapshot used by the audit, so CI does not depend on Git history depth. `pnpm examples:build` also regenerates the R3 audit package.
