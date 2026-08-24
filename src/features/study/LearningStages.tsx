@@ -1,4 +1,4 @@
-import { Bookmark, Check, ChevronDown, Home, RotateCcw, Undo2, Volume2 } from 'lucide-react'
+import { Bookmark, Check, ChevronDown, Home, Undo2, Volume2 } from 'lucide-react'
 import { AudioButton } from '@/components/AppShell'
 import { Button, IconButton } from '@/components/ui'
 import { hasLearningDetails, recognitionLabel, recognitionOptions, type RecognitionChoice } from '@/features/study/learning'
@@ -29,10 +29,22 @@ export function LearningWordHeader({ word, starred, compact = false, onSpeak, on
   )
 }
 
+export function LearningAtmosphere() {
+  return (
+    <div className="learning-shell__atmosphere" aria-hidden="true">
+      <span className="learning-shell__atmosphere-layer learning-shell__atmosphere-layer--base" />
+      <span className="learning-shell__atmosphere-layer learning-shell__atmosphere-layer--context" />
+      <span className="learning-shell__atmosphere-layer learning-shell__atmosphere-layer--meaning" />
+      <span className="learning-shell__atmosphere-layer learning-shell__atmosphere-layer--detail" />
+      <span className="learning-shell__atmosphere-layer learning-shell__atmosphere-layer--transitioning" />
+      <span className="learning-shell__atmosphere-layer learning-shell__atmosphere-layer--loading" />
+    </div>
+  )
+}
+
 export function RecognitionActions({ selected, disabled, onChoose }: { selected: RecognitionChoice | null; disabled?: boolean; onChoose: (choice: Exclude<RecognitionChoice, 'mastered'>) => void }) {
   return (
-    <section className="learning-recognition" aria-labelledby="learning-recognition-title">
-      <p id="learning-recognition-title" className="learning-section-kicker">现在的感觉</p>
+    <section className="learning-recognition" aria-label="回忆判断">
       <div className="learning-recognition__grid">
         {recognitionOptions.map((option) => (
           <button
@@ -44,7 +56,6 @@ export function RecognitionActions({ selected, disabled, onChoose }: { selected:
             onClick={() => onChoose(option.value)}
           >
             <strong>{option.label}</strong>
-            <span>{option.description}</span>
           </button>
         ))}
       </div>
@@ -71,7 +82,6 @@ export function ContextStage({ word, choice, starred, onSpeak, onToggleStar, onB
         <p id="learning-context-title" className="learning-section-kicker">语境提示</p>
         <p className="learning-example learning-example--large">{highlightExample(example.en, word.word)}</p>
         <p className="learning-context-surface__note">再读一遍，看看它在句子里承担什么含义。</p>
-        {example.zh && <p className="learning-context-surface__translation">译文已收起 · 先保留一次回忆</p>}
         <span className="learning-choice-chip">你的判断：{recognitionLabel(choice)}</span>
       </div>
       <div className="learning-stage-actions">
@@ -82,9 +92,8 @@ export function ContextStage({ word, choice, starred, onSpeak, onToggleStar, onB
   )
 }
 
-export function MeaningStage({ word, choice, starred, onSpeak, onToggleStar, onBack, onExpand, onConfirm }: {
+export function MeaningStage({ word, starred, onSpeak, onToggleStar, onBack, onExpand, onConfirm }: {
   word: Word
-  choice: RecognitionChoice
   starred: boolean
   onSpeak: () => void
   onToggleStar: () => void
@@ -105,17 +114,16 @@ export function MeaningStage({ word, choice, starred, onSpeak, onToggleStar, onB
         {example && <div className="learning-example-block"><span>例句</span><p>{highlightExample(example.en, word.word)}</p>{example.zh && <small>{example.zh}</small>}</div>}
       </div>
       <div className="learning-stage-actions">
-        <Button variant="ghost" onClick={onBack}>回到回忆</Button>
-        {canExpand && <Button variant="soft" onClick={onExpand}>展开更多 <ChevronDown size={16} /></Button>}
-        <Button onClick={onConfirm}>确认{recognitionLabel(choice)}并继续 <RotateCcw size={15} /></Button>
+        <Button variant="ghost" className="learning-stage-actions__secondary" onClick={onBack}>返回</Button>
+        {canExpand && <Button variant="ghost" className="learning-stage-actions__secondary" onClick={onExpand}>更多 <ChevronDown size={16} /></Button>}
+        <Button className="learning-stage-actions__primary" onClick={onConfirm}>继续</Button>
       </div>
     </section>
   )
 }
 
-export function DetailStage({ word, choice, starred, onSpeak, onToggleStar, onBack, onConfirm }: {
+export function DetailStage({ word, starred, onSpeak, onToggleStar, onBack, onConfirm }: {
   word: Word
-  choice: RecognitionChoice
   starred: boolean
   onSpeak: () => void
   onToggleStar: () => void
@@ -139,8 +147,8 @@ export function DetailStage({ word, choice, starred, onSpeak, onToggleStar, onBa
         {wordForms.length > 0 && <DetailBlock label="词形变化"><dl>{wordForms.map(([form, value]) => <div key={form}><dt>{form}</dt><dd>{normalizeText(value)}</dd></div>)}</dl></DetailBlock>}
       </div>
       <div className="learning-stage-actions">
-        <Button variant="ghost" onClick={onBack}>返回核心词义</Button>
-        <Button onClick={onConfirm}>确认{recognitionLabel(choice)}并继续 <RotateCcw size={15} /></Button>
+        <Button variant="ghost" className="learning-stage-actions__secondary" onClick={onBack}>返回核心词义</Button>
+        <Button className="learning-stage-actions__primary" onClick={onConfirm}>继续</Button>
       </div>
     </section>
   )

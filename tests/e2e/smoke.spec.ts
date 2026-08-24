@@ -265,7 +265,7 @@ async function finishCurrentStudyCard(page: Page): Promise<string> {
   const word = await page.locator('.learning-word-header h1').textContent()
   expect(word).toBeTruthy()
   await page.getByRole('button', { name: /^认识/ }).click()
-  await page.getByRole('button', { name: /确认认识并继续/ }).click()
+  await page.getByRole('button', { name: '继续', exact: true }).click()
   await expect(page.getByRole('heading', { name: '这一组，完成了。' })).toBeVisible({ timeout: 10_000 })
   return word!
 }

@@ -1,97 +1,107 @@
-# CET6 Focus v1.3 Core Learning Experience Redesign
+# CET6 Focus v1.3 Core Learning Refinement — Round 2 Report
 
 ## Release boundary
 
-- Baseline: `main` at the published v1.2.0 line (`v1.2.0` remains unchanged).
-- Working branch: `product/v1.3-core-learning-redesign`.
-- Scope: real Study / Review / Weak-learning experience redesign; the v1.2 immersive homepage, background pool, vocabulary data, FSRS scheduling, IndexedDB schema, Today Flow contracts, Dictation isolation, Weak Words, Backup/Restore, settings, PWA/offline behavior, and word-detail routes remain frozen.
-- Delivery mode: PR only. No merge, no formal v1.3 deployment, and no `v1.3.0` tag were created in this work.
+- Working branch: `product/v1.3-core-learning-redesign`
+- Pull request: `#3` (`feat: redesign core learning experience for v1.3`)
+- Delivery mode: PR-only. This work does not merge, deploy, or create the `v1.3.0` tag.
+- The v1.2 immersive homepage, local background pool/cards, `/study`, `/review`, word-detail routes, FSRS adapter, IndexedDB schema, ReviewLog contract, Undo, Today Flow queue, Dictation isolation, Weak Words, Backup/Restore, v1.2.0 tag, and `main` remain within the handoff freeze. Only the R2-defined data import and presentation-layer refinements were touched.
 
-## What changed
+## R2 scope completed
 
-### Study, Review, and Weak learning
-
-All three learning routes now use one explicit learning shell and state machine:
+The existing learning state machine and business adapters remain intact:
 
 ```text
-Recall -> Context (only when a real example exists) -> Meaning -> Detail -> Transitioning -> Recall
+Recall -> Context -> Meaning -> Detail -> Transitioning -> Recall
 ```
 
-- Recall is the default state: word, phonetic, pronunciation, bookmark, and the natural recognition choices `认识 / 模糊 / 不认识`.
-- `不认识` and `模糊` reveal a real example only when the word actually has one. If the data has no example, the flow goes directly to Meaning. No fabricated example or translation is inserted.
-- Meaning is Chinese-first. Additional definition, collocations, word forms, and example details are hidden until the learner expands them; missing fields are omitted.
-- Review uses the same shell with a distinct `到期复习` mode label. Weak learning uses the same shell with `薄弱词强化`.
-- Today Flow keeps its existing queue and Dictation handoff contracts while using the same completion presentation.
-- A mode-change reset prevents a completed Study instance from leaking its completion state into Review when React reuses the route component.
+This round completed only the five handoff directions:
 
-### Frozen scheduling adapter
+1. formal offline Context examples;
+2. Learning Sans typography;
+3. mobile Meaning / Detail action hierarchy;
+4. further Recall simplification;
+5. overlay and Home-to-Study motion continuity.
 
-The visible recognition language is translated at the existing persistence boundary only:
+## Context Data
 
-| Learner choice | Existing rating |
-| --- | ---: |
-| 不认识 | 1 |
-| 模糊 | 2 |
-| 认识 | 3 |
-| mastered adapter value (not regular UI) | 4 |
+- Source: Tatoeba English CC0 sentence export, downloaded from the official per-language export URL and retained as an offline snapshot in `data-source/examples/tatoeba/`.
+- License: CC0 1.0 Universal. Attribution is not legally required; the project credits Tatoeba.org and its contributors in `data-source/examples/manifest.json` and `data-source/examples/README.md`.
+- Coverage: `exampleCoverage = 1625 / 2219`; `exampleCoveragePercent = 73.2%` (above the required 60% gate).
+- Selection: one deterministic English sentence per covered headword, exact whole-word match, 7–24 tokens, ASCII-normalized, URL/digit/markup/profanity/adult/current-political-content filters, no repeated target word. The filter is reproducible through `scripts/build-examples.ts`.
+- Translation policy: English only. No Chinese translations were imported, fabricated, or generated; the existing sourced Chinese meaning remains on Meaning.
+- Runtime policy: examples are read from the shipped local vocabulary. No paid API, runtime network API, Collins content, AI-generated examples, or test-only Context fixture is used.
+- Uncovered words safely follow `Recall -> Meaning`; they do not render an empty Context stage.
 
-`scheduleCard`, `recordReview`, `undoLastReview`, session persistence, and the existing IndexedDB schema were not redesigned. The new E2E coverage verifies all three visible mappings and verifies that Undo restores the same word and removes its ReviewLog.
+The validator now emits the required source metrics and rejects incomplete manifests, fixture-like examples, unlicensed example translations, frozen-word-count drift, and coverage below 60%.
 
-### Readability and motion
+## Typography
 
-- Learning routes use a darkened local-photo atmosphere plus a stable, high-contrast reading surface; the photo remains an atmosphere rather than the text canvas.
-- Mobile body and detail text remain at or above the 16px readability target; learning controls meet the 44px touch target.
-- Motion tokens are centralized in `src/styles/motion-tokens.css`.
-- State changes use transform/opacity and a short transition stage; there is no full-page flash, animated full-background blur, or animation-frame loop.
-- `prefers-reduced-motion` and the app reduced-motion setting disable the learning animations and transitions while preserving the flow.
-- Legacy Study / rating CSS was removed from the global and iOS26 layout files instead of being left as a competing override layer.
+- Added `--font-learning-word` with the handoff-specified Inter/system Sans stack.
+- `.learning-word-header h1` and `.learning-transition-word` now use the Learning Sans token, weight `600`, and a less negative tracking value for long-word readability.
+- The serif `--font-word` token remains available for non-learning surfaces; it was not globally deleted.
 
-## Homepage freeze check
+## Mobile Action Hierarchy
 
-The v1.2 immersive homepage and its local background pool were not modified. The only shell-level change is route scoping in `AppShell` so Study, Review, and Weak learning can occupy their dedicated full-screen presentation. Existing homepage E2E coverage remains green.
+- Meaning has exactly one primary action: `继续`.
+- Meaning secondary actions are `返回` and `更多`; they are ghost actions and no longer repeat the recognition rating.
+- Detail has exactly one primary action: `继续`; `返回核心词义` is the demoted secondary action.
+- Mobile primary actions are near full width, `15px`, and `min-height: 48px`; the 390x844 and 430x932 computed-style/overflow gate passed.
+- Recognition choices are still recorded internally at the frozen adapter boundary. Daily Recall shows only `认识 / 模糊 / 不认识`; explanatory copy moved to keyboard help.
+
+## Recall Refinement
+
+- The daily prompt is now the single weak phrase `想一想，再判断`.
+- Removed the repeated prompt/explanation, `现在的感觉`, and the three button descriptions from the daily flow.
+- The keyboard help retains the meaning of the three recognition choices for users who need it.
+
+## Motion Refinement
+
+- The atmosphere no longer animates a full-screen gradient background directly. Fixed state layers crossfade through opacity (`base/context/meaning/detail/transitioning/loading`) using the existing `140/240/320/400ms` motion tokens.
+- Word transition renders the outgoing word and next word together: current `opacity 1 -> 0`, `translateY 0 -> -12px`; next `opacity 0 -> 1`, `translateY 14px -> 0`. There is no intentional blank pause and no `animationend` dependency.
+- Home → Study uses `document.startViewTransition` as progressive enhancement with an opacity/transform fallback. The local photo remains continuous and keeps the same scale; featured word and controls exit gently, Study content enters in sequence, and no full-background zoom or blur animation is introduced.
+- `prefers-reduced-motion` and the app setting collapse the transitions while preserving the same route and state behavior.
 
 ## Evidence package
 
-The complete visual review set is in [`audit/v1.3-learning/`](audit/v1.3-learning/):
+The complete visual review set is in [`audit/v1.3-learning/`](audit/v1.3-learning/). `pnpm capture:v1.3` produced 17 artifacts with zero console errors and zero page errors:
 
-- Desktop 1920x1080: Study Recall, Context, Meaning, Complete; Review Recall, Meaning.
-- iPhone-sized 390x844: Study Recall, Meaning, Context, Complete.
-- iPad-sized 834x1112: Study Recall, Meaning.
-- [`v1.2-study-baseline.png`](audit/v1.3-learning/v1.2-study-baseline.png) preserves the old v1.2 Study view for direct comparison with the redesigned screenshots.
-- Screenshots were generated by `pnpm capture:v1.3`; console errors and page errors were both zero.
+- Desktop 1920x1080: `study-recall-desktop.png`, `study-context-desktop.png`, `study-meaning-desktop.png`, `study-detail-desktop.png`, `review-recall-desktop.png`, `review-meaning-desktop.png`, `study-complete-desktop.png`.
+- iPhone 390x844: `study-recall-iphone-390.png`, `study-context-iphone-390.png`, `study-meaning-iphone-390.png`, `study-detail-iphone-390.png`, `study-complete-iphone-390.png`.
+- iPhone 430x932: `study-meaning-iphone-430.png`, `study-detail-iphone-430.png`.
+- iPad 834x1112: `study-recall-ipad.png`, `study-meaning-ipad.png`.
+- `v1.2-study-baseline.png` is retained for direct comparison.
 
-The Context screenshots use a test-only IndexedDB fixture for `cet6-abandon` because the shipped 2,219-word vocabulary currently has no `examples` records. The fixture is not part of the shipped data and no vocabulary entry was changed.
+The screenshots show the shipped Tatoeba-derived Context sentence, not an IndexedDB fixture. The in-app browser audit independently confirmed 390px overflow `0/0`, Learning Sans `600`, primary `15px` / `48px`, the `返回 / 更多 / 继续` hierarchy, and the active atmosphere opacity layer.
 
 ## Verification gates
 
 | Gate | Result |
 | --- | --- |
-| `pnpm vocab:validate` | PASS — 2,219 unique CET-6 entries; `missingMeaning=0`, `missingDefinition=0` |
+| `pnpm vocab:validate` | PASS — 2,219 entries; `exampleCoverage = 1625 / 2219`; `exampleCoveragePercent = 73.2%`; source Tatoeba English CC0; license CC0 1.0 |
 | `pnpm typecheck` | PASS |
 | `pnpm lint` | PASS |
-| `pnpm test` | PASS — 11 files, 25 tests |
-| `pnpm test:e2e:serial` | PASS — 28 passed, 16 intentionally skipped by existing offline/project-specific skip rules |
-| `pnpm build` | PASS |
-| Responsive learning overflow checks | PASS at 390x844, 430x932, 768x1024, 834x1112, 1440x900, and 1920x1080 across the appropriate browser projects |
-| Screenshot capture | PASS — 13 review artifacts, zero console/page errors |
+| `pnpm test` | PASS — 12 files, 27 tests |
+| `pnpm test:e2e:serial` | PASS — 32 passed, 16 intentionally skipped by existing offline/project-specific skip rules |
+| R2 learning E2E | PASS — 14/14 desktop/mobile cases, including formal Context, mobile hierarchy, computed readability, reduced motion, and Home → Study fallback |
+| `pnpm build` | PASS — Vite production build |
+| `pnpm capture:v1.3` | PASS — 17 artifacts; console errors 0; page errors 0 |
 
-## Final state
+## Stop-condition status
 
 ```text
-Study: REDESIGNED
-Review: REDESIGNED
-Weak: SAME LEARNING SHELL
-Homepage: FROZEN
-Readability: PASS
-Motion: PASS
-Reduced motion: PASS
-FSRS / IndexedDB / Undo / Dictation isolation: PASS
-Tests / build: PASS
-Screenshots: COMPLETE
-PR: OPEN after branch push
-Merged: NO
+Formal offline examples >= 60%: PASS (73.2%; no fabricated translations)
+Learning Sans: PASS
+Recall simplification: PASS
+Mobile Meaning / Detail hierarchy: PASS
+Overlay opacity crossfade: PASS
+Home -> Study continuity and fallback: PASS
+Readability / reduced motion / overflow: PASS
+All required gates: PASS
+审核截图: COMPLETE
+PR #3: OPEN, unmerged
+Deployment: NOT PERFORMED
 v1.3.0 tag: NOT CREATED
-v1.3 deployment: NOT PERFORMED
 ```
 
-Formal service-worker cache bump, release tag, production deployment, and merge remain intentionally deferred until visual/code acceptance of this PR.
+R2 stop conditions are met. Work stops here pending final visual/code acceptance; no Round 3 changes, merge, deployment, or release tag were performed.

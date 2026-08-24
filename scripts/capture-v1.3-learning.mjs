@@ -98,24 +98,6 @@ async function resetCardsToNew(page) {
   await page.reload({ waitUntil: 'domcontentloaded' })
 }
 
-async function addContextFixture(page) {
-  await page.evaluate(() => new Promise((resolve, reject) => {
-    const request = indexedDB.open('cet6-focus')
-    request.onerror = () => reject(request.error ?? new Error('Context database open failed'))
-    request.onsuccess = () => {
-      const database = request.result
-      const transaction = database.transaction('words', 'readwrite')
-      const store = transaction.objectStore('words')
-      const read = store.get('cet6-abandon')
-      read.onerror = () => reject(read.error ?? new Error('Context fixture read failed'))
-      read.onsuccess = () => store.put({ ...read.result, examples: [{ en: 'We had to abandon the plan before the storm arrived.', zh: '暴风雨来临前，我们不得不放弃计划。' }] })
-      transaction.oncomplete = () => { database.close(); resolve() }
-      transaction.onerror = () => reject(transaction.error ?? new Error('Context fixture write failed'))
-    }
-  }))
-  await page.reload({ waitUntil: 'domcontentloaded' })
-}
-
 async function patchCardDue(page, wordId) {
   await page.evaluate((id) => new Promise((resolve, reject) => {
     const request = indexedDB.open('cet6-focus')
@@ -140,7 +122,7 @@ async function patchCardDue(page, wordId) {
 async function gotoStudy(page, route = '/study') {
   await page.goto(`${baseURL}/#${route}`, { waitUntil: 'domcontentloaded' })
   await page.locator('.learning-shell').waitFor({ state: 'visible', timeout: 20_000 })
-  await page.getByRole('region', { name: '先凭记忆想一想' }).waitFor({ state: 'visible', timeout: 20_000 })
+  await page.getByRole('region', { name: '回忆判断' }).waitFor({ state: 'visible', timeout: 20_000 })
   await page.waitForTimeout(500)
 }
 
@@ -178,7 +160,6 @@ try {
   await gotoStudy(desktop)
   await shot(desktop, 'study-recall-desktop.png')
 
-  await addContextFixture(desktop)
   await gotoStudy(desktop)
   await desktop.getByRole('button', { name: /^不认识/ }).click()
   await desktop.getByRole('region', { name: '语境提示' }).waitFor({ state: 'visible', timeout: 10_000 })
@@ -186,11 +167,14 @@ try {
   await desktop.getByRole('button', { name: '查看核心词义' }).click()
   await desktop.getByRole('region', { name: '核心词义' }).waitFor({ state: 'visible', timeout: 10_000 })
   await shot(desktop, 'study-meaning-desktop.png')
+  await desktop.getByRole('button', { name: '更多' }).click()
+  await desktop.getByRole('region', { name: '扩展理解' }).waitFor({ state: 'visible', timeout: 10_000 })
+  await shot(desktop, 'study-detail-desktop.png')
 
   await resetCardsToNew(desktop)
   await gotoStudy(desktop)
   await desktop.getByRole('button', { name: /^认识/ }).click()
-  await desktop.getByRole('button', { name: /确认认识并继续/ }).click()
+  await desktop.getByRole('button', { name: '继续', exact: true }).click()
   await waitForComplete(desktop)
   const reviewedWordId = await cardIdWithHistory(desktop)
   if (!reviewedWordId) throw new Error('Could not identify the reviewed card for Review capture')
@@ -204,7 +188,7 @@ try {
   await resetCardsToNew(desktop)
   await gotoStudy(desktop)
   await desktop.getByRole('button', { name: /^认识/ }).click()
-  await desktop.getByRole('button', { name: /确认认识并继续/ }).click()
+  await desktop.getByRole('button', { name: '继续', exact: true }).click()
   await waitForComplete(desktop)
   await shot(desktop, 'study-complete-desktop.png')
   await desktop.context().close()
@@ -218,9 +202,11 @@ try {
   await iphone.getByRole('button', { name: /^认识/ }).click()
   await iphone.getByRole('region', { name: '核心词义' }).waitFor({ state: 'visible', timeout: 10_000 })
   await shot(iphone, 'study-meaning-iphone-390.png')
+  await iphone.getByRole('button', { name: '更多' }).click()
+  await iphone.getByRole('region', { name: '扩展理解' }).waitFor({ state: 'visible', timeout: 10_000 })
+  await shot(iphone, 'study-detail-iphone-390.png')
 
   await resetCardsToNew(iphone)
-  await addContextFixture(iphone)
   await gotoStudy(iphone)
   await iphone.getByRole('button', { name: /^不认识/ }).click()
   await iphone.getByRole('region', { name: '语境提示' }).waitFor({ state: 'visible', timeout: 10_000 })
@@ -229,7 +215,7 @@ try {
   await resetCardsToNew(iphone)
   await gotoStudy(iphone)
   await iphone.getByRole('button', { name: /^认识/ }).click()
-  await iphone.getByRole('button', { name: /确认认识并继续/ }).click()
+  await iphone.getByRole('button', { name: '继续', exact: true }).click()
   await waitForComplete(iphone)
   await shot(iphone, 'study-complete-iphone-390.png')
   await iphone.context().close()
@@ -245,8 +231,21 @@ try {
   await shot(ipad, 'study-meaning-ipad.png')
   await ipad.context().close()
 
+  const iphoneWide = await setup(browser, { width: 430, height: 932 }, 'cet6-focus:v1.3-iphone-wide-capture')
+  await setBackground(iphoneWide, 'aurora-02')
+  await setDailyNewWords(iphoneWide, 1)
+  await resetCardsToNew(iphoneWide)
+  await gotoStudy(iphoneWide)
+  await iphoneWide.getByRole('button', { name: /^认识/ }).click()
+  await iphoneWide.getByRole('region', { name: '核心词义' }).waitFor({ state: 'visible', timeout: 10_000 })
+  await shot(iphoneWide, 'study-meaning-iphone-430.png')
+  await iphoneWide.getByRole('button', { name: '更多' }).click()
+  await iphoneWide.getByRole('region', { name: '扩展理解' }).waitFor({ state: 'visible', timeout: 10_000 })
+  await shot(iphoneWide, 'study-detail-iphone-430.png')
+  await iphoneWide.context().close()
+
   if (consoleErrors.length || pageErrors.length) throw new Error(JSON.stringify({ consoleErrors, pageErrors }))
-  console.log(JSON.stringify({ baseURL, screenshotDir, screenshots: 13, consoleErrors, pageErrors }, null, 2))
+  console.log(JSON.stringify({ baseURL, screenshotDir, screenshots: 17, consoleErrors, pageErrors }, null, 2))
 } finally {
   for (const context of contexts) await context.close().catch(() => {})
   await browser.close()

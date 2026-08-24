@@ -14,11 +14,10 @@ export const recognitionToRating: Record<RecognitionChoice, RatingValue> = {
 export const recognitionOptions: Array<{
   value: Exclude<RecognitionChoice, 'mastered'>
   label: string
-  description: string
 }> = [
-  { value: 'known', label: '认识', description: '我能说出大意' },
-  { value: 'fuzzy', label: '模糊', description: '见过，但不够稳' },
-  { value: 'unknown', label: '不认识', description: '需要重新建立记忆' },
+  { value: 'known', label: '认识' },
+  { value: 'fuzzy', label: '模糊' },
+  { value: 'unknown', label: '不认识' },
 ]
 
 export function recognitionLabel(choice: RecognitionChoice): string {

@@ -4,7 +4,7 @@ import { useApp } from '@/app/providers'
 import { BootScreen } from '@/components/States'
 import { getDictationCandidates, getQueue } from '@/db/db'
 import { Dictation } from '@/features/dictation/Dictation'
-import { LearningComplete } from '@/features/study/LearningStages'
+import { LearningAtmosphere, LearningComplete } from '@/features/study/LearningStages'
 import { Study } from '@/features/study/Study'
 
 type TodayStage = 'loading' | 'review' | 'study' | 'dictation' | 'complete'
@@ -58,5 +58,5 @@ export function TodayFlow() {
   if (stage === 'study') return <Study key="today-study" mode="study" onComplete={() => void continueAfterStudy()} />
   if (stage === 'dictation') return <Dictation onComplete={() => setStage('complete')} />
 
-  return <div className="learning-shell learning-shell--meaning"><div className="learning-shell__atmosphere" aria-hidden="true" /><div className="learning-shell__inner"><LearningComplete mode="study" onAgain={() => navigate('/study')} onHome={() => navigate('/')} /></div></div>
+  return <div className="learning-shell learning-shell--meaning"><LearningAtmosphere /><div className="learning-shell__inner"><LearningComplete mode="study" onAgain={() => navigate('/study')} onHome={() => navigate('/')} /></div></div>
 }

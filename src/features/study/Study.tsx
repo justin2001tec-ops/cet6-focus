@@ -12,6 +12,7 @@ import {
   ContextStage,
   DetailStage,
   LearningComplete,
+  LearningAtmosphere,
   LearningStageLoading,
   LearningWordHeader,
   MeaningStage,
@@ -214,11 +215,11 @@ export function Study({ mode, onComplete }: StudyProps) {
   const progress = items.length ? Math.round(((completed ? items.length : index) / items.length) * 100) : 0
   const shellClass = `learning-shell learning-shell--${presentation} ${reducedMotion ? 'learning-shell--reduced-motion' : ''}`
 
-  if (loading) return <div className="learning-shell learning-shell--loading"><div className="learning-shell__atmosphere" /><div className="learning-shell__inner"><LearningStageLoading /></div></div>
+  if (loading) return <div className="learning-shell learning-shell--loading"><LearningAtmosphere /><div className="learning-shell__inner"><LearningStageLoading /></div></div>
 
   return (
     <div className={shellClass} data-learning-mode={mode} data-learning-state={presentation}>
-      <div className="learning-shell__atmosphere" aria-hidden="true" />
+      <LearningAtmosphere />
       <div className="learning-shell__inner">
         {items.length > 0 && <LearningTopbar modeLabel={modeLabel} progress={progress} index={index} total={items.length} completed={completed} canUndo={ratedStack.length > 0} onUndo={() => void undo()} onHelp={() => setShowHelp(true)} onExit={() => navigate('/')} />}
         {completed ? (
@@ -227,9 +228,9 @@ export function Study({ mode, onComplete }: StudyProps) {
           <>
             {presentation === 'recall' && <RecallStage item={current} recognition={recognition} disabled={ratingBusy} onChoose={chooseRecognition} onSpeak={() => speakWord(current.word.word, settings.pronunciation)} onToggleStar={() => void toggleCurrentStar()} />}
             {presentation === 'context' && recognition && <ContextStage word={current.word} choice={recognition} starred={current.card.starred} onSpeak={() => speakWord(current.word.word, settings.pronunciation)} onToggleStar={() => void toggleCurrentStar()} onBack={() => { setRecognition(null); setPresentation('recall') }} onContinue={() => setPresentation('meaning')} />}
-            {presentation === 'meaning' && recognition && <MeaningStage word={current.word} choice={recognition} starred={current.card.starred} onSpeak={() => speakWord(current.word.word, settings.pronunciation)} onToggleStar={() => void toggleCurrentStar()} onBack={() => { setRecognition(null); setPresentation('recall') }} onExpand={() => setPresentation('detail')} onConfirm={() => void rate()} />}
-            {presentation === 'detail' && recognition && <DetailStage word={current.word} choice={recognition} starred={current.card.starred} onSpeak={() => speakWord(current.word.word, settings.pronunciation)} onToggleStar={() => void toggleCurrentStar()} onBack={() => setPresentation('meaning')} onConfirm={() => void rate()} />}
-            {presentation === 'transitioning' && <TransitionStage word={current.word} />}
+            {presentation === 'meaning' && recognition && <MeaningStage word={current.word} starred={current.card.starred} onSpeak={() => speakWord(current.word.word, settings.pronunciation)} onToggleStar={() => void toggleCurrentStar()} onBack={() => { setRecognition(null); setPresentation('recall') }} onExpand={() => setPresentation('detail')} onConfirm={() => void rate()} />}
+            {presentation === 'detail' && recognition && <DetailStage word={current.word} starred={current.card.starred} onSpeak={() => speakWord(current.word.word, settings.pronunciation)} onToggleStar={() => void toggleCurrentStar()} onBack={() => setPresentation('meaning')} onConfirm={() => void rate()} />}
+            {presentation === 'transitioning' && <TransitionStage word={current.word} nextWord={items[index + 1]?.word} />}
           </>
         ) : (
           <LearningEmpty mode={mode} onExit={() => navigate('/')} />
@@ -252,16 +253,23 @@ function RecallStage({ item, recognition, disabled, onChoose, onSpeak, onToggleS
     <section className="learning-stage learning-stage--recall" aria-labelledby="learning-recall-title">
       <LearningWordHeader word={item.word} starred={item.card.starred} onSpeak={onSpeak} onToggleStar={onToggleStar} />
       <div className="learning-recall__prompt">
-        <p id="learning-recall-title" className="learning-section-kicker">先凭记忆想一想</p>
-        <p>不急着看答案，先判断它在你脑中有多清楚。</p>
+        <p id="learning-recall-title" className="learning-section-kicker">想一想，再判断</p>
       </div>
       <RecognitionActions selected={recognition} disabled={disabled} onChoose={onChoose} />
     </section>
   )
 }
 
-function TransitionStage({ word }: { word: Word }) {
-  return <section className="learning-stage learning-stage--transitioning" aria-live="polite"><div className="learning-transition-word">{word.word}</div><p>保存这一刻，准备下一个。</p></section>
+function TransitionStage({ word, nextWord }: { word: Word; nextWord?: Word }) {
+  return (
+    <section className="learning-stage learning-stage--transitioning" aria-live="polite">
+      <div className="learning-transition-words">
+        <span className="learning-transition-word learning-transition-word--current">{word.word}</span>
+        {nextWord && <span className="learning-transition-word learning-transition-word--next">{nextWord.word}</span>}
+      </div>
+      <p>{nextWord ? '准备下一个。' : '保存这一刻。'}</p>
+    </section>
+  )
 }
 
 function LearningTopbar({ modeLabel, progress, index, total, completed, canUndo, onUndo, onHelp, onExit }: { modeLabel: string; progress: number; index: number; total: number; completed: boolean; canUndo: boolean; onUndo: () => void; onHelp: () => void; onExit: () => void }) {
@@ -287,7 +295,9 @@ function LearningHelp({ onClose }: { onClose: () => void }) {
       <section className="learning-help" role="dialog" aria-modal="true" aria-labelledby="learning-help-title">
         <div className="learning-help__header"><div><p className="learning-section-kicker">Keyboard</p><h2 id="learning-help-title">用键盘保持节奏</h2></div><IconButton label="关闭键盘帮助" onClick={onClose}><X size={18} /></IconButton></div>
         <dl className="learning-help__list">
-          <div><dt>1 / 2 / 3</dt><dd>认识 / 模糊 / 不认识</dd></div>
+          <div><dt>1 · 认识</dt><dd>能说出大意。</dd></div>
+          <div><dt>2 · 模糊</dt><dd>见过，但还不够稳。</dd></div>
+          <div><dt>3 · 不认识</dt><dd>需要重新建立记忆。</dd></div>
           <div><dt>Space / Enter</dt><dd>继续或展开</dd></div>
           <div><dt>Z</dt><dd>撤销上一词</dd></div>
           <div><dt>P · S · Esc</dt><dd>发音 · 收藏 · 退出</dd></div>

@@ -68,31 +68,10 @@ async function resetCardsToNew(page: Page): Promise<void> {
   await page.reload({ waitUntil: 'domcontentloaded' })
 }
 
-async function addContextFixture(page: Page): Promise<void> {
-  await page.evaluate(() => new Promise<void>((resolve, reject) => {
-    const request = indexedDB.open('cet6-focus')
-    request.onerror = () => reject(request.error ?? new Error('IndexedDB open failed'))
-    request.onsuccess = () => {
-      const database = request.result
-      const transaction = database.transaction('words', 'readwrite')
-      const store = transaction.objectStore('words')
-      const getRequest = store.get('cet6-abandon')
-      getRequest.onerror = () => reject(getRequest.error ?? new Error('Context fixture read failed'))
-      getRequest.onsuccess = () => store.put({
-        ...getRequest.result,
-        examples: [{ en: 'We had to abandon the plan before the storm arrived.', zh: '暴风雨来临前，我们不得不放弃计划。' }],
-      })
-      transaction.oncomplete = () => { database.close(); resolve() }
-      transaction.onerror = () => reject(transaction.error ?? new Error('Context fixture write failed'))
-    }
-  }))
-  await page.reload({ waitUntil: 'domcontentloaded' })
-}
-
 async function gotoStudy(page: Page): Promise<void> {
   await page.goto('/#/study', { waitUntil: 'domcontentloaded' })
   await expect(page.locator('.learning-shell')).toBeVisible({ timeout: 15_000 })
-  await expect(page.getByRole('region', { name: '先凭记忆想一想' })).toBeVisible({ timeout: 15_000 })
+  await expect(page.getByRole('region', { name: '回忆判断' })).toBeVisible({ timeout: 15_000 })
   await page.waitForTimeout(250)
 }
 
@@ -117,7 +96,9 @@ test('Study Recall is a readable recognition-first canvas without FSRS vocabular
 
   await expect(page.locator('.learning-word-header h1')).toBeVisible()
   await expect(page.locator('.learning-word-header__phonetic')).toBeVisible()
-  await expect(page.getByRole('region', { name: '现在的感觉' })).toBeVisible()
+  await expect(page.getByRole('region', { name: '回忆判断' })).toBeVisible()
+  await expect(page.getByRole('region', { name: '回忆判断' }).locator('button')).toHaveCount(3)
+  await expect(page.getByRole('region', { name: '回忆判断' })).not.toContainText('先凭记忆想一想')
   const bodyText = await page.locator('body').innerText()
   for (const forbidden of ['Again', 'Hard', 'Good', 'Easy', 'FSRS', 'Stability', 'Difficulty', 'NEW WORD', 'DUE REVIEW', 'WEAK WORD', '忘记', '困难', '良好', '轻松']) expect(bodyText).not.toContain(forbidden)
 })
@@ -131,7 +112,8 @@ test('Recognition adapter records unknown, fuzzy, and known as ratings 1, 2, and
     await resetCardsToNew(page)
     await gotoStudy(page)
     await page.getByRole('button', { name: new RegExp(`^${choice}`) }).click()
-    await page.getByRole('button', { name: new RegExp(`确认${choice}并继续`) }).click()
+    if (choice !== '认识') await page.getByRole('button', { name: '查看核心词义' }).click()
+    await page.getByRole('button', { name: '继续', exact: true }).click()
     await expect(page.getByRole('heading', { name: '这一组，完成了。' })).toBeVisible({ timeout: 15_000 })
     const logs = await readReviewLogs(page)
     expect(logs).toHaveLength(1)
@@ -143,21 +125,82 @@ test('Context appears only when a real example exists, then meaning and detail r
   await preparePage(page)
   await completeOnboarding(page)
   await setDailyNewWords(page, 1)
-  await addContextFixture(page)
   await gotoStudy(page)
 
   await page.getByRole('button', { name: /^不认识/ }).click()
   const context = page.getByRole('region', { name: '语境提示' })
   await expect(context).toBeVisible()
-  await expect(context).toContainText('We had to abandon the plan')
+  await expect(context).toContainText('abandon')
+  await expect(context).not.toContainText('We had to abandon the plan before the storm arrived.')
+  await expect(context).not.toContainText('译文已收起')
   await expect(page.locator('.learning-core-meaning')).toHaveCount(0)
 
   await page.getByRole('button', { name: '查看核心词义' }).click()
   await expect(page.getByRole('region', { name: '核心词义' })).toBeVisible()
   await expect(page.locator('.learning-core-meaning')).toContainText('放弃')
-  await expect(page.getByRole('button', { name: '展开更多' })).toBeVisible()
-  await page.getByRole('button', { name: '展开更多' }).click()
+  await expect(page.getByRole('button', { name: '更多' })).toBeVisible()
+  await expect(page.getByRole('button', { name: '继续', exact: true })).toBeVisible()
+  await page.getByRole('button', { name: '更多' }).click()
   await expect(page.getByRole('region', { name: '扩展理解' })).toContainText('English definition')
+  await expect(page.getByRole('button', { name: '返回核心词义' })).toBeVisible()
+  await expect(page.getByRole('button', { name: '继续', exact: true })).toBeVisible()
+})
+
+test('Meaning and Detail expose one readable continuation action on mobile', async ({ page }) => {
+  await preparePage(page)
+  await completeOnboarding(page)
+  await setDailyNewWords(page, 1)
+
+  for (const viewport of [{ width: 390, height: 844 }, { width: 430, height: 932 }]) {
+    await page.setViewportSize(viewport)
+    await resetCardsToNew(page)
+    await gotoStudy(page)
+    await page.getByRole('button', { name: /^不认识/ }).click()
+    await page.getByRole('button', { name: '查看核心词义' }).click()
+
+    const meaningActions = page.locator('.learning-stage--meaning .learning-stage-actions')
+    await expect(meaningActions.getByRole('button', { name: '继续', exact: true })).toBeVisible()
+    const meaningMetrics = await meaningActions.evaluate((element) => {
+      const primary = element.querySelector('.learning-stage-actions__primary') as HTMLElement
+      const style = window.getComputedStyle(primary)
+      const rect = primary.getBoundingClientRect()
+      return { labels: [...element.querySelectorAll('button')].map((button) => button.innerText.trim()), primaryWidth: rect.width, actionWidth: element.getBoundingClientRect().width, height: rect.height, minHeight: Number.parseFloat(style.minHeight), fontSize: Number.parseFloat(style.fontSize) }
+    })
+    expect(meaningMetrics.labels).toEqual(['返回', '更多', '继续'])
+    expect(meaningMetrics.primaryWidth).toBeGreaterThanOrEqual(meaningMetrics.actionWidth * 0.78)
+    expect(meaningMetrics.minHeight).toBeGreaterThanOrEqual(48)
+    expect(meaningMetrics.height).toBeGreaterThanOrEqual(47.5)
+    expect(meaningMetrics.fontSize).toBeGreaterThanOrEqual(15)
+    expect(await page.locator('.learning-word-header h1').evaluate((element) => window.getComputedStyle(element).fontFamily)).toContain('Inter')
+    expect(await page.locator('.learning-word-header h1').evaluate((element) => window.getComputedStyle(element).fontWeight)).toBe('600')
+
+    const meaningOverflow = await page.evaluate(() => ({ width: document.documentElement.scrollWidth - document.documentElement.clientWidth, height: document.documentElement.scrollHeight - document.documentElement.clientHeight }))
+    expect(meaningOverflow.width).toBeLessThanOrEqual(1)
+    expect(meaningOverflow.height).toBeLessThanOrEqual(1)
+
+    await meaningActions.getByRole('button', { name: '更多' }).click()
+    const detailActions = page.locator('.learning-stage--detail .learning-stage-actions')
+    await expect(detailActions.getByRole('button', { name: '返回核心词义' })).toBeVisible()
+    await expect(detailActions.getByRole('button', { name: '继续', exact: true })).toBeVisible()
+    await expect(page.locator('body')).not.toContainText('确认认识并继续')
+    const detailOverflow = await page.evaluate(() => ({ width: document.documentElement.scrollWidth - document.documentElement.clientWidth, height: document.documentElement.scrollHeight - document.documentElement.clientHeight }))
+    expect(detailOverflow.width).toBeLessThanOrEqual(1)
+    expect(detailOverflow.height).toBeLessThanOrEqual(1)
+  }
+})
+
+test('Home to Study uses the progressive transition bridge without changing the photo scale', async ({ page }) => {
+  await preparePage(page)
+  await completeOnboarding(page)
+  await setDailyNewWords(page, 1)
+  await resetCardsToNew(page)
+  const before = await page.locator('.app-background').evaluate((element) => ({ transform: window.getComputedStyle(element).transform, src: element.querySelector('img')?.getAttribute('src') ?? null }))
+  await page.locator('.immersive-home__task-card--learn').click()
+  await expect(page.locator('.learning-shell')).toBeVisible({ timeout: 15_000 })
+  await expect(page.locator('.learning-stage')).toBeVisible({ timeout: 15_000 })
+  const after = await page.locator('.app-background').evaluate((element) => ({ transform: window.getComputedStyle(element).transform, src: element.querySelector('img')?.getAttribute('src') ?? null }))
+  expect(after.transform).toBe(before.transform)
+  expect(after.src).toBe(before.src)
 })
 
 test('Undo restores the same word, Recall state, and removes its ReviewLog', async ({ page }) => {
@@ -168,10 +211,10 @@ test('Undo restores the same word, Recall state, and removes its ReviewLog', asy
   await gotoStudy(page)
   const word = await page.locator('.learning-word-header h1').innerText()
   await page.getByRole('button', { name: /^认识/ }).click()
-  await page.getByRole('button', { name: /确认认识并继续/ }).click()
+  await page.getByRole('button', { name: '继续', exact: true }).click()
   await expect(page.getByRole('heading', { name: '这一组，完成了。' })).toBeVisible({ timeout: 15_000 })
   await page.getByRole('button', { name: /撤销上一词/ }).click()
-  await expect(page.getByRole('region', { name: '先凭记忆想一想' })).toBeVisible()
+  await expect(page.getByRole('region', { name: '回忆判断' })).toBeVisible()
   await expect(page.locator('.learning-word-header h1')).toHaveText(word)
   const logs = await readReviewLogs(page)
   expect(logs).toHaveLength(0)
@@ -196,6 +239,6 @@ test('Reduced motion remains completable and required learning sizes have no ove
   }
 
   await page.getByRole('button', { name: /^认识/ }).click()
-  await page.getByRole('button', { name: /确认认识并继续/ }).click()
+  await page.getByRole('button', { name: '继续', exact: true }).click()
   await expect(page.getByRole('heading', { name: '这一组，完成了。' })).toBeVisible({ timeout: 15_000 })
 })

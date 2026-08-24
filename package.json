@@ -18,7 +18,8 @@
     "capture:bbdcd": "tsx scripts/capture-bbdcd-v1.2.mjs",
     "capture:v1.3": "node scripts/capture-v1.3-learning.mjs",
     "capture:ios26": "tsx scripts/capture-ios26-screenshots.mjs",
-    "vocab:build": "tsx scripts/build-vocabulary.ts",
+    "examples:build": "tsx scripts/build-examples.ts",
+    "vocab:build": "pnpm examples:build && tsx scripts/build-vocabulary.ts",
     "vocab:validate": "tsx scripts/validate-vocabulary.ts"
   },
   "dependencies": {
