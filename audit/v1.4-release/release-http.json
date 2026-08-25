@@ -1,0 +1,23 @@
+{
+  "verifiedDate": "2026-08-25",
+  "baseURL": "https://justin2001tec-ops.github.io/cet6-focus/",
+  "gate": "PASS",
+  "totalResourcesChecked": 35,
+  "allHTTP200": true,
+  "core": [
+    {"path": "/", "status": 200, "contentType": "text/html"},
+    {"path": "/sw.js", "status": 200, "contentType": "javascript"},
+    {"path": "/manifest.webmanifest", "status": 200, "contentType": "manifest"},
+    {"path": "/data/cet6-vocab.v1.json", "status": 200, "contentType": "json"},
+    {"path": "/assets/index-CueGtWm7.js", "status": 200, "contentType": "javascript"},
+    {"path": "/assets/index-BasmiWKF.css", "status": 200, "contentType": "css"},
+    {"path": "/icons/icon-192.png", "status": 200, "contentType": "image/png"}
+  ],
+  "backgrounds": {
+    "avif": 14,
+    "webp": 14,
+    "total": 28,
+    "http200": 28,
+    "persistent5xx": 0
+  }
+}

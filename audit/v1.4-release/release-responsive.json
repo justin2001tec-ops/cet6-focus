@@ -1,0 +1,14 @@
+{
+  "gate": "PASS",
+  "viewports": [
+    {"width": 390, "height": 844, "scrollWidth": 390, "innerWidth": 390, "overflow": 0, "criticalControlOutOfBounds": 0},
+    {"width": 430, "height": 932, "scrollWidth": 430, "innerWidth": 430, "overflow": 0, "criticalControlOutOfBounds": 0},
+    {"width": 768, "height": 1024, "scrollWidth": 768, "innerWidth": 768, "overflow": 0, "criticalControlOutOfBounds": 0},
+    {"width": 834, "height": 1112, "scrollWidth": 834, "innerWidth": 834, "overflow": 0, "criticalControlOutOfBounds": 0},
+    {"width": 1440, "height": 900, "scrollWidth": 1440, "innerWidth": 1440, "overflow": 0, "criticalControlOutOfBounds": 0},
+    {"width": 1920, "height": 1080, "scrollWidth": 1920, "innerWidth": 1920, "overflow": 0, "criticalControlOutOfBounds": 0}
+  ],
+  "safeAreaObstruction": false,
+  "textClipping": false,
+  "buttonOverlap": false
+}

@@ -1,0 +1,10 @@
+{
+  "gate": "PASS",
+  "onlineFinalAudit": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "failedNetworkRequests": [],
+    "persistentBackgroundFailures": 0
+  },
+  "responsiveSmoke": {"consoleErrors": [], "pageErrors": [], "failedNetworkRequests": []}
+}

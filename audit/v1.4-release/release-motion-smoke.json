@@ -1,0 +1,31 @@
+{
+  "gate": "PASS",
+  "home": {
+    "fullScreenPhotography": true,
+    "featuredWord": true,
+    "learnAndReviewControls": true,
+    "motionProfile": "full",
+    "motionRouteCount": 1,
+    "pressPrimitive": true
+  },
+  "homeToStudy": {
+    "recall": true,
+    "contextProgression": true,
+    "meaning": true,
+    "detailAndContinue": true,
+    "backgroundContinuity": true,
+    "duplicateRouteDOM": false,
+    "fakeFeaturedWordMorph": false
+  },
+  "rapidNavigation": {
+    "latestIntentWins": true,
+    "finalRoute": "#/",
+    "duplicateRouteDOM": false,
+    "queuedAnimation": false
+  },
+  "performance": {
+    "localSerialE2E": "61 passed / 17 skipped / exit 0 on clean rerun",
+    "onlineLongTaskBlocker": 0,
+    "fieldINPClaim": false
+  }
+}

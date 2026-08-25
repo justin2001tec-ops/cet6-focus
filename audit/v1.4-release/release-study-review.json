@@ -1,0 +1,17 @@
+{
+  "gate": "PASS",
+  "flow": ["Recall", "Context", "Meaning", "Detail", "Continue", "Complete"],
+  "fallbackWithoutContext": "Recall -> Meaning",
+  "visibleRecognitionLabels": ["认识", "模糊", "不认识"],
+  "recognitionToFSRS": {"不认识": 1, "模糊": 2, "认识": 3, "熟词": 4},
+  "fsrsTermsExposedInNormalUI": false,
+  "fastRatings": {"queue": 1, "duplicateWord": false, "doubleRating": false},
+  "undoDuringTransition": {
+    "previousWordRestored": true,
+    "recallRestored": true,
+    "reviewLogReverted": true,
+    "fsrsCardRestored": true
+  },
+  "indexedDB": "PASS",
+  "dictation": "PASS"
+}

@@ -1,0 +1,27 @@
+{
+  "verifiedDate": "2026-08-25",
+  "baseURL": "https://justin2001tec-ops.github.io/cet6-focus/",
+  "finalOnlineAudit": {
+    "passed": 46,
+    "failed": 0,
+    "runtimeErrors": {
+      "console": 0,
+      "page": 0,
+      "requests": 0
+    },
+    "engines": [
+      "Chromium desktop 1440x900",
+      "Chromium mobile 390x844",
+      "WebKit mobile 390x844"
+    ]
+  },
+  "responsiveSmoke": {
+    "passed": true,
+    "viewports": ["390x844", "430x932", "768x1024", "834x1112", "1440x900", "1920x1080"],
+    "horizontalOverflow": 0,
+    "criticalControlOutOfBounds": 0
+  },
+  "screenshotCount": 10,
+  "deployedBundle": "assets/index-CueGtWm7.js",
+  "releaseEvidence": "The final run was accepted only after CDN propagation and background image decode; an earlier stale-CDN probe was not counted."
+}

@@ -1,0 +1,11 @@
+{
+  "gate": "PASS",
+  "osReducedMotion": {"profile": "reduced", "routeFunctional": true, "transform": "none"},
+  "appReducedMotion": {"profile": "reduced", "routeFunctional": true, "transform": "none"},
+  "disabledInReducedMode": ["layout morph", "scale-heavy navigation", "parallax", "depth zoom", "animated blur"],
+  "increasedContrast": true,
+  "coarsePointer": true,
+  "finePointer": true,
+  "browserZoom200": {"horizontalOverflow": 0, "textClipping": false, "criticalOverlap": false},
+  "keyboardFocus": {"tab": true, "shiftTab": true, "enterSpace": true, "escape": true, "focusVisible": true}
+}

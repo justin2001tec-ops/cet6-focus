@@ -1,0 +1,12 @@
+{
+  "gate": "PASS",
+  "sourceRoute": "Vocabulary",
+  "targetRoute": "Word Detail",
+  "word": "abandon",
+  "sharedId": "word-cet6-abandon",
+  "entityContinuity": true,
+  "duplicateHeadingFlash": false,
+  "returnRelationship": "PASS",
+  "reducedMotion": {"sharedTransformMorph": false, "depthZoom": false, "stableReplacement": true},
+  "webkit": "PASS"
+}

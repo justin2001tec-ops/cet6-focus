@@ -1,0 +1,13 @@
+{
+  "gate": "PASS",
+  "swURL": "https://justin2001tec-ops.github.io/cet6-focus/sw.js",
+  "shellCache": "cet6-focus-shell-v6",
+  "shellV6Present": true,
+  "shellV5Present": false,
+  "controller": true,
+  "scope": "https://justin2001tec-ops.github.io/cet6-focus/",
+  "cacheNames": ["cet6-focus-shell-v6"],
+  "cachedVocabulary": true,
+  "warmCacheOfflineReload": true,
+  "coldFirstInstallOfflineRequired": false
+}

@@ -1,0 +1,19 @@
+{
+  "gate": "PASS",
+  "opening": {"visible": true, "focusOnClose": true, "state": "idle"},
+  "slowDrag": {"fingerTracking": true, "naturalSnapBack": true},
+  "reverseDrag": {"downThenUp": true, "stuck": false},
+  "fastFlick": {
+    "velocitySeen": true,
+    "handoffCount": 1,
+    "velocity": "active",
+    "stateAtObservation": "dismissing",
+    "transform": "matrix(1, 0, 0, 1, 0, 333.773)",
+    "dismissed": true
+  },
+  "closeButton": true,
+  "escape": true,
+  "browserBack": true,
+  "ghostHistoryEntry": false,
+  "webkit": {"open": true, "escape": true}
+}

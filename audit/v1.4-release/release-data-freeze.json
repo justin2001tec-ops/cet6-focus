@@ -1,0 +1,15 @@
+{
+  "gate": "PASS",
+  "vocabularyCount": 2219,
+  "contextSelected": 990,
+  "contextCoverage": "44.6%",
+  "provenance": "100%",
+  "sha256": {
+    "public/data/cet6-vocab.v1.json": "3D2586557C3E979D588CE797F9F50271C98B577DF0254027E41692F23C34FFC4",
+    "data-source/examples/context-curation.json": "A6F95C6B491CDB0AA41443AFB3AE63DCE1DFD4E839A5A53193F7D52635DD8E35",
+    "data-source/examples/selected-examples.json": "F7902451A2E8B60C78AF649C2CDD8B570BF74B5DE7AEE524BEF6AF61ADD24596",
+    "data-source/examples/example-provenance.json": "C1CA89DE70ECE3D4F036BF67B436A7BFB4981F61E0E53BBAAECFBC9A67CD0CD3"
+  },
+  "beforeAfterBumpUnchanged": true,
+  "productDataChangedByReleaseEvidence": false
+}
