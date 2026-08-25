@@ -21,7 +21,11 @@ async function seedWarmDatabase(page: Page): Promise<void> {
   try {
     await page.goto('/?motion-seed=1', { waitUntil: 'domcontentloaded' })
     const words = await page.evaluate(async () => {
-      const response = await fetch('/data/cet6-vocab.v1.json', { cache: 'no-store' })
+      const entryScript = Array.from(document.querySelectorAll<HTMLScriptElement>('script[type="module"][src]')).find((script) => script.src.includes('/src/main.tsx'))
+      const vocabularyUrl = new URL(entryScript?.src ?? '/src/main.tsx', document.baseURI)
+      vocabularyUrl.pathname = vocabularyUrl.pathname.replace(/\/src\/main\.tsx.*$/, '/data/cet6-vocab.v1.json')
+      vocabularyUrl.search = ''
+      const response = await fetch(vocabularyUrl, { cache: 'no-store' })
       if (!response.ok) throw new Error(`Warm vocabulary fetch failed: ${response.status}`)
       return ((await response.json()) as Array<Record<string, unknown>>).slice(0, 8)
     })
