@@ -1,12 +1,18 @@
+import { forwardRef } from 'react'
 import { Check, X } from 'lucide-react'
+import { ApplePressable } from '@/design-system/components'
 
-export function Button({ children, variant = 'primary', size = 'md', type = 'button', disabled, onClick, className = '', ...props }: React.ButtonHTMLAttributes<HTMLButtonElement> & { variant?: 'primary' | 'secondary' | 'ghost' | 'danger' | 'soft'; size?: 'sm' | 'md' | 'lg' }) {
-  return <button {...props} type={type} disabled={disabled} onClick={onClick} className={`button button--${variant} button--${size} ${className}`}>{children}</button>
-}
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & { variant?: 'primary' | 'secondary' | 'ghost' | 'danger' | 'soft'; size?: 'sm' | 'md' | 'lg' }
 
-export function IconButton({ children, label, variant = 'ghost', className = '', ...props }: React.ButtonHTMLAttributes<HTMLButtonElement> & { label: string; variant?: 'ghost' | 'secondary' | 'danger' }) {
-  return <button {...props} type={props.type ?? 'button'} aria-label={label} title={label} className={`icon-button icon-button--${variant} ${className}`}>{children}</button>
-}
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button({ children, variant = 'primary', size = 'md', type = 'button', disabled, className = '', ...props }, ref) {
+  return <ApplePressable {...props} ref={ref} type={type} disabled={disabled} className={`button button--${variant} button--${size} ${className}`}>{children}</ApplePressable>
+})
+
+type IconButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & { label: string; variant?: 'ghost' | 'secondary' | 'danger' }
+
+export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(function IconButton({ children, label, variant = 'ghost', className = '', ...props }, ref) {
+  return <ApplePressable {...props} ref={ref} type={props.type ?? 'button'} aria-label={label} title={label} className={`icon-button icon-button--${variant} ${className}`}>{children}</ApplePressable>
+})
 
 export function Badge({ children, tone = 'neutral' }: { children: React.ReactNode; tone?: 'neutral' | 'green' | 'amber' | 'rose' | 'blue' }) {
   return <span className={`badge badge--${tone}`}>{children}</span>

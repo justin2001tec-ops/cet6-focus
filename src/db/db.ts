@@ -72,6 +72,7 @@ export function cardFromWord(word: Word, now = new Date()): LearningCard {
 
 let databaseMetadataPromise: Promise<void> | null = null
 let databaseReadyPromise: Promise<void> | null = null
+let activeWordIdsCache: Set<string> | null = null
 
 export function ensureDatabaseMetadataReady(): Promise<void> {
   if (databaseMetadataPromise) return databaseMetadataPromise
@@ -108,15 +109,20 @@ async function initializeDatabase(): Promise<void> {
     const nextWords = (await response.json()) as Word[]
     if (!Array.isArray(nextWords) || nextWords.length < 1000) throw new Error('词库校验失败：条目数不足')
     const reconciliation = reconcileVocabulary(existingWords, existingCards, nextWords)
-    await db.transaction('rw', db.words, db.cards, db.settings, async () => {
-      // Never clear learning data during a static vocabulary upgrade. Existing
-      // cards, including orphaned cards, are preserved byte-for-byte; only
-      // new words receive a New card and removed words are archived.
-      await db.words.bulkPut(reconciliation.words)
-      const newCards = reconciliation.cards.filter((card) => !existingCards.some((existing) => existing.wordId === card.wordId))
-      if (newCards.length) await db.cards.bulkPut(newCards)
-      await db.settings.put({ ...(settings ?? defaultSettings()), dataVersion: VOCABULARY_VERSION, updatedAt: new Date().toISOString() })
-    })
+    // Never clear learning data during a static vocabulary upgrade. Existing
+    // cards, including orphaned cards, are preserved byte-for-byte; only
+    // new words receive a New card and removed words are archived. Separate
+    // bounded writes keep WebKit from holding one long IndexedDB transaction
+    // while importing the static 2k+ vocabulary payload.
+    const batchSize = 200
+    for (let offset = 0; offset < reconciliation.words.length; offset += batchSize) {
+      await db.words.bulkPut(reconciliation.words.slice(offset, offset + batchSize))
+    }
+    const newCards = reconciliation.cards.filter((card) => !existingCards.some((existing) => existing.wordId === card.wordId))
+    for (let offset = 0; offset < newCards.length; offset += batchSize) {
+      await db.cards.bulkPut(newCards.slice(offset, offset + batchSize))
+    }
+    await db.settings.put({ ...(settings ?? defaultSettings()), dataVersion: VOCABULARY_VERSION, updatedAt: new Date().toISOString() })
   } else if (settings?.dataVersion !== VOCABULARY_VERSION) {
     await saveSettings({ dataVersion: VOCABULARY_VERSION })
   }
@@ -148,7 +154,15 @@ export async function getAllWords(): Promise<Word[]> {
 }
 
 export async function getActiveWords(): Promise<Word[]> {
-  return (await db.words.toArray()).filter((word) => isActiveWord(word))
+  const activeWords = (await db.words.toArray()).filter((word) => isActiveWord(word))
+  activeWordIdsCache = new Set(activeWords.map((word) => word.id))
+  return activeWords
+}
+
+async function getActiveWordIds(): Promise<Set<string>> {
+  if (activeWordIdsCache) return activeWordIdsCache
+  await getActiveWords()
+  return activeWordIdsCache ?? new Set<string>()
 }
 
 export async function getArchivedWords(): Promise<Word[]> {
@@ -183,20 +197,31 @@ export async function getDictationCandidates(limit = 10): Promise<LearningCard[]
 
 export async function getQueue(type: 'study' | 'review' | 'weak', settings: Pick<AppSettings, 'dailyNewWords'>): Promise<QueueItem[]> {
   const now = new Date()
-  const [cards, words, logs] = await Promise.all([db.cards.toArray(), getActiveWords(), type === 'weak' ? getReviewLogsSince(new Date(now.getTime() - 30 * 86_400_000)) : Promise.resolve([])])
-  const activeIds = new Set(words.map((word) => word.id))
-  const activeCards = cards.filter((card) => activeIds.has(card.wordId))
-
-  const due = activeCards
-    .filter((card) => isDue(card.fsrsCard, now))
+  const activeIds = await getActiveWordIds()
+  const dueCards = await db.cards
+    .where('due')
+    .belowOrEqual(now.toISOString())
+    .filter((card) => activeIds.has(card.wordId) && card.fsrsCard.state !== 0)
+    .toArray()
+  const due = dueCards
     .sort((a, b) => new Date(a.due).getTime() - new Date(b.due).getTime())
     .map((card) => ({ wordId: card.wordId, kind: 'due' as const }))
-  const newCards = activeCards
-    .filter((card) => card.fsrsCard.state === 0)
-    .sort((a, b) => a.wordId.localeCompare(b.wordId))
-    .slice(0, Math.max(0, settings.dailyNewWords))
-    .map((card) => ({ wordId: card.wordId, kind: 'new' as const }))
-  const weak = activeCards
+
+  if (type === 'review') return due
+  if (type === 'study') {
+    const newLimit = Math.max(0, settings.dailyNewWords)
+    const newCards = newLimit === 0 ? [] : await db.cards
+      .orderBy('wordId')
+      .filter((card) => activeIds.has(card.wordId) && card.fsrsCard.state === 0)
+      .limit(newLimit)
+      .toArray()
+    const dueIds = new Set(due.map((item) => item.wordId))
+    return [...due, ...newCards.filter((card) => !dueIds.has(card.wordId)).map((card) => ({ wordId: card.wordId, kind: 'new' as const }))]
+  }
+
+  const [cards, logs] = await Promise.all([db.cards.toArray(), getReviewLogsSince(new Date(now.getTime() - 30 * 86_400_000))])
+  const weak = cards
+    .filter((card) => activeIds.has(card.wordId))
     .map((card) => ({ card, signal: getWeakWordSignal(card, logs, now) }))
     .filter(({ signal }) => signal.isWeak)
     .sort((a, b) => {
@@ -205,10 +230,7 @@ export async function getQueue(type: 'study' | 'review' | 'weak', settings: Pick
     .slice(0, 15)
     .map(({ card }) => ({ wordId: card.wordId, kind: 'weak' as const }))
 
-  if (type === 'review') return due
-  if (type === 'weak') return weak
-  const dueIds = new Set(due.map((item) => item.wordId))
-  return [...due, ...newCards.filter((item) => !dueIds.has(item.wordId))]
+  return weak
 }
 
 export async function getDashboardSummary(settings: AppSettings): Promise<DashboardSummary> {
@@ -413,10 +435,17 @@ export async function replaceLearningData(
     if (cards.length) await db.cards.bulkPut(cards)
     if (reviewLogs.length) await db.reviewLogs.bulkPut(reviewLogs)
     if (sessions.length) await db.sessions.bulkPut(sessions)
-    if (settings) await db.settings.put(settings)
+    if (settings) {
+      // A restore may come from an older local schema. Mark the imported
+      // settings current after the static vocabulary has already been retained;
+      // this keeps the reload deterministic instead of exposing the legacy
+      // marker during the reconciliation window.
+      await db.settings.put({ ...settings, dataVersion: VOCABULARY_VERSION, updatedAt: new Date().toISOString() })
+    }
     for (const word of orphanWords) {
       const current = await db.words.get(word.id)
       if (!current || current.archived) await db.words.put({ ...word, archived: true })
     }
   })
+  activeWordIdsCache = null
 }

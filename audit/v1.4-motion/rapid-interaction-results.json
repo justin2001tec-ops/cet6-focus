@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "latestIntentWins": {
+    "implementation": "navigation intent IDs are monotonic and route content is single-node; old route nodes do not remain in the DOM",
+    "result": "PASS"
+  },
+  "pressFeedback": {
+    "implementation": "ApplePressable uses bounded profile-aware whileTap feedback",
+    "result": "PASS"
+  },
+  "physicalSheet": {
+    "slowDragSnapBack": "PASS",
+    "largeOffsetDismiss": "PASS",
+    "browserBackDismiss": "PASS",
+    "pointercancelAndLostPointerCapture": "implemented",
+    "orientationChangeSnapBack": "implemented"
+  },
+  "verification": {
+    "chromium": "motion suite passed",
+    "mobile": "motion suite passed",
+    "webkit": "5/5 motion suite passed"
+  }
+}

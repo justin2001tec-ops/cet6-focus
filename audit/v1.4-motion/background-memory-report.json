@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "strategy": "local AVIF/WebP double-buffered background layers",
+  "decodeBeforeCrossfade": true,
+  "maxRenderedLayers": 2,
+  "maxDecodedFullscreenImages": 2,
+  "studyParallaxPx": 0,
+  "fullScreenBlurZoomParallax": false,
+  "crossfadeDurationMs": 420,
+  "evidence": "Motion E2E asserts layer count, image count, no background transform, and Study transform none in Chromium/mobile/WebKit runs."
+}

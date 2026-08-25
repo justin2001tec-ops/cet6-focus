@@ -2,6 +2,7 @@ import { ArrowUpRight, BookOpen, CheckCircle2, Headphones, Target } from 'lucide
 import { useNavigate } from 'react-router-dom'
 import { PageHeader } from '@/components/AppShell'
 import { Button } from '@/components/ui'
+import { ApplePressable } from '@/design-system/components'
 
 const entries = [
   { to: '/today', icon: CheckCircle2, eyebrow: 'Today flow', title: '继续今日学习', description: '按照到期复习 → 新词 → 听写的真实顺序继续。', tone: 'accent' },
@@ -21,7 +22,7 @@ export function LearningHub() {
       <Button onClick={() => navigate('/today')}><CheckCircle2 size={17} /> 开始今日学习 <ArrowUpRight size={16} /></Button>
     </section>
     <section className="learning-hub__list" aria-label="学习入口">
-      {entries.map(({ to, icon: Icon, eyebrow, title, description, tone }) => <button key={to} type="button" className={`learning-entry learning-entry--${tone}`} onClick={() => navigate(to)}><span className="learning-entry__icon"><Icon size={20} /></span><span className="learning-entry__copy"><small>{eyebrow}</small><strong>{title}</strong><span>{description}</span></span><ArrowUpRight size={18} /></button>)}
+      {entries.map(({ to, icon: Icon, eyebrow, title, description, tone }) => <ApplePressable key={to} type="button" className={`learning-entry learning-entry--${tone}`} onClick={() => navigate(to)}><span className="learning-entry__icon"><Icon size={20} /></span><span className="learning-entry__copy"><small>{eyebrow}</small><strong>{title}</strong><span>{description}</span></span><ArrowUpRight size={18} /></ApplePressable>)}
     </section>
   </div>
 }

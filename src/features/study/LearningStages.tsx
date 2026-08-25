@@ -1,6 +1,7 @@
 import { Bookmark, Check, ChevronDown, Home, Undo2, Volume2 } from 'lucide-react'
 import { AudioButton } from '@/components/AppShell'
 import { Button, IconButton } from '@/components/ui'
+import { ApplePressable, ReadingSurface } from '@/design-system/components'
 import { hasLearningDetails, recognitionLabel, recognitionOptions, type RecognitionChoice } from '@/features/study/learning'
 import type { Word } from '@/types'
 
@@ -47,7 +48,7 @@ export function RecognitionActions({ selected, disabled, onChoose }: { selected:
     <section className="learning-recognition" aria-label="回忆判断">
       <div className="learning-recognition__grid">
         {recognitionOptions.map((option) => (
-          <button
+          <ApplePressable
             type="button"
             key={option.value}
             className={`learning-recognition__button ${selected === option.value ? 'is-selected' : ''}`}
@@ -56,7 +57,7 @@ export function RecognitionActions({ selected, disabled, onChoose }: { selected:
             onClick={() => onChoose(option.value)}
           >
             <strong>{option.label}</strong>
-          </button>
+          </ApplePressable>
         ))}
       </div>
     </section>
@@ -78,12 +79,12 @@ export function ContextStage({ word, choice, starred, onSpeak, onToggleStar, onB
   return (
     <section className="learning-stage learning-stage--context" aria-labelledby="learning-context-title">
       <LearningWordHeader word={word} starred={starred} compact onSpeak={onSpeak} onToggleStar={onToggleStar} />
-      <div className="learning-reading-surface learning-context-surface">
+      <ReadingSurface className="learning-reading-surface learning-context-surface">
         <p id="learning-context-title" className="learning-section-kicker">语境提示</p>
         <p className="learning-example learning-example--large">{highlightExample(example.en, word.word)}</p>
         <p className="learning-context-surface__note">再读一遍，看看它在句子里承担什么含义。</p>
         <span className="learning-choice-chip">你的判断：{recognitionLabel(choice)}</span>
-      </div>
+      </ReadingSurface>
       <div className="learning-stage-actions">
         <Button variant="ghost" onClick={onBack}>重新判断</Button>
         <Button onClick={onContinue}>查看核心词义 <ChevronDown size={16} /></Button>
@@ -107,12 +108,12 @@ export function MeaningStage({ word, starred, onSpeak, onToggleStar, onBack, onE
   return (
     <section className="learning-stage learning-stage--meaning" aria-labelledby="learning-meaning-title">
       <LearningWordHeader word={word} starred={starred} compact onSpeak={onSpeak} onToggleStar={onToggleStar} />
-      <div className="learning-reading-surface learning-meaning-surface">
+      <ReadingSurface className="learning-reading-surface learning-meaning-surface">
         <p id="learning-meaning-title" className="learning-section-kicker">核心词义</p>
         <p className="learning-core-meaning">{normalizeText(word.meaningZh[0])}</p>
         {word.pos?.length ? <p className="learning-pos">{word.pos.join(' · ')}</p> : null}
         {example && <div className="learning-example-block"><span>例句</span><p>{highlightExample(example.en, word.word)}</p>{example.zh && <small>{example.zh}</small>}</div>}
-      </div>
+      </ReadingSurface>
       <div className="learning-stage-actions">
         <Button variant="ghost" className="learning-stage-actions__secondary" onClick={onBack}>返回</Button>
         {canExpand && <Button variant="ghost" className="learning-stage-actions__secondary" onClick={onExpand}>更多 <ChevronDown size={16} /></Button>}
@@ -137,7 +138,7 @@ export function DetailStage({ word, starred, onSpeak, onToggleStar, onBack, onCo
   return (
     <section className="learning-stage learning-stage--detail" aria-labelledby="learning-detail-title">
       <LearningWordHeader word={word} starred={starred} compact onSpeak={onSpeak} onToggleStar={onToggleStar} />
-      <div className="learning-reading-surface learning-detail-surface">
+      <ReadingSurface className="learning-reading-surface learning-detail-surface">
         <p id="learning-detail-title" className="learning-section-kicker">扩展理解</p>
         <p className="learning-core-meaning learning-core-meaning--detail">{normalizeText(word.meaningZh[0])}</p>
         {extraMeanings.length > 0 && <DetailBlock label="更多中文义"><ul>{extraMeanings.map((meaning) => <li key={meaning}>{normalizeText(meaning)}</li>)}</ul></DetailBlock>}
@@ -145,7 +146,7 @@ export function DetailStage({ word, starred, onSpeak, onToggleStar, onBack, onCo
         {examples.length > 0 && <DetailBlock label="更多例句"><div className="learning-detail-list">{examples.map((example) => <div key={example.en}><p>{highlightExample(normalizeText(example.en), word.word)}</p>{example.zh && <small>{normalizeText(example.zh)}</small>}</div>)}</div></DetailBlock>}
         {word.collocations?.length ? <DetailBlock label="搭配"><ul>{word.collocations.map((item) => <li key={item}>{normalizeText(item)}</li>)}</ul></DetailBlock> : null}
         {wordForms.length > 0 && <DetailBlock label="词形变化"><dl>{wordForms.map(([form, value]) => <div key={form}><dt>{form}</dt><dd>{normalizeText(value)}</dd></div>)}</dl></DetailBlock>}
-      </div>
+      </ReadingSurface>
       <div className="learning-stage-actions">
         <Button variant="ghost" className="learning-stage-actions__secondary" onClick={onBack}>返回核心词义</Button>
         <Button className="learning-stage-actions__primary" onClick={onConfirm}>继续</Button>

@@ -16,6 +16,10 @@ import {
 import { useApp } from '@/app/providers'
 import { Notice } from '@/components/ui'
 import { getRoutePresentation, isRouteActive } from '@/lib/route-presentation'
+import { MotionRoute } from '@/design-system/motion/MotionRoute'
+import { ApplePressable } from '@/design-system/components'
+import type { Background } from '@/config/backgrounds'
+import { useNavigationMotion } from '@/design-system/motion/navigation-motion'
 
 const desktopNav = [
   { to: '/', label: '今日', icon: Home, end: true },
@@ -34,15 +38,33 @@ const mobileNav = [
 
 export function AppShell() {
   const { background, notice, clearNotice } = useApp()
+  const { markNavigationIntent } = useNavigationMotion()
   const location = useLocation()
   const [keyboardInputFocused, setKeyboardInputFocused] = useState(false)
+  const [backgroundLayers, setBackgroundLayers] = useState<Background[]>(background ? [background] : [])
   const isImmersiveHome = location.pathname === '/'
   const isLearningRoute = ['/study', '/review', '/mistakes/study'].includes(location.pathname)
-  const backgroundStyle = background ? {
-    '--scene-position': background.desktopPosition,
-    '--scene-mobile-position': background.mobilePosition,
-    '--scene-overlay': String(background.overlayOpacity),
-  } as CSSProperties : undefined
+
+  useEffect(() => {
+    let cancelled = false
+    if (!background) {
+      if (backgroundLayers.length) setBackgroundLayers([])
+      return () => { cancelled = true }
+    }
+    if (backgroundLayers.some((layer) => layer.id === background.id)) return () => { cancelled = true }
+
+    const preload = new Image()
+    preload.src = background.avif
+    const decode = typeof preload.decode === 'function' ? preload.decode().catch(() => undefined) : Promise.resolve()
+    void decode.then(() => {
+      if (cancelled) return
+      setBackgroundLayers((current) => [...current.filter((layer) => layer.id !== background.id), background].slice(-2))
+      window.setTimeout(() => {
+        if (!cancelled) setBackgroundLayers((current) => current.filter((layer) => layer.id === background.id))
+      }, 460)
+    })
+    return () => { cancelled = true }
+  }, [background, backgroundLayers])
 
   useEffect(() => {
     const handleFocusIn = (event: FocusEvent) => {
@@ -58,9 +80,18 @@ export function AppShell() {
   }, [])
 
   return (
-    <div className={`app-frame ${background ? 'app-frame--with-background' : 'app-frame--plain'} ${isImmersiveHome ? 'app-frame--immersive-home' : ''} ${isLearningRoute ? 'app-frame--learning' : ''} ${keyboardInputFocused ? 'app-frame--keyboard-input' : ''}`} style={backgroundStyle}>
-      <div className="app-background" aria-hidden="true">{background && <picture><source srcSet={background.avif} type="image/avif" /><img src={background.webp} alt="" /></picture>}</div>
-      {!isImmersiveHome && !isLearningRoute && <aside className="sidebar liquid-glass">
+    <div className={`app-frame ${background ? 'app-frame--with-background' : 'app-frame--plain'} ${isImmersiveHome ? 'app-frame--immersive-home' : ''} ${isLearningRoute ? 'app-frame--learning' : ''} ${keyboardInputFocused ? 'app-frame--keyboard-input' : ''}`}>
+      <div className="app-background" aria-hidden="true" data-background-layer-count={backgroundLayers.length}>
+        {backgroundLayers.map((layer, index) => <div key={layer.id} className="app-background__layer" data-background-id={layer.id} style={{
+          '--scene-position': layer.desktopPosition,
+          '--scene-mobile-position': layer.mobilePosition,
+          '--scene-overlay': String(layer.overlayOpacity),
+          opacity: index === backgroundLayers.length - 1 ? 1 : 0,
+        } as CSSProperties}>
+          <picture><source srcSet={layer.avif} type="image/avif" /><img src={layer.webp} alt="" /></picture>
+        </div>)}
+      </div>
+      {!isImmersiveHome && !isLearningRoute && <aside className="sidebar liquid-glass glass-bar">
         <NavBrand />
         <nav className="sidebar__nav" aria-label="主导航">
           <NavGroup label="Workspace">
@@ -79,20 +110,20 @@ export function AppShell() {
       </aside>}
 
       <main className="main-content">
-        {!isImmersiveHome && !isLearningRoute && <div className="mobile-topbar liquid-glass">
+        {!isImmersiveHome && !isLearningRoute && <div className="mobile-topbar liquid-glass glass-bar">
           <NavBrand compact />
           <span className="mobile-topbar__title">{getRoutePresentation(location.pathname).title}</span>
           <NavLink to="/settings" className="icon-button" aria-label="打开设置"><Settings2 size={19} /></NavLink>
         </div>}
         {notice && <Notice message={notice} onClose={clearNotice} />}
-        <Outlet />
+        <MotionRoute><Outlet /></MotionRoute>
       </main>
 
-      {!isImmersiveHome && !isLearningRoute && <nav className="mobile-nav liquid-glass" style={keyboardInputFocused ? { opacity: 0, pointerEvents: 'none', transform: 'translateY(calc(100% + 24px))' } : undefined} aria-label="移动端主导航">
+      {!isImmersiveHome && !isLearningRoute && <nav className="mobile-nav liquid-glass glass-bar" style={keyboardInputFocused ? { opacity: 0, pointerEvents: 'none', transform: 'translateY(calc(100% + 24px))' } : undefined} aria-label="移动端主导航">
         {mobileNav.map((item) => {
           const Icon = item.icon
           const active = isRouteActive(item.to, location.pathname)
-          return <NavLink key={item.to} to={item.to} end={item.end} className={`mobile-nav__item ${active ? 'is-active' : ''}`}>
+          return <NavLink key={item.to} to={item.to} end={item.end} onClick={(event) => markNavigationClick(event, markNavigationIntent)} className={`mobile-nav__item ${active ? 'is-active' : ''}`}>
             <span className="mobile-nav__icon"><Icon size={19} /></span><span>{item.label}</span>
           </NavLink>
         })}
@@ -104,6 +135,7 @@ export function AppShell() {
 
 function MinimalHomeNav({ hidden }: { hidden: boolean }) {
   const location = useLocation()
+  const { markNavigationIntent } = useNavigationMotion()
   const items = [
     { to: '/', label: '首页', icon: Home, end: true },
     { to: '/words', label: '词库', icon: ListChecks },
@@ -114,7 +146,7 @@ function MinimalHomeNav({ hidden }: { hidden: boolean }) {
       {items.map((item) => {
         const Icon = item.icon
         const active = isRouteActive(item.to, location.pathname)
-        return <NavLink key={item.to} to={item.to} end={item.end} className={`immersive-home__nav-item ${active ? 'is-active' : ''}`} aria-label={item.label}>
+        return <NavLink key={item.to} to={item.to} end={item.end} onClick={(event) => markNavigationClick(event, markNavigationIntent)} className={`immersive-home__nav-item ${active ? 'is-active' : ''}`} aria-label={item.label}>
           <Icon size={20} strokeWidth={1.8} aria-hidden="true" />
           <span className="sr-only">{item.label}</span>
         </NavLink>
@@ -141,9 +173,10 @@ function NavGroup({ label, children }: { label: string; children: React.ReactNod
 
 function NavigationLink({ to, label, icon: Icon, end }: { to: string; label: string; icon: typeof Home; end?: boolean }) {
   const location = useLocation()
+  const { markNavigationIntent } = useNavigationMotion()
   const active = isRouteActive(to, location.pathname)
   return (
-    <NavLink to={to} end={end} className={`nav-item ${active ? 'is-active' : ''}`}>
+    <NavLink to={to} end={end} onClick={(event) => markNavigationClick(event, markNavigationIntent)} className={`nav-item ${active ? 'is-active' : ''}`}>
       <Icon size={17} aria-hidden="true" />
       <span>{label}</span>
     </NavLink>
@@ -154,7 +187,11 @@ function CheckCircleIcon() {
   return <CheckCircle2 size={16} aria-hidden="true" />
 }
 
-export function PageHeader({ eyebrow, title, description, action }: { eyebrow?: string; title: string; description?: string; action?: React.ReactNode }) {
+function markNavigationClick(event: React.MouseEvent<HTMLAnchorElement>, mark: () => number) {
+  if (event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey) mark()
+}
+
+export function PageHeader({ eyebrow, title, description, action }: { eyebrow?: string; title: React.ReactNode; description?: string; action?: React.ReactNode }) {
   return (
     <header className="page-header">
       <div>
@@ -176,5 +213,5 @@ export function InlineLink({ to, children }: { to: string; children: React.React
 }
 
 export function AudioButton({ onClick, label = '播放发音' }: { onClick: () => void; label?: string }) {
-  return <button className="audio-button" type="button" onClick={onClick} aria-label={label}><Volume2 size={16} /><span>{label}</span></button>
+  return <ApplePressable className="audio-button glass-control" type="button" onClick={onClick} aria-label={label}><Volume2 size={16} /><span>{label}</span></ApplePressable>
 }

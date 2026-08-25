@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "testCommand": "pnpm test:e2e:serial",
+  "motionCommand": "playwright test tests/e2e/motion/v1.4-system.spec.ts --project=webkit-motion --workers=1 --timeout=90000",
+  "budgets": {
+    "inpP75TargetMs": 200,
+    "pressFeedbackNextFrame": "PASS",
+    "longTaskThresholdMs": 50,
+    "longTasksDuringSuccessfulMotionRuns": 0,
+    "decodedFullscreenBackgroundLayersMax": 2,
+    "backgroundRenderLayersMax": 2,
+    "reactStateWritesInPhysicalSheetPointerMove": 0,
+    "animationQueue": false,
+    "studyParallaxPx": 0
+  },
+  "results": {
+    "chromiumMobileBusinessSuite": "42 passed, 16 project-conditional skips",
+    "webkitMotionSuite": "5 passed",
+    "unitSuite": "34 passed",
+    "typecheck": "passed",
+    "lint": "passed",
+    "build": "passed"
+  },
+  "measurementNote": "The handoff's INP p75 value is retained as a budget target; this local gate records interaction/long-task evidence rather than claiming a statistically valid field percentile from a single browser run.",
+  "buildNote": "Vite reports one existing-style minified chunk above 500 kB; build exits successfully and no new runtime dependency beyond motion was added."
+}
