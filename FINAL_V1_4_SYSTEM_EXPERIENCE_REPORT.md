@@ -14,7 +14,7 @@ This report closes the seven-phase v1.4 implementation requested by the Master H
 
 ## R1 Acceptance Corrections
 
-R1 was limited to acceptance fixes on the existing PR. The initial GitHub E2E attempt failed because the workflow declared `webkit-motion` but installed Chromium only; the workflow now installs both Chromium and WebKit and allows the E2E job 20 minutes. The first WebKit-enabled remote rerun then exposed a Safari CI fixture issue: IndexedDB was initialized from a JSON MIME document. The fixture now seeds from a same-origin HTML document with the app entry blocked, preserving the real product WebKit checks. The following corrections were then independently exercised locally:
+R1 was limited to acceptance fixes on the existing PR. The initial GitHub E2E attempt failed because the workflow declared `webkit-motion` but installed Chromium only; the workflow now installs both Chromium and WebKit and allows the E2E job 20 minutes. The first WebKit-enabled remote rerun then exposed a Safari CI fixture issue: IndexedDB was initialized from a JSON MIME document. The fixture now seeds from a same-origin HTML document with the app entry blocked and derives the vocabulary URL from the Vite entry script, so the GitHub `/cet6-focus/` base path is respected while the real product WebKit checks remain intact. The final head `2fb96ec0d1d81381d9175e8e629b7a2586106098` completed all four GitHub Actions checks successfully. The following corrections were then independently exercised locally:
 
 - `LazyMotion` now uses `domMax` with `LayoutGroup`, and Vocabulary → Word Detail shared identity is asserted through a real full-profile transition plus a reduced fallback.
 - App reduced motion and the OS preference resolve to one effective profile used by MotionConfig, CSS, route, shared layout, press, and sheet behavior.
@@ -59,6 +59,7 @@ The work builds a system behavior model rather than applying animation everywher
 | Full serial E2E | PASS | `pnpm test:e2e:serial` — 61 passed, 17 project-conditional skips |
 | Motion suite | PASS | Chromium + mobile + WebKit — 29 passed, 1 documented mobile conditional skip, 0 failed |
 | WebKit/Safari behavior | PASS | WebKit motion project — 10/10 passed, including shared layout, PhysicalSheet, reduced motion, focus/zoom, long-task/background budget |
+| GitHub Actions | PASS | Final head `2fb96ec0d1d81381d9175e8e629b7a2586106098`: 4/4 quality and serial E2E checks successful |
 | Long-task budget | PASS | Final successful motion runs recorded zero motion-period tasks over 50 ms |
 | Background memory | PASS | Rendered and decoded full-screen background layers capped at 2; Study transform/parallax is `none`/0px |
 | Accessibility behavior | PASS | Reduced motion, keyboard focus, coarse/fine modality, 200% effective zoom, dialog semantics, focus trap/restoration, Escape and browser Back covered |
@@ -97,4 +98,4 @@ No new social/backend/AI/dashboard redesign, Context expansion, Study/Review IA 
 
 ## Release boundary
 
-The branch is ready for reviewer inspection. The only next external action is opening the PR. Do not merge, deploy, or create `v1.4.0` until visual/code acceptance explicitly authorizes it.
+PR #4 is ready for reviewer inspection and remains open. R1 work stops here. Do not merge, deploy, or create `v1.4.0` until visual/code acceptance explicitly authorizes it.

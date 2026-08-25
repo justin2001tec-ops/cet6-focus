@@ -56,7 +56,7 @@ Frozen v1.3 contracts remain intact: Home information architecture, Study/Review
 - `r1-rapid-interaction.json` records rapid route, Study/Undo, press, and interruption checks.
 - `r1-db-performance-exception.md` records Path A: `REVERTED — no exception retained`.
 
-The first R1 GitHub E2E attempt exposed that the workflow installed Chromium while declaring WebKit. The workflow now installs both browser dependencies; final remote status is recorded only after the updated PR checks complete.
+The first R1 GitHub E2E attempt exposed that the workflow installed Chromium while declaring WebKit. The workflow now installs both browser dependencies; final remote status is PASS on head `2fb96ec0d1d81381d9175e8e629b7a2586106098`, with all four PR checks successful.
 
 ## Explicit limits
 
