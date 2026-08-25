@@ -1,0 +1,380 @@
+{
+  "baseURL": "https://justin2001tec-ops.github.io/cet6-focus",
+  "generatedAt": "2026-08-25T07:55:32.859Z",
+  "http": {
+    "root": {
+      "status": 200,
+      "bytes": 445
+    },
+    "resources": [
+      {
+        "path": "sw.js",
+        "status": 200,
+        "contentType": "application/javascript; charset=utf-8",
+        "bytes": 535
+      },
+      {
+        "path": "manifest.webmanifest",
+        "status": 200,
+        "contentType": "application/manifest+json; charset=utf-8",
+        "bytes": 301
+      },
+      {
+        "path": "icon.svg",
+        "status": 200,
+        "contentType": "image/svg+xml",
+        "bytes": 255
+      },
+      {
+        "path": "data/cet6-vocab.v1.json",
+        "status": 200,
+        "contentType": "application/json; charset=utf-8",
+        "bytes": 335223
+      },
+      {
+        "path": "assets/index-DlFesr94.js",
+        "status": 200,
+        "contentType": "application/javascript; charset=utf-8",
+        "bytes": 143699
+      },
+      {
+        "path": "assets/index-C5KJA_UE.css",
+        "status": 200,
+        "contentType": "text/css; charset=utf-8",
+        "bytes": 16222
+      },
+      {
+        "path": "backgrounds/v1.2/avif/plateau-kiang-01.avif",
+        "status": 200,
+        "contentType": "image/avif",
+        "bytes": 1219063
+      },
+      {
+        "path": "backgrounds/v1.2/webp/plateau-kiang-01.webp",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 1402626
+      },
+      {
+        "path": "backgrounds/v1.2/avif/altiplano-01.avif",
+        "status": 200,
+        "contentType": "image/avif",
+        "bytes": 1803671
+      },
+      {
+        "path": "backgrounds/v1.2/webp/altiplano-01.webp",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 2562198
+      },
+      {
+        "path": "backgrounds/v1.2/avif/altiplano-02.avif",
+        "status": 200,
+        "contentType": "image/avif",
+        "bytes": 4285768
+      },
+      {
+        "path": "backgrounds/v1.2/webp/altiplano-02.webp",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 5154570
+      },
+      {
+        "path": "backgrounds/v1.2/avif/ladakh-plateau-01.avif",
+        "status": 200,
+        "contentType": "image/avif",
+        "bytes": 1990212
+      },
+      {
+        "path": "backgrounds/v1.2/webp/ladakh-plateau-01.webp",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 2605230
+      },
+      {
+        "path": "backgrounds/v1.2/avif/pangong-01.avif",
+        "status": 200,
+        "contentType": "image/avif",
+        "bytes": 2103117
+      },
+      {
+        "path": "backgrounds/v1.2/webp/pangong-01.webp",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 1936384
+      },
+      {
+        "path": "backgrounds/v1.2/avif/aurora-01.avif",
+        "status": 200,
+        "contentType": "image/avif",
+        "bytes": 380702
+      },
+      {
+        "path": "backgrounds/v1.2/webp/aurora-01.webp",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 400586
+      },
+      {
+        "path": "backgrounds/v1.2/avif/aurora-02.avif",
+        "status": 200,
+        "contentType": "image/avif",
+        "bytes": 592748
+      },
+      {
+        "path": "backgrounds/v1.2/webp/aurora-02.webp",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 660776
+      },
+      {
+        "path": "backgrounds/v1.2/avif/stars-02.avif",
+        "status": 200,
+        "contentType": "image/avif",
+        "bytes": 3315231
+      },
+      {
+        "path": "backgrounds/v1.2/webp/stars-02.webp",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 4314760
+      },
+      {
+        "path": "backgrounds/v1.2/avif/waterfall-02.avif",
+        "status": 200,
+        "contentType": "image/avif",
+        "bytes": 7848295
+      },
+      {
+        "path": "backgrounds/v1.2/webp/waterfall-02.webp",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 11111154
+      },
+      {
+        "path": "backgrounds/v1.2/avif/waterfall-03.avif",
+        "status": 200,
+        "contentType": "image/avif",
+        "bytes": 3864288
+      },
+      {
+        "path": "backgrounds/v1.2/webp/waterfall-03.webp",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 4593230
+      },
+      {
+        "path": "backgrounds/v1.2/avif/penguins-01.avif",
+        "status": 200,
+        "contentType": "image/avif",
+        "bytes": 1483677
+      },
+      {
+        "path": "backgrounds/v1.2/webp/penguins-01.webp",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 1963086
+      },
+      {
+        "path": "backgrounds/v1.2/avif/daisy-02.avif",
+        "status": 200,
+        "contentType": "image/avif",
+        "bytes": 5052170
+      },
+      {
+        "path": "backgrounds/v1.2/webp/daisy-02.webp",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 6043838
+      },
+      {
+        "path": "backgrounds/v1.2/avif/lighthouse-02.avif",
+        "status": 200,
+        "contentType": "image/avif",
+        "bytes": 3231514
+      },
+      {
+        "path": "backgrounds/v1.2/webp/lighthouse-02.webp",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 4098708
+      },
+      {
+        "path": "backgrounds/v1.2/avif/volcano-02.avif",
+        "status": 200,
+        "contentType": "image/avif",
+        "bytes": 646592
+      },
+      {
+        "path": "backgrounds/v1.2/webp/volcano-02.webp",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 903694
+      }
+    ],
+    "vocabularyCount": 2219,
+    "avifCount": 14,
+    "webpCount": 14,
+    "swCache": "cet6-focus-shell-v5"
+  },
+  "ui": {
+    "home": {
+      "scene": "lighthouse-02",
+      "scrollWidth": 1920,
+      "clientWidth": 1920,
+      "scrollHeight": 1080,
+      "clientHeight": 1080,
+      "learnHref": "#/study",
+      "reviewHref": "#/review",
+      "localBackground": "/cet6-focus/backgrounds/v1.2/webp/lighthouse-02.webp"
+    },
+    "learning": {
+      "word": "abandon",
+      "contextBeforeMeaning": true,
+      "progressiveDetail": true,
+      "recallActions": 3
+    },
+    "recognitionRatings": {
+      "不认识": 1,
+      "模糊": 2,
+      "认识": 3
+    },
+    "undo": {
+      "restoredWord": "abandon",
+      "reviewLogsAfterUndo": 0
+    },
+    "dictation": {
+      "word": "abandon",
+      "spellingOnly": true,
+      "reviewLogCount": 1,
+      "attempted": 1,
+      "wrong": 1,
+      "corrected": 1
+    },
+    "settings": {
+      "backgroundMode": "fixed",
+      "backgroundId": "lighthouse-02",
+      "persistedSrc": "/cet6-focus/backgrounds/v1.2/webp/lighthouse-02.webp"
+    },
+    "responsive": {
+      "390x844": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 844,
+        "clientHeight": 844
+      },
+      "430x932": {
+        "scrollWidth": 430,
+        "clientWidth": 430,
+        "scrollHeight": 932,
+        "clientHeight": 932
+      },
+      "768x1024": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "scrollHeight": 1024,
+        "clientHeight": 1024
+      },
+      "834x1112": {
+        "scrollWidth": 834,
+        "clientWidth": 834,
+        "scrollHeight": 1112,
+        "clientHeight": 1112
+      },
+      "1440x900": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 900,
+        "clientHeight": 900
+      },
+      "1920x1080": {
+        "scrollWidth": 1920,
+        "clientWidth": 1920,
+        "scrollHeight": 1080,
+        "clientHeight": 1080
+      },
+      "meaning390": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 844,
+        "clientHeight": 844
+      },
+      "meaning430": {
+        "scrollWidth": 430,
+        "clientWidth": 430,
+        "scrollHeight": 932,
+        "clientHeight": 932
+      },
+      "reducedMotion": true
+    },
+    "fallback": {
+      "word": "abolish",
+      "examples": 0,
+      "contextSkipped": true,
+      "directMeaning": true
+    },
+    "pwa": {
+      "registration": {
+        "scope": "https://justin2001tec-ops.github.io/cet6-focus/",
+        "activeScript": "https://justin2001tec-ops.github.io/cet6-focus/sw.js",
+        "controller": true
+      },
+      "cacheState": {
+        "keys": [
+          "cet6-focus-shell-v5"
+        ],
+        "controller": true
+      },
+      "offlineState": {
+        "url": "https://justin2001tec-ops.github.io/cet6-focus/#/",
+        "title": "CET6 Focus",
+        "featured": true
+      }
+    }
+  },
+  "pwa": {
+    "registration": {
+      "scope": "https://justin2001tec-ops.github.io/cet6-focus/",
+      "activeScript": "https://justin2001tec-ops.github.io/cet6-focus/sw.js",
+      "controller": true
+    },
+    "cacheState": {
+      "keys": [
+        "cet6-focus-shell-v5"
+      ],
+      "controller": true
+    },
+    "offlineState": {
+      "url": "https://justin2001tec-ops.github.io/cet6-focus/#/",
+      "title": "CET6 Focus",
+      "featured": true
+    }
+  },
+  "errors": {
+    "console": [],
+    "page": [],
+    "requestFailed": []
+  },
+  "screenshots": [
+    "home-desktop.png",
+    "meaning-fallback.png",
+    "review-meaning-desktop.png",
+    "review-recall-desktop.png",
+    "study-complete-desktop.png",
+    "study-complete-iphone-390.png",
+    "study-context-desktop.png",
+    "study-context-iphone-390.png",
+    "study-detail-desktop.png",
+    "study-detail-iphone-390.png",
+    "study-detail-iphone-430.png",
+    "study-meaning-desktop.png",
+    "study-meaning-ipad.png",
+    "study-meaning-iphone-390.png",
+    "study-meaning-iphone-430.png",
+    "study-recall-desktop.png",
+    "study-recall-ipad.png",
+    "study-recall-iphone-390.png",
+    "v1.2-study-baseline.png"
+  ],
+  "status": "PASS"
+}
