@@ -1,0 +1,106 @@
+{
+  "round": "v1.3 Final Holdout Validation",
+  "currentHead": "0bf592ccd8888f60094d427da1784cc5d3bcd473",
+  "currentSelectedCount": 990,
+  "totalHistoricalSeenSentenceIds": 1542,
+  "selectedSeenCount": 990,
+  "selectedUnseenCount": 0,
+  "selectedSentenceIdCount": 923,
+  "sources": {
+    "r4": {
+      "fileCount": 4,
+      "rawSentenceIdCount": 2541,
+      "uniqueSentenceIdCount": 1247,
+      "files": [
+        "audit/v1.3-context-human-quality/risk-targeted-review.json",
+        "audit/v1.3-context-human-quality/random-semantic-review-pass1.json",
+        "audit/v1.3-context-human-quality/independent-validation.json",
+        "audit/v1.3-context-human-quality/r3-risk-candidate-baseline.json"
+      ]
+    },
+    "r5PhaseA": {
+      "fileCount": 5,
+      "rawSentenceIdCount": 1533,
+      "uniqueSentenceIdCount": 582,
+      "files": [
+        "audit/v1.3-context-final-semantic/phase-a-candidates.json",
+        "audit/v1.3-context-final-semantic/phase-a-random-review.json",
+        "audit/v1.3-context-final-semantic/phase-a-final-semantic-review.json",
+        "audit/v1.3-context-final-semantic/mandatory-recheck-candidates.json",
+        "audit/v1.3-context-final-semantic/mandatory-recheck.json"
+      ]
+    },
+    "r5PostCuration": {
+      "fileCount": 20,
+      "rawSentenceIdCount": 9000,
+      "uniqueSentenceIdCount": 428,
+      "files": [
+        "audit/v1.3-context-final-semantic/phase-a-post-curation-attempt-1-candidates.json",
+        "audit/v1.3-context-final-semantic/phase-a-post-curation-attempt-1-review.json",
+        "audit/v1.3-context-final-semantic/phase-a-post-curation-attempt-2-candidates.json",
+        "audit/v1.3-context-final-semantic/phase-a-post-curation-attempt-2-review.json",
+        "audit/v1.3-context-final-semantic/phase-a-post-curation-attempt-3-candidates.json",
+        "audit/v1.3-context-final-semantic/phase-a-post-curation-attempt-3-review.json",
+        "audit/v1.3-context-final-semantic/phase-a-post-curation-attempt-4-candidates.json",
+        "audit/v1.3-context-final-semantic/phase-a-post-curation-attempt-4-review.json",
+        "audit/v1.3-context-final-semantic/phase-a-post-curation-attempt-5-candidates.json",
+        "audit/v1.3-context-final-semantic/phase-a-post-curation-attempt-5-review.json",
+        "audit/v1.3-context-final-semantic/phase-a-post-curation-attempt-6-candidates.json",
+        "audit/v1.3-context-final-semantic/phase-a-post-curation-attempt-6-review.json",
+        "audit/v1.3-context-final-semantic/phase-a-post-curation-attempt-7-candidates.json",
+        "audit/v1.3-context-final-semantic/phase-a-post-curation-attempt-7-review.json",
+        "audit/v1.3-context-final-semantic/phase-a-post-curation-attempt-8-candidates.json",
+        "audit/v1.3-context-final-semantic/phase-a-post-curation-attempt-8-review.json",
+        "audit/v1.3-context-final-semantic/phase-a-post-curation-candidates.json",
+        "audit/v1.3-context-final-semantic/phase-a-post-curation-final-candidates.json",
+        "audit/v1.3-context-final-semantic/phase-a-post-curation-final-review.json",
+        "audit/v1.3-context-final-semantic/phase-a-post-curation-review.json"
+      ]
+    },
+    "r5BlindAttempts": {
+      "fileCount": 32,
+      "rawSentenceIdCount": 4800,
+      "uniqueSentenceIdCount": 311,
+      "files": [
+        "audit/v1.3-context-final-semantic/blind-validation-attempt-1-candidates.json",
+        "audit/v1.3-context-final-semantic/blind-validation-attempt-1.json",
+        "audit/v1.3-context-final-semantic/blind-validation-attempt-10-candidates.json",
+        "audit/v1.3-context-final-semantic/blind-validation-attempt-10.json",
+        "audit/v1.3-context-final-semantic/blind-validation-attempt-11-candidates.json",
+        "audit/v1.3-context-final-semantic/blind-validation-attempt-11.json",
+        "audit/v1.3-context-final-semantic/blind-validation-attempt-12-candidates.json",
+        "audit/v1.3-context-final-semantic/blind-validation-attempt-12.json",
+        "audit/v1.3-context-final-semantic/blind-validation-attempt-13-candidates.json",
+        "audit/v1.3-context-final-semantic/blind-validation-attempt-13.json",
+        "audit/v1.3-context-final-semantic/blind-validation-attempt-14-candidates.json",
+        "audit/v1.3-context-final-semantic/blind-validation-attempt-14.json",
+        "audit/v1.3-context-final-semantic/blind-validation-attempt-15-candidates.json",
+        "audit/v1.3-context-final-semantic/blind-validation-attempt-15.json",
+        "audit/v1.3-context-final-semantic/blind-validation-attempt-2-candidates.json",
+        "audit/v1.3-context-final-semantic/blind-validation-attempt-2.json",
+        "audit/v1.3-context-final-semantic/blind-validation-attempt-3-candidates.json",
+        "audit/v1.3-context-final-semantic/blind-validation-attempt-3.json",
+        "audit/v1.3-context-final-semantic/blind-validation-attempt-4-candidates.json",
+        "audit/v1.3-context-final-semantic/blind-validation-attempt-4.json",
+        "audit/v1.3-context-final-semantic/blind-validation-attempt-5-candidates.json",
+        "audit/v1.3-context-final-semantic/blind-validation-attempt-5.json",
+        "audit/v1.3-context-final-semantic/blind-validation-attempt-6-candidates.json",
+        "audit/v1.3-context-final-semantic/blind-validation-attempt-6.json",
+        "audit/v1.3-context-final-semantic/blind-validation-attempt-7-candidates.json",
+        "audit/v1.3-context-final-semantic/blind-validation-attempt-7.json",
+        "audit/v1.3-context-final-semantic/blind-validation-attempt-8-candidates.json",
+        "audit/v1.3-context-final-semantic/blind-validation-attempt-8.json",
+        "audit/v1.3-context-final-semantic/blind-validation-attempt-9-candidates.json",
+        "audit/v1.3-context-final-semantic/blind-validation-attempt-9.json",
+        "audit/v1.3-context-final-semantic/blind-validation-candidates.json",
+        "audit/v1.3-context-final-semantic/blind-validation.json"
+      ]
+    }
+  },
+  "integrity": {
+    "selectedHashBefore": "f7902451a2e8b60c78af649c2cdd8b570bf74b5de7aee524bef6af61add24596",
+    "curationHashBefore": "446e9f134e873fbd4a036fa815827d796876ea09ef3db3adda9c0edda69f8410",
+    "priorPassFilterUsed": false,
+    "machineScoreFilterUsed": false
+  }
+}

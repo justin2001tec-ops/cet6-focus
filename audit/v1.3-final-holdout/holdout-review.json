@@ -1,0 +1,15 @@
+{
+  "round": "v1.3 Final Holdout Validation",
+  "status": "HOLDOUT_EXHAUSTED",
+  "reviewPerformed": false,
+  "sampleSize": 0,
+  "passCount": null,
+  "minorFailCount": null,
+  "majorFailCount": null,
+  "severeFailCount": null,
+  "passRatePercent": null,
+  "rows": [],
+  "stopReason": "All 990 currently selected sentence IDs were present in historical candidate/review artifacts; no true unseen selected sentence remained. Per handoff Path C, semantic review did not begin.",
+  "noAutomaticCuration": true,
+  "noSeedResample": true
+}
