@@ -14,7 +14,7 @@ This report closes the seven-phase v1.4 implementation requested by the Master H
 
 ## R1 Acceptance Corrections
 
-R1 was limited to acceptance fixes on the existing PR. The initial GitHub E2E attempt failed because the workflow declared `webkit-motion` but installed Chromium only; the workflow now installs both Chromium and WebKit and allows the E2E job 20 minutes. The following corrections were then independently exercised locally:
+R1 was limited to acceptance fixes on the existing PR. The initial GitHub E2E attempt failed because the workflow declared `webkit-motion` but installed Chromium only; the workflow now installs both Chromium and WebKit and allows the E2E job 20 minutes. The first WebKit-enabled remote rerun then exposed a Safari CI fixture issue: IndexedDB was initialized from a JSON MIME document. The fixture now seeds from a same-origin HTML document with the app entry blocked, preserving the real product WebKit checks. The following corrections were then independently exercised locally:
 
 - `LazyMotion` now uses `domMax` with `LayoutGroup`, and Vocabulary → Word Detail shared identity is asserted through a real full-profile transition plus a reduced fallback.
 - App reduced motion and the OS preference resolve to one effective profile used by MotionConfig, CSS, route, shared layout, press, and sheet behavior.

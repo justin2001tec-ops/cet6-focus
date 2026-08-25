@@ -12,6 +12,7 @@ R1 is an acceptance-fix pass on PR #4, not a new design or feature round. The v1
 ## Acceptance corrections
 
 - CI now installs both Chromium and WebKit for the actual Playwright projects; the E2E job timeout is 20 minutes.
+- The first remote WebKit rerun exposed a Safari CI fixture issue: IndexedDB was being opened from a JSON MIME document. The fixture now uses a same-origin HTML document with the app entry blocked while it seeds; this is test-isolation infrastructure only, not a production behavior bypass.
 - `domMax` is used by `LazyMotion` so shared `layoutId` behavior is supported by the configured feature bundle.
 - App setting and OS preference resolve to one effective reduced profile across MotionConfig, CSS, route, shared-layout, press, and sheet behavior.
 - Background transitions use decode-before-add, generation guards, a two-layer maximum, and explicit settled cleanup.

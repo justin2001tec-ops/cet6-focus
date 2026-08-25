@@ -17,9 +17,12 @@ async function completeOnboarding(page: Page): Promise<void> {
 }
 
 async function seedWarmDatabase(page: Page): Promise<void> {
-  await page.goto('/data/cet6-vocab.v1.json', { waitUntil: 'commit' })
-  await page.evaluate(async () => {
-    const words = (await (await fetch('/data/cet6-vocab.v1.json')).json()).slice(0, 8) as Array<Record<string, unknown>>
+  const response = await page.request.get('/data/cet6-vocab.v1.json')
+  const words = ((await response.json()) as Array<Record<string, unknown>>).slice(0, 8)
+  await page.route('**/src/main.tsx*', (route) => route.abort())
+  try {
+    await page.goto('/?motion-seed=1', { waitUntil: 'domcontentloaded' })
+    await page.evaluate(async (seedWords: Array<Record<string, unknown>>) => {
     const now = new Date().toISOString()
     await new Promise<void>((resolve, reject) => {
       const request = indexedDB.open('cet6-focus', 2)
@@ -50,7 +53,7 @@ async function seedWarmDatabase(page: Page): Promise<void> {
         const card = (wordId: string) => ({ wordId, due: now, fsrsCard: { due: now, stability: 0, difficulty: 0, elapsedDays: 0, scheduledDays: 0, learningSteps: 0, reps: 0, lapses: 0, state: 0 }, starred: false, spellingWrongCount: 0, createdAt: now, updatedAt: now })
         const wordsStore = transaction.objectStore('words')
         const cardsStore = transaction.objectStore('cards')
-        for (const word of words) {
+        for (const word of seedWords) {
           wordsStore.put({ ...word, archived: false })
           cardsStore.put(card(String(word.id)))
         }
@@ -58,8 +61,11 @@ async function seedWarmDatabase(page: Page): Promise<void> {
         transaction.oncomplete = () => { database.close(); resolve() }
         transaction.onerror = () => reject(transaction.error ?? new Error('Warm database seed failed'))
       }
-    })
-  })
+      })
+    }, words)
+  } finally {
+    await page.unroute('**/src/main.tsx*')
+  }
 }
 
 async function bootForMotion(page: Page, projectName: string): Promise<void> {
