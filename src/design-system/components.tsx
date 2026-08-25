@@ -68,8 +68,10 @@ export const PressableLink = forwardRef<HTMLAnchorElement, PressableLinkProps>(f
   )
 })
 
-export function ReadingSurface({ children, className = '', ...props }: HTMLAttributes<HTMLElement> & { children: ReactNode }) {
-  return <section {...props} className={`reading-surface ${className}`}>{children}</section>
+export type ReadingSurfaceTone = 'default' | 'learning'
+
+export function ReadingSurface({ children, className = '', tone = 'default', ...props }: Omit<HTMLAttributes<HTMLElement>, 'className'> & { children: ReactNode; className?: string; tone?: ReadingSurfaceTone }) {
+  return <section {...props} data-reading-tone={tone} className={`reading-surface ${className}`}>{children}</section>
 }
 
 export function GlassBar({ children, className = '', ...props }: HTMLAttributes<HTMLDivElement> & { children: ReactNode }) {

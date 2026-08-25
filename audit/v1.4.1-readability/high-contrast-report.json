@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "media": "forced-colors: active",
+  "surface": { "background": "Canvas", "text": "CanvasText", "accent": "LinkText", "separator": "CanvasText", "borderWidth": "2px", "boxShadow": "none" },
+  "controls": "audio, bookmark, stage actions, and learning controls expose visible boundaries",
+  "focus": "primary continuation action exposes a >=2px focus outline",
+  "engines": { "chromium": "PASS", "mobileChromium": "PASS", "webkit": "PASS" }
+}

@@ -14,8 +14,11 @@ interface LearningWordHeaderProps {
 }
 
 export function LearningWordHeader({ word, starred, compact = false, onSpeak, onToggleStar }: LearningWordHeaderProps) {
+  const length = [...word.word].length
+  const lengthClass = length <= 10 ? 'short' : length <= 14 ? 'medium' : length <= 18 ? 'long' : 'very-long'
+
   return (
-    <header className={`learning-word-header ${compact ? 'learning-word-header--compact' : ''}`}>
+    <header className={`learning-word-header learning-word-header--length-${lengthClass} ${compact ? 'learning-word-header--compact' : ''}`}>
       <div className="learning-word-header__copy">
         <h1>{word.word}</h1>
         <div className="learning-word-header__phonetic">
@@ -79,7 +82,7 @@ export function ContextStage({ word, choice, starred, onSpeak, onToggleStar, onB
   return (
     <section className="learning-stage learning-stage--context" aria-labelledby="learning-context-title">
       <LearningWordHeader word={word} starred={starred} compact onSpeak={onSpeak} onToggleStar={onToggleStar} />
-      <ReadingSurface className="learning-reading-surface learning-context-surface">
+      <ReadingSurface tone="learning" className="learning-reading-surface learning-context-surface">
         <p id="learning-context-title" className="learning-section-kicker">语境提示</p>
         <p className="learning-example learning-example--large">{highlightExample(example.en, word.word)}</p>
         <p className="learning-context-surface__note">再读一遍，看看它在句子里承担什么含义。</p>
@@ -108,7 +111,7 @@ export function MeaningStage({ word, starred, onSpeak, onToggleStar, onBack, onE
   return (
     <section className="learning-stage learning-stage--meaning" aria-labelledby="learning-meaning-title">
       <LearningWordHeader word={word} starred={starred} compact onSpeak={onSpeak} onToggleStar={onToggleStar} />
-      <ReadingSurface className="learning-reading-surface learning-meaning-surface">
+      <ReadingSurface tone="learning" className="learning-reading-surface learning-meaning-surface">
         <p id="learning-meaning-title" className="learning-section-kicker">核心词义</p>
         <p className="learning-core-meaning">{normalizeText(word.meaningZh[0])}</p>
         {word.pos?.length ? <p className="learning-pos">{word.pos.join(' · ')}</p> : null}
@@ -138,7 +141,7 @@ export function DetailStage({ word, starred, onSpeak, onToggleStar, onBack, onCo
   return (
     <section className="learning-stage learning-stage--detail" aria-labelledby="learning-detail-title">
       <LearningWordHeader word={word} starred={starred} compact onSpeak={onSpeak} onToggleStar={onToggleStar} />
-      <ReadingSurface className="learning-reading-surface learning-detail-surface">
+      <ReadingSurface tone="learning" className="learning-reading-surface learning-detail-surface">
         <p id="learning-detail-title" className="learning-section-kicker">扩展理解</p>
         <p className="learning-core-meaning learning-core-meaning--detail">{normalizeText(word.meaningZh[0])}</p>
         {extraMeanings.length > 0 && <DetailBlock label="更多中文义"><ul>{extraMeanings.map((meaning) => <li key={meaning}>{normalizeText(meaning)}</li>)}</ul></DetailBlock>}

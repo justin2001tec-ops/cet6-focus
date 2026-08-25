@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "viewport": "390x844",
+  "emergencyWrapPolicy": "break-word only for >18-character tier; no overflow-wrap:anywhere in the learning header",
+  "words": [
+    { "word": "abnormal", "length": 8, "tier": "short", "observedFont": "35.1px", "wrap": "normal", "result": "PASS" },
+    { "word": "characteristic", "length": 13, "tier": "medium", "observedFont": "30px", "wrap": "normal", "result": "PASS" },
+    { "word": "extraordinary", "length": 13, "tier": "medium", "observedFont": "30px", "wrap": "normal", "result": "PASS" },
+    { "word": "acknowledgement", "length": 15, "tier": "long", "observedFont": "24.18px", "wrap": "normal", "result": "PASS" },
+    { "word": "environmentally", "length": 16, "tier": "long", "observedFont": "24.18px", "wrap": "normal", "result": "PASS" },
+    { "word": "readabilityfixturelongword", "length": 27, "tier": "very-long", "observedFont": "21.84px", "wrap": "break-word", "result": "PASS" }
+  ],
+  "assertions": ["heading scrollWidth <= clientWidth", "document scrollWidth <= clientWidth + 1", "CTA remains visible", "Chromium, Mobile Chromium, and WebKit all pass"]
+}
