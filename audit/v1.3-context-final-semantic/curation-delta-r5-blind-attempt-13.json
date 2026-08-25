@@ -1,0 +1,68 @@
+{
+  "round": 5,
+  "source": "Round 5 blind validation attempt 13",
+  "reviewed": 100,
+  "rejectCount": 4,
+  "severeInappropriateCount": 1,
+  "appendedCount": 4,
+  "appended": [
+    {
+      "word": "cancer",
+      "sentenceId": 8510311,
+      "categories": [
+        "medical-heavy",
+        "death-heavy",
+        "public-controversy"
+      ],
+      "reason": "A public figure dying of lung cancer combines death, personal medical illness, and celebrity context that is unsuitable as a neutral example for cancer.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "hatred",
+      "sentenceId": 12807966,
+      "categories": [
+        "hate",
+        "public-controversy"
+      ],
+      "reason": "Kabyles, Jews, abuses, racism, and human stupidity create a severe ethnic-hate and historical-trauma context for hatred.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "solution",
+      "sentenceId": 10320649,
+      "categories": [
+        "political-heavy",
+        "public-controversy"
+      ],
+      "reason": "Israel's two-state solution and abolition claim place solution in a live geopolitical dispute rather than a neutral default context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "ward",
+      "sentenceId": 8994395,
+      "categories": [
+        "medical-heavy",
+        "context-dependent"
+      ],
+      "reason": "Visiting someone in a psychiatric ward is a sensitive mental-health setting that is unsuitable as a neutral default example for ward.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    }
+  ],
+  "before": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 873
+  },
+  "after": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 877
+  },
+  "noReplacementAuthored": true
+}

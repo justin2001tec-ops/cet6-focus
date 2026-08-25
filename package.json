@@ -16,8 +16,13 @@
     "test:e2e:serial": "playwright test --workers=1 --timeout=60000",
     "test:e2e:presentation": "playwright test tests/e2e/presentation.spec.ts --project=mobile --workers=1 --reporter=list",
     "capture:bbdcd": "tsx scripts/capture-bbdcd-v1.2.mjs",
+    "capture:v1.3": "node scripts/capture-v1.3-learning.mjs",
+    "capture:context-quality": "node scripts/capture-v1.3-context-quality.mjs",
     "capture:ios26": "tsx scripts/capture-ios26-screenshots.mjs",
-    "vocab:build": "tsx scripts/build-vocabulary.ts",
+    "context:audit": "tsx scripts/build-context-audit.ts",
+    "context:human-audit": "tsx scripts/build-context-human-quality.ts",
+    "examples:build": "tsx scripts/build-examples.ts && pnpm context:audit",
+    "vocab:build": "pnpm examples:build && tsx scripts/build-vocabulary.ts && pnpm context:human-audit",
     "vocab:validate": "tsx scripts/validate-vocabulary.ts"
   },
   "dependencies": {

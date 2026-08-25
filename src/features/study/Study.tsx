@@ -1,43 +1,71 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { Bookmark, Check, CircleHelp, Keyboard, Pause, RotateCcw, Sparkles, Undo2, Volume2, X } from 'lucide-react'
+import { HelpCircle, Undo2, X } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { useApp } from '@/app/providers'
-import { AudioButton, PageHeader } from '@/components/AppShell'
 import { EmptyState } from '@/components/States'
-import { Badge, Button, IconButton } from '@/components/ui'
+import { IconButton } from '@/components/ui'
 import { createSession, finishSession, getCardsByIds, getQueue, getWordsByIds, recordReview, toggleStar, undoLastReview } from '@/db/db'
-import { formatDue } from '@/lib/dates'
-import { previewIntervals, scheduleCard } from '@/lib/fsrs'
+import { scheduleCard } from '@/lib/fsrs'
 import { speakWord } from '@/lib/speech'
-import type { LearningCard, QueueItem, RatingValue, StudySessionRecord, Word } from '@/types'
+import type { LearningCard, QueueItem, StudySessionRecord, Word } from '@/types'
+import {
+  ContextStage,
+  DetailStage,
+  LearningComplete,
+  LearningAtmosphere,
+  LearningStageLoading,
+  LearningWordHeader,
+  MeaningStage,
+  RecognitionActions,
+} from '@/features/study/LearningStages'
+import {
+  hasLearningDetails,
+  nextLearningState,
+  recognitionToRating,
+  type LearningPresentationState,
+  type RecognitionChoice,
+} from '@/features/study/learning'
 
 interface StudyProps { mode: 'study' | 'review' | 'weak'; onComplete?: () => void }
 interface StudyItem { queue: QueueItem; word: Word; card: LearningCard }
-
-const ratingOptions: Array<{ rating: RatingValue; key: string; label: string; tone: string }> = [
-  { rating: 1, key: '1', label: '忘记', tone: 'again' },
-  { rating: 2, key: '2', label: '困难', tone: 'hard' },
-  { rating: 3, key: '3', label: '良好', tone: 'good' },
-  { rating: 4, key: '4', label: '轻松', tone: 'easy' },
-]
 
 export function Study({ mode, onComplete }: StudyProps) {
   const navigate = useNavigate()
   const { settings, refresh, showNotice } = useApp()
   const [items, setItems] = useState<StudyItem[]>([])
   const [index, setIndex] = useState(0)
-  const [revealed, setRevealed] = useState(false)
+  const [presentation, setPresentation] = useState<LearningPresentationState>('recall')
+  const [recognition, setRecognition] = useState<RecognitionChoice | null>(null)
   const [loading, setLoading] = useState(true)
   const [session, setSession] = useState<StudySessionRecord | null>(null)
-  const cardStartedAt = useRef(Date.now())
   const [completed, setCompleted] = useState(false)
   const [ratedStack, setRatedStack] = useState<string[]>([])
   const [ratingBusy, setRatingBusy] = useState(false)
+  const [showHelp, setShowHelp] = useState(false)
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
+  const cardStartedAt = useRef(Date.now())
   const ratingInFlight = useRef(false)
   const queueSettings = useMemo(() => ({ dailyNewWords: settings.dailyNewWords }), [settings.dailyNewWords])
+  const reducedMotion = settings.reducedMotion || prefersReducedMotion
+
+  useEffect(() => {
+    const media = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const update = () => setPrefersReducedMotion(media.matches)
+    update()
+    media.addEventListener?.('change', update)
+    return () => media.removeEventListener?.('change', update)
+  }, [])
 
   useEffect(() => {
     let active = true
+    setItems([])
+    setIndex(0)
+    setPresentation('recall')
+    setRecognition(null)
+    setCompleted(false)
+    setRatedStack([])
+    setSession(null)
+    cardStartedAt.current = Date.now()
     setLoading(true)
     getQueue(mode, queueSettings).then(async (queue) => {
       const ids = queue.map((item) => item.wordId)
@@ -60,32 +88,39 @@ export function Study({ mode, onComplete }: StudyProps) {
   }, [session])
 
   const current = items[index]
-  const preview = useMemo(() => current ? previewIntervals(current.card.fsrsCard, new Date(), settings.targetRetention) : null, [current, settings.targetRetention])
 
   useEffect(() => {
-    if (!current || !settings.autoplayPronunciation || !revealed) return
-    const timer = window.setTimeout(() => speakWord(current.word.word, settings.pronunciation), 120)
+    if (!current || !settings.autoplayPronunciation || presentation !== 'recall') return
+    const timer = window.setTimeout(() => speakWord(current.word.word, settings.pronunciation), 140)
     return () => window.clearTimeout(timer)
-  }, [current, revealed, settings.autoplayPronunciation, settings.pronunciation])
+  }, [current, presentation, settings.autoplayPronunciation, settings.pronunciation])
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
       const target = event.target as HTMLElement | null
-      if (target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.tagName === 'SELECT' || target.isContentEditable)) return
-      if (event.key === ' ') {
+      if (target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.tagName === 'SELECT' || target.isContentEditable || target.closest('button,a'))) return
+      if (event.key === '?') {
         event.preventDefault()
-        if (!revealed) setRevealed(true)
-      } else if (revealed && ['1', '2', '3', '4'].includes(event.key)) {
+        setShowHelp((value) => !value)
+        return
+      }
+      if (event.key === ' ' || event.key === 'Enter') {
         event.preventDefault()
-        void rate(Number(event.key) as RatingValue)
+        advancePresentation()
+      } else if (presentation === 'recall' && ['1', '2', '3'].includes(event.key)) {
+        event.preventDefault()
+        chooseRecognition(event.key === '1' ? 'known' : event.key === '2' ? 'fuzzy' : 'unknown')
       } else if (event.key.toLowerCase() === 'p' && current) {
+        event.preventDefault()
         speakWord(current.word.word, settings.pronunciation)
       } else if (event.key.toLowerCase() === 's' && current) {
-        void toggleStar(current.word.id)
-        setItems((existing) => existing.map((item) => item.word.id === current.word.id ? { ...item, card: { ...item.card, starred: !item.card.starred } } : item))
+        event.preventDefault()
+        void toggleCurrentStar()
       } else if (event.key.toLowerCase() === 'z') {
+        event.preventDefault()
         void undo()
       } else if (event.key === 'Escape') {
+        event.preventDefault()
         navigate('/')
       }
     }
@@ -93,29 +128,59 @@ export function Study({ mode, onComplete }: StudyProps) {
     return () => window.removeEventListener('keydown', onKeyDown)
   })
 
-  async function rate(rating: RatingValue) {
-    if (!current || !session || !revealed || ratingInFlight.current) return
+  function chooseRecognition(choice: Exclude<RecognitionChoice, 'mastered'>) {
+    if (!current || ratingBusy) return
+    setRecognition(choice)
+    setPresentation(nextLearningState(choice, current.word))
+  }
+
+  function advancePresentation() {
+    if (ratingBusy || !recognition) return
+    if (presentation === 'context') {
+      setPresentation('meaning')
+    } else if (presentation === 'meaning') {
+      if (current && hasLearningDetails(current.word)) setPresentation('detail')
+      else void rate()
+    } else if (presentation === 'detail') {
+      void rate()
+    }
+  }
+
+  async function toggleCurrentStar() {
+    if (!current) return
+    const next = await toggleStar(current.word.id)
+    if (next) setItems((existing) => existing.map((item) => item.word.id === current.word.id ? { ...item, card: next } : item))
+  }
+
+  async function rate() {
+    if (!current || !session || !recognition || ratingInFlight.current) return
     ratingInFlight.current = true
     setRatingBusy(true)
+    const currentIndex = index
     try {
       const before = current.card
+      const rating = recognitionToRating[recognition]
       const result = scheduleCard(before.fsrsCard, rating, new Date(), settings.targetRetention)
       const after: LearningCard = { ...before, due: result.card.due, fsrsCard: result.card, updatedAt: new Date().toISOString() }
       await recordReview({ wordId: before.wordId, sessionId: session.id, rating, before, after, durationMs: Math.max(0, Date.now() - cardStartedAt.current) })
       await refresh()
-      setItems((existing) => existing.map((item, itemIndex) => itemIndex === index ? { ...item, card: after } : item))
+      setItems((existing) => existing.map((item, itemIndex) => itemIndex === currentIndex ? { ...item, card: after } : item))
       setRatedStack((existing) => [...existing, before.wordId])
-      if (index >= items.length - 1) {
+      setPresentation('transitioning')
+      await waitForMotion(reducedMotion)
+      if (currentIndex >= items.length - 1) {
         await finishSession(session.id)
-        setCompleted(true)
         await refresh()
+        setCompleted(true)
       } else {
-        setIndex((existing) => existing + 1)
-        setRevealed(false)
+        setIndex(currentIndex + 1)
+        setRecognition(null)
+        setPresentation('recall')
         cardStartedAt.current = Date.now()
       }
     } catch {
-      showNotice('评分保存失败，请检查本地存储后重试。')
+      showNotice('学习记录保存失败，请检查本地存储后重试。')
+      setPresentation(recognition ? nextLearningState(recognition, current.word) : 'recall')
     } finally {
       ratingInFlight.current = false
       setRatingBusy(false)
@@ -123,41 +188,131 @@ export function Study({ mode, onComplete }: StudyProps) {
   }
 
   async function undo() {
-    if (!session || ratedStack.length === 0) return
+    if (!session || ratedStack.length === 0 || ratingBusy) return
     const log = await undoLastReview(session.id)
     if (!log) return
     const restoredIndex = items.findIndex((item) => item.word.id === log.wordId)
     setItems((existing) => existing.map((item) => item.word.id === log.wordId ? { ...item, card: { ...item.card, due: log.before.due, fsrsCard: log.before } } : item))
     setIndex(restoredIndex >= 0 ? restoredIndex : Math.max(0, index - 1))
-    setRevealed(false)
+    setRecognition(null)
+    setPresentation('recall')
     setCompleted(false)
     setRatedStack((existing) => existing.slice(0, -1))
     cardStartedAt.current = Date.now()
     await refresh()
   }
 
-  if (loading) return <div className="page page--center"><div className="loading-line" />正在整理今天的队列…</div>
-  if (completed) return <StudyComplete mode={mode} count={items.length} onUndo={ratedStack.length ? () => void undo() : undefined} onContinue={onComplete} onAgain={() => { setIndex(0); setCompleted(false); setRatedStack([]); setRevealed(false); cardStartedAt.current = Date.now() }} onHome={() => navigate('/')} />
-  if (!current) return <div className="page"><PageHeader eyebrow={mode === 'review' ? 'Review' : 'Study'} title={mode === 'review' ? '现在没有到期复习。' : '今天的学习队列已经清空。'} description="把这一点空白留给之后的自己。你也可以去听写或整理词库。" /><EmptyState title="没有需要立即处理的卡片" description={mode === 'review' ? '新的到期词会根据 FSRS 自动出现。' : '如果想继续，可以从词库或薄弱词开始专项练习。'} action={<div className="empty-state__actions"><Button onClick={() => navigate('/dictation')}><Volume2 size={16} /> 去听写</Button><Button variant="soft" onClick={() => navigate('/words')}>浏览词库</Button></div>} /></div>
+  function resetRound() {
+    setIndex(0)
+    setCompleted(false)
+    setRatedStack([])
+    setRecognition(null)
+    setPresentation('recall')
+    cardStartedAt.current = Date.now()
+  }
+
+  const modeLabel = mode === 'review' ? '到期复习' : mode === 'weak' ? '薄弱词强化' : '今日学习'
+  const progress = items.length ? Math.round(((completed ? items.length : index) / items.length) * 100) : 0
+  const shellClass = `learning-shell learning-shell--${presentation} ${reducedMotion ? 'learning-shell--reduced-motion' : ''}`
+
+  if (loading) return <div className="learning-shell learning-shell--loading"><LearningAtmosphere /><div className="learning-shell__inner"><LearningStageLoading /></div></div>
 
   return (
-    <div className="page page--study">
-      <header className="study-toolbar"><div><p className="eyebrow">{mode === 'review' ? '到期复习' : mode === 'weak' ? '薄弱词强化' : '今日学习'}</p><div className="study-progress"><strong>{index + 1}</strong><span>/ {items.length}</span><div className="progress-track"><div className="progress-fill" style={{ width: `${((index + 1) / items.length) * 100}%` }} /></div></div></div><div className="study-toolbar__actions"><span className="keyboard-hint"><Keyboard size={15} /> Space 显示 · 1–4 评分</span>{ratedStack.length > 0 && <button type="button" className="toolbar-undo" onClick={() => void undo()}><Undo2 size={14} /> 撤销上一张</button>}<IconButton label="回到首页" onClick={() => navigate('/')}><X size={18} /></IconButton></div></header>
-      <section className={`study-card card-surface ${revealed ? 'is-revealed' : ''}`}>
-        <div className="study-card__topline"><Badge tone={current.queue.kind === 'new' ? 'blue' : current.queue.kind === 'weak' ? 'rose' : 'green'}>{current.queue.kind === 'new' ? 'NEW WORD' : current.queue.kind === 'weak' ? 'WEAK WORD' : 'DUE REVIEW'}</Badge><IconButton label={current.card.starred ? '取消重点标记' : '标记重点'} variant={current.card.starred ? 'secondary' : 'ghost'} onClick={async () => { const next = await toggleStar(current.word.id); if (next) setItems((existing) => existing.map((item) => item.word.id === current.word.id ? { ...item, card: next } : item)) }}><Bookmark size={18} fill={current.card.starred ? 'currentColor' : 'none'} /></IconButton></div>
-        <div className="study-card__body"><p className="study-card__index">{String(index + 1).padStart(2, '0')}</p><h2>{current.word.word}</h2><div className="study-card__phonetic">{current.word.phonetic || '/—/'}<AudioButton onClick={() => { const result = speakWord(current.word.word, settings.pronunciation); if (!result.ok && result.message) showNotice(result.message) }} label="播放" /></div>{!revealed ? <div className="recall-prompt"><CircleHelp size={17} /><span>先在心里回忆，再显示释义</span><Button onClick={() => setRevealed(true)}><Sparkles size={16} /> 显示释义 <span className="keycap">Space</span></Button></div> : <RevealContent word={current.word} />}</div>
-      </section>
-      {revealed && <section className="rating-panel"><div className="rating-panel__heading"><span>这次记得怎么样？</span><span className="rating-panel__undo"><button type="button" onClick={() => void undo()} disabled={!ratedStack.length || ratingBusy}><Undo2 size={14} /> Undo <span className="keycap">Z</span></button></span></div><div className="rating-grid">{ratingOptions.map((option) => <button type="button" key={option.rating} disabled={ratingBusy} className={`rating-button rating-button--${option.tone}`} onClick={() => void rate(option.rating)}><span className="rating-button__key">{option.key}</span><span>{option.label}</span><small>{preview ? formatDue(preview[option.rating]) : '—'}</small></button>)}</div></section>}
-      <footer className="study-footer"><span><Pause size={15} /> Esc 暂停</span><span><RotateCcw size={15} /> 评分后可撤销</span><span><Bookmark size={15} /> S 标记重点</span></footer>
+    <div className={shellClass} data-learning-mode={mode} data-learning-state={presentation}>
+      <LearningAtmosphere />
+      <div className="learning-shell__inner">
+        {items.length > 0 && <LearningTopbar modeLabel={modeLabel} progress={progress} index={index} total={items.length} completed={completed} canUndo={ratedStack.length > 0} onUndo={() => void undo()} onHelp={() => setShowHelp(true)} onExit={() => navigate('/')} />}
+        {completed ? (
+          <LearningComplete mode={mode} count={items.length} onUndo={ratedStack.length ? () => void undo() : undefined} onContinue={onComplete} onAgain={resetRound} onHome={() => navigate('/')} />
+        ) : current ? (
+          <>
+            {presentation === 'recall' && <RecallStage item={current} recognition={recognition} disabled={ratingBusy} onChoose={chooseRecognition} onSpeak={() => speakWord(current.word.word, settings.pronunciation)} onToggleStar={() => void toggleCurrentStar()} />}
+            {presentation === 'context' && recognition && <ContextStage word={current.word} choice={recognition} starred={current.card.starred} onSpeak={() => speakWord(current.word.word, settings.pronunciation)} onToggleStar={() => void toggleCurrentStar()} onBack={() => { setRecognition(null); setPresentation('recall') }} onContinue={() => setPresentation('meaning')} />}
+            {presentation === 'meaning' && recognition && <MeaningStage word={current.word} starred={current.card.starred} onSpeak={() => speakWord(current.word.word, settings.pronunciation)} onToggleStar={() => void toggleCurrentStar()} onBack={() => { setRecognition(null); setPresentation('recall') }} onExpand={() => setPresentation('detail')} onConfirm={() => void rate()} />}
+            {presentation === 'detail' && recognition && <DetailStage word={current.word} starred={current.card.starred} onSpeak={() => speakWord(current.word.word, settings.pronunciation)} onToggleStar={() => void toggleCurrentStar()} onBack={() => setPresentation('meaning')} onConfirm={() => void rate()} />}
+            {presentation === 'transitioning' && <TransitionStage word={current.word} nextWord={items[index + 1]?.word} />}
+          </>
+        ) : (
+          <LearningEmpty mode={mode} onExit={() => navigate('/')} />
+        )}
+      </div>
+      {showHelp && <LearningHelp onClose={() => setShowHelp(false)} />}
     </div>
   )
 }
 
-function RevealContent({ word }: { word: Word }) {
-  return <div className="reveal-content"><div className="meaning-list">{word.pos?.length ? <span className="pos-label">{word.pos.join(' · ')}</span> : null}{word.meaningZh.slice(0, 4).map((meaning) => <p key={meaning}>{meaning}</p>)}</div>{word.definitionEn?.length ? <div className="word-detail-block"><span>English definition</span><p>{word.definitionEn[0]}</p></div> : null}{word.examples?.length ? <div className="word-detail-block"><span>Example</span><p>{word.examples[0].en}</p>{word.examples[0].zh && <small>{word.examples[0].zh}</small>}</div> : <div className="word-detail-block"><span>Study cue</span><p>把这个词放回一个真实句子里，再继续评分。</p></div>}</div>
+function RecallStage({ item, recognition, disabled, onChoose, onSpeak, onToggleStar }: {
+  item: StudyItem
+  recognition: RecognitionChoice | null
+  disabled: boolean
+  onChoose: (choice: Exclude<RecognitionChoice, 'mastered'>) => void
+  onSpeak: () => void
+  onToggleStar: () => void
+}) {
+  return (
+    <section className="learning-stage learning-stage--recall" aria-labelledby="learning-recall-title">
+      <LearningWordHeader word={item.word} starred={item.card.starred} onSpeak={onSpeak} onToggleStar={onToggleStar} />
+      <div className="learning-recall__prompt">
+        <p id="learning-recall-title" className="learning-section-kicker">想一想，再判断</p>
+      </div>
+      <RecognitionActions selected={recognition} disabled={disabled} onChoose={onChoose} />
+    </section>
+  )
 }
 
-function StudyComplete({ mode, count, onUndo, onContinue, onAgain, onHome }: { mode: StudyProps['mode']; count: number; onUndo?: () => void; onContinue?: () => void; onAgain: () => void; onHome: () => void }) {
-  const continueLabel = mode === 'review' ? '继续今日学习' : '进入听写强化'
-  return <div className="complete-page"><div className="complete-mark"><Check size={25} /></div><p className="eyebrow">{mode === 'review' ? 'Review complete' : 'Today complete'}</p><h1>这一段，完成了。</h1><p>你处理了 {count} 张卡片。下一次复习时间已经交给 FSRS 安排。</p><div className="complete-page__actions">{onUndo && <Button variant="ghost" onClick={onUndo}><Undo2 size={16} /> 撤销上一张</Button>}{onContinue ? <Button onClick={onContinue}>{continueLabel}</Button> : <Button onClick={onHome}>回到今日</Button>}<Button variant="soft" onClick={onAgain}>再来一轮</Button></div></div>
+function TransitionStage({ word, nextWord }: { word: Word; nextWord?: Word }) {
+  return (
+    <section className="learning-stage learning-stage--transitioning" aria-live="polite">
+      <div className="learning-transition-words">
+        <span className="learning-transition-word learning-transition-word--current">{word.word}</span>
+        {nextWord && <span className="learning-transition-word learning-transition-word--next">{nextWord.word}</span>}
+      </div>
+      <p>{nextWord ? '准备下一个。' : '保存这一刻。'}</p>
+    </section>
+  )
+}
+
+function LearningTopbar({ modeLabel, progress, index, total, completed, canUndo, onUndo, onHelp, onExit }: { modeLabel: string; progress: number; index: number; total: number; completed: boolean; canUndo: boolean; onUndo: () => void; onHelp: () => void; onExit: () => void }) {
+  return (
+    <header className="learning-topbar">
+      <IconButton label="退出学习" onClick={onExit}><X size={19} /></IconButton>
+      <div className="learning-progress" aria-label={`${modeLabel}进度`}>
+        <span className="learning-progress__mode">{modeLabel}</span>
+        <div className="learning-progress__track" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={progress}><span style={{ width: `${progress}%` }} /></div>
+        <span className="learning-progress__count">{completed ? '完成' : `${index + 1} / ${total}`}</span>
+      </div>
+      <div className="learning-topbar__actions">
+        {canUndo && <button type="button" className="learning-undo" onClick={onUndo}><Undo2 size={15} /> 撤销</button>}
+        <IconButton label="查看键盘帮助" onClick={onHelp}><HelpCircle size={19} /></IconButton>
+      </div>
+    </header>
+  )
+}
+
+function LearningHelp({ onClose }: { onClose: () => void }) {
+  return (
+    <div className="learning-help-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose() }}>
+      <section className="learning-help" role="dialog" aria-modal="true" aria-labelledby="learning-help-title">
+        <div className="learning-help__header"><div><p className="learning-section-kicker">Keyboard</p><h2 id="learning-help-title">用键盘保持节奏</h2></div><IconButton label="关闭键盘帮助" onClick={onClose}><X size={18} /></IconButton></div>
+        <dl className="learning-help__list">
+          <div><dt>1 · 认识</dt><dd>能说出大意。</dd></div>
+          <div><dt>2 · 模糊</dt><dd>见过，但还不够稳。</dd></div>
+          <div><dt>3 · 不认识</dt><dd>需要重新建立记忆。</dd></div>
+          <div><dt>Space / Enter</dt><dd>继续或展开</dd></div>
+          <div><dt>Z</dt><dd>撤销上一词</dd></div>
+          <div><dt>P · S · Esc</dt><dd>发音 · 收藏 · 退出</dd></div>
+        </dl>
+      </section>
+    </div>
+  )
+}
+
+function LearningEmpty({ mode, onExit }: { mode: StudyProps['mode']; onExit: () => void }) {
+  const title = mode === 'review' ? '现在没有到期复习。' : mode === 'weak' ? '暂时没有需要强化的词。' : '今天的学习队列已经清空。'
+  return <div className="learning-empty"><p className="learning-section-kicker">{mode === 'review' ? '到期复习' : mode === 'weak' ? '薄弱词强化' : '今日学习'}</p><h1>{title}</h1><p>把这点空白留给之后的自己。你也可以去听写或整理词库。</p><EmptyState title="没有需要立即处理的单词" description="新的学习内容会根据你的真实记录继续出现。" action={<button type="button" className="learning-empty__exit" onClick={onExit}>回到首页</button>} /></div>
+}
+
+function waitForMotion(reducedMotion: boolean): Promise<void> {
+  if (reducedMotion) return Promise.resolve()
+  return new Promise((resolve) => window.setTimeout(resolve, 240))
 }

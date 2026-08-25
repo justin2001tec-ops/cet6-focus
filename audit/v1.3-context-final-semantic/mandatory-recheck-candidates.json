@@ -1,0 +1,84 @@
+{
+  "round": "Context Final Semantic Acceptance - Round 5",
+  "sampleSize": 11,
+  "selectionPolicy": "Mandatory known-problem rows from the current selected pool; sentence-read review required before rebuild.",
+  "rows": [
+    {
+      "word": "access",
+      "sentenceId": 12197780,
+      "sentence": "You can't access an instance variable from a static method.",
+      "reviewType": "mandatory-recheck",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "famine",
+      "sentenceId": 7965372,
+      "sentence": "In the days when the judges judged, there was a famine in the land.",
+      "reviewType": "mandatory-recheck",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "dodge",
+      "sentenceId": 9944199,
+      "sentence": "He fled to Canada to dodge the draft.",
+      "reviewType": "mandatory-recheck",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "permanent",
+      "sentenceId": 11844537,
+      "sentence": "Puberty blockers for trans adolescents save lives without introducing permanent changes.",
+      "reviewType": "mandatory-recheck",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "approach",
+      "sentenceId": 11740199,
+      "sentence": "The evidence-based approach to gender-affirming care is to make it more available.",
+      "reviewType": "mandatory-recheck",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "burial",
+      "sentenceId": 10114581,
+      "sentence": "White is one of a few students whose remains were shipped home to family for burial.",
+      "reviewType": "mandatory-recheck",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "deport",
+      "sentenceId": 11986097,
+      "sentence": "You can't deport people or keep them from crossing the border without employing authoritarianism.",
+      "reviewType": "mandatory-recheck",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "condemn",
+      "sentenceId": 10111892,
+      "sentence": "Tom is unwilling to condemn a single thing about Australia's history, only Canada's.",
+      "reviewType": "mandatory-recheck",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "irritate",
+      "sentenceId": 11248348,
+      "sentence": "The chemicals are designed to irritate the mucous membranes of the eyes, nose and throat.",
+      "reviewType": "mandatory-recheck",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "industrial",
+      "sentenceId": 9969687,
+      "sentence": "What are the industrial applications of boron?",
+      "reviewType": "mandatory-recheck",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "detect",
+      "sentenceId": 11923954,
+      "sentence": "I was born with the ability to detect nearby alternate realities.",
+      "reviewType": "mandatory-recheck",
+      "semanticDecisionSource": "sentence-read"
+    }
+  ]
+}

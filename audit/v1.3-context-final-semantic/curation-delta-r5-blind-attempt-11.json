@@ -1,0 +1,31 @@
+{
+  "round": 5,
+  "source": "Round 5 blind validation attempt 11",
+  "reviewed": 100,
+  "rejectCount": 1,
+  "severeInappropriateCount": 0,
+  "appendedCount": 1,
+  "appended": [
+    {
+      "word": "solution",
+      "sentenceId": 8991008,
+      "categories": [
+        "violence",
+        "political-heavy"
+      ],
+      "reason": "Conflict and everyday violence are central to the sentence, so solution is embedded in a charged context rather than a neutral default example.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    }
+  ],
+  "before": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 867
+  },
+  "after": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 868
+  },
+  "noReplacementAuthored": true
+}

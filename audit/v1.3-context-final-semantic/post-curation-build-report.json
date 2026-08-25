@@ -1,0 +1,87 @@
+{
+  "round": 5,
+  "generatedAfterFinalBlindCuration": true,
+  "buildReport": {
+    "selectorVersion": "v3-context-quality-curation",
+    "source": "Tatoeba English CC0 sentence export",
+    "sourceFile": "data-source/examples/tatoeba/eng_sentences_CC0.tsv",
+    "totalSourceSentences": 41503,
+    "totalVocabularyWords": 2219,
+    "matchedTargetCandidates": 21655,
+    "rawCandidatePairs": 7284,
+    "rawCandidateWordCount": 1563,
+    "selectedCount": 990,
+    "rawCandidateCoverage": 0.7043713384407391,
+    "rawCandidateCoveragePercent": 70.4,
+    "qualityApprovedCoverage": 0.44614691302388465,
+    "qualityApprovedCoveragePercent": 44.6,
+    "rejectionCounts": {
+      "length": 14479,
+      "properNoun": 768,
+      "structure": 728,
+      "sourceSanity": 554,
+      "repeatedTarget": 135,
+      "rareContext": 162,
+      "qualityScore": 39,
+      "sensitiveTopic": 77,
+      "regressionQuality": 17,
+      "contextDependence": 20
+    },
+    "qualityPolicy": {
+      "tokenRange": [
+        6,
+        18
+      ],
+      "extendedTokenRange": [
+        19,
+        20
+      ],
+      "preferredTokenRange": [
+        8,
+        14
+      ],
+      "preferredCharacterRange": [
+        45,
+        120
+      ],
+      "maxRareContextTokens": 2,
+      "maxUnknownLikeContextTokens": 1,
+      "rareFrequencyThreshold": 2,
+      "unknownFrequencyThreshold": 1,
+      "minimumQualityScore": 29
+    },
+    "deterministic": true,
+    "curation": {
+      "version": 1,
+      "globalRejectCount": 30,
+      "pairRejectCount": 877,
+      "rejectedCandidateCount": 905,
+      "noFallbackCount": 349
+    }
+  },
+  "selectedCount": 990,
+  "vocabularyCount": 2219,
+  "coveragePercent": 44.6,
+  "rawCandidateCoveragePercent": 70.4,
+  "curation": {
+    "version": 1,
+    "globalRejectCount": 30,
+    "pairRejectCount": 877,
+    "rejectedCandidateCount": 905,
+    "noFallbackCount": 349
+  },
+  "source": {
+    "source": "Tatoeba English CC0 sentence export",
+    "sourceUrl": "https://downloads.tatoeba.org/exports/per_language/eng/eng_sentences_CC0.tsv.bz2",
+    "sourceFile": "data-source/examples/tatoeba/eng_sentences_CC0.tsv",
+    "license": "CC0 1.0 Universal",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attribution": "Attribution is not legally required under CC0; this project credits Tatoeba.org and its contributors for the source corpus.",
+    "retrievedAt": "2026-08-24",
+    "translationPolicy": "Examples are shipped in English only. No Chinese translations are imported or generated.",
+    "selectionPolicy": "Selector v2 chooses at most one deterministic English sentence per covered CET-6 headword; exact whole-word match; 6-18 tokens preferred, with only clear 19-20 token exceptions; 8-14 tokens and 45-120 characters preferred; simple punctuation; proper-noun, rare-context, topic-neutrality, standalone-context, and target-position scoring; severe sensitive-content rejection; no runtime network access.",
+    "provenanceFile": "data-source/examples/example-provenance.json",
+    "buildReportFile": "data-source/examples/build-report.json"
+  },
+  "noCoverageMinimumBlocker": true
+}

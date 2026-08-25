@@ -1,0 +1,18 @@
+{
+  "round": "v1.3 Final Holdout Validation",
+  "currentHead": "0bf592ccd8888f60094d427da1784cc5d3bcd473",
+  "selectedCountBefore": 990,
+  "selectedHashBefore": "f7902451a2e8b60c78af649c2cdd8b570bf74b5de7aee524bef6af61add24596",
+  "curationHashBefore": "446e9f134e873fbd4a036fa815827d796876ea09ef3db3adda9c0edda69f8410",
+  "eligibleUnseenCount": 0,
+  "sampleSize": 0,
+  "seed": 216490001,
+  "priorPassFilterUsed": false,
+  "machineScoreFilterUsed": false,
+  "postHoldoutDataMutation": false,
+  "selectedCountAfter": 990,
+  "selectedHashAfter": "f7902451a2e8b60c78af649c2cdd8b570bf74b5de7aee524bef6af61add24596",
+  "curationHashAfter": "446e9f134e873fbd4a036fa815827d796876ea09ef3db3adda9c0edda69f8410",
+  "selectedHashUnchanged": true,
+  "curationHashUnchanged": true
+}

@@ -1,0 +1,505 @@
+{
+  "round": "Context Final Semantic Acceptance - Round 5",
+  "status": "PASS",
+  "stopCondition": "Stop after final Phase A >=95% PASS / severe 0 and blind >=99% PASS / severe 0; no merge, deploy, or v1.3.0 tag.",
+  "scope": {
+    "contextOnly": true,
+    "uiFrozen": true,
+    "motionFrozen": true,
+    "fsrsFrozen": true,
+    "noCoverageMinimumBlocker": true,
+    "sourceEnglishOnly": true,
+    "noReplacementAuthored": true
+  },
+  "source": {
+    "source": "Tatoeba English CC0 sentence export",
+    "license": "CC0 1.0 Universal",
+    "sourceFile": "data-source/examples/tatoeba/eng_sentences_CC0.tsv",
+    "wordCount": 2219,
+    "selectedCount": 990,
+    "coveragePercent": 44.6,
+    "rawCandidateCoveragePercent": 70.4
+  },
+  "phaseA": {
+    "initial": {
+      "seed": 216485889,
+      "sampleSize": 300,
+      "passCount": 214,
+      "rejectCount": 86,
+      "passRatePercent": 71.3,
+      "severeInappropriateCount": 0,
+      "rationaleExactDuplicates": null,
+      "rationaleGenericCount": null,
+      "rationaleGate": null
+    },
+    "mandatory": {
+      "sampleSize": 11,
+      "passCount": 0,
+      "rejectCount": 11,
+      "passRatePercent": 0,
+      "severeInappropriateCount": 0,
+      "rationaleExactDuplicates": null,
+      "rationaleGenericCount": null,
+      "rationaleGate": null
+    },
+    "postCurationAttempts": [
+      {
+        "attempt": 1,
+        "seed": 216485891,
+        "sampleSize": 300,
+        "passCount": 206,
+        "rejectCount": 94,
+        "passRatePercent": 68.7,
+        "severeInappropriateCount": 1,
+        "rationaleExactDuplicates": null,
+        "rationaleGenericCount": null,
+        "rationaleGate": null
+      },
+      {
+        "attempt": 2,
+        "seed": 216485891,
+        "sampleSize": 300,
+        "passCount": 272,
+        "rejectCount": 28,
+        "passRatePercent": 90.7,
+        "severeInappropriateCount": 6,
+        "rationaleExactDuplicates": null,
+        "rationaleGenericCount": null,
+        "rationaleGate": null
+      },
+      {
+        "attempt": 3,
+        "seed": 216485891,
+        "sampleSize": 300,
+        "passCount": 290,
+        "rejectCount": 10,
+        "passRatePercent": 96.7,
+        "severeInappropriateCount": 1,
+        "rationaleExactDuplicates": null,
+        "rationaleGenericCount": null,
+        "rationaleGate": null
+      },
+      {
+        "attempt": 4,
+        "seed": 216485891,
+        "sampleSize": 300,
+        "passCount": 296,
+        "rejectCount": 4,
+        "passRatePercent": 98.7,
+        "severeInappropriateCount": 0,
+        "rationaleExactDuplicates": null,
+        "rationaleGenericCount": null,
+        "rationaleGate": null
+      },
+      {
+        "attempt": 5,
+        "seed": 216485891,
+        "sampleSize": 300,
+        "passCount": 297,
+        "rejectCount": 3,
+        "passRatePercent": 99,
+        "severeInappropriateCount": 0,
+        "rationaleExactDuplicates": null,
+        "rationaleGenericCount": null,
+        "rationaleGate": null
+      },
+      {
+        "attempt": 6,
+        "seed": 216485891,
+        "sampleSize": 300,
+        "passCount": 298,
+        "rejectCount": 2,
+        "passRatePercent": 99.3,
+        "severeInappropriateCount": 0,
+        "rationaleExactDuplicates": null,
+        "rationaleGenericCount": null,
+        "rationaleGate": null
+      },
+      {
+        "attempt": 7,
+        "seed": 216485891,
+        "sampleSize": 300,
+        "passCount": 299,
+        "rejectCount": 1,
+        "passRatePercent": 99.7,
+        "severeInappropriateCount": 0,
+        "rationaleExactDuplicates": null,
+        "rationaleGenericCount": null,
+        "rationaleGate": null
+      },
+      {
+        "attempt": 8,
+        "seed": 216485891,
+        "sampleSize": 300,
+        "passCount": 300,
+        "rejectCount": 0,
+        "passRatePercent": 100,
+        "severeInappropriateCount": 0,
+        "rationaleExactDuplicates": null,
+        "rationaleGenericCount": null,
+        "rationaleGate": null
+      }
+    ],
+    "final": {
+      "seed": 216485891,
+      "sampleSize": 300,
+      "passCount": 300,
+      "rejectCount": 0,
+      "passRatePercent": 100,
+      "severeInappropriateCount": 0,
+      "rationaleExactDuplicates": null,
+      "rationaleGenericCount": null,
+      "rationaleGate": null,
+      "finalArtifact": "phase-a-post-curation-final-review.json"
+    }
+  },
+  "blindValidation": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "seed": 216485893,
+        "sampleSize": 100,
+        "passCount": 73,
+        "rejectCount": 27,
+        "passRatePercent": 73,
+        "severeInappropriateCount": 1,
+        "rationaleExactDuplicates": 0,
+        "rationaleGenericCount": 0,
+        "rationaleGate": true
+      },
+      {
+        "attempt": 2,
+        "seed": 216485894,
+        "sampleSize": 100,
+        "passCount": 73,
+        "rejectCount": 27,
+        "passRatePercent": 73,
+        "severeInappropriateCount": 2,
+        "rationaleExactDuplicates": 0,
+        "rationaleGenericCount": 0,
+        "rationaleGate": true
+      },
+      {
+        "attempt": 3,
+        "seed": 216485895,
+        "sampleSize": 100,
+        "passCount": 87,
+        "rejectCount": 13,
+        "passRatePercent": 87,
+        "severeInappropriateCount": 0,
+        "rationaleExactDuplicates": 0,
+        "rationaleGenericCount": 0,
+        "rationaleGate": true
+      },
+      {
+        "attempt": 4,
+        "seed": 216485896,
+        "sampleSize": 100,
+        "passCount": 90,
+        "rejectCount": 10,
+        "passRatePercent": 90,
+        "severeInappropriateCount": 1,
+        "rationaleExactDuplicates": 0,
+        "rationaleGenericCount": 0,
+        "rationaleGate": true
+      },
+      {
+        "attempt": 5,
+        "seed": 216485897,
+        "sampleSize": 100,
+        "passCount": 93,
+        "rejectCount": 7,
+        "passRatePercent": 93,
+        "severeInappropriateCount": 1,
+        "rationaleExactDuplicates": 0,
+        "rationaleGenericCount": 0,
+        "rationaleGate": true
+      },
+      {
+        "attempt": 6,
+        "seed": 216485898,
+        "sampleSize": 100,
+        "passCount": 95,
+        "rejectCount": 5,
+        "passRatePercent": 95,
+        "severeInappropriateCount": 0,
+        "rationaleExactDuplicates": 0,
+        "rationaleGenericCount": 0,
+        "rationaleGate": true
+      },
+      {
+        "attempt": 7,
+        "seed": 216485899,
+        "sampleSize": 100,
+        "passCount": 97,
+        "rejectCount": 3,
+        "passRatePercent": 97,
+        "severeInappropriateCount": 1,
+        "rationaleExactDuplicates": 0,
+        "rationaleGenericCount": 0,
+        "rationaleGate": true
+      },
+      {
+        "attempt": 8,
+        "seed": 216485900,
+        "sampleSize": 100,
+        "passCount": 96,
+        "rejectCount": 4,
+        "passRatePercent": 96,
+        "severeInappropriateCount": 0,
+        "rationaleExactDuplicates": 0,
+        "rationaleGenericCount": 0,
+        "rationaleGate": true
+      },
+      {
+        "attempt": 9,
+        "seed": 216485901,
+        "sampleSize": 100,
+        "passCount": 98,
+        "rejectCount": 2,
+        "passRatePercent": 98,
+        "severeInappropriateCount": 0,
+        "rationaleExactDuplicates": 0,
+        "rationaleGenericCount": 0,
+        "rationaleGate": true
+      },
+      {
+        "attempt": 10,
+        "seed": 216485902,
+        "sampleSize": 100,
+        "passCount": 97,
+        "rejectCount": 3,
+        "passRatePercent": 97,
+        "severeInappropriateCount": 1,
+        "rationaleExactDuplicates": 0,
+        "rationaleGenericCount": 0,
+        "rationaleGate": true
+      },
+      {
+        "attempt": 11,
+        "seed": 216485903,
+        "sampleSize": 100,
+        "passCount": 99,
+        "rejectCount": 1,
+        "passRatePercent": 99,
+        "severeInappropriateCount": 0,
+        "rationaleExactDuplicates": 0,
+        "rationaleGenericCount": 0,
+        "rationaleGate": true
+      },
+      {
+        "attempt": 12,
+        "seed": 216485904,
+        "sampleSize": 100,
+        "passCount": 95,
+        "rejectCount": 5,
+        "passRatePercent": 95,
+        "severeInappropriateCount": 0,
+        "rationaleExactDuplicates": 0,
+        "rationaleGenericCount": 0,
+        "rationaleGate": true
+      },
+      {
+        "attempt": 13,
+        "seed": 216485905,
+        "sampleSize": 100,
+        "passCount": 96,
+        "rejectCount": 4,
+        "passRatePercent": 96,
+        "severeInappropriateCount": 1,
+        "rationaleExactDuplicates": 0,
+        "rationaleGenericCount": 0,
+        "rationaleGate": true
+      },
+      {
+        "attempt": 14,
+        "seed": 216485906,
+        "sampleSize": 100,
+        "passCount": 100,
+        "rejectCount": 0,
+        "passRatePercent": 100,
+        "severeInappropriateCount": 0,
+        "rationaleExactDuplicates": 0,
+        "rationaleGenericCount": 0,
+        "rationaleGate": true
+      },
+      {
+        "attempt": 15,
+        "seed": 216485907,
+        "sampleSize": 100,
+        "passCount": 100,
+        "rejectCount": 0,
+        "passRatePercent": 100,
+        "severeInappropriateCount": 0,
+        "rationaleExactDuplicates": 0,
+        "rationaleGenericCount": 0,
+        "rationaleGate": true
+      }
+    ],
+    "final": {
+      "attempt": 15,
+      "seed": 216485907,
+      "sampleSize": 100,
+      "passCount": 100,
+      "rejectCount": 0,
+      "passRatePercent": 100,
+      "severeInappropriateCount": 0,
+      "rationaleExactDuplicates": 0,
+      "rationaleGenericCount": 0,
+      "rationaleGate": true
+    },
+    "sampleSelection": {
+      "seed": 216485907,
+      "noPhaseAOverlap": true,
+      "noR4IndependentOverlap": true,
+      "uniqueSentenceIds": true
+    }
+  },
+  "curation": {
+    "version": 1,
+    "globalRejectCount": 30,
+    "pairRejectCount": 877,
+    "r5NewPairRejectCount": 350,
+    "deltaFiles": [
+      "curation-delta-r5.json",
+      "curation-delta-r5-post.json",
+      "curation-delta-r5-post-attempt-2.json",
+      "curation-delta-r5-post-attempt-3.json",
+      "curation-delta-r5-post-attempt-4.json",
+      "curation-delta-r5-post-attempt-5.json",
+      "curation-delta-r5-post-attempt-6.json",
+      "curation-delta-r5-post-attempt-7.json",
+      "curation-delta-r5-blind-attempt-1.json",
+      "curation-delta-r5-blind-attempt-2.json",
+      "curation-delta-r5-blind-attempt-3.json",
+      "curation-delta-r5-blind-attempt-4.json",
+      "curation-delta-r5-blind-attempt-5.json",
+      "curation-delta-r5-blind-attempt-6.json",
+      "curation-delta-r5-blind-attempt-7.json",
+      "curation-delta-r5-blind-attempt-8.json",
+      "curation-delta-r5-blind-attempt-9.json",
+      "curation-delta-r5-blind-attempt-10.json",
+      "curation-delta-r5-blind-attempt-11.json",
+      "curation-delta-r5-blind-attempt-12.json",
+      "curation-delta-r5-blind-attempt-13.json"
+    ]
+  },
+  "build": {
+    "selectorVersion": {
+      "selectorVersion": "v3-context-quality-curation",
+      "source": "Tatoeba English CC0 sentence export",
+      "sourceFile": "data-source/examples/tatoeba/eng_sentences_CC0.tsv",
+      "totalSourceSentences": 41503,
+      "totalVocabularyWords": 2219,
+      "matchedTargetCandidates": 21655,
+      "rawCandidatePairs": 7284,
+      "rawCandidateWordCount": 1563,
+      "selectedCount": 990,
+      "rawCandidateCoverage": 0.7043713384407391,
+      "rawCandidateCoveragePercent": 70.4,
+      "qualityApprovedCoverage": 0.44614691302388465,
+      "qualityApprovedCoveragePercent": 44.6,
+      "rejectionCounts": {
+        "length": 14479,
+        "properNoun": 768,
+        "structure": 728,
+        "sourceSanity": 554,
+        "repeatedTarget": 135,
+        "rareContext": 162,
+        "qualityScore": 39,
+        "sensitiveTopic": 77,
+        "regressionQuality": 17,
+        "contextDependence": 20
+      },
+      "qualityPolicy": {
+        "tokenRange": [
+          6,
+          18
+        ],
+        "extendedTokenRange": [
+          19,
+          20
+        ],
+        "preferredTokenRange": [
+          8,
+          14
+        ],
+        "preferredCharacterRange": [
+          45,
+          120
+        ],
+        "maxRareContextTokens": 2,
+        "maxUnknownLikeContextTokens": 1,
+        "rareFrequencyThreshold": 2,
+        "unknownFrequencyThreshold": 1,
+        "minimumQualityScore": 29
+      },
+      "deterministic": true,
+      "curation": {
+        "version": 1,
+        "globalRejectCount": 30,
+        "pairRejectCount": 877,
+        "rejectedCandidateCount": 905,
+        "noFallbackCount": 349
+      }
+    },
+    "deterministic": true
+  },
+  "gateResults": {
+    "semantic": {
+      "sourceTatoebaEnglishCC0": true,
+      "vocabularyFrozenAt2219": true,
+      "coverageTruthfulAndNoMinimumBlocker": true,
+      "mandatoryRecheckCompleteAndDurablyRejected": true,
+      "finalPhaseASemanticPassAtLeast95": true,
+      "finalPhaseASevereZero": true,
+      "finalPhaseARationaleQuality": true,
+      "blindValidationPassAtLeast99": true,
+      "blindValidationSevereZero": true,
+      "blindValidationNoPhaseAOverlap": true,
+      "durableRejectsAccumulated": true
+    },
+    "local": {
+      "vocabBuild": true,
+      "vocabValidate": true,
+      "typecheck": true,
+      "lint": true,
+      "unitTests": true,
+      "productionBuild": true,
+      "e2eSerial": true,
+      "contextQualityScreenshots": true,
+      "scopeFreeze": true,
+      "deterministicRebuild": true
+    }
+  },
+  "gates": {
+    "sourceTatoebaEnglishCC0": true,
+    "vocabularyFrozenAt2219": true,
+    "coverageTruthfulAndNoMinimumBlocker": true,
+    "mandatoryRecheckCompleteAndDurablyRejected": true,
+    "finalPhaseASemanticPassAtLeast95": true,
+    "finalPhaseASevereZero": true,
+    "finalPhaseARationaleQuality": true,
+    "blindValidationPassAtLeast99": true,
+    "blindValidationSevereZero": true,
+    "blindValidationNoPhaseAOverlap": true,
+    "durableRejectsAccumulated": true,
+    "vocabBuild": true,
+    "vocabValidate": true,
+    "typecheck": true,
+    "lint": true,
+    "unitTests": true,
+    "productionBuild": true,
+    "e2eSerial": true,
+    "contextQualityScreenshots": true,
+    "scopeFreeze": true,
+    "deterministicRebuild": true
+  },
+  "evidence": {
+    "phaseARandomReview": "phase-a-random-review.json",
+    "mandatoryRecheck": "mandatory-recheck.json",
+    "phaseAFinalReview": "phase-a-post-curation-final-review.json",
+    "blindValidation": "blind-validation.json",
+    "curation": "data-source/examples/context-curation.json"
+  }
+}

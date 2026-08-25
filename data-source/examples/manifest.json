@@ -1,0 +1,13 @@
+{
+  "source": "Tatoeba English CC0 sentence export",
+  "sourceUrl": "https://downloads.tatoeba.org/exports/per_language/eng/eng_sentences_CC0.tsv.bz2",
+  "sourceFile": "data-source/examples/tatoeba/eng_sentences_CC0.tsv",
+  "license": "CC0 1.0 Universal",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attribution": "Attribution is not legally required under CC0; this project credits Tatoeba.org and its contributors for the source corpus.",
+  "retrievedAt": "2026-08-24",
+  "translationPolicy": "Examples are shipped in English only. No Chinese translations are imported or generated.",
+  "selectionPolicy": "Selector v2 chooses at most one deterministic English sentence per covered CET-6 headword; exact whole-word match; 6-18 tokens preferred, with only clear 19-20 token exceptions; 8-14 tokens and 45-120 characters preferred; simple punctuation; proper-noun, rare-context, topic-neutrality, standalone-context, and target-position scoring; severe sensitive-content rejection; no runtime network access.",
+  "provenanceFile": "data-source/examples/example-provenance.json",
+  "buildReportFile": "data-source/examples/build-report.json"
+}

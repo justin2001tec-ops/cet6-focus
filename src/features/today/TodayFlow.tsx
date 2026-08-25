@@ -1,11 +1,10 @@
 import { useEffect, useMemo, useState } from 'react'
-import { Check, Home, LineChart } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { useApp } from '@/app/providers'
 import { BootScreen } from '@/components/States'
-import { Button } from '@/components/ui'
 import { getDictationCandidates, getQueue } from '@/db/db'
 import { Dictation } from '@/features/dictation/Dictation'
+import { LearningAtmosphere, LearningComplete } from '@/features/study/LearningStages'
 import { Study } from '@/features/study/Study'
 
 type TodayStage = 'loading' | 'review' | 'study' | 'dictation' | 'complete'
@@ -59,5 +58,5 @@ export function TodayFlow() {
   if (stage === 'study') return <Study key="today-study" mode="study" onComplete={() => void continueAfterStudy()} />
   if (stage === 'dictation') return <Dictation onComplete={() => setStage('complete')} />
 
-  return <div className="complete-page"><div className="complete-mark"><Check size={25} /></div><p className="eyebrow">Today complete</p><h1>今日学习完成。</h1><p>到期复习、新词和听写都按真实记录完成；下一次打开时会从新的队列继续。</p><div className="complete-page__actions"><Button onClick={() => navigate('/')}><Home size={16} /> 回到今日</Button><Button variant="soft" onClick={() => navigate('/stats')}><LineChart size={16} /> 查看统计</Button></div></div>
+  return <div className="learning-shell learning-shell--meaning"><LearningAtmosphere /><div className="learning-shell__inner"><LearningComplete mode="study" onAgain={() => navigate('/study')} onHome={() => navigate('/')} /></div></div>
 }

@@ -1,0 +1,10 @@
+{
+  "round": "v1.3 Final Holdout Validation",
+  "currentHead": "0bf592ccd8888f60094d427da1784cc5d3bcd473",
+  "holdoutSeed": 216490001,
+  "eligibleUnseenCount": 0,
+  "path": "C",
+  "status": "HOLDOUT_EXHAUSTED",
+  "sampleSize": 0,
+  "selectionRule": "Current selected sentenceId not present in any historical candidate/review artifact; no prior decision, rationale, machine score, or PASS pool was read for selection."
+}

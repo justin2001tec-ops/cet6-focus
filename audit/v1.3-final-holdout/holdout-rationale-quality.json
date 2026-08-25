@@ -1,0 +1,9 @@
+{
+  "round": "v1.3 Final Holdout Validation",
+  "status": "HOLDOUT_EXHAUSTED",
+  "reviewPerformed": false,
+  "reviewedRows": 0,
+  "exactDuplicateRationaleCount": null,
+  "genericRationaleCount": null,
+  "gate": null
+}

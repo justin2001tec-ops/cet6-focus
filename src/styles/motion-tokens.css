@@ -1,0 +1,24 @@
+:root {
+  --motion-fast: 140ms;
+  --motion-standard: 240ms;
+  --motion-reveal: 320ms;
+  --motion-page: 400ms;
+  --ease-standard: cubic-bezier(.2, .8, .2, 1);
+  --ease-spring: cubic-bezier(.16, 1, .3, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-fast: 1ms;
+    --motion-standard: 1ms;
+    --motion-reveal: 1ms;
+    --motion-page: 1ms;
+  }
+}
+
+:root[data-reduced-motion="true"] {
+  --motion-fast: 1ms;
+  --motion-standard: 1ms;
+  --motion-reveal: 1ms;
+  --motion-page: 1ms;
+}

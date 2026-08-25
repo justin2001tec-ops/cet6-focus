@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "round": "Context Human Quality Audit & Curation - Round 4",
+  "machineMetricsAreNotSemanticDecisions": true,
+  "source": "Tatoeba English CC0 sentence export",
+  "curationFile": "data-source/examples/context-curation.json",
+  "targetedReview": {
+    "reviewedCount": 1056,
+    "passCount": 627,
+    "rejectCount": 429,
+    "reviewedPercent": 100,
+    "r3BaselineCount": 885,
+    "postCurationRiskCount": 171
+  },
+  "randomSemanticPass1": {
+    "seed": 216481793,
+    "sampleSize": 350,
+    "passCount": 350,
+    "passRatePercent": 100
+  },
+  "independentValidation": {
+    "seed": 216481794,
+    "sampleSize": 250,
+    "passCount": 250,
+    "passRatePercent": 100,
+    "severeInappropriateCount": 0,
+    "overlapsPass1": 0
+  },
+  "finalCoverage": {
+    "selectedCount": 990,
+    "vocabularyCount": 2219,
+    "percent": 44.6,
+    "targetPercent": 55,
+    "exceptionRange": "Round 5: coverage is informational only; no minimum coverage blocker applies."
+  },
+  "provenanceCoverage": 1,
+  "curation": {
+    "version": 1,
+    "globalRejectCount": 30,
+    "pairRejectCount": 877,
+    "rejectedCategories": {
+      "context-too-hard": 157,
+      "religious-heavy": 33,
+      "political-heavy": 115,
+      "medical-heavy": 57,
+      "other": 2,
+      "weak-teaching-value": 48,
+      "specialist-background": 14,
+      "sexual": 12,
+      "fantastical-context": 9,
+      "context-dependent": 30,
+      "unnatural-English": 50,
+      "violence": 55,
+      "obscure-background": 37,
+      "extremism": 12,
+      "proper-noun-heavy": 19,
+      "hate": 23,
+      "death-heavy": 8,
+      "archaic": 6,
+      "public-controversy": 7,
+      "rare-sense": 1,
+      "syntax-too-complex": 1
+    }
+  },
+  "deterministicBuildReport": true,
+  "gates": {
+    "riskTargetedReview100Percent": true,
+    "pass1AtLeast300": true,
+    "independentAtLeast200": true,
+    "independentSemanticPassAtLeast98": true,
+    "severeInappropriateZero": true,
+    "provenance100": true,
+    "deterministicBuild": true,
+    "nonOverlappingIndependentSample": true,
+    "qualityCoverageExceptionOrTarget": true
+  }
+}

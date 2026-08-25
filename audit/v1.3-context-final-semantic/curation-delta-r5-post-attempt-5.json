@@ -1,0 +1,54 @@
+{
+  "round": 5,
+  "source": "Round 5 post-curation sentence-read review attempt 5",
+  "reviewed": 300,
+  "rejectCount": 3,
+  "severeInappropriateCount": 0,
+  "appendedCount": 3,
+  "appended": [
+    {
+      "word": "depression",
+      "sentenceId": 12187305,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "Working miracles for depression is a personal mental-health treatment claim, so depression appears in a sensitive clinical context rather than a neutral default example.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "capable",
+      "sentenceId": 11621266,
+      "categories": [
+        "violence",
+        "medical-heavy"
+      ],
+      "reason": "The sentence links low self-esteem to the ability to hurt someone, adding a mental-health and harm scenario that is unnecessary for teaching capable.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "invisible",
+      "sentenceId": 11068885,
+      "categories": [
+        "fantastical-context",
+        "weak-teaching-value"
+      ],
+      "reason": "A person making himself invisible depends on fantasy powers and gives invisible no ordinary modern context for a default learner.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    }
+  ],
+  "before": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 760
+  },
+  "after": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 763
+  },
+  "noReplacementAuthored": true
+}

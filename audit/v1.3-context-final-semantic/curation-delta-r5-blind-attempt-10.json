@@ -1,0 +1,55 @@
+{
+  "round": 5,
+  "source": "Round 5 blind validation attempt 10",
+  "reviewed": 100,
+  "rejectCount": 3,
+  "severeInappropriateCount": 1,
+  "appendedCount": 3,
+  "appended": [
+    {
+      "word": "hatred",
+      "sentenceId": 8126440,
+      "categories": [
+        "hate",
+        "public-controversy"
+      ],
+      "reason": "The sentence makes a hostile religious and ethnic generalization about Algeria, making hatred a severe unsuitable context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "solution",
+      "sentenceId": 11247806,
+      "categories": [
+        "context-dependent",
+        "weak-teaching-value"
+      ],
+      "reason": "We've got to come up with a solution gives no problem or candidate answer, so solution is not taught through a concrete standalone context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "ward",
+      "sentenceId": 10611697,
+      "categories": [
+        "medical-heavy",
+        "context-dependent"
+      ],
+      "reason": "Not finding a suitable psychiatric ward is a sensitive mental-health situation that is unsuitable as a neutral default example for ward.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    }
+  ],
+  "before": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 864
+  },
+  "after": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 867
+  },
+  "noReplacementAuthored": true
+}

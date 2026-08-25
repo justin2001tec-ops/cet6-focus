@@ -1,0 +1,102 @@
+{
+  "round": 5,
+  "source": "Round 5 blind validation attempt 5",
+  "reviewed": 100,
+  "rejectCount": 7,
+  "severeInappropriateCount": 1,
+  "appendedCount": 7,
+  "appended": [
+    {
+      "word": "capable",
+      "sentenceId": 9837321,
+      "categories": [
+        "violence",
+        "context-dependent"
+      ],
+      "reason": "The depth of cruelty people are capable of is an emotionally loaded harm claim that does not offer a neutral standalone context for capable.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "ward",
+      "sentenceId": 12164351,
+      "categories": [
+        "fantastical-context",
+        "weak-teaching-value"
+      ],
+      "reason": "Warding off the evil eye depends on superstition and an unexplained supernatural belief, so ward is not taught in a reliable default context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "solution",
+      "sentenceId": 12773468,
+      "categories": [
+        "context-dependent",
+        "weak-teaching-value"
+      ],
+      "reason": "May the best solution reveal itself gives no problem or concrete answer, leaving solution as an unexplained abstract label.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "cancer",
+      "sentenceId": 11725953,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "Prostate-cancer surgery and radiotherapy make cancer part of a treatment decision context that is too medically sensitive for default learning.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "claim",
+      "sentenceId": 11605309,
+      "categories": [
+        "political-heavy",
+        "public-controversy"
+      ],
+      "reason": "A politician's deceptive claim about representing a constituency is a generalized political accusation, not a neutral context for claim.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "ideology",
+      "sentenceId": 11685490,
+      "categories": [
+        "public-controversy",
+        "political-heavy"
+      ],
+      "reason": "The argument about trans ideology and right-wing rants is a hostile political-identity dispute that is unsuitable as a neutral context for ideology.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "corrupt",
+      "sentenceId": 8114930,
+      "categories": [
+        "hate",
+        "public-controversy"
+      ],
+      "reason": "The sentence stereotypes Algerians as uneducated Islamist voters, making corrupt part of ethnic and religious hostility rather than a safe neutral context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    }
+  ],
+  "before": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 843
+  },
+  "after": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 850
+  },
+  "noReplacementAuthored": true
+}

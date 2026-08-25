@@ -1,0 +1,58 @@
+{
+  "selectorVersion": "v3-context-quality-curation",
+  "source": "Tatoeba English CC0 sentence export",
+  "sourceFile": "data-source/examples/tatoeba/eng_sentences_CC0.tsv",
+  "totalSourceSentences": 41503,
+  "totalVocabularyWords": 2219,
+  "matchedTargetCandidates": 21655,
+  "rawCandidatePairs": 7284,
+  "rawCandidateWordCount": 1563,
+  "selectedCount": 990,
+  "rawCandidateCoverage": 0.7043713384407391,
+  "rawCandidateCoveragePercent": 70.4,
+  "qualityApprovedCoverage": 0.44614691302388465,
+  "qualityApprovedCoveragePercent": 44.6,
+  "rejectionCounts": {
+    "length": 14479,
+    "properNoun": 768,
+    "structure": 728,
+    "sourceSanity": 554,
+    "repeatedTarget": 135,
+    "rareContext": 162,
+    "qualityScore": 39,
+    "sensitiveTopic": 77,
+    "regressionQuality": 17,
+    "contextDependence": 20
+  },
+  "qualityPolicy": {
+    "tokenRange": [
+      6,
+      18
+    ],
+    "extendedTokenRange": [
+      19,
+      20
+    ],
+    "preferredTokenRange": [
+      8,
+      14
+    ],
+    "preferredCharacterRange": [
+      45,
+      120
+    ],
+    "maxRareContextTokens": 2,
+    "maxUnknownLikeContextTokens": 1,
+    "rareFrequencyThreshold": 2,
+    "unknownFrequencyThreshold": 1,
+    "minimumQualityScore": 29
+  },
+  "deterministic": true,
+  "curation": {
+    "version": 1,
+    "globalRejectCount": 30,
+    "pairRejectCount": 877,
+    "rejectedCandidateCount": 905,
+    "noFallbackCount": 349
+  }
+}

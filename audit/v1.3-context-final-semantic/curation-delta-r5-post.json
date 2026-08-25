@@ -1,0 +1,1143 @@
+{
+  "round": 5,
+  "source": "Round 5 post-curation sentence-read review",
+  "reviewed": 300,
+  "rejectCount": 94,
+  "severeInappropriateCount": 1,
+  "appendedCount": 94,
+  "appended": [
+    {
+      "word": "variation",
+      "sentenceId": 9454240,
+      "categories": [
+        "context-too-hard",
+        "weak-teaching-value"
+      ],
+      "reason": "Tinfoil hats and a tinfoil beret require niche conspiracy imagery, so variation is not shown in a normal default context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "denote",
+      "sentenceId": 9951226,
+      "categories": [
+        "specialist-background",
+        "context-too-hard"
+      ],
+      "reason": "Genitive case and Russian grammar are specialist linguistic terms that overwhelm the basic target denote.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "mass",
+      "sentenceId": 12150313,
+      "categories": [
+        "death-heavy",
+        "context-too-hard"
+      ],
+      "reason": "Mass beaching of whales and dolphins is an unusual animal-death phenomenon that adds distress and specialist context unrelated to mass.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "alter",
+      "sentenceId": 9940629,
+      "categories": [
+        "specialist-background",
+        "context-dependent"
+      ],
+      "reason": "Construction, sentences, and a missing antecedent require grammar analysis that is much harder than alter.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "formal",
+      "sentenceId": 9952838,
+      "categories": [
+        "specialist-background",
+        "context-too-hard"
+      ],
+      "reason": "Affirming the consequent and formal logical fallacy are technical logic terms that make formal inaccessible as a default example.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "release",
+      "sentenceId": 11260218,
+      "categories": [
+        "death-heavy",
+        "context-dependent"
+      ],
+      "reason": "A prisoner dying before release adds an unnecessary death narrative and leaves the emotional situation unsuitable for default learning.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "inject",
+      "sentenceId": 9090610,
+      "categories": [
+        "medical-heavy",
+        "self-harm"
+      ],
+      "reason": "Injecting bleach into an arm is dangerous self-harm imagery and an unacceptable default medical context for inject.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "disaster",
+      "sentenceId": 12023081,
+      "categories": [
+        "public-controversy",
+        "political-heavy"
+      ],
+      "reason": "Calling Bitcoin a disaster for humanity makes disaster part of a polarized financial and technological claim rather than a neutral example.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "album",
+      "sentenceId": 11607513,
+      "categories": [
+        "other",
+        "weak-teaching-value"
+      ],
+      "reason": "Butt rock is niche slang and the sentence gives album little teaching value beyond a vague music label.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "stock",
+      "sentenceId": 12033012,
+      "categories": [
+        "context-too-hard",
+        "specialist-background"
+      ],
+      "reason": "A stock brokerage sign assumes specialized finance vocabulary and gives stock an ambiguous context for a default learner.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "cancer",
+      "sentenceId": 11860477,
+      "categories": [
+        "medical-heavy",
+        "public-controversy"
+      ],
+      "reason": "The cancer-cell ideology metaphor adds medical and ideological framing that is unnecessary for the target sake.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "verbal",
+      "sentenceId": 13148354,
+      "categories": [
+        "violence",
+        "context-too-hard"
+      ],
+      "reason": "A verbal altercation and whether it became physical add conflict and harder vocabulary unrelated to teaching verbal.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "avoid",
+      "sentenceId": 11603073,
+      "categories": [
+        "political-heavy",
+        "other"
+      ],
+      "reason": "Unmoderated hellholes and avoid like the plague use hostile internet slang and a loaded comparison instead of a neutral context for avoid.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "trigger",
+      "sentenceId": 12775721,
+      "categories": [
+        "violence"
+      ],
+      "reason": "Keeping a finger on a trigger makes trigger depend on a weapon context that adds unnecessary violence to default learning.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "apology",
+      "sentenceId": 10104642,
+      "categories": [
+        "context-too-hard",
+        "weak-teaching-value"
+      ],
+      "reason": "Inordinate explanation and complaining make the apology sentence depend on an uncommon adjective and a vague complaint context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "controversial",
+      "sentenceId": 11712497,
+      "categories": [
+        "context-dependent",
+        "weak-teaching-value"
+      ],
+      "reason": "The speaker refers to controversial sentences and personal taste without a clear situation, so controversial is not taught standalone.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "fake",
+      "sentenceId": 11592999,
+      "categories": [
+        "context-too-hard",
+        "public-controversy"
+      ],
+      "reason": "A fake numbers station is a niche espionage and trolling context that adds specialist background to fake.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "principal",
+      "sentenceId": 11612368,
+      "categories": [
+        "specialist-background",
+        "context-too-hard"
+      ],
+      "reason": "Chemical preservatives, borax, boric acid, and sulfite create specialist chemistry load that overwhelms principal.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "strand",
+      "sentenceId": 8971217,
+      "categories": [
+        "unnatural-English",
+        "weak-teaching-value"
+      ],
+      "reason": "No strand goes with the other is still awkward and does not provide a clear natural use of strand.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "claim",
+      "sentenceId": 11240042,
+      "categories": [
+        "political-heavy",
+        "public-controversy",
+        "context-too-hard"
+      ],
+      "reason": "Kiwifarms, reactionaries, and cancel culture create a niche political controversy that overwhelms claim.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "merely",
+      "sentenceId": 11881330,
+      "categories": [
+        "medical-heavy",
+        "public-controversy"
+      ],
+      "reason": "The fetus viability statement is a sensitive medical-policy context that adds unnecessary controversy to merely.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "shark",
+      "sentenceId": 12434433,
+      "categories": [
+        "weak-teaching-value",
+        "context-too-hard"
+      ],
+      "reason": "Jumped the shark is a media idiom and does not teach the literal target shark in a useful default context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "weary",
+      "sentenceId": 12769245,
+      "categories": [
+        "archaic",
+        "unnatural-English"
+      ],
+      "reason": "The night cradles the weary soul is poetic and sentimental rather than modern ordinary English for weary.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "aerial",
+      "sentenceId": 12080130,
+      "categories": [
+        "specialist-background",
+        "context-too-hard"
+      ],
+      "reason": "Freestyle aerial skiing is a specialized sport context that makes aerial harder than necessary for a default learner.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "verse",
+      "sentenceId": 11613752,
+      "categories": [
+        "specialist-background",
+        "context-too-hard"
+      ],
+      "reason": "Quantitative verse in Latin poetry is specialist literary material and does not provide a simple default context for verse.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "conform",
+      "sentenceId": 12190656,
+      "categories": [
+        "medical-heavy",
+        "context-too-hard"
+      ],
+      "reason": "Spinal curvature and lumbar support are anatomical and medical terms that make conform harder than the target.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "acknowledge",
+      "sentenceId": 11770179,
+      "categories": [
+        "political-heavy",
+        "public-controversy"
+      ],
+      "reason": "Refusing to acknowledge an agenda frames acknowledge in an accusatory political argument rather than a neutral context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "remainder",
+      "sentenceId": 12180709,
+      "categories": [
+        "death-heavy",
+        "archaic"
+      ],
+      "reason": "The remainder of his days in quiet reflection is a death-adjacent literary phrase that is not a modern default context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "crash",
+      "sentenceId": 10054503,
+      "categories": [
+        "context-too-hard",
+        "other"
+      ],
+      "reason": "Crash at your pad is informal slang, and pad makes the target crash depend on cultural knowledge outside the basic verb meaning.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "glance",
+      "sentenceId": 11059017,
+      "categories": [
+        "context-too-hard",
+        "weak-teaching-value"
+      ],
+      "reason": "Conjure, secluded, and utopian create unusually difficult descriptive vocabulary around the simple target glance.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "insane",
+      "sentenceId": 11845580,
+      "categories": [
+        "political-heavy",
+        "public-controversy"
+      ],
+      "reason": "Capitalism and unearned power make insane part of an ideological economic attack rather than a neutral context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "inherent",
+      "sentenceId": 5251250,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "Quantifying prosperity and comparing countries creates academic economic vocabulary that is harder than inherent.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "consequent",
+      "sentenceId": 9952838,
+      "categories": [
+        "specialist-background",
+        "context-too-hard"
+      ],
+      "reason": "Affirming the consequent and formal logical fallacy are technical logic terms that overwhelm consequent.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "vein",
+      "sentenceId": 6121979,
+      "categories": [
+        "medical-heavy",
+        "context-too-hard"
+      ],
+      "reason": "Deep vein thrombosis and pregnancy make vein depend on specialist medical background rather than a default context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "revolutionary",
+      "sentenceId": 13025353,
+      "categories": [
+        "public-controversy",
+        "context-too-hard"
+      ],
+      "reason": "A search engine making things up turns revolutionary into a current technology controversy and adds unnecessary background.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "vulnerable",
+      "sentenceId": 12765982,
+      "categories": [
+        "context-dependent",
+        "weak-teaching-value"
+      ],
+      "reason": "The mission's most vulnerable is incomplete without knowing who or what is vulnerable, so the target is not standalone.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "polish",
+      "sentenceId": 9971378,
+      "categories": [
+        "rare-sense",
+        "proper-noun-heavy",
+        "weak-teaching-value"
+      ],
+      "reason": "Polish refers to nationality in a flag correction rather than the common target sense, and the proper-name contrast adds little teaching value.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "prosperous",
+      "sentenceId": 5251250,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "Quantifying prosperity and comparing countries create academic economic vocabulary that is harder than prosperous.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "clerk",
+      "sentenceId": 12187318,
+      "categories": [
+        "hate",
+        "public-controversy"
+      ],
+      "reason": "Following a Black customer because of race is an identity-based discriminatory context that is inappropriate for default learning of clerk.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "merit",
+      "sentenceId": 11476006,
+      "categories": [
+        "archaic",
+        "context-too-hard"
+      ],
+      "reason": "Rare merit, fastidious critic, and the inverted sentence structure create literary load that overwhelms merit.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "romance",
+      "sentenceId": 10169884,
+      "categories": [
+        "context-too-hard",
+        "rare-sense"
+      ],
+      "reason": "Romance and Germanic language classifications are specialist linguistic senses that make romance less accessible as a default example.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "defy",
+      "sentenceId": 11580293,
+      "categories": [
+        "archaic",
+        "fantastical-context"
+      ],
+      "reason": "Enchanting and defying a ruler's power create an archaic fantasy scene that is not a modern default context for defy.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "afflict",
+      "sentenceId": 11254030,
+      "categories": [
+        "medical-heavy",
+        "political-heavy"
+      ],
+      "reason": "Diseases afflicting marginalized communities adds medical and social-policy load that is unnecessary for afflict.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "tunnel",
+      "sentenceId": 12381075,
+      "categories": [
+        "political-heavy",
+        "violence",
+        "context-too-hard"
+      ],
+      "reason": "Smuggling contraband across a border combines crime and immigration-policy background that overwhelms tunnel.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "plague",
+      "sentenceId": 11603073,
+      "categories": [
+        "other",
+        "context-too-hard"
+      ],
+      "reason": "Hellholes and avoid like the plague use hostile internet slang and an intense comparison that is not a neutral context for plague.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "coarse",
+      "sentenceId": 11355272,
+      "categories": [
+        "unnatural-English",
+        "weak-teaching-value"
+      ],
+      "reason": "The laughing sieve and smiling sheepskin rug are an unnatural fable-like image that does not teach coarse clearly.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "alternative",
+      "sentenceId": 12139741,
+      "categories": [
+        "specialist-background",
+        "context-too-hard"
+      ],
+      "reason": "Feed pellets for farmed fish create specialized agriculture vocabulary that makes alternative harder than necessary.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "border",
+      "sentenceId": 12381075,
+      "categories": [
+        "political-heavy",
+        "context-too-hard"
+      ],
+      "reason": "Smuggling contraband across a border adds criminal and border-policy background unrelated to teaching border.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "stroll",
+      "sentenceId": 12775893,
+      "categories": [
+        "archaic",
+        "weak-teaching-value"
+      ],
+      "reason": "My lady and a stroll in gardens give stroll an old-fashioned literary setting rather than a normal modern default context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "drag",
+      "sentenceId": 11844546,
+      "categories": [
+        "public-controversy",
+        "sexual"
+      ],
+      "reason": "Drag queen story hour is a current identity and culture-war context that adds controversy unrelated to teaching drag.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "corporate",
+      "sentenceId": 12480067,
+      "categories": [
+        "public-controversy",
+        "political-heavy"
+      ],
+      "reason": "Corporate media is a partisan media framing that adds current political controversy to the target corporate.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "array",
+      "sentenceId": 11221845,
+      "categories": [
+        "specialist-background",
+        "context-too-hard"
+      ],
+      "reason": "Directional microphones built into eyeglass frames create technical hardware detail that overwhelms array.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "alternate",
+      "sentenceId": 11923954,
+      "categories": [
+        "fantastical-context",
+        "weak-teaching-value"
+      ],
+      "reason": "Alternate realities are a fantasy premise that makes alternate unclear as a useful ordinary contrast.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "responsible",
+      "sentenceId": 8613662,
+      "categories": [
+        "medical-heavy",
+        "public-controversy"
+      ],
+      "reason": "The opioid epidemic and lack of consequences create a charged medical-policy context unrelated to responsible.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "congress",
+      "sentenceId": 9588509,
+      "categories": [
+        "specialist-background",
+        "context-too-hard"
+      ],
+      "reason": "An Esperanto congress adds a niche language-community background and proper-name-like load to congress.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "protest",
+      "sentenceId": 12765576,
+      "categories": [
+        "political-heavy",
+        "context-too-hard"
+      ],
+      "reason": "Decolonization talks place protest in a specialized political-history context that is unnecessary for the target.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "demand",
+      "sentenceId": 12087155,
+      "categories": [
+        "context-too-hard"
+      ],
+      "reason": "Scalability and market-demand language create business jargon that makes demand harder than a default context should.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "upgrade",
+      "sentenceId": 11217979,
+      "categories": [
+        "unnatural-English",
+        "weak-teaching-value"
+      ],
+      "reason": "A bridge becoming an ambient music generator is an implausible software joke that gives upgrade weak default teaching value.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "screw",
+      "sentenceId": 8728675,
+      "categories": [
+        "sexual",
+        "weak-teaching-value"
+      ],
+      "reason": "Screw me up is an ambiguous informal phrase with a sexual reading, so it is not a clear default example.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "definition",
+      "sentenceId": 9710286,
+      "categories": [
+        "context-too-hard",
+        "public-controversy"
+      ],
+      "reason": "Fiat currency, Bitcoin, and fixed physical resources make definition depend on specialist financial debate.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "web",
+      "sentenceId": 11574005,
+      "categories": [
+        "specialist-background",
+        "context-too-hard"
+      ],
+      "reason": "The cosmic web is an astronomy concept that requires specialist background and does not teach web as an ordinary object.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "solution",
+      "sentenceId": 12272821,
+      "categories": [
+        "specialist-background",
+        "context-too-hard"
+      ],
+      "reason": "Aqueous, solvent, and solution form a chemistry definition whose surrounding vocabulary is harder than the target.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "legend",
+      "sentenceId": 12029429,
+      "categories": [
+        "specialist-background",
+        "context-too-hard"
+      ],
+      "reason": "Cornucopians and the cornucopia of Greek legend require economic and mythological background that overwhelms legend.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "bonus",
+      "sentenceId": 8952220,
+      "categories": [
+        "medical-heavy",
+        "weak-teaching-value"
+      ],
+      "reason": "A bonus goiter introduces an unexplained medical abnormality that is unrelated to teaching bonus.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "cancel",
+      "sentenceId": 11240042,
+      "categories": [
+        "public-controversy",
+        "context-too-hard"
+      ],
+      "reason": "Kiwifarms and cancel culture create a niche political controversy that is not a neutral context for cancel.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "access",
+      "sentenceId": 12465780,
+      "categories": [
+        "specialist-background",
+        "context-too-hard"
+      ],
+      "reason": "Private methods between classes are programming-specific terms that make access unsuitable as a default context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "purity",
+      "sentenceId": 10998491,
+      "categories": [
+        "specialist-background",
+        "context-too-hard"
+      ],
+      "reason": "Testing bergamot oil purity by mixing it with alcohol is specialist chemistry detail that overwhelms purity.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "aspect",
+      "sentenceId": 8508837,
+      "categories": [
+        "medical-heavy",
+        "public-controversy"
+      ],
+      "reason": "Addiction and an exploitative-system claim make aspect depend on a sensitive medical-policy argument rather than a neutral example.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "segment",
+      "sentenceId": 11464685,
+      "categories": [
+        "hate",
+        "political-heavy"
+      ],
+      "reason": "A law banning speech and insulting racial groups makes segment part of a charged legal and hate-speech dispute.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "cable",
+      "sentenceId": 11211327,
+      "categories": [
+        "specialist-background",
+        "fantastical-context"
+      ],
+      "reason": "Carbon nanotubes and a space elevator require speculative engineering background that overwhelms cable.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "sneak",
+      "sentenceId": 12381078,
+      "categories": [
+        "violence",
+        "context-too-hard"
+      ],
+      "reason": "Sneaking contraband into prison adds crime and institutional background that is unnecessary for the basic verb sneak.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "exchange",
+      "sentenceId": 11951448,
+      "categories": [
+        "context-too-hard",
+        "public-controversy"
+      ],
+      "reason": "Cryptocurrencies and fixed gold or silver exchange create specialist financial context that overwhelms exchange.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "negative",
+      "sentenceId": 9805726,
+      "categories": [
+        "unnatural-English"
+      ],
+      "reason": "The question has a subject-verb agreement error, so it does not provide a reliable natural model for negative.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "transition",
+      "sentenceId": 10338411,
+      "categories": [
+        "political-heavy",
+        "context-too-hard"
+      ],
+      "reason": "Transitioning to a gift economy introduces a political-economic concept that is harder than transition and not needed for it.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "reign",
+      "sentenceId": 11459265,
+      "categories": [
+        "archaic",
+        "weak-teaching-value"
+      ],
+      "reason": "Reign of mediocrity is an ornate abstract phrase that gives reign little concrete default teaching value.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "benefit",
+      "sentenceId": 9796259,
+      "categories": [
+        "medical-heavy",
+        "context-too-hard"
+      ],
+      "reason": "Laser hair removal and electrolysis create specialist cosmetic-medical detail that is unnecessary for benefit.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "vice",
+      "sentenceId": 10923883,
+      "categories": [
+        "medical-heavy",
+        "hate"
+      ],
+      "reason": "The sane and mentally ill comparison makes vice depend on stigmatizing medical language rather than a neutral example.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "pose",
+      "sentenceId": 12135993,
+      "categories": [
+        "specialist-background",
+        "context-too-hard"
+      ],
+      "reason": "Fungicides, rust diseases, and environmental threats create specialist agriculture vocabulary that overwhelms pose.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "guarantee",
+      "sentenceId": 11696504,
+      "categories": [
+        "violence"
+      ],
+      "reason": "A robber's demands and personal safety add a threatening crime context that is unnecessary for guarantee.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "interact",
+      "sentenceId": 9805280,
+      "categories": [
+        "medical-heavy",
+        "context-too-hard"
+      ],
+      "reason": "Cannabis, antidepressants, and lithium create a specialist drug-interaction context that overwhelms interact.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "recipe",
+      "sentenceId": 11454957,
+      "categories": [
+        "death-heavy",
+        "context-dependent"
+      ],
+      "reason": "Dying without telling a secret makes recipe part of an unresolved death story rather than a neutral food context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "inflict",
+      "sentenceId": 10844687,
+      "categories": [
+        "death-heavy",
+        "context-too-hard"
+      ],
+      "reason": "Drought-ravaged regions and inflicting pain on communities add disaster and geographic background that overwhelms inflict.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "massive",
+      "sentenceId": 11944884,
+      "categories": [
+        "political-heavy",
+        "violence"
+      ],
+      "reason": "Shoplifting and calling it noble is an ideological criminal claim that is not appropriate as a neutral context for massive.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "millionaire",
+      "sentenceId": 11758856,
+      "categories": [
+        "political-heavy",
+        "other"
+      ],
+      "reason": "Homelessness and millionaire status create class-emotional load that is unnecessary for a default example of millionaire.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "intellectual",
+      "sentenceId": 11514159,
+      "categories": [
+        "archaic",
+        "weak-teaching-value"
+      ],
+      "reason": "No intellectual light from a source is an obscure metaphor that does not present intellectual in a clear modern context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "constitution",
+      "sentenceId": 11121049,
+      "categories": [
+        "political-heavy",
+        "context-too-hard"
+      ],
+      "reason": "Drafting a constitution through stakeholder committees is a specialized political-legal context that overwhelms constitution.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "bizarre",
+      "sentenceId": 10357464,
+      "categories": [
+        "fantastical-context",
+        "weak-teaching-value"
+      ],
+      "reason": "Five-dimensional chess is a niche metaphor that adds cultural and fantastical load unrelated to the basic target bizarre.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "ward",
+      "sentenceId": 10611691,
+      "categories": [
+        "medical-heavy",
+        "public-controversy"
+      ],
+      "reason": "A psych ward and trans people create sensitive medical and identity-policy context unrelated to teaching ward.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "suffice",
+      "sentenceId": 10056966,
+      "categories": [
+        "context-dependent",
+        "weak-teaching-value"
+      ],
+      "reason": "Suffice to say is a formulaic discourse fragment followed by an unexplained horrible night, so the target is not taught standalone.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "threaten",
+      "sentenceId": 11270819,
+      "categories": [
+        "medical-heavy",
+        "hate"
+      ],
+      "reason": "Bipolar people are used in a stigmatizing claim about threatening minorities, adding medical and identity harm unrelated to threaten.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "permissible",
+      "sentenceId": 10116181,
+      "categories": [
+        "violence",
+        "weak-teaching-value"
+      ],
+      "reason": "Punishing a child makes permissible depend on a violence-adjacent parenting dispute that is unnecessary for the target.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "catholic",
+      "sentenceId": 12071397,
+      "categories": [
+        "religious-heavy",
+        "archaic"
+      ],
+      "reason": "Catholic priests and shaved heads create a religious historical context that is unnecessary for a default example of catholic.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "sacrifice",
+      "sentenceId": 11787807,
+      "categories": [
+        "death-heavy",
+        "context-dependent"
+      ],
+      "reason": "Tom's unexplained sacrifice is emotionally loaded and ambiguous, so sacrifice lacks a clear standalone teaching context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "vocal",
+      "sentenceId": 12395454,
+      "categories": [
+        "unnatural-English"
+      ],
+      "reason": "The sentence says vocal chords instead of the standard vocal cords, so it is not a reliable natural English model.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    }
+  ],
+  "before": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 624
+  },
+  "after": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 718
+  },
+  "noReplacementAuthored": true
+}

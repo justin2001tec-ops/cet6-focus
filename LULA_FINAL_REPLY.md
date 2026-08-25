@@ -1,19 +1,32 @@
-# Lula 的最终回复
+# Lula 的最终回复 — v1.3 Final Holdout Validation
 
-CET6 Focus 已完成最终 polish、自检、测试、GitHub 发布、GitHub Pages 部署和真实线上 smoke，可以开始第三方正式验收。
+Round 5 的 Context 语义工作已完成，但其最终 `100/100` retest 使用了 `priorBlindPassPairs`，不属于真正独立 holdout。本轮按 Handoff 冻结当前 release candidate，只计算 unseen eligibility，不再训练数据。
 
-**CET6 Focus is deployed and ready for independent audit.**
+- Phase A 最终：300/300 PASS，严重不适宜 0。
+- Mandatory 11：11 条全部按逐句审核结果 durable reject。
+- Round 5 blind final retest：100/100 PASS，严重不适宜 0；现保留为历史 retest 证据，不作为独立 holdout 证据。
+- Durable curation：30 条 global reject、877 条 pair reject；本轮新增 350 条 pair reject。
+- 最终 Context coverage：990/2219 = 44.6%；按 Round 5 规则仅 informational，不构成 blocker；raw candidate coverage 70.4%。
+- Source：offline Tatoeba English CC0；没有手写、AI 生成或替代例句。
+- 所有真实 FAIL 都保留逐句 rationale、durable reject、重建并复测；没有为了追求 100% 改审核结论。
 
-- GitHub 仓库：[https://github.com/justin2001tec-ops/cet6-focus](https://github.com/justin2001tec-ops/cet6-focus)
-- 在线网站：[https://justin2001tec-ops.github.io/cet6-focus/](https://justin2001tec-ops.github.io/cet6-focus/)
-- 最终提交：`443afcf3889b842575df459428e6f4baf0ae2e0f`
-- 最终 Pages 工作流：[32628087659](https://github.com/justin2001tec-ops/cet6-focus/actions/runs/32628087659)；quality 工作流：[32628087724](https://github.com/justin2001tec-ops/cet6-focus/actions/runs/32628087724)，均成功。
-- 词库校验：2,219 条，通过。
-- 单元测试：10 个文件、23 项，通过。
-- 最终本地 E2E：22 项中 12 项通过、10 项按既有桌面/移动边界跳过，无失败。
-- 线上 smoke：onboarding、Study/Undo、Dictation、Stats、Settings、Mistakes、词库、备份导出、固定背景持久化、Pages 子路径资源、Service Worker 和预热离线 reload 均通过；无 console/page/network 错误。
-- 最小部署修复已包含：数据未 ready 前禁止提交 onboarding，以及 Service Worker shell cache v3。
+本轮最终 gate 全部通过：vocab build/validate、typecheck、lint、unit tests（34/34）、production build、serial E2E（32 passed，16 个既有配置性 skip）、审核截图，以及 UI/Motion/FSRS 冻结范围检查。
 
-详细报告见 `FINAL_DEPLOYMENT_REPORT.md`；线上截图和文字证据见 `audit/screenshots/online-pages-smoke.png` 与 `audit/online-pages-results.txt`。
+## Final Holdout 结果
 
-GitHub 仓库和在线网站均已提供，因此不再重复上传 ZIP。已知边界仍包括预热后离线验证、Web Speech API 依赖验收机器，以及源词库的 2 条缺音标和 177 条缺词性。
+- Historical seen sentence IDs：1542。
+- 当前冻结 selected：990/990 均已出现在历史 candidate/review artifacts，包括 blind attempts 1–15 的全部 PASS 和 FAIL。
+- 真正 unseen selected：0。
+- 路径：**C — `HOLDOUT_EXHAUSTED`**。
+- Holdout sample：0；没有开始语义审核，也没有复用历史 PASS、换 seed、重抽、curate 或 rebuild。
+- selected examples 与 `context-curation.json` 的前后 hash 完全一致，post-holdout data mutation = false。
+
+因此本轮结果原样提交为 `HOLDOUT_EXHAUSTED`，不伪装成 PASS/FAIL，等待最终 Merge & Release 决策。完整证据见 [`audit/v1.3-final-holdout/final-holdout-acceptance.json`](audit/v1.3-final-holdout/final-holdout-acceptance.json)。
+
+## GitHub
+
+- 仓库：[https://github.com/justin2001tec-ops/cet6-focus](https://github.com/justin2001tec-ops/cet6-focus)
+- PR #3：[https://github.com/justin2001tec-ops/cet6-focus/pull/3](https://github.com/justin2001tec-ops/cet6-focus/pull/3)
+- PR #3 当前保持 OPEN、未合并。
+
+本轮未部署、未创建 `v1.3.0` tag，因此没有新的线上地址可提供。完整报告见 [`FINAL_V1_3_CORE_LEARNING_REPORT.md`](FINAL_V1_3_CORE_LEARNING_REPORT.md)，机器可读最终 Holdout 验收见 [`audit/v1.3-final-holdout/final-holdout-acceptance.json`](audit/v1.3-final-holdout/final-holdout-acceptance.json)。
