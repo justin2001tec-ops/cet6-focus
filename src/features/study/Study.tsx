@@ -46,6 +46,8 @@ export function Study({ mode, onComplete }: StudyProps) {
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
   const cardStartedAt = useRef(Date.now())
   const ratingInFlight = useRef(false)
+  const transitionTokenRef = useRef(0)
+  const transitionCancelledRef = useRef<number | null>(null)
   const queueSettings = useMemo(() => ({ dailyNewWords: settings.dailyNewWords }), [settings.dailyNewWords])
   const reducedMotion = settings.reducedMotion || prefersReducedMotion
 
@@ -168,7 +170,10 @@ export function Study({ mode, onComplete }: StudyProps) {
       setItems((existing) => existing.map((item, itemIndex) => itemIndex === currentIndex ? { ...item, card: after } : item))
       setRatedStack((existing) => [...existing, before.wordId])
       setPresentation('transitioning')
+      const transitionToken = ++transitionTokenRef.current
+      transitionCancelledRef.current = null
       await waitForMotion(reducedMotion)
+      if (transitionCancelledRef.current === transitionToken) return
       if (currentIndex >= items.length - 1) {
         await finishSession(session.id)
         await refresh()
@@ -189,7 +194,8 @@ export function Study({ mode, onComplete }: StudyProps) {
   }
 
   async function undo() {
-    if (!session || ratedStack.length === 0 || ratingBusy) return
+    if (!session || ratedStack.length === 0 || (ratingBusy && presentation !== 'transitioning')) return
+    if (presentation === 'transitioning') transitionCancelledRef.current = transitionTokenRef.current
     const log = await undoLastReview(session.id)
     if (!log) return
     const restoredIndex = items.findIndex((item) => item.word.id === log.wordId)

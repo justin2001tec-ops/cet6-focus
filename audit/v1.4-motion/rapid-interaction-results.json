@@ -5,15 +5,16 @@
     "result": "PASS"
   },
   "pressFeedback": {
-    "implementation": "ApplePressable uses bounded profile-aware whileTap feedback",
+    "implementation": "ApplePressable and Home PressableLink use bounded profile-aware feedback",
     "result": "PASS"
   },
   "physicalSheet": {
     "slowDragSnapBack": "PASS",
     "largeOffsetDismiss": "PASS",
     "browserBackDismiss": "PASS",
-    "pointercancelAndLostPointerCapture": "implemented",
-    "orientationChangeSnapBack": "implemented"
+    "pointercancelAndLostPointerCapture": "PASS",
+    "orientationChangeSnapBack": "PASS",
+    "velocityHandoff": "PASS"
   },
   "verification": {
     "chromium": "motion suite passed",

@@ -18,7 +18,7 @@ Frozen v1.3 contracts remain intact: Home information architecture, Study/Review
 
 ## Architecture delivered
 
-- `AppMotionProvider`, `LazyMotion strict`, `MotionConfig reducedMotion="user"`.
+- `AppMotionProvider`, `LazyMotion strict`, and an effective `MotionConfig` policy: app setting `always`, OS-only `user`.
 - `MotionRoute`, `useNavigationMotion`, `useInputModality`, and `useMotionProfile`.
 - `MotionProfile` is an actual `full` / `reduced` profile driven by user and system settings.
 - Semantic route motion plus Vocabulary row → Word Detail shared entity identity.
@@ -45,6 +45,18 @@ Frozen v1.3 contracts remain intact: Home information architecture, Study/Review
 - `rapid-interaction-results.json`
 - `background-memory-report.json`
 - `screenshots/`
+
+## R1 acceptance correction evidence
+
+- `r1-acceptance-summary.md` records the bounded R1 scope and correction decisions.
+- `r1-shared-layout.json` records real full/reduced Vocabulary → Word Detail checks with `domMax`.
+- `r1-sheet-physics.json` records MotionValue drag, velocity handoff, completion-gated history cleanup, and interruption checks.
+- `r1-background-lifecycle.json` records idle/crossfade/rapid-retarget layer bounds.
+- `r1-reduced-motion.json` records the unified app/system effective profile.
+- `r1-rapid-interaction.json` records rapid route, Study/Undo, press, and interruption checks.
+- `r1-db-performance-exception.md` records Path A: `REVERTED — no exception retained`.
+
+The first R1 GitHub E2E attempt exposed that the workflow installed Chromium while declaring WebKit. The workflow now installs both browser dependencies; final remote status is recorded only after the updated PR checks complete.
 
 ## Explicit limits
 

@@ -17,7 +17,7 @@ function readInitialState(): InputModalityState {
     modality: coarse ? 'coarse' : 'fine',
     pointerType: coarse ? 'coarse' : 'fine',
     canHover,
-    pressScale: coarse ? 0.96 : 0.975,
+    pressScale: coarse ? 0.975 : 0.99,
     targetSize: coarse ? 44 : 34,
   }
 }
@@ -33,7 +33,7 @@ export function useInputModality(): InputModalityState {
         modality,
         pointerType: coarse ? 'coarse' : 'fine',
         canHover,
-        pressScale: coarse ? 0.96 : 0.975,
+        pressScale: coarse ? 0.975 : 0.99,
         targetSize: coarse ? 44 : 34,
       })
     }

@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "latestIntentWins": {
+    "rapidHashAtoBtoC": "PASS",
+    "singleMotionRoute": true,
+    "staleLearningShell": false
+  },
+  "study": {
+    "fastRatings": "PASS",
+    "undoDuringTransition": "PASS",
+    "reviewLogParity": "PASS",
+    "duplicateWordIds": false
+  },
+  "physicalSheet": {
+    "pointercancel": "PASS",
+    "orientationRecovery": "PASS",
+    "velocityDismiss": "PASS",
+    "browserBack": "PASS"
+  },
+  "press": {
+    "fineScale": 0.99,
+    "coarseScale": 0.975,
+    "chromium": "PASS",
+    "webkitMotion": "PASS"
+  },
+  "motionSuite": { "passed": 29, "conditionalSkipped": 1, "failed": 0 }
+}

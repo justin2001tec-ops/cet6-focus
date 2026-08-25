@@ -4,8 +4,13 @@
   "decodeBeforeCrossfade": true,
   "maxRenderedLayers": 2,
   "maxDecodedFullscreenImages": 2,
+  "idleLayerCount": 1,
+  "crossfadeLayerCountMax": 2,
+  "settledLayerCount": 1,
+  "rapidRetargetLayerCountMax": 2,
   "studyParallaxPx": 0,
   "fullScreenBlurZoomParallax": false,
   "crossfadeDurationMs": 420,
+  "reducedCrossfadeDurationMs": 120,
   "evidence": "Motion E2E asserts layer count, image count, no background transform, and Study transform none in Chromium/mobile/WebKit runs."
 }

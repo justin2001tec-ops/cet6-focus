@@ -33,13 +33,13 @@ export function reconcileVocabulary(
 
   const addedWordIds: string[] = []
   const cards = [...existingCards]
-  const initialFsrsCard = newSerializedCard(now)
   for (const word of nextWords) {
     if (cardById.has(word.id)) continue
+    const fsrsCard = newSerializedCard(now)
     const card = {
       wordId: word.id,
-      due: initialFsrsCard.due,
-      fsrsCard: { ...initialFsrsCard },
+      due: fsrsCard.due,
+      fsrsCard,
       starred: false,
       spellingWrongCount: 0,
       createdAt: now.toISOString(),

@@ -5,6 +5,7 @@ import { getAllWords } from '@/db/db'
 import { backgrounds } from '@/config/backgrounds'
 import type { Word } from '@/types'
 import { useNavigationMotion } from '@/design-system/motion/navigation-motion'
+import { PressableLink } from '@/design-system/components'
 
 export function ImmersiveHome() {
   const { navigateWithMotion } = useNavigationMotion()
@@ -36,14 +37,14 @@ export function ImmersiveHome() {
       </section>
 
       <section className="immersive-home__actions" aria-label="今日学习入口">
-        <NavLink to="/study" onClick={(event) => navigateToLearning(event, navigateWithMotion, '/study')} data-motion-pressable="true" className="immersive-home__task-card immersive-home__task-card--learn">
+        <PressableLink to="/study" onClick={(event) => navigateToLearning(event, navigateWithMotion, '/study')} className="immersive-home__task-card immersive-home__task-card--learn">
           <span className="immersive-home__task-label">Learn</span>
           <span className="immersive-home__task-value">{todayNew}</span>
-        </NavLink>
-        <NavLink to="/review" onClick={(event) => navigateToLearning(event, navigateWithMotion, '/review')} data-motion-pressable="true" className="immersive-home__task-card immersive-home__task-card--review">
+        </PressableLink>
+        <PressableLink to="/review" onClick={(event) => navigateToLearning(event, navigateWithMotion, '/review')} className="immersive-home__task-card immersive-home__task-card--review">
           <span className="immersive-home__task-label">Review</span>
           <span className="immersive-home__task-value">{due}</span>
-        </NavLink>
+        </PressableLink>
       </section>
     </div>
   )

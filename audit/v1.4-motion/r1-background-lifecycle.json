@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "policy": {
+    "decodeBeforeCrossfade": true,
+    "staleGenerationDiscarded": true,
+    "maxRetainedLayers": 2,
+    "settledLayerCount": 1,
+    "reducedTransitionMs": 120
+  },
+  "scenarios": {
+    "idle": { "layerCount": 1, "result": "PASS" },
+    "singleCrossfade": { "maxLayerCount": 2, "result": "PASS" },
+    "rapidAtoBtoC": { "maxLayerCount": 2, "finalLayerCount": 1, "finalTargetWins": true, "result": "PASS" }
+  },
+  "e2e": {
+    "chromium": "PASS",
+    "mobile": "PASS",
+    "webkit-motion": "PASS"
+  },
+  "source": "src/components/AppShell.tsx"
+}

@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "effectiveProfile": "settings.reducedMotion OR prefers-reduced-motion",
+  "motionConfig": {
+    "appEnabled": "always",
+    "systemOnly": "user",
+    "appAndSystem": "always"
+  },
+  "domEvidence": {
+    "dataMotionProfile": "full|reduced",
+    "dataMotionConfigReduced": "false|true",
+    "pressScaleReduced": 1,
+    "routeDisplacementReduced": 0,
+    "sharedLayoutReduced": false,
+    "backgroundTransitionReducedMs": 120
+  },
+  "e2e": {
+    "appToggle": "PASS",
+    "systemProfile": "PASS",
+    "chromium": "PASS",
+    "mobile": "PASS",
+    "webkit-motion": "PASS"
+  }
+}

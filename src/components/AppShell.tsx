@@ -1,5 +1,5 @@
 import { Outlet, NavLink, useLocation } from 'react-router-dom'
-import { useEffect, useState, type CSSProperties } from 'react'
+import { useEffect, useRef, useState, type CSSProperties } from 'react'
 import {
   BarChart3,
   BookOpen,
@@ -42,29 +42,84 @@ export function AppShell() {
   const location = useLocation()
   const [keyboardInputFocused, setKeyboardInputFocused] = useState(false)
   const [backgroundLayers, setBackgroundLayers] = useState<Background[]>(background ? [background] : [])
+  const backgroundLayersRef = useRef<Background[]>(background ? [background] : [])
+  const backgroundGenerationRef = useRef(0)
+  const backgroundTransitionRef = useRef<{ generation: number; activeId: string; phase: 'entering' | 'active' } | null>(null)
+  const backgroundTransitionFrameRef = useRef<number | null>(null)
+  const [backgroundTransition, setBackgroundTransition] = useState<{ generation: number; activeId: string; phase: 'entering' | 'active' } | null>(null)
   const isImmersiveHome = location.pathname === '/'
   const isLearningRoute = ['/study', '/review', '/mistakes/study'].includes(location.pathname)
 
   useEffect(() => {
-    let cancelled = false
-    if (!background) {
-      if (backgroundLayers.length) setBackgroundLayers([])
-      return () => { cancelled = true }
+    const generation = backgroundGenerationRef.current + 1
+    backgroundGenerationRef.current = generation
+    if (backgroundTransitionFrameRef.current !== null) {
+      window.cancelAnimationFrame(backgroundTransitionFrameRef.current)
+      backgroundTransitionFrameRef.current = null
     }
-    if (backgroundLayers.some((layer) => layer.id === background.id)) return () => { cancelled = true }
+
+    const replaceLayers = (next: Background[]) => {
+      backgroundLayersRef.current = next
+      setBackgroundLayers(next)
+    }
+
+    if (!background) {
+      backgroundTransitionRef.current = null
+      setBackgroundTransition(null)
+      if (backgroundLayersRef.current.length) replaceLayers([])
+      return
+    }
+
+    const current = backgroundLayersRef.current.at(-1)
+    if (current?.id === background.id) {
+      if (backgroundLayersRef.current.length > 1) replaceLayers([background])
+      backgroundTransitionRef.current = null
+      setBackgroundTransition(null)
+      return
+    }
 
     const preload = new Image()
     preload.src = background.avif
     const decode = typeof preload.decode === 'function' ? preload.decode().catch(() => undefined) : Promise.resolve()
     void decode.then(() => {
-      if (cancelled) return
-      setBackgroundLayers((current) => [...current.filter((layer) => layer.id !== background.id), background].slice(-2))
-      window.setTimeout(() => {
-        if (!cancelled) setBackgroundLayers((current) => current.filter((layer) => layer.id === background.id))
-      }, 460)
+      if (generation !== backgroundGenerationRef.current) return
+      const previous = backgroundLayersRef.current.at(-1)
+      const next = previous && previous.id !== background.id ? [previous, background] : [background]
+      replaceLayers(next)
+      if (next.length === 1) {
+        backgroundTransitionRef.current = null
+        setBackgroundTransition(null)
+        return
+      }
+      const transition = { generation, activeId: background.id, phase: 'entering' as const }
+      backgroundTransitionRef.current = transition
+      setBackgroundTransition(transition)
+      backgroundTransitionFrameRef.current = window.requestAnimationFrame(() => {
+        backgroundTransitionFrameRef.current = null
+        if (backgroundTransitionRef.current?.generation !== generation) return
+        const activeTransition = { ...transition, phase: 'active' as const }
+        backgroundTransitionRef.current = activeTransition
+        setBackgroundTransition(activeTransition)
+      })
     })
-    return () => { cancelled = true }
-  }, [background, backgroundLayers])
+    return () => {
+      if (backgroundTransitionFrameRef.current !== null) {
+        window.cancelAnimationFrame(backgroundTransitionFrameRef.current)
+        backgroundTransitionFrameRef.current = null
+      }
+    }
+  }, [background])
+
+  function settleBackground(generation: number, activeId: string) {
+    const transition = backgroundTransitionRef.current
+    if (!transition || transition.generation !== generation || transition.activeId !== activeId) return
+    const active = backgroundLayersRef.current.find((layer) => layer.id === activeId)
+    if (!active) return
+    backgroundTransitionRef.current = null
+    setBackgroundTransition(null)
+    backgroundLayersRef.current = [active]
+    setBackgroundLayers([active])
+  }
 
   useEffect(() => {
     const handleFocusIn = (event: FocusEvent) => {
@@ -80,16 +135,24 @@ export function AppShell() {
   }, [])
 
   return (
-    <div className={`app-frame ${background ? 'app-frame--with-background' : 'app-frame--plain'} ${isImmersiveHome ? 'app-frame--immersive-home' : ''} ${isLearningRoute ? 'app-frame--learning' : ''} ${keyboardInputFocused ? 'app-frame--keyboard-input' : ''}`}>
-      <div className="app-background" aria-hidden="true" data-background-layer-count={backgroundLayers.length}>
-        {backgroundLayers.map((layer, index) => <div key={layer.id} className="app-background__layer" data-background-id={layer.id} style={{
+      <div className={`app-frame ${background ? 'app-frame--with-background' : 'app-frame--plain'} ${isImmersiveHome ? 'app-frame--immersive-home' : ''} ${isLearningRoute ? 'app-frame--learning' : ''} ${keyboardInputFocused ? 'app-frame--keyboard-input' : ''}`}>
+      <div className="app-background" aria-hidden="true" data-background-layer-count={backgroundLayers.length} data-background-active-id={backgroundLayers.at(-1)?.id ?? ''} data-background-generation={backgroundGenerationRef.current} data-background-transition={backgroundTransition?.phase ?? 'settled'}>
+        {backgroundLayers.map((layer, index) => {
+          const active = index === backgroundLayers.length - 1
+          const entering = active && backgroundTransition?.phase === 'entering'
+          return <div key={layer.id} className="app-background__layer" data-background-id={layer.id} data-background-active={active ? 'true' : 'false'} onTransitionEnd={(event) => {
+            if (event.propertyName !== 'opacity') return
+            const transition = backgroundTransitionRef.current
+            if (transition?.phase === 'active') settleBackground(transition.generation, transition.activeId)
+          }} style={{
           '--scene-position': layer.desktopPosition,
           '--scene-mobile-position': layer.mobilePosition,
           '--scene-overlay': String(layer.overlayOpacity),
-          opacity: index === backgroundLayers.length - 1 ? 1 : 0,
+          opacity: entering ? 0 : active ? 1 : 0,
         } as CSSProperties}>
-          <picture><source srcSet={layer.avif} type="image/avif" /><img src={layer.webp} alt="" /></picture>
-        </div>)}
+            <picture><source srcSet={layer.avif} type="image/avif" /><img src={layer.webp} alt="" /></picture>
+          </div>
+        })}
       </div>
       {!isImmersiveHome && !isLearningRoute && <aside className="sidebar liquid-glass glass-bar">
         <NavBrand />

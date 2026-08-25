@@ -9,14 +9,14 @@
   --system-radius-control: 16px;
   --system-radius-surface: 24px;
   --system-radius-sheet: 28px;
-  --system-press-scale: .975;
+  --system-press-scale: .99;
   --system-control-target: 34px;
   --system-surface-reading: color-mix(in srgb, var(--surface-solid) 94%, transparent);
 }
 
 :root[data-input-modality="coarse"],
 :root[data-pointer-type="coarse"] {
-  --system-press-scale: .96;
+  --system-press-scale: .975;
   --system-control-target: 44px;
 }
 
@@ -30,7 +30,6 @@
 .motion-route {
   min-height: 100%;
   transform-origin: 50% 0;
-  will-change: opacity, transform;
 }
 
 .app-background {
@@ -81,10 +80,6 @@
 }
 
 .bottom-sheet { animation: none; }
-
-.motion-route[data-motion-route="learning"] {
-  will-change: opacity;
-}
 
 .shared-element { display: inline-flex; }
 
@@ -139,15 +134,10 @@ textarea:focus-visible {
 }
 
 .bottom-sheet {
-  --sheet-offset: 0px;
-  transform: translate3d(0, var(--sheet-offset), 0);
-  transition: transform var(--system-motion-deliberate) var(--system-ease-decelerate);
   will-change: transform;
   overscroll-behavior: contain;
 }
 
-.bottom-sheet[data-sheet-state="dragging"] { transition: none; }
-.bottom-sheet[data-sheet-state="dismissing"] { --sheet-offset: 100vh; }
 .bottom-sheet__grabber { touch-action: none; cursor: grab; }
 .bottom-sheet__grabber:active { cursor: grabbing; }
 
@@ -161,9 +151,10 @@ textarea:focus-visible {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .motion-route { will-change: auto; }
-  .bottom-sheet { transition-duration: 0ms; }
+  .app-background__layer { transition-duration: 120ms; }
 }
+
+:root[data-motion-profile="reduced"] .app-background__layer { transition-duration: 120ms; }
 
 @media (min-width: 700px) {
   .apple-pressable.button--sm { min-height: 37px; }

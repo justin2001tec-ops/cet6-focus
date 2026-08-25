@@ -1,0 +1,7 @@
+{
+  "status": "NOT_APPLICABLE",
+  "decision": "Path A",
+  "exceptionRetained": false,
+  "reason": "DB and migration optimization changes were reverted; no Reviewed Performance Exception is part of R1.",
+  "normalCoverage": "Existing DB, migration, backup, and FSRS tests remain in the standard local suite."
+}

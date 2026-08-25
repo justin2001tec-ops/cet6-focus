@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "geometry": {
+    "openingOffsetPx": "clamped 32..56",
+    "dismissOffsetRatio": 0.32,
+    "dismissVelocityPxPerSecond": 720,
+    "releaseVelocityPassedToSpring": true,
+    "springVisualDurationMs": 300,
+    "reactStateWritesInPointerMove": 0
+  },
+  "interruptions": {
+    "pointercancel": "snapback PASS",
+    "lostPointerCapture": "recovery PASS",
+    "orientationchange": "snapback PASS",
+    "escape": "covered by existing dialog contract",
+    "browserBack": "dismiss and history cleanup PASS",
+    "rapidRelease": "velocity handoff attribute and close completion PASS"
+  },
+  "lifecycle": {
+    "closeAfterMotionCompletion": true,
+    "historyCleanupBeforeUnmount": true,
+    "openingLifecycleFixedToMount": true
+  },
+  "browsers": {
+    "chromium": "PASS",
+    "mobile": "PASS",
+    "webkit-motion": "PASS"
+  }
+}

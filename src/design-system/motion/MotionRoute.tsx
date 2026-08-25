@@ -1,4 +1,5 @@
 import { m } from 'motion/react'
+import { useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { routeMotionKind, routeMotionPresets } from './motion-presets'
 import { useMotionProfile } from './useMotionProfile'
@@ -27,5 +28,20 @@ export function MotionRoute({ children }: { children: React.ReactNode }) {
 }
 
 export function SharedElement({ id, children, className = '' }: { id: string; children: React.ReactNode; className?: string }) {
-  return <m.span layoutId={id} className={`shared-element ${className}`}>{children}</m.span>
+  const { profile } = useMotionProfile()
+  const [layoutPhase, setLayoutPhase] = useState<'idle' | 'active' | 'complete'>('idle')
+  const sharedLayoutEnabled = profile === 'full'
+  return (
+    <m.span
+      layoutId={sharedLayoutEnabled ? id : undefined}
+      className={`shared-element ${className}`}
+      data-shared-id={id}
+      data-shared-layout={sharedLayoutEnabled ? 'enabled' : 'reduced'}
+      data-motion-phase={layoutPhase}
+      onLayoutAnimationStart={() => setLayoutPhase('active')}
+      onLayoutAnimationComplete={() => setLayoutPhase('complete')}
+    >
+      {children}
+    </m.span>
+  )
 }

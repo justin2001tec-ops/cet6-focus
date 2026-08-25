@@ -4,14 +4,6 @@
   padding-bottom: 0;
 }
 
-.app-frame--learning .app-background {
-  filter: saturate(.82) brightness(.86);
-  transform: scale(1.012);
-  transition: filter var(--motion-reveal) var(--ease-standard);
-}
-
-.app-frame--learning.app-frame--plain .app-background { transform: none; }
-
 .learning-shell {
   --learning-ink: #f4faf5;
   --learning-ink-soft: rgba(230, 242, 233, .78);

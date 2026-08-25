@@ -1,5 +1,6 @@
-import { forwardRef, type ButtonHTMLAttributes, type HTMLAttributes, type ReactNode } from 'react'
+import { forwardRef, useState, type ButtonHTMLAttributes, type HTMLAttributes, type PointerEvent, type ReactNode } from 'react'
 import { m, type HTMLMotionProps } from 'motion/react'
+import { NavLink, type NavLinkProps } from 'react-router-dom'
 import { useMotionProfile } from './motion/useMotionProfile'
 
 interface ApplePressableProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'onDrag' | 'onDragStart' | 'onDragEnd'> {
@@ -17,10 +18,53 @@ export const ApplePressable = forwardRef<HTMLButtonElement, ApplePressableProps>
       className={`apple-pressable ${className}`}
       data-motion-pressable="true"
       whileTap={profile === 'full' && !disabled ? { scale: pressScale } : undefined}
-      transition={{ duration: profile === 'full' ? 0.12 : 0 }}
-    >
+      transition={profile === 'full' ? { type: 'spring', stiffness: 520, damping: 36, mass: 0.24 } : { duration: 0 }}
+      >
       {children}
     </m.button>
+  )
+})
+
+// NavLink's DOM event props overlap with Motion's animation event names. The
+// component still forwards the real router link/ref; this cast only resolves
+// that library typing collision at the adapter boundary.
+const MotionNavLink = m(NavLink as unknown as React.ComponentType<Record<string, unknown>>)
+
+export type PressableLinkProps = Omit<NavLinkProps, 'className' | 'children' | 'onDrag' | 'onDragStart' | 'onDragEnd'> & {
+  className?: string
+  children?: ReactNode
+}
+
+export const PressableLink = forwardRef<HTMLAnchorElement, PressableLinkProps>(function PressableLink({ children, className = '', ...props }, ref) {
+  const { profile, pressScale } = useMotionProfile()
+  const [pressed, setPressed] = useState(false)
+
+  const onPointerDown = (event: PointerEvent<HTMLAnchorElement>) => {
+    setPressed(true)
+    props.onPointerDown?.(event)
+  }
+  const releasePress = (event: PointerEvent<HTMLAnchorElement>) => {
+    setPressed(false)
+    if (event.type === 'pointerup') props.onPointerUp?.(event)
+    if (event.type === 'pointercancel') props.onPointerCancel?.(event)
+    if (event.type === 'pointerleave') props.onPointerLeave?.(event)
+  }
+
+  return (
+    <MotionNavLink
+      {...props}
+      ref={ref}
+      className={`apple-pressable apple-pressable-link ${className}`}
+      data-motion-pressable="true"
+      data-press-state={pressed ? 'pressed' : 'idle'}
+      onPointerDown={onPointerDown}
+      onPointerUp={releasePress}
+      onPointerCancel={releasePress}
+      onPointerLeave={releasePress}
+      style={profile === 'full' && pressed ? { transform: `scale(${pressScale})` } : undefined}
+    >
+      {children}
+    </MotionNavLink>
   )
 })
 

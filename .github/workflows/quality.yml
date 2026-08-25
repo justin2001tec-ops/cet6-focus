@@ -34,7 +34,7 @@ jobs:
 
   e2e:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -49,8 +49,8 @@ jobs:
           cache: pnpm
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-      - name: Install Playwright Chromium
-        run: pnpm exec playwright install --with-deps chromium
+      - name: Install Playwright browsers
+        run: pnpm exec playwright install --with-deps chromium webkit
       - name: Playwright E2E
         run: pnpm run test:e2e:serial
       - name: Upload Playwright artifacts on failure

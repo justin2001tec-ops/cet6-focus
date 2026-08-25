@@ -1,7 +1,7 @@
 {
   "status": "PASS",
   "testCommand": "pnpm test:e2e:serial",
-  "motionCommand": "playwright test tests/e2e/motion/v1.4-system.spec.ts --project=webkit-motion --workers=1 --timeout=90000",
+  "motionCommand": "pnpm run test:e2e tests/e2e/motion/v1.4-system.spec.ts --project=chromium --project=mobile --project=webkit-motion --workers=1 --timeout=90000 --reporter=line",
   "budgets": {
     "inpP75TargetMs": 200,
     "pressFeedbackNextFrame": "PASS",
@@ -14,8 +14,8 @@
     "studyParallaxPx": 0
   },
   "results": {
-    "chromiumMobileBusinessSuite": "42 passed, 16 project-conditional skips",
-    "webkitMotionSuite": "5 passed",
+    "chromiumMobileBusinessSuite": "61 passed in full serial command; project-conditional skips are documented",
+    "webkitMotionSuite": "29 passed across Chromium/mobile/WebKit, 1 documented conditional skip",
     "unitSuite": "34 passed",
     "typecheck": "passed",
     "lint": "passed",

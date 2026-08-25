@@ -12,18 +12,28 @@
 
 This report closes the seven-phase v1.4 implementation requested by the Master Handoff. After the PR is opened, modification stops pending visual and code acceptance.
 
+## R1 Acceptance Corrections
+
+R1 was limited to acceptance fixes on the existing PR. The initial GitHub E2E attempt failed because the workflow declared `webkit-motion` but installed Chromium only; the workflow now installs both Chromium and WebKit and allows the E2E job 20 minutes. The following corrections were then independently exercised locally:
+
+- `LazyMotion` now uses `domMax` with `LayoutGroup`, and Vocabulary → Word Detail shared identity is asserted through a real full-profile transition plus a reduced fallback.
+- App reduced motion and the OS preference resolve to one effective profile used by MotionConfig, CSS, route, shared layout, press, and sheet behavior.
+- Background lifecycle now guards stale generations and settles from a maximum of two layers to one; rapid A → B → C retargeting is covered.
+- PhysicalSheet opening, MotionValue drag, release velocity handoff, pointercancel/orientation recovery, browser Back, focus, and completion-gated history cleanup are covered.
+- Home Learn/Review use the PressableLink primitive with fine `.99` and coarse `.975` press scales; WebKit verifies real computed transform feedback.
+- Rapid Study ratings and Undo during transition are covered without changing FSRS behavior.
+- The DB/migration scope decision is Path A: `src/db/db.ts` and `src/lib/migration.ts` optimization changes were reverted; `REVERTED — no exception retained` is recorded in the audit package.
+
 ## What changed
 
 The work builds a system behavior model rather than applying animation everywhere:
 
-- Added a Motion for React foundation with `LazyMotion strict`, user/system reduced-motion handling, real `full`/`reduced` profiles, input-modality detection, route intent IDs, semantic route presets, and shared Vocabulary → Word Detail identity.
-- Added `ApplePressable`, `ReadingSurface`, `GlassBar`, and `GlassControl` primitives without replacing the existing product architecture.
+- Added a Motion for React foundation with `LazyMotion strict` + `domMax`, user/system reduced-motion handling, real `full`/`reduced` profiles, input-modality detection, route intent IDs, semantic route presets, and shared Vocabulary → Word Detail identity.
+- Added `ApplePressable`, `PressableLink`, `ReadingSurface`, `GlassBar`, and `GlassControl` primitives without replacing the existing product architecture.
 - Made route changes immediate and single-node: latest navigation intent wins, no exit queue, no duplicate Study/Review DOM during fast navigation.
 - Rebuilt PhysicalSheet interaction around direct geometry updates, pointer capture plus WebKit-safe window listeners, pointercancel/lost-capture/orientation recovery, Escape, browser Back, focus trap/restoration, offset threshold `32%`, and velocity threshold `720 px/s`.
 - Reworked background changes as decode-before-crossfade double buffering with a hard maximum of two full-screen layers; Study uses no scale/parallax.
 - Applied reading surfaces and material geometry only where they improve comprehension; Study/Review IA and all v1.3 product/data contracts remain frozen.
-- Reduced repeated Study queue work by using IndexedDB `due` and ordered `wordId` queries and the active-word ID cache, keeping FSRS outputs unchanged.
-- Made restored legacy settings current at the end of backup restore so the reconciliation marker cannot be observed during the reload window.
 
 ## Seven-phase completion
 
@@ -46,9 +56,9 @@ The work builds a system behavior model rather than applying animation everywher
 | Lint | PASS | `pnpm lint` |
 | Unit | PASS | `pnpm test` — 14 files, 34 tests |
 | Production build | PASS | `pnpm build`; only a non-blocking existing-style >500 kB chunk warning |
-| Full serial E2E | PASS | `pnpm test:e2e:serial` — 47 passed, 16 project-conditional skips |
-| Motion suite | PASS | Chromium + mobile + WebKit — 15/15 passed |
-| WebKit/Safari behavior | PASS | WebKit motion project — 5/5 passed, including PhysicalSheet, reduced motion, focus/zoom, long-task/background budget |
+| Full serial E2E | PASS | `pnpm test:e2e:serial` — 61 passed, 17 project-conditional skips |
+| Motion suite | PASS | Chromium + mobile + WebKit — 29 passed, 1 documented mobile conditional skip, 0 failed |
+| WebKit/Safari behavior | PASS | WebKit motion project — 10/10 passed, including shared layout, PhysicalSheet, reduced motion, focus/zoom, long-task/background budget |
 | Long-task budget | PASS | Final successful motion runs recorded zero motion-period tasks over 50 ms |
 | Background memory | PASS | Rendered and decoded full-screen background layers capped at 2; Study transform/parallax is `none`/0px |
 | Accessibility behavior | PASS | Reduced motion, keyboard focus, coarse/fine modality, 200% effective zoom, dialog semantics, focus trap/restoration, Escape and browser Back covered |
@@ -66,6 +76,15 @@ The complete review package is in [`audit/v1.4-motion/`](audit/v1.4-motion/):
 - `performance-summary.json`
 - `rapid-interaction-results.json`
 - `background-memory-report.json`
+- `r1-acceptance-summary.md`
+- `r1-ci-status.json`
+- `r1-shared-layout.json`
+- `r1-sheet-physics.json`
+- `r1-background-lifecycle.json`
+- `r1-reduced-motion.json`
+- `r1-rapid-interaction.json`
+- `r1-db-performance-exception.md`
+- `r1-db-parity.json`
 - `screenshots/motion-home-desktop.png`
 - `screenshots/motion-study-recall-desktop.png`
 - `screenshots/motion-study-context-desktop.png`

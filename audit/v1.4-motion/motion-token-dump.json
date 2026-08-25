@@ -10,8 +10,9 @@
     "standardMs": 240,
     "deliberateMs": 320,
     "sheetMs": 280,
-    "finePressScale": 0.975,
-    "coarsePressScale": 0.96,
+    "sheetOpeningVisualDurationMs": 300,
+    "finePressScale": 0.99,
+    "coarsePressScale": 0.975,
     "sheetDismissOffsetRatio": 0.32,
     "sheetDismissVelocityPxPerSecond": 720
   },
@@ -24,7 +25,8 @@
   "geometry": {
     "studyParallaxPx": 0,
     "maxDecodedFullscreenBackgroundLayers": 2,
-    "maxBackgroundCrossfadeLayers": 2
+    "maxBackgroundCrossfadeLayers": 2,
+    "reducedBackgroundTransitionMs": 120
   },
   "sources": [
     "src/design-system/motion/motion-presets.ts",

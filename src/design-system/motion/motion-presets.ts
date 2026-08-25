@@ -8,8 +8,8 @@ export const systemMotionTokens = {
   standard: 0.24,
   deliberate: 0.32,
   sheet: 0.28,
-  pressScaleFine: 0.975,
-  pressScaleCoarse: 0.96,
+  pressScaleFine: 0.99,
+  pressScaleCoarse: 0.975,
 } as const
 
 export const routeMotionPresets: Record<'default' | 'learning' | 'entity' | 'modal', Record<MotionProfile, Variants>> = {
