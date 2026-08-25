@@ -17,11 +17,14 @@ async function completeOnboarding(page: Page): Promise<void> {
 }
 
 async function seedWarmDatabase(page: Page): Promise<void> {
-  const response = await page.request.get('/data/cet6-vocab.v1.json')
-  const words = ((await response.json()) as Array<Record<string, unknown>>).slice(0, 8)
   await page.route('**/src/main.tsx*', (route) => route.abort())
   try {
     await page.goto('/?motion-seed=1', { waitUntil: 'domcontentloaded' })
+    const words = await page.evaluate(async () => {
+      const response = await fetch('/data/cet6-vocab.v1.json', { cache: 'no-store' })
+      if (!response.ok) throw new Error(`Warm vocabulary fetch failed: ${response.status}`)
+      return ((await response.json()) as Array<Record<string, unknown>>).slice(0, 8)
+    })
     await page.evaluate(async (seedWords: Array<Record<string, unknown>>) => {
     const now = new Date().toISOString()
     await new Promise<void>((resolve, reject) => {
@@ -192,6 +195,10 @@ test('Vocabulary to Word Detail uses one real shared identity and has a reduced 
   await expect(destination).toHaveAttribute('data-shared-id', sharedId!)
   await expect(destination).toHaveAttribute('data-shared-layout', 'enabled')
   await expect(destination).toContainText(sourceText)
+  await expect.poll(
+    async () => page.evaluate(() => (window as Window & { __r1SharedPhases?: string[] }).__r1SharedPhases ?? []),
+    { timeout: 5_000 },
+  ).toContain('active')
   const sharedEvidence = await page.evaluate(() => {
     const state = window as Window & { __r1SharedObserver?: MutationObserver; __r1SharedPhases?: string[] }
     state.__r1SharedObserver?.disconnect()
@@ -276,6 +283,7 @@ test('Study fast ratings and Undo during transition keep one queue and exact Rev
   await bootForMotion(page, testInfo.project.name)
   await page.goto('/#/settings', { waitUntil: 'domcontentloaded' })
   const dailyNewWords = page.locator('label.field-label').filter({ hasText: '每日新词' }).locator('select')
+  await expect(dailyNewWords).toBeVisible({ timeout: 15_000 })
   await dailyNewWords.selectOption('20')
   await page.goto('/#/study', { waitUntil: 'domcontentloaded' })
   await expect(page.locator('.learning-shell--recall')).toBeVisible({ timeout: 15_000 })
