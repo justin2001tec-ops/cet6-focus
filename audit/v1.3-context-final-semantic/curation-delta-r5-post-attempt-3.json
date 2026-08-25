@@ -1,0 +1,138 @@
+{
+  "round": 5,
+  "source": "Round 5 post-curation sentence-read review attempt 3",
+  "reviewed": 300,
+  "rejectCount": 10,
+  "severeInappropriateCount": 1,
+  "appendedCount": 10,
+  "appended": [
+    {
+      "word": "suburb",
+      "sentenceId": 12214085,
+      "categories": [
+        "public-controversy",
+        "proper-noun-heavy"
+      ],
+      "reason": "A campaign speech in a Dakar suburb makes suburb depend on political campaigning and an unfamiliar proper-noun setting rather than a neutral place example.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "solution",
+      "sentenceId": 12368911,
+      "categories": [
+        "context-dependent",
+        "weak-teaching-value"
+      ],
+      "reason": "The sentence calls something a long-term solution but never identifies the problem, so solution lacks a concrete standalone teaching context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "depression",
+      "sentenceId": 11327261,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "The speaker's severe depression and ongoing symptoms are a sensitive personal diagnostic context that is not suitable as a default example.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "benefit",
+      "sentenceId": 9516767,
+      "categories": [
+        "context-too-hard",
+        "weak-teaching-value"
+      ],
+      "reason": "Putative benefit and a risk-balancing argument use abstract policy vocabulary that makes benefit less accessible than a concrete everyday example.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "bonus",
+      "sentenceId": 8952219,
+      "categories": [
+        "medical-heavy",
+        "weak-teaching-value"
+      ],
+      "reason": "The plump-and-goiter comparison adds body and medical detail that contributes little to teaching bonus in a neutral way.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "merely",
+      "sentenceId": 11578325,
+      "categories": [
+        "specialist-background",
+        "context-too-hard"
+      ],
+      "reason": "Pronominal suffixes, enclitic pronouns, and accent require specialist linguistics knowledge that overwhelms merely.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "acknowledge",
+      "sentenceId": 11144939,
+      "categories": [
+        "archaic",
+        "context-dependent"
+      ],
+      "reason": "The literary statement about every man finding an answer and acknowledging sorrow is abstract and gendered, so acknowledge is not taught in a broadly reusable context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "distinct",
+      "sentenceId": 12129221,
+      "categories": [
+        "public-controversy",
+        "hate"
+      ],
+      "reason": "Contrasting Hindu and Nazi swastikas introduces religious and extremist symbolism that is unnecessary for teaching distinct.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "deceive",
+      "sentenceId": 8135012,
+      "categories": [
+        "hate",
+        "public-controversy"
+      ],
+      "reason": "The sentence makes a generalized claim about Algerians and their wives, adding ethnic and religious stereotyping unrelated to deceive.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "ward",
+      "sentenceId": 11076514,
+      "categories": [
+        "medical-heavy",
+        "context-dependent"
+      ],
+      "reason": "Being sent back to a psych ward implies an unresolved psychiatric history, making ward a sensitive clinical context unsuitable for default learning.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    }
+  ],
+  "before": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 746
+  },
+  "after": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 756
+  },
+  "noReplacementAuthored": true
+}

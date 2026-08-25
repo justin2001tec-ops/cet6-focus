@@ -10,29 +10,36 @@
 
 | Gate | Result |
 | --- | --- |
-| Risk-targeted reviewed | 1002 records; 100% retained in artifact |
+| Risk-targeted reviewed | 1056 records; 100% retained in artifact |
 | Random semantic pass 1 | 350 records; 350/350 (100%) |
 | Independent validation | 250 records; 250/250 (100%) |
 | Severe inappropriate | 0 |
 | Provenance | 100.0% |
-| Final coverage | 1110/2219 (50.0%); QUALITY PASS / COVERAGE BELOW TARGET |
+| Final coverage | 990/2219 (44.6%); QUALITY PASS / COVERAGE BELOW TARGET |
 
 ## Rejected categories
 
-- context-dependent: 16
-- context-too-hard: 120
+- archaic: 6
+- context-dependent: 30
+- context-too-hard: 157
+- death-heavy: 8
 - extremism: 12
-- hate: 20
-- medical-heavy: 45
+- fantastical-context: 9
+- hate: 23
+- medical-heavy: 57
 - obscure-background: 37
-- political-heavy: 105
-- proper-noun-heavy: 15
-- public-controversy: 4
-- religious-heavy: 32
+- other: 2
+- political-heavy: 115
+- proper-noun-heavy: 19
+- public-controversy: 7
+- rare-sense: 1
+- religious-heavy: 33
 - sexual: 12
-- unnatural-English: 41
-- violence: 46
-- weak-teaching-value: 27
+- specialist-background: 14
+- syntax-too-complex: 1
+- unnatural-English: 50
+- violence: 55
+- weak-teaching-value: 48
 
 ## Durable curation
 

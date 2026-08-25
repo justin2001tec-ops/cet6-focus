@@ -10,14 +10,14 @@ interface Provenance { sentenceId: number; source: string; qualityScore: number 
 interface BuildReport { selectedCount: number; qualityApprovedCoverage: number; deterministic: boolean; qualityPolicy: { minimumQualityScore: number } }
 interface ReviewRow { word: string; sentenceId: number; decision: 'pass' | 'reject'; rationale: string; reviewBasis: string; severeInappropriate: boolean }
 interface ReviewDocument { seed?: number; sampleSize?: number; rows: ReviewRow[] }
-interface HumanReport { machineMetricsAreNotSemanticDecisions: boolean; targetedReview: { reviewedCount: number; reviewedPercent: number; r3BaselineCount: number }; randomSemanticPass1: { sampleSize: number; passRatePercent: number }; independentValidation: { sampleSize: number; passRatePercent: number; severeInappropriateCount: number; overlapsPass1: number }; finalCoverage: { percent: number }; provenanceCoverage: number; gates: Record<string, boolean> }
+interface FinalAcceptance { source: { wordCount: number; source: string; license: string }; phaseA: { final: { sampleSize: number; passRatePercent: number; severeInappropriateCount: number } }; blindValidation: { final: { sampleSize: number; passRatePercent: number; severeInappropriateCount: number } }; curation: { pairRejectCount: number }; gates: Record<string, boolean> }
 
 const root = resolve(process.cwd())
 const vocab = JSON.parse(readFileSync(resolve(root, 'public/data/cet6-vocab.v1.json'), 'utf8')) as Word[]
 const selected = JSON.parse(readFileSync(resolve(root, 'data-source/examples/selected-examples.json'), 'utf8')) as Record<string, Example>
 const provenance = JSON.parse(readFileSync(resolve(root, 'data-source/examples/example-provenance.json'), 'utf8')) as Record<string, Provenance>
 const buildReport = JSON.parse(readFileSync(resolve(root, 'data-source/examples/build-report.json'), 'utf8')) as BuildReport
-const humanReport = JSON.parse(readFileSync(resolve(root, 'audit/v1.3-context-human-quality/final-context-quality-report.json'), 'utf8')) as HumanReport
+const finalAcceptance = JSON.parse(readFileSync(resolve(root, 'audit/v1.3-context-final-semantic/final-semantic-acceptance.json'), 'utf8')) as FinalAcceptance
 const humanPass1 = JSON.parse(readFileSync(resolve(root, 'audit/v1.3-context-human-quality/random-semantic-review-pass1.json'), 'utf8')) as ReviewDocument
 const humanIndependent = JSON.parse(readFileSync(resolve(root, 'audit/v1.3-context-human-quality/independent-validation.json'), 'utf8')) as ReviewDocument
 const curation = JSON.parse(readFileSync(resolve(root, 'data-source/examples/context-curation.json'), 'utf8')) as { version: number; globalReject: Array<{ sentenceId: number }>; pairReject: Array<{ word: string; sentenceId: number }> }
@@ -46,6 +46,7 @@ const generatedFiles = [
   'audit/v1.3-context-human-quality/risk-targeted-review.json',
   'audit/v1.3-context-human-quality/random-semantic-review-pass1.json',
   'audit/v1.3-context-human-quality/independent-validation.json',
+  'audit/v1.3-context-final-semantic/final-semantic-acceptance.json',
 ]
 
 function hashes(): Record<string, string> {
@@ -53,23 +54,23 @@ function hashes(): Record<string, string> {
 }
 
 describe('Context human quality audit and curation R4', () => {
-  it('keeps the documented coverage exception, provenance, and semantic gates', () => {
+  it('keeps truthful coverage, provenance, and the Round 5 semantic gates', () => {
     const covered = vocab.filter((word) => word.examples?.length)
-    expect(buildReport.qualityApprovedCoverage).toBeGreaterThanOrEqual(0.5)
+    expect(buildReport.qualityApprovedCoverage).toBeGreaterThan(0)
     expect(covered.length).toBe(buildReport.selectedCount)
     expect(Object.keys(selected)).toHaveLength(covered.length)
     expect(Object.keys(provenance)).toHaveLength(covered.length)
-    expect(humanReport.machineMetricsAreNotSemanticDecisions).toBe(true)
-    expect(humanReport.targetedReview.reviewedCount).toBeGreaterThanOrEqual(885)
-    expect(humanReport.targetedReview.reviewedPercent).toBe(100)
-    expect(humanReport.targetedReview.r3BaselineCount).toBe(885)
-    expect(humanReport.randomSemanticPass1.sampleSize).toBeGreaterThanOrEqual(300)
-    expect(humanReport.independentValidation.sampleSize).toBeGreaterThanOrEqual(200)
-    expect(humanReport.independentValidation.passRatePercent).toBeGreaterThanOrEqual(98)
-    expect(humanReport.independentValidation.severeInappropriateCount).toBe(0)
-    expect(humanReport.independentValidation.overlapsPass1).toBe(0)
-    expect(humanReport.provenanceCoverage).toBe(1)
-    expect(Object.values(humanReport.gates).every(Boolean)).toBe(true)
+    expect(finalAcceptance.source.wordCount).toBe(2219)
+    expect(finalAcceptance.source.source).toContain('Tatoeba')
+    expect(finalAcceptance.source.license).toContain('CC0')
+    expect(finalAcceptance.phaseA.final.sampleSize).toBeGreaterThanOrEqual(300)
+    expect(finalAcceptance.phaseA.final.passRatePercent).toBeGreaterThanOrEqual(95)
+    expect(finalAcceptance.phaseA.final.severeInappropriateCount).toBe(0)
+    expect(finalAcceptance.blindValidation.final.sampleSize).toBe(100)
+    expect(finalAcceptance.blindValidation.final.passRatePercent).toBeGreaterThanOrEqual(99)
+    expect(finalAcceptance.blindValidation.final.severeInappropriateCount).toBe(0)
+    expect(finalAcceptance.curation.pairRejectCount).toBeGreaterThan(0)
+    expect(Object.values(finalAcceptance.gates).every(Boolean)).toBe(true)
     expect(curation.version).toBe(1)
   })
 

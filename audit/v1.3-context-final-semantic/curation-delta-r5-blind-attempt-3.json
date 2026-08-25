@@ -1,0 +1,176 @@
+{
+  "round": 5,
+  "source": "Round 5 blind validation attempt 3",
+  "reviewed": 100,
+  "rejectCount": 13,
+  "severeInappropriateCount": 0,
+  "appendedCount": 13,
+  "appended": [
+    {
+      "word": "cancel",
+      "sentenceId": 11240039,
+      "categories": [
+        "public-controversy",
+        "political-heavy"
+      ],
+      "reason": "GamerGate, reactionaries, and cancel-culture claims create a niche hostile controversy that is unsuitable as a neutral context for cancel.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "function",
+      "sentenceId": 6976968,
+      "categories": [
+        "political-heavy",
+        "public-controversy"
+      ],
+      "reason": "Anarchists and mutual aid introduce a political ideology claim, so function is not shown in a neutral default context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "occur",
+      "sentenceId": 11740001,
+      "categories": [
+        "religious-heavy",
+        "fantastical-context"
+      ],
+      "reason": "A predicted rapture occurring in exactly three years is an apocalyptic religious claim, not a neutral context for occur.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "vulnerable",
+      "sentenceId": 6366579,
+      "categories": [
+        "political-heavy",
+        "public-controversy"
+      ],
+      "reason": "A dictator's appointee rolling back protections frames vulnerable populations inside a charged political accusation rather than a neutral context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "independence",
+      "sentenceId": 12767796,
+      "categories": [
+        "political-heavy",
+        "violence"
+      ],
+      "reason": "Resistance and a fight for independence make independence depend on a conflict narrative instead of a neutral self-governance context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "dimension",
+      "sentenceId": 10196336,
+      "categories": [
+        "fantastical-context",
+        "weak-teaching-value"
+      ],
+      "reason": "Finding a portal to another dimension is a fantasy premise, so dimension is not anchored in a normal default-learning context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "skeleton",
+      "sentenceId": 12122210,
+      "categories": [
+        "fantastical-context",
+        "weak-teaching-value"
+      ],
+      "reason": "A skeleton dog chasing Cookie is a spooky fantasy image that does not provide a normal useful context for skeleton.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "solution",
+      "sentenceId": 12773270,
+      "categories": [
+        "context-dependent",
+        "weak-teaching-value"
+      ],
+      "reason": "Could this be the solution we need supplies no problem or candidate answer, so solution is left as an unexplained abstract label.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "pirate",
+      "sentenceId": 11670695,
+      "categories": [
+        "fantastical-context",
+        "weak-teaching-value"
+      ],
+      "reason": "Being born on a pirate ship is a playful fantastical claim that does not give pirate a reliable default-learning context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "alliance",
+      "sentenceId": 11402139,
+      "categories": [
+        "political-heavy",
+        "public-controversy"
+      ],
+      "reason": "A steadfast Korea-U.S. alliance and relationship with China place alliance in a current geopolitical context that is too charged for the default pool.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "grain",
+      "sentenceId": 8326144,
+      "categories": [
+        "unnatural-English",
+        "archaic",
+        "context-dependent"
+      ],
+      "reason": "The obscure hase word and awkward grain-and-straw wording make this an unreliable natural-English sentence for grain.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "ward",
+      "sentenceId": 11951879,
+      "categories": [
+        "medical-heavy",
+        "context-dependent"
+      ],
+      "reason": "Being sent to a psychiatric ward thirteen times is a sensitive personal mental-health history, not a neutral default context for ward.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "cemetery",
+      "sentenceId": 11264536,
+      "categories": [
+        "death-heavy",
+        "weak-teaching-value"
+      ],
+      "reason": "The identical-graves joke is morbid and distracting, so cemetery is not taught through a neutral default context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    }
+  ],
+  "before": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 820
+  },
+  "after": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 833
+  },
+  "noReplacementAuthored": true
+}

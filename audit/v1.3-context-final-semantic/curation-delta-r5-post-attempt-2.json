@@ -1,0 +1,355 @@
+{
+  "round": 5,
+  "source": "Round 5 post-curation sentence-read review attempt 2",
+  "reviewed": 300,
+  "rejectCount": 28,
+  "severeInappropriateCount": 6,
+  "appendedCount": 28,
+  "appended": [
+    {
+      "word": "intellectual",
+      "sentenceId": 8343551,
+      "categories": [
+        "public-controversy",
+        "weak-teaching-value"
+      ],
+      "reason": "Calling all intellectual property theft is an ideological claim, so intellectual is embedded in a public controversy rather than a neutral learning context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "inject",
+      "sentenceId": 11796952,
+      "categories": [
+        "medical-heavy",
+        "context-dependent"
+      ],
+      "reason": "Asking what someone was injected with gives inject no object or purpose and leaves the learner dependent on an unstated medical situation.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "insane",
+      "sentenceId": 11051916,
+      "categories": [
+        "medical-heavy",
+        "weak-teaching-value"
+      ],
+      "reason": "That was insane is a vague colloquial judgment, and the speaker's claim to know would not give a default learner a careful modern sense of insane.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "benefit",
+      "sentenceId": 11536945,
+      "categories": [
+        "public-controversy",
+        "political-heavy"
+      ],
+      "reason": "The sentence presents an adversarial claim about corporate interests and infinite scrolling, adding a loaded debate that is unnecessary for benefit.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "acknowledge",
+      "sentenceId": 11770177,
+      "categories": [
+        "public-controversy",
+        "political-heavy"
+      ],
+      "reason": "A political agenda is the central accusation, so acknowledge is taught inside a partisan claim rather than a neutral, broadly reusable context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "transition",
+      "sentenceId": 12029073,
+      "categories": [
+        "public-controversy",
+        "medical-heavy"
+      ],
+      "reason": "The slogan about trans people and trusting science makes transition depend on a contested identity and medical-policy discussion instead of a neutral meaning.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "purity",
+      "sentenceId": 8603296,
+      "categories": [
+        "hate",
+        "archaic",
+        "context-dependent"
+      ],
+      "reason": "The archaic exclamation about queer morality is hostile and opaque, so purity is not presented in a safe, clear default-learning context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "cable",
+      "sentenceId": 11674977,
+      "categories": [
+        "public-controversy",
+        "weak-teaching-value"
+      ],
+      "reason": "The boomer stereotype turns cable into a generational joke and gives the target little teaching value beyond a dismissive cultural reference.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "coarse",
+      "sentenceId": 11355273,
+      "categories": [
+        "context-too-hard",
+        "weak-teaching-value"
+      ],
+      "reason": "The mocking sieve and smiling rug are an opaque personified proverb, so coarse is harder to learn than the sentence's surface contrast suggests.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "reign",
+      "sentenceId": 11459273,
+      "categories": [
+        "context-dependent",
+        "weak-teaching-value"
+      ],
+      "reason": "Reign of mediocrity is an ornate abstract slogan with no concrete subject, so the target is not taught through a clear standalone situation.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "bonus",
+      "sentenceId": 8952223,
+      "categories": [
+        "medical-heavy",
+        "weak-teaching-value"
+      ],
+      "reason": "Obesity and a goiter introduce an unexplained medical and body-focused detail that contributes little to teaching bonus.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "catholic",
+      "sentenceId": 12465799,
+      "categories": [
+        "religious-heavy",
+        "public-controversy"
+      ],
+      "reason": "Calling Tom very Catholic while qualifying his conservatism makes catholic depend on a personal religious-political identity rather than a neutral context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "solution",
+      "sentenceId": 12021193,
+      "categories": [
+        "violence",
+        "self-harm"
+      ],
+      "reason": "The sentence explicitly treats murdering people as a possible solution, so solution appears in a severe violence context unsuitable for default learning.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "revolutionary",
+      "sentenceId": 12026335,
+      "categories": [
+        "public-controversy",
+        "political-heavy"
+      ],
+      "reason": "The phrase revolutionary Marxist opens a political-ideology classification dispute, making revolutionary less accessible than a neutral innovation example.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "mass",
+      "sentenceId": 11633644,
+      "categories": [
+        "violence",
+        "medical-heavy"
+      ],
+      "reason": "Mass shooters and psychiatric evaluations place mass in an explicit violence and mental-health debate, creating a severe unsuitable context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "variation",
+      "sentenceId": 12351522,
+      "categories": [
+        "specialist-background",
+        "context-too-hard"
+      ],
+      "reason": "Garnet chemistry and composition ranges require specialist background that overwhelms the ordinary variation meaning.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "border",
+      "sentenceId": 11986097,
+      "categories": [
+        "public-controversy",
+        "political-heavy"
+      ],
+      "reason": "Deportation, border crossing, and authoritarianism make border part of a charged immigration argument rather than a neutral spatial context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "offspring",
+      "sentenceId": 8488055,
+      "categories": [
+        "death-heavy",
+        "context-dependent"
+      ],
+      "reason": "The euphemism if he were still of this world makes offspring depend on an unexplained death and does not provide a neutral family context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "impose",
+      "sentenceId": 11690637,
+      "categories": [
+        "hate",
+        "public-controversy"
+      ],
+      "reason": "The insult-laden claim about cis ideology and children is a severe identity controversy that makes impose unsafe for default learning.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "athlete",
+      "sentenceId": 11518314,
+      "categories": [
+        "hate",
+        "public-controversy"
+      ],
+      "reason": "The sweeping claim about trans women and women's sports is an exclusionary identity controversy, not a safe neutral context for athlete.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "merely",
+      "sentenceId": 11624364,
+      "categories": [
+        "hate",
+        "death-heavy"
+      ],
+      "reason": "Burial alive for associating with Jews combines historical antisemitic persecution and explicit violence, so merely is in a severe unsuitable context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "distinct",
+      "sentenceId": 13025321,
+      "categories": [
+        "context-too-hard",
+        "weak-teaching-value"
+      ],
+      "reason": "Legally distinct candy bar is a niche trademark joke tied to a starvation setup, so distinct is not taught in a broadly useful neutral context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "enforce",
+      "sentenceId": 6366624,
+      "categories": [
+        "specialist-background",
+        "political-heavy"
+      ],
+      "reason": "An absentee landlord, state enforcement, and property claims create a dense legal-political argument that overwhelms enforce.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "suburb",
+      "sentenceId": 9090592,
+      "categories": [
+        "context-dependent",
+        "weak-teaching-value"
+      ],
+      "reason": "The wrong-turn joke provides no concrete explanation of suburb and makes the target depend on an odd negative characterization.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "depression",
+      "sentenceId": 7249248,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "Autism and severe depression make depression part of a personal diagnostic context that is too medically sensitive for a default example.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "vicious",
+      "sentenceId": 11846785,
+      "categories": [
+        "hate",
+        "public-controversy"
+      ],
+      "reason": "The claim about vicious transphobes and chasers is hostile identity discourse, so vicious is not presented in a safe neutral context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "conservative",
+      "sentenceId": 12465799,
+      "categories": [
+        "religious-heavy",
+        "public-controversy"
+      ],
+      "reason": "The sentence uses Catholic identity to qualify conservative and therefore teaches the target inside a religious-political generalization.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "mobile",
+      "sentenceId": 10783492,
+      "categories": [
+        "public-controversy",
+        "unnatural-English"
+      ],
+      "reason": "The sentence generalizes about African banking and uses an awkward many Africans who do not use banks construction, so mobile is not a reliable neutral model.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    }
+  ],
+  "before": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 718
+  },
+  "after": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 746
+  },
+  "noReplacementAuthored": true
+}

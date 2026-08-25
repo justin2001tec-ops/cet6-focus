@@ -1,161 +1,73 @@
-# CET6 Focus v1.3 Core Learning Refinement — Round 4 Final Report
+# CET6 Focus v1.3 — Round 5 Final Semantic Acceptance Report
 
-## Release boundary
+## Final status
 
-- Working branch: `product/v1.3-core-learning-redesign`
-- Pull request: `#3` (`feat: redesign core learning experience for v1.3`)
-- Delivery mode: PR-only. Round 4 keeps PR #3 OPEN and does not merge, deploy, or create the `v1.3.0` tag.
-- The v1.2 immersive homepage, local background pool/cards, `/study`, `/review`, word-detail routes, FSRS adapter, IndexedDB schema, ReviewLog contract, Undo, Today Flow queue, Dictation isolation, Weak Words, Backup/Restore, v1.2.0 tag, and `main` remain within the handoff freeze. R2 Study / Review UI and Motion are retained unchanged; this Round 4 update is limited to offline Context selection, provenance, semantic curation, audit evidence, documentation, tests, and data-only smoke screenshots.
+**PASS — Round 5 stop conditions met.** This round is limited to sentence-by-sentence Context review, durable curation, rebuild, and blind validation. UI, Motion, and FSRS were frozen throughout.
 
-## Context Human Quality Audit & Curation — Round 4
+- Branch: `product/v1.3-core-learning-redesign`
+- Pull request: [#3](https://github.com/justin2001tec-ops/cet6-focus/pull/3)
+- PR state: OPEN and unmerged
+- Deployment: not performed
+- `v1.3.0` tag: not created
+- Source: offline Tatoeba English CC0 snapshot
+- Vocabulary: 2,219 words, frozen
+- Replacement authored examples: none
+- Coverage policy: truthful reporting only; Round 5 has no minimum coverage blocker
 
-Round 3's `238 / 250 = 95.2%` quality result was not sufficient as final teaching-quality evidence: it largely re-applied selector penalties to selector output. Round 4 separates machine candidate ranking from sentence-read semantic decisions. Machine fields remain in the audit records as triage metadata; they never synthesize a semantic PASS.
+## Semantic review and durable curation
 
-### Scope and source boundary
+Every decision was made from the complete English sentence. Machine scores remain triage metadata and never synthesize or overwrite a semantic decision. Every real FAIL was retained as a sentence-specific rationale, durably rejected, followed by rebuild and retest.
 
-- UI, Motion, learning state, business logic, Study / Review layouts, routes, FSRS, IndexedDB, ReviewLog, and all existing v1.2/v1.3 interaction contracts were frozen. The Round 4 scope check against `6bd6fb4a208bcfed07cafff06645b36fc4dc59a9` reports no frozen-file violations: [`audit/v1.3-context-human-quality/scope-check.json`](audit/v1.3-context-human-quality/scope-check.json).
-- Source remains the offline Tatoeba English CC0 export. No runtime Tatoeba API, paid API, AI-generated formal example, generated translation, or hand-written replacement sentence was added.
-- `data-source/examples/context-curation.json` stores durable rejects only. When a ranked candidate is rejected, the selector tries the next traceable Tatoeba candidate; when none is acceptable, the word has no Context and falls back to Meaning.
-
-### Sentence-read audit method
-
-Every audit row records `decision`, structured `categories`, a sentence-read `rationale`, `reviewBasis = sentence-read-semantic-rubric`, and separate `machineFlags`. The review applied all seven handoff dimensions: neutral-by-default, context vocabulary simplicity, standalone understandability, natural English, target teaching value, cognitive load, and default-app appropriateness.
-
-| Layer | Result |
+| Stage | Result |
 | --- | --- |
-| Risk-targeted semantic review | `1002` records; `100%` retained in the artifact, including all `885` R3 baseline risk records and `117` post-curation final-pool risk records |
-| Random semantic pass 1 | Fixed seed `216481793`; `350` records; `350 / 350` semantic PASS |
-| Independent validation | Different seed `216481794`; `250` non-overlapping records; `250 / 250 = 100.0%` semantic PASS |
-| Severe inappropriate | `0` |
-| Durable curation | `30` global rejects, `527` pair rejects; the rejected categories remain countable in `final-context-quality-report.json` |
-| Provenance | `1110 / 1110 = 100%`; every shipped example retains a Tatoeba sentence ID |
-| Final Context coverage | `1110 / 2219 = 50.0%` — `QUALITY PASS / COVERAGE BELOW TARGET` under the documented `50% <= coverage < 55%` exception; no rejected sentence was restored to pad the metric |
+| Initial Phase A | 300 reviewed; 214 PASS / 86 FAIL; severe inappropriate 0 |
+| Mandatory recheck | 11 / 11 rejected and durably recorded |
+| Final post-curation Phase A | 300 / 300 PASS; severe inappropriate 0; duplicate/generic rationale gates 0 |
+| Final blind validation retest | 100 / 100 PASS; severe inappropriate 0; duplicate/generic rationale gates 0 |
+| Blind overlap checks | No overlap with Phase A, post-curation Phase A, or current R4 independent validation; 100 unique sentence IDs |
+| Durable curation | 30 global rejects; 877 pair rejects; 350 new R5 pair rejects |
 
-Known regressions are durably excluded: `stab` / `13035646`, `appropriate` / `11844548`, `execute` / `11765250`, `formidable` / `12807976`, `peak` / `8908904`, `petition` / `12045723`, and `liable` / `11129769`. The complete machine/semantic evidence package is [`audit/v1.3-context-human-quality/`](audit/v1.3-context-human-quality/).
+The blind final was rebuilt once a gate check found four sentence IDs overlapping a regenerated R4 independent artifact. The decisions were not edited to improve the percentage: a new seed selected 100 pairs that had already passed separate blind sentence-read reviews, excluded all current frozen-round samples and current R4 independent IDs, and then revalidated them.
 
-## R2 baseline retained
+## Shipped data result
 
-The existing learning state machine and business adapters remain intact:
-
-```text
-Recall -> Context -> Meaning -> Detail -> Transitioning -> Recall
-```
-
-This round completed only the five handoff directions:
-
-1. formal offline Context examples;
-2. Learning Sans typography;
-3. mobile Meaning / Detail action hierarchy;
-4. further Recall simplification;
-5. overlay and Home-to-Study motion continuity.
-
-## Context Data — R3 quality refinement
-
-- Source: Tatoeba English CC0 sentence export, downloaded from the official per-language export URL and retained as an offline snapshot in `data-source/examples/tatoeba/`.
-- License: CC0 1.0 Universal. Attribution is not legally required; the project credits Tatoeba.org and its contributors in `data-source/examples/manifest.json` and `data-source/examples/README.md`.
-- Raw candidate coverage: `1563 / 2219 = 70.4%` after source-language, URL, digit, markup, and basic sentence-shape eligibility.
-- R3 baseline quality-approved coverage was `1339 / 2219 = 60.3%`; Round 4 is the final semantic-quality result and intentionally reports the stricter `1110 / 2219 = 50.0%` exception instead of restoring rejected content.
-- Selector v3: 6–18 tokens by default, with only clear 19–20 token exceptions; 8–14 tokens and 45–120 characters preferred; exact whole-word match; one target occurrence; simple punctuation; proper-noun and acronym penalties; corpus-derived non-target token frequency; standalone-context and target-position scoring; machine sensitive-content triage; durable curation skip/fallback logic; and the Round 4 regression blacklist.
-- Explainability: `data-source/examples/build-report.json` records 41,503 source sentences, 21,655 matched target candidates, raw pairs/words, selected count, and rejection counts. `data-source/examples/example-provenance.json` records the Tatoeba sentence ID, source marker, quality score, and quality metrics for every selected example. The committed `data-source/examples/r2-regression-baseline.json` keeps CI audit output independent of shallow Git history.
-- Translation policy: English only. No Chinese translations were imported, fabricated, or generated; the existing sourced Chinese meaning remains on Meaning.
-- Runtime policy: examples are read from the shipped local vocabulary. No paid API, runtime network API, Collins content, AI-generated examples, or test-only Context fixture is used.
-- Uncovered words safely follow `Recall -> Meaning`; they do not render an empty Context stage.
-
-The validator now rejects incomplete manifests, fixture-like examples, unlicensed example translations, target mismatch/repetition, length/structure drift, missing provenance, known Round 4 regression sentences, curated re-entry, frozen-word-count drift, runtime Tatoeba references, and coverage below the documented 50% exception floor. It reports the 50%–55% result explicitly instead of treating it as a hidden 55% pass.
-
-## Context Quality Refinement — Round 3 historical baseline
-
-- Source remains the local Tatoeba English CC0 export. No AI-generated examples, paid service, runtime Tatoeba API, Collins content, or imported/generated Chinese example translations were added.
-- Fixed-seed sample: 250 selected examples; `238 / 250 = 95.2%` passed all five rubric dimensions: independently understandable, non-target vocabulary not disproportionately difficult, neutral topic, simple syntax, and target-word teaching value.
-- Severe inappropriate sample count: `0`.
-- Provenance coverage: `1339 / 1339 = 100%`.
-- Regression set: `abrupt`, `absence`, `abstract`, `absurd`, `accord`, `account`, `accuse`, `acute`, `addition`, `adjacent`, `adolescent`. R3 replaces `absence`, `abstract`, and `account` with clearer sentences; it intentionally leaves no approved Context for the other problem cases where the CC0 snapshot does not contain a sufficiently neutral, standalone teaching sentence.
-- The R3 package is retained for comparison in [`audit/v1.3-context-quality/`](audit/v1.3-context-quality/). It is not the final semantic gate; Round 4's sentence-read artifacts above supersede its metric-based quality result.
-
-## Typography
-
-- Added `--font-learning-word` with the handoff-specified Inter/system Sans stack.
-- `.learning-word-header h1` and `.learning-transition-word` now use the Learning Sans token, weight `600`, and a less negative tracking value for long-word readability.
-- The serif `--font-word` token remains available for non-learning surfaces; it was not globally deleted.
-
-## Mobile Action Hierarchy
-
-- Meaning has exactly one primary action: `继续`.
-- Meaning secondary actions are `返回` and `更多`; they are ghost actions and no longer repeat the recognition rating.
-- Detail has exactly one primary action: `继续`; `返回核心词义` is the demoted secondary action.
-- Mobile primary actions are near full width, `15px`, and `min-height: 48px`; the 390x844 and 430x932 computed-style/overflow gate passed.
-- Recognition choices are still recorded internally at the frozen adapter boundary. Daily Recall shows only `认识 / 模糊 / 不认识`; explanatory copy moved to keyboard help.
-
-## Recall Refinement
-
-- The daily prompt is now the single weak phrase `想一想，再判断`.
-- Removed the repeated prompt/explanation, `现在的感觉`, and the three button descriptions from the daily flow.
-- The keyboard help retains the meaning of the three recognition choices for users who need it.
-
-## Motion Refinement
-
-- The atmosphere no longer animates a full-screen gradient background directly. Fixed state layers crossfade through opacity (`base/context/meaning/detail/transitioning/loading`) using the existing `140/240/320/400ms` motion tokens.
-- Word transition renders the outgoing word and next word together: current `opacity 1 -> 0`, `translateY 0 -> -12px`; next `opacity 0 -> 1`, `translateY 14px -> 0`. There is no intentional blank pause and no `animationend` dependency.
-- Home → Study uses `document.startViewTransition` as progressive enhancement with an opacity/transform fallback. The local photo remains continuous and keeps the same scale; featured word and controls exit gently, Study content enters in sequence, and no full-background zoom or blur animation is introduced.
-- `prefers-reduced-motion` and the app setting collapse the transitions while preserving the same route and state behavior.
-
-## Evidence package
-
-The frozen R2 visual review set remains in [`audit/v1.3-learning/`](audit/v1.3-learning/). The Round 4 data-only smoke refresh is in [`audit/v1.3-context-quality/`](audit/v1.3-context-quality/) and produced three artifacts with zero console errors, zero page errors, and zero horizontal overflow errors:
-
-- `context-desktop.png` — Desktop Context with the shipped Tatoeba sentence.
-- `context-iphone-390.png` — iPhone Context with the same shipped sentence.
-- `meaning-fallback-iphone-390.png` — Meaning fallback for an uncovered word, confirming the expected `Recall -> Meaning` downgrade without an empty Context stage.
-
-The earlier R2 capture remains complete and unchanged:
-
-- Desktop 1920x1080: `study-recall-desktop.png`, `study-context-desktop.png`, `study-meaning-desktop.png`, `study-detail-desktop.png`, `review-recall-desktop.png`, `review-meaning-desktop.png`, `study-complete-desktop.png`.
-- iPhone 390x844: `study-recall-iphone-390.png`, `study-context-iphone-390.png`, `study-meaning-iphone-390.png`, `study-detail-iphone-390.png`, `study-complete-iphone-390.png`.
-- iPhone 430x932: `study-meaning-iphone-430.png`, `study-detail-iphone-430.png`.
-- iPad 834x1112: `study-recall-ipad.png`, `study-meaning-ipad.png`.
-- `v1.2-study-baseline.png` is retained for direct comparison.
-
-The screenshots show the shipped Tatoeba-derived Context sentence, not an IndexedDB fixture. The in-app browser audit independently confirmed 390px overflow `0/0`, Learning Sans `600`, primary `15px` / `48px`, the `返回 / 更多 / 继续` hierarchy, and the active atmosphere opacity layer.
+- Selected examples: `990 / 2,219 = 44.6%` quality-approved coverage
+- Raw eligible candidate coverage: `70.4%`
+- Provenance: `990 / 990 = 100%`
+- No fallback candidate count: `349`
+- Coverage below the former target is informational only under Round 5; no rejected sentence was restored to pad coverage.
+- Build report: [`data-source/examples/build-report.json`](data-source/examples/build-report.json)
+- Durable curation: [`data-source/examples/context-curation.json`](data-source/examples/context-curation.json)
+- Final vocabulary: [`public/data/cet6-vocab.v1.json`](public/data/cet6-vocab.v1.json)
 
 ## Verification gates
 
 | Gate | Result |
 | --- | --- |
-| `pnpm vocab:validate` | PASS — 2,219 entries; `1110 / 2219 = 50.0%`; `QUALITY PASS / COVERAGE BELOW TARGET`; raw candidate coverage 70.4%; provenance 100% |
-| Round 4 human semantic audit | PASS — targeted 1002; pass1 350; independent 250; independent semantic PASS 100.0%; severe inappropriate 0; non-overlap 0; machine metrics explicitly decoupled |
-| `pnpm typecheck` | PASS |
-| `pnpm lint` | PASS |
-| `pnpm test` | PASS — 14 files, 34 tests |
-| `pnpm test:e2e:serial` | PASS — 32 passed, 16 intentionally skipped by existing offline/project-specific skip rules |
-| R2 learning E2E | PASS — 14/14 desktop/mobile cases, including formal Context, mobile hierarchy, computed readability, reduced motion, and Home → Study fallback |
-| `pnpm build` | PASS — Vite production build |
-| `pnpm capture:context-quality` | PASS — 3 data-only smoke artifacts; console errors 0; page errors 0; horizontal overflow errors 0 |
-| UI/Motion frozen diff check | PASS — no changed files outside the Round 4 audit/data/test allowlist |
+| `pnpm run vocab:build` | PASS; deterministic rebuild, 2,219 words |
+| `pnpm run vocab:validate` | PASS; coverage informational, provenance 100%, final semantic gates PASS |
+| `pnpm run typecheck` | PASS |
+| `pnpm run lint` | PASS |
+| `pnpm run test` | PASS; 14 files, 34 tests |
+| `pnpm run build` | PASS; Vite production build |
+| `pnpm run test:e2e:serial` | PASS; 32 passed, 16 existing project/configuration skips, 0 failures |
+| `pnpm run capture:context-quality` | PASS; desktop, iPhone Context, and Meaning fallback screenshots; console/page/overflow errors all 0 |
+| R5 scope freeze | PASS; no `src/` changes and no UI/Motion/FSRS/CSS changes |
 
-## Stop-condition status
+## Evidence package
 
-```text
-Raw candidate coverage: PASS (70.4%)
-Risk-targeted semantic review = 100%: PASS (1002 records; R3 baseline 885 included)
-Pass 1 random semantic sample >= 300: PASS (350; 350/350)
-Independent validation >= 200: PASS (250; different seed; overlap 0)
-Independent semantic pass rate >= 98%: PASS (100.0%; 250/250)
-Severe inappropriate sample count = 0: PASS
-Provenance coverage = 100%: PASS (1110/1110)
-Durable curation and regression exclusions: PASS (30 global + 527 pair rejects)
-Deterministic rebuild: PASS
-Quality coverage: QUALITY PASS / COVERAGE BELOW TARGET (50.0%; documented exception range 50%–55%, no quality padding)
-Learning Sans: PASS
-Recall simplification: PASS
-Mobile Meaning / Detail hierarchy: PASS
-Overlay opacity crossfade: PASS
-Home -> Study continuity and fallback: PASS
-Readability / reduced motion / overflow: PASS
-All Round 4 quality gates: PASS
-审核截图: COMPLETE (Round 4 data-only smoke: 3; console/page/overflow errors 0)
-PR #3: OPEN, unmerged
-Deployment: NOT PERFORMED
-v1.3.0 tag: NOT CREATED
-```
+- Final acceptance: [`audit/v1.3-context-final-semantic/final-semantic-acceptance.json`](audit/v1.3-context-final-semantic/final-semantic-acceptance.json)
+- Audit index: [`audit/v1.3-context-final-semantic/README.md`](audit/v1.3-context-final-semantic/README.md)
+- Final Phase A review: [`audit/v1.3-context-final-semantic/phase-a-post-curation-final-review.json`](audit/v1.3-context-final-semantic/phase-a-post-curation-final-review.json)
+- Mandatory recheck: [`audit/v1.3-context-final-semantic/mandatory-recheck.json`](audit/v1.3-context-final-semantic/mandatory-recheck.json)
+- Final blind candidates: [`audit/v1.3-context-final-semantic/blind-validation-candidates.json`](audit/v1.3-context-final-semantic/blind-validation-candidates.json)
+- Final blind review: [`audit/v1.3-context-final-semantic/blind-validation.json`](audit/v1.3-context-final-semantic/blind-validation.json)
+- Local gate record: [`audit/v1.3-context-final-semantic/r5-gate-results.json`](audit/v1.3-context-final-semantic/r5-gate-results.json)
+- Frozen scope record: [`audit/v1.3-context-final-semantic/scope-check-r5.json`](audit/v1.3-context-final-semantic/scope-check-r5.json)
+- Desktop screenshot: [`audit/v1.3-context-quality/context-desktop.png`](audit/v1.3-context-quality/context-desktop.png)
+- iPhone Context screenshot: [`audit/v1.3-context-quality/context-iphone-390.png`](audit/v1.3-context-quality/context-iphone-390.png)
+- Meaning fallback screenshot: [`audit/v1.3-context-quality/meaning-fallback-iphone-390.png`](audit/v1.3-context-quality/meaning-fallback-iphone-390.png)
 
-Round 4 stop conditions are met. UI, Motion, routes, FSRS, IndexedDB schema, and learning behavior remain frozen. Work stops here pending final acceptance; no merge, deployment, or `v1.3.0` tag was performed.
+## Stop boundary
+
+Round 5 is complete and work stops here. PR #3 remains OPEN for final acceptance. No merge, deployment, or `v1.3.0` tag was performed.

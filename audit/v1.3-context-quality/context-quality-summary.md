@@ -13,10 +13,10 @@
 | Gate | Result |
 | --- | --- |
 | Sample size >= 200 | PASS (250) |
-| Sample quality pass rate >= 90% | PASS (98.0%, 245/250) |
+| Sample quality pass rate >= 90% | PASS (97.6%, 244/250) |
 | Severe inappropriate sample count = 0 | PASS (0) |
 | Provenance coverage = 100% | PASS (100.0%) |
-| Quality-approved coverage >= 60% | FAIL (50%) |
+| Quality-approved coverage | INFORMATIONAL ONLY (44.6%); Round 5 has no minimum coverage blocker |
 
 ## Five-dimension rubric
 

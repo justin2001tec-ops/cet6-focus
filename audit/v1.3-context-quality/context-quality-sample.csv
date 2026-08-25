@@ -1,31 +1,26 @@
 word,en,sentenceId,qualityScore,standalone,nonTargetVocabulary,neutralTopic,simpleSyntax,teachingValue,severeInappropriate,passed,notes
 treaty,Ratification of the treaty by all parties is required before it can go into effect.,11644990,85,true,true,true,true,true,false,true,
-volume,The sheer volume of disinformation is difficult to rebut.,9995314,93,true,true,true,true,true,false,true,
+volume,Could you turn the volume up? I can't make out what they're saying from my apartment.,10077494,82,true,true,true,true,true,false,true,
 sticky,When flaxseeds are wet they become very sticky on the outside.,11545071,90,true,true,true,true,true,false,true,rare context tokens=1
-command,His Majesty's command was swift and resolute.,12775863,82,true,true,true,true,true,false,true,
 unfold,Fold and unfold along each of the lines to make a crease.,10765107,95,true,true,true,true,true,false,true,
 absence,Can peace be found in the absence of conflict?,12777813,92,true,true,true,true,true,false,true,
 witness,"The mountains stand tall, bearing witness to time.",12769231,85,true,true,true,true,true,false,true,
 ego,Elevation requires letting go of ego.,12766820,63,true,true,true,true,true,false,true,
-appropriate,People marching with swastika flags are not appropriate for children.,11844549,96,true,true,true,true,true,false,true,
+appropriate,Remember to end every sentence with an appropriate punctuation mark.,11236017,96,true,true,true,true,true,false,true,
 recover,Will the economy recover from the global recession?,12766071,90,true,true,true,true,true,false,true,
-redundant,Our redundant infrastructure ensures the highest levels of service availability.,10723392,93,true,true,true,true,true,false,true,
 combination,I forgot the combination to my locker.,10016622,76,true,true,true,true,true,false,true,
 coincidence,Was this all just a coincidence?,12772635,63,true,true,true,true,true,false,true,
 account,Someone hacked into my account and changed the password.,10054440,93,true,true,true,true,true,false,true,
-faith,"Science builds planes and skyscrapers, but faith brings them together.",6036907,91,true,true,true,true,true,false,true,
-stroll,"Would you care for a stroll in the gardens, my lady?",12775893,92,true,true,true,true,true,false,true,
+faith,Tom left the ministerial profession after suffering a crisis of faith.,12146348,89,true,true,true,true,true,false,true,
+stroll,Are the royal gardens prepared for the evening stroll?,12775821,82,true,true,true,true,true,false,true,
 object,"If money was no object, what would you do all day?",9805807,92,true,true,true,true,true,false,true,
-preference,Fascists are enabled by liberals' preference for abstractions over people.,5700933,97,true,true,true,true,true,false,true,
 breach,Did the cybersecurity breach affect the whole network?,12766137,90,true,true,true,true,true,false,true,
 boring,"The lecture was pretty boring, so I started to doze off.",12406383,93,true,true,true,true,true,false,true,
-magnificent,But this magnificent appellation was all she gained by her marriage.,10650947,99,true,true,true,true,true,false,true,
 tissue,Surgeons can use the adhesive to reconnect skin and tissue inside the body.,11165195,94,true,true,true,true,true,false,true,
 species,How do you know humans are the only species using the Internet?,12479338,96,true,true,true,true,true,false,true,
 contaminate,David Paige says it is important not to contaminate Mars with a microbe that could spread.,11148934,50,true,true,true,true,true,false,true,proper-noun penalty=2; rare context tokens=1
 implication,I resent your implication that I am engaged to you only because of your money.,12095704,85,true,true,true,true,true,false,true,
 minimize,Crisis planning helps minimize the impact of unexpected events.,12767977,93,true,true,true,true,true,false,true,
-furthermore,"Furthermore, the frog's external appearance and skeletal shape add to its distinctiveness.",10951294,66,true,true,true,true,true,false,true,rare context tokens=2
 van,I just saw this van going full pelt down the middle of the road...,11075994,91,true,true,true,true,true,false,true,
 symposium,Tom is attending a writers' symposium in Boston.,12272801,77,true,true,true,true,true,false,true,proper-noun penalty=1
 force,Is love the most powerful force in the universe?,12778540,92,true,true,true,true,true,false,true,
@@ -36,22 +31,18 @@ foresee,I don't foresee ever being able to go to Boston.,10094907,82,true,true,t
 cope,She found healing through teaching others to cope.,12764976,70,true,true,true,true,true,false,true,standalone penalty=10
 slippery,Patricia's car skidded on a slippery spot on the road and spun completely around twice.,11663738,77,true,true,true,true,true,false,true,rare context tokens=1
 graduate,Sandra began her community service after earning a graduate degree in gerontology.,11829784,98,true,true,true,true,true,false,true,
-merit,This rare merit even the most fastidious critic must allow.,11476006,85,true,true,true,true,true,false,true,standalone penalty=10
-occur,Ejective consonants occur more often in languages from mountainous regions.,10761946,97,true,true,true,true,true,false,true,
+occur,"Does your academic record reflect any major challenges? If so, what are they and why did they occur?",9805541,61,true,true,true,true,true,false,true,
 toss,I'm going to toss another log on the fire.,11011223,86,true,true,true,true,true,false,true,
-melody,The teacher may also choose some melody free from accidentals and play it slowly while the student notates.,11305424,59,true,true,true,true,true,false,true,rare context tokens=2
 flatter,People flatter the elephant and trample the ant.,8208358,85,true,true,true,true,true,false,true,
 versus,"She found what she called a ""small but significant"" difference in reading text from screen versus paper.",10873733,61,true,true,true,true,true,false,true,standalone penalty=10
 overhead,"Migrant birds such as the sandhill crane fly overhead, moving south.",12364859,86,true,true,true,true,true,false,true,rare context tokens=1
 warrant,Tom told the cop to come back when he had a warrant.,10143061,85,true,true,true,true,true,false,true,
-prone,People are prone to believe disparaging lies about people they don't like.,9316997,89,true,true,true,true,true,false,true,rare context tokens=1
 mental,Tom is a patient advocate for people with mental health conditions.,12187297,99,true,true,true,true,true,false,true,
 analysis,Should we remove the outliers from our analysis?,9962947,71,true,true,true,true,true,false,true,rare context tokens=1
 endurance,The space journey tested their skills and endurance.,12765387,80,true,true,true,true,true,false,true,
 mutual,Tom thinks that open communication is key to mutual learning.,12759817,92,true,true,true,true,true,false,true,
-invest,I can't decide whether to invest in a corporate bond or a gilt.,9004057,93,true,true,true,true,true,false,true,
+invest,Did the company invest in better cybersecurity tools?,12766163,90,true,true,true,true,true,false,true,
 overhear,How charmed I am when I overhear a German word which I understand!,552742,82,true,true,true,true,true,false,true,proper-noun penalty=1
-prosperous,"If he were still of this world, his offspring would be prosperous.",8488055,81,true,true,true,true,true,false,true,
 concept,The concept of space tourism is becoming more realistic each year.,12759709,95,true,true,true,true,true,false,true,
 cereal,"To each his own cereal! Who peas, who lentils!",9903103,87,true,true,true,true,true,false,true,
 abnormal,Mental illness is a normal response to abnormal circumstances.,12188741,71,true,true,false,true,true,false,false,topic penalty=18
@@ -64,9 +55,8 @@ pudding,Nasa's aerogels are made from a special silica glass gel that's been mix
 norm,She questions the norm with courage.,12776599,63,true,true,true,true,true,false,true,standalone penalty=10
 migrate,Some birds migrate to roost during specific seasons.,9935723,90,true,true,true,true,true,false,true,
 scratch,What are the symptoms of cat scratch fever?,11448803,80,true,true,true,true,true,false,true,
-aspect,The right wants to dictate every aspect of your life.,11767591,95,true,true,true,true,true,false,true,
+aspect,The crisis affected every aspect of their lives.,12765015,89,true,true,true,true,true,false,true,
 orient,You need a map to orient yourself.,10930666,72,true,true,true,true,true,false,true,
-incident,It's been three years since the incident.,11937838,56,true,true,true,true,true,false,true,standalone penalty=10
 recede,Spain is following Italy in talking about scaling back coronavirus restrictions as its numbers start to recede.,11165121,55,true,true,true,true,true,false,true,proper-noun penalty=1
 strive,Do you strive to be the best version of yourself?,12776148,95,true,true,true,true,true,false,true,
 transfer,Tom is hoping to transfer from his community college to a four-year college.,10234390,94,true,true,true,true,true,false,true,
@@ -77,9 +67,8 @@ buck,The burgers cost a buck apiece.,12331145,61,true,true,true,true,true,false,
 interpret,I decided to interpret your remark in the most literal way possible.,10129480,96,true,true,true,true,true,false,true,
 current,What do you know about the current trends in our nation's healthcare system?,9805546,94,true,true,true,true,true,false,true,
 opponent,Tom made his opponent tap out.,10819676,73,true,true,true,true,true,false,true,
-vocal,Only male insects sing and they don't sing like humans or birds. They don't have vocal chords.,12395454,75,true,true,true,true,true,false,true,
 flip,Tom replaced his smartphone with a cheap flip phone.,10059979,88,true,true,true,true,true,false,true,
-release,The prisoner died of natural causes one day before his scheduled release.,11260218,87,true,true,true,true,true,false,true,
+release,"The group called for the creation of fish hatcheries that would release ""fingerlings"" into the old spawning grounds.",12414127,55,true,true,true,true,true,false,true,rare context tokens=2
 deny,Tom can neither confirm nor deny any of the claims made about him.,12141775,94,true,true,true,true,true,false,true,
 collision,"After the collision, Tom and Mary exchanged insurance information.",10142197,65,true,true,true,true,true,false,true,proper-noun penalty=2
 effective,What are the most effective ways to manage a crisis?,12768009,95,true,true,true,true,true,false,true,
@@ -88,13 +77,12 @@ advocate,Tom is a patient advocate for people with mental health conditions.,121
 insight,"Whenever I've felt there was no hope, I waited and gained new insight.",8993583,79,true,true,true,true,true,false,true,
 refute,It is much harder to refute a lie than to tell one.,11986639,85,true,true,true,true,true,false,true,standalone penalty=10
 vary,"My thoughts on life vary with my mood, and I have a mood disorder.",12128440,86,true,true,true,true,true,false,true,
-vice,Sane people are more of a threat to mentally ill people than vice versa.,10923883,88,true,true,true,true,true,false,true,
+vice,"Young Tom would've hated old Tom, and vice versa.",11371764,59,true,true,true,true,true,false,true,proper-noun penalty=2
 immune,You're not immune to the virus.,10354036,73,true,true,true,true,true,false,true,
 orbit,Space stations are like floating laboratories in orbit around Earth.,12759671,96,true,true,true,true,true,false,true,
 texture,"The taste is fine, but the texture is awful.",11696287,82,true,true,true,true,true,false,true,
-negative,What is one negative thing your last boss say about you?,9805726,98,true,true,true,true,true,false,true,
+negative,Just because a comment is negative doesn't mean it's true.,9320591,95,true,true,true,true,true,false,true,
 profession,Tom left the ministerial profession after suffering a crisis of faith.,12146348,99,true,true,true,true,true,false,true,
-liner,"The ill-fated cruise liner has now left Australian waters, but many questions remain.",11152936,78,true,true,true,true,true,false,true,proper-noun penalty=1
 verdict,Will the court reach a fair verdict?,12766041,42,true,true,false,true,true,false,false,topic penalty=24
 desire,I wish you lots of bright stars and all the flowers you desire.,8738510,83,true,true,true,true,true,false,true,
 blaze,Tom wanted to go out in a blaze of glory.,10844059,89,true,true,true,true,true,false,true,
@@ -107,21 +95,18 @@ resume,I've made some changes to my resume.,10087374,66,true,true,true,true,true
 spouse,"Mary is my spouse, and I am their husband.",8811887,81,true,true,true,true,true,false,true,
 grief,Grief can mess you up if you're not careful.,11558944,77,true,true,true,true,true,false,true,
 beneficial,Further discussion of this topic is unlikely to be beneficial.,10770595,86,true,true,true,true,true,false,true,
-linen,Through a piece of linen he punched holes with a porcupine quill.,10968851,96,true,true,true,true,true,false,true,
 infinite,Do we live in a world of infinite possibilities?,12778581,88,true,true,true,true,true,false,true,
 commit,"If you commit a crime, don't post about it online.",11563914,66,true,true,false,true,true,false,false,topic penalty=24
-legend,Tom is the reincarnation of the hero of legend.,11695490,74,true,true,true,true,true,false,true,rare context tokens=1
 chord,Jazz is characterized by improvisation on chord progressions.,12267769,71,true,true,true,true,true,false,true,rare context tokens=2
 finite,Is the universe infinite or finite?,12777760,63,true,true,true,true,true,false,true,
 adhere,Security forces fear that hardliners among the demonstrators may not adhere to such promises.,11986511,84,true,true,true,true,true,false,true,rare context tokens=1
 gorgeous,Have you ever hated someone for being gorgeous?,12260989,79,true,true,true,true,true,false,true,
 brilliant,It's not a particularly brilliant revelation of mine.,10545401,80,true,true,true,true,true,false,true,standalone penalty=10
 decent,It's hard to get decent information about what you're supposed to do.,12003516,86,true,true,true,true,true,false,true,standalone penalty=10
-poverty,A society that allows poverty hates children.,12153697,82,true,true,true,true,true,false,true,
+poverty,Bangladesh has made significant progress in reducing poverty and improving health and education in recent years.,11522329,80,true,true,true,true,true,false,true,
 design,I do graphic design for some T-shirt sites.,10363149,76,true,true,true,true,true,false,true,rare context tokens=1
 complain,How do I complain about my dental treatment?,9805215,84,true,true,true,true,true,false,true,
 attitude,"Unmasked and helpless, she maintained an attitude of challenge and defiance.",11056703,86,true,true,true,true,true,false,true,rare context tokens=1
-impose,Schools have no right to impose cis ideology on children.,11690636,95,true,true,true,true,true,false,true,
 predict,Futurists try to predict how changes in the world will impact society.,12034353,88,true,true,true,true,true,false,true,rare context tokens=1
 indefinite,Tom's band is on an indefinite hiatus.,9416088,72,true,true,true,true,true,false,true,
 acquire,You can't acquire a language without consuming it.,13036756,90,true,true,true,true,true,false,true,
@@ -135,9 +120,8 @@ brink,The crisis had pushed them to the brink of despair.,12765073,95,true,true,
 enclosure,Tom fell into the lion enclosure.,12308182,63,true,true,true,true,true,false,true,
 intersection,The light was still yellow when the car entered the intersection.,11166818,88,true,true,true,true,true,false,true,
 rigorous,Tom is following a rigorous training regimen.,9986010,82,true,true,true,true,true,false,true,
-coarse,"When the coarse sieve laughs at the fine sieve, the sheepskin rug smiles mischievously.",11355272,87,true,true,true,true,true,false,true,
 lane,This is the right lane to be in.,11021342,73,true,true,true,true,true,false,true,standalone penalty=10
-corporate,You're not likely to hear about this from the corporate media.,12480067,94,true,true,true,true,true,false,true,
+corporate,I can't decide whether to invest in a corporate bond or a gilt.,9004057,93,true,true,true,true,true,false,true,
 ore,Where do you find tungsten ore?,10206143,63,true,true,true,true,true,false,true,
 similar,I'm here to help you as someone who has gone through similar experiences.,12140227,90,true,true,true,true,true,false,true,
 survival,Is there enough food for survival on the island?,12766032,92,true,true,true,true,true,false,true,
@@ -145,7 +129,7 @@ classical,Do you enjoy listening to classical music?,12777190,72,true,true,true,
 privacy,Privacy protects the essence of who we are.,12767857,74,true,true,true,true,true,false,true,
 cylinder,The hydraulic cylinder was the main problem and was changed to a new one.,10723434,92,true,true,true,true,true,false,true,
 imaginary,"Tom isn't real, John. He's your imaginary friend.",12335008,69,true,true,true,true,true,false,true,proper-noun penalty=1
-drag,Drag queen story hour is designed to be appropriate for children.,11844546,88,true,true,true,true,true,false,true,
+drag,Jokes are funnier when you drag them out.,11376709,84,true,true,true,true,true,false,true,
 invert,"Tap the ""A"" button to add a blue filter and invert colors so light becomes dark and dark becomes light.",11224170,68,true,true,true,true,true,false,true,
 graphic,I do graphic design for some T-shirt sites.,10363149,76,true,true,true,true,true,false,true,rare context tokens=1
 accessory,Tom wears glasses purely as a fashion accessory.,12490216,79,true,true,true,true,true,false,true,
@@ -158,11 +142,8 @@ trend,"The gap between the rich and poor widens, and it is a concerning trend.",
 denial,I was in denial of being an emo kid.,11538966,78,true,true,true,true,true,false,true,rare context tokens=1
 prototype,The test launch and landing of the starship prototype Tuesday ended in a crash for the second time since December.,11017157,70,true,true,true,true,true,false,true,
 instance,You can't access an instance variable from a static method.,12197780,95,true,true,true,true,true,false,true,
-depression,I've been experiencing depression and dissociation.,11080977,80,true,true,true,true,true,false,true,
 jog,Tom accidentally stepped in dog poop on his morning jog.,11653905,85,true,true,true,true,true,false,true,
-virtue,The beauty of virtue is utterly self-evident to me.,10092449,92,true,true,true,true,true,false,true,
 bulk,It's cheaper if you buy in bulk.,10750477,55,true,true,true,true,true,false,true,standalone penalty=10
-clan,A clan of fairies lives under there.,11411054,72,true,true,true,true,true,false,true,
 terrain,The stunning photos reveal a complex and varied terrain on the icy dwarf planet.,10820386,92,true,true,true,true,true,false,true,
 accumulate,"Local business owners clean the beach each morning, but the trash begins to accumulate shortly after.",11178247,76,true,true,true,true,true,false,true,
 setback,He sees opportunity in every setback.,12776199,53,true,true,true,true,true,false,true,standalone penalty=10
@@ -170,7 +151,6 @@ trademark,Trademark protection extends only to national borders.,11466947,72,tru
 lever,The machine gives a food reward when your rat presses a lever.,10723407,86,true,true,true,true,true,false,true,
 drain,I pulled a huge hair clog out of the bathroom sink drain.,12401431,85,true,true,true,true,true,false,true,
 supplementary,You may need a supplementary dose after six months.,10352324,92,true,true,true,true,true,false,true,
-variation,The latest variation of the classic tinfoil hat is the tinfoil beret.,9454240,96,true,true,true,true,true,false,true,
 pitch,The sales pitch didn't go well.,11237474,73,true,true,true,true,true,false,true,
 electric,Electric motors deliver strong acceleration because they offer more torque than equivalent gasoline engines.,10274991,80,true,true,true,true,true,false,true,
 vegetation,The vegetation changes and becomes sparser as temperatures rise and conditions get drier.,12382543,82,true,true,true,true,true,false,true,rare context tokens=1
@@ -182,24 +162,21 @@ alleviate,Tom has to perform elaborate rituals to alleviate his fear of spontane
 majority,The wonder is that the majority of the emigrants continued their westward journey.,12364652,95,true,true,true,true,true,false,true,
 reject,Tom rejected Mary before she could reject him.,11621317,73,true,true,true,true,true,false,true,proper-noun penalty=1
 oxygen,Do we need more oxygen tanks?,12774938,69,true,true,true,true,true,false,true,
-persistent,We have been speaking against the persistent callous attacks in the country.,11140283,87,true,true,true,true,true,false,true,standalone penalty=10
-available,Mental healthcare isn't available to most of the working poor under neoliberalism.,9189050,98,true,true,true,true,true,false,true,
+persistent,"Cybersecurity experts say infiltrators are persistent, clever and part of an industrial-scale hacking economy.",11732700,77,true,true,true,true,true,false,true,rare context tokens=1
+available,The evidence-based approach to gender-affirming care is to make it more available.,11740199,88,true,true,true,true,true,false,true,
 schedule,I'm still trying to sort my schedule out.,10101905,80,true,true,true,true,true,false,true,
 disguise,"Nowadays, a lot of imperialists disguise their true intentions in the language of anti-imperialism.",11053297,86,true,true,true,true,true,false,true,
 smash,Smash the boiled pumpkin pieces then add some salt and spices.,8289410,88,true,true,true,true,true,false,true,
 dispose,How should I dispose of used needles or sharps?,9805157,92,true,true,true,true,true,false,true,
 scandal,A cheating scandal threatens to blemish the university's reputation for excellence.,11462429,100,true,true,true,true,true,false,true,
 pressure,Can they resist the pressure of the revolution?,12765487,89,true,true,true,true,true,false,true,
-vulnerable,Did the mission reach the most vulnerable?,12765982,66,true,true,true,true,true,false,true,
 alien,Landing on an alien planet is a dream many scientists hope to achieve.,12759640,94,true,true,true,true,true,false,true,
 cater,This restaurant does not cater for vegans.,9004022,66,true,true,true,true,true,false,true,standalone penalty=10
-masculine,She has a masculine way of talking.,10689028,66,true,true,true,true,true,false,true,standalone penalty=10
-exchange,Can you exchange any cryptocurrencies for a fixed amount of gold or silver?,11951448,94,true,true,true,true,true,false,true,
+exchange,The stock exchange has been chalking up extraordinary numbers.,11170654,85,true,true,true,true,true,false,true,rare context tokens=1
 fertilizer,Algal overload is common in waterways worldwide caused by fertilizer runoff and poor sewage management.,11233041,75,true,true,true,true,true,false,true,rare context tokens=1
 virtual,Tom's bird learned to turn on his virtual assistant.,10349071,88,true,true,true,true,true,false,true,
-cemetery,Every grave in this cemetery is identical. It must be where they bury suburbanites.,11264536,84,true,true,true,true,true,false,true,rare context tokens=1
 velvet,The palace windows were draped with velvet curtains.,12775955,86,true,true,true,true,true,false,true,
-cable,Could graphene be used to make a cable for a space elevator?,11211329,96,true,true,true,true,true,false,true,
+cable,The five-and-a-half-meter-diameter balloon is tethered with a winch cable to an airport pickup truck.,11305462,83,true,true,true,true,true,false,true,rare context tokens=1
 cycle,Can we ever break free from the cycle of existence?,12778582,95,true,true,true,true,true,false,true,
 deserve,What did this company's hardworking employees do to deserve such bosses?,12187601,91,true,true,true,true,true,false,true,rare context tokens=1
 compartment,Tom's duffel bag didn't fit in the overhead compartment.,10220448,75,true,true,true,true,true,false,true,rare context tokens=1
@@ -209,11 +186,11 @@ routine,Mary's skincare routine is her daily moment of peace.,12768410,92,true,t
 appeal,I'm trying to appeal to the reasonable side of people.,11051474,95,true,true,true,true,true,false,true,
 endure,"The mountains endure, as we must.",12769181,68,true,true,true,true,true,false,true,
 figure,I'm trying to figure out whether I can leave the state.,8790862,98,true,true,true,true,true,false,true,
-threaten,The world is full of bipolar people who don't threaten vulnerable minorities.,11270819,97,true,true,true,true,true,false,true,
+threaten,Rebellious teenagers often threaten to run away from home.,12110954,85,true,true,true,true,true,false,true,rare context tokens=1
 essence,Privacy protects the essence of who we are.,12767857,84,true,true,true,true,true,false,true,
 preclude,But for the moment his sense of relief was so great as to preclude all other feelings.,11261835,80,true,true,true,true,true,false,true,
 intrinsic,Tom lacks intrinsic motivation to study French.,9694653,70,true,true,true,true,true,false,true,proper-noun penalty=1
-sue,We're going to sue your pants off!,11764741,66,true,true,true,true,true,false,true,standalone penalty=10
+sue,"They probably wouldn't sue us over such a minor mistake, but we might as well double-check the contract.",11011678,53,true,true,true,true,true,false,true,rare context tokens=1; standalone penalty=10
 clockwise,"Rotating it clockwise will tighten it, while rotating it counterclockwise will loosen it.",12382826,81,true,true,true,true,true,false,true,rare context tokens=1
 ambition,Is there a limit to human ambition?,12775028,66,true,true,true,true,true,false,true,
 band,The band played a mix of covers and original songs.,11751685,91,true,true,true,true,true,false,true,
@@ -236,7 +213,6 @@ initiative,"Since launching their initiative in April, residents agree the distr
 enthusiastic,"While some were more enthusiastic about the job than others, she says nearly all agreed waitressing is hard work.",12042057,59,true,true,true,true,true,false,true,rare context tokens=1
 chapel,The priest is in the chapel.,10101638,45,true,true,false,true,true,false,false,topic penalty=18
 fascinate,His baboon story will fascinate and entertain you for sure.,11167170,95,true,true,true,true,true,false,true,
-assign,You can't assign a string to a variable of type integer.,12465773,98,true,true,true,true,true,false,true,
 rivalry,There's a rivalry between our schools.,10162430,74,true,true,true,true,true,false,true,
 background,"The man in the background is my grandfather, and my father is in the foreground.",9489982,80,true,true,true,true,true,false,true,
 pasture,The above ground pool and deck overlook the pasture and rolling hills.,10722017,96,true,true,true,true,true,false,true,
@@ -244,8 +220,32 @@ sturdy,Their characteristic waddle and playful appearance make these sturdy mars
 nasty,A pair of mischievous children used a stick to write nasty words in the wet cement.,11778593,82,true,true,true,true,true,false,true,
 elite,Tom went to an elite preparatory school.,9365572,76,true,true,true,true,true,false,true,
 clarity,I find clarity in the quiet of dawn.,12770617,83,true,true,true,true,true,false,true,
-severe,A common side effect of amphetamines is severe diarrhea of the mouth.,12130064,96,true,true,true,true,true,false,true,
+severe,Tom was diagnosed with autism and severe depression.,7249248,86,true,true,true,true,true,false,true,
 consensus,There doesn't seem to be consensus on this among speakers.,12321418,95,true,true,true,true,true,false,true,
 generate,Researchers have devised a way to generate electricity using raw sewage and special bacteria.,10903593,92,true,true,true,true,true,false,true,
 ideal,Are there things you could start doing now to make your ideal future closer to becoming a reality?,12131446,76,true,true,true,true,true,false,true,
 discount,You'll get a discount on your next order.,12105706,84,true,true,true,true,true,false,true,
+panic,The crisis put everyone in a state of panic.,12764926,77,true,true,true,true,true,false,true,
+equator,The nineteen islands that make up the Galapagos lie along the equator one thousand kilometers west of Ecuador.,12388999,43,true,true,true,true,true,false,true,proper-noun penalty=2; rare context tokens=1
+criminal,A criminal is someone who commits a crime.,12327969,56,true,true,false,true,true,false,false,topic penalty=24
+explore,Spacecraft can travel billions of miles to explore distant planets.,12759616,96,true,true,true,true,true,false,true,
+extent,Extend your legs only to the extent of your space.,11083766,95,true,true,true,true,true,false,true,
+illegal,It's illegal to aid and abet another person in committing a felony.,10322445,82,true,true,true,true,true,false,true,standalone penalty=10
+buzz,I'm downstairs. Can you buzz me in?,12412133,76,true,true,true,true,true,false,true,
+combine,Coffee roasters combine beans from different areas to make coffees with different tastes and qualities.,11838477,75,true,true,true,true,true,false,true,rare context tokens=1
+sober,A drunk man's words are a sober man's thoughts.,9141049,92,true,true,true,true,true,false,true,
+susceptible,Experts have concluded that the country's power grid is susceptible to a cyber attack.,10284730,92,true,true,true,true,true,false,true,
+enroll,Did Mary enroll in a new learning course?,12766031,72,true,true,true,true,true,false,true,proper-noun penalty=1
+instrument,"Tom doesn't play a real instrument, but he does play a mean air guitar.",6121998,87,true,true,true,true,true,false,true,
+bump,This post is worth a bump!,9794985,52,true,true,true,true,true,false,true,standalone penalty=10
+priority,Has cybersecurity become a national priority?,12766153,69,true,true,true,true,true,false,true,
+armor,Data security is the armor of modern life.,12767858,84,true,true,true,true,true,false,true,
+overwhelming,Astronauts often describe space as both beautiful and overwhelming.,12759700,84,true,true,true,true,true,false,true,
+charge,Tom told me you were in charge around here.,12361250,86,true,true,true,true,true,false,true,
+confidence,You reflect a quiet confidence in all that you do.,12768727,95,true,true,true,true,true,false,true,
+bounce,Can the economy bounce back after the crisis?,12766062,89,true,true,true,true,true,false,true,
+spite,"In spite of everything, Tom is happy.",7335526,55,true,true,true,true,true,false,true,proper-noun penalty=1
+interact,I no longer have to interact with people I have little to nothing in common with.,10018036,82,true,true,true,true,true,false,true,
+brand,What brand of laundry detergent do you usually buy?,10107540,88,true,true,true,true,true,false,true,
+humanity,Humanity must confront its greatest challenges.,12766733,69,true,true,true,true,true,false,true,
+abuse,Abuse of power is only possible because we let people have power.,11600790,86,true,true,true,true,true,false,true,

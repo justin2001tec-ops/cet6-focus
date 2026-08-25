@@ -1,0 +1,79 @@
+{
+  "round": 5,
+  "source": "Round 5 blind validation attempt 12",
+  "reviewed": 100,
+  "rejectCount": 5,
+  "severeInappropriateCount": 0,
+  "appendedCount": 5,
+  "appended": [
+    {
+      "word": "ward",
+      "sentenceId": 10589621,
+      "categories": [
+        "medical-heavy",
+        "context-dependent"
+      ],
+      "reason": "Checking oneself into a psychiatric ward is a sensitive personal mental-health event, not a neutral default context for ward.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "cancer",
+      "sentenceId": 10724061,
+      "categories": [
+        "medical-heavy",
+        "public-controversy"
+      ],
+      "reason": "Comparing national skin-cancer rates adds sensitive medical and country-comparison background that is unnecessary for teaching cancer.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "hatred",
+      "sentenceId": 10540787,
+      "categories": [
+        "religious-heavy",
+        "public-controversy"
+      ],
+      "reason": "Christianity, hatred, and peace are used in a broad religious judgment, so hatred is embedded in a contested claim rather than a neutral context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "ideology",
+      "sentenceId": 12475620,
+      "categories": [
+        "public-controversy",
+        "context-dependent"
+      ],
+      "reason": "Classifying postmodernism as a time period rather than an ideology is an academic dispute, so ideology is not taught in a neutral default context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "solution",
+      "sentenceId": 11936707,
+      "categories": [
+        "violence",
+        "context-dependent"
+      ],
+      "reason": "Rejecting a peaceful solution implies an unresolved conflict and offers no concrete situation, making solution unsuitable as a neutral default example.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    }
+  ],
+  "before": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 868
+  },
+  "after": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 873
+  },
+  "noReplacementAuthored": true
+}

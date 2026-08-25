@@ -1,0 +1,44 @@
+{
+  "round": 5,
+  "source": "Round 5 post-curation sentence-read review attempt 6",
+  "reviewed": 300,
+  "rejectCount": 2,
+  "severeInappropriateCount": 0,
+  "appendedCount": 2,
+  "appended": [
+    {
+      "word": "invisible",
+      "sentenceId": 12778555,
+      "categories": [
+        "context-dependent",
+        "fantastical-context",
+        "weak-teaching-value"
+      ],
+      "reason": "Invisible forces is an abstract or supernatural claim with no concrete referent, so invisible is not taught through a clear default-learning context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "crush",
+      "sentenceId": 9805275,
+      "categories": [
+        "medical-heavy",
+        "context-dependent"
+      ],
+      "reason": "Crushing medicines raises a medication-safety question whose answer depends on the specific drug, making crush unsuitable as an unqualified default example.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    }
+  ],
+  "before": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 763
+  },
+  "after": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 765
+  },
+  "noReplacementAuthored": true
+}

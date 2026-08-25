@@ -1,21 +1,21 @@
-# Lula 的最终回复 — Round 4
+# Lula 的最终回复 — v1.3 Context Round 5
 
-CET6 Focus v1.3 Round 4 已完成 Context 真实语义审核与 durable curation，达到停止条件，现等待最终验收。
+Round 5 已严格完成：只做 Context 逐句语义审核、durable curation、重建和 blind validation；UI、Motion、FSRS 全部冻结。
 
-- 风险定向逐句审核：1002 条，含 R3 基线 885 条，覆盖 100%。
-- Pass 1：350 条；独立验证：250 条，使用不同 seed 且与 Pass 1 不重叠。
-- 独立语义 PASS：250/250 = 100.0%；严重不适宜：0。
-- provenance：1110/1110 = 100%。
-- 最终 Context 覆盖：1110/2219 = 50.0%，按交接文档报告为 `QUALITY PASS / COVERAGE BELOW TARGET`；没有为了补数字恢复被拒句子。
-- durable curation：30 条 global reject、527 条 pair reject；没有写入人工替代句或生成例句。
-- typecheck、lint、unit、串行 E2E、production build、vocabulary validator、data-only smoke 均通过；截图 smoke 的 console/page/横向 overflow 错误均为 0。
-- UI、Motion、Study/Review、业务逻辑全部冻结；scope check 通过。
+- Phase A 最终：300/300 PASS，严重不适宜 0。
+- Mandatory 11：11 条全部按逐句审核结果 durable reject。
+- Blind final retest：100/100 PASS，严重不适宜 0；与 Phase A、post-curation Phase A、当前 R4 independent 样本无重叠。
+- Durable curation：30 条 global reject、877 条 pair reject；本轮新增 350 条 pair reject。
+- 最终 Context coverage：990/2219 = 44.6%；按 Round 5 规则仅 informational，不构成 blocker；raw candidate coverage 70.4%。
+- Source：offline Tatoeba English CC0；没有手写、AI 生成或替代例句。
+- 所有真实 FAIL 都保留逐句 rationale、durable reject、重建并复测；没有为了追求 100% 改审核结论。
+
+本轮最终 gate 全部通过：vocab build/validate、typecheck、lint、unit tests（34/34）、production build、serial E2E（32 passed，16 个既有配置性 skip）、审核截图，以及 UI/Motion/FSRS 冻结范围检查。
 
 ## GitHub
 
 - 仓库：[https://github.com/justin2001tec-ops/cet6-focus](https://github.com/justin2001tec-ops/cet6-focus)
 - PR #3：[https://github.com/justin2001tec-ops/cet6-focus/pull/3](https://github.com/justin2001tec-ops/cet6-focus/pull/3)
+- PR #3 当前保持 OPEN、未合并。
 
-PR #3 保持 OPEN、未合并。本轮未部署生产、未创建 `v1.3.0` tag；因此没有线上网站地址可提供。
-
-详细证据见 [`FINAL_V1_3_CORE_LEARNING_REPORT.md`](FINAL_V1_3_CORE_LEARNING_REPORT.md) 与 [`audit/v1.3-context-human-quality/`](audit/v1.3-context-human-quality/)。
+本轮未部署、未创建 `v1.3.0` tag，因此没有新的线上地址可提供。完整报告见 [`FINAL_V1_3_CORE_LEARNING_REPORT.md`](FINAL_V1_3_CORE_LEARNING_REPORT.md)，机器可读最终验收见 [`audit/v1.3-context-final-semantic/final-semantic-acceptance.json`](audit/v1.3-context-final-semantic/final-semantic-acceptance.json)。

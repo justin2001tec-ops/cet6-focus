@@ -1,0 +1,43 @@
+{
+  "round": 5,
+  "source": "Round 5 blind validation attempt 9",
+  "reviewed": 100,
+  "rejectCount": 2,
+  "severeInappropriateCount": 0,
+  "appendedCount": 2,
+  "appended": [
+    {
+      "word": "solution",
+      "sentenceId": 12773663,
+      "categories": [
+        "context-dependent",
+        "weak-teaching-value"
+      ],
+      "reason": "Asking whether a better solution could have been found supplies no problem or candidate answer, so solution is weakly anchored.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "ward",
+      "sentenceId": 10109262,
+      "categories": [
+        "medical-heavy",
+        "context-dependent"
+      ],
+      "reason": "A personal history of spending time in a psychiatric ward is a sensitive mental-health context unsuitable for default learning of ward.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    }
+  ],
+  "before": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 862
+  },
+  "after": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 864
+  },
+  "noReplacementAuthored": true
+}

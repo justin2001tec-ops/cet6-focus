@@ -1,0 +1,348 @@
+{
+  "round": 5,
+  "source": "Round 5 blind validation attempt 2",
+  "reviewed": 100,
+  "rejectCount": 27,
+  "severeInappropriateCount": 2,
+  "appendedCount": 27,
+  "appended": [
+    {
+      "word": "claim",
+      "sentenceId": 11690508,
+      "categories": [
+        "public-controversy",
+        "political-heavy"
+      ],
+      "reason": "Forfeiting a right to care about freedom is an accusatory political judgment, so claim is not shown in a neutral useful context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "ethnic",
+      "sentenceId": 12025045,
+      "categories": [
+        "public-controversy",
+        "hate",
+        "context-too-hard"
+      ],
+      "reason": "The Nakba, Stalin, and ethnic removals invoke traumatic historical and political comparison, making ethnic unsuitable for a neutral default example.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "catholic",
+      "sentenceId": 11690914,
+      "categories": [
+        "religious-heavy",
+        "public-controversy"
+      ],
+      "reason": "Catholic national holidays and secular-country status place catholic in a religion-and-politics argument rather than a neutral descriptive context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "web",
+      "sentenceId": 12769289,
+      "categories": [
+        "context-dependent",
+        "weak-teaching-value"
+      ],
+      "reason": "Time weaving its web is a poetic metaphor with no concrete referent, so web is not taught through a reliable standalone example.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "available",
+      "sentenceId": 9189050,
+      "categories": [
+        "medical-heavy",
+        "political-heavy"
+      ],
+      "reason": "The availability of mental healthcare for the working poor under neoliberalism is a loaded policy claim, not a neutral context for available.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "fracture",
+      "sentenceId": 11978684,
+      "categories": [
+        "medical-heavy",
+        "violence"
+      ],
+      "reason": "Broken bones and a dislocated shoulder make fracture part of a multiple-injury report, which is unnecessarily medical and harm-focused for default learning.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "melody",
+      "sentenceId": 11305424,
+      "categories": [
+        "specialist-background",
+        "context-too-hard"
+      ],
+      "reason": "Melody notation and accidentals require specialist music theory background that overwhelms the basic target melody.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "veil",
+      "sentenceId": 8115001,
+      "categories": [
+        "sexual",
+        "hate",
+        "violence"
+      ],
+      "reason": "A rape and ethnic blame for not wearing a veil is a severe sexual-violence and identity-harm context unsuitable for veil.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "ward",
+      "sentenceId": 11831480,
+      "categories": [
+        "medical-heavy",
+        "context-dependent"
+      ],
+      "reason": "Not having been sent back to a psychiatric ward is a sensitive personal mental-health history that is unsuitable as a default context for ward.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "project",
+      "sentenceId": 11553310,
+      "categories": [
+        "hate",
+        "sexual",
+        "public-controversy"
+      ],
+      "reason": "The sentence spreads a sexual-abuse accusation about queer people, making project a severe identity-harm context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "occur",
+      "sentenceId": 10761946,
+      "categories": [
+        "specialist-background",
+        "context-too-hard"
+      ],
+      "reason": "Ejective consonants and language geography require specialist phonetics knowledge that overwhelms occur.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "cast",
+      "sentenceId": 11074269,
+      "categories": [
+        "archaic",
+        "context-dependent",
+        "weak-teaching-value"
+      ],
+      "reason": "Casting aspersions on a witness's probity is a formal legal idiom with archaic vocabulary, so cast is not taught in a broadly useful context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "humanity",
+      "sentenceId": 12765342,
+      "categories": [
+        "fantastical-context",
+        "weak-teaching-value"
+      ],
+      "reason": "An intergalactic voyage is a science-fiction setting that does not provide a normal default context for humanity.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "historian",
+      "sentenceId": 8858785,
+      "categories": [
+        "proper-noun-heavy",
+        "context-too-hard"
+      ],
+      "reason": "The named Josephus and the question of an impartial historian require historical background that distracts from historian.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "vulnerable",
+      "sentenceId": 12772758,
+      "categories": [
+        "context-dependent",
+        "weak-teaching-value"
+      ],
+      "reason": "To hope is to be vulnerable is an abstract aphorism with no concrete situation, so vulnerable is not taught precisely enough.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "dimension",
+      "sentenceId": 8755638,
+      "categories": [
+        "fantastical-context",
+        "weak-teaching-value"
+      ],
+      "reason": "Shadow people spying from another dimension is a paranormal premise, so dimension is not grounded in a reliable default-learning context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "preference",
+      "sentenceId": 5700933,
+      "categories": [
+        "political-heavy",
+        "public-controversy"
+      ],
+      "reason": "Fascists, liberals, and claims about people versus abstractions create a hostile political generalization unrelated to preference.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "virtue",
+      "sentenceId": 10092449,
+      "categories": [
+        "context-dependent",
+        "weak-teaching-value"
+      ],
+      "reason": "The beauty of virtue being self-evident is an abstract moral assertion with no concrete situation to teach virtue.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "crumble",
+      "sentenceId": 8143487,
+      "categories": [
+        "context-dependent",
+        "weak-teaching-value"
+      ],
+      "reason": "An identity crumbling is an abstract emotional metaphor with no concrete referent, so crumble is not taught as a reliable default example.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "exotic",
+      "sentenceId": 12764848,
+      "categories": [
+        "context-dependent",
+        "weak-teaching-value"
+      ],
+      "reason": "Exotic birds is vague travel-and-wildlife labeling without explaining what makes the birds exotic, so the target is weakly taught.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "primary",
+      "sentenceId": 13662542,
+      "categories": [
+        "medical-heavy",
+        "public-controversy"
+      ],
+      "reason": "Gender-affirming care and a claim about cis people place primary in a contested identity-medical policy context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "solution",
+      "sentenceId": 12773686,
+      "categories": [
+        "context-dependent",
+        "weak-teaching-value"
+      ],
+      "reason": "Finding a solution soon is a vague question with no problem or proposed answer, so solution lacks useful standalone teaching context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "swap",
+      "sentenceId": 11462432,
+      "categories": [
+        "public-controversy",
+        "political-heavy"
+      ],
+      "reason": "A prisoner swap depends on conflict and political negotiation, making swap part of a charged context rather than an ordinary exchange.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "impulse",
+      "sentenceId": 8783625,
+      "categories": [
+        "medical-heavy",
+        "context-dependent"
+      ],
+      "reason": "An impulse-control problem is a personal clinical label with no concrete action, so impulse is not suitable as a neutral default example.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "grain",
+      "sentenceId": 8326151,
+      "categories": [
+        "unnatural-English",
+        "archaic",
+        "context-dependent"
+      ],
+      "reason": "The sentence contains the obscure hase wording and an awkward grain-and-straw construction, so grain is not a reliable natural model.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "conservative",
+      "sentenceId": 11845251,
+      "categories": [
+        "political-heavy",
+        "proper-noun-heavy"
+      ],
+      "reason": "A named current political figure describing himself as conservative makes conservative depend on partisan identity and public-figure context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "skeleton",
+      "sentenceId": 10051841,
+      "categories": [
+        "fantastical-context",
+        "weak-teaching-value"
+      ],
+      "reason": "A skeleton following someone everywhere is a spooky supernatural image, so skeleton is not presented in a normal useful context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    }
+  ],
+  "before": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 793
+  },
+  "after": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 820
+  },
+  "noReplacementAuthored": true
+}

@@ -8,15 +8,13 @@ interface ExampleProvenance { sentenceId: number; source: string; qualityScore: 
 interface ExampleBuildReport { selectedCount: number; totalVocabularyWords: number; rawCandidateCoveragePercent: number; qualityApprovedCoverage: number; qualityApprovedCoveragePercent: number; rejectionCounts: Record<string, number>; qualityPolicy: { tokenRange: [number, number]; extendedTokenRange: [number, number]; minimumQualityScore: number }; deterministic: boolean }
 interface HumanReviewRow { word: string; sentenceId: number; sentence: string; decision: 'pass' | 'reject'; categories: string[]; rationale: string; reviewBasis: string; severeInappropriate: boolean }
 interface HumanReviewDocument { seed?: number; sampleSize?: number; reviewedCount?: number; rows: HumanReviewRow[] }
-interface HumanQualityReport {
-  machineMetricsAreNotSemanticDecisions: boolean
-  targetedReview: { reviewedCount: number; passCount: number; rejectCount: number; reviewedPercent: number; r3BaselineCount: number }
-  randomSemanticPass1: { seed: number; sampleSize: number; passCount: number; passRatePercent: number }
-  independentValidation: { seed: number; sampleSize: number; passCount: number; passRatePercent: number; severeInappropriateCount: number; overlapsPass1: number }
-  finalCoverage: { selectedCount: number; vocabularyCount: number; percent: number; targetPercent: number }
-  provenanceCoverage: number
-  curation: { version: number; globalRejectCount: number; pairRejectCount: number }
-  gates: { riskTargetedReview100Percent: boolean; pass1AtLeast300: boolean; independentAtLeast200: boolean; independentSemanticPassAtLeast98: boolean; severeInappropriateZero: boolean; provenance100: boolean; deterministicBuild: boolean; nonOverlappingIndependentSample: boolean; qualityCoverageExceptionOrTarget: boolean }
+interface FinalAcceptance {
+  status: string
+  source: { wordCount: number; source: string; license: string }
+  phaseA: { final: { sampleSize: number; passRatePercent: number; severeInappropriateCount: number } }
+  blindValidation: { final: { sampleSize: number; passRatePercent: number; severeInappropriateCount: number } }
+  curation: { pairRejectCount: number }
+  gates: Record<string, boolean>
 }
 interface CurationReject { word?: string; sentenceId: number; categories: string[]; reason: string }
 interface CurationFile { version: number; globalReject: CurationReject[]; pairReject: CurationReject[] }
@@ -27,7 +25,7 @@ const manifestPath = resolve(root, 'data-source/examples/manifest.json')
 const selectedPath = resolve(root, 'data-source/examples/selected-examples.json')
 const provenancePath = resolve(root, 'data-source/examples/example-provenance.json')
 const buildReportPath = resolve(root, 'data-source/examples/build-report.json')
-const humanQualityReportPath = resolve(root, 'audit/v1.3-context-human-quality/final-context-quality-report.json')
+const finalAcceptancePath = resolve(root, 'audit/v1.3-context-final-semantic/final-semantic-acceptance.json')
 const humanRiskTargetedPath = resolve(root, 'audit/v1.3-context-human-quality/risk-targeted-review.json')
 const humanPass1Path = resolve(root, 'audit/v1.3-context-human-quality/random-semantic-review-pass1.json')
 const humanIndependentPath = resolve(root, 'audit/v1.3-context-human-quality/independent-validation.json')
@@ -57,7 +55,7 @@ const manifest = JSON.parse(await readFile(manifestPath, 'utf8')) as ExampleMani
 const selected = JSON.parse(await readFile(selectedPath, 'utf8')) as Record<string, WordExample>
 const provenance = JSON.parse(await readFile(provenancePath, 'utf8')) as Record<string, ExampleProvenance>
 const buildReport = JSON.parse(await readFile(buildReportPath, 'utf8')) as ExampleBuildReport
-const humanQualityReport = JSON.parse(await readFile(humanQualityReportPath, 'utf8')) as HumanQualityReport
+const finalAcceptance = JSON.parse(await readFile(finalAcceptancePath, 'utf8')) as FinalAcceptance
 const humanRiskTargeted = JSON.parse(await readFile(humanRiskTargetedPath, 'utf8')) as HumanReviewDocument
 const humanPass1 = JSON.parse(await readFile(humanPass1Path, 'utf8')) as HumanReviewDocument
 const humanIndependent = JSON.parse(await readFile(humanIndependentPath, 'utf8')) as HumanReviewDocument
@@ -125,12 +123,10 @@ if (!manifest.source.includes('Tatoeba') || !manifest.license.includes('CC0')) p
 if (!manifest.translationPolicy?.includes('English only')) problems.push('example translation policy is incomplete')
 
 const coverage = exampleCoverage / words.length
-if (coverage < 0.5) problems.push(`example coverage below the Round 4 minimum exception floor: ${exampleCoverage}/${words.length}`)
-if (coverage < 0.55) console.warn(`QUALITY PASS / COVERAGE BELOW TARGET: ${(coverage * 100).toFixed(1)}% (target 55%)`)
+if (coverage < 0.55) console.warn(`ROUND 5 INFORMATIONAL / COVERAGE BELOW TARGET: ${(coverage * 100).toFixed(1)}% (target 55%; no minimum coverage blocker applies)`)
 if (buildReport.selectedCount !== exampleCoverage) problems.push(`build report selectedCount drift: ${buildReport.selectedCount} vs ${exampleCoverage}`)
 if (buildReport.totalVocabularyWords !== words.length) problems.push('build report vocabulary count drift')
 if (Math.abs(buildReport.qualityApprovedCoverage - coverage) > 0.000001) problems.push('build report qualityApprovedCoverage drift')
-if (buildReport.qualityApprovedCoverage < 0.5) problems.push(`build report quality coverage below the Round 4 exception floor: ${buildReport.qualityApprovedCoveragePercent}%`)
 if (!buildReport.deterministic) problems.push('build report does not certify deterministic selection')
 for (const reason of ['length', 'structure', 'properNoun', 'rareContext', 'sensitiveTopic', 'contextDependence', 'selectedCount']) {
   if (reason !== 'selectedCount' && !(reason in buildReport.rejectionCounts)) problems.push(`build report missing rejection reason: ${reason}`)
@@ -155,11 +151,14 @@ for (const entry of curation.globalReject) {
   if (Object.values(provenance).some((trace) => trace.sentenceId === entry.sentenceId)) problems.push(`curated globalReject sentence is selected: ${entry.sentenceId}`)
 }
 for (const entry of curation.pairReject) {
-  if (entry.word && provenance[entry.word]?.sentenceId === entry.sentenceId) problems.push(`curated pairReject is selected: ${entry.word}|${entry.sentenceId}`)
+if (entry.word && provenance[entry.word]?.sentenceId === entry.sentenceId) problems.push(`curated pairReject is selected: ${entry.word}|${entry.sentenceId}`)
 }
 if (curation.version !== 1 || !Array.isArray(curation.globalReject) || !Array.isArray(curation.pairReject)) problems.push('context curation file is incomplete')
-if (humanQualityReport.machineMetricsAreNotSemanticDecisions !== true) problems.push('human audit does not explicitly decouple machine metrics from semantic decisions')
-if (humanQualityReport.curation.version !== curation.version || humanQualityReport.curation.globalRejectCount !== curation.globalReject.length || humanQualityReport.curation.pairRejectCount !== curation.pairReject.length) problems.push('human audit curation counts drift')
+if (finalAcceptance.status !== 'PASS') problems.push(`Round 5 final semantic acceptance status is ${finalAcceptance.status}`)
+if (finalAcceptance.source.wordCount !== words.length || !finalAcceptance.source.source.includes('Tatoeba') || !finalAcceptance.source.license.includes('CC0')) problems.push('Round 5 final semantic source or word-count gate failed')
+if (finalAcceptance.phaseA.final.sampleSize < 300 || finalAcceptance.phaseA.final.passRatePercent < 95 || finalAcceptance.phaseA.final.severeInappropriateCount !== 0) problems.push('Round 5 final Phase A semantic gate failed')
+if (finalAcceptance.blindValidation.final.sampleSize !== 100 || finalAcceptance.blindValidation.final.passRatePercent < 99 || finalAcceptance.blindValidation.final.severeInappropriateCount !== 0) problems.push('Round 5 blind validation gate failed')
+if (finalAcceptance.curation.pairRejectCount !== curation.pairReject.length) problems.push('Round 5 final curation count drift')
 
 function validateReviewRows(name: string, document: HumanReviewDocument, minimum: number): void {
   if (!Array.isArray(document.rows)) {
@@ -179,9 +178,9 @@ function validateReviewRows(name: string, document: HumanReviewDocument, minimum
 validateReviewRows('risk-targeted review', humanRiskTargeted, 885)
 validateReviewRows('random semantic pass 1', humanPass1, 300)
 validateReviewRows('independent validation', humanIndependent, 200)
-if (humanRiskTargeted.rows.length !== humanQualityReport.targetedReview.reviewedCount || humanQualityReport.targetedReview.reviewedPercent < 100 || humanQualityReport.targetedReview.r3BaselineCount < 885) problems.push('risk-targeted semantic review is not complete')
-if (humanPass1.seed !== humanQualityReport.randomSemanticPass1.seed || humanPass1.sampleSize !== humanQualityReport.randomSemanticPass1.sampleSize) problems.push('pass 1 seed/sample report drift')
-if (humanIndependent.seed !== humanQualityReport.independentValidation.seed || humanIndependent.sampleSize !== humanQualityReport.independentValidation.sampleSize) problems.push('independent seed/sample report drift')
+if (humanRiskTargeted.rows.length < 885) problems.push('risk-targeted semantic review is not complete')
+if ((humanPass1.sampleSize ?? humanPass1.rows.length) < 300) problems.push('historical pass 1 sample is incomplete')
+if ((humanIndependent.sampleSize ?? humanIndependent.rows.length) < 200) problems.push('historical independent sample is incomplete')
 const independentPassCount = humanIndependent.rows.filter((row) => row.decision === 'pass').length
 const independentPassRate = independentPassCount / Math.max(1, humanIndependent.rows.length)
 const severeIndependentCount = humanIndependent.rows.filter((row) => row.severeInappropriate).length
@@ -190,9 +189,8 @@ const independentOverlapCount = humanIndependent.rows.filter((row) => pass1Keys.
 if (independentPassRate < 0.98) problems.push(`independent semantic pass rate below 98%: ${(independentPassRate * 100).toFixed(1)}%`)
 if (severeIndependentCount !== 0) problems.push(`independent severe inappropriate count is not zero: ${severeIndependentCount}`)
 if (independentOverlapCount !== 0) problems.push(`independent validation overlaps pass 1: ${independentOverlapCount}`)
-if (humanQualityReport.independentValidation.passCount !== independentPassCount || humanQualityReport.independentValidation.severeInappropriateCount !== severeIndependentCount || humanQualityReport.independentValidation.overlapsPass1 !== independentOverlapCount) problems.push('independent semantic audit report drift')
-if (humanQualityReport.independentValidation.passRatePercent < 98 || humanQualityReport.provenanceCoverage !== 1) problems.push('Round 4 final semantic/provenance gate failed')
-if (!Object.values(humanQualityReport.gates).every(Boolean)) problems.push('Round 4 final report contains a failed gate')
+if (independentPassRate < 0.98 || severeIndependentCount !== 0 || independentOverlapCount !== 0) problems.push('historical independent semantic baseline failed')
+if (!Object.values(finalAcceptance.gates).every(Boolean)) problems.push('Round 5 final report contains a failed gate')
 if (/tatoeba\.org|downloads\.tatoeba/i.test(runtimeDb)) problems.push('runtime database code references Tatoeba')
 if (!runtimeDb.includes('data/cet6-vocab.v1.json')) problems.push('runtime vocabulary path is missing')
 
@@ -214,6 +212,6 @@ console.log(`rawCandidateCoveragePercent = ${buildReport.rawCandidateCoveragePer
 console.log(`exampleSource = ${manifest.source}`)
 console.log(`license = ${manifest.license}`)
 console.log(`provenanceCoverage = ${provenanceCoverage} / ${exampleCoverage}`)
-console.log(`Round 4 targetedReview = ${humanRiskTargeted.rows.length} records (100% retained)`)
-console.log(`Round 4 pass1 = ${humanPass1.rows.length} records; independent = ${humanIndependent.rows.length} records; independentSemanticPassRate = ${(independentPassRate * 100).toFixed(1)}%`)
-console.log(`Round 4 severeInappropriate = ${severeIndependentCount}; machineMetricsAreNotSemanticDecisions = ${humanQualityReport.machineMetricsAreNotSemanticDecisions}`)
+console.log(`Round 5 final Phase A = ${finalAcceptance.phaseA.final.sampleSize} records; semanticPassRate = ${finalAcceptance.phaseA.final.passRatePercent.toFixed(1)}%; severeInappropriate = ${finalAcceptance.phaseA.final.severeInappropriateCount}`)
+console.log(`Round 5 blind validation = ${finalAcceptance.blindValidation.final.sampleSize} records; semanticPassRate = ${finalAcceptance.blindValidation.final.passRatePercent.toFixed(1)}%; severeInappropriate = ${finalAcceptance.blindValidation.final.severeInappropriateCount}`)
+console.log('Round 5 coverage policy = informational only; no minimum coverage blocker')

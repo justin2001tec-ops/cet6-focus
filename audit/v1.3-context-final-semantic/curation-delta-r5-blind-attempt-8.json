@@ -1,0 +1,67 @@
+{
+  "round": 5,
+  "source": "Round 5 blind validation attempt 8",
+  "reviewed": 100,
+  "rejectCount": 4,
+  "severeInappropriateCount": 0,
+  "appendedCount": 4,
+  "appended": [
+    {
+      "word": "hatred",
+      "sentenceId": 10540785,
+      "categories": [
+        "religious-heavy",
+        "public-controversy"
+      ],
+      "reason": "The claim that Christianity could cure hatred places hatred inside a religious assertion and broad social controversy rather than a neutral context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "solution",
+      "sentenceId": 12772657,
+      "categories": [
+        "context-dependent",
+        "weak-teaching-value"
+      ],
+      "reason": "At last, the solution became clear supplies no problem or candidate answer, so solution is not taught through a concrete standalone context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "independence",
+      "sentenceId": 9473248,
+      "categories": [
+        "political-heavy",
+        "public-controversy"
+      ],
+      "reason": "Israel, Morocco, and Kabyle independence create a charged geopolitical and ethnic-national context unsuitable as a neutral example for independence.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "ideology",
+      "sentenceId": 11685483,
+      "categories": [
+        "public-controversy",
+        "political-heavy"
+      ],
+      "reason": "The claim that the political right invented trans ideology is a hostile identity-policy dispute, not a neutral context for ideology.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    }
+  ],
+  "before": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 858
+  },
+  "after": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 862
+  },
+  "noReplacementAuthored": true
+}

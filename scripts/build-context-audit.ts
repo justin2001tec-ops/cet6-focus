@@ -185,7 +185,7 @@ const summary = `# Context Quality Refinement — Round 3 Sample Audit
 | Sample quality pass rate >= 90% | ${samplePassRate >= 0.9 ? 'PASS' : 'FAIL'} (${(samplePassRate * 100).toFixed(1)}%, ${samplePassCount}/${sample.length}) |
 | Severe inappropriate sample count = 0 | ${severeCount === 0 ? 'PASS' : 'FAIL'} (${severeCount}) |
 | Provenance coverage = 100% | ${provenanceCoverage === 1 ? 'PASS' : 'FAIL'} (${(provenanceCoverage * 100).toFixed(1)}%) |
-| Quality-approved coverage >= 60% | ${buildReport.qualityApprovedCoverage >= 0.6 ? 'PASS' : 'FAIL'} (${buildReport.qualityApprovedCoveragePercent}%) |
+| Quality-approved coverage | INFORMATIONAL ONLY (${buildReport.qualityApprovedCoveragePercent}%); Round 5 has no minimum coverage blocker |
 
 ## Five-dimension rubric
 

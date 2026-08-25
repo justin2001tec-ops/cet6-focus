@@ -1,0 +1,2109 @@
+{
+  "round": "Context Final Semantic Acceptance - Round 5",
+  "seed": 216485891,
+  "sampleSize": 300,
+  "excludedInitialR5AndMandatoryRows": 550,
+  "selectionPolicy": "Rebuilt selected pool only; new seed; no overlap with the initial R5 Phase A review, mandatory rows, or R4 independent validation. Machine metrics are omitted before sentence-read review.",
+  "rows": [
+    {
+      "word": "drill",
+      "sentenceId": 12765196,
+      "sentence": "They maintained order during the citywide emergency drill.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "irony",
+      "sentenceId": 12772555,
+      "sentence": "Can you see the irony in this situation?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "generous",
+      "sentenceId": 11027274,
+      "sentence": "Her seemingly generous actions turned out to be motivated purely by profit.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "stump",
+      "sentenceId": 12389891,
+      "sentence": "There's a tree stump at the bottom of the lake.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "beyond",
+      "sentenceId": 12759685,
+      "sentence": "Explorers may one day travel beyond our solar system to other stars.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "region",
+      "sentenceId": 12765292,
+      "sentence": "They worked to ensure that peace was maintained across the region.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "complain",
+      "sentenceId": 9805215,
+      "sentence": "How do I complain about my dental treatment?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "spice",
+      "sentenceId": 9942974,
+      "sentence": "Tom bought a new kind of pasta from the store to spice things up a bit.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "poverty",
+      "sentenceId": 11522329,
+      "sentence": "Bangladesh has made significant progress in reducing poverty and improving health and education in recent years.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "autonomous",
+      "sentenceId": 10966305,
+      "sentence": "Like their counterparts on land, autonomous ships are emerging as a new way to traverse the world's oceans.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "pitch",
+      "sentenceId": 11237474,
+      "sentence": "The sales pitch didn't go well.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "defeat",
+      "sentenceId": 12764886,
+      "sentence": "The game ended in a devastating defeat.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "factor",
+      "sentenceId": 11166959,
+      "sentence": "The relevance of sport as a factor for integration of socially disadvantaged groups cannot be underestimated.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "enormous",
+      "sentenceId": 9998017,
+      "sentence": "This enormous longhorn beetle is found around mango and fig trees.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "ancient",
+      "sentenceId": 12767953,
+      "sentence": "Mary enjoyed exploring ancient ruins during her travels.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "attitude",
+      "sentenceId": 11056703,
+      "sentence": "Unmasked and helpless, she maintained an attitude of challenge and defiance.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "process",
+      "sentenceId": 11102781,
+      "sentence": "The evaporation process creates a drop in temperature of several degrees.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "facet",
+      "sentenceId": 11062533,
+      "sentence": "Lion dances are a facet of traditional Chinese culture.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "original",
+      "sentenceId": 11751685,
+      "sentence": "The band played a mix of covers and original songs.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "acid",
+      "sentenceId": 10058430,
+      "sentence": "I choked on some stomach acid and woke up.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "chase",
+      "sentenceId": 10171525,
+      "sentence": "My cat likes to chase the mouse cursor.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "jog",
+      "sentenceId": 11653905,
+      "sentence": "Tom accidentally stepped in dog poop on his morning jog.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "approach",
+      "sentenceId": 12759915,
+      "sentence": "Tom often finds himself inspired by Mary's approach to learning.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "fertilizer",
+      "sentenceId": 11233041,
+      "sentence": "Algal overload is common in waterways worldwide caused by fertilizer runoff and poor sewage management.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "domestic",
+      "sentenceId": 11309260,
+      "sentence": "The cheetah is very closely related to the domestic cat.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "rely",
+      "sentenceId": 12042018,
+      "sentence": "People rely on ferries for transportation in Bangladesh, a low-lying nation with hundreds of rivers.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "cabinet",
+      "sentenceId": 10139357,
+      "sentence": "Tom peeked into Mary's medicine cabinet.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "extensive",
+      "sentenceId": 10169351,
+      "sentence": "After an extensive investigation, Tom was cleared of any wrongdoing.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "cycle",
+      "sentenceId": 12778582,
+      "sentence": "Can we ever break free from the cycle of existence?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "management",
+      "sentenceId": 12767964,
+      "sentence": "Tom is improving his crisis management skills at work.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "galaxy",
+      "sentenceId": 12765133,
+      "sentence": "The space explorers discovered a new planet in the galaxy.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "sake",
+      "sentenceId": 12768629,
+      "sentence": "We seek knowledge not for its own sake, but for wisdom.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "extent",
+      "sentenceId": 11083766,
+      "sentence": "Extend your legs only to the extent of your space.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "elite",
+      "sentenceId": 9365572,
+      "sentence": "Tom went to an elite preparatory school.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "sponge",
+      "sentenceId": 11032606,
+      "sentence": "Could you pass me that sponge?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "radius",
+      "sentenceId": 12426332,
+      "sentence": "What is the radius of a hydrogen atom?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "defiance",
+      "sentenceId": 11056703,
+      "sentence": "Unmasked and helpless, she maintained an attitude of challenge and defiance.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "texture",
+      "sentenceId": 11696287,
+      "sentence": "The taste is fine, but the texture is awful.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "wedge",
+      "sentenceId": 10721994,
+      "sentence": "Try a sliced apple with a lowfat cheese wedge.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "sensitive",
+      "sentenceId": 11740650,
+      "sentence": "Tom has been showing more of his sensitive side lately.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "appeal",
+      "sentenceId": 11051474,
+      "sentence": "I'm trying to appeal to the reasonable side of people.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "caution",
+      "sentenceId": 12773788,
+      "sentence": "Shall we move forward with caution?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "evil",
+      "sentenceId": 13425218,
+      "sentence": "Danish words look friendly on paper but turn evil when spoken.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "abandon",
+      "sentenceId": 12777390,
+      "sentence": "True friends never abandon each other.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "associate",
+      "sentenceId": 10234391,
+      "sentence": "Tom graduated from community college with an associate degree.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "initial",
+      "sentenceId": 10463318,
+      "sentence": "It's not the initial cost that worries me. It's the upkeep.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "environment",
+      "sentenceId": 12768057,
+      "sentence": "Tom is focused on protecting the environment for future generations.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "scandal",
+      "sentenceId": 11462429,
+      "sentence": "A cheating scandal threatens to blemish the university's reputation for excellence.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "banquet",
+      "sentenceId": 12775929,
+      "sentence": "The royal banquet was a feast for the senses.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "oak",
+      "sentenceId": 12769264,
+      "sentence": "He stands like the oak, unshaken by the storm.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "existence",
+      "sentenceId": 12778582,
+      "sentence": "Can we ever break free from the cycle of existence?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "finite",
+      "sentenceId": 12777760,
+      "sentence": "Is the universe infinite or finite?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "decent",
+      "sentenceId": 12003516,
+      "sentence": "It's hard to get decent information about what you're supposed to do.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "slash",
+      "sentenceId": 10718770,
+      "sentence": "The move has sparked alarm and is intensifying efforts to slash energy consumption and find alternatives.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "alternate",
+      "sentenceId": 9443585,
+      "sentence": "It's come to be viewed as an alternate spelling.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "skip",
+      "sentenceId": 12318330,
+      "sentence": "I never skip the theme song to this show.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "accomplish",
+      "sentenceId": 12055055,
+      "sentence": "I was demoralised at times, but I knew I had to forge ahead to accomplish my dream.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "invisible",
+      "sentenceId": 12778555,
+      "sentence": "Is everything connected by invisible forces?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "contribution",
+      "sentenceId": 9951046,
+      "sentence": "My contribution is still pending approval.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "essence",
+      "sentenceId": 12767857,
+      "sentence": "Privacy protects the essence of who we are.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "involve",
+      "sentenceId": 8421520,
+      "sentence": "Divide-and-conquer strategies involve pitting groups against one another.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "ancestor",
+      "sentenceId": 12095498,
+      "sentence": "Tabby cats exhibit the typical fur pattern of their wild ancestor.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "dim",
+      "sentenceId": 11989537,
+      "sentence": "Uranus is sometimes visible to the naked eye, but is very dim.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "cute",
+      "sentenceId": 10054543,
+      "sentence": "You're cute when you sleep. And also when you're awake.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "monopoly",
+      "sentenceId": 8832040,
+      "sentence": "I have a monopoly on the truth.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "shark",
+      "sentenceId": 12467700,
+      "sentence": "A shark swam past the porthole.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "emerge",
+      "sentenceId": 12772708,
+      "sentence": "Not until dawn did the truth emerge.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "conserve",
+      "sentenceId": 12768043,
+      "sentence": "Mary is learning how to conserve water in her gardening practices.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "interaction",
+      "sentenceId": 10228572,
+      "sentence": "Cats always need to feel like they have the choice to stop an interaction.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "consequence",
+      "sentenceId": 12777775,
+      "sentence": "Does every action have a consequence?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "recipe",
+      "sentenceId": 9403566,
+      "sentence": "I asked Tom for the recipe, but he said it was a secret.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "orientation",
+      "sentenceId": 10778152,
+      "sentence": "This orientation course will teach you everything you need to know.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "industrial",
+      "sentenceId": 11570817,
+      "sentence": "These industrial parks were envisaged as havens for domestic and foreign investors.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "benefit",
+      "sentenceId": 10775728,
+      "sentence": "I therefore admonish you to give the defendant the benefit of every reasonable doubt.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "realistic",
+      "sentenceId": 12759709,
+      "sentence": "The concept of space tourism is becoming more realistic each year.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "oppose",
+      "sentenceId": 11922411,
+      "sentence": "If you support banning foreign languages, you don't oppose censorship.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "buck",
+      "sentenceId": 12331145,
+      "sentence": "The burgers cost a buck apiece.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "loyal",
+      "sentenceId": 12777519,
+      "sentence": "Would you remain loyal in hard times?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "crowd",
+      "sentenceId": 12775978,
+      "sentence": "Her Highness smiled as she waved to the crowd.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "summit",
+      "sentenceId": 12768262,
+      "sentence": "They reached the summit at dawn.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "formal",
+      "sentenceId": 9801002,
+      "sentence": "This is the formal definition of philosophy.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "passion",
+      "sentenceId": 12776137,
+      "sentence": "Are you driven by your passion?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "assume",
+      "sentenceId": 7792170,
+      "sentence": "Let's assume you're right. So what?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "sensation",
+      "sentenceId": 9631281,
+      "sentence": "I can't enjoy reading without the tactile sensation of a physical book.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "divorce",
+      "sentenceId": 13148373,
+      "sentence": "Tom and Mary were going through a messy divorce at the time.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "grease",
+      "sentenceId": 10147463,
+      "sentence": "Put some elbow grease into it.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "cathedral",
+      "sentenceId": 10107577,
+      "sentence": "The old cathedral is a popular tourist attraction.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "overhear",
+      "sentenceId": 552742,
+      "sentence": "How charmed I am when I overhear a German word which I understand!",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "property",
+      "sentenceId": 9951051,
+      "sentence": "Tom installed security cameras on his property to deter thieves.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "endurance",
+      "sentenceId": 12765387,
+      "sentence": "The space journey tested their skills and endurance.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "reference",
+      "sentenceId": 9140815,
+      "sentence": "Wikipedia is a reference work powered by an endless argument.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "identification",
+      "sentenceId": 10722159,
+      "sentence": "It is advisable to bring some photographic identification, such as a valid passport.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "mass",
+      "sentenceId": 9954354,
+      "sentence": "We're at the beginning of a global mass extinction event.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "hurricane",
+      "sentenceId": 11700301,
+      "sentence": "My stream of consciousness is more like a hurricane.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "erosion",
+      "sentenceId": 10841928,
+      "sentence": "Tidal waves and coastal erosion have submerged an entire fishing community on Ghana's eastern coast.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "disease",
+      "sentenceId": 12764876,
+      "sentence": "The disease spread quickly through the town.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "minimum",
+      "sentenceId": 11930712,
+      "sentence": "Do you really expect me to do the work of five people for minimum wage?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "mutual",
+      "sentenceId": 12759817,
+      "sentence": "Tom thinks that open communication is key to mutual learning.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "sparkle",
+      "sentenceId": 12776651,
+      "sentence": "He noticed the sparkle in her eyes.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "scale",
+      "sentenceId": 11928545,
+      "sentence": "History is being repeated, but on a far vaster scale.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "breakthrough",
+      "sentenceId": 10164869,
+      "sentence": "Tom was responsible for more than one significant scientific breakthrough.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "idiot",
+      "sentenceId": 11099292,
+      "sentence": "Everyone's entitled to be an idiot.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "brood",
+      "sentenceId": 11091792,
+      "sentence": "Tom brought his whole brood with him.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "protest",
+      "sentenceId": 12777365,
+      "sentence": "Do you believe in art as a form of protest?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "scrape",
+      "sentenceId": 9365594,
+      "sentence": "I can barely scrape by on what I'm making now.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "contrast",
+      "sentenceId": 12001366,
+      "sentence": "Compare and contrast Cantonese with Mandarin.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "deceive",
+      "sentenceId": 12777417,
+      "sentence": "He knew she would never deceive him.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "essential",
+      "sentenceId": 12768331,
+      "sentence": "Taking time to care for yourself is essential for your health.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "warrant",
+      "sentenceId": 10143061,
+      "sentence": "Tom told the cop to come back when he had a warrant.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "abstract",
+      "sentenceId": 12777304,
+      "sentence": "He sculpts abstract figures from clay.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "fake",
+      "sentenceId": 9805399,
+      "sentence": "Is it safe to use fake tan during pregnancy?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "fold",
+      "sentenceId": 10765107,
+      "sentence": "Fold and unfold along each of the lines to make a crease.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "classical",
+      "sentenceId": 12777190,
+      "sentence": "Do you enjoy listening to classical music?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "medium",
+      "sentenceId": 11700153,
+      "sentence": "The medium is not the message.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "mansion",
+      "sentenceId": 9004046,
+      "sentence": "Tom grew up in a terraced house just down the road from a ginormous mansion.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "trademark",
+      "sentenceId": 11466947,
+      "sentence": "Trademark protection extends only to national borders.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "phenomenon",
+      "sentenceId": 9444725,
+      "sentence": "This is a phenomenon that has repeated itself many times throughout history.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "combine",
+      "sentenceId": 11838477,
+      "sentence": "Coffee roasters combine beans from different areas to make coffees with different tastes and qualities.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "plaster",
+      "sentenceId": 9805498,
+      "sentence": "Can I travel on a plane if I have a plaster cast?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "indefinite",
+      "sentenceId": 9416088,
+      "sentence": "Tom's band is on an indefinite hiatus.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "thrive",
+      "sentenceId": 12768044,
+      "sentence": "Tom's exploration of sustainable farming techniques has helped his garden thrive.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "encounter",
+      "sentenceId": 11928579,
+      "sentence": "Tom recognized me from a single encounter at a party three years ago.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "attract",
+      "sentenceId": 12768016,
+      "sentence": "Tom is focusing on growing plants that attract pollinators.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "memorize",
+      "sentenceId": 12363071,
+      "sentence": "Think about the basic genetics you may have learned in school and every vocabulary term you needed to memorize.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "ridiculous",
+      "sentenceId": 13420208,
+      "sentence": "I sound ridiculous whenever I try speaking Danish.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "commitment",
+      "sentenceId": 12767818,
+      "sentence": "Improvement is a commitment to yourself.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "eternal",
+      "sentenceId": 12769086,
+      "sentence": "The mountains stand as eternal guardians.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "deadline",
+      "sentenceId": 10188432,
+      "sentence": "The submission deadline has been extended.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "acquire",
+      "sentenceId": 13036756,
+      "sentence": "You can't acquire a language without consuming it.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "hatch",
+      "sentenceId": 12141618,
+      "sentence": "Once the young hatch they are raised in predator-proof pens until they are larger and more predator resistant.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "costume",
+      "sentenceId": 12122200,
+      "sentence": "Tom is the only one who didn't wear a Halloween costume.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "slippery",
+      "sentenceId": 11663738,
+      "sentence": "Patricia's car skidded on a slippery spot on the road and spun completely around twice.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "option",
+      "sentenceId": 12772550,
+      "sentence": "Was this really the only option?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "cape",
+      "sentenceId": 9101056,
+      "sentence": "Tom is the only person wearing a cape.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "condemn",
+      "sentenceId": 11154913,
+      "sentence": "You condemn your enemies for a number of horrible things, but you celebrate those things in your allies!",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "homogeneous",
+      "sentenceId": 10654591,
+      "sentence": "It's a heterogeneous group, not a homogeneous one.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "constant",
+      "sentenceId": 11669612,
+      "sentence": "The constant lies make me wonder if your cause is really so just.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "update",
+      "sentenceId": 10545369,
+      "sentence": "She's going to try rolling back an update.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "surgery",
+      "sentenceId": 9805365,
+      "sentence": "Is it better to have a bath or shower after surgery?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "alternative",
+      "sentenceId": 11591097,
+      "sentence": "It once seemed like there was no alternative to monarchy, that it was just the way things were.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "intersection",
+      "sentenceId": 11166818,
+      "sentence": "The light was still yellow when the car entered the intersection.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "intellectual",
+      "sentenceId": 12759844,
+      "sentence": "Mary often engages Tom in conversations that push their intellectual boundaries.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "definition",
+      "sentenceId": 10179225,
+      "sentence": "If you come across a word you don't know while reading, look up its definition in the dictionary.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "recession",
+      "sentenceId": 12766071,
+      "sentence": "Will the economy recover from the global recession?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "haul",
+      "sentenceId": 10164855,
+      "sentence": "The thieves made off with quite a haul.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "plague",
+      "sentenceId": 10459884,
+      "sentence": "I think I have the plague.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "status",
+      "sentenceId": 10291584,
+      "sentence": "I want to check the status of my order.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "encourage",
+      "sentenceId": 12767998,
+      "sentence": "How can we encourage more people to protect the environment?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "convert",
+      "sentenceId": 12381513,
+      "sentence": "This is the world's first commercially available pedal generator, allowing to convert your human power into usable electricity.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "tunnel",
+      "sentenceId": 10112532,
+      "sentence": "I'm starting to see the light at the end of the tunnel.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "exceptional",
+      "sentenceId": 10099736,
+      "sentence": "I think this watermelon is exceptional.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "cable",
+      "sentenceId": 11305462,
+      "sentence": "The five-and-a-half-meter-diameter balloon is tethered with a winch cable to an airport pickup truck.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "triumph",
+      "sentenceId": 12777581,
+      "sentence": "Does good always triumph over evil?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "objection",
+      "sentenceId": 11857324,
+      "sentence": "I have no objection to your calling in your friend if I may call in mine.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "exchange",
+      "sentenceId": 11170654,
+      "sentence": "The stock exchange has been chalking up extraordinary numbers.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "concise",
+      "sentenceId": 12125475,
+      "sentence": "We at Focus always strive for clear, concise writing that avoids gobbledygook and jargon.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "foresee",
+      "sentenceId": 10094907,
+      "sentence": "I don't foresee ever being able to go to Boston.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "hesitate",
+      "sentenceId": 12140223,
+      "sentence": "If there's ever anything you don't understand, please don't hesitate to ask me.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "design",
+      "sentenceId": 10363149,
+      "sentence": "I do graphic design for some T-shirt sites.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "testify",
+      "sentenceId": 10031121,
+      "sentence": "Is Tom going to testify against John?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "device",
+      "sentenceId": 9825447,
+      "sentence": "You're already paying to carry a tracking device around.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "financial",
+      "sentenceId": 9949953,
+      "sentence": "I am once again asking for your financial support.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "cluster",
+      "sentenceId": 11244047,
+      "sentence": "The cottage was one of a small lonely cluster standing on the edge of an enormous beech wood.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "inclusive",
+      "sentenceId": 12777179,
+      "sentence": "Do they foster an inclusive environment?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "gear",
+      "sentenceId": 12127706,
+      "sentence": "The airline says the aircraft's right-side landing gear had malfunctioned on takeoff.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "consensus",
+      "sentenceId": 12321418,
+      "sentence": "There doesn't seem to be consensus on this among speakers.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "relieve",
+      "sentenceId": 9390345,
+      "sentence": "Gargle with saltwater to relieve the pain of a sore throat.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "verge",
+      "sentenceId": 11985010,
+      "sentence": "Radiated tortoises are extremely rare, and experts say they may be on the verge of extinction.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "porch",
+      "sentenceId": 12472073,
+      "sentence": "Grackles keep coming to eat the cat food on the porch.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "yell",
+      "sentenceId": 11451150,
+      "sentence": "If he's not there, yell back for him.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "render",
+      "sentenceId": 12065639,
+      "sentence": "A passing motorist stopped to render aid.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "evolution",
+      "sentenceId": 11076028,
+      "sentence": "He is an anthropology professor at our university who studies the evolution of societies.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "possess",
+      "sentenceId": 12768666,
+      "sentence": "You possess a strength that comes not from force, but from grace.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "bounce",
+      "sentenceId": 12766062,
+      "sentence": "Can the economy bounce back after the crisis?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "abnormal",
+      "sentenceId": 12188741,
+      "sentence": "Mental illness is a normal response to abnormal circumstances.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "blink",
+      "sentenceId": 12772613,
+      "sentence": "Everything changed in the blink of an eye.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "coalition",
+      "sentenceId": 12776970,
+      "sentence": "They form a coalition for change.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "annoy",
+      "sentenceId": 11669225,
+      "sentence": "I pronounced his name wrong on purpose to annoy him.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "negative",
+      "sentenceId": 9320591,
+      "sentence": "Just because a comment is negative doesn't mean it's true.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "verse",
+      "sentenceId": 11613818,
+      "sentence": "I mostly write free verse, but I employ meter and rhyme from time to time.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "motivate",
+      "sentenceId": 12775177,
+      "sentence": "They motivate each other to succeed.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "slide",
+      "sentenceId": 10834344,
+      "sentence": "I'll let it slide this time.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "unfold",
+      "sentenceId": 10765107,
+      "sentence": "Fold and unfold along each of the lines to make a crease.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "resolve",
+      "sentenceId": 12766154,
+      "sentence": "Are diplomatic efforts enough to resolve the crisis?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "cite",
+      "sentenceId": 12417879,
+      "sentence": "Please cite an authority on the English language, rather than Grammarly.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "appropriate",
+      "sentenceId": 11236017,
+      "sentence": "Remember to end every sentence with an appropriate punctuation mark.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "threaten",
+      "sentenceId": 12110954,
+      "sentence": "Rebellious teenagers often threaten to run away from home.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "committee",
+      "sentenceId": 12838248,
+      "sentence": "I'm speaking on behalf of the small committee.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "mission",
+      "sentenceId": 12765106,
+      "sentence": "The space mission was an urgent matter for the crew.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "diploma",
+      "sentenceId": 11257157,
+      "sentence": "Tom got his degree from a diploma mill.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "professional",
+      "sentenceId": 12317707,
+      "sentence": "Professional wrestling is a performance art.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "focus",
+      "sentenceId": 12767992,
+      "sentence": "Tom's focus on sustainable gardening has inspired his neighbors.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "electric",
+      "sentenceId": 10274991,
+      "sentence": "Electric motors deliver strong acceleration because they offer more torque than equivalent gasoline engines.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "religion",
+      "sentenceId": 9715179,
+      "sentence": "Any religion or philosophy can be taken to excess.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "orient",
+      "sentenceId": 10930666,
+      "sentence": "You need a map to orient yourself.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "endure",
+      "sentenceId": 12769181,
+      "sentence": "The mountains endure, as we must.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "panic",
+      "sentenceId": 12764926,
+      "sentence": "The crisis put everyone in a state of panic.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "assurance",
+      "sentenceId": 12768696,
+      "sentence": "You walk with the assurance of one who knows their path.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "promising",
+      "sentenceId": 12777404,
+      "sentence": "He held her hand, promising never to let go.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "fabric",
+      "sentenceId": 10789701,
+      "sentence": "Velvet fabric is often seen as a sign of luxury.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "responsible",
+      "sentenceId": 10164869,
+      "sentence": "Tom was responsible for more than one significant scientific breakthrough.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "impact",
+      "sentenceId": 12768026,
+      "sentence": "Tom read about the impact of global warming on agriculture.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "circulation",
+      "sentenceId": 12092157,
+      "sentence": "The redesigned banknote went into circulation on Thursday, but may take some time to show up everywhere.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "barely",
+      "sentenceId": 9365594,
+      "sentence": "I can barely scrape by on what I'm making now.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "donation",
+      "sentenceId": 10719771,
+      "sentence": "The donation page doesn't allow you to say what it's for.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "tick",
+      "sentenceId": 12112952,
+      "sentence": "Cookie has a tick on her forehead.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "prey",
+      "sentenceId": 10513877,
+      "sentence": "Owls can prey on skunks because they have no sense of smell.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "ambition",
+      "sentenceId": 12775028,
+      "sentence": "Is there a limit to human ambition?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "skeptical",
+      "sentenceId": 10154439,
+      "sentence": "There is a physical reality, but we must be skeptical of our knowledge of it.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "enroll",
+      "sentenceId": 12766031,
+      "sentence": "Did Mary enroll in a new learning course?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "clone",
+      "sentenceId": 10782358,
+      "sentence": "Creating a digital clone of someone's voice is now easier than ever.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "aspect",
+      "sentenceId": 12765015,
+      "sentence": "The crisis affected every aspect of their lives.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "behavior",
+      "sentenceId": 12380875,
+      "sentence": "Tom's behavior this evening has been asinine.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "lease",
+      "sentenceId": 10054477,
+      "sentence": "We're signing a new lease on Sunday.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "opponent",
+      "sentenceId": 10819676,
+      "sentence": "Tom made his opponent tap out.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "luggage",
+      "sentenceId": 10236661,
+      "sentence": "Stow your carry-on luggage in the overhead compartments.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "loyalty",
+      "sentenceId": 12777546,
+      "sentence": "Do you think loyalty is the key to lasting love?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "vicious",
+      "sentenceId": 8089829,
+      "sentence": "Tom thinks swans are even more vicious than geese.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "evaluate",
+      "sentenceId": 12262025,
+      "sentence": "I don't understand French well enough to evaluate poetry in the language.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "issue",
+      "sentenceId": 12311342,
+      "sentence": "A big conservation issue is the co-existence of people and animals.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "disregard",
+      "sentenceId": 10104687,
+      "sentence": "He has a maverick disregard for protocol.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "stability",
+      "sentenceId": 12765327,
+      "sentence": "They fought to maintain peace and stability in the galaxy.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "propaganda",
+      "sentenceId": 9101344,
+      "sentence": "You are not immune to propaganda.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "boring",
+      "sentenceId": 12406383,
+      "sentence": "The lecture was pretty boring, so I started to doze off.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "crucial",
+      "sentenceId": 12767033,
+      "sentence": "Data protection is crucial in the modern age.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "definitely",
+      "sentenceId": 9415502,
+      "sentence": "One of these potatoes was definitely bad.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "bronze",
+      "sentenceId": 12092164,
+      "sentence": "The artifacts included statues and pieces made of bronze and terracotta.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "trial",
+      "sentenceId": 12766130,
+      "sentence": "Will the justice system face challenges in this trial?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "signal",
+      "sentenceId": 11166812,
+      "sentence": "Tom changed lanes without using his turn signal.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "stock",
+      "sentenceId": 11158344,
+      "sentence": "Major U.S. stock markets made strong gains Tuesday as strong earnings reports encouraged investors.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "mechanical",
+      "sentenceId": 10233192,
+      "sentence": "One of the benefits of using mechanical pencils is that you don't need to use a pencil sharpener.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "challenge",
+      "sentenceId": 12768718,
+      "sentence": "I see the potential in every challenge I face.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "communication",
+      "sentenceId": 12759817,
+      "sentence": "Tom thinks that open communication is key to mutual learning.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "sticky",
+      "sentenceId": 11545071,
+      "sentence": "When flaxseeds are wet they become very sticky on the outside.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "outbreak",
+      "sentenceId": 12765267,
+      "sentence": "Tom volunteered to assist with medical care during the outbreak.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "lens",
+      "sentenceId": 12768690,
+      "sentence": "I see the world through a lens of possibility.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "shaft",
+      "sentenceId": 10762622,
+      "sentence": "Tom fell down an elevator shaft.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "nominate",
+      "sentenceId": 10735613,
+      "sentence": "The director has asked the board to nominate him for a second term.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "magnetic",
+      "sentenceId": 11095233,
+      "sentence": "They're saying that the Sun's magnetic field is about to reverse or flip its polarity.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "expense",
+      "sentenceId": 10849744,
+      "sentence": "Can this be written off as a business expense?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "schedule",
+      "sentenceId": 10101905,
+      "sentence": "I'm still trying to sort my schedule out.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "novelty",
+      "sentenceId": 10161822,
+      "sentence": "Tom gave Mary a novelty pencil sharpener for her birthday.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "howl",
+      "sentenceId": 12775768,
+      "sentence": "They heard the howl of coyotes.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "versus",
+      "sentenceId": 10873733,
+      "sentence": "She found what she called a \"small but significant\" difference in reading text from screen versus paper.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "drought",
+      "sentenceId": 12767967,
+      "sentence": "How does Tom keep his garden thriving during a drought?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "wealthy",
+      "sentenceId": 11745973,
+      "sentence": "Mary used to work as a governess for a wealthy family.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "bandage",
+      "sentenceId": 9805138,
+      "sentence": "How do I apply a bandage?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "ferry",
+      "sentenceId": 12764744,
+      "sentence": "They took a ferry to a nearby island for the day.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "tendency",
+      "sentenceId": 10139773,
+      "sentence": "Sorry about my tendency to text people manifestos.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "productivity",
+      "sentenceId": 12777172,
+      "sentence": "He seeks to improve team productivity.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "norm",
+      "sentenceId": 12776599,
+      "sentence": "She questions the norm with courage.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "volume",
+      "sentenceId": 10077494,
+      "sentence": "Could you turn the volume up? I can't make out what they're saying from my apartment.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "vegetation",
+      "sentenceId": 12382543,
+      "sentence": "The vegetation changes and becomes sparser as temperatures rise and conditions get drier.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "reaction",
+      "sentenceId": 11351019,
+      "sentence": "She had a reaction to the anesthesia she was given prior to plastic surgery.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "purchase",
+      "sentenceId": 12152150,
+      "sentence": "The cash register cannot be opened without a purchase.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "collision",
+      "sentenceId": 10142197,
+      "sentence": "After the collision, Tom and Mary exchanged insurance information.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "giggle",
+      "sentenceId": 12776746,
+      "sentence": "He whispered something that made her giggle.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "cope",
+      "sentenceId": 12764976,
+      "sentence": "She found healing through teaching others to cope.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "tow",
+      "sentenceId": 12308532,
+      "sentence": "How much money can you make as a tow truck driver?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "element",
+      "sentenceId": 10808836,
+      "sentence": "Tom seemed out of his element.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "drain",
+      "sentenceId": 12401431,
+      "sentence": "I pulled a huge hair clog out of the bathroom sink drain.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "spite",
+      "sentenceId": 7335526,
+      "sentence": "In spite of everything, Tom is happy.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "grant",
+      "sentenceId": 10172551,
+      "sentence": "\"I'll grant you three wishes,\" said the genie.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "contaminate",
+      "sentenceId": 11148934,
+      "sentence": "David Paige says it is important not to contaminate Mars with a microbe that could spread.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "devise",
+      "sentenceId": 12417932,
+      "sentence": "We need to devise a plan.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "acceptance",
+      "sentenceId": 11558339,
+      "sentence": "Reading this sentence constitutes acceptance of its terms and conditions.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "enforce",
+      "sentenceId": 12766074,
+      "sentence": "Will the justice system enforce new reforms?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "bruise",
+      "sentenceId": 10755767,
+      "sentence": "That's going to leave a bruise.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "immune",
+      "sentenceId": 10354036,
+      "sentence": "You're not immune to the virus.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "imitate",
+      "sentenceId": 13420210,
+      "sentence": "Danish just sounds impossible to imitate.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "survival",
+      "sentenceId": 12766032,
+      "sentence": "Is there enough food for survival on the island?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "religious",
+      "sentenceId": 11593686,
+      "sentence": "There are good lessons to be found in every religious tradition.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "commit",
+      "sentenceId": 11563914,
+      "sentence": "If you commit a crime, don't post about it online.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "emotion",
+      "sentenceId": 12777851,
+      "sentence": "Can we find balance between reason and emotion?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "overhead",
+      "sentenceId": 12364859,
+      "sentence": "Migrant birds such as the sandhill crane fly overhead, moving south.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "collapse",
+      "sentenceId": 10320564,
+      "sentence": "The whole thing is about to collapse.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "intrinsic",
+      "sentenceId": 9694653,
+      "sentence": "Tom lacks intrinsic motivation to study French.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "equator",
+      "sentenceId": 12388999,
+      "sentence": "The nineteen islands that make up the Galapagos lie along the equator one thousand kilometers west of Ecuador.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "provided",
+      "sentenceId": 12765295,
+      "sentence": "Tom provided first aid to injured civilians during the emergency.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "extinct",
+      "sentenceId": 12154755,
+      "sentence": "Stegosaurs dwindled in the Cretaceous and appear to have gone extinct before the end of the period.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "receipt",
+      "sentenceId": 10110907,
+      "sentence": "I can't return the product without a receipt.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "privacy",
+      "sentenceId": 12767857,
+      "sentence": "Privacy protects the essence of who we are.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "invest",
+      "sentenceId": 12766163,
+      "sentence": "Did the company invest in better cybersecurity tools?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "stereo",
+      "sentenceId": 12071337,
+      "sentence": "I had never been in a recording studio. At that time, we didn't have stereo. Everything was mono.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "ignore",
+      "sentenceId": 11079695,
+      "sentence": "The double standard is impossible to ignore.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "interact",
+      "sentenceId": 10018036,
+      "sentence": "I no longer have to interact with people I have little to nothing in common with.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "convenience",
+      "sentenceId": 11247749,
+      "sentence": "I've color-coded the cards for your convenience.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "phase",
+      "sentenceId": 12480046,
+      "sentence": "I'm allowed to go through a phase.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "corporate",
+      "sentenceId": 9004057,
+      "sentence": "I can't decide whether to invest in a corporate bond or a gilt.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "restore",
+      "sentenceId": 12765277,
+      "sentence": "They joined the effort to restore order after the natural disaster.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "canvas",
+      "sentenceId": 10463752,
+      "sentence": "You call this art? It's just a splotch of paint on a canvas!",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "fiction",
+      "sentenceId": 11105311,
+      "sentence": "I'd like to be able to read fantasy and science fiction in other languages.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "rarely",
+      "sentenceId": 10172764,
+      "sentence": "Mary only uses lowercase letters when she texts, and she rarely uses punctuation.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "migrant",
+      "sentenceId": 12364859,
+      "sentence": "Migrant birds such as the sandhill crane fly overhead, moving south.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "subscribe",
+      "sentenceId": 8180880,
+      "sentence": "Don't forget to like, subscribe and turn on the bell notifications.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "flask",
+      "sentenceId": 10175666,
+      "sentence": "Tom keeps a flask in his inside jacket pocket.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "inevitable",
+      "sentenceId": 11485256,
+      "sentence": "Lower birthrates are the inevitable result of a more educated and affluent society.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "imitation",
+      "sentenceId": 12424779,
+      "sentence": "It's healthier to cook with eggplant or mushrooms than imitation meat.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "contribute",
+      "sentenceId": 12768002,
+      "sentence": "Tom believes every garden should contribute to the ecosystem.",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "crush",
+      "sentenceId": 9805275,
+      "sentence": "Can I crush medicines before taking them?",
+      "reviewType": "phase-a-post-curation-review",
+      "semanticDecisionSource": "sentence-read"
+    }
+  ]
+}

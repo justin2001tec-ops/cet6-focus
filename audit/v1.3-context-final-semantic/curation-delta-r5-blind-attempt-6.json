@@ -1,0 +1,79 @@
+{
+  "round": 5,
+  "source": "Round 5 blind validation attempt 6",
+  "reviewed": 100,
+  "rejectCount": 5,
+  "severeInappropriateCount": 0,
+  "appendedCount": 5,
+  "appended": [
+    {
+      "word": "cord",
+      "sentenceId": 11948532,
+      "categories": [
+        "medical-heavy",
+        "violence"
+      ],
+      "reason": "Cutting an umbilical cord with a sharp knife is a medical and injury-adjacent birth detail that is unsuitable as a neutral default context for cord.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "independence",
+      "sentenceId": 9433299,
+      "categories": [
+        "public-controversy",
+        "political-heavy"
+      ],
+      "reason": "A people's demand for independence is a political and ethnic-national claim, so independence is not shown in a neutral default context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "claim",
+      "sentenceId": 11240039,
+      "categories": [
+        "public-controversy",
+        "political-heavy"
+      ],
+      "reason": "GamerGate and reactionary cancel-culture claims create a niche adversarial controversy that is unsuitable as a neutral context for claim.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "ideology",
+      "sentenceId": 11694759,
+      "categories": [
+        "public-controversy",
+        "political-heavy"
+      ],
+      "reason": "The sentence argues about transgenderism as an ideology and state of being, placing ideology in a contested identity debate rather than a neutral context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "solution",
+      "sentenceId": 12768142,
+      "categories": [
+        "context-dependent",
+        "weak-teaching-value"
+      ],
+      "reason": "The solution is simply described as simpler without identifying a problem or answer, so solution lacks a concrete teaching context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    }
+  ],
+  "before": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 850
+  },
+  "after": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 855
+  },
+  "noReplacementAuthored": true
+}

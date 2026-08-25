@@ -1,0 +1,55 @@
+{
+  "round": 5,
+  "source": "Round 5 blind validation attempt 7",
+  "reviewed": 100,
+  "rejectCount": 3,
+  "severeInappropriateCount": 1,
+  "appendedCount": 3,
+  "appended": [
+    {
+      "word": "conservative",
+      "sentenceId": 6122016,
+      "categories": [
+        "political-heavy",
+        "public-controversy"
+      ],
+      "reason": "A scandal and a conservative news station place conservative in a current political-media context rather than a neutral default example.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "claim",
+      "sentenceId": 6980233,
+      "categories": [
+        "violence",
+        "political-heavy"
+      ],
+      "reason": "The claim about protesters trying to get shot is a charged political and violence accusation, not a safe neutral context for claim.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "corrupt",
+      "sentenceId": 9533724,
+      "categories": [
+        "hate",
+        "political-heavy"
+      ],
+      "reason": "Calling Algerian presidents ignorant, inbred puppets is explicit ethnic and political hostility, making corrupt a severe unsuitable context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    }
+  ],
+  "before": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 855
+  },
+  "after": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 858
+  },
+  "noReplacementAuthored": true
+}

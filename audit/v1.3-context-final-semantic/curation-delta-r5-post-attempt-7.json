@@ -1,0 +1,31 @@
+{
+  "round": 5,
+  "source": "Round 5 post-curation sentence-read review attempt 7",
+  "reviewed": 300,
+  "rejectCount": 1,
+  "severeInappropriateCount": 0,
+  "appendedCount": 1,
+  "appended": [
+    {
+      "word": "invisible",
+      "sentenceId": 11959770,
+      "categories": [
+        "fantastical-context",
+        "weak-teaching-value"
+      ],
+      "reason": "Cloaking devices making people invisible belong to a science-fiction premise, so invisible is not anchored in a normal default-learning context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    }
+  ],
+  "before": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 765
+  },
+  "after": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 766
+  },
+  "noReplacementAuthored": true
+}

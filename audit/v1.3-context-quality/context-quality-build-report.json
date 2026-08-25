@@ -7,11 +7,11 @@
   "matchedTargetCandidates": 21655,
   "rawCandidatePairs": 7284,
   "rawCandidateWordCount": 1563,
-  "selectedCount": 1110,
+  "selectedCount": 990,
   "rawCandidateCoverage": 0.7043713384407391,
   "rawCandidateCoveragePercent": 70.4,
-  "qualityApprovedCoverage": 0.5002253267237494,
-  "qualityApprovedCoveragePercent": 50,
+  "qualityApprovedCoverage": 0.44614691302388465,
+  "qualityApprovedCoveragePercent": 44.6,
   "rejectionCounts": {
     "length": 14479,
     "properNoun": 768,
@@ -51,15 +51,15 @@
   "curation": {
     "version": 1,
     "globalRejectCount": 30,
-    "pairRejectCount": 527,
-    "rejectedCandidateCount": 550,
-    "noFallbackCount": 229
+    "pairRejectCount": 877,
+    "rejectedCandidateCount": 905,
+    "noFallbackCount": 349
   },
   "audit": {
     "seed": 216489987,
     "sampleSize": 250,
-    "samplePassCount": 245,
-    "sampleQualityPassRate": 98,
+    "samplePassCount": 244,
+    "sampleQualityPassRate": 97.6,
     "severeInappropriateSampleCount": 0,
     "provenanceCoverage": 1,
     "provenanceCoveragePercent": 100,

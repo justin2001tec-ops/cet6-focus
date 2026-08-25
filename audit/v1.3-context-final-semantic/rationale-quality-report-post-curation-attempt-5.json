@@ -1,0 +1,8 @@
+{
+  "reviewedRows": 300,
+  "exactDuplicateRationaleCount": 0,
+  "genericRationaleCount": 0,
+  "genericRationaleShare": 0,
+  "gate": true,
+  "method": "Audit-only reviewer-quality QA; it never creates or changes semantic decisions."
+}

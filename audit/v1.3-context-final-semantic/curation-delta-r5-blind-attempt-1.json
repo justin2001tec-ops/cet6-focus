@@ -1,0 +1,345 @@
+{
+  "round": 5,
+  "source": "Round 5 blind validation attempt 1",
+  "reviewed": 100,
+  "rejectCount": 27,
+  "severeInappropriateCount": 1,
+  "appendedCount": 27,
+  "appended": [
+    {
+      "word": "cast",
+      "sentenceId": 10722100,
+      "categories": [
+        "religious-heavy",
+        "archaic",
+        "context-dependent"
+      ],
+      "reason": "The archaic religious question about being cast down by sin and ascending makes cast depend on a fixed biblical-style idiom rather than a clear default context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "solution",
+      "sentenceId": 11807590,
+      "categories": [
+        "political-heavy",
+        "public-controversy"
+      ],
+      "reason": "Capitalism and Marxism-Leninism are presented as competing political solutions, so solution is embedded in an ideological claim unsuitable for a neutral default example.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "persistent",
+      "sentenceId": 11140283,
+      "categories": [
+        "violence",
+        "political-heavy"
+      ],
+      "reason": "Persistent callous attacks in an unnamed country create a loaded political and violence context that is unnecessary for teaching persistent.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "cancel",
+      "sentenceId": 12052576,
+      "categories": [
+        "public-controversy",
+        "political-heavy"
+      ],
+      "reason": "Canceling one of the most powerful people invokes cancel-culture discourse and a public power struggle rather than a neutral use of cancel.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "cancer",
+      "sentenceId": 9805251,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "Asking about personal cancer risk from relatives is a sensitive medical-genetics question, not a neutral default context for cancer.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "veil",
+      "sentenceId": 12055381,
+      "categories": [
+        "archaic",
+        "context-dependent",
+        "weak-teaching-value"
+      ],
+      "reason": "The clouds-as-veil personification is ornate and poetic, so veil is not shown in a straightforward modern context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "vice",
+      "sentenceId": 11040666,
+      "categories": [
+        "context-too-hard",
+        "weak-teaching-value"
+      ],
+      "reason": "Invariant virtue and uninterrupted vice form an abstract philosophical argument with no concrete situation to anchor vice.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "alliance",
+      "sentenceId": 12765146,
+      "categories": [
+        "fantastical-context",
+        "weak-teaching-value"
+      ],
+      "reason": "An intergalactic alliance is a science-fiction setting, so alliance is not grounded in a normal default-learning context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "identical",
+      "sentenceId": 11264536,
+      "categories": [
+        "death-heavy",
+        "weak-teaching-value"
+      ],
+      "reason": "Identical graves and a joke about burying suburbanites make identical depend on morbid humor and add little safe teaching value.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "exotic",
+      "sentenceId": 12764616,
+      "categories": [
+        "context-dependent",
+        "weak-teaching-value"
+      ],
+      "reason": "An exotic destination is vague travel-marketing language with no concrete referent, so exotic is not taught precisely.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "masculine",
+      "sentenceId": 10689028,
+      "categories": [
+        "public-controversy"
+      ],
+      "reason": "Describing a woman's way of talking as masculine relies on a gender stereotype rather than a neutral, broadly useful context for masculine.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "quantitative",
+      "sentenceId": 11277328,
+      "categories": [
+        "specialist-background",
+        "political-heavy"
+      ],
+      "reason": "Quantitative easing, eurozone risks, and a named speaker create dense policy-finance background that overwhelms quantitative.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "severe",
+      "sentenceId": 12130064,
+      "categories": [
+        "medical-heavy",
+        "weak-teaching-value"
+      ],
+      "reason": "Severe diarrhea of the mouth is a vulgar body-based insult, not a reliable natural or useful default context for severe.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "vocal",
+      "sentenceId": 13425223,
+      "categories": [
+        "specialist-background",
+        "context-too-hard"
+      ],
+      "reason": "A Danish glottal stop and vocal-cord terminology require specialist phonetics knowledge that overwhelms vocal.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "impose",
+      "sentenceId": 11067052,
+      "categories": [
+        "political-heavy",
+        "public-controversy"
+      ],
+      "reason": "China imposing rule on Taiwan is a charged geopolitical claim, so impose is not shown in a neutral default context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "capable",
+      "sentenceId": 10169527,
+      "categories": [
+        "context-dependent",
+        "weak-teaching-value"
+      ],
+      "reason": "You don't know me or what I'm capable of is an incomplete challenge with no action or ability specified, so capable is poorly anchored.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "disastrous",
+      "sentenceId": 8736356,
+      "categories": [
+        "archaic",
+        "fantastical-context",
+        "weak-teaching-value"
+      ],
+      "reason": "Disastrous recipes paired with may the devil take me is an odd archaic curse, so disastrous is not taught through a useful natural context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "fund",
+      "sentenceId": 10722005,
+      "categories": [
+        "political-heavy",
+        "violence"
+      ],
+      "reason": "Funding missile-defense programs places fund inside a militarized policy debate rather than a neutral money-support context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "amplify",
+      "sentenceId": 12487189,
+      "categories": [
+        "fantastical-context",
+        "public-controversy",
+        "weak-teaching-value"
+      ],
+      "reason": "Tinfoil hats amplifying mind-control signals is a conspiracy claim, so amplify is not presented in a reliable modern learning context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "ecology",
+      "sentenceId": 10546728,
+      "categories": [
+        "specialist-background",
+        "context-too-hard"
+      ],
+      "reason": "Decomposition ecology is a specialist scientific compound that provides too much background and does not teach ecology in an accessible way.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "jury",
+      "sentenceId": 11986295,
+      "categories": [
+        "public-controversy",
+        "context-dependent"
+      ],
+      "reason": "The Depp-Heard case is a highly charged public legal dispute and the sentence asks the learner to evaluate a verdict, not simply learn jury.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "incentive",
+      "sentenceId": 10750476,
+      "categories": [
+        "context-dependent",
+        "weak-teaching-value"
+      ],
+      "reason": "That's not much of an incentive supplies no goal or motivating factor, so incentive is left as an unexplained abstract label.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "vulnerable",
+      "sentenceId": 12773207,
+      "categories": [
+        "context-dependent",
+        "weak-teaching-value"
+      ],
+      "reason": "To stand tall is to be vulnerable is a paradoxical aphorism without a concrete situation, so vulnerable is not taught clearly enough.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "tame",
+      "sentenceId": 11900714,
+      "categories": [
+        "fantastical-context",
+        "weak-teaching-value"
+      ],
+      "reason": "Teaching someone to tame dragons is a fantasy premise and does not provide a normal default-learning context for tame.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "hatred",
+      "sentenceId": 11986313,
+      "categories": [
+        "hate",
+        "public-controversy"
+      ],
+      "reason": "Misogynistic hatred of a defendant introduces explicit gendered hostility into a legal dispute, making hatred a severe unsuitable context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "olive",
+      "sentenceId": 11003360,
+      "categories": [
+        "context-dependent",
+        "unnatural-English"
+      ],
+      "reason": "The conditional fragment about someday planting olive trees has no complete proposition, so olive is not presented in a reliable standalone sentence.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "corrupt",
+      "sentenceId": 12195689,
+      "categories": [
+        "public-controversy",
+        "political-heavy"
+      ],
+      "reason": "Corrupt politicians siphoning billions from private businesses is a loaded political-corruption claim rather than a neutral context for corrupt.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    }
+  ],
+  "before": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 766
+  },
+  "after": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 793
+  },
+  "noReplacementAuthored": true
+}

@@ -1,0 +1,67 @@
+{
+  "round": 5,
+  "source": "Round 5 post-curation sentence-read review attempt 4",
+  "reviewed": 300,
+  "rejectCount": 4,
+  "severeInappropriateCount": 0,
+  "appendedCount": 4,
+  "appended": [
+    {
+      "word": "depression",
+      "sentenceId": 9637092,
+      "categories": [
+        "medical-heavy",
+        "context-dependent"
+      ],
+      "reason": "Falling into a deep depression is a sensitive personal mental-health context rather than a neutral default-learning example.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "capable",
+      "sentenceId": 12092209,
+      "categories": [
+        "public-controversy",
+        "weak-teaching-value"
+      ],
+      "reason": "The billion-dollar claim about being evil is a hostile wealth-and-morality judgment, so capable is not taught in a neutral useful context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "romance",
+      "sentenceId": 11044115,
+      "categories": [
+        "unnatural-English",
+        "specialist-background"
+      ],
+      "reason": "The sentence uses an awkward manner-by-which construction and a specialized language-history claim, so Romance is not a reliable natural model for romance.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    },
+    {
+      "word": "conception",
+      "sentenceId": 8263642,
+      "categories": [
+        "religious-heavy",
+        "public-controversy"
+      ],
+      "reason": "A doctrinal claim about Judaism and when life begins places conception in a sensitive religious and bioethical dispute rather than a neutral context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "phase-a-post-curation-review"
+    }
+  ],
+  "before": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 756
+  },
+  "after": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 760
+  },
+  "noReplacementAuthored": true
+}

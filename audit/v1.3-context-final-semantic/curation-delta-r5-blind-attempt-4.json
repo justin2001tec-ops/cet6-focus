@@ -1,0 +1,138 @@
+{
+  "round": 5,
+  "source": "Round 5 blind validation attempt 4",
+  "reviewed": 100,
+  "rejectCount": 10,
+  "severeInappropriateCount": 1,
+  "appendedCount": 10,
+  "appended": [
+    {
+      "word": "humanity",
+      "sentenceId": 12765236,
+      "categories": [
+        "fantastical-context",
+        "weak-teaching-value"
+      ],
+      "reason": "An intergalactic voyage is a science-fiction setting, so humanity is not anchored in a normal default-learning context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "skeleton",
+      "sentenceId": 12122006,
+      "categories": [
+        "fantastical-context",
+        "weak-teaching-value"
+      ],
+      "reason": "A literally walking, talking skeleton is a supernatural image that does not provide a normal useful default context for skeleton.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "verbal",
+      "sentenceId": 7242711,
+      "categories": [
+        "medical-heavy",
+        "public-controversy"
+      ],
+      "reason": "Describing autism through a verbal/nonverbal contrast makes verbal depend on a sensitive diagnostic and identity context rather than a neutral example.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "virtue",
+      "sentenceId": 11040666,
+      "categories": [
+        "context-too-hard",
+        "weak-teaching-value"
+      ],
+      "reason": "Invariant virtue and uninterrupted vice form an abstract philosophical argument, so virtue is not anchored in a concrete default-learning context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "conservative",
+      "sentenceId": 11319212,
+      "categories": [
+        "hate",
+        "public-controversy"
+      ],
+      "reason": "Calling political opponents pedophiles as a propaganda tactic is explicit hostile identity discourse, making conservative a severe unsuitable context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "cancel",
+      "sentenceId": 11517660,
+      "categories": [
+        "public-controversy",
+        "political-heavy"
+      ],
+      "reason": "Opposition to cancel culture as a lucrative industry is a niche political-media controversy rather than a neutral context for cancel.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "cancer",
+      "sentenceId": 9805376,
+      "categories": [
+        "medical-heavy"
+      ],
+      "reason": "Asking what cancer stages and grades mean is a sensitive diagnostic-information context unsuitable as a default example for cancer.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "pirate",
+      "sentenceId": 12219167,
+      "categories": [
+        "fantastical-context",
+        "weak-teaching-value"
+      ],
+      "reason": "Being born on a pirate ship is a playful impossible premise, so pirate is not taught in a reliable normal context.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "ideology",
+      "sentenceId": 8913332,
+      "categories": [
+        "public-controversy",
+        "political-heavy"
+      ],
+      "reason": "Dismissing postmodernism and anyone who calls it an ideology is a hostile academic-political claim, not a neutral context for ideology.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    },
+    {
+      "word": "romance",
+      "sentenceId": 11492673,
+      "categories": [
+        "specialist-background",
+        "context-too-hard"
+      ],
+      "reason": "A fictional Romance language and Welsh phonology require specialist linguistics background that overwhelms romance for a default learner.",
+      "round": 5,
+      "reviewer": "Lula-agent",
+      "reviewType": "blind-validation"
+    }
+  ],
+  "before": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 833
+  },
+  "after": {
+    "globalRejectCount": 30,
+    "pairRejectCount": 843
+  },
+  "noReplacementAuthored": true
+}

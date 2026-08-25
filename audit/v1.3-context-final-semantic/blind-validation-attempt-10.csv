@@ -1,0 +1,101 @@
+index,word,sentenceId,sentence,decision,categories,rationale,severeInappropriate
+0,prescription,9805178,Can I pick up a prescription for someone else?,pass,[],Picking up a prescription for someone else gives prescription a common pharmacy context.,false
+1,oxygen,12774938,Do we need more oxygen tanks?,pass,[],Asking whether more oxygen tanks are needed gives oxygen a concrete medical-equipment context without offering unsafe advice.,false
+2,criticism,10237600,Are you looking for criticism or validation?,pass,[],Asking whether someone wants criticism or validation is a clear interpersonal communication context for criticism.,false
+3,cherish,12768609,"I cherish the silence, for it speaks louder than words.",pass,[],Cherishing silence is a natural personal-preference sentence that directly demonstrates cherish.,false
+4,parallel,11923950,I can detect that there are other dimensions parallel to this one.,pass,[],Detecting other dimensions parallel to this one gives parallel a clear side-by-side relationship meaning in a concise science context.,false
+5,absence,12777813,Can peace be found in the absence of conflict?,pass,[],Finding peace in the absence of conflict gives absence a direct not-present meaning.,false
+6,oxide,9659556,Nitrous oxide is inert at room temperature.,pass,[],"Nitrous oxide being inert at room temperature gives oxide a precise, accessible chemistry context.",false
+7,nickname,9805796,Have you ever had a nickname? What is it?,pass,[],"Asking whether someone has a nickname is a simple, familiar personal-information question.",false
+8,origin,10545416,Do you know anything about the history or origin of this flag?,pass,[],Asking about a flag's history or origin gives origin a direct beginning-or-source meaning.,false
+9,electrical,12093783,"In a heat exchanger, the molten salt turns water into steam for turbines that turn electrical generators.",pass,[],Electrical generators in a heat-exchanger system provide a precise but understandable engineering context for electrical.,false
+10,enthusiastic,12042057,"While some were more enthusiastic about the job than others, she says nearly all agreed waitressing is hard work.",pass,[],Different levels of enthusiasm about a job give enthusiastic a clear attitude-toward-work meaning.,false
+11,cater,9004022,This restaurant does not cater for vegans.,pass,[],A restaurant not catering for vegans gives cater a clear provide-food-for-a-group meaning.,false
+12,permanent,11215800,A slab of concrete underlies nearly every permanent structure on Earth.,pass,[],A permanent structure made of concrete gives permanent a clear lasting-duration meaning.,false
+13,fuel,12767823,Resilience turns failures into fuel for growth.,pass,[],Turning failures into fuel for growth gives fuel a clear figurative source-of-motivation meaning.,false
+14,scent,12775894,The ballroom was filled with the scent of roses.,pass,[],A ballroom filled with the scent of roses is a concrete sensory setting for scent.,false
+15,enthusiasm,12759773,Mary appreciates Tom's enthusiasm when it comes to discovering new things.,pass,[],"Appreciating someone's enthusiasm for discovering new things is a natural, positive interpersonal use.",false
+16,counter,10234334,Tom jumped over the counter to steal money from the cash register.,pass,[],Jumping over a counter to steal money gives counter a concrete shop-layout meaning.,false
+17,desire,8738510,I wish you lots of bright stars and all the flowers you desire.,pass,[],Wishing someone flowers they desire gives desire a clear wanting-or-wishing meaning.,false
+18,optimistic,11473150,"Being optimistic could lengthen your life, a new study suggests.",pass,[],A study suggesting optimism may lengthen life gives optimistic a clear hopeful-attitude meaning.,false
+19,stray,10511609,A skunk ate the food we left out for the stray cats.,pass,[],Stray cats eating food left outside gives stray a clear unowned-animal meaning.,false
+20,primary,10723379,His mother is a nursery school teacher and his father is a primary school teacher.,pass,[],A primary school teacher gives primary a clear education-level meaning in a simple family description.,false
+21,fundamental,12767841,Privacy is a fundamental human right.,pass,[],Calling privacy a fundamental human right gives fundamental a clear importance-and-basis meaning in a modern civic sentence.,false
+22,debate,10923842,It was a mistake to amplify this debate with thoughtless responses.,pass,[],Amplifying a debate with thoughtless responses gives debate a clear public-discussion meaning.,false
+23,legal,10471907,I am unable to answer this question for legal reasons.,pass,[],Being unable to answer for legal reasons gives legal a direct formal-law meaning.,false
+24,suffice,12773282,"Do your best, and that will suffice.",pass,[],"Doing one's best being sufficient is a familiar, self-contained use of suffice.",false
+25,offspring,9034386,I wonder why we were born? Maybe it's just to have offspring.,pass,[],Wondering whether people were born to have offspring gives offspring a clear family-and-reproduction meaning.,false
+26,prominent,11671162,"There are several varieties of omelettes, each named after the ingredient prominent in the composition.",pass,[],An ingredient being prominent in an omelette's composition gives prominent a clear most-noticeable-or-important meaning.,false
+27,diagnose,11213385,But a new phone app may be able to help diagnose any potential problems on the field.,pass,[],A phone app helping diagnose potential field problems gives diagnose a clear identify-a-problem meaning without diagnosing a person.,false
+28,migrate,9935723,Some birds migrate to roost during specific seasons.,pass,[],Birds migrating to roost during seasons gives migrate a clear recurring movement meaning.,false
+29,dignity,12775908,The duchess carried herself with dignity and grace.,pass,[],A duchess carrying herself with dignity and grace gives dignity a clear composed-self-respect meaning.,false
+30,genuine,9955559,The facsimile proved that the inscription was genuine.,pass,[],A facsimile proving an inscription genuine gives genuine a clear authentic-not-fake meaning.,false
+31,unique,12759588,Floating in zero gravity is a unique experience for astronauts.,pass,[],Floating in zero gravity as a unique astronaut experience gives unique a clear one-of-a-kind meaning.,false
+32,slope,11473157,On the slope of the roof two men were repairing the tiling.,pass,[],Repairing roof tiles on a slope gives slope a concrete surface-and-position meaning.,false
+33,web,11574006,Why does the cosmic web exist?,pass,[],The cosmic web is a recognizable astronomy concept that gives web a clear large-scale structure meaning.,false
+34,prime,9054433,This store isn't exactly in a prime location.,pass,[],A store having a prime location gives prime a familiar best-or-most-desirable meaning.,false
+35,hatred,8126440,Algeria teaches hatred of everything that is not Muslim and Arab.,reject,"[""hate"",""public-controversy""]","The sentence makes a hostile religious and ethnic generalization about Algeria, making hatred a severe unsuitable context.",true
+36,fantasy,11745914,I'm studying cartography for the fantasy book I'm working on.,pass,[],Studying cartography for a fantasy book gives fantasy a clear literary-genre meaning in a creative context.,false
+37,melt,10001845,The surface of Venus is hot enough to melt lead.,pass,[],Venus being hot enough to melt lead gives melt a precise physical-change meaning.,false
+38,album,12434390,The band's final album was met with universal acclaim.,pass,[],A band's final album receiving universal acclaim gives album a clear music-release meaning.,false
+39,flip,10059979,Tom replaced his smartphone with a cheap flip phone.,pass,[],A cheap flip phone is a concrete device example that makes flip immediately understandable.,false
+40,cliff,10830086,Tom drove straight off the cliff.,pass,[],"Driving off a cliff gives cliff a direct physical-landform meaning in a short, non-graphic accident sentence.",false
+41,cast,11183810,Tom's testimony cast serious doubt on the verity of John's account.,pass,[],Testimony casting serious doubt on an account is a familiar legal idiom that clearly demonstrates cast's causal use.,false
+42,inspiration,12465794,Tom was my friend and a big inspiration to me.,pass,[],Calling a friend an inspiration gives inspiration a familiar influence-and-motivation meaning.,false
+43,revive,12113816,"But now there's work afoot to revive many of these dead languages, and not just for sheer academic pleasure.",pass,[],Reviving dead languages gives revive a clear bring-back-to-use meaning in an understandable academic context.,false
+44,sober,9141049,A drunk man's words are a sober man's thoughts.,pass,[],Contrasting a drunk man's words with a sober man's thoughts gives sober a clear not-intoxicated meaning.,false
+45,claim,10750502,You need some evidence to bolster your claim.,pass,[],Evidence bolstering a claim gives claim a clear assertion-or-proposition meaning in a familiar reasoning context.,false
+46,detection,3289035,I'm testing whether the language detection works again.,pass,[],Testing whether language detection works gives detection a direct technology function meaning.,false
+47,extraordinary,12372693,"But Mr. Duxbury says that despite its extraordinary lightness, aerogel can be quite sturdy.",pass,[],Aerogel's extraordinary lightness provides a concrete comparison that clearly demonstrates extraordinary.,false
+48,illegal,10322445,It's illegal to aid and abet another person in committing a felony.,pass,[],Aid and abet in an illegal felony context gives illegal a clear law-based prohibition meaning.,false
+49,instrumental,12777283,He plans to record an instrumental album.,pass,[],Recording an instrumental album gives instrumental a clear music-without-vocals meaning.,false
+50,crush,8849918,I've got a crush on Tom.,pass,[],Having a crush on someone is a familiar relationship expression that clearly teaches crush.,false
+51,coverage,10723423,Your regular homeowners insurance policy will provide coverage for necessary home repairs.,pass,[],Homeowners insurance providing coverage for necessary repairs gives coverage a clear protection-and-payment meaning.,false
+52,shed,10806882,The registered dietitian says she's noticed that her clients now want to do more than just shed a few pounds.,pass,[],A dietitian observing clients shed pounds gives shed a clear lose-weight meaning in a non-prescriptive report.,false
+53,nourish,12768024,Can Mary use rainwater to nourish her garden?,pass,[],Nourishing a garden with rainwater gives nourish a clear support-growth meaning in an everyday setting.,false
+54,partition,12406201,I need to partition my hard drive.,pass,[],"Partitioning a hard drive is a direct, modern computing instruction that clearly shows partition.",false
+55,vision,12042219,Researchers wanted to know how color vision affected an animal's ability to find camouflaged prey.,pass,[],Color vision affecting an animal's search for camouflaged prey gives vision a clear biological-sensory meaning.,false
+56,outward,11375735,Radiation and convection carry that energy outward to the star's surface and to its atmosphere beyond.,pass,[],Radiation and convection carrying energy outward gives outward a precise directional meaning in an understandable science context.,false
+57,contract,11011678,"They probably wouldn't sue us over such a minor mistake, but we might as well double-check the contract.",pass,[],Double-checking a contract over a possible lawsuit is a familiar legal-document context that clearly teaches contract.,false
+58,dramatic,11526956,"But when the test results are broken down by subgroup, the differences are dramatic.",pass,[],Differences between test subgroups being dramatic gives dramatic a clear large-or-striking meaning.,false
+59,foster,11899180,There are far more children in foster care than there are potential adopters.,pass,[],Foster care and potential adopters give foster a clear child-care placement meaning in a factual social sentence.,false
+60,sour,12432377,Sour cream and onion is my favorite potato chip flavor.,pass,[],Sour cream and onion chips provide a familiar food-flavor context for sour.,false
+61,reel,10164893,I only watched the highlight reel.,pass,[],Watching a highlight reel gives reel a familiar edited-video meaning.,false
+62,verdict,12766041,Will the court reach a fair verdict?,pass,[],A court reaching a fair verdict is a complete legal decision context that clearly teaches verdict.,false
+63,pudding,12372699,Nasa's aerogels are made from a special silica glass gel that's been mixed to the consistency of pudding.,pass,[],Aerogel mixed to the consistency of pudding gives pudding a concrete texture comparison.,false
+64,cancel,12105688,I have to cancel our lesson today.,pass,[],Canceling a lesson is a common scheduling use that clearly demonstrates cancel.,false
+65,defendant,11237473,The defendant was found fit to stand trial.,pass,[],A defendant being fit to stand trial is a direct legal-status context that clearly teaches defendant.,false
+66,renaissance,12777330,She studies the symbolism in Renaissance art.,pass,[],Studying symbolism in Renaissance art gives Renaissance a clear historical-art context.,false
+67,deserve,12187601,What did this company's hardworking employees do to deserve such bosses?,pass,[],Questioning what hardworking employees deserve from their bosses gives deserve a clear fairness-and-entitlement meaning.,false
+68,fixture,12380812,He was called to fix a broken light fixture.,pass,[],Fixing a broken light fixture gives fixture a concrete household-object meaning.,false
+69,fascinate,11167170,His baboon story will fascinate and entertain you for sure.,pass,[],A story entertaining and fascinating someone is a natural cause-and-effect use of fascinate.,false
+70,exception,12138081,"Nuts may be purchased shelled or unshelled with the exception of cashews, which are sold only shelled.",pass,[],Cashews being the exception to the shelled-or-unshelled purchase rule gives exception a clear exclusion meaning.,false
+71,setback,12776199,He sees opportunity in every setback.,pass,[],Seeing opportunity in every setback is a common resilience context that clearly shows setback.,false
+72,similar,12140227,I'm here to help you as someone who has gone through similar experiences.,pass,[],Having gone through similar experiences gives similar a clear shared-or-comparable experience meaning.,false
+73,rash,9801148,"I have a rash on my arm, and it's very itchy.",pass,[],"An itchy rash on an arm is a simple, familiar health description that clearly demonstrates rash without medical advice.",false
+74,commission,8930829,Rachel's going to be out of commission for a while.,pass,[],"Being out of commission is a common idiom for being unable to work or function, clearly teaching commission.",false
+75,compromise,8783759,Compromise only makes sense when all parties are acting in good faith.,pass,[],Compromise depending on good faith gives compromise a direct negotiation meaning in a concise general statement.,false
+76,groove,10722105,We'll get back in the groove of things before long.,pass,[],Getting back in the groove of things is a familiar idiom for returning to a routine.,false
+77,drag,11376709,Jokes are funnier when you drag them out.,pass,[],Dragging a joke out is a common idiom that directly demonstrates drag in an extended-duration sense.,false
+78,snack,10156697,Tom bought a snack from the vending machine.,pass,[],Buying a snack from a vending machine is a simple everyday purchase context for snack.,false
+79,dean,12428936,My dad is the dean of admissions.,pass,[],A dean of admissions is a familiar education-administration role that clearly teaches dean.,false
+80,ethnic,10539920,Jews are a people whose ethnic religion is Judaism.,pass,[],Describing Judaism as an ethnic religion gives ethnic a clear group-and-identity modifier meaning in a concise sentence.,false
+81,numerous,12765183,The space mission faced numerous technical difficulties.,pass,[],Numerous technical difficulties on a mission gives numerous a clear many-in-number meaning.,false
+82,solution,11247806,We've got to come up with a solution.,reject,"[""context-dependent"",""weak-teaching-value""]","We've got to come up with a solution gives no problem or candidate answer, so solution is not taught through a concrete standalone context.",false
+83,reconcile,10020643,It's best not to try to reconcile the contradictions.,pass,[],Reconciling contradictions is a direct reasoning use that clearly demonstrates reconcile.,false
+84,disaster,12765205,Tom volunteered to help build houses for disaster survivors.,pass,[],Volunteering to build houses for disaster survivors gives disaster a clear large-scale harmful-event context without graphic detail.,false
+85,profitable,11822446,"As the economy faltered, his business was no longer profitable.",pass,[],A business no longer being profitable as the economy falters gives profitable a clear financial meaning.,false
+86,ward,10611697,Tom can't find a good psych ward.,reject,"[""medical-heavy"",""context-dependent""]",Not finding a suitable psychiatric ward is a sensitive mental-health situation that is unsuitable as a neutral default example for ward.,false
+87,unanimous,12026557,Mouths were too full for utterance but there was a unanimous bobbing of heads.,pass,[],Full mouths and unanimous head-bobbing give unanimous a clear everyone-agrees meaning.,false
+88,immerse,10718787,Place a few oysters at one time in a wire frying basket and immerse in smoking hot fat.,pass,[],Immersing oysters in a frying basket is a complete cooking instruction that clearly shows immerse as putting something into a liquid or fat.,false
+89,overlap,11700157,My sentences and my opinions only sometimes overlap.,pass,[],Sentences and opinions sometimes overlapping gives overlap a clear shared-area or coincidence meaning.,false
+90,array,10986615,One of the great things about the Internet is the vast array of websites that cater to every conceivable interest.,pass,[],A vast array of websites gives array a clear collection-of-many-items meaning.,false
+91,gorgeous,12260989,Have you ever hated someone for being gorgeous?,pass,[],Asking whether someone has hated a person for being gorgeous gives gorgeous a clear appearance meaning.,false
+92,effective,12768009,What are the most effective ways to manage a crisis?,pass,[],Asking for effective ways to manage a crisis is a clear practical problem-solving context.,false
+93,armor,12767858,Data security is the armor of modern life.,pass,[],Data security being the armor of modern life gives armor a clear protective metaphor tied to a familiar concept.,false
+94,transcend,12777697,Can love transcend time and space?,pass,[],Love transcending time and space is a familiar poetic use that clearly demonstrates transcend.,false
+95,spectacle,11974788,There's a famous case of a jackdaw nest in India that was composed entirely of gold spectacle frames.,pass,[],Gold spectacle frames in a jackdaw nest give spectacle a concrete eyeglasses-related meaning.,false
+96,grin,12768577,Tom opened the door with a grin.,pass,[],"Opening a door with a grin gives grin a direct, visible-expression meaning.",false
+97,lunar,11602783,A lunar eclipse on Earth is a solar eclipse on the moon.,pass,[],Comparing lunar and solar eclipses gives lunar a direct moon-related astronomy meaning in a concise factual sentence.,false
+98,assure,11206797,The bank's actions seemed to assure investors about the soundness of the governmental bonds.,pass,[],A bank's actions assuring investors about bonds gives assure a clear formal confidence-building meaning.,false
+99,vice,11371764,"Young Tom would've hated old Tom, and vice versa.",pass,[],Young Tom hating old Tom and vice versa gives vice versa a clear reversed-relation meaning.,false

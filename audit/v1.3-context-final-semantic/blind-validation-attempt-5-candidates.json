@@ -1,0 +1,709 @@
+{
+  "round": 5,
+  "seed": 216485897,
+  "sampleSize": 100,
+  "excludedSentenceIdCount": 928,
+  "selectionPolicy": "Rebuilt selected pool; new seed; no sentenceId overlap with initial Phase A, mandatory recheck, R4 independent validation, or any post-curation Phase A attempt; no duplicate sentenceIds within blind. A retest may encounter a prior blind pair only when it remains selected after curation. Machine metrics are omitted before sentence-read review.",
+  "rows": [
+    {
+      "word": "enthusiasm",
+      "sentenceId": 12759773,
+      "sentence": "Mary appreciates Tom's enthusiasm when it comes to discovering new things.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "budget",
+      "sentenceId": 12776923,
+      "sentence": "She manages the office budget carefully.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "diagnose",
+      "sentenceId": 11213385,
+      "sentence": "But a new phone app may be able to help diagnose any potential problems on the field.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "release",
+      "sentenceId": 12414127,
+      "sentence": "The group called for the creation of fish hatcheries that would release \"fingerlings\" into the old spawning grounds.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "optimistic",
+      "sentenceId": 11473150,
+      "sentence": "Being optimistic could lengthen your life, a new study suggests.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "blank",
+      "sentenceId": 11944712,
+      "sentence": "The whole work is written in blank verse.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "database",
+      "sentenceId": 10359395,
+      "sentence": "It's a database of voices that gets used for speech recognition.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "protein",
+      "sentenceId": 12334989,
+      "sentence": "How do you get your protein?",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "nourish",
+      "sentenceId": 12768024,
+      "sentence": "Can Mary use rainwater to nourish her garden?",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "compartment",
+      "sentenceId": 10220448,
+      "sentence": "Tom's duffel bag didn't fit in the overhead compartment.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "verdict",
+      "sentenceId": 12766041,
+      "sentence": "Will the court reach a fair verdict?",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "represent",
+      "sentenceId": 12465772,
+      "sentence": "Why do we need to represent this as a string?",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "capable",
+      "sentenceId": 9837321,
+      "sentence": "I'm not sure most people understand the depth of cruelty that people are capable of.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "disaster",
+      "sentenceId": 12765205,
+      "sentence": "Tom volunteered to help build houses for disaster survivors.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "humble",
+      "sentenceId": 12769292,
+      "sentence": "Grace is found in the heart of the humble.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "grave",
+      "sentenceId": 11207291,
+      "sentence": "Tom must be turning over in his grave.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "clerk",
+      "sentenceId": 11131606,
+      "sentence": "A clerk at the feed store convinced him to try raising a cow.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "project",
+      "sentenceId": 12768013,
+      "sentence": "Mary's garden project has taught her the importance of patience.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "primary",
+      "sentenceId": 10723379,
+      "sentence": "His mother is a nursery school teacher and his father is a primary school teacher.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "avoid",
+      "sentenceId": 12759689,
+      "sentence": "Astronauts have to stay physically fit during long space missions to avoid muscle loss.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "drag",
+      "sentenceId": 11376709,
+      "sentence": "Jokes are funnier when you drag them out.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "swamp",
+      "sentenceId": 10545400,
+      "sentence": "I don't mean to swamp you.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "crush",
+      "sentenceId": 8849918,
+      "sentence": "I've got a crush on Tom.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "confusion",
+      "sentenceId": 12771044,
+      "sentence": "Everything was lost in the confusion.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "ward",
+      "sentenceId": 12164351,
+      "sentence": "They insulted the baby to ward off the evil eye.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "exception",
+      "sentenceId": 12138081,
+      "sentence": "Nuts may be purchased shelled or unshelled with the exception of cashews, which are sold only shelled.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "deserve",
+      "sentenceId": 12187601,
+      "sentence": "What did this company's hardworking employees do to deserve such bosses?",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "migrate",
+      "sentenceId": 9935723,
+      "sentence": "Some birds migrate to roost during specific seasons.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "renaissance",
+      "sentenceId": 12777330,
+      "sentence": "She studies the symbolism in Renaissance art.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "illegal",
+      "sentenceId": 10322445,
+      "sentence": "It's illegal to aid and abet another person in committing a felony.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "fellowship",
+      "sentenceId": 11997702,
+      "sentence": "Over the years since my fellowship ended, they have continued to be my biggest cheerleaders on my scientific journey.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "proof",
+      "sentenceId": 11150371,
+      "sentence": "I am living proof that you failed to break me.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "extraordinary",
+      "sentenceId": 12372693,
+      "sentence": "But Mr. Duxbury says that despite its extraordinary lightness, aerogel can be quite sturdy.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "scent",
+      "sentenceId": 12775894,
+      "sentence": "The ballroom was filled with the scent of roses.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "effective",
+      "sentenceId": 12768009,
+      "sentence": "What are the most effective ways to manage a crisis?",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "ethnic",
+      "sentenceId": 10539920,
+      "sentence": "Jews are a people whose ethnic religion is Judaism.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "partition",
+      "sentenceId": 12406201,
+      "sentence": "I need to partition my hard drive.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "pirate",
+      "sentenceId": 11462220,
+      "sentence": "He's a strange pirate. Instead of a parrot on his shoulder, he always has a cat.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "economic",
+      "sentenceId": 12766111,
+      "sentence": "Did the economic crisis affect local businesses?",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "solution",
+      "sentenceId": 12773468,
+      "sentence": "May the best solution reveal itself.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "commission",
+      "sentenceId": 8930829,
+      "sentence": "Rachel's going to be out of commission for a while.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "score",
+      "sentenceId": 11229121,
+      "sentence": "Tom's credit score isn't very good.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "draft",
+      "sentenceId": 12331780,
+      "sentence": "Can you read the rough draft of my essay?",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "offspring",
+      "sentenceId": 9034386,
+      "sentence": "I wonder why we were born? Maybe it's just to have offspring.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "album",
+      "sentenceId": 12434390,
+      "sentence": "The band's final album was met with universal acclaim.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "numerous",
+      "sentenceId": 12765183,
+      "sentence": "The space mission faced numerous technical difficulties.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "priest",
+      "sentenceId": 10005701,
+      "sentence": "Is a friar the same thing as a priest?",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "recognize",
+      "sentenceId": 8734160,
+      "sentence": "A dog is that animal which another dog will instinctively recognize as such.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "evidence",
+      "sentenceId": 11036085,
+      "sentence": "The evidence for this is fragmentary and could have other interpretations.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "setback",
+      "sentenceId": 12776199,
+      "sentence": "He sees opportunity in every setback.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "genuine",
+      "sentenceId": 9955559,
+      "sentence": "The facsimile proved that the inscription was genuine.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "queer",
+      "sentenceId": 12386366,
+      "sentence": "The mere existence of queer people isn't inherently sexual.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "shed",
+      "sentenceId": 10806882,
+      "sentence": "The registered dietitian says she's noticed that her clients now want to do more than just shed a few pounds.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "configuration",
+      "sentenceId": 11752384,
+      "sentence": "Read the example config file. All the supported configuration options are documented there.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "submit",
+      "sentenceId": 11699065,
+      "sentence": "Eligible community members are encouraged to submit their applications online.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "counter",
+      "sentenceId": 10234334,
+      "sentence": "Tom jumped over the counter to steal money from the cash register.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "promote",
+      "sentenceId": 12776957,
+      "sentence": "Do you promote hygiene at work?",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "groove",
+      "sentenceId": 10722105,
+      "sentence": "We'll get back in the groove of things before long.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "cooperative",
+      "sentenceId": 11822514,
+      "sentence": "Bonobos are also different in that they have a more egalitarian and cooperative society than chimpanzees.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "midst",
+      "sentenceId": 12770660,
+      "sentence": "I seek calm in the midst of chaos.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "cancer",
+      "sentenceId": 11725953,
+      "sentence": "Prostate cancer is treated by surgery to remove the prostate or by intensive radiotherapy that targets the tumor.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "pudding",
+      "sentenceId": 12372699,
+      "sentence": "Nasa's aerogels are made from a special silica glass gel that's been mixed to the consistency of pudding.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "paradise",
+      "sentenceId": 12764713,
+      "sentence": "The island was a paradise with white sandy beaches.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "mask",
+      "sentenceId": 9971289,
+      "sentence": "You still need to wear a mask until herd immunity is achieved.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "wallet",
+      "sentenceId": 10723416,
+      "sentence": "This wood wallet is crafted from a single piece of walnut.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "reel",
+      "sentenceId": 10164893,
+      "sentence": "I only watched the highlight reel.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "prohibit",
+      "sentenceId": 12432138,
+      "sentence": "You can't prohibit me from doing that.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "spectacle",
+      "sentenceId": 11974788,
+      "sentence": "There's a famous case of a jackdaw nest in India that was composed entirely of gold spectacle frames.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "claim",
+      "sentenceId": 11605309,
+      "sentence": "There's a deception inherent to any politician's claim to represent a constituency.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "valve",
+      "sentenceId": 10164936,
+      "sentence": "This valve needs to be replaced.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "compromise",
+      "sentenceId": 8783759,
+      "sentence": "Compromise only makes sense when all parties are acting in good faith.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "cherish",
+      "sentenceId": 12768609,
+      "sentence": "I cherish the silence, for it speaks louder than words.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "diffuse",
+      "sentenceId": 11165205,
+      "sentence": "There were no galaxies or even stars, only diffuse gas.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "urban",
+      "sentenceId": 12777367,
+      "sentence": "She draws inspiration from urban landscapes.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "defendant",
+      "sentenceId": 11237473,
+      "sentence": "The defendant was found fit to stand trial.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "discount",
+      "sentenceId": 12105706,
+      "sentence": "You'll get a discount on your next order.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "amplify",
+      "sentenceId": 10923842,
+      "sentence": "It was a mistake to amplify this debate with thoughtless responses.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "highlight",
+      "sentenceId": 12764758,
+      "sentence": "The turquoise water was the highlight of their vacation.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "sober",
+      "sentenceId": 9141049,
+      "sentence": "A drunk man's words are a sober man's thoughts.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "hike",
+      "sentenceId": 12764841,
+      "sentence": "Tom and Mary took a scenic hike along the coast.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "refute",
+      "sentenceId": 11986639,
+      "sentence": "It is much harder to refute a lie than to tell one.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "persistent",
+      "sentenceId": 11732700,
+      "sentence": "Cybersecurity experts say infiltrators are persistent, clever and part of an industrial-scale hacking economy.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "vast",
+      "sentenceId": 10986615,
+      "sentence": "One of the great things about the Internet is the vast array of websites that cater to every conceivable interest.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "ideology",
+      "sentenceId": 11685490,
+      "sentence": "There's no context in which the term \"trans ideology\" has meaning other than right-wing rants.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "function",
+      "sentenceId": 11266094,
+      "sentence": "You need sleep and relaxation for your brain to function at an optimal level.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "similar",
+      "sentenceId": 12140227,
+      "sentence": "I'm here to help you as someone who has gone through similar experiences.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "inspiration",
+      "sentenceId": 12465794,
+      "sentence": "Tom was my friend and a big inspiration to me.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "artificial",
+      "sentenceId": 12112357,
+      "sentence": "We started our own nation on an artificial platform on the sea.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "cellar",
+      "sentenceId": 11550135,
+      "sentence": "If you lift that candlestick, it'll move the bookcase and grant us access to the cellar.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "expression",
+      "sentenceId": 11824039,
+      "sentence": "Larry came in from the kitchen, a woebegone expression on his face.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "prime",
+      "sentenceId": 9054433,
+      "sentence": "This store isn't exactly in a prime location.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "corrupt",
+      "sentenceId": 8114930,
+      "sentence": "The majority of Algerians vote for Islamists who are yet corrupt and uneducated.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "origin",
+      "sentenceId": 10545416,
+      "sentence": "Do you know anything about the history or origin of this flag?",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "cylinder",
+      "sentenceId": 10723434,
+      "sentence": "The hydraulic cylinder was the main problem and was changed to a new one.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "domain",
+      "sentenceId": 11043132,
+      "sentence": "The musician releases her less successful works into the public domain.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "suffice",
+      "sentenceId": 12773282,
+      "sentence": "Do your best, and that will suffice.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "slope",
+      "sentenceId": 11473157,
+      "sentence": "On the slope of the roof two men were repairing the tiling.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "beneficial",
+      "sentenceId": 10770595,
+      "sentence": "Further discussion of this topic is unlikely to be beneficial.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "lunar",
+      "sentenceId": 11602783,
+      "sentence": "A lunar eclipse on Earth is a solar eclipse on the moon.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    },
+    {
+      "word": "strategy",
+      "sentenceId": 12100782,
+      "sentence": "Europe is devising a strategy to prevent water-borne diseases.",
+      "reviewType": "blind-validation",
+      "semanticDecisionSource": "sentence-read"
+    }
+  ]
+}

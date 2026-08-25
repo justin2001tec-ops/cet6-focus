@@ -1,0 +1,12 @@
+{
+  "vocabBuild": true,
+  "vocabValidate": true,
+  "typecheck": true,
+  "lint": true,
+  "unitTests": true,
+  "productionBuild": true,
+  "e2eSerial": true,
+  "contextQualityScreenshots": true,
+  "scopeFreeze": true,
+  "deterministicRebuild": true
+}
