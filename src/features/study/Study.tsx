@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { useApp } from '@/app/providers'
 import { EmptyState } from '@/components/States'
 import { IconButton } from '@/components/ui'
+import { ApplePressable } from '@/design-system/components'
 import { createSession, finishSession, getCardsByIds, getQueue, getWordsByIds, recordReview, toggleStar, undoLastReview } from '@/db/db'
 import { scheduleCard } from '@/lib/fsrs'
 import { speakWord } from '@/lib/speech'
@@ -45,6 +46,8 @@ export function Study({ mode, onComplete }: StudyProps) {
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
   const cardStartedAt = useRef(Date.now())
   const ratingInFlight = useRef(false)
+  const transitionTokenRef = useRef(0)
+  const transitionCancelledRef = useRef<number | null>(null)
   const queueSettings = useMemo(() => ({ dailyNewWords: settings.dailyNewWords }), [settings.dailyNewWords])
   const reducedMotion = settings.reducedMotion || prefersReducedMotion
 
@@ -167,7 +170,10 @@ export function Study({ mode, onComplete }: StudyProps) {
       setItems((existing) => existing.map((item, itemIndex) => itemIndex === currentIndex ? { ...item, card: after } : item))
       setRatedStack((existing) => [...existing, before.wordId])
       setPresentation('transitioning')
+      const transitionToken = ++transitionTokenRef.current
+      transitionCancelledRef.current = null
       await waitForMotion(reducedMotion)
+      if (transitionCancelledRef.current === transitionToken) return
       if (currentIndex >= items.length - 1) {
         await finishSession(session.id)
         await refresh()
@@ -188,7 +194,8 @@ export function Study({ mode, onComplete }: StudyProps) {
   }
 
   async function undo() {
-    if (!session || ratedStack.length === 0 || ratingBusy) return
+    if (!session || ratedStack.length === 0 || (ratingBusy && presentation !== 'transitioning')) return
+    if (presentation === 'transitioning') transitionCancelledRef.current = transitionTokenRef.current
     const log = await undoLastReview(session.id)
     if (!log) return
     const restoredIndex = items.findIndex((item) => item.word.id === log.wordId)
@@ -282,7 +289,7 @@ function LearningTopbar({ modeLabel, progress, index, total, completed, canUndo,
         <span className="learning-progress__count">{completed ? '完成' : `${index + 1} / ${total}`}</span>
       </div>
       <div className="learning-topbar__actions">
-        {canUndo && <button type="button" className="learning-undo" onClick={onUndo}><Undo2 size={15} /> 撤销</button>}
+        {canUndo && <ApplePressable type="button" className="learning-undo" onClick={onUndo}><Undo2 size={15} /> 撤销</ApplePressable>}
         <IconButton label="查看键盘帮助" onClick={onHelp}><HelpCircle size={19} /></IconButton>
       </div>
     </header>
@@ -309,7 +316,7 @@ function LearningHelp({ onClose }: { onClose: () => void }) {
 
 function LearningEmpty({ mode, onExit }: { mode: StudyProps['mode']; onExit: () => void }) {
   const title = mode === 'review' ? '现在没有到期复习。' : mode === 'weak' ? '暂时没有需要强化的词。' : '今天的学习队列已经清空。'
-  return <div className="learning-empty"><p className="learning-section-kicker">{mode === 'review' ? '到期复习' : mode === 'weak' ? '薄弱词强化' : '今日学习'}</p><h1>{title}</h1><p>把这点空白留给之后的自己。你也可以去听写或整理词库。</p><EmptyState title="没有需要立即处理的单词" description="新的学习内容会根据你的真实记录继续出现。" action={<button type="button" className="learning-empty__exit" onClick={onExit}>回到首页</button>} /></div>
+  return <div className="learning-empty"><p className="learning-section-kicker">{mode === 'review' ? '到期复习' : mode === 'weak' ? '薄弱词强化' : '今日学习'}</p><h1>{title}</h1><p>把这点空白留给之后的自己。你也可以去听写或整理词库。</p><EmptyState title="没有需要立即处理的单词" description="新的学习内容会根据你的真实记录继续出现。" action={<ApplePressable type="button" className="learning-empty__exit" onClick={onExit}>回到首页</ApplePressable>} /></div>
 }
 
 function waitForMotion(reducedMotion: boolean): Promise<void> {

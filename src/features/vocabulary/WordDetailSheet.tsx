@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Bookmark, CalendarClock, Edit3, Save } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { useApp } from '@/app/providers'
@@ -24,6 +24,7 @@ export function WordDetailSheet({ wordId, onClose, restoreFocusRef }: WordDetail
   const [card, setCard] = useState<LearningCard | null>(null)
   const [note, setNote] = useState('')
   const [editingNote, setEditingNote] = useState(false)
+  const pendingNavigationRef = useRef<string | null>(null)
 
   useEffect(() => {
     let cancelled = false
@@ -42,12 +43,20 @@ export function WordDetailSheet({ wordId, onClose, restoreFocusRef }: WordDetail
     if (!result.ok && result.message) showNotice(result.message)
   }
 
-  const openFullDetail = () => {
+  const closeSheet = () => {
+    const target = pendingNavigationRef.current
+    pendingNavigationRef.current = null
     onClose()
-    navigate(`/word/${wordId}`)
+    if (target) navigate(target)
   }
 
-  return <BottomSheet title={word?.word ?? '词条详情'} description={word?.phonetic || 'CET-6 vocabulary'} onClose={onClose} restoreFocusRef={restoreFocusRef}>
+  const navigateAfterSheet = (target: string) => {
+    pendingNavigationRef.current = target
+    if (window.history.state?.__cet6PhysicalSheet) window.history.back()
+    else closeSheet()
+  }
+
+  return <BottomSheet title={word?.word ?? '词条详情'} description={word?.phonetic || 'CET-6 vocabulary'} onClose={closeSheet} restoreFocusRef={restoreFocusRef}>
     {!word ? <div className="bottom-sheet__loading" aria-live="polite">正在读取词条…</div> : <>
       <div className="sheet-word-heading">
         <div><strong>{word.word}</strong><span>{word.phonetic || '/—/'}</span></div>
@@ -67,7 +76,7 @@ export function WordDetailSheet({ wordId, onClose, restoreFocusRef }: WordDetail
         <div className="sheet-note-section__header"><div><strong>个人笔记</strong><small>只保存在当前浏览器</small></div><IconButton label={editingNote ? '保存笔记' : '编辑笔记'} onClick={async () => { if (editingNote) { const next = await savePersonalNote(word.id, note); if (next) setCard(next) } setEditingNote((value) => !value) }}>{editingNote ? <Save size={16} /> : <Edit3 size={16} />}</IconButton></div>
         {editingNote ? <textarea value={note} onChange={(event) => setNote(event.target.value)} placeholder="写下一个联想、例句或易混淆点…" rows={3} /> : <p className={note ? '' : 'muted'}>{note || '还没有笔记。'}</p>}
       </section>
-      <div className="bottom-sheet__actions"><Button onClick={() => navigate('/study')}><Edit3 size={16} /> 进入学习</Button><Button variant="soft" onClick={openFullDetail}>查看完整详情</Button></div>
+      <div className="bottom-sheet__actions"><Button onClick={() => navigateAfterSheet('/study')}><Edit3 size={16} /> 进入学习</Button><Button variant="soft" onClick={() => navigateAfterSheet(`/word/${wordId}`)}>查看完整详情</Button></div>
     </>}
   </BottomSheet>
 }

@@ -1,0 +1,36 @@
+{
+  "version": "v1.4",
+  "profile": {
+    "full": "system motion enabled",
+    "reduced": "0ms route and press motion; system/user reduced-motion respected"
+  },
+  "motion": {
+    "instantMs": 0,
+    "fastMs": 140,
+    "standardMs": 240,
+    "deliberateMs": 320,
+    "sheetMs": 280,
+    "sheetOpeningVisualDurationMs": 300,
+    "finePressScale": 0.99,
+    "coarsePressScale": 0.975,
+    "sheetDismissOffsetRatio": 0.32,
+    "sheetDismissVelocityPxPerSecond": 720
+  },
+  "routeKinds": {
+    "default": "opacity + 8px upward settle",
+    "learning": "opacity-only entry",
+    "entity": "opacity + 0.99 to 1 scale",
+    "modal": "opacity + 16px upward settle"
+  },
+  "geometry": {
+    "studyParallaxPx": 0,
+    "maxDecodedFullscreenBackgroundLayers": 2,
+    "maxBackgroundCrossfadeLayers": 2,
+    "reducedBackgroundTransitionMs": 120
+  },
+  "sources": [
+    "src/design-system/motion/motion-presets.ts",
+    "src/styles/system-experience.css",
+    "src/components/presentation/BottomSheet.tsx"
+  ]
+}

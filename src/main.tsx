@@ -9,6 +9,7 @@ import '@/styles/ios26-layout.css'
 import '@/styles/bbdcd-home.css'
 import '@/styles/motion-tokens.css'
 import '@/styles/learning-experience.css'
+import '@/styles/system-experience.css'
 
 if ('serviceWorker' in navigator && import.meta.env.PROD) {
   window.addEventListener('load', () => {

@@ -1,0 +1,39 @@
+{
+  "status": "LOCAL_PASS_GITHUB_PASS",
+  "branch": "product/v1.4-system-experience-motion",
+  "pullRequest": 4,
+  "workflowCorrection": {
+    "playwrightInstall": "chromium webkit",
+    "e2eTimeoutMinutes": 20
+  },
+  "local": {
+    "motionSuite": {
+      "command": "pnpm run test:e2e tests/e2e/motion/v1.4-system.spec.ts --project=chromium --project=mobile --project=webkit-motion --workers=1 --timeout=90000 --reporter=line",
+      "total": 30,
+      "passed": 29,
+      "failed": 0,
+      "conditionalSkipped": 1,
+      "conditionalSkipReason": "mobile shared-layout case uses the PhysicalSheet presentation"
+    },
+    "vocabulary": "PASS — 2219 unique, 990 approved, provenance 100%, semantic Phase A 100%, blind 100%, severe 0; coverage informational",
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "unit": "PASS — 14 files, 34 tests",
+    "build": "PASS — existing >500 kB chunk warning only",
+    "serialE2E": "PASS — 61 passed, 17 documented project-conditional skips"
+  },
+  "githubActions": {
+    "status": "PASS — 4/4 checks successful on final head",
+    "head": "2fb96ec0d1d81381d9175e8e629b7a2586106098",
+    "quality": {
+      "status": "PASS",
+      "pushRun": "https://github.com/justin2001tec-ops/cet6-focus/actions/runs/32865187484",
+      "pullRequestRun": "https://github.com/justin2001tec-ops/cet6-focus/actions/runs/32865192483"
+    },
+    "e2eWebKit": {
+      "status": "PASS — serial E2E and WebKit motion completed successfully",
+      "pushRun": "https://github.com/justin2001tec-ops/cet6-focus/actions/runs/32865187484",
+      "pullRequestRun": "https://github.com/justin2001tec-ops/cet6-focus/actions/runs/32865192483"
+    }
+  }
+}

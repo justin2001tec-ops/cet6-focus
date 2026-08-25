@@ -1,0 +1,166 @@
+:root {
+  --system-motion-instant: 0ms;
+  --system-motion-fast: 140ms;
+  --system-motion-standard: 240ms;
+  --system-motion-deliberate: 320ms;
+  --system-ease-standard: cubic-bezier(.2, .8, .2, 1);
+  --system-ease-decelerate: cubic-bezier(.16, 1, .3, 1);
+  --system-ease-accelerate: cubic-bezier(.4, 0, 1, 1);
+  --system-radius-control: 16px;
+  --system-radius-surface: 24px;
+  --system-radius-sheet: 28px;
+  --system-press-scale: .99;
+  --system-control-target: 34px;
+  --system-surface-reading: color-mix(in srgb, var(--surface-solid) 94%, transparent);
+}
+
+:root[data-input-modality="coarse"],
+:root[data-pointer-type="coarse"] {
+  --system-press-scale: .975;
+  --system-control-target: 44px;
+}
+
+:root[data-motion-profile="reduced"] {
+  --system-motion-fast: 0ms;
+  --system-motion-standard: 0ms;
+  --system-motion-deliberate: 0ms;
+  --system-press-scale: 1;
+}
+
+.motion-route {
+  min-height: 100%;
+  transform-origin: 50% 0;
+}
+
+.app-background {
+  transform: none;
+  filter: saturate(.88) contrast(.98);
+}
+
+.app-frame--learning .app-background {
+  transform: none;
+  filter: saturate(.82) brightness(.86);
+  transition: none;
+}
+
+.app-frame--immersive-home .app-background {
+  transform: none;
+}
+
+.app-background__layer,
+.app-background__layer picture,
+.app-background__layer img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.app-background__layer {
+  overflow: hidden;
+  transition: opacity 420ms var(--system-ease-standard);
+  contain: paint;
+}
+
+.app-background__layer img {
+  object-fit: cover;
+  object-position: var(--scene-position, center);
+}
+
+.app-background__layer::after {
+  position: absolute;
+  inset: 0;
+  content: '';
+  background: rgba(245, 248, 242, var(--scene-overlay, .28));
+}
+
+:root[data-theme="dark"] .app-background__layer::after { background: rgba(13, 23, 19, var(--scene-overlay, .45)); }
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="system"] .app-background__layer::after { background: rgba(13, 23, 19, var(--scene-overlay, .45)); }
+}
+
+.bottom-sheet { animation: none; }
+
+.shared-element { display: inline-flex; }
+
+.apple-pressable {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.apple-pressable:focus-visible,
+button:focus-visible,
+a:focus-visible,
+select:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 70%, white);
+  outline-offset: 3px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .apple-pressable:hover:not(:disabled),
+  .nav-item:hover,
+  .mobile-nav__item:hover,
+  .immersive-home__nav-item:hover {
+    filter: brightness(1.025);
+  }
+}
+
+.reading-surface {
+  border: 1px solid color-mix(in srgb, var(--line) 82%, transparent);
+  border-radius: var(--system-radius-surface);
+  background: var(--system-surface-reading);
+  color: var(--ink);
+  box-shadow: 0 18px 42px color-mix(in srgb, var(--ink) 7%, transparent), inset 0 1px 0 var(--glass-highlight);
+  -webkit-backdrop-filter: blur(6px) saturate(110%);
+  backdrop-filter: blur(6px) saturate(110%);
+}
+
+.glass-bar {
+  border: 1px solid var(--glass-border);
+  border-radius: var(--system-radius-control);
+  background: var(--glass-regular-bg);
+  box-shadow: var(--glass-shadow-soft), inset 0 1px 0 var(--glass-highlight);
+  -webkit-backdrop-filter: blur(var(--glass-blur-regular)) saturate(var(--glass-saturation));
+  backdrop-filter: blur(var(--glass-blur-regular)) saturate(var(--glass-saturation));
+}
+
+.glass-control {
+  border: 1px solid var(--glass-border);
+  border-radius: var(--system-radius-control);
+  background: var(--glass-clear-bg);
+  box-shadow: inset 0 1px 0 var(--glass-highlight);
+}
+
+.bottom-sheet {
+  will-change: transform;
+  overscroll-behavior: contain;
+}
+
+.bottom-sheet__grabber { touch-action: none; cursor: grab; }
+.bottom-sheet__grabber:active { cursor: grabbing; }
+
+@media (prefers-contrast: more) {
+  :root {
+    --line: color-mix(in srgb, var(--ink) 45%, transparent);
+    --line-strong: color-mix(in srgb, var(--ink) 68%, transparent);
+    --glass-border: color-mix(in srgb, var(--ink) 42%, transparent);
+  }
+  .reading-surface, .glass-bar, .glass-control, .button, .icon-button { box-shadow: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-background__layer { transition-duration: 120ms; }
+}
+
+:root[data-motion-profile="reduced"] .app-background__layer { transition-duration: 120ms; }
+
+@media (min-width: 700px) {
+  .apple-pressable.button--sm { min-height: 37px; }
+}
+
+@media (max-width: 699px) {
+  .app-background__layer img { object-position: var(--scene-mobile-position, var(--scene-position, center)); }
+  .reading-surface { -webkit-backdrop-filter: none; backdrop-filter: none; }
+}

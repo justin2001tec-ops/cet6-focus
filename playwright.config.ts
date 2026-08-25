@@ -13,5 +13,6 @@ export default defineConfig({
   projects: [
     { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
     { name: 'mobile', use: { ...devices['Pixel 5'] } },
+    { name: 'webkit-motion', testMatch: /motion\/.*\.spec\.ts/, use: { ...devices['Desktop Safari'] } },
   ],
 })

@@ -10,6 +10,7 @@ import { isMastered, stateLabel } from '@/lib/fsrs'
 import { getWeakWordSignals, type WeakWordSignal } from '@/lib/weak'
 import type { LearningCard, Word } from '@/types'
 import { WordDetailSheet } from './WordDetailSheet'
+import { SharedElement } from '@/design-system/motion/MotionRoute'
 
 type StatusFilter = 'all' | 'new' | 'learning' | 'review' | 'weak' | 'starred'
 type SortMode = 'alpha' | 'frequency' | 'progress' | 'weak'
@@ -70,5 +71,5 @@ export function Vocabulary() {
 
 function WordRow({ word, card, onMobileOpen }: { word: Word; card?: LearningCard; onMobileOpen: (wordId: string, trigger: HTMLElement) => void }) {
   const mastered = card ? isMastered(card.fsrsCard) : false
-  return <Link to={`/word/${word.id}`} className="word-row" onClick={(event) => { if (window.matchMedia('(max-width: 699px)').matches) { event.preventDefault(); onMobileOpen(word.id, event.currentTarget) } }}><span className="word-row__word"><strong>{word.word}</strong><small>{word.phonetic || '/—/'}</small></span><span className="word-row__meaning">{word.meaningZh.slice(0, 2).join('；')}</span><span className="word-row__status">{card?.starred && <Star size={14} fill="currentColor" />}<Badge tone={mastered ? 'green' : card?.fsrsCard.state === 0 ? 'neutral' : card?.fsrsCard.state === 3 ? 'rose' : 'blue'}>{mastered ? 'Mastered' : stateLabel(card?.fsrsCard.state ?? 0)}</Badge></span><span className="word-row__due">{card ? formatDue(card.fsrsCard.due) : '—'}</span></Link>
+  return <Link to={`/word/${word.id}`} className="word-row" onClick={(event) => { if (window.matchMedia('(max-width: 699px)').matches) { event.preventDefault(); onMobileOpen(word.id, event.currentTarget) } }}><span className="word-row__word"><SharedElement id={`word-${word.id}`}><strong>{word.word}</strong></SharedElement><small>{word.phonetic || '/—/'}</small></span><span className="word-row__meaning">{word.meaningZh.slice(0, 2).join('；')}</span><span className="word-row__status">{card?.starred && <Star size={14} fill="currentColor" />}<Badge tone={mastered ? 'green' : card?.fsrsCard.state === 0 ? 'neutral' : card?.fsrsCard.state === 3 ? 'rose' : 'blue'}>{mastered ? 'Mastered' : stateLabel(card?.fsrsCard.state ?? 0)}</Badge></span><span className="word-row__due">{card ? formatDue(card.fsrsCard.due) : '—'}</span></Link>
 }

@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "featureBundle": "domMax",
+  "provider": "LazyMotion strict + LayoutGroup cet6-focus-system-motion",
+  "identity": "word-{wordId}",
+  "fullProfile": {
+    "source": "Vocabulary word row",
+    "destination": "Word Detail",
+    "layoutId": true,
+    "observedMotionPhase": "active",
+    "result": "PASS"
+  },
+  "reducedProfile": {
+    "layoutId": false,
+    "transformFallback": "none",
+    "result": "PASS"
+  },
+  "e2e": {
+    "chromium": "PASS",
+    "webkit-motion": "PASS",
+    "mobile": "CONDITIONAL_SKIP — mobile uses PhysicalSheet presentation"
+  },
+  "sources": [
+    "src/design-system/motion/AppMotionProvider.tsx",
+    "src/design-system/motion/motion-features.ts",
+    "src/design-system/motion/MotionRoute.tsx",
+    "tests/e2e/motion/v1.4-system.spec.ts"
+  ]
+}
