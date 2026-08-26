@@ -42,3 +42,38 @@ No Motion Engine, Shared Layout, PhysicalSheet, background asset/engine, Study s
 ## Delivery boundary
 
 The final branch must be pushed and opened as a PR. Keep the PR **OPEN** for visual/code acceptance. Do not merge, deploy, or create a `v1.4.1` tag. If any final gate fails, report the exact blocker and stop.
+
+## R1 Final Visual Integrity Fix
+
+Status: **PASS — local implementation and evidence complete; PR-only**
+
+R1 corrected only the four visual-integrity gaps named by the handoff:
+
+- Background hierarchy now follows the required direction: Recall is the most atmospheric/lightest scrim, Context is stronger, Meaning is stronger again, and Detail is the quietest/strongest scrim. The observed active-layer alpha ordering is `0.26 < 0.42 < 0.54 < 0.64` across bright (`plateau-kiang-01`), dark (`stars-02`), textured (`waterfall-02`), and medium (`altiplano-01`) scenes.
+- Safe Area uses separate logical inline start/end padding with `max(--learning-page-gutter, env(safe-area-inset-left/right, 0px))`, plus the existing bottom inset. A test-only wrapper simulated independent 44px left and right insets across 390x844, 430x932, 844x390, 852x393, and 1112x834; all 10 cases passed with no horizontal overflow beyond 1 CSS pixel.
+- Zoom evidence now separates automated root/CSS zoom from real browser zoom. The automated `document.documentElement.style.zoom='2'` contract passed in Chromium, Mobile Chromium, and WebKit. A manual Chromium browser-level 200% check passed on the local Windows desktop host: the effective CSS viewport narrowed from 1280x720 to approximately 664x680, Meaning and Detail remained readable, and the continuation CTA stayed reachable. Browser version/OS build are not exposed by the browser control surface. Safari is explicitly `NOT_AVAILABLE` because Safari is unavailable in this Windows environment.
+- `forced-colors: active` and `prefers-contrast: more` are separate gates. Both passed in Chromium, Mobile Chromium, and WebKit, including stronger boundaries, contrast tokens, controls, and focus visibility.
+
+### R1 evidence links
+
+- [R1 audit index](audit/v1.4.1-readability/README.md)
+- [Background hierarchy report](audit/v1.4.1-readability/background-hierarchy-report.json)
+- [Safe Area report](audit/v1.4.1-readability/safe-area-report.json)
+- [Zoom report](audit/v1.4.1-readability/zoom-200-report.json)
+- [Contrast report](audit/v1.4.1-readability/high-contrast-report.json)
+- [Visual review](audit/v1.4.1-readability/visual-review.md)
+
+### R1 verification
+
+- Chromium Readability: 9/9 PASS.
+- Mobile Chromium Readability: 9/9 PASS.
+- WebKit Readability: 9/9 PASS.
+- Chromium R1 screenshot evidence: 2/2 PASS.
+- Full serial Playwright: 90 PASS, 21 intentional project/device skips, 0 failures across 111 tests.
+- `pnpm vocab:validate`: PASS; 2219 unique entries, 990 curated Context examples, 100% provenance; 44.6% coverage remains informational under the prior Round 5 policy.
+- `pnpm typecheck`: PASS.
+- `pnpm lint`: PASS.
+- `pnpm test`: PASS; 14 files, 34 tests.
+- `pnpm build`: PASS.
+
+Data hashes, Motion Engine, Shared Layout, PhysicalSheet, FSRS, Study flow/state machine, Context curation, vocabulary, PWA behavior, background assets, and background engine remain frozen and unchanged. PR #5 remains **OPEN**; this round does not merge, deploy, or create a `v1.4.1` tag.

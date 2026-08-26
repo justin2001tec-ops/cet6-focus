@@ -205,10 +205,79 @@ export async function openMeaning(page: Page): Promise<void> {
   await expect(page.getByRole('region', { name: '核心词义' })).toBeVisible()
 }
 
+export async function openContext(page: Page): Promise<void> {
+  await openStudy(page)
+  await page.getByRole('button', { name: /^不认识/ }).click()
+  await expect(page.getByRole('region', { name: '语境提示' })).toBeVisible()
+}
+
 export async function openDetail(page: Page): Promise<void> {
   await openMeaning(page)
   await page.getByRole('button', { name: '更多' }).click()
   await expect(page.getByRole('region', { name: '扩展理解' })).toBeVisible()
+}
+
+export async function readAtmosphereMetrics(page: Page): Promise<Record<string, unknown>> {
+  return page.evaluate(() => {
+    const shell = document.querySelector('.learning-shell')
+    const stageNames = ['base', 'context', 'meaning', 'detail'] as const
+    function alphaValues(backgroundImage: string): number[] {
+      return Array.from(backgroundImage.matchAll(/rgba?\(([^)]+)\)/g)).flatMap((match) => {
+        const channels = match[1].split(/[\s,]+/).filter(Boolean)
+        const slashIndex = channels.indexOf('/')
+        const alpha = slashIndex >= 0 ? Number.parseFloat(channels[slashIndex + 1]) : channels.length >= 4 ? Number.parseFloat(channels[3]) : 1
+        return Number.isFinite(alpha) ? [alpha] : []
+      })
+    }
+    return {
+      state: shell?.getAttribute('data-learning-state') ?? '',
+      activeClass: Array.from(shell?.classList ?? []).find((name) => name.startsWith('learning-shell--')) ?? '',
+      layers: Object.fromEntries(stageNames.map((name) => {
+        const layer = document.querySelector(`.learning-shell__atmosphere-layer--${name}`)
+        const style = layer ? getComputedStyle(layer) : null
+        const backgroundImage = style?.backgroundImage ?? ''
+        return [name, { opacity: style?.opacity ?? '', backgroundImage, scrimAlpha: Math.max(...alphaValues(backgroundImage), 0) }]
+      })),
+    }
+  })
+}
+
+export async function readSafeAreaMetrics(page: Page, expectedSafeLeft = 0, expectedSafeRight = 0): Promise<Record<string, unknown>> {
+  return page.evaluate(({ safeLeft, safeRight }) => {
+    const inner = document.querySelector('.learning-shell__inner')
+    const selectors = [
+      '.learning-topbar',
+      '.learning-word-header',
+      '.learning-word-header h1',
+      '.learning-word-header .audio-button',
+      '.learning-word-header .icon-button',
+      '.learning-reading-surface',
+      '.learning-stage-actions__primary',
+    ]
+    const viewport = { width: window.innerWidth, height: window.innerHeight }
+    const innerStyle = inner ? getComputedStyle(inner) : null
+    const fixture = document.querySelector('[data-r1-safe-area-fixture]')
+    const fixtureStyle = fixture ? getComputedStyle(fixture) : null
+    const rects = selectors.flatMap((selector) => {
+      const element = document.querySelector(selector)
+      if (!element) return []
+      const rect = element.getBoundingClientRect()
+      return [{ selector, left: rect.left, right: rect.right, top: rect.top, bottom: rect.bottom, width: rect.width, height: rect.height }]
+    })
+    const collisions = rects.filter((rect) => rect.left < safeLeft - 1 || rect.right > viewport.width - safeRight + 1)
+    return {
+      viewport,
+      safeLeft,
+      safeRight,
+      fixturePaddingLeft: fixtureStyle?.paddingLeft ?? '',
+      fixturePaddingRight: fixtureStyle?.paddingRight ?? '',
+      paddingInlineStart: innerStyle?.paddingLeft ?? '',
+      paddingInlineEnd: innerStyle?.paddingRight ?? '',
+      rects,
+      collisions,
+      horizontalOverflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+    }
+  }, { safeLeft: expectedSafeLeft, safeRight: expectedSafeRight })
 }
 
 export async function readSurfaceMetrics(page: Page): Promise<Record<string, unknown>> {

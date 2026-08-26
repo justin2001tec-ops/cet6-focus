@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "scope": "Recall -> Context -> Meaning -> Detail photographic prominence",
+  "stages": ["Recall", "Context", "Meaning", "Detail"],
+  "observedActiveLayerScrimAlpha": [0.26, 0.42, 0.54, 0.64],
+  "ordering": "strictly increasing scrim strength; Recall is the most atmospheric and Detail is the quietest",
+  "scenes": [
+    { "id": "plateau-kiang-01", "class": "bright", "status": "PASS" },
+    { "id": "stars-02", "class": "dark", "status": "PASS" },
+    { "id": "waterfall-02", "class": "textured", "status": "PASS" },
+    { "id": "altiplano-01", "class": "medium", "status": "PASS" }
+  ],
+  "method": "Chromium, Mobile Chromium, and WebKit readability assertions plus Chromium screenshot review",
+  "constraints": ["static scrim/brightness/contrast only", "no blur change", "no asset or background engine change"]
+}

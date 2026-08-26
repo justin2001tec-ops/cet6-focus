@@ -1,6 +1,7 @@
 import { test } from '@playwright/test'
 import {
   completeOnboarding,
+  openContext,
   openDetail,
   openMeaning,
   openStudy,
@@ -67,4 +68,82 @@ test('capture v1.4.1 readability review matrix', async ({ page }, testInfo) => {
   await writeSettings(page, { theme: 'light', backgroundMode: 'off', dailyNewWords: 1 })
   await openDetail(page)
   await page.screenshot({ path: `${screenshotRoot}/landscape-detail.png`, fullPage: true })
+})
+
+test('capture R1 visual integrity evidence', async ({ page }) => {
+  test.skip(test.info().project.name !== 'chromium', 'R1 evidence screenshots are captured once from Chromium; other engines run the assertions.')
+  test.setTimeout(120_000)
+  await prepareReadabilityPage(page)
+  await completeOnboarding(page)
+  await seedReadabilityWord(page, 'readabilityfixturelongword', true)
+  await page.emulateMedia({ colorScheme: 'light', reducedMotion: 'reduce' })
+
+  async function captureStage(name: string, stage: 'recall' | 'context' | 'meaning' | 'detail', backgroundId: string, theme: 'light' | 'dark' = 'light') {
+    await page.setViewportSize({ width: 390, height: 844 })
+    await page.emulateMedia({ colorScheme: theme, reducedMotion: 'reduce' })
+    await writeSettings(page, { theme, backgroundMode: 'fixed', backgroundId, dailyNewWords: 1 })
+    if (stage === 'recall') await openStudy(page)
+    else if (stage === 'context') await openContext(page)
+    else if (stage === 'meaning') await openMeaning(page)
+    else await openDetail(page)
+    await page.waitForTimeout(120)
+    await page.screenshot({ path: `${screenshotRoot}/${name}.png`, fullPage: true })
+  }
+
+  await captureStage('recall-background-bright-390', 'recall', 'plateau-kiang-01')
+  await captureStage('context-background-bright-390', 'context', 'waterfall-02')
+  await captureStage('meaning-background-bright-390', 'meaning', 'plateau-kiang-01')
+  await captureStage('detail-background-bright-390', 'detail', 'plateau-kiang-01')
+  await captureStage('recall-background-dark-390', 'recall', 'stars-02', 'dark')
+  await captureStage('meaning-background-dark-390', 'meaning', 'stars-02', 'dark')
+  await captureStage('detail-background-dark-390', 'detail', 'stars-02', 'dark')
+  await captureStage('context-background-textured-390', 'context', 'waterfall-02')
+
+  await page.setViewportSize({ width: 844, height: 390 })
+  await writeSettings(page, { theme: 'light', backgroundMode: 'off', dailyNewWords: 1 })
+  await openDetail(page)
+  await page.evaluate(() => {
+    const inner = document.querySelector('.learning-shell__inner') as HTMLElement | null
+    if (!inner) throw new Error('Safe Area screenshot target missing')
+    const wrapper = document.createElement('div')
+    wrapper.dataset.r1SafeAreaFixture = 'true'
+    wrapper.style.boxSizing = 'border-box'
+    wrapper.style.display = 'flex'
+    wrapper.style.flexDirection = 'column'
+    wrapper.style.width = '100%'
+    wrapper.style.paddingLeft = '44px'
+    wrapper.style.paddingRight = '16px'
+    while (inner.firstChild) wrapper.append(inner.firstChild)
+    inner.append(wrapper)
+  })
+  await page.screenshot({ path: `${screenshotRoot}/landscape-safe-area-left.png`, fullPage: true })
+  await openDetail(page)
+  await page.evaluate(() => {
+    const inner = document.querySelector('.learning-shell__inner') as HTMLElement | null
+    if (!inner) throw new Error('Safe Area screenshot target missing')
+    const previous = inner.querySelector('[data-r1-safe-area-fixture]')
+    if (previous) {
+      while (previous.firstChild) inner.append(previous.firstChild)
+      previous.remove()
+    }
+    const wrapper = document.createElement('div')
+    wrapper.dataset.r1SafeAreaFixture = 'true'
+    wrapper.style.boxSizing = 'border-box'
+    wrapper.style.display = 'flex'
+    wrapper.style.flexDirection = 'column'
+    wrapper.style.width = '100%'
+    wrapper.style.paddingLeft = '16px'
+    wrapper.style.paddingRight = '44px'
+    while (inner.firstChild) wrapper.append(inner.firstChild)
+    inner.append(wrapper)
+  })
+  await page.screenshot({ path: `${screenshotRoot}/landscape-safe-area-right.png`, fullPage: true })
+
+  await page.setViewportSize({ width: 390, height: 844 })
+  await page.emulateMedia({ colorScheme: 'light', forcedColors: 'none', reducedMotion: 'reduce', contrast: 'more' } as Parameters<typeof page.emulateMedia>[0])
+  if (await page.evaluate(() => window.matchMedia('(prefers-contrast: more)').matches)) {
+    await writeSettings(page, { theme: 'light', backgroundMode: 'off', dailyNewWords: 1 })
+    await openMeaning(page)
+    await page.screenshot({ path: `${screenshotRoot}/prefers-contrast-more.png`, fullPage: true })
+  }
 })

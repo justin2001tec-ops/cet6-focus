@@ -8,6 +8,7 @@
 .app-frame--learning { overflow-x: clip; overflow-y: visible; }
 
 .learning-shell {
+  --learning-page-gutter: clamp(18px, 5vw, 76px);
   --learning-photo-primary: #f7fff8;
   --learning-photo-secondary: #e3f1e8;
   --learning-photo-muted: #c5d8cb;
@@ -35,10 +36,10 @@
 }
 
 .learning-shell__atmosphere-layer { position: absolute; inset: 0; opacity: 0; transition: opacity var(--motion-reveal) var(--ease-standard); }
-.learning-shell__atmosphere-layer--base { background: linear-gradient(180deg, rgba(6, 16, 12, .42) 0%, rgba(6, 16, 12, .62) 100%), radial-gradient(circle at 50% 35%, transparent 0%, rgba(5, 14, 10, .26) 75%); }
-.learning-shell__atmosphere-layer--context { background: linear-gradient(180deg, rgba(5, 14, 10, .29), rgba(5, 14, 10, .45)), radial-gradient(circle at 50% 38%, transparent 0%, rgba(5, 14, 10, .2) 78%); }
-.learning-shell__atmosphere-layer--meaning { background: linear-gradient(180deg, rgba(4, 12, 9, .23), rgba(4, 12, 9, .38)), radial-gradient(circle at 50% 36%, rgba(5, 17, 11, .05), rgba(3, 9, 7, .2) 80%); }
-.learning-shell__atmosphere-layer--detail { background: linear-gradient(180deg, rgba(3, 10, 7, .18), rgba(3, 10, 7, .3)), radial-gradient(circle at 50% 36%, rgba(5, 17, 11, .03), rgba(2, 7, 5, .16) 82%); }
+.learning-shell__atmosphere-layer--base { background: linear-gradient(180deg, rgba(6, 16, 12, .14) 0%, rgba(6, 16, 12, .26) 100%), radial-gradient(circle at 50% 35%, transparent 0%, rgba(5, 14, 10, .1) 75%); }
+.learning-shell__atmosphere-layer--context { background: linear-gradient(180deg, rgba(5, 14, 10, .28), rgba(5, 14, 10, .42)), radial-gradient(circle at 50% 38%, transparent 0%, rgba(5, 14, 10, .18) 78%); }
+.learning-shell__atmosphere-layer--meaning { background: linear-gradient(180deg, rgba(4, 12, 9, .4), rgba(4, 12, 9, .54)), radial-gradient(circle at 50% 36%, rgba(5, 17, 11, .08), rgba(3, 9, 7, .26) 80%); }
+.learning-shell__atmosphere-layer--detail { background: linear-gradient(180deg, rgba(3, 10, 7, .5), rgba(3, 10, 7, .64)), radial-gradient(circle at 50% 36%, rgba(5, 17, 11, .1), rgba(2, 7, 5, .34) 82%); }
 .learning-shell__atmosphere-layer--transitioning { background: linear-gradient(180deg, rgba(5, 14, 10, .34), rgba(5, 14, 10, .48)); }
 .learning-shell__atmosphere-layer--loading { background: linear-gradient(180deg, rgba(5, 14, 10, .62), rgba(5, 14, 10, .76)); }
 .learning-shell--recall .learning-shell__atmosphere-layer--base,
@@ -57,7 +58,10 @@
   min-height: 100svh;
   min-width: 0;
   overflow: visible;
-  padding: clamp(18px, 3vw, 36px) clamp(18px, 5vw, 76px) calc(28px + env(safe-area-inset-bottom));
+  padding-block-start: clamp(18px, 3vw, 36px);
+  padding-inline-start: max(var(--learning-page-gutter), env(safe-area-inset-left, 0px));
+  padding-inline-end: max(var(--learning-page-gutter), env(safe-area-inset-right, 0px));
+  padding-block-end: calc(28px + env(safe-area-inset-bottom, 0px));
 }
 
 .learning-topbar {
@@ -337,7 +341,13 @@
 }
 
 @media (max-width: 700px) {
-  .learning-shell__inner { padding: 16px 16px calc(22px + env(safe-area-inset-bottom)); }
+  .learning-shell { --learning-page-gutter: 16px; }
+  .learning-shell__inner {
+    padding-block-start: 16px;
+    padding-inline-start: max(var(--learning-page-gutter), env(safe-area-inset-left, 0px));
+    padding-inline-end: max(var(--learning-page-gutter), env(safe-area-inset-right, 0px));
+    padding-block-end: calc(22px + env(safe-area-inset-bottom, 0px));
+  }
   .learning-topbar { grid-template-columns: 40px minmax(0, 1fr) auto; gap: 9px; }
   .learning-topbar, .learning-topbar > *, .learning-progress { min-width: 0; }
   .learning-progress { grid-template-columns: minmax(0, 1fr) auto; gap: 7px; }
@@ -380,7 +390,11 @@
 }
 
 @media (max-width: 390px) {
-  .learning-shell__inner { padding-inline: max(20px, env(safe-area-inset-left)); }
+  .learning-shell { --learning-page-gutter: 20px; }
+  .learning-shell__inner {
+    padding-inline-start: max(var(--learning-page-gutter), env(safe-area-inset-left, 0px));
+    padding-inline-end: max(var(--learning-page-gutter), env(safe-area-inset-right, 0px));
+  }
   .learning-recognition__button { min-height: 74px; }
   .learning-recognition__button span { display: none; }
   .learning-stage-actions { gap: 6px; }

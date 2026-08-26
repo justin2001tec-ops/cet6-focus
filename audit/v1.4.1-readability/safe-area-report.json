@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "implementation": {
+    "propertyModel": "independent logical inline start/end padding",
+    "left": "max(--learning-page-gutter, env(safe-area-inset-left, 0px))",
+    "right": "max(--learning-page-gutter, env(safe-area-inset-right, 0px))",
+    "bottom": "calc(base padding + env(safe-area-inset-bottom, 0px))",
+    "productionFiles": ["src/styles/learning-experience.css"],
+    "noCustomSafeAreaVariables": true
+  },
+  "simulation": {
+    "method": "test-only wrapper with independent 44px left or right inset; production CSS remains env()-based",
+    "insets": ["left=44px,right=0px", "left=0px,right=44px"],
+    "viewports": [
+      "390x844 portrait",
+      "430x932 portrait",
+      "844x390 landscape",
+      "852x393 landscape",
+      "1112x834 iPad landscape"
+    ],
+    "cases": 10,
+    "horizontalOverflowMaxCssPx": 1
+  },
+  "engines": { "chromium": "PASS", "mobileChromium": "PASS", "webkit": "PASS" }
+}
