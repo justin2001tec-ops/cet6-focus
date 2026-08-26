@@ -21,6 +21,8 @@ This audit isolates the release-blocker report from the product implementation. 
 
 The complete local serial run (`pnpm test:e2e:serial`) completed with `89 passed`, `25 skipped`, and `0 failed` in approximately 6.8 minutes. The existing Chromium, Mobile, and WebKit Motion cases passed; the new long-task triage tests intentionally run only on Chromium because that is the engine exposing the Long Tasks API used by this release gate.
 
+The triage measurement head `6a65c0588f80d8304723f81f4857bf803af4facf` received two independent GitHub Actions Green runs (`32976173725` and `32976179271`), including successful `quality` and `e2e` jobs. The final result is `BLOCKER_CLEARED`.
+
 The local Phase B gate uses DOM and transition markers (`data-motion-route`, stable computed transform/opacity, visible route content, and `data-background-transition="settled"`) rather than a fixed wait as the completion condition. A 100ms post-settle drain is used only to allow observer delivery.
 
 ## Freeze and boundaries

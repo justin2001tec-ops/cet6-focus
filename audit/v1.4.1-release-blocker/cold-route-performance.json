@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "capturedOn": "2026-08-26",
   "sourceHead": "d81980b8bf547c4fcd5542912b5d6af5f5f3162c",
+  "triageHead": "6a65c0588f80d8304723f81f4857bf803af4facf",
   "classification": "INFORMATIONAL_ONLY",
   "route": "Home -> Study",
   "phase": "cold-route-home-to-study",

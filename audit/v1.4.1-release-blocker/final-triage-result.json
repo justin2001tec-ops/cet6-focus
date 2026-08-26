@@ -1,14 +1,18 @@
 {
   "schemaVersion": 1,
   "capturedOn": "2026-08-26",
-  "status": "PENDING_GITHUB_CI",
+  "status": "BLOCKER_CLEARED",
+  "pr": "https://github.com/justin2001tec-ops/cet6-focus/pull/5",
+  "triageHead": "6a65c0588f80d8304723f81f4857bf803af4facf",
   "phaseA": "INTERMITTENT",
   "phaseB": "WARM_5_OF_5_CLEAN",
   "decisionRule": "Warm 5/5 clean plus GitHub e2e green clears the blocker without product-code changes.",
+  "githubCiGreen": true,
+  "githubRunIds": [32976173725, 32976179271],
   "productCodeChanged": false,
   "prMustRemainOpen": true,
   "merge": false,
   "deploy": false,
   "tag": false,
-  "nextAction": "Push the test-only triage commit, verify GitHub quality/e2e including WebKit, then finalize this status as BLOCKER_CLEARED or stop on a real CI blocker."
+  "nextAction": "Stop triage and return to the original Final Merge & Release Handoff. Keep PR #5 OPEN; do not merge, deploy, tag, or release in this triage task."
 }
