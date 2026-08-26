@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "capturedOn": "2026-08-26",
+  "sourceHead": "d81980b8bf547c4fcd5542912b5d6af5f5f3162c",
+  "test": "tests/e2e/motion/v1.4-system.spec.ts — Motion run records long-task and background budgets during route motion",
+  "thresholdMsExclusive": 50,
+  "phaseA": {
+    "rule": "0/5 clean proceeds to warm gate; 1–2/5 intermittent proceeds to warm gate; >=3/5 is reproducible",
+    "result": "INTERMITTENT",
+    "failures": 1,
+    "cleanRuns": 4,
+    "runs": [
+      {
+        "run": "baseline-full-serial",
+        "status": "FAIL",
+        "exitCode": 1,
+        "rawLongTasks": [
+          { "duration": 165, "startTime": 851.3000000715256 }
+        ],
+        "captureNote": "Original test captured duration and startTime only."
+      },
+      {
+        "run": "rerun-1-of-5",
+        "status": "FAIL",
+        "exitCode": 1,
+        "reportedTestDurationSeconds": 2.1,
+        "rawLongTasks": [
+          { "duration": 100, "startTime": 962.2999999523163 }
+        ],
+        "captureNote": "Original test captured duration and startTime only."
+      },
+      {
+        "run": "rerun-2-of-5",
+        "status": "PASS",
+        "exitCode": 0,
+        "reportedTestDurationSeconds": 2.4,
+        "rawLongTasks": []
+      },
+      {
+        "run": "rerun-3-of-5",
+        "status": "PASS",
+        "exitCode": 0,
+        "reportedTestDurationSeconds": 2.2,
+        "rawLongTasks": []
+      },
+      {
+        "run": "rerun-4-of-5",
+        "status": "PASS",
+        "exitCode": 0,
+        "reportedTestDurationSeconds": 2.8,
+        "rawLongTasks": []
+      },
+      {
+        "run": "rerun-5-of-5",
+        "status": "PASS",
+        "exitCode": 0,
+        "reportedTestDurationSeconds": 2.4,
+        "rawLongTasks": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "capturedOn": "2026-08-26",
+  "status": "PENDING_PUSH",
+  "pr": "https://github.com/justin2001tec-ops/cet6-focus/pull/5",
+  "baseHead": "d81980b8bf547c4fcd5542912b5d6af5f5f3162c",
+  "requiredChecks": ["quality", "e2e", "WebKit"],
+  "note": "This file is updated after the triage commit is pushed and the PR checks complete."
+}

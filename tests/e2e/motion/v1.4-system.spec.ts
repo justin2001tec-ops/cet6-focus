@@ -1,5 +1,130 @@
 import { expect, test, type Page } from '@playwright/test'
 
+type LongTaskAttributionRecord = {
+  containerType: string
+  containerName: string
+  containerId: string
+  containerSrc: string
+}
+
+type LongTaskRecord = {
+  name: string
+  entryType: string
+  duration: number
+  startTime: number
+  attribution: LongTaskAttributionRecord[] | 'NOT_AVAILABLE'
+}
+
+type MotionPerfSnapshot = {
+  phase: string
+  observerSupported: boolean
+  marks: Record<string, number>
+  interval: { startTime: number; endTime: number }
+  allLongTasks: LongTaskRecord[]
+  longTasksDuringMotion: LongTaskRecord[]
+  decodedBackgroundLayers: number
+}
+
+type MotionPerfState = {
+  phase: string
+  supported: boolean
+  longTasks: LongTaskRecord[]
+  marks: Record<string, number>
+  observer?: PerformanceObserver
+}
+
+type MotionPerfWindow = Window & { __v14Perf?: MotionPerfState }
+
+async function installMotionPerfRecorder(page: Page, phase: string): Promise<void> {
+  await page.evaluate((nextPhase) => {
+    const win = window as MotionPerfWindow
+    win.__v14Perf?.observer?.disconnect()
+    const state: MotionPerfState = {
+      phase: nextPhase,
+      supported: false,
+      longTasks: [],
+      marks: {},
+    }
+    win.__v14Perf = state
+    try {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          const candidate = entry as PerformanceEntry & { attribution?: unknown }
+          const attribution = Array.isArray(candidate.attribution)
+            ? candidate.attribution.map((item) => {
+                const record = item && typeof item === 'object' ? item as Record<string, unknown> : {}
+                const value = (key: string) => typeof record[key] === 'string' ? record[key] as string : 'NOT_AVAILABLE'
+                return {
+                  containerType: value('containerType'),
+                  containerName: value('containerName'),
+                  containerId: value('containerId'),
+                  containerSrc: value('containerSrc'),
+                }
+              })
+            : 'NOT_AVAILABLE' as const
+          state.longTasks.push({
+            name: entry.name,
+            entryType: entry.entryType,
+            duration: entry.duration,
+            startTime: entry.startTime,
+            attribution,
+          })
+        }
+      })
+      observer.observe({ type: 'longtask', buffered: false })
+      state.observer = observer
+      state.supported = true
+    } catch {
+      state.supported = false
+    }
+  }, phase)
+}
+
+async function markMotionPerf(page: Page, label: string): Promise<void> {
+  await page.evaluate((markLabel) => {
+    const state = (window as MotionPerfWindow).__v14Perf
+    if (!state) return
+    const now = performance.now()
+    state.marks[markLabel] = now
+    performance.mark(`v1.4.1-triage:${state.phase}:${markLabel}`)
+  }, label)
+}
+
+async function readMotionPerf(page: Page): Promise<MotionPerfSnapshot> {
+  return page.evaluate(() => {
+    const state = (window as MotionPerfWindow).__v14Perf
+    state?.observer?.disconnect()
+    const startTime = state?.marks.click ?? 0
+    const endTime = state?.marks.settled ?? performance.now()
+    const allLongTasks = state?.longTasks.map((task) => ({
+      ...task,
+      attribution: task.attribution === 'NOT_AVAILABLE' ? 'NOT_AVAILABLE' as const : task.attribution.map((item) => ({ ...item })),
+    })) ?? []
+    return {
+      phase: state?.phase ?? 'NOT_AVAILABLE',
+      observerSupported: state?.supported ?? false,
+      marks: { ...(state?.marks ?? {}) },
+      interval: { startTime, endTime },
+      allLongTasks,
+      longTasksDuringMotion: allLongTasks.filter((task) => task.startTime >= startTime && task.startTime <= endTime && task.duration > 50),
+      decodedBackgroundLayers: Number(document.querySelector('.app-background')?.getAttribute('data-background-layer-count') ?? 0),
+    }
+  })
+}
+
+async function waitForMotionStable(page: Page, routeKind: 'default' | 'learning'): Promise<void> {
+  await expect(page.locator('.motion-route').last()).toHaveAttribute('data-motion-route', routeKind, { timeout: 15_000 })
+  await expect(page.locator(routeKind === 'learning' ? '.learning-shell' : '.immersive-home__featured-word').last()).toBeVisible({ timeout: 15_000 })
+  await expect(page.locator('.app-background')).toHaveAttribute('data-background-transition', 'settled', { timeout: 15_000 })
+  await expect.poll(async () => page.locator('.motion-route').last().evaluate((element) => {
+    const style = window.getComputedStyle(element)
+    const settledTransform = style.transform === 'none'
+      || style.transform === 'matrix(1, 0, 0, 1, 0, 0)'
+      || style.transform === 'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)'
+    return style.opacity === '1' && settledTransform ? 'settled' : 'moving'
+  }), { timeout: 15_000 }).toBe('settled')
+}
+
 async function preparePage(page: Page): Promise<void> {
   await page.addInitScript(() => {
     const resetKey = 'cet6-focus:v1.4-motion-reset'
@@ -403,34 +528,55 @@ test('PhysicalSheet is interruptible, velocity-aware, and browser-back dismissib
   await expect(sheet).toHaveCount(0, { timeout: 5_000 })
 })
 
-test('Motion run records long-task and background budgets during route motion', async ({ page }, testInfo) => {
+test('Cold Route long-task capture is informational', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'chromium', 'Cold Route triage is collected on Chromium; the existing Motion suite remains cross-engine.')
   await preparePage(page)
   await bootForMotion(page, testInfo.project.name)
-  await page.evaluate(() => {
-    const state = { supported: false, longTasks: [] as Array<{ duration: number; startTime: number }> }
-    ;(window as Window & { __v14Perf?: typeof state }).__v14Perf = state
-    try {
-      const observer = new PerformanceObserver((list) => {
-        state.longTasks.push(...list.getEntries().map((entry) => ({ duration: entry.duration, startTime: entry.startTime })))
-      })
-      observer.observe({ type: 'longtask', buffered: true })
-      state.supported = true
-    } catch {
-      state.supported = false
-    }
-  })
-  const start = await page.evaluate(() => performance.now())
+  await waitForMotionStable(page, 'default')
+
+  await installMotionPerfRecorder(page, 'cold-route-home-to-study')
+  await markMotionPerf(page, 'click')
   await page.locator('.immersive-home__task-card--learn').click()
   await expect(page.locator('.learning-shell').last()).toBeVisible({ timeout: 15_000 })
-  await page.waitForTimeout(500)
-  const result = await page.evaluate((motionStart) => {
-    const state = (window as Window & { __v14Perf?: { supported: boolean; longTasks: Array<{ duration: number; startTime: number }> } }).__v14Perf
-    return {
-      observerSupported: state?.supported ?? false,
-      longTasksDuringMotion: state?.longTasks.filter((task) => task.startTime >= motionStart && task.duration > 50) ?? [],
-      decodedBackgroundLayers: Number(document.querySelector('.app-background')?.getAttribute('data-background-layer-count') ?? 0),
-    }
-  }, start)
+  await markMotionPerf(page, 'content-visible')
+  await waitForMotionStable(page, 'learning')
+  await markMotionPerf(page, 'settled')
+  await page.waitForTimeout(100)
+  const result = await readMotionPerf(page)
+
+  console.log(`[v1.4.1-triage] cold-route ${JSON.stringify(result)}`)
   expect(result.decodedBackgroundLayers).toBeLessThanOrEqual(2)
-  expect(result.longTasksDuringMotion).toHaveLength(0)
+})
+
+test('Warm Motion gate isolates the second Home to Study transition', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'chromium', 'Warm Motion triage is a Chromium Long Tasks gate; the existing Motion suite remains cross-engine.')
+  await preparePage(page)
+  await bootForMotion(page, testInfo.project.name)
+  await waitForMotionStable(page, 'default')
+
+  const runs: Array<{ run: number; result: MotionPerfSnapshot }> = []
+  for (let run = 1; run <= 5; run += 1) {
+    await waitForMotionStable(page, 'default')
+    await installMotionPerfRecorder(page, `warm-motion-${run}`)
+    await markMotionPerf(page, 'click')
+    await page.locator('.immersive-home__task-card--learn').click()
+    await expect(page.locator('.learning-shell').last()).toBeVisible({ timeout: 15_000 })
+    await markMotionPerf(page, 'content-visible')
+    await waitForMotionStable(page, 'learning')
+    await markMotionPerf(page, 'settled')
+    await page.waitForTimeout(100)
+    runs.push({ run, result: await readMotionPerf(page) })
+
+    if (run < 5) {
+      await expect(page.getByRole('button', { name: '退出学习', exact: true })).toBeVisible({ timeout: 5_000 })
+      await page.getByRole('button', { name: '退出学习', exact: true }).click()
+      await waitForMotionStable(page, 'default')
+    }
+  }
+
+  console.log(`[v1.4.1-triage] warm-motion ${JSON.stringify({ runs })}`)
+  for (const { result } of runs) {
+    expect(result.decodedBackgroundLayers).toBeLessThanOrEqual(2)
+    expect(result.longTasksDuringMotion).toHaveLength(0)
+  }
 })

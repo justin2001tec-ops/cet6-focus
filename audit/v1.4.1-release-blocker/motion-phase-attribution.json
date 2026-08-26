@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "capturedOn": "2026-08-26",
+  "sourceHead": "d81980b8bf547c4fcd5542912b5d6af5f5f3162c",
+  "observerSupported": true,
+  "thresholdMsExclusive": 50,
+  "attributionFields": [
+    "name",
+    "entryType",
+    "duration",
+    "startTime",
+    "containerType",
+    "containerName",
+    "containerId",
+    "containerSrc"
+  ],
+  "missingFieldValue": "NOT_AVAILABLE",
+  "records": [],
+  "note": "No >50ms long-task entry was observed in Cold Route or any of the five Warm Motion intervals, so there is no event to attribute. The recorder preserves NOT_AVAILABLE for any browser-exposed event whose attribution/container field is absent."
+}

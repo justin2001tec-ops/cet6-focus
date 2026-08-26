@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "capturedOn": "2026-08-26",
+  "sourceHead": "d81980b8bf547c4fcd5542912b5d6af5f5f3162c",
+  "classification": "WARM_MOTION_RELEASE_GATE",
+  "route": "Home -> Study",
+  "warmDefinition": "Each run starts from a stable Home route, installs a fresh non-buffered observer, measures click through DOM/transition settled markers, returns through the real 退出学习 control, and repeats.",
+  "thresholdMsExclusive": 50,
+  "requiredCleanRuns": 5,
+  "cleanRuns": 5,
+  "passed": true,
+  "runs": [
+    {
+      "run": 1,
+      "result": {
+        "phase": "warm-motion-1",
+        "observerSupported": true,
+        "marks": { "click": 1209.3999999761581, "content-visible": 1297.6999999284744, "settled": 1441 },
+        "interval": { "startTime": 1209.3999999761581, "endTime": 1441 },
+        "allLongTasks": [],
+        "longTasksDuringMotion": [],
+        "decodedBackgroundLayers": 1
+      }
+    },
+    {
+      "run": 2,
+      "result": {
+        "phase": "warm-motion-2",
+        "observerSupported": true,
+        "marks": { "click": 2043.5, "content-visible": 2104, "settled": 2244.6999999284744 },
+        "interval": { "startTime": 2043.5, "endTime": 2244.6999999284744 },
+        "allLongTasks": [],
+        "longTasksDuringMotion": [],
+        "decodedBackgroundLayers": 1
+      }
+    },
+    {
+      "run": 3,
+      "result": {
+        "phase": "warm-motion-3",
+        "observerSupported": true,
+        "marks": { "click": 2832.899999976158, "content-visible": 2902.6999999284744, "settled": 3040.6999999284744 },
+        "interval": { "startTime": 2832.899999976158, "endTime": 3040.6999999284744 },
+        "allLongTasks": [],
+        "longTasksDuringMotion": [],
+        "decodedBackgroundLayers": 1
+      }
+    },
+    {
+      "run": 4,
+      "result": {
+        "phase": "warm-motion-4",
+        "observerSupported": true,
+        "marks": { "click": 3636.6999999284744, "content-visible": 3698.600000023842, "settled": 3855.100000023842 },
+        "interval": { "startTime": 3636.6999999284744, "endTime": 3855.100000023842 },
+        "allLongTasks": [],
+        "longTasksDuringMotion": [],
+        "decodedBackgroundLayers": 1
+      }
+    },
+    {
+      "run": 5,
+      "result": {
+        "phase": "warm-motion-5",
+        "observerSupported": true,
+        "marks": { "click": 4427.799999952316, "content-visible": 4482.399999976158, "settled": 4619.5 },
+        "interval": { "startTime": 4427.799999952316, "endTime": 4619.5 },
+        "allLongTasks": [],
+        "longTasksDuringMotion": [],
+        "decodedBackgroundLayers": 1
+      }
+    }
+  ]
+}

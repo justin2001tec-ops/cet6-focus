@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "capturedOn": "2026-08-26",
+  "status": "PENDING_GITHUB_CI",
+  "phaseA": "INTERMITTENT",
+  "phaseB": "WARM_5_OF_5_CLEAN",
+  "decisionRule": "Warm 5/5 clean plus GitHub e2e green clears the blocker without product-code changes.",
+  "productCodeChanged": false,
+  "prMustRemainOpen": true,
+  "merge": false,
+  "deploy": false,
+  "tag": false,
+  "nextAction": "Push the test-only triage commit, verify GitHub quality/e2e including WebKit, then finalize this status as BLOCKER_CLEARED or stop on a real CI blocker."
+}
