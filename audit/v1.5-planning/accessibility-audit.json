@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "auditDate": "2026-08-28",
+  "baseline": "v1.4.1",
+  "status": "PASS_WITH_P2_SEMANTIC_FOLLOW_UP",
+  "method": "DOM accessible-name heuristic with associated-label resolution, keyboard focus reachability, reduced-motion media context and forced-colors media context. This is not a substitute for VoiceOver/NVDA/manual WebKit review.",
+  "results": [
+    {
+      "area": "Control naming",
+      "status": "PASS_WITH_ONE_FOLLOW_UP",
+      "observed": "Home, Study, Vocabulary, Word Detail, Weak Words and Dictation visible controls had names after resolving aria-label, aria-labelledby, title and associated labels. Settings had one independent hidden file input without a name.",
+      "evidence": "interaction-audit.json A11Y-P2-001"
+    },
+    {
+      "area": "Keyboard focus",
+      "status": "PASS_TO_FOCUSABLE_CONTROL",
+      "observed": "Focus reached the featured-word link and Study exit button; computed focus outline width was 3px in both checks.",
+      "evidence": "interaction-audit.json INT-OK-004"
+    },
+    {
+      "area": "Opaque-surface contrast samples",
+      "status": "PASS_SAMPLE",
+      "observed": "On page surfaces the local computed samples included body 13.61:1, page h1 13.61:1, page supporting paragraph 4.84:1, and Word Detail secondary button 6.45:1.",
+      "limitation": "Photographic surfaces require pixel-composited contrast review; do not infer their final ratio from transparent CSS backgrounds."
+    },
+    {
+      "area": "Reduced motion",
+      "status": "PASS_OBSERVED",
+      "observed": "prefers-reduced-motion: reduce Study session had no horizontal overflow and no console/page/request errors; no motion system was changed.",
+      "releaseBaseline": "v1.4.1 Reduced Motion gate PASS"
+    },
+    {
+      "area": "Forced colors",
+      "status": "REVIEW_WITH_ONE_SEMANTIC_FOLLOW_UP",
+      "observed": "forced-colors: active Settings session had no horizontal overflow; the same hidden file input was the only unnamed control.",
+      "releaseBaseline": "v1.4.1 Forced Colors gate PASS"
+    },
+    {
+      "area": "Safe area / WebKit",
+      "status": "CARRIED_FORWARD",
+      "observed": "No product change in this planning branch; the v1.4.1 Safe Area and WebKit gates remain the release baseline and are not reinterpreted by this DOM-only run."
+    }
+  ],
+  "findings": [
+    {
+      "id": "A11Y-P2-001",
+      "priority": "P2",
+      "title": "Hidden file input name",
+      "recommendedValidation": "Run the actual file-picker trigger with a screen reader and confirm the input is either named or intentionally hidden from the accessibility tree."
+    }
+  ],
+  "confirmedP0": []
+}

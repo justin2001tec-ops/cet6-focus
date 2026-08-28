@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "auditDate": "2026-08-28",
+  "baseline": "v1.4.1",
+  "status": "PASS_WITH_ONE_P2_SEMANTIC_FOLLOW_UP",
+  "checks": [
+    {
+      "id": "INT-OK-001",
+      "name": "Home to Study navigation",
+      "status": "PASS",
+      "evidence": "Clicking the labeled Learn 30 link reached http://127.0.0.1:4173/#/study in the isolated local session."
+    },
+    {
+      "id": "INT-OK-002",
+      "name": "Study state progression",
+      "status": "PASS",
+      "evidence": "Study recall -> 不认识 -> 语境提示 -> 查看核心词义 -> 核心词义 -> 更多 -> 扩展理解 completed for the required three screenshots."
+    },
+    {
+      "id": "INT-OK-003",
+      "name": "Primary touch target geometry",
+      "status": "PASS",
+      "evidence": "Study judgment controls measured 112x74px; AudioButton 95x44px; detail continuation 350x48px."
+    },
+    {
+      "id": "INT-OK-004",
+      "name": "Keyboard focus reaches controls",
+      "status": "PASS_TO_FOCUSABLE_CONTROL",
+      "evidence": "Programmatic focus reached the labeled featured-word link on Home and the labeled 退出学习 button on Study; both exposed a 3px computed outline width."
+    },
+    {
+      "id": "INT-OK-005",
+      "name": "First-use empty states",
+      "status": "PASS",
+      "evidence": "Weak Words presents a clear empty-state path; Dictation presents 先学习，再听写 with a 去学习 action."
+    }
+  ],
+  "findings": [
+    {
+      "id": "A11Y-P2-001",
+      "priority": "P2",
+      "title": "Hidden import input has no independent accessible name",
+      "observed": "The Settings screenshot/session exposed one 1x1 hidden file input without aria-label, label or aria-labelledby. The visible 导入 JSON 备份 button is labeled and triggers it, so this is a semantic hardening item rather than a blocked user path.",
+      "evidence": ["settings-mobile.png", "accessibility-audit.json"],
+      "proposedDirection": "Give the file input an explicit accessible name or remove it from the accessibility tree while preserving the visible labeled trigger.",
+      "frozenSystems": ["PWA shell-v7", "DB/backup behavior"]
+    }
+  ],
+  "confirmedP0": [],
+  "notTestedAsReleaseGate": [
+    "Physical pointer velocity profiles",
+    "real iOS Safari VoiceOver",
+    "new Motion behavior",
+    "network/cloud interactions"
+  ]
+}

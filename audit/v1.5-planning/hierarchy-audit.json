@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "auditDate": "2026-08-28",
+  "baseline": "v1.4.1",
+  "status": "PASS_WITH_P2_REVIEW",
+  "semanticReview": [
+    {
+      "surface": "Home",
+      "primaryHierarchy": ["photographic scene", "featured word", "Learn/Review actions", "quiet navigation"],
+      "assessment": "PASS",
+      "evidence": ["home-mobile.png", "home-desktop.png"]
+    },
+    {
+      "surface": "Study recall",
+      "primaryHierarchy": ["progress", "word and pronunciation", "recall prompt", "three judgment actions"],
+      "assessment": "PASS",
+      "evidence": ["study-recall-mobile.png"]
+    },
+    {
+      "surface": "Study meaning/detail",
+      "primaryHierarchy": ["word", "core meaning", "extended meaning/definition", "continue"],
+      "assessment": "PASS",
+      "evidence": ["study-meaning-mobile.png", "study-detail-mobile.png"]
+    },
+    {
+      "surface": "Vocabulary",
+      "primaryHierarchy": ["page purpose", "search/filter", "word rows", "pagination"],
+      "assessment": "PASS",
+      "evidence": ["vocabulary-mobile.png"]
+    },
+    {
+      "surface": "Word Detail",
+      "primaryHierarchy": ["word identity", "pronunciation", "meaning/definition/examples", "learning status and note"],
+      "assessment": "PASS",
+      "evidence": ["word-detail-mobile.png"]
+    },
+    {
+      "surface": "Settings",
+      "primaryHierarchy": ["page purpose", "learning rhythm", "pronunciation/motion", "theme/background", "backup/reset"],
+      "assessment": "PASS",
+      "evidence": ["settings-mobile.png"]
+    },
+    {
+      "surface": "Weak Words / Dictation",
+      "primaryHierarchy": ["page purpose", "empty/first-use explanation", "next action"],
+      "assessment": "PASS",
+      "evidence": ["weak-words-mobile.png", "dictation-mobile.png"]
+    }
+  ],
+  "findings": [
+    {
+      "id": "HIER-P2-001",
+      "priority": "P2",
+      "title": "Cross-surface reading contract",
+      "observed": "The hierarchy is coherent today; Study transitions from recall to meaning/detail and page routes use a shared header. A future scope review may define shared typography tokens without changing the information architecture.",
+      "disposition": "Do not redesign Home or Study in planning; treat as a bounded readability consistency candidate."
+    }
+  ],
+  "confirmedP0": [],
+  "rejectedByThisAudit": [
+    "Home dashboard replacement",
+    "Study flow rewrite",
+    "background replacement",
+    "Liquid Glass restyle as a standalone goal"
+  ]
+}

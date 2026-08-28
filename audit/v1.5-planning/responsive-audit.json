@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "auditDate": "2026-08-28",
+  "baseline": "v1.4.1",
+  "status": "PASS_WITH_BROWSER_ZOOM_FOLLOW_UP",
+  "matrix": [
+    { "viewport": "390x667", "route": "/study", "status": "PASS", "overflowX": false, "scrollWidth": 390, "clientWidth": 390, "heading": "42.9px" },
+    { "viewport": "390x844", "route": "/study", "status": "PASS", "overflowX": false, "scrollWidth": 390, "clientWidth": 390, "heading": "42.9px" },
+    { "viewport": "430x932", "route": "/study", "status": "PASS", "overflowX": false, "scrollWidth": 430, "clientWidth": 430, "heading": "47.3px" },
+    { "viewport": "844x390", "route": "/study", "status": "PASS_WITH_VERTICAL_SCROLL", "overflowX": false, "scrollWidth": 844, "clientWidth": 844, "scrollHeight": 436, "clientHeight": 390, "heading": "52px" },
+    { "viewport": "852x393", "route": "/study", "status": "PASS_WITH_VERTICAL_SCROLL", "overflowX": false, "scrollWidth": 852, "clientWidth": 852, "scrollHeight": 437, "clientHeight": 393, "heading": "52px" },
+    { "viewport": "1112x834", "route": "/study", "status": "PASS", "overflowX": false, "scrollWidth": 1112, "clientWidth": 1112, "heading": "66.72px" },
+    { "viewport": "1440x900", "route": "/study", "status": "PASS", "overflowX": false, "scrollWidth": 1440, "clientWidth": 1440, "heading": "86.4px" },
+    { "viewport": "1920x1080", "route": "/study", "status": "PASS", "overflowX": false, "scrollWidth": 1920, "clientWidth": 1920, "heading": "88px" }
+  ],
+  "otherSurfaces": [
+    { "route": "/words", "viewport": "390x844", "status": "PASS", "overflowX": false, "scrollWidth": 390, "clientWidth": 390 },
+    { "route": "/settings", "viewport": "390x844", "status": "PASS", "overflowX": false, "scrollHeight": 2090 },
+    { "route": "/word/cet6-abandon", "viewport": "390x844", "status": "PASS", "overflowX": false, "scrollHeight": 1587 }
+  ],
+  "safeArea": {
+    "status": "CARRIED_FORWARD",
+    "observation": "All tested viewport layouts stayed within their horizontal client width. CSS env(safe-area-inset-*) values are device/runtime-dependent and were not replaced by a synthetic value in this audit.",
+    "releaseBaseline": "v1.4.1 Safe Area gate PASS"
+  },
+  "zoomFollowUp": {
+    "status": "REVIEW_ONLY",
+    "method": "document.documentElement.style.zoom = 2 stress signal, not browser page zoom",
+    "observed": "390px viewport reported 640px scrollWidth for Study.",
+    "decision": "Do not label as a confirmed WCAG/browser zoom failure; validate with real browser zoom before implementation."
+  },
+  "confirmedP0": []
+}
