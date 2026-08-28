@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "capturedOn": "2026-08-26",
+  "sourceHead": "d81980b8bf547c4fcd5542912b5d6af5f5f3162c",
+  "triageHead": "6a65c0588f80d8304723f81f4857bf803af4facf",
+  "classification": "INFORMATIONAL_ONLY",
+  "route": "Home -> Study",
+  "phase": "cold-route-home-to-study",
+  "observerSupported": true,
+  "marks": {
+    "click": 1299.6999999284744,
+    "content-visible": 1357.0999999046326,
+    "settled": 1535.1999999284744
+  },
+  "interval": {
+    "startTime": 1299.6999999284744,
+    "endTime": 1535.1999999284744
+  },
+  "allLongTasks": [],
+  "longTasksDuringMotion": [],
+  "decodedBackgroundLayers": 1,
+  "strictWarmGate": false
+}

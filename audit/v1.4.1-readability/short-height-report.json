@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "viewport": "390x667",
+  "fixture": "readabilityfixturelongword with extended Detail content",
+  "surfaceOverflowY": "visible",
+  "surfaceMaxHeight": "none",
+  "pageScrollExpected": true,
+  "ctaReachability": "PASS after scrollIntoViewIfNeeded",
+  "horizontalOverflow": "<= 1 CSS pixel",
+  "engines": { "chromium": "PASS", "mobileChromium": "PASS", "webkit": "PASS" }
+}

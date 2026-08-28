@@ -14,5 +14,6 @@ export default defineConfig({
     { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
     { name: 'mobile', use: { ...devices['Pixel 5'] } },
     { name: 'webkit-motion', testMatch: /motion\/.*\.spec\.ts/, use: { ...devices['Desktop Safari'] } },
+    { name: 'webkit-readability', testMatch: /readability\/.*\.spec\.ts/, use: { ...devices['Desktop Safari'] } },
   ],
 })

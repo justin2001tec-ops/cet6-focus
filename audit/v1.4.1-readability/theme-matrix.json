@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "variants": [
+    { "theme": "light", "osColorScheme": "light", "background": "plateau-kiang-01", "surfaceTone": "learning", "result": "PASS" },
+    { "theme": "light", "osColorScheme": "light", "background": "stars-02", "surfaceTone": "learning", "result": "PASS" },
+    { "theme": "dark", "osColorScheme": "dark", "background": "plateau-kiang-01", "surfaceTone": "learning", "result": "PASS" },
+    { "theme": "dark", "osColorScheme": "dark", "background": "stars-02", "surfaceTone": "learning", "result": "PASS" },
+    { "theme": "system", "osColorScheme": "light", "background": "waterfall-02", "surfaceTone": "learning", "result": "PASS" },
+    { "theme": "system", "osColorScheme": "dark", "background": "waterfall-02", "surfaceTone": "learning", "result": "PASS" }
+  ],
+  "assertions": [
+    "data-reading-tone=learning is present on Context, Meaning, and Detail surfaces",
+    "all eight reading tokens resolve in every variant",
+    "primary, secondary, and accent text meet the normal-text threshold",
+    "document horizontal overflow is <= 1 CSS pixel",
+    "bright, dark, and textured local background scenes do not change surface semantics"
+  ],
+  "engines": { "chromium": "6/6 PASS", "mobileChromium": "6/6 PASS", "webkit": "6/6 PASS" }
+}

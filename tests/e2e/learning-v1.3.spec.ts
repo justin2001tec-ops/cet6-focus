@@ -185,7 +185,9 @@ test('Meaning and Detail expose one readable continuation action on mobile', asy
     await expect(page.locator('body')).not.toContainText('确认认识并继续')
     const detailOverflow = await page.evaluate(() => ({ width: document.documentElement.scrollWidth - document.documentElement.clientWidth, height: document.documentElement.scrollHeight - document.documentElement.clientHeight }))
     expect(detailOverflow.width).toBeLessThanOrEqual(1)
-    expect(detailOverflow.height).toBeLessThanOrEqual(1)
+    expect(detailOverflow.height).toBeGreaterThanOrEqual(0)
+    await detailActions.getByRole('button', { name: '继续', exact: true }).scrollIntoViewIfNeeded()
+    await expect(detailActions.getByRole('button', { name: '继续', exact: true })).toBeVisible()
   }
 })
 

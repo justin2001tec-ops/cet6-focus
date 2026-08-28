@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "capturedOn": "2026-08-26",
+  "status": "GREEN",
+  "pr": "https://github.com/justin2001tec-ops/cet6-focus/pull/5",
+  "headSha": "6a65c0588f80d8304723f81f4857bf803af4facf",
+  "requiredChecks": ["quality", "e2e", "WebKit"],
+  "runs": [
+    {
+      "trigger": "push",
+      "runId": 32976173725,
+      "runUrl": "https://github.com/justin2001tec-ops/cet6-focus/actions/runs/32976173725",
+      "qualityJobId": 98201329992,
+      "e2eJobId": 98201329716,
+      "quality": "success",
+      "e2e": "success",
+      "webkitCoverage": "Playwright E2E workflow includes the webkit-motion project and completed successfully"
+    },
+    {
+      "trigger": "pull_request",
+      "runId": 32976179271,
+      "runUrl": "https://github.com/justin2001tec-ops/cet6-focus/actions/runs/32976179271",
+      "qualityJobId": 98201347532,
+      "e2eJobId": 98201347710,
+      "quality": "success",
+      "e2e": "success",
+      "webkitCoverage": "Playwright E2E workflow includes the webkit-motion project and completed successfully"
+    }
+  ],
+  "prStateAtVerification": {
+    "state": "OPEN",
+    "mergeable": "MERGEABLE",
+    "mergeStateStatus": "CLEAN",
+    "mergedAt": null
+  }
+}

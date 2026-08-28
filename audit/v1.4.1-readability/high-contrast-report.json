@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "forcedColors": {
+    "media": "forced-colors: active",
+    "status": "PASS",
+    "surface": { "background": "Canvas", "text": "CanvasText", "accent": "LinkText", "separator": "CanvasText", "borderWidth": "2px", "boxShadow": "none" },
+    "controls": "audio, bookmark, stage actions, and learning controls expose visible boundaries",
+    "focus": "primary continuation action exposes a >=2px focus outline",
+    "engines": { "chromium": "PASS", "mobileChromium": "PASS", "webkit": "PASS" }
+  },
+  "prefersContrastMore": {
+    "media": "prefers-contrast: more",
+    "status": "PASS",
+    "method": "Playwright contrast:'more' emulation with explicit focusVisible evidence",
+    "surface": "primary, secondary, and accent contrast >= 4.5:1; tertiary token present; border >=2px",
+    "controls": "audio, bookmark, and stage actions expose >=1px boundaries",
+    "focus": "primary continuation action keeps a visible contrast outline",
+    "engines": { "chromium": "PASS", "mobileChromium": "PASS", "webkit": "PASS" }
+  }
+}

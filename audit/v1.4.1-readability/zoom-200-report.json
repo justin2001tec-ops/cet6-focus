@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "automatedRootZoom": {
+    "status": "PASS",
+    "method": "document.documentElement.style.zoom='2'",
+    "stages": ["Meaning", "Detail"],
+    "assertions": [
+      "semantic learning tone survives automated root/CSS zoom",
+      "computed primary contrast remains >= 4.5:1",
+      "document horizontal overflow is <= 1 CSS pixel",
+      "Meaning and Detail continuation controls remain visible"
+    ],
+    "engines": { "chromium": "PASS", "mobileChromium": "PASS", "webkit": "PASS" }
+  },
+  "manualBrowserZoom": {
+    "chromium": {
+      "status": "PASS",
+      "browser": "Chromium (Codex in-app Browser)",
+      "version": "not exposed by the browser control surface",
+      "os": "Windows desktop host; exact OS build not exposed",
+      "windowBeforeZoom": "1280x720 CSS px",
+      "zoom": "200%",
+      "effectiveViewportObserved": "664x680 CSS px",
+      "method": "browser-level Ctrl+Shift+= accelerator twice; no documentElement.style.zoom injection",
+      "stages": ["Meaning", "Detail"],
+      "assertions": [
+        "browser-level viewport narrowed to approximately half width",
+        "Meaning primary surface remained readable",
+        "Detail page remained naturally scrollable",
+        "continuation CTA remained reachable",
+        "document horizontal overflow remained absent"
+      ]
+    },
+    "safari": {
+      "status": "NOT_AVAILABLE",
+      "zoom": "200%",
+      "reason": "Safari is not available in this Windows environment"
+    }
+  }
+}
