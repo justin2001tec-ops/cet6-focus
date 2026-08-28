@@ -55,7 +55,21 @@
     "v1.4.0": { "tagObject": "b56e154c8460148cc3a8ef7ce0af2ccf385aba18", "target": "4810f6b6678b7b2648d1f792f91146f3a545a7d3" }
   },
   "reportOnlyCommit": {
-    "evidenceSourceSha": "PENDING_FIRST_REPORT_COMMIT",
-    "finalReleaseEvidenceSha": "PENDING_FINAL_REPORT_COMMIT"
+    "evidenceSourceSha": "b6da99b9b28e63e39f5c51d78855a579b48f592b",
+    "reportOnlyQualityRun": {
+      "id": 33161059497,
+      "url": "https://github.com/justin2001tec-ops/cet6-focus/actions/runs/33161059497",
+      "conclusion": "success",
+      "qualityJobId": 98815359366,
+      "e2eJobId": 98815359273,
+      "webkitIncluded": true
+    },
+    "reportOnlyPagesRun": {
+      "id": 33161059125,
+      "url": "https://github.com/justin2001tec-ops/cet6-focus/actions/runs/33161059125",
+      "conclusion": "success"
+    },
+    "finalReleaseEvidenceSha": "THIS_COMMIT",
+    "finalReleaseEvidenceShaNote": "The exact SHA is the target of annotated tag v1.4.1 and is recorded in the final GitHub Release receipt after this commit's gates pass."
   }
 }

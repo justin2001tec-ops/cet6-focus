@@ -1,6 +1,6 @@
 # CET6 Focus v1.4.1 Final Merge & Release Report
 
-Status: **PASS — online release audit complete; report-only publication gate in progress**
+Status: **PASS — final online audit and report-only CI/Pages gates passed; release evidence is ready for tagging**
 
 Date: 2026-08-28
 
@@ -22,6 +22,8 @@ No product code was changed after the accepted PR head. The report/evidence work
 
 - [main quality/e2e run 33156561011](https://github.com/justin2001tec-ops/cet6-focus/actions/runs/33156561011): SUCCESS. Quality and e2e jobs passed; WebKit is included in the Playwright e2e matrix.
 - [Pages run 33156560994](https://github.com/justin2001tec-ops/cet6-focus/actions/runs/33156560994): SUCCESS. Build, artifact upload, and deploy passed.
+- [report-only quality/e2e run 33161059497](https://github.com/justin2001tec-ops/cet6-focus/actions/runs/33161059497): SUCCESS. Quality job `98815359366` and E2E job `98815359273` passed; WebKit is included in the Playwright e2e matrix.
+- [report-only Pages run 33161059125](https://github.com/justin2001tec-ops/cet6-focus/actions/runs/33161059125): SUCCESS. Build, artifact upload, and deploy passed for the report/evidence-only commit.
 
 ## 3. Online release audit
 
@@ -71,8 +73,8 @@ The initial local cold-route measurement remains recorded as intermittent 165ms 
 
 ## 9. Report/evidence identity
 
-- First report/evidence commit SHA: `PENDING_FIRST_REPORT_COMMIT`.
-- Final Release Evidence Commit SHA / v1.4.1 tag target: `PENDING_FINAL_REPORT_COMMIT` at this pre-publication snapshot; it is recorded in the final GitHub release receipt after the report-only commit is pushed and verified.
+- First report/evidence commit SHA: `b6da99b9b28e63e39f5c51d78855a579b48f592b`.
+- Final Release Evidence Commit SHA / v1.4.1 tag target: this final report/evidence commit; the exact 40-character SHA is recorded by the annotated `v1.4.1` tag and GitHub Release receipt after this commit's final Green gates are verified.
 - Historic v1.0.0–v1.4.0 tag object and target fingerprints are recorded in `audit/v1.4.1-release/release-identity.json`; no force tag or history rewrite is permitted.
 
 ## 10. Limitations and accepted P2
@@ -81,4 +83,4 @@ Safari true browser zoom cannot be validated in this Windows release environment
 
 ## Final decision
 
-The product merge and online audit are PASS. Publication remains gated on the report/evidence-only main commit, its main quality/e2e and Pages Green results, historic-tag verification, creation of `v1.4.1` at the final evidence commit, and publication of GitHub Release **CET6 Focus v1.4.1**.
+All product merge, main, online, and report-only Quality/E2E/Pages gates are PASS. After confirming the final evidence commit SHA and unchanged historic tag fingerprints, create annotated `v1.4.1` at this report/evidence commit and publish GitHub Release **CET6 Focus v1.4.1**. No further product-code change is permitted.
