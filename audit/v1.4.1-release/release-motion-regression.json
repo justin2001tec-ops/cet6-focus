@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "classification": "BLOCKER_CLEARED",
+  "productCodeChanged": false,
+  "initialColdRoute": { "status": "INTERMITTENT", "observationsMs": [165, 100], "meaning": "historical measurements retained; not erased" },
+  "warmMotion": { "route": "Home -> Study", "requiredCleanRuns": 5, "cleanRuns": 5, "longTasksOver50ms": 0, "decodedBackgroundLayers": 1 },
+  "githubFinalHead": { "quality": "SUCCESS", "e2e": "SUCCESS", "webkit": "PASS" },
+  "triageEvidence": "audit/v1.4.1-release-blocker/final-triage-result.json",
+  "triageHead": "6a65c0588f80d8304723f81f4857bf803af4facf",
+  "githubTriageRuns": [32976173725, 32976179271],
+  "note": "No Motion product-code changes were required."
+}

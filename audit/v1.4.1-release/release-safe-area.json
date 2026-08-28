@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "onlineNative": { "viewport": "844x390", "scrollWidth": 844, "clientWidth": 844, "paddingLeft": "42.2px", "paddingRight": "42.2px", "horizontalOverflow": 0 },
+  "onlineSimulation": { "method": "test-only wrapper", "left": "44px", "right": "44px", "collisions": 0, "overflow": 0 },
+  "productionModel": "independent logical inline start/end padding with env(safe-area-inset-*)",
+  "localCoverage": ["390x844", "430x932", "844x390", "852x393", "1112x834 iPad landscape"],
+  "localEngines": { "chromium": "PASS", "mobileChromium": "PASS", "webkit": "PASS" },
+  "screenshot": "screenshots/detail-landscape-safe-area.png"
+}

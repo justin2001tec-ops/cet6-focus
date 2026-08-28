@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "online": {
+    "freshHome": { "viewport": "390x844", "horizontalOverflow": 0 },
+    "landscape": { "viewport": "844x390", "horizontalOverflow": 0 },
+    "longWord": { "viewport": "390x844", "horizontalOverflow": 0, "ctaVisible": true },
+    "zoom200": { "viewport": "800x900 before CSS zoom", "horizontalOverflow": 0, "ctaVisible": true }
+  },
+  "localRegressionViewports": ["390x844", "430x932", "390x667", "844x390", "852x393", "1112x834 iPad landscape", "desktop"],
+  "localRegression": { "shortHeightNaturalPageScroll": "PASS", "iPadDesktop": "PASS", "engines": { "chromium": "PASS", "mobileChromium": "PASS", "webkit": "PASS" } },
+  "sources": ["audit/v1.4.1-readability/safe-area-report.json", "audit/v1.4.1-readability/short-height-report.json"]
+}

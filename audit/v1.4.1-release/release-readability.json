@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "onlineUrl": "https://justin2001tec-ops.github.io/cet6-focus/",
+  "onlineEngine": "Chromium",
+  "onlineExample": "True friends never abandon each other.",
+  "onlineVocabularyDetail": { "vocabularyText": "2,219 个 CET-6 词条", "detailExample": "True friends never abandon each other." },
+  "whiteOnWhiteRegression": "PASS",
+  "light": {
+    "context": { "surfaceHeight": 259.1875, "scrollHeight": 257, "overflowY": "visible", "maxHeight": "none", "documentHorizontalOverflow": 0 },
+    "meaning": { "surfaceHeight": 288.984375, "scrollHeight": 287, "overflowY": "visible", "maxHeight": "none", "documentHorizontalOverflow": 0 },
+    "detail": { "surfaceHeight": 509.59375, "scrollHeight": 508, "overflowY": "visible", "maxHeight": "none", "documentHorizontalOverflow": 0, "pageScrollHeight": 899 }
+  },
+  "dark": { "surfaceHeight": 509.59375, "scrollHeight": 508, "overflowY": "visible", "maxHeight": "none", "documentHorizontalOverflow": 0 },
+  "lightTokens": { "background": "#fffdf8", "primary": "#14231c", "secondary": "#385148", "tertiary": "#5e6e65", "accent": "#1f6751", "primaryContrast": 16.052, "secondaryContrast": 8.471, "accentContrast": 6.627 },
+  "darkTokens": { "background": "#14231c", "primary": "#f4fbf6", "secondary": "#d2e8d9", "tertiary": "#b0cbbc", "accent": "#a5ddbb", "primaryContrast": 15.522, "secondaryContrast": 12.654, "accentContrast": 10.614 },
+  "webKitAutomatedReadability": "PASS",
+  "localEvidence": "audit/v1.4.1-readability/contrast-report.json and GitHub quality/e2e"
+}

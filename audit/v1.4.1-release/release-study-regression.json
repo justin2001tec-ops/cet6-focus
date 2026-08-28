@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "online": {
+    "studyTarget": "abandon",
+    "fsrs": { "reviewLogsAfterRating": 1, "stateAfterRating": 1, "repsAfterRating": 1 },
+    "undo": { "restoredWord": "abandon", "reviewLogsAfterUndo": 0 },
+    "dictation": { "answer": "abandon", "attempted": 1, "firstTryCorrect": 0, "wrong": 1, "corrected": 1, "wordCount": 1, "reviewLogsUnaffected": true }
+  },
+  "localSerialE2E": { "command": "pnpm test:e2e:serial", "passed": 89, "skipped": 25, "failed": 0 },
+  "githubPostMerge": { "quality": "SUCCESS", "e2e": "SUCCESS", "webkitIncluded": true }
+}

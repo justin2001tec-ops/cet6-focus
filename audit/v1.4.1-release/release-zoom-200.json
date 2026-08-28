@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "onlineAutomated": {
+    "method": "document.documentElement.style.zoom=2",
+    "word": "characteristic",
+    "viewport": "800x900",
+    "headingOverflow": 0,
+    "documentHorizontalOverflow": 0,
+    "ctaVisible": true,
+    "primaryContrast": 16.052,
+    "screenshot": "screenshots/meaning-browser-zoom-200.png"
+  },
+  "trueBrowserZoom": {
+    "chromium": { "status": "PASS", "method": "browser-level Ctrl+Shift+= twice; no documentElement.style.zoom injection", "stages": ["Meaning", "Detail"], "ctaReachable": true, "horizontalOverflow": false, "source": "audit/v1.4.1-readability/zoom-200-report.json" },
+    "safari": { "status": "NOT_AVAILABLE", "reason": "Safari is not available in this Windows release environment" }
+  },
+  "localAutomatedEngines": { "chromium": "PASS", "mobileChromium": "PASS", "webkit": "PASS" }
+}

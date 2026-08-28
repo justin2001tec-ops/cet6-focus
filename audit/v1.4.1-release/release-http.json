@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "url": "https://justin2001tec-ops.github.io/cet6-focus/",
+  "root": {
+    "status": 200,
+    "bytes": 672,
+    "sha256": "3f2efbd5be8f9bbc982559f98899041bd224cf35aa1c9924e97c36b593af6247"
+  },
+  "rootAssets": [
+    "./manifest.webmanifest",
+    "/cet6-focus/assets/index-CrLR2SPt.js",
+    "/cet6-focus/assets/index-CzDwRJ-y.css"
+  ],
+  "staticEndpointCount": 9,
+  "staticEndpoints": "all 200 with expected content types",
+  "assetHashes": {
+    "js": "14ec50418e77891044c3ae646c3f32f8322b017bbfbf4c782c10649c4cceffc2",
+    "css": "c2d7eb871f5cf41ed6a33e8034c27491e0461156e017328d346f2f31661e695c",
+    "manifest": "75f0c061ac5acfdd2a4313b3d437c7f77b0a54e6a390245592adf8551e6fa181",
+    "serviceWorker": "8907705b451fb9c883314a4d2cdf3552ecefece5f4a3f7cd4afb5513a5138a66"
+  },
+  "backgrounds": {
+    "status": "PASS",
+    "responses": "28/28 HTTP 200",
+    "formats": ["avif", "webp"],
+    "sceneIds": ["plateau-kiang-01", "altiplano-01", "altiplano-02", "ladakh-plateau-01", "pangong-01", "aurora-01", "aurora-02", "stars-02", "waterfall-02", "waterfall-03", "penguins-01", "daisy-02", "lighthouse-02", "volcano-02"]
+  },
+  "manifest": { "status": 200, "name": "CET6 Focus", "scope": "./", "start_url": "./" },
+  "serviceWorker": { "status": 200, "cacheName": "cet6-focus-shell-v7", "genericOldCacheCleanup": true },
+  "vocabulary": {
+    "status": "PASS",
+    "count": 2219,
+    "exampleCount": 990,
+    "sha256": "bf9fef2b9e9fa356254186c015bca3366210940058a5ec883fb55d6071e5f96f",
+    "missingSource": 0,
+    "missingSourceLicense": 0,
+    "provenance": "100%"
+  }
+}

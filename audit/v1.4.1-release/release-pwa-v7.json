@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "shell": "cet6-focus-shell-v7",
+  "serviceWorkerEndpoint": 200,
+  "v6ToV7Upgrade": { "legacyCacheSeeded": true, "controller": true, "cacheKeysAfterActivation": ["cet6-focus-shell-v7"], "v6Removed": true, "v7Present": true },
+  "warmCache": { "controller": true, "registrations": ["https://justin2001tec-ops.github.io/cet6-focus/"], "cacheKeys": ["cet6-focus-shell-v7"] },
+  "offline": { "controller": true, "vocabularyCached": true, "cacheKeys": ["cet6-focus-shell-v7"] },
+  "noSecondBump": true,
+  "sourceHead": "d81980b8bf547c4fcd5542912b5d6af5f5f3162c"
+}

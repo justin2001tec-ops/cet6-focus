@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "onlineForcedColors": { "active": true, "background": "rgb(255, 255, 255)", "text": "rgb(0, 0, 0)", "borderWidth": "2px", "focusOutline": "3px solid" },
+  "onlinePrefersContrastMore": { "active": true, "background": "rgb(255, 255, 255)", "primaryContrast": 21, "secondaryContrast": 21, "accentContrast": 13.994, "borderWidth": "2px", "focusOutline": "3px solid" },
+  "localEngines": { "chromium": "PASS", "mobileChromium": "PASS", "webkit": "PASS" },
+  "screenshot": "screenshots/meaning-prefers-contrast-more.png",
+  "source": "audit/v1.4.1-readability/high-contrast-report.json"
+}

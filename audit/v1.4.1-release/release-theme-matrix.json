@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "online": [
+    { "mode": "system", "colorScheme": "light", "mediaDark": false, "surfaceTone": "learning", "primaryContrast": 16.052, "secondaryContrast": 8.471, "accentContrast": 6.627 },
+    { "mode": "system", "colorScheme": "dark", "mediaDark": true, "surfaceTone": "learning", "primaryContrast": 15.522, "secondaryContrast": 12.654, "accentContrast": 10.614 }
+  ],
+  "localWebKitMatrix": {
+    "variants": [
+      { "theme": "light", "osColorScheme": "light", "background": "plateau-kiang-01", "result": "PASS" },
+      { "theme": "light", "osColorScheme": "light", "background": "stars-02", "result": "PASS" },
+      { "theme": "dark", "osColorScheme": "dark", "background": "plateau-kiang-01", "result": "PASS" },
+      { "theme": "dark", "osColorScheme": "dark", "background": "stars-02", "result": "PASS" },
+      { "theme": "system", "osColorScheme": "light", "background": "waterfall-02", "result": "PASS" },
+      { "theme": "system", "osColorScheme": "dark", "background": "waterfall-02", "result": "PASS" }
+    ],
+    "engines": { "chromium": "6/6 PASS", "mobileChromium": "6/6 PASS", "webkit": "6/6 PASS" },
+    "source": "audit/v1.4.1-readability/theme-matrix.json"
+  }
+}

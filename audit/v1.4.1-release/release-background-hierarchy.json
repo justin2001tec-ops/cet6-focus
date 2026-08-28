@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "sceneCount": 4,
+  "requiredOrder": "recall < context < meaning < detail",
+  "scenes": [
+    { "id": "plateau-kiang-01", "label": "bright", "scrimAlpha": [0.26, 0.42, 0.54, 0.64], "backgroundLayers": 1, "backgroundImages": 1 },
+    { "id": "stars-02", "label": "dark", "scrimAlpha": [0.26, 0.42, 0.54, 0.64], "backgroundLayers": 1, "backgroundImages": 1 },
+    { "id": "waterfall-02", "label": "textured", "scrimAlpha": [0.26, 0.42, 0.54, 0.64], "backgroundLayers": 1, "backgroundImages": 1 },
+    { "id": "altiplano-01", "label": "medium", "scrimAlpha": [0.26, 0.42, 0.54, 0.64], "backgroundLayers": 1, "backgroundImages": 1 }
+  ],
+  "screenshots": ["screenshots/meaning-bright-bg.png", "screenshots/meaning-textured-bg.png"],
+  "localReference": "audit/v1.4.1-readability/background-hierarchy-report.json"
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "release": "v1.4.1",
+  "repository": "justin2001tec-ops/cet6-focus",
+  "targetBranch": "main",
+  "pullRequest": {
+    "number": 5,
+    "url": "https://github.com/justin2001tec-ops/cet6-focus/pull/5",
+    "state": "MERGED",
+    "headSha": "0c54c10eef4b1eeaf17b904e88a8d28bd11050c6",
+    "acceptedReadabilityHead": "3f55bcbcc883b4b198bfbc3383c12907cd492cf9",
+    "pwaV7Head": "d81980b8bf547c4fcd5542912b5d6af5f5f3162c",
+    "triageMeasurementHead": "6a65c0588f80d8304723f81f4857bf803af4facf"
+  },
+  "squashMerge": {
+    "sha": "61207041510271267f99f61f0c80f6db3c85175d",
+    "url": "https://github.com/justin2001tec-ops/cet6-focus/commit/61207041510271267f99f61f0c80f6db3c85175d",
+    "mergedAt": "2026-08-28T08:44:47Z",
+    "strategy": "SQUASH"
+  },
+  "targetContract": {
+    "pwaShell": "cet6-focus-shell-v7",
+    "vocabularyCount": 2219,
+    "approvedContextCount": 990,
+    "contextCoverage": "44.6%",
+    "provenance": "100%",
+    "productCodeChangedAfterAcceptedHead": false
+  },
+  "mainBeforeEvidence": {
+    "headSha": "61207041510271267f99f61f0c80f6db3c85175d",
+    "qualityRun": {
+      "id": 33156561011,
+      "url": "https://github.com/justin2001tec-ops/cet6-focus/actions/runs/33156561011",
+      "conclusion": "success"
+    },
+    "pagesRun": {
+      "id": 33156560994,
+      "url": "https://github.com/justin2001tec-ops/cet6-focus/actions/runs/33156560994",
+      "conclusion": "success"
+    }
+  },
+  "onlineAudit": {
+    "status": "PASS",
+    "url": "https://justin2001tec-ops.github.io/cet6-focus/",
+    "engine": "Chromium",
+    "isolatedContext": true,
+    "startedAt": "2026-08-28T09:42:11.810Z",
+    "finishedAt": "2026-08-28T09:43:14.851Z"
+  },
+  "historicTags": {
+    "v1.0.0": { "tagObject": "c6022ec2cd486c65f38dcf53fd1e981daec0691e", "target": "9eb6a60f0f4396f267d1a6e8ae8253172045f77f" },
+    "v1.1.0": { "tagObject": "4b8fd7d530b9e5482951a3c8d87af2cc2f188fe1", "target": "7aa93ea1caf67f6621878ea5f8737407c6d16070" },
+    "v1.2.0": { "tagObject": "38ccb85cbb2599d6f2830120c6e63ee12b41bfca", "target": "e571fcedf59e095819dc8974951fa0eb6e212585" },
+    "v1.3.0": { "tagObject": "e4882fea8cb54b2af7381d3fc996da0f160a5f60", "target": "afaf1db78e7d31709694189457f679e62ed3f67a" },
+    "v1.4.0": { "tagObject": "b56e154c8460148cc3a8ef7ce0af2ccf385aba18", "target": "4810f6b6678b7b2648d1f792f91146f3a545a7d3" }
+  },
+  "reportOnlyCommit": {
+    "evidenceSourceSha": "PENDING_FIRST_REPORT_COMMIT",
+    "finalReleaseEvidenceSha": "PENDING_FINAL_REPORT_COMMIT"
+  }
+}

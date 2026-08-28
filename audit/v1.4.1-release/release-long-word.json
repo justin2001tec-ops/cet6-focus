@@ -1,0 +1,5 @@
+{
+  "status": "PASS",
+  "online": { "word": "characteristic", "length": 13, "fontSize": "30px", "headingScrollWidth": 212, "headingClientWidth": 212, "documentHorizontalOverflow": 0, "ctaVisible": true, "viewport": "390x844", "screenshot": "screenshots/long-word-mobile.png" },
+  "localFixtureMatrix": { "words": ["abnormal", "characteristic", "extraordinary", "acknowledgement", "environmentally", "readabilityfixturelongword"], "emergencyWrapPolicy": "break-word only for >18-character tier", "status": "PASS", "engines": { "chromium": "PASS", "mobileChromium": "PASS", "webkit": "PASS" }, "source": "audit/v1.4.1-readability/long-word-report.json" }
+}

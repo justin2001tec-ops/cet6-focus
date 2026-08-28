@@ -1,0 +1,14 @@
+{
+  "status": "BLOCKER_CLEARED",
+  "reference": "audit/v1.4.1-release-blocker/final-triage-result.json",
+  "triageHead": "6a65c0588f80d8304723f81f4857bf803af4facf",
+  "phaseA": "INTERMITTENT",
+  "phaseB": "WARM_5_OF_5_CLEAN",
+  "productCodeChanged": false,
+  "initialLongTasksMs": [165, 100],
+  "warmLongTasksOver50ms": 0,
+  "githubQuality": "SUCCESS",
+  "githubE2E": "SUCCESS",
+  "preserveBlockerHistory": true,
+  "note": "The historical cold-route observations are recorded as intermittent; they were not rewritten away."
+}
