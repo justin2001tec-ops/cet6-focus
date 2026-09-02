@@ -21,8 +21,10 @@
   "implementation": {
     "branch": "product/v1.5-quality-hardening",
     "baseSha": "e7df353ae7a912f78087634d34ee1253ea240c32",
-    "implementationPr": null,
-    "implementationPrStatus": "NOT_YET_OPENED"
+    "implementationHeadSha": "450b0dc",
+    "implementationPr": 7,
+    "implementationPrUrl": "https://github.com/justin2001tec-ops/cet6-focus/pull/7",
+    "implementationPrStatus": "OPEN"
   },
   "localGates": {
     "vocabValidate": {
@@ -78,7 +80,7 @@
     "screenshots/settings-import-accessibility-webkit-readability.png"
   ],
   "releaseBoundary": {
-    "implementationPr": "OPEN_PENDING",
+    "implementationPr": "OPEN",
     "merged": false,
     "deployed": false,
     "v1.5TagCreated": false,

@@ -80,6 +80,6 @@ The focused hardening suite passed 9/9 across Chromium, Mobile, and WebKit Reada
 
 ## 18. Delivery boundary
 
-The implementation branch will be pushed and an Implementation PR opened for review. The Implementation PR must remain `OPEN`. This phase ends before merge, deployment, `v1.5.0` tag creation, and GitHub Release creation.
+The implementation branch was pushed and Implementation PR #7 was opened for review: https://github.com/justin2001tec-ops/cet6-focus/pull/7. The Implementation PR must remain `OPEN`. This phase ends before merge, deployment, `v1.5.0` tag creation, and GitHub Release creation.
 
-Implementation PR: pending creation.
+Implementation head at report creation: `450b0dc`.
