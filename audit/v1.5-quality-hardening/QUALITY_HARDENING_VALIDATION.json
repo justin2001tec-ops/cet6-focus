@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "status": "R1_PASS",
+  "mergeReadiness": "READY_FOR_FINAL_REVIEW",
+  "scope": [
+    "P2-TYPO-001",
+    "P2-A11Y-001",
+    "P3-COVERAGE-001"
+  ],
+  "planning": {
+    "planningPr": 6,
+    "planningPrUrl": "https://github.com/justin2001tec-ops/cet6-focus/pull/6",
+    "planningHeadSha": "4d7ec41e72a9cc086cd44577c7c7881570e36f16",
+    "planningMergeSha": "e7df353ae7a912f78087634d34ee1253ea240c32",
+    "mainQualityWorkflowRun": 33614000572,
+    "mainQualityJobs": {
+      "quality": 100195516050,
+      "e2e": 100195516296
+    },
+    "mainQualityStatus": "SUCCESS"
+  },
+  "implementation": {
+    "branch": "product/v1.5-quality-hardening",
+    "baseSha": "e7df353ae7a912f78087634d34ee1253ea240c32",
+    "implementationHeadSha": "2fd20b5",
+    "implementationPr": 7,
+    "implementationPrUrl": "https://github.com/justin2001tec-ops/cet6-focus/pull/7",
+    "implementationPrStatus": "OPEN"
+  },
+  "r1AccessibilitySemanticCleanup": {
+    "status": "PASS",
+    "before": "imperative post-mount aria-hidden/tabIndex mutation",
+    "after": "declarative hidden file input",
+    "visibleSemanticEntryCount": 1,
+    "keyboardTrigger": "PASS",
+    "pointerTrigger": "PASS",
+    "fileChooser": "PASS",
+    "focusedE2E": "9/9 PASS",
+    "browsers": ["chromium", "mobile", "webkit-readability"],
+    "backupRestoreRegression": "PASS"
+  },
+  "localGates": {
+    "vocabValidate": {
+      "command": "pnpm vocab:validate",
+      "status": "PASS_INFORMATIONAL_COVERAGE",
+      "uniqueEntries": 2219,
+      "qualityApproved": 990,
+      "qualityApprovedCoveragePercent": 44.6,
+      "rawCandidateCoveragePercent": 70.4,
+      "provenanceCoverage": "990/990",
+      "round5PhaseA": "300 records; semanticPassRate=100.0%; severeInappropriate=0",
+      "round5BlindValidation": "100 records; semanticPassRate=100.0%; severeInappropriate=0"
+    },
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "unit": {
+      "command": "pnpm test",
+      "status": "PASS",
+      "testFiles": 14,
+      "tests": 34
+    },
+    "build": {
+      "command": "pnpm build",
+      "status": "PASS",
+      "warning": "Vite reported the existing main chunk size advisory; build completed successfully."
+    },
+    "targetedQualityHardeningE2E": {
+      "command": "pnpm exec playwright test tests/e2e/readability/quality-hardening.spec.ts --workers=1 --reporter=list",
+      "status": "PASS",
+      "tests": 9,
+      "projects": ["chromium", "mobile", "webkit-readability"]
+    },
+    "fullSerialE2E": {
+      "command": "pnpm test:e2e:serial",
+      "status": "PASS",
+      "finalRun": {
+        "passed": 98,
+        "skipped": 25,
+        "failed": 0
+      },
+      "initialRunTransientEvent": "One WebKit Readability click-stability timeout occurred in the pre-R1 full run; the isolated retry passed, and the pre-R1 final full serial run was 98 passed / 25 skipped / 0 failed.",
+      "r1RunTransientEvent": "The first R1 full run had one existing Chromium v1.4 Motion reduced-motion toggle visibility failure; its isolated retry passed, and the final R1 full serial run was 98 passed / 25 skipped / 0 failed."
+    }
+  },
+  "screenshots": [
+    "screenshots/weak-words-non-empty-chromium.png",
+    "screenshots/weak-words-non-empty-mobile.png",
+    "screenshots/weak-words-non-empty-webkit-readability.png",
+    "screenshots/dictation-non-empty-chromium.png",
+    "screenshots/dictation-non-empty-mobile.png",
+    "screenshots/dictation-non-empty-webkit-readability.png",
+    "screenshots/settings-import-accessibility-chromium.png",
+    "screenshots/settings-import-accessibility-mobile.png",
+    "screenshots/settings-import-accessibility-webkit-readability.png"
+  ],
+  "releaseBoundary": {
+    "implementationPr": "OPEN",
+    "merged": false,
+    "deployed": false,
+    "v1.5TagCreated": false,
+    "githubReleaseCreated": false,
+    "implementationPhaseDeployment": false,
+    "note": "An existing Pages workflow run 33614000623 was automatically triggered by the earlier planning PR merge; no deployment command was run for this implementation branch."
+  }
+}
