@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "auditDate": "2026-08-28",
+  "baseline": "v1.4.1",
+  "status": "PASS_WITH_SEPARATE_TOOLING_BACKLOG",
+  "localAuditRun": {
+    "isolatedPageStates": 20,
+    "screenshotCount": 10,
+    "navigationTimingMs": { "min": 125.8, "max": 139.5, "average": 131.1 },
+    "performanceLongTaskEntriesAtCapture": 0,
+    "consoleErrors": 0,
+    "pageErrors": 0,
+    "failedRequests": 0,
+    "consoleWarningsObserved": [
+      "motion() is deprecated. Use motion.create()",
+      "Motion reduced-motion informational warning in the reduced-motion context"
+    ],
+    "interpretation": "No new reproducible performance issue was observed in this local planning snapshot. This is an observation, not a replacement for the shipped Motion long-task evidence."
+  },
+  "releaseHistory": {
+    "coldMotionObservation": "v1.4.1 evidence recorded an intermittent Phase A 165ms / 100ms long-task failure; it was reproduced and isolated in the release triage history.",
+    "warmMotionObservation": "v1.4.1 evidence recorded 5/5 clean warm runs with zero >50ms long tasks.",
+    "decision": "Preserve the historical result exactly; do not relabel cold failures as current v1.5 behavior."
+  },
+  "qualityCommands": [
+    { "command": "pnpm vocab:validate", "status": "PASS", "note": "2,219 entries; missingMeaning=0; missingDefinition=0; provenance=100%; coverage informational at 44.6%." },
+    { "command": "pnpm typecheck", "status": "PASS" },
+    { "command": "pnpm lint", "status": "PASS" },
+    { "command": "pnpm test", "status": "PASS", "note": "14 files / 34 tests." }
+  ],
+  "toolingFollowUp": {
+    "id": "QA-P2-001",
+    "priority": "P2",
+    "observed": "An earlier Windows invocation of the deterministic example-quality regression surfaced raw-file hash drift during line-ending normalization; the same unchanged tree then reran 14/14 files and 34/34 tests PASS.",
+    "decision": "SEPARATE_TOOLING_BACKLOG: no product change and no release blocker; use a separate QA/Tooling PR for any future CI normalization decision."
+  },
+  "confirmedP0": [],
+  "frozenPerformanceSystems": ["Motion Engine", "PhysicalSheet", "PWA shell-v7"]
+}

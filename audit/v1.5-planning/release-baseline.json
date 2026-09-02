@@ -1,0 +1,30 @@
+{
+  "auditDate": "2026-08-28",
+  "release": "v1.4.1",
+  "releaseFrozen": true,
+  "pr5MergeSha": "61207041510271267f99f61f0c80f6db3c85175d",
+  "releaseEvidenceCommit": "574bee5b1b61ea48b77032b946bcd570f1b4df85",
+  "annotatedTagObject": "fa52ad67261398cdcd24c10a61f2fd4da9099919",
+  "tagTarget": "574bee5b1b61ea48b77032b946bcd570f1b4df85",
+  "pwaShell": "cet6-focus-shell-v7",
+  "vocabularyCount": 2219,
+  "approvedContextCount": 990,
+  "approvedContextCoverage": "44.6%",
+  "provenanceCoverage": "100%",
+  "baselineVerification": {
+    "originMainSha": "574bee5b1b61ea48b77032b946bcd570f1b4df85",
+    "planningInitialHeadSha": "574bee5b1b61ea48b77032b946bcd570f1b4df85",
+    "planningBranch": "planning/v1.5-product-quality-audit",
+    "productDiffAtStart": false
+  },
+  "frozenSystems": [
+    "Motion Engine",
+    "PhysicalSheet",
+    "FSRS",
+    "Context data",
+    "Vocabulary",
+    "Study state machine",
+    "PWA shell-v7",
+    "v1.4.1 release history and tag"
+  ]
+}

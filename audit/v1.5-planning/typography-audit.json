@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "auditDate": "2026-08-28",
+  "baseline": "v1.4.1",
+  "status": "PASS_WITH_APPROVED_P2",
+  "method": "Chromium computed-style samples from isolated local sessions; semantic review is recorded separately from automated measurements.",
+  "measurements": [
+    {
+      "surface": "Home",
+      "viewport": "390x844",
+      "primaryHeading": "42.9px / 42.9px",
+      "observation": "摄影优先的单一词条焦点，标题清晰且没有竞争性 dashboard 文本。"
+    },
+    {
+      "surface": "Home",
+      "viewport": "1440x900",
+      "primaryHeading": "72px / 72px",
+      "observation": "桌面端标题随画布放大，Learn/Review 仍保持同一层级。"
+    },
+    {
+      "surface": "Study recall",
+      "viewport": "390x844",
+      "primaryHeading": "42.9px / 42.042px",
+      "sectionKicker": "11px",
+      "audioLabel": "11px",
+      "observation": "单词为主要注意点，判断按钮为主要操作。"
+    },
+    {
+      "surface": "Study meaning/detail",
+      "viewport": "390x844",
+      "primaryHeading": "35.1px / 34.398px",
+      "sectionKicker": "12px",
+      "audioLabel": "11px",
+      "observation": "展示答案后标题收敛，为释义、例句和定义留出空间。"
+    },
+    {
+      "surface": "Page routes",
+      "viewport": "390x844",
+      "primaryHeading": "39px / 39.78px",
+      "description": "13px / 21.45px",
+      "observation": "Vocabulary、Word Detail、Settings、Weak Words、Dictation 共用稳定的 eyebrow/title/description 层级。"
+    }
+  ],
+  "findings": [
+    {
+      "id": "TYPO-P2-001",
+      "priority": "P2",
+      "title": "Audio label ≈11px",
+      "observed": "Study recall/meaning/detail 的 AudioButton 为 11px；Word Detail 的同类次级控件为 10px。",
+      "evidence": ["study-recall-mobile.png", "study-meaning-mobile.png", "study-detail-mobile.png", "word-detail-mobile.png"],
+      "disposition": "APPROVED_FOR_V1_5：范围只包括承担操作语义的 Audio label 与 critical small actionable labels；不升级为 P0/P1。",
+      "proposedDirection": "下一轮评审 12–13px 的最小可读标签 token，并验证不会破坏安静层级。",
+      "validationNeeded": "真实 iOS/WebKit、对比度与短文案回归；Chromium 200% browser zoom 已由 v1.4.1 release evidence 关闭。"
+    },
+    {
+      "id": "TYPO-P2-002",
+      "priority": "P2",
+      "title": "Small-label family consistency",
+      "observed": "同一产品中 kicker 约 11–12px、设置小提示约 10px、page description 13px；各自有明确层级，但跨 surface 的 token 关系值得统一审查。",
+      "evidence": ["study-recall-mobile.png", "settings-mobile.png", "vocabulary-mobile.png"],
+      "disposition": "INFORMATIVE_ONLY：不作为独立产品 scope；被动低优先级 metadata 可继续 10–11px，只有具备真实操作语义且明显低于 12px 的文字纳入 TYPO-P2-001。",
+      "proposedDirection": "仅在 approved actionable-label 范围内审阅相关 token，不做全站 Typography System 重构。"
+    }
+  ],
+  "confirmedP0": [],
+  "notes": [
+    "自动测量得到的摄影背景下 CSS foreground/background 不足以代表最终像素对比度；v1.4.1 的 contrast/WebKit gate 作为已发布基线保留。",
+    "本轮没有修改字号、字体、字体加载或任何产品 CSS。"
+  ]
+}

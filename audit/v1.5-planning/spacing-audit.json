@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "auditDate": "2026-08-28",
+  "baseline": "v1.4.1",
+  "status": "PASS_WITH_FOLLOW_UP",
+  "method": "Bounding-box and computed-style measurements from isolated Chromium sessions.",
+  "findings": [
+    {
+      "id": "SPACE-OK-001",
+      "priority": "PASS",
+      "surface": "Home",
+      "evidence": "390x844 and 1440x900 both have scrollWidth equal to clientWidth; Learn/Review cards remain a paired action band.",
+      "observed": "Home mobile content inset is approximately 20–23px; desktop action cards are approximately 624px wide with a consistent gap."
+    },
+    {
+      "id": "SPACE-OK-002",
+      "priority": "PASS",
+      "surface": "Study",
+      "evidence": "study-recall-mobile.png and study-detail-mobile.png",
+      "observed": "Recall decision controls are 112x74px each; AudioButton is 95x44px; detail primary continuation is 350x48px; no horizontal overflow at 390px."
+    },
+    {
+      "id": "SPACE-OK-003",
+      "priority": "PASS",
+      "surface": "Page routes",
+      "evidence": "Vocabulary, Word Detail, Settings, Weak Words and Dictation measurements",
+      "observed": "390px pages use a 366px content frame; shared PageHeader uses margin-bottom 24px and gap 17px; long settings/detail pages scroll vertically without horizontal overflow."
+    }
+  ],
+  "responsiveMeasurements": [
+    { "viewport": "390x667", "route": "/study", "overflowX": false, "scrollWidth": 390, "clientWidth": 390 },
+    { "viewport": "430x932", "route": "/study", "overflowX": false, "scrollWidth": 430, "clientWidth": 430 },
+    { "viewport": "844x390", "route": "/study", "overflowX": false, "scrollWidth": 844, "clientWidth": 844, "verticalScrollExpected": true },
+    { "viewport": "852x393", "route": "/study", "overflowX": false, "scrollWidth": 852, "clientWidth": 852, "verticalScrollExpected": true },
+    { "viewport": "1112x834", "route": "/study", "overflowX": false, "scrollWidth": 1112, "clientWidth": 1112 },
+    { "viewport": "1440x900", "route": "/study", "overflowX": false, "scrollWidth": 1440, "clientWidth": 1440 },
+    { "viewport": "1920x1080", "route": "/study", "overflowX": false, "scrollWidth": 1920, "clientWidth": 1920 }
+  ],
+  "followUps": [
+    {
+      "id": "SPACE-P2-001",
+      "priority": "P2",
+      "title": "Validate actual browser zoom separately",
+      "observed": "A CSS zoom:2 stress signal produced 640px document width inside a 390px viewport; this is not equivalent to browser page zoom and is not a release failure.",
+      "disposition": "Keep as a follow-up measurement before any layout change; do not fix from this signal alone."
+    }
+  ],
+  "confirmedP0": []
+}
