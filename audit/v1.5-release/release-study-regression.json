@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "local": { "study": "PASS", "FSRS": "PASS", "undo": "PASS", "dictation": "PASS" },
+  "online": { "studyRoute": "PASS", "rating1": "PASS", "rating2": "PASS", "rating3": "PASS", "undo": "PASS" },
+  "deterministicFixtures": "test-only; no production DB injection"
+}

@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "localFocusedE2E": "9/9 PASS across Chromium, Mobile Chromium, WebKit",
+  "localFullSerialE2E": { "passed": 98, "skipped": 25, "failed": 0 },
+  "onlineResponsive": "PASS at 390x844, 430x932, 844x390, 768x1024, 1440x900, 1920x1080",
+  "screenshots": ["study-audio-mobile.png", "word-detail-audio-mobile.png", "settings-import-mobile.png", "settings-import-desktop.png"]
+}

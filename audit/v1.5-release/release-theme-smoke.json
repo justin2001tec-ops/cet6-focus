@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "themes": {
+    "light": { "status": "PASS", "screenshot": "screenshots/settings-light.png" },
+    "dark": { "status": "PASS", "screenshot": "screenshots/settings-dark.png" },
+    "system": { "status": "PASS", "restoredAfterSmoke": true }
+  },
+  "reducedMotion": { "status": "PASS", "toggledOn": true, "profile": "reduced", "toggledOff": true }
+}

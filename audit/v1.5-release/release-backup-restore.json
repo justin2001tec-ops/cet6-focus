@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "export": { "notice": "备份已生成，文件只包含学习数据，不包含完整静态词库。", "currentStateBackupPreserved": true },
+  "validBackup": { "schemaVersion": 1, "cards": 2219, "reviewLogs": 16, "sessions": 27 },
+  "autoBackupBeforeConfirm": true,
+  "restore": { "confirmation": true, "reload": true, "settingsReloaded": true },
+  "vocabularyReconciliation": { "wordIdStrategy": true, "weakWordsPageLoaded": true, "dictationPageLoaded": true, "existingDataPreserved": true },
+  "temporaryFilesCommitted": false
+}

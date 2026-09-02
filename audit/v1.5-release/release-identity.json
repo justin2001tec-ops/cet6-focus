@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "release": "v1.5.0",
+  "repository": "https://github.com/justin2001tec-ops/cet6-focus",
+  "productionUrl": "https://justin2001tec-ops.github.io/cet6-focus/",
+  "pullRequest": {
+    "number": 7,
+    "url": "https://github.com/justin2001tec-ops/cet6-focus/pull/7",
+    "acceptedImplementationHead": "a7d10c671221bd5dba3c281e190fedf756ebcbaf",
+    "finalPrHead": "98576f311e1ca43e094984065ad0047a399867ea",
+    "shellV8ReleasePrepCommit": "98576f311e1ca43e094984065ad0047a399867ea",
+    "state": "MERGED",
+    "squashMergeSha": "31c5506f8df172c11f947090f89eca5d3edd1524"
+  },
+  "scope": {
+    "approvedP1": 0,
+    "productP2": ["P2-TYPO-001", "P2-A11Y-001"],
+    "qaP2": ["P3-COVERAGE-001"],
+    "rejected": ["P1-CAND-001"],
+    "backlog": ["Safari true browser/page zoom", "Windows hash normalization"]
+  },
+  "releaseEvidenceCommitSha": "PENDING_FINAL_REPORT_COMMIT_SHA",
+  "annotatedTag": {
+    "name": "v1.5.0",
+    "objectSha": "PENDING_TAG_OBJECT_SHA",
+    "targetSha": "PENDING_TAG_TARGET_SHA"
+  },
+  "githubRelease": "PENDING_GITHUB_RELEASE"
+}

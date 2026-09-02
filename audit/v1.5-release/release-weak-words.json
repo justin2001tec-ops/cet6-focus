@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "productionRoute": "#/mistakes",
+  "fixtureInjection": false,
+  "heading": "薄弱词，不让它们悄悄溜走。",
+  "runtimeState": "non-empty",
+  "observedWeakWordRows": 11,
+  "deterministicE2EFixture": { "status": "PASS", "source": "local full serial E2E" }
+}

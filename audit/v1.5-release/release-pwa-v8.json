@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "shell": "cet6-focus-shell-v8",
+  "serviceWorkerEndpoint": 200,
+  "releasePrepCommit": "98576f311e1ca43e094984065ad0047a399867ea",
+  "v7ToV8Upgrade": {
+    "genericOldCacheCleanup": true,
+    "oldCachePolicy": "all cache keys except cet6-focus-shell-v8 are deleted during activate",
+    "currentV8ObservedOnline": true,
+    "v7ProductDiff": "only public/sw.js cache name bump; no application product files changed"
+  },
+  "warmCacheOffline": { "status": "PASS", "test": "tests/e2e/offline-preview.spec.ts", "scope": "warm-cache reload; no cold-install claim" },
+  "noSecondBump": true
+}

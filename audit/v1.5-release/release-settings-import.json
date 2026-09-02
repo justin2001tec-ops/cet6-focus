@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "online": {
+    "browserSurface": "fresh temporary audit tab",
+    "visibleImportButtonCount": 1,
+    "accessibleName": "导入 JSON 备份",
+    "buttonFocusable": true,
+    "nativeFileInputCount": 1,
+    "nativeFileInputHidden": true,
+    "multiple": false,
+    "pointerFileChooser": "PASS",
+    "cancel": { "stateUnchanged": true, "noError": true, "noStaleModal": true },
+    "validImport": { "parse": "PASS", "summary": "2219 张卡片 · 16 条复习记录 · 27 个学习会话", "confirmationModal": "PASS" },
+    "malformedJson": { "notice": "无法读取这个 JSON 文件。现有数据没有改变。", "existingDataUnchanged": true, "crashed": false },
+    "invalidSchema": { "schemaVersion": 999, "notice": "不支持的备份版本：999", "existingDataUnchanged": true, "crashed": false },
+    "confirmRestore": "PASS",
+    "reloadAndReconciliation": "PASS"
+  },
+  "keyboard": {
+    "localCrossBrowserE2E": "PASS",
+    "projects": ["Chromium", "Mobile Chromium", "WebKit"],
+    "onlineBrowserWrapper": "not used for keyboard file selection; local E2E is the authoritative keyboard evidence"
+  }
+}

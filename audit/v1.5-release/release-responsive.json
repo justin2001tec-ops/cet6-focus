@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "viewports": [
+    { "size": "390x844", "route": "#/study", "badElements": 0, "horizontalOverflow": false },
+    { "size": "430x932", "route": "#/word/cet6-abandon", "badElements": 0, "horizontalOverflow": false },
+    { "size": "844x390", "route": "#/study", "badElements": 0, "horizontalOverflow": false },
+    { "size": "768x1024", "route": "#/settings", "badElements": 0, "horizontalOverflow": false },
+    { "size": "1440x900", "route": "#/word/cet6-abandon", "badElements": 0, "horizontalOverflow": false },
+    { "size": "1920x1080", "route": "#/settings", "badElements": 0, "horizontalOverflow": false }
+  ]
+}

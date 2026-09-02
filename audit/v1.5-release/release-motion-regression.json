@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "onlineStudy": { "ratings": [1, 2, 3], "stageTransition": "recall -> core meaning", "undoRestored": "abolish / 1 of 31 / recall" },
+  "onlinePhysicalSheet": { "open": true, "close": true, "focusRestored": true },
+  "onlineReducedMotion": { "enabled": true, "dataMotionProfile": "reduced", "restored": true },
+  "onlineRapidNavigation": { "homeToStudy": true, "singleMotionRoute": true },
+  "consoleErrorsAndWarnings": 0,
+  "historicalTransient": { "webKit": "isolated retry PASS", "r1ChromiumMotion": "isolated retry PASS", "finalSerial": "98 passed / 25 skipped / 0 failed" }
+}

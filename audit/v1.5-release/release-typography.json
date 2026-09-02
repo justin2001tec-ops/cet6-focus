@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "actionableAudioLabels": { "minimumFontSizePx": 12, "targetMet": true },
+  "study": { "viewport": "390x844", "label": "播放发音", "fontSizePx": 12, "heightPx": 44, "withinViewport": true, "overflow": false },
+  "wordDetail": { "viewport": "390x844", "iconControl": "40x40", "textControl": "30x89", "textFontSizePx": 12, "withinViewport": true, "horizontalOverflow": false },
+  "responsiveViewports": ["390x844", "430x932", "844x390", "768x1024", "1440x900", "1920x1080"],
+  "layoutResult": "0 bad element bounds, no horizontal overflow, no clipping, no overlap, no unexpected wrapping"
+}

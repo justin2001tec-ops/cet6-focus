@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "onlineConsole": { "error": 0, "warning": 0 },
+  "onlineCriticalNetwork": { "persistent5xx": 0, "requiredHttpAssets": "PASS" },
+  "localFullSerial": { "passed": 98, "skipped": 25, "failed": 0 },
+  "notes": ["The prior stale cached root referenced retired asset names; a cache-busted fresh root resolved current Bfw15ud3.js and DJDHDz-s.css, both HTTP 200."]
+}

@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "productionRoute": "#/dictation",
+  "fixtureInjection": false,
+  "heading": "听写，把认识变成会写。",
+  "runtimeState": { "nonEmpty": true, "progress": "1 / 10", "input": "输入英文拼写", "submit": "提交 Enter" },
+  "deterministicE2EFixture": { "status": "PASS", "source": "local full serial E2E" }
+}

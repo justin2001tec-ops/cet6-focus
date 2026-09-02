@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "url": "https://justin2001tec-ops.github.io/cet6-focus/",
+  "observedOn": "2026-09-02",
+  "root": { "status": 200, "bytes": 672 },
+  "rootAssets": {
+    "manifest": { "path": "/manifest.webmanifest", "status": 200 },
+    "js": { "path": "/cet6-focus/assets/index-Bfw15ud3.js", "status": 200, "bytes": 603689, "contentType": "text/javascript" },
+    "css": { "path": "/cet6-focus/assets/index-DJDHDz-s.css", "status": 200, "bytes": 92719, "contentType": "text/css" },
+    "icon": { "path": "/icon.svg", "status": 200 }
+  },
+  "serviceWorker": {
+    "path": "/sw.js",
+    "status": 200,
+    "cacheName": "cet6-focus-shell-v8",
+    "architectureMarkers": ["APP_SHELL", "skipWaiting", "clients.claim", "caches.match", "caches.delete"]
+  },
+  "vocabulary": {
+    "path": "/data/cet6-vocab.v1.json",
+    "status": 200,
+    "count": 2219,
+    "contextApproved": 990,
+    "provenance": "100%",
+    "localFrozenSha256": "3d2586557c3e979d588ce797f9f50271c98b577df0254027e41692f23c34ffc4",
+    "onlineRawSha256": "bf9fef2b9e9fa356254186c015bca3366210940058a5ec883fb55d6071e5f96f",
+    "canonicalRecordsIdentical": true
+  },
+  "backgrounds": {
+    "status": "PASS",
+    "responses": "28/28 HTTP 200",
+    "formats": ["avif", "webp"],
+    "sceneCount": 14,
+    "sceneIds": ["plateau-kiang-01", "altiplano-01", "altiplano-02", "ladakh-plateau-01", "pangong-01", "aurora-01", "aurora-02", "stars-02", "waterfall-02", "waterfall-03", "penguins-01", "daisy-02", "lighthouse-02", "volcano-02"]
+  }
+}
