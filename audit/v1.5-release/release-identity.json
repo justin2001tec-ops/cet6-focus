@@ -19,7 +19,7 @@
     "rejected": ["P1-CAND-001"],
     "backlog": ["Safari true browser/page zoom", "Windows hash normalization"]
   },
-  "releaseEvidenceCommitSha": "PENDING_FINAL_REPORT_COMMIT_SHA",
+  "releaseEvidenceCommitSha": "155a2276b4c135092219f93867cc90c772beae76",
   "annotatedTag": {
     "name": "v1.5.0",
     "objectSha": "PENDING_TAG_OBJECT_SHA",

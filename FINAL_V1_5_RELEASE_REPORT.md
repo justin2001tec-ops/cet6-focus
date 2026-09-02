@@ -13,7 +13,7 @@ Date: 2026-09-02
 - Final PR Head after the shell-v8 release-prep bump: `98576f311e1ca43e094984065ad0047a399867ea`
 - Shell-v8 release-prep commit: `98576f311e1ca43e094984065ad0047a399867ea`
 - Squash merge SHA: `31c5506f8df172c11f947090f89eca5d3edd1524`
-- Release evidence commit SHA: recorded in `audit/v1.5-release/release-identity.json` and the final delivery response after commit creation.
+- Release evidence commit SHA: `155a2276b4c135092219f93867cc90c772beae76`.
 - Annotated `v1.5.0` tag object SHA and target commit SHA: recorded after tag creation in the final delivery response; the target is the final report/evidence commit, not the accepted Head, PR Head, or squash SHA.
 
 ## Scope and decisions
@@ -69,4 +69,3 @@ The report/evidence commit contains only `FINAL_V1_5_RELEASE_REPORT.md` and `aud
 ## Tag and GitHub Release
 
 The annotated `v1.5.0` tag is created only after this report/evidence commit and the report-only main CI/Pages checks are Green. Historical tags `v1.0.0` through `v1.4.1` are verified unchanged. The final annotated tag object SHA, peeled target SHA, and published GitHub Release URL are recorded in the final delivery response and in the release identity evidence after the tag gate.
-
