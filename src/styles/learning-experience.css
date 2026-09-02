@@ -112,7 +112,7 @@
 .learning-word-header__copy { min-width: 0; }
 .learning-word-header h1 { max-width: 100%; color: var(--learning-photo-primary); font-family: var(--font-learning-word); font-size: clamp(52px, 6vw, 88px); font-weight: 600; letter-spacing: -.04em; line-height: .98; }
 .learning-word-header__phonetic { display: flex; align-items: center; gap: 12px; margin-top: 16px; color: var(--learning-photo-secondary); font-family: var(--font-learning-word); font-size: 19px; }
-.learning-shell .audio-button { display: inline-flex; align-items: center; gap: 7px; min-width: 44px; min-height: 44px; padding: 0 13px; border: 1px solid rgba(242, 255, 245, .24); border-radius: 99px; background: rgba(9, 21, 15, .3); color: var(--learning-ink-soft); font-size: 11px; font-weight: 700; transition: transform var(--motion-fast) var(--ease-spring), background var(--motion-fast) ease, color var(--motion-fast) ease; }
+.learning-shell .audio-button { display: inline-flex; align-items: center; gap: 7px; min-width: 44px; min-height: 44px; padding: 0 13px; border: 1px solid rgba(242, 255, 245, .24); border-radius: 99px; background: rgba(9, 21, 15, .3); color: var(--learning-ink-soft); font-size: 12px; font-weight: 700; transition: transform var(--motion-fast) var(--ease-spring), background var(--motion-fast) ease, color var(--motion-fast) ease; }
 .learning-shell .audio-button:hover { background: rgba(191, 231, 202, .16); color: var(--learning-ink); }
 .learning-shell .audio-button:active { transform: scale(.97); }
 

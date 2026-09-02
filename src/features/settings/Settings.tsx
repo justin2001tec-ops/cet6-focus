@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Download, Image, LockKeyhole, Moon, RefreshCw, RotateCcw, Save, ShieldCheck, Sun, Upload, Volume2 } from 'lucide-react'
 import { useApp } from '@/app/providers'
 import { PageHeader, SectionHeader } from '@/components/AppShell'
@@ -15,6 +15,13 @@ export function Settings() {
   const [resetText, setResetText] = useState('')
   const [resetOpen, setResetOpen] = useState(false)
   const [importSummary, setImportSummary] = useState<{ payload: Awaited<ReturnType<typeof createBackup>>; summary: string } | null>(null)
+
+  useEffect(() => {
+    const input = fileRef.current
+    if (!input) return
+    input.tabIndex = -1
+    input.setAttribute('aria-hidden', 'true')
+  }, [])
 
   async function exportData() { downloadBackup(await createBackup()); showNotice('备份已生成，文件只包含学习数据，不包含完整静态词库。') }
   async function onImport(file: File) { try { const parsed = validateBackup(JSON.parse(await file.text())); if (!parsed.ok) showNotice(parsed.error); else setImportSummary({ payload: parsed.payload, summary: parsed.summary }) } catch { showNotice('无法读取这个 JSON 文件。现有数据没有改变。') } }
