@@ -1,8 +1,10 @@
 # CET6 Focus v1.5 Quality Hardening — Final Report
 
-Status: `READY_FOR_REVIEW`
+Status: `R1 PASS`
 
-This report records the authorized Scope Approval, Planning Merge, and Quality Hardening Implementation phase. The implementation remains PR-only: no implementation merge, deployment, v1.5 tag, or GitHub Release is authorized in this phase.
+Merge readiness: `READY_FOR_FINAL_REVIEW`
+
+This report records the authorized Scope Approval, Planning Merge, Quality Hardening Implementation, and R1 Settings Import Accessibility Semantic Cleanup phases. The implementation remains PR-only: no implementation merge, deployment, v1.5 tag, or GitHub Release is authorized in this phase.
 
 ## 1. Execution boundary
 
@@ -40,7 +42,7 @@ The shared audio control and the learning-shell audio control now use `12px`. No
 
 ## 8. P2-A11Y-001 result
 
-The visible `导入 JSON 备份` button remains the sole semantic entry. After mount, the hidden file input is explicitly removed from the tab sequence (`tabIndex=-1`) and accessibility tree (`aria-hidden=true`). The click/file-chooser path and the existing import/backup behavior remain unchanged.
+Before R1, the visible `导入 JSON 备份` button was the sole intended semantic entry, while a post-mount effect removed the native input from the tab sequence and accessibility tree. R1 replaces that imperative setup with a declarative native `hidden` file input; the visible button and the existing click/file-chooser path remain unchanged.
 
 ## 9. P3-COVERAGE-001 result
 
@@ -78,8 +80,25 @@ Nine screenshots were captured across Chromium, Mobile, and WebKit Readability f
 
 The focused hardening suite passed 9/9 across Chromium, Mobile, and WebKit Readability. The final full `pnpm test:e2e:serial` run passed 98, skipped 25 by existing project/test selection rules, and failed 0. It covered Chromium, Mobile, WebKit Motion, and WebKit Readability, including the existing Backup/Import regression and the new hardening tests. A first full run had one WebKit click-stability timeout; the isolated retry passed, and a second full run was clean.
 
-## 18. Delivery boundary
+## R1 Settings Import Accessibility Semantic Cleanup
+
+- Before: `useEffect` applied `tabIndex=-1` and `aria-hidden=true` after mount.
+- After: `Settings.tsx` declares the native file input as `hidden` on first render and removes the `sr-only` class from that input.
+- `useEffect` removed: **YES**. No `aria-hidden`, `tabIndex=-1`, or mount-time DOM mutation remains for the file input.
+- Visible semantic trigger: exactly **1**, the named `导入 JSON 备份` button; it remains visible and focusable.
+- Keyboard trigger: **PASS**; Enter opened a real Playwright filechooser in Chromium, Mobile, and WebKit Readability.
+- Pointer/filechooser: **PASS**; pointer activation opened a real Playwright filechooser in all three focused projects.
+- Focused E2E: **9/9 PASS** across Chromium, Mobile, and WebKit Readability.
+- Backup/Restore regression: **PASS** in the full serial suite; no backup runtime, schema, validation, reload, or database code was changed.
+- Final local serial E2E: **98 passed / 25 skipped / 0 failed**. The first R1 run exposed one existing Chromium Motion visibility flake; the isolated retry passed, and the final full rerun was clean. The earlier WebKit transient history remains recorded above.
+- GitHub Actions for the R1 implementation Head: both duplicate `quality` and both duplicate `e2e` jobs passed. The final documentation Head was revalidated separately before delivery.
+
+## 18.5. R1 freeze confirmation
+
+Vocabulary remained 2,219 entries; quality-approved Context remained 990 (44.6%); approved provenance remained 100%. Typography remained at the already-passed 12px threshold. Weak/Dictation fixture logic remained unchanged. Motion, Study, Review, FSRS, ReviewLog, Context, vocabulary, database schema, PWA, and unrelated CSS/product files were not modified in R1.
+
+## 19. Delivery boundary
 
 The implementation branch was pushed and Implementation PR #7 was opened for review: https://github.com/justin2001tec-ops/cet6-focus/pull/7. The Implementation PR must remain `OPEN`. This phase ends before merge, deployment, `v1.5.0` tag creation, and GitHub Release creation.
 
-Implementation head at report creation: `450b0dc`.
+R1 implementation code/test head: `2fd20b5`. The final PR Head is the documentation commit shown by the PR after the final GitHub revalidation. No merge, deployment, `v1.5.0` tag, or GitHub Release was performed.
