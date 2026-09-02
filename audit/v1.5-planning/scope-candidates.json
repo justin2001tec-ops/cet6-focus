@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "auditDate": "2026-08-28",
   "baseline": "v1.4.1",
-  "status": "RANKED_FOR_SCOPE_REVIEW",
-  "rankingPolicy": "P0 is reserved for a confirmed production blocker. Known Audio label ≈11px remains P2. Candidate priorities are not implementation authorization.",
+  "status": "FINALIZED_P2_ONLY",
+  "rankingPolicy": "Final Scope Decision: P2-only Quality Hardening. Approved P1=0, Approved Product P2=2, Approved QA P2=1. Candidate status is not implementation authorization.",
   "candidates": [
     {
       "id": "P0-NONE",
@@ -16,22 +16,22 @@
     {
       "id": "P1-CAND-001",
       "priority": "P1_CANDIDATE_NOT_ACCEPTED",
-      "status": "HOLD_FOR_SCOPE_REVIEW",
+      "status": "REJECTED_THIS_RELEASE",
       "title": "Learning-surface reading contract",
       "problem": "Study moves between recall, core meaning and detail; its heading/kicker/audio scale is coherent but not yet documented as a cross-surface reading contract.",
       "evidence": ["study-recall-mobile.png", "study-meaning-mobile.png", "study-detail-mobile.png", "typography-audit.json"],
       "userImpact": "Could reduce cognitive friction if real users report that supporting labels or semantic blocks compete with the word.",
-      "proposedDirection": "If promoted, define a small presentation-token contract for learning surfaces only; keep the Study state machine, Motion, FSRS and Context unchanged.",
+      "proposedDirection": "Do not carry this candidate into v1.5; any future real-user evidence must start a separate proposal.",
       "likelyFilesNextRound": ["learning presentation styles/components", "focused readability tests", "screenshot/a11y fixtures"],
       "frozenSystems": ["Motion Engine", "PhysicalSheet", "FSRS", "Context data", "Study state machine"],
-      "testPlan": ["real WebKit/iOS review", "200% browser zoom", "reduced motion", "semantic user review", "serial E2E"],
+      "testPlan": ["separate future semantic user review only if new evidence exists"],
       "risk": "Could become an unnecessary visual rewrite if promoted without user evidence.",
-      "decision": "Do not include as an accepted P1 until Scope review confirms a measurable comprehension problem."
+      "decision": "REJECTED_THIS_RELEASE: Study Recall / Meaning / Detail is clear, no real-user evidence shows supporting-label competition, and promoting this would risk unnecessary Study redesign."
     },
     {
       "id": "P2-TYPO-001",
       "priority": "P2",
-      "status": "RECOMMENDED_BACKLOG",
+      "status": "APPROVED_FOR_V1_5",
       "title": "Audio label ≈11px and small-label consistency",
       "problem": "Study AudioButton is 11px; Word Detail counterpart is 10px; supporting labels span 10–13px.",
       "evidence": ["typography-audit.json", "study-detail-mobile.png", "word-detail-mobile.png"],
@@ -39,14 +39,14 @@
       "proposedDirection": "Audit and, only if confirmed, adjust a bounded type token set; do not change page composition.",
       "likelyFilesNextRound": ["focused typography styles", "focused visual regression tests"],
       "frozenSystems": ["Motion Engine", "FSRS", "Context data", "PWA shell-v7"],
-      "testPlan": ["WebKit", "200% real browser zoom", "contrast", "long labels", "reduced motion"],
+      "testPlan": ["WebKit", "contrast", "long labels", "reduced motion"],
       "risk": "Over-enlargement may weaken the quiet hierarchy or cause wrapping.",
-      "decision": "Recommended P2; explicitly not P1."
+      "decision": "APPROVED_FOR_V1_5: narrow small actionable-label typography only; explicitly not a whole-site Typography System rewrite."
     },
     {
       "id": "P2-A11Y-001",
       "priority": "P2",
-      "status": "RECOMMENDED_BACKLOG",
+      "status": "APPROVED_FOR_V1_5",
       "title": "Hidden import input accessible name",
       "problem": "The 1x1 hidden file input in Settings has no independent accessible name even though the visible trigger is labeled.",
       "evidence": ["interaction-audit.json", "accessibility-audit.json"],
@@ -55,26 +55,28 @@
       "likelyFilesNextRound": ["Settings input markup", "focused accessibility test"],
       "frozenSystems": ["DB/backup behavior", "PWA shell-v7"],
       "testPlan": ["axe/manual tree review", "keyboard", "file-picker trigger", "WebKit"],
-      "risk": "Changing hidden-control semantics could affect the trigger if not tested."
+      "risk": "Changing hidden-control semantics could affect the trigger if not tested.",
+      "decision": "APPROVED_FOR_V1_5: make the accessibility tree expose one clear import semantic entry while preserving import, backup, restore, file-picker trigger and DB behavior."
     },
     {
       "id": "P2-RESP-001",
       "priority": "P2",
-      "status": "VALIDATION_BACKLOG",
+      "status": "CLOSED_FOR_CHROMIUM_BACKLOG_FOR_SAFARI",
       "title": "Real browser zoom validation",
       "problem": "Synthetic CSS zoom:2 produced a horizontal signal in Study, but it is not browser page zoom.",
       "evidence": ["responsive-audit.json"],
       "userImpact": "Unknown until real browser zoom and assistive-technology review are run.",
-      "proposedDirection": "Validate first; only then consider a narrow wrap/layout adjustment if a real user-facing defect is confirmed.",
-      "likelyFilesNextRound": ["browser QA fixture", "possibly focused learning layout styles"],
+      "proposedDirection": "No Chromium product scope: v1.4.1 true Chromium 200% browser zoom is already PASS. Retain only Safari true browser/page zoom as cross-platform QA backlog; Safari is NOT_AVAILABLE on Windows.",
+      "likelyFilesNextRound": ["Safari cross-platform QA fixture only"],
       "frozenSystems": ["Motion Engine", "Study state machine", "PWA shell-v7"],
-      "testPlan": ["Chromium real 200% zoom", "WebKit/iOS", "keyboard", "long-word fixture"],
-      "risk": "Treating the synthetic signal as a defect would create unnecessary layout churn."
+      "testPlan": ["Safari true browser/page zoom when macOS/Safari is available"],
+      "risk": "Treating the synthetic signal as a defect would create unnecessary layout churn.",
+      "decision": "CLOSED_FOR_CHROMIUM; CROSS_PLATFORM_QA_BACKLOG_FOR_SAFARI; do not enter v1.5 Product Scope."
     },
     {
       "id": "P2-QA-001",
       "priority": "P2",
-      "status": "TOOLING_BACKLOG",
+      "status": "SEPARATE_TOOLING_BACKLOG",
       "title": "Windows artifact hash normalization",
       "problem": "A prior deterministic artifact test invocation observed raw line-ending hash drift before a clean rerun.",
       "evidence": ["performance-observations.json"],
@@ -83,30 +85,33 @@
       "likelyFilesNextRound": ["test/tooling only"],
       "frozenSystems": ["all product systems"],
       "testPlan": ["Windows and Linux CI", "clean checkout", "repeat deterministic rebuild"],
-      "risk": "Changing fixture bytes could obscure provenance if done without a policy."
+      "risk": "Changing fixture bytes could obscure provenance if done without a policy.",
+      "decision": "SEPARATE_TOOLING_BACKLOG: do not enter the v1.5 Product PR; use a separate QA/Tooling PR if needed."
     },
     {
       "id": "P3-COVERAGE-001",
-      "priority": "P3",
-      "status": "OPTIONAL",
+      "priority": "P2_QA",
+      "status": "APPROVED_FOR_V1_5_QA",
       "title": "Non-empty Weak Words and Dictation audit fixtures",
       "problem": "Required screenshots intentionally capture the baseline first-use empty states; non-empty states are not represented in this planning screenshot set.",
       "evidence": ["weak-words-mobile.png", "dictation-mobile.png"],
       "userImpact": "Future visual audits could cover more of the real task surface.",
-      "proposedDirection": "Add isolated deterministic fixtures in a future QA pass, without changing runtime data or product behavior.",
+      "proposedDirection": "Add isolated deterministic test-only fixtures and screenshots for future visual regression, without changing runtime data or product behavior.",
       "likelyFilesNextRound": ["test fixtures and screenshots only"],
       "frozenSystems": ["FSRS", "DB", "Vocabulary", "PWA shell-v7"],
       "testPlan": ["serial isolated E2E", "no shared user data"],
-      "risk": "Fixture setup can become brittle if it starts depending on implementation details."
+      "risk": "Fixture setup can become brittle if it starts depending on implementation details.",
+      "decision": "APPROVED_FOR_V1_5_QA: test-only, isolated, deterministic and resettable; never write user DB or alter FSRS/ReviewLog/Context/runtime seed."
     }
   ],
   "recommendedScope": {
-    "confirmedP1Count": 0,
-    "p1CandidatesHeld": ["P1-CAND-001"],
-    "p2": ["P2-TYPO-001", "P2-A11Y-001", "P2-RESP-001"],
-    "optionalP2": ["P2-QA-001"],
-    "p3": ["P3-COVERAGE-001"],
-    "rule": "最多 1 个经 Scope review 批准的 P1；否则以 2–3 个窄 P2 hardening items 组成 v1.5，不扩大到全站重做。"
+    "finalScopeDecision": "P2-ONLY QUALITY HARDENING",
+    "approvedP1Count": 0,
+    "approvedProductP2": ["P2-TYPO-001", "P2-A11Y-001"],
+    "approvedQaP2": ["P3-COVERAGE-001"],
+    "rejectedCandidates": ["P1-CAND-001"],
+    "backlogOnly": ["P2-RESP-001", "P2-QA-001"],
+    "rule": "v1.5 固化为 0 P1、2 Product P2、1 QA P2；Safari true zoom 与 Windows hash normalization 仅保留 backlog，不进入本次 Product Scope。"
   },
   "explicitlyRejectedScope": [
     "Home/Study 全面重做",

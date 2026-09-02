@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "auditDate": "2026-08-28",
   "baseline": "v1.4.1",
-  "status": "PASS_WITH_P2_SEMANTIC_FOLLOW_UP",
+  "status": "PASS_WITH_APPROVED_P2",
   "method": "DOM accessible-name heuristic with associated-label resolution, keyboard focus reachability, reduced-motion media context and forced-colors media context. This is not a substitute for VoiceOver/NVDA/manual WebKit review.",
   "results": [
     {
       "area": "Control naming",
-      "status": "PASS_WITH_ONE_FOLLOW_UP",
+      "status": "PASS_WITH_APPROVED_P2",
       "observed": "Home, Study, Vocabulary, Word Detail, Weak Words and Dictation visible controls had names after resolving aria-label, aria-labelledby, title and associated labels. Settings had one independent hidden file input without a name.",
       "evidence": "interaction-audit.json A11Y-P2-001"
     },
@@ -46,7 +46,8 @@
       "id": "A11Y-P2-001",
       "priority": "P2",
       "title": "Hidden file input name",
-      "recommendedValidation": "Run the actual file-picker trigger with a screen reader and confirm the input is either named or intentionally hidden from the accessibility tree."
+      "recommendedValidation": "Run the actual file-picker trigger with a screen reader and choose Path A (hidden input not independently exposed) or Path B (explicit accessible name). Preserve import, backup, restore, file-picker trigger and DB behavior.",
+      "disposition": "APPROVED_FOR_V1_5"
     }
   ],
   "confirmedP0": []

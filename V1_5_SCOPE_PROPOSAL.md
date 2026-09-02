@@ -1,20 +1,20 @@
 # CET6 Focus — v1.5 Scope Proposal
 
-状态：Planning only；等待 Scope review
+状态：Scope Finalized；等待最终用户确认
 基线：v1.4.1 frozen / `main` = `574bee5b1b61ea48b77032b946bcd570f1b4df85`
 分支：`planning/v1.5-product-quality-audit`
 
-本提案只定义下一阶段的候选范围，不授权本轮实现。完整排序见 [audit/v1.5-planning/scope-candidates.json](audit/v1.5-planning/scope-candidates.json)。
+本提案已固化 v1.5 Phase 0 的最终 Scope Decision，但不授权本轮实现。完整排序见 [audit/v1.5-planning/scope-candidates.json](audit/v1.5-planning/scope-candidates.json)。
 
 ## Scope principles
 
 - v1.4.1 已正式冻结；没有生产 P0 就不创建 v1.4.1 R2/hotfix/polish。
 - `Audio label ≈11px` 按交接约束保持 P2，不能为了填满 P1 而重新分级。
-- 任何候选 priority 都不是实现授权；必须在 Scope review 后另开实现轮。
-- v1.5 推荐最多 1 个经批准的 P1，配合相关 P2；本提案当前确认的 P1 数为 0。
+- 最终 Approved P1 = 0；不再保留任何未决 P1 候选。任何未来真实用户问题必须重新开独立 proposal。
+- 最终 Approved Product P2 = 2，Approved QA P2 = 1；本轮不开始实现，下一阶段必须另开实现轮。
 - Motion Engine、PhysicalSheet、FSRS、Context data、Vocabulary、Study state machine、DB、PWA shell-v7、路由和 release history 全部冻结。
 
-## Candidate P1 — held, not accepted
+## Rejected candidate — P1-CAND-001
 
 ### P1-CAND-001: Learning-surface reading contract
 
@@ -22,31 +22,31 @@
 
 **Evidence**：Study 三状态截图与测量显示：recall h1 约 42.9px / kicker 11px；meaning/detail h1 约 35.1px / kicker 12px；Audio label 约 11px；三状态均无横向溢出。
 
-**User impact**：只有真实用户报告支持性文字竞争主要单词、释义或回忆动作时，才有可能产生足够影响进入 P1。
+**User impact**：当前没有真实用户证据证明支持性文字竞争主要单词、释义或回忆动作。
 
-**Proposed direction**：定义一个局部的 learning presentation token contract，明确主词、释义、例句、kicker、音频标签的相对层级；不改变 Study state machine、Motion、FSRS 或 Context。
+**Proposed direction**：本 release 不推进 learning presentation contract；如果未来出现真实用户证据，重新开独立 proposal，不从本 PR 直接晋级。
 
 **Likely files**：未来可能涉及 learning presentation styles/components、针对性 readability tests、截图/a11y fixtures；本轮不触碰。
 
 **Frozen systems**：Motion Engine、PhysicalSheet、FSRS、Context data、Study state machine、DB、PWA shell-v7。
 
-**Test plan**：真实 WebKit/iOS、真实 Chromium 200% page zoom、Reduced Motion、contrast、长单词/长例句、serial E2E 与语义用户 review。
+**Test plan**：无 v1.5 实现计划；未来独立 proposal 若重新提出，再定义语义用户 review 与相关 gate。
 
 **Risk**：没有用户证据时，所谓“reading contract”很容易变成全站视觉重做。
 
-**Decision**：HOLD。除非下一轮 Scope review 提供明确语义/用户证据，否则不计入 v1.5 approved P1。
+**Decision**：`REJECTED_THIS_RELEASE`。当前 Study Recall / Meaning / Detail 层级清楚，没有严重可读性或横向溢出问题；继续推进会带来不必要的 Study redesign 风险。v1.5 Approved P1 = 0。
 
-## Recommended P2 package
+## Approved Product P2 package
 
 ### P2-TYPO-001 — Audio label ≈11px + small-label consistency
 
 - **Problem**：Study AudioButton 为 11px；Word Detail 对应控件为 10px；kicker、metadata、small hint 分布在约 10–13px。
 - **Evidence**：`typography-audit.json` 与 Study/Word Detail 截图。
 - **User impact**：二级文字在重复学习时可能不够容易扫读。
-- **Direction**：只审阅少数 typography token；若测试支持，再做窄范围调整，不重排页面。
+- **Direction**：只审阅 Audio label 与承担实际操作语义且明显低于 12px 的 actionable labels；若测试支持，再做窄范围调整，不重排页面。
 - **Likely files**：focused typography styles 与 focused visual regression tests。
 - **Frozen**：Motion、FSRS、Context、Study state machine、PWA shell-v7。
-- **Test plan**：WebKit、真实 200% zoom、contrast、长文案、Reduced Motion。
+- **Test plan**：WebKit、contrast、长文案、Reduced Motion；Chromium 200% browser zoom 已由 v1.4.1 release evidence 关闭。
 - **Risk**：字号增大可能削弱 quiet hierarchy 或导致换行。
 
 ### P2-A11Y-001 — Hidden import input accessible name
@@ -60,26 +60,33 @@
 - **Test plan**：axe/manual tree review、keyboard、file-picker trigger、WebKit。
 - **Risk**：错误改变隐藏语义可能影响可见按钮触发。
 
+- **Disposition**：`APPROVED_FOR_V1_5`。在 accessibility tree 中只保留一个清楚的 import 语义入口；选择 Path A 或 Path B，但 import/backup/restore/file-picker trigger/DB behavior 全部冻结。
+
+## Backlog-only dispositions
+
 ### P2-RESP-001 — Real browser zoom validation
 
 - **Problem**：CSS `zoom: 2` stress signal 报告横向宽度 640px，但这不是浏览器 page zoom。
 - **Evidence**：responsive audit；正常 390/430/844/852/1112/1440/1920 测试均无横向溢出。
-- **User impact**：真实缩放影响目前未知，必须先验证。
-- **Direction**：先建立真实 Chromium/WebKit zoom evidence；只有复现真实用户问题才允许最小布局修补。
-- **Likely files**：browser QA fixture；是否改产品 CSS 取决于验证结果。
+- **User impact**：v1.4.1 已有 True Chromium Browser Zoom = 200% PASS；Safari true browser/page zoom 在 Windows 上 NOT_AVAILABLE。
+- **Direction**：从 v1.5 Product Scope 移出；只保留 Safari cross-platform QA backlog。
+- **Likely files**：未来 Safari cross-platform QA fixture only，不进入本次产品实现。
 - **Frozen**：Motion、Study state machine、PWA shell-v7。
-- **Test plan**：真实 200% Chromium、WebKit/iOS、keyboard、long-word fixture。
+- **Test plan**：macOS/Safari 可用时验证 Safari true browser/page zoom。
 - **Risk**：误把合成信号当缺陷会引入不必要布局 churn。
+- **Disposition**：`CLOSED_FOR_CHROMIUM` / `CROSS_PLATFORM_QA_BACKLOG_FOR_SAFARI`；不进入 v1.5 Product Scope。
 
-## Optional / separate backlog
+## Approved QA P2 and separate tooling backlog
 
 ### P2-QA-001 — Windows raw-file hash normalization
 
-现象是一次 Windows deterministic artifact invocation 的 raw line-ending hash drift，随后同一未改动树重跑 14/14 files、34/34 tests PASS。它应作为测试工具与 CI 策略单独评审，不能混入产品 UI PR，也不改变任何产品数据或 provenance。
+现象是一次 Windows deterministic artifact invocation 的 raw line-ending hash drift，随后同一未改动树重跑 14/14 files、34/34 tests PASS。它保持 `SEPARATE_TOOLING_BACKLOG`，不能混入产品 UI PR，也不改变任何产品数据或 provenance。
 
-### P3-COVERAGE-001 — Non-empty audit fixtures
+### P3-COVERAGE-001 — Non-empty Weak Words / Dictation fixtures（QA P2）
 
-本轮截图按要求记录 Weak Words 与 Dictation 的 first-use empty state。未来可在隔离 context 中增加已学习词、拼写错误与薄弱词样例，以扩大截图覆盖；不得写入用户运行时数据库，也不得通过 fixture 改写 FSRS 结论。
+本轮截图按要求记录 Weak Words 与 Dictation 的 first-use empty state。批准在 v1.5 QA 范围中增加非空内容，但严格限定为 isolated、deterministic、test-only、resettable fixtures、screenshots 与 visual regression；不得写入用户运行时数据库，也不得改 IndexedDB 默认数据、FSRS、ReviewLog、Context 或用户 runtime seed。
+
+**Disposition**：`APPROVED_FOR_V1_5_QA`；priority 固化为 `P2_QA`。
 
 ## Explicitly rejected scope
 
@@ -95,12 +102,20 @@
 - PWA shell-v7、Offline 资源、部署链路改造
 - 后端、账号、云同步、AI
 
-## Recommended scope decision
+## Final scope decision
 
-**当前建议：批准 0 个 P1、先评审 3 个窄 P2（Typography、hidden input semantics、real browser zoom validation），P2-QA-001 作为独立工具 backlog，P3 fixture optional。**
+**FINAL SCOPE DECISION: P2-ONLY QUALITY HARDENING**
 
-如果 Scope review 认为 learning-surface reading contract 有明确用户证据，最多把它作为唯一 P1 加入；仍需保持所有冻结系统不变，并为该 P1 建立独立测试计划。否则 v1.5 以小范围质量 hardening 为主，不做“为了新版本而全站改造”。
+```text
+Approved P1 = 0
+Approved Product P2 = 2
+Approved QA P2 = 1
+```
+
+Approved Product P2：`P2-TYPO-001`、`P2-A11Y-001`。Approved QA P2：`P3-COVERAGE-001`。Rejected：`P1-CAND-001 Learning-surface reading contract`。Backlog only：Safari true browser/page zoom、Windows raw-file hash normalization。
+
+本决策已结束 P1 犹豫；不再保留未决 P1 表述。
 
 ## Delivery boundary
 
-本轮仅提交审计与提案，PR 保持 OPEN；不合并、不部署、不创建 v1.5 tag、不创建 GitHub Release。等待用户/评审批准 scope 后，再启动单独的 v1.5 实现任务。
+本轮仅提交审计与最终 Scope Decision，PR 保持 OPEN；不合并、不部署、不创建 v1.5 tag、不创建 GitHub Release、不开始 implementation。等待最终用户确认后，才从 latest `main` 创建 `product/v1.5-quality-hardening`；禁止在 planning branch 上写产品代码。

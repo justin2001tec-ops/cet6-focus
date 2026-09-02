@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "auditDate": "2026-08-28",
   "baseline": "v1.4.1",
-  "status": "PASS_WITH_P2_BACKLOG",
+  "status": "PASS_WITH_APPROVED_P2",
   "method": "Chromium computed-style samples from isolated local sessions; semantic review is recorded separately from automated measurements.",
   "measurements": [
     {
@@ -48,9 +48,9 @@
       "title": "Audio label ≈11px",
       "observed": "Study recall/meaning/detail 的 AudioButton 为 11px；Word Detail 的同类次级控件为 10px。",
       "evidence": ["study-recall-mobile.png", "study-meaning-mobile.png", "study-detail-mobile.png", "word-detail-mobile.png"],
-      "disposition": "按既定交接要求保留为已接受 P2 typography backlog，不升级为 P0/P1。",
+      "disposition": "APPROVED_FOR_V1_5：范围只包括承担操作语义的 Audio label 与 critical small actionable labels；不升级为 P0/P1。",
       "proposedDirection": "下一轮评审 12–13px 的最小可读标签 token，并验证不会破坏安静层级。",
-      "validationNeeded": "真实 iOS/WebKit、200% 浏览器缩放、对比度与短文案回归。"
+      "validationNeeded": "真实 iOS/WebKit、对比度与短文案回归；Chromium 200% browser zoom 已由 v1.4.1 release evidence 关闭。"
     },
     {
       "id": "TYPO-P2-002",
@@ -58,8 +58,8 @@
       "title": "Small-label family consistency",
       "observed": "同一产品中 kicker 约 11–12px、设置小提示约 10px、page description 13px；各自有明确层级，但跨 surface 的 token 关系值得统一审查。",
       "evidence": ["study-recall-mobile.png", "settings-mobile.png", "vocabulary-mobile.png"],
-      "disposition": "一致性 backlog，不是已确认的阅读阻塞。",
-      "proposedDirection": "集中审阅 metadata、kicker、chip、secondary/nav label 的最小字号与 line-height。"
+      "disposition": "INFORMATIVE_ONLY：不作为独立产品 scope；被动低优先级 metadata 可继续 10–11px，只有具备真实操作语义且明显低于 12px 的文字纳入 TYPO-P2-001。",
+      "proposedDirection": "仅在 approved actionable-label 范围内审阅相关 token，不做全站 Typography System 重构。"
     }
   ],
   "confirmedP0": [],

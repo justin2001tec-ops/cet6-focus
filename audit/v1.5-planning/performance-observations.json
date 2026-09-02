@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "auditDate": "2026-08-28",
   "baseline": "v1.4.1",
-  "status": "PASS_WITH_TOOLING_AND_VALIDATION_NOTES",
+  "status": "PASS_WITH_SEPARATE_TOOLING_BACKLOG",
   "localAuditRun": {
     "isolatedPageStates": 20,
     "screenshotCount": 10,
@@ -32,7 +32,7 @@
     "id": "QA-P2-001",
     "priority": "P2",
     "observed": "An earlier Windows invocation of the deterministic example-quality regression surfaced raw-file hash drift during line-ending normalization; the same unchanged tree then reran 14/14 files and 34/34 tests PASS.",
-    "decision": "No product change and no release blocker; preserve as a cross-platform audit-tooling reproducibility note for a future CI normalization decision."
+    "decision": "SEPARATE_TOOLING_BACKLOG: no product change and no release blocker; use a separate QA/Tooling PR for any future CI normalization decision."
   },
   "confirmedP0": [],
   "frozenPerformanceSystems": ["Motion Engine", "PhysicalSheet", "PWA shell-v7"]

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "auditDate": "2026-08-28",
   "baseline": "v1.4.1",
-  "status": "PASS_WITH_BROWSER_ZOOM_FOLLOW_UP",
+  "status": "PASS_WITH_CHROMIUM_ZOOM_CLOSED",
   "matrix": [
     { "viewport": "390x667", "route": "/study", "status": "PASS", "overflowX": false, "scrollWidth": 390, "clientWidth": 390, "heading": "42.9px" },
     { "viewport": "390x844", "route": "/study", "status": "PASS", "overflowX": false, "scrollWidth": 390, "clientWidth": 390, "heading": "42.9px" },
@@ -24,10 +24,13 @@
     "releaseBaseline": "v1.4.1 Safe Area gate PASS"
   },
   "zoomFollowUp": {
-    "status": "REVIEW_ONLY",
+    "status": "CLOSED_FOR_CHROMIUM",
     "method": "document.documentElement.style.zoom = 2 stress signal, not browser page zoom",
     "observed": "390px viewport reported 640px scrollWidth for Study.",
-    "decision": "Do not label as a confirmed WCAG/browser zoom failure; validate with real browser zoom before implementation."
+    "chromiumReleaseEvidence": "v1.4.1 True Chromium Browser Zoom = 200% PASS",
+    "safariStatus": "NOT_AVAILABLE on Windows",
+    "disposition": "CROSS_PLATFORM_QA_BACKLOG_FOR_SAFARI",
+    "decision": "Do not label the CSS stress signal as a Chromium regression and do not enter it into v1.5 Product Scope; revisit only with macOS/Safari true browser/page zoom."
   },
   "confirmedP0": []
 }

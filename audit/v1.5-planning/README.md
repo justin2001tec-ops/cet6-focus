@@ -4,6 +4,12 @@
 
 本目录是 CET6 Focus v1.5 的 Product Quality Audit & Scope Definition 证据。v1.4.1 已冻结；本分支只增加审计、截图与范围提案，不修改产品代码。
 
+Scope Finalization：`FINALIZED — P2-ONLY QUALITY HARDENING`。
+
+- Approved P1：0
+- Approved Product P2：2（`P2-TYPO-001`、`P2-A11Y-001`）
+- Approved QA P2：1（`P3-COVERAGE-001`，priority=`P2_QA`）
+
 ## Release closure baseline
 
 - `main` / planning 起点：`574bee5b1b61ea48b77032b946bcd570f1b4df85`
@@ -55,4 +61,10 @@
 
 ## Planning disposition
 
-当前无已确认的 production P0，也没有发现 v1.4.1 release identity 或 main baseline 异常。建议下一阶段只评审一个可控的阅读层级/小字号一致性方向及相关 P2 hardening；在 Scope review 之前不开始实现。
+当前无已确认的 production P0，也没有发现 v1.4.1 release identity 或 main baseline 异常。最终 Scope Decision 已固定为 `P2-ONLY QUALITY HARDENING`：
+
+- `P1-CAND-001 Learning-surface reading contract`：`REJECTED_THIS_RELEASE`，不进入本 release。
+- Approved Product P2：`P2-TYPO-001` 与 `P2-A11Y-001`。
+- Approved QA P2：`P3-COVERAGE-001`，仅限 isolated、deterministic、test-only、resettable fixtures、screenshots 与 visual regression。
+- Safari true browser/page zoom：跨平台 QA backlog；Windows 上 `NOT_AVAILABLE`。Windows raw-file hash normalization：separate tooling backlog。
+- 本轮不开始实现；PR 保持 OPEN，等待最终用户确认。
