@@ -4,14 +4,17 @@
   "implementation": {
     "pointerLight": "requestAnimationFrame throttled CSS variable updates",
     "press": "0.975 scale with bounded transform/opacity transition",
-    "materialize": "opacity plus transform and rim/specular material changes",
-    "moreMorph": "FLIP-style source/destination geometry with translate and scale, then settled transform",
+    "materialize": "reading/action content cue only; Hero, session chrome, and background stay spatially anchored",
+    "inputProfiles": "touch anchors at contact; pen and mouse use progressively lighter rAF pointer-follow",
+    "scrollEdge": "IntersectionObserver plus sticky geometry exposes the edge only under actual overlap",
     "reducedMotion": "removes pointer-follow and complex morph motion while keeping state changes visible"
   },
   "staticChecks": {
     "noGlassBackdropAnimation": true,
     "noLargeShadowPerFrameAnimation": true,
     "noNestedGlassInPopoverItems": true,
+    "noStudyMorePath": true,
+    "stageSpatialAnchors": true,
     "onlyTransformOpacityForGlassTransition": true
   },
   "warmMotionGate": {
@@ -19,7 +22,7 @@
     "browser": "Chromium",
     "runs": 5,
     "thresholdMs": 50,
-    "durationsMs": [240.9, 200.5, 198.8, 223.4, 199.9],
+    "durationsMs": [239.4, 199.2, 204.4, 236.7, 205.6],
     "allLongTasksByRun": [[], [], [], [], []],
     "longTasksDuringMotionByRun": [[], [], [], [], []],
     "decodedBackgroundLayersByRun": [1, 1, 1, 1, 1],

@@ -213,8 +213,7 @@ export async function openContext(page: Page): Promise<void> {
 
 export async function openDetail(page: Page): Promise<void> {
   await openMeaning(page)
-  await page.getByRole('button', { name: '更多' }).click()
-  await page.getByRole('menuitem', { name: /扩展理解/ }).click()
+  await page.getByRole('button', { name: '扩展理解' }).click()
   await expect(page.getByRole('region', { name: '扩展理解' })).toBeVisible()
 }
 

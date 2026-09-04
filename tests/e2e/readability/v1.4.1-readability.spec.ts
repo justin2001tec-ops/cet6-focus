@@ -190,7 +190,7 @@ test.describe('v1.4.1 Learning Readability & Layout Integrity', () => {
     expect(Number(meaning.primaryContrast)).toBeGreaterThanOrEqual(4.5)
     expect(Number(meaningLayout.scrollWidth) - Number(meaningLayout.clientWidth)).toBeLessThanOrEqual(1)
     expect(meaningLayout.actionVisible).toBe(true)
-    await page.getByRole('button', { name: '更多' }).click()
+    await page.getByRole('button', { name: '扩展理解' }).click()
     const detail = await readSurfaceMetrics(page)
     const detailLayout = await readLayoutMetrics(page)
     expect(detail.tone).toBe('learning')

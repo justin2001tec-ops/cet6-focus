@@ -20,6 +20,20 @@ export interface GlassSurfaceProps extends Omit<HTMLAttributes<HTMLElement>, 'cl
 }
 
 const clamp = (value: number, min: number, max: number) => Math.min(max, Math.max(min, value))
+type GlassInputProfile = 'touch' | 'pen' | 'mouse'
+
+function getInputProfile(pointerType: string): GlassInputProfile {
+  if (pointerType === 'touch') return 'touch'
+  if (pointerType === 'pen') return 'pen'
+  return 'mouse'
+}
+
+function getPointerPoint(event: ReactPointerEvent<HTMLElement>): [string, string] {
+  const rect = event.currentTarget.getBoundingClientRect()
+  const x = clamp(((event.clientX - rect.left) / Math.max(1, rect.width)) * 100, 0, 100)
+  const y = clamp(((event.clientY - rect.top) / Math.max(1, rect.height)) * 100, 0, 100)
+  return [`${x.toFixed(2)}%`, `${y.toFixed(2)}%`]
+}
 
 export const GlassSurface = forwardRef<HTMLElement, GlassSurfaceProps>(function GlassSurface({
   as = 'div',
@@ -68,33 +82,65 @@ export const GlassSurface = forwardRef<HTMLElement, GlassSurfaceProps>(function 
     })
   }
 
+  function writeLight(x: string, y: string) {
+    const node = nodeRef.current
+    if (!node) return
+    if (lightFrameRef.current !== null) {
+      window.cancelAnimationFrame(lightFrameRef.current)
+      lightFrameRef.current = null
+    }
+    node.style.setProperty('--glass-light-x', x)
+    node.style.setProperty('--glass-light-y', y)
+  }
+
+  function setInputProfile(event: ReactPointerEvent<HTMLElement>): GlassInputProfile {
+    const profile = getInputProfile(event.pointerType)
+    event.currentTarget.dataset.glassInputProfile = profile
+    event.currentTarget.style.setProperty('--glass-input-intensity', profile === 'touch' ? '1' : profile === 'pen' ? '.8' : '.55')
+    return profile
+  }
+
   function handlePointerMove(event: ReactPointerEvent<HTMLElement>) {
     if (interactive) {
-      const rect = event.currentTarget.getBoundingClientRect()
-      const x = clamp(((event.clientX - rect.left) / Math.max(1, rect.width)) * 100, 0, 100)
-      const y = clamp(((event.clientY - rect.top) / Math.max(1, rect.height)) * 100, 0, 100)
-      scheduleLight(`${x.toFixed(2)}%`, `${y.toFixed(2)}%`)
+      const profile = setInputProfile(event)
+      // Touch feedback is anchored at the initial contact point. It must not
+      // become a finger-following highlight while the user is scrolling.
+      if (profile !== 'touch') {
+        const [x, y] = getPointerPoint(event)
+        scheduleLight(x, y)
+      }
       event.currentTarget.dataset.glassPointer = 'active'
     }
     onPointerMove?.(event)
   }
 
   function handlePointerEnter(event: ReactPointerEvent<HTMLElement>) {
-    if (interactive) event.currentTarget.dataset.glassPointer = 'active'
+    if (interactive) {
+      setInputProfile(event)
+      event.currentTarget.dataset.glassPointer = 'active'
+    }
     onPointerEnter?.(event)
   }
 
   function handlePointerLeave(event: ReactPointerEvent<HTMLElement>) {
     if (interactive) {
       event.currentTarget.dataset.glassPointer = 'rest'
-      scheduleLight('50%', '50%')
+      if (getInputProfile(event.pointerType) === 'touch') writeLight('50%', '50%')
+      else scheduleLight('50%', '50%')
       event.currentTarget.dataset.pressState = 'idle'
     }
     onPointerLeave?.(event)
   }
 
   function handlePointerDown(event: ReactPointerEvent<HTMLElement>) {
-    if (interactive && !disabled) event.currentTarget.dataset.pressState = 'pressed'
+    if (interactive && !disabled) {
+      const profile = setInputProfile(event)
+      if (profile === 'touch') {
+        const [x, y] = getPointerPoint(event)
+        writeLight(x, y)
+      }
+      event.currentTarget.dataset.pressState = 'pressed'
+    }
     onPointerDown?.(event)
   }
 
@@ -113,6 +159,7 @@ export const GlassSurface = forwardRef<HTMLElement, GlassSurfaceProps>(function 
       className={`glass-surface glass-surface--${variant} ${className}`}
       data-glass-variant={variant}
       data-glass-interactive={interactive ? 'true' : 'false'}
+      data-glass-input-profile="mouse"
       data-press-state="idle"
       onPointerMove={handlePointerMove}
       onPointerEnter={handlePointerEnter}

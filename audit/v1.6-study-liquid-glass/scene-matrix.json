@@ -37,7 +37,10 @@
     }
   ],
   "interactionStates": [
-    { "id": "more-open", "screenshot": "screenshots/after-more-open-390.png", "status": "PASS" },
+    { "id": "direct-expand", "screenshot": "screenshots/after-direct-expand-390.png", "status": "PASS" },
+    { "id": "bookmark-selected", "screenshot": "screenshots/after-bookmark-selected-390.png", "status": "PASS" },
+    { "id": "scroll-edge-inactive", "screenshot": "screenshots/after-scroll-edge-inactive-390.png", "status": "PASS" },
+    { "id": "scroll-edge-active", "viewport": "1112x834", "screenshot": "screenshots/after-scroll-edge-active-1112.png", "status": "PASS" },
     { "id": "continue", "screenshot": "screenshots/after-continue-390.png", "status": "PASS" },
     { "id": "reduced-motion", "screenshot": "screenshots/after-meaning-reduced-motion-390.png", "status": "PASS" },
     { "id": "high-contrast", "screenshot": "screenshots/after-meaning-high-contrast-390.png", "status": "PASS" }
@@ -52,5 +55,5 @@
     "1440x900",
     "1920x1080"
   ],
-  "meaningSurfaceRule": "stable semantic content material; no lensing, pointer light, or nested Glass"
+  "meaningSurfaceRule": "stable semantic content material; no lensing, pointer light, backdrop-filter, or nested Glass"
 }

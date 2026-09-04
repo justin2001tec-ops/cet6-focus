@@ -1,21 +1,25 @@
 # v1.6 Study / Meaning Apple-inspired Liquid Glass redesign
 
-This PR implements the v1.6 Study / Meaning redesign from the approved research and handoff.
+## R1 Apple design-principle refinement
 
-## What changed
-
-- Added a centralized `GlassSurface` primitive with Clear / Regular / Expanded variants, tokenized radii, pointer-light rAF throttling, bounded press feedback, and accessibility fallbacks.
-- Rebuilt the Study session chrome, Word Hero, Audio/Bookmark controls, stable semantic Meaning reading surface, bottom action dock, tinted Continue action, and More FLIP-style popover.
-- Kept the content layer readable and stable; Glass is limited to functional controls and the More surface.
-- Added v1.6 contract and screenshot evidence under `audit/v1.6-study-liquid-glass/`.
+- Removed the single-item `More` path; `扩展理解` is a direct, visible action.
+- Unified Study functional controls on the Regular material identity.
+- Removed the global green-glass bias with neutral, scene-adaptive optical variables.
+- Kept Bookmark on one stable Glass variant; selection changes state/tint only.
+- Made icon-only controls circular and removed the normal Glass double rim.
+- Added touch-origin feedback plus lighter pen/mouse pointer-follow profiles.
+- Made Scroll Edge conditional on real sticky overlap; the Meaning dock stays inactive.
+- Preserved Hero/session/background spatial anchors and limited arrival motion to reading/action content.
+- Reframed Help for touch, mouse, and keyboard learning operations.
+- Restored scene vitality without replacing background assets or changing the Meaning content layer.
 
 ## Verification
 
-- TypeScript, ESLint, Vitest (14 files / 34 tests), and Vite build: PASS.
-- Full Playwright E2E: 102 passed / 27 skipped / 0 failed.
-- Warm Motion: 5/5; >50ms long tasks during motion: 0.
-- Study/Glass contract: Chromium, Mobile Chromium, and WebKit: PASS.
+- TypeScript, ESLint, Vitest, and Vite build: PASS.
+- R1 Study/Glass contract and visual matrix: Chromium PASS; Mobile Chromium and WebKit contract PASS.
+- Existing Learning/Readability regression: Chromium PASS after direct Expand migration.
+- Warm Motion: PASS, 5/5 runs with no >50ms long tasks; full serial E2E: PASS, 102 passed / 27 skipped / 0 failed.
 
 ## Scope boundary
 
-FSRS, ReviewLog, Context/Vocabulary data, DB, PWA, background assets, and the Study state machine are unchanged. This PR must remain OPEN for review; no merge, deployment, tag, or release is included.
+FSRS, ReviewLog, Context/Vocabulary data, DB schema, PWA/runtime assets, background assets, Home/Settings, and Meaning's non-Glass content layer remain frozen. This PR must remain OPEN for review; no merge, deployment, tag, or release is included.

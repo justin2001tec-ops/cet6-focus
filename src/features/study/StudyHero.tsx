@@ -21,8 +21,8 @@ export function StudyHero({ word, starred, compact = false, onSpeak, onToggleSta
         <div className="learning-word-header__phonetic"><span>{word.phonetic || '/—/'}</span></div>
       </div>
       <div className="learning-word-header__actions" data-functional-layer="word-controls">
-        <GlassAudioControl onClick={onSpeak} label="播放发音" />
-        <GlassIconButton label={starred ? '取消重点标记' : '标记重点'} variant={starred ? 'regular' : 'clear'} aria-pressed={starred} className={starred ? 'is-selected' : ''} onClick={onToggleStar}>
+        <GlassAudioControl onClick={onSpeak} label="播放发音" variant="regular" />
+        <GlassIconButton label={starred ? '取消重点标记' : '标记重点'} variant="regular" aria-pressed={starred} className={starred ? 'is-selected' : ''} onClick={onToggleStar}>
           <Bookmark size={18} strokeWidth={1.8} fill={starred ? 'currentColor' : 'none'} />
         </GlassIconButton>
       </div>

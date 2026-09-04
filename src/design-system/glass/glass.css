@@ -12,16 +12,22 @@
   --glass-expanded-saturation: 140%;
 }
 
+/* A single physical rim carries the material. The pseudo-elements only add
+   localized refraction and specular light; they never draw a second stroke. */
 .glass-surface {
   --glass-light-x: 50%;
   --glass-light-y: 50%;
-  --glass-fill: rgba(18, 34, 26, .18);
-  --glass-rim: rgba(235, 255, 240, .22);
-  --glass-rim-dark: rgba(5, 13, 9, .28);
-  --glass-highlight: rgba(255, 255, 255, .18);
-  --glass-specular: rgba(255, 255, 255, .14);
-  --glass-ink: #f2fff5;
-  --glass-shadow-color: rgba(2, 9, 5, .16);
+  --glass-input-intensity: .55;
+  --glass-fill: var(--glass-scene-fill, rgba(246, 249, 248, .14));
+  --glass-rim: var(--glass-scene-rim, rgba(255, 255, 255, .36));
+  --glass-rim-dark: var(--glass-scene-rim-dark, rgba(20, 29, 31, .18));
+  --glass-highlight: var(--glass-scene-highlight, rgba(255, 255, 255, .2));
+  --glass-specular: var(--glass-scene-specular, rgba(255, 255, 255, .24));
+  --glass-specular-radius: 56px;
+  --glass-specular-opacity: .58;
+  --glass-refraction-energy: .58;
+  --glass-ink: var(--glass-scene-ink, #17231f);
+  --glass-shadow-color: var(--glass-scene-shadow, rgba(13, 22, 24, .18));
   position: relative;
   isolation: isolate;
   overflow: hidden;
@@ -29,84 +35,85 @@
   border-radius: var(--radius-control);
   background: var(--glass-fill);
   color: var(--glass-ink);
-  box-shadow: 0 12px 30px var(--glass-shadow-color), inset 0 1px 0 var(--glass-highlight);
+  box-shadow: 0 12px 30px var(--glass-shadow-color);
   -webkit-backdrop-filter: blur(var(--glass-compact-blur)) saturate(var(--glass-compact-saturation));
   backdrop-filter: blur(var(--glass-compact-blur)) saturate(var(--glass-compact-saturation));
-  transition: transform 280ms cubic-bezier(.16, 1, .3, 1), opacity 180ms ease;
+  transition: transform 280ms cubic-bezier(.16, 1, .3, 1), opacity 180ms ease, background-color 180ms ease;
 }
 
 .glass-surface::before,
 .glass-surface::after { position: absolute; z-index: -1; inset: 0; content: ''; border-radius: inherit; pointer-events: none; }
 .glass-surface::before {
-  background: radial-gradient(circle 72px at var(--glass-light-x) var(--glass-light-y), var(--glass-specular), transparent 72%), linear-gradient(145deg, rgba(255, 255, 255, .1), transparent 42%);
-  opacity: .75;
+  background: radial-gradient(circle var(--glass-specular-radius) at var(--glass-light-x) var(--glass-light-y), var(--glass-specular), transparent 72%), linear-gradient(145deg, rgba(255, 255, 255, .11), transparent 42%);
+  opacity: var(--glass-specular-opacity);
   transition: opacity 120ms ease;
 }
 .glass-surface::after {
-  border: 1px solid rgba(4, 14, 8, .24);
-  box-shadow: inset 0 -1px 0 var(--glass-rim-dark), inset 0 1px 0 var(--glass-highlight);
-  opacity: .74;
+  background: linear-gradient(155deg, rgba(255, 255, 255, .2), transparent 24% 72%, var(--glass-rim-dark));
+  opacity: var(--glass-refraction-energy);
 }
 .glass-surface > * { position: relative; z-index: 1; }
 
 .glass-surface--clear {
-  --glass-fill: rgba(14, 29, 21, .2);
-  --glass-rim: rgba(240, 255, 244, .24);
-  --glass-shadow-color: rgba(2, 9, 5, .14);
+  --glass-specular-radius: 46px;
+  --glass-specular-opacity: .52;
+  --glass-refraction-energy: .46;
   -webkit-backdrop-filter: blur(var(--glass-compact-blur)) saturate(var(--glass-compact-saturation));
   backdrop-filter: blur(var(--glass-compact-blur)) saturate(var(--glass-compact-saturation));
 }
 .glass-surface--regular {
-  --glass-fill: rgba(18, 36, 26, .28);
-  --glass-rim: rgba(240, 255, 244, .28);
-  --glass-shadow-color: rgba(2, 9, 5, .19);
+  --glass-specular-radius: 60px;
+  --glass-specular-opacity: .62;
+  --glass-refraction-energy: .6;
   border-radius: var(--radius-control);
   -webkit-backdrop-filter: blur(var(--glass-regular-blur)) saturate(var(--glass-regular-saturation));
   backdrop-filter: blur(var(--glass-regular-blur)) saturate(var(--glass-regular-saturation));
 }
 .glass-surface--expanded {
-  --glass-fill: rgba(18, 36, 26, .34);
-  --glass-rim: rgba(240, 255, 244, .3);
-  --glass-specular: rgba(255, 255, 255, .18);
-  --glass-shadow-color: rgba(2, 9, 5, .24);
+  --glass-specular-radius: 76px;
+  --glass-specular-opacity: .7;
+  --glass-refraction-energy: .72;
   border-radius: var(--radius-popover);
   -webkit-backdrop-filter: blur(var(--glass-expanded-blur)) saturate(var(--glass-expanded-saturation));
   backdrop-filter: blur(var(--glass-expanded-blur)) saturate(var(--glass-expanded-saturation));
 }
 
 .glass-surface[data-glass-interactive="true"] { cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
-.glass-surface[data-glass-interactive="true"]:hover:not(:disabled) { --glass-specular: rgba(255, 255, 255, .2); }
-.glass-surface[data-glass-pointer="rest"]::before { opacity: .58; }
-.glass-surface[data-press-state="pressed"] {
-  transform: scale(.975);
-  --glass-specular: rgba(255, 255, 255, .27);
-  box-shadow: 0 5px 14px rgba(2, 9, 5, .14), inset 0 1px 0 rgba(255, 255, 255, .24), inset 0 0 0 1px rgba(255, 255, 255, .08);
-}
+.glass-surface[data-glass-input-profile="touch"] { --glass-specular-opacity: .9; }
+.glass-surface[data-glass-input-profile="pen"] { --glass-specular-opacity: .76; }
+.glass-surface[data-glass-input-profile="mouse"] { --glass-specular-opacity: .58; }
+.glass-surface[data-glass-input-profile="touch"][data-press-state="pressed"] { transform: scale(.985); }
+.glass-surface[data-glass-input-profile="pen"][data-press-state="pressed"] { transform: scale(.98); }
+.glass-surface[data-glass-input-profile="mouse"][data-press-state="pressed"] { transform: scale(.975); }
+.glass-surface[data-press-state="pressed"] { --glass-specular-opacity: .95; }
 .glass-surface:disabled { cursor: not-allowed; opacity: .55; }
 
+@media (hover: hover) and (pointer: fine) {
+  .glass-surface[data-glass-interactive="true"]:hover:not(:disabled) { --glass-specular-opacity: .76; }
+}
+
 .glass-surface:focus-visible {
-  outline: 3px solid rgba(220, 255, 229, .9);
+  outline: 3px solid rgba(78, 135, 109, .9);
   outline-offset: 3px;
 }
 
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-  .glass-surface { background: rgba(12, 25, 18, .88); }
-  .glass-surface--regular, .glass-surface--expanded { background: rgba(12, 25, 18, .94); }
+  .glass-surface { --glass-fill: var(--glass-fallback-fill, rgba(239, 244, 242, .94)); background: var(--glass-fill); }
 }
 
 @media (prefers-reduced-transparency: reduce) {
   .glass-surface {
-    --glass-fill: rgba(10, 22, 15, .9);
-    --glass-rim: rgba(240, 255, 244, .46);
+    --glass-fill: var(--glass-fallback-fill, rgba(239, 244, 242, .94));
+    --glass-rim: rgba(34, 52, 45, .52);
+    --glass-refraction-energy: .22;
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
   }
-  .glass-surface--regular, .glass-surface--expanded { --glass-fill: rgba(10, 22, 15, .96); }
-  .glass-surface::before { opacity: .2; }
+  .glass-surface::before { opacity: .22; }
 }
 
 @media (prefers-contrast: more) {
-  .glass-surface { --glass-fill: rgba(5, 13, 8, .9); border: 2px solid currentColor; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .glass-surface { --glass-fill: var(--glass-fallback-fill, rgba(248, 250, 249, .98)); border: 2px solid currentColor; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; }
   .glass-surface::before, .glass-surface::after { display: none; }
 }
 

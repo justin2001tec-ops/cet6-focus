@@ -1,13 +1,12 @@
-import { useRef, useState } from 'react'
-import { Check, ChevronDown, Home, Undo2, Volume2 } from 'lucide-react'
+import { Check, ChevronDown, ChevronRight, Home, Undo2, Volume2 } from 'lucide-react'
 import { Button } from '@/components/ui'
 import { ApplePressable } from '@/design-system/components'
 import { TintedGlassPrimaryAction } from '@/design-system/glass/GlassControls'
+import { GlassSurface } from '@/design-system/glass/GlassSurface'
 import { hasLearningDetails, recognitionLabel, recognitionOptions, type RecognitionChoice } from '@/features/study/learning'
 import type { Word } from '@/types'
 import { BottomActionDock } from './BottomActionDock'
 import { MeaningReadingSurface } from './MeaningReadingSurface'
-import { OverflowGlassButton, StudyOverflowMenu } from './StudyOverflowMenu'
 import { StudyHero } from './StudyHero'
 
 interface LearningWordHeaderProps {
@@ -96,12 +95,6 @@ export function MeaningStage({ word, starred, onSpeak, onToggleStar, onBack, onE
 }) {
   const example = word.examples?.[0]
   const canExpand = hasLearningDetails(word)
-  const [overflowOpen, setOverflowOpen] = useState(false)
-  const overflowAnchorRef = useRef<HTMLButtonElement | null>(null)
-
-  function closeOverflow() {
-    setOverflowOpen(false)
-  }
 
   return (
     <section className="learning-stage learning-stage--meaning" aria-labelledby="learning-meaning-title">
@@ -114,10 +107,7 @@ export function MeaningStage({ word, starred, onSpeak, onToggleStar, onBack, onE
       </MeaningReadingSurface>
       <BottomActionDock>
         <Button variant="ghost" className="learning-stage-actions__secondary" onClick={onBack}>返回</Button>
-        {canExpand && <div className="learning-stage-actions__overflow">
-          <OverflowGlassButton anchorRef={overflowAnchorRef} open={overflowOpen} onClick={() => setOverflowOpen(true)} aria-label="更多" />
-          <StudyOverflowMenu open={overflowOpen} anchorRef={overflowAnchorRef} onClose={closeOverflow} onExpand={() => { closeOverflow(); onExpand() }} />
-        </div>}
+        {canExpand && <GlassSurface as="button" type="button" variant="regular" interactive className="learning-stage-actions__expand" onClick={onExpand} aria-label="扩展理解"><span>扩展理解</span><ChevronRight size={16} aria-hidden="true" /></GlassSurface>}
         <TintedGlassPrimaryAction onClick={onConfirm}>继续</TintedGlassPrimaryAction>
       </BottomActionDock>
     </section>

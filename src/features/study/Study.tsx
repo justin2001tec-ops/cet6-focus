@@ -238,7 +238,7 @@ export function Study({ mode, onComplete }: StudyProps) {
             {presentation === 'context' && recognition && <ContextStage word={current.word} choice={recognition} starred={current.card.starred} onSpeak={() => speakWord(current.word.word, settings.pronunciation)} onToggleStar={() => void toggleCurrentStar()} onBack={() => { setRecognition(null); setPresentation('recall') }} onContinue={() => setPresentation('meaning')} />}
             {presentation === 'meaning' && recognition && <MeaningStage word={current.word} starred={current.card.starred} onSpeak={() => speakWord(current.word.word, settings.pronunciation)} onToggleStar={() => void toggleCurrentStar()} onBack={() => { setRecognition(null); setPresentation('recall') }} onExpand={() => setPresentation('detail')} onConfirm={() => void rate()} />}
             {presentation === 'detail' && recognition && <DetailStage word={current.word} starred={current.card.starred} onSpeak={() => speakWord(current.word.word, settings.pronunciation)} onToggleStar={() => void toggleCurrentStar()} onBack={() => setPresentation('meaning')} onConfirm={() => void rate()} />}
-            {presentation === 'transitioning' && <TransitionStage word={current.word} nextWord={items[index + 1]?.word} />}
+            {presentation === 'transitioning' && <TransitionStage word={current.word} nextWord={items[index + 1]?.word} starred={current.card.starred} onSpeak={() => speakWord(current.word.word, settings.pronunciation)} onToggleStar={() => void toggleCurrentStar()} />}
           </>
         ) : (
           <LearningEmpty mode={mode} onExit={() => navigate('/')} />
@@ -268,9 +268,10 @@ function RecallStage({ item, recognition, disabled, onChoose, onSpeak, onToggleS
   )
 }
 
-function TransitionStage({ word, nextWord }: { word: Word; nextWord?: Word }) {
+function TransitionStage({ word, nextWord, starred, onSpeak, onToggleStar }: { word: Word; nextWord?: Word; starred: boolean; onSpeak: () => void; onToggleStar: () => void }) {
   return (
     <section className="learning-stage learning-stage--transitioning" aria-live="polite">
+      <LearningWordHeader word={word} starred={starred} compact onSpeak={onSpeak} onToggleStar={onToggleStar} />
       <div className="learning-transition-words">
         <span className="learning-transition-word learning-transition-word--current">{word.word}</span>
         {nextWord && <span className="learning-transition-word learning-transition-word--next">{nextWord.word}</span>}
@@ -284,14 +285,15 @@ function LearningHelp({ onClose }: { onClose: () => void }) {
   return (
     <div className="learning-help-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose() }}>
       <section className="learning-help" role="dialog" aria-modal="true" aria-labelledby="learning-help-title">
-        <div className="learning-help__header"><div><p className="learning-section-kicker">Keyboard</p><h2 id="learning-help-title">用键盘保持节奏</h2></div><GlassIconButton label="关闭键盘帮助" onClick={onClose}><X size={18} /></GlassIconButton></div>
+        <div className="learning-help__header"><div><p className="learning-section-kicker">学习操作</p><h2 id="learning-help-title">保持学习节奏</h2><p className="learning-help__intro">触控、鼠标和键盘都可以完成全部学习操作。</p></div><GlassIconButton label="关闭学习操作帮助" variant="regular" onClick={onClose}><X size={18} /></GlassIconButton></div>
         <dl className="learning-help__list">
+          <div><dt>点击 / 轻触</dt><dd>选择、继续或展开内容。</dd></div>
           <div><dt>1 · 认识</dt><dd>能说出大意。</dd></div>
           <div><dt>2 · 模糊</dt><dd>见过，但还不够稳。</dd></div>
           <div><dt>3 · 不认识</dt><dd>需要重新建立记忆。</dd></div>
           <div><dt>Space / Enter</dt><dd>继续或展开</dd></div>
           <div><dt>Z</dt><dd>撤销上一词</dd></div>
-          <div><dt>P · S · Esc</dt><dd>发音 · 收藏 · 退出</dd></div>
+          <div><dt>P · S · Esc</dt><dd>发音 · 重点标记 · 退出</dd></div>
         </dl>
       </section>
     </div>

@@ -6,7 +6,7 @@
     "longTaskThresholdMs": 50,
     "longTasksDuringMotion": 0,
     "backgroundLayersAfterSettle": 1,
-    "durationsMs": [240.9, 200.5, 198.8, 223.4, 199.9]
+    "durationsMs": [239.4, 199.2, 204.4, 236.7, 205.6]
   },
   "fullE2E": {
     "discovered": 129,
@@ -15,7 +15,7 @@
     "failed": 0
   },
   "build": {
-    "modulesTransformed": 2041,
+    "modulesTransformed": 2040,
     "status": "PASS",
     "note": "Vite emitted the existing advisory about a >500 kB JavaScript chunk; no build failure."
   },
