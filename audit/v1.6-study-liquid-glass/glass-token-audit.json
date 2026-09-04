@@ -1,0 +1,56 @@
+{
+  "version": "v1.6",
+  "status": "PASS",
+  "source": [
+    "src/design-system/glass/glassTokens.ts",
+    "src/design-system/glass/GlassSurface.tsx",
+    "src/design-system/glass/glass.css"
+  ],
+  "variants": {
+    "clear": {
+      "blur": "16px",
+      "saturation": "128%",
+      "fillAlpha": 0.11,
+      "rimAlpha": 0.2,
+      "shadowAlpha": 0.14,
+      "use": "Close, Help, Audio, and unselected Bookmark"
+    },
+    "regular": {
+      "blur": "24px",
+      "saturation": "136%",
+      "fillAlpha": 0.16,
+      "rimAlpha": 0.22,
+      "shadowAlpha": 0.19,
+      "use": "More and the selective mint Continue action"
+    },
+    "expanded": {
+      "blur": "32px",
+      "saturation": "140%",
+      "fillAlpha": 0.2,
+      "rimAlpha": 0.26,
+      "shadowAlpha": 0.23,
+      "use": "More popover only"
+    }
+  },
+  "radiusTokens": {
+    "reading": "26px",
+    "control": "16px",
+    "icon": "14px",
+    "popover": "22px",
+    "capsule": "999px"
+  },
+  "interaction": {
+    "pointerLight": "CSS variables --glass-light-x/y updated in one requestAnimationFrame",
+    "pressScale": 0.975,
+    "releaseDuration": "280ms",
+    "animatedProperties": ["transform", "opacity"],
+    "perFrameForbidden": ["backdrop-filter", "-webkit-backdrop-filter", "large box-shadow"],
+    "nestedGlass": false
+  },
+  "accessibilityFallbacks": [
+    "prefers-reduced-motion",
+    "prefers-reduced-transparency",
+    "prefers-contrast: more",
+    "forced-colors: active"
+  ]
+}

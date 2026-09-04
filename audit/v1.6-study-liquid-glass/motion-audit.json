@@ -1,0 +1,32 @@
+{
+  "version": "v1.6",
+  "status": "PASS",
+  "implementation": {
+    "pointerLight": "requestAnimationFrame throttled CSS variable updates",
+    "press": "0.975 scale with bounded transform/opacity transition",
+    "materialize": "opacity plus transform and rim/specular material changes",
+    "moreMorph": "FLIP-style source/destination geometry with translate and scale, then settled transform",
+    "reducedMotion": "removes pointer-follow and complex morph motion while keeping state changes visible"
+  },
+  "staticChecks": {
+    "noGlassBackdropAnimation": true,
+    "noLargeShadowPerFrameAnimation": true,
+    "noNestedGlassInPopoverItems": true,
+    "onlyTransformOpacityForGlassTransition": true
+  },
+  "warmMotionGate": {
+    "test": "tests/e2e/motion/v1.4-system.spec.ts:551",
+    "browser": "Chromium",
+    "runs": 5,
+    "thresholdMs": 50,
+    "durationsMs": [240.9, 200.5, 198.8, 223.4, 199.9],
+    "allLongTasksByRun": [[], [], [], [], []],
+    "longTasksDuringMotionByRun": [[], [], [], [], []],
+    "decodedBackgroundLayersByRun": [1, 1, 1, 1, 1],
+    "status": "PASS"
+  },
+  "suiteResults": {
+    "chromiumMotion": "11 passed",
+    "webkitMotion": "9 passed, 2 skipped by existing project policy"
+  }
+}

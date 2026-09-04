@@ -10,6 +10,8 @@ import '@/styles/bbdcd-home.css'
 import '@/styles/motion-tokens.css'
 import '@/styles/learning-experience.css'
 import '@/styles/system-experience.css'
+import '@/design-system/glass/glass.css'
+import '@/styles/study-liquid-glass.css'
 
 if ('serviceWorker' in navigator && import.meta.env.PROD) {
   window.addEventListener('load', () => {

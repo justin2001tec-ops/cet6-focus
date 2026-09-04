@@ -1,0 +1,14 @@
+{
+  "version": "v1.6",
+  "status": "PASS",
+  "checks": [
+    { "name": "keyboard focus", "status": "PASS", "evidence": "full E2E motion/readability focus assertions" },
+    { "name": "aria labels and expanded state", "status": "PASS", "evidence": "v1.6 Study/Glass contract" },
+    { "name": "reduced motion", "status": "PASS", "evidence": "v1.6 screenshot plus existing motion suite" },
+    { "name": "reduced transparency fallback", "status": "PASS", "evidence": "Glass CSS media fallback" },
+    { "name": "forced colors", "status": "PASS", "evidence": "existing readability high-contrast assertions" },
+    { "name": "prefers-contrast: more", "status": "PASS", "evidence": "existing readability assertions and v1.6 screenshot" },
+    { "name": "reading content remains stable", "status": "PASS", "evidence": "reading surface has no backdrop filter or pointer light" }
+  ],
+  "contrastRule": "mint is restricted to Continue, kicker, and semantic selection; text remains on stable reading material"
+}

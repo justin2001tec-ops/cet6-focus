@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { HelpCircle, Undo2, X } from 'lucide-react'
+import { X } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { useApp } from '@/app/providers'
 import { EmptyState } from '@/components/States'
-import { IconButton } from '@/components/ui'
+import { GlassIconButton } from '@/design-system/glass/GlassControls'
 import { ApplePressable } from '@/design-system/components'
 import { createSession, finishSession, getCardsByIds, getQueue, getWordsByIds, recordReview, toggleStar, undoLastReview } from '@/db/db'
 import { scheduleCard } from '@/lib/fsrs'
@@ -19,6 +19,7 @@ import {
   MeaningStage,
   RecognitionActions,
 } from '@/features/study/LearningStages'
+import { StudySessionChrome } from '@/features/study/StudySessionChrome'
 import {
   hasLearningDetails,
   nextLearningState,
@@ -228,7 +229,7 @@ export function Study({ mode, onComplete }: StudyProps) {
     <div className={shellClass} data-learning-mode={mode} data-learning-state={presentation}>
       <LearningAtmosphere />
       <div className="learning-shell__inner">
-        {items.length > 0 && <LearningTopbar modeLabel={modeLabel} progress={progress} index={index} total={items.length} completed={completed} canUndo={ratedStack.length > 0} onUndo={() => void undo()} onHelp={() => setShowHelp(true)} onExit={() => navigate('/')} />}
+        {items.length > 0 && <StudySessionChrome modeLabel={modeLabel} progress={progress} index={index} total={items.length} completed={completed} canUndo={ratedStack.length > 0} onUndo={() => void undo()} onHelp={() => setShowHelp(true)} onExit={() => navigate('/')} />}
         {completed ? (
           <LearningComplete mode={mode} count={items.length} onUndo={ratedStack.length ? () => void undo() : undefined} onContinue={onComplete} onAgain={resetRound} onHome={() => navigate('/')} />
         ) : current ? (
@@ -279,28 +280,11 @@ function TransitionStage({ word, nextWord }: { word: Word; nextWord?: Word }) {
   )
 }
 
-function LearningTopbar({ modeLabel, progress, index, total, completed, canUndo, onUndo, onHelp, onExit }: { modeLabel: string; progress: number; index: number; total: number; completed: boolean; canUndo: boolean; onUndo: () => void; onHelp: () => void; onExit: () => void }) {
-  return (
-    <header className="learning-topbar">
-      <IconButton label="退出学习" onClick={onExit}><X size={19} /></IconButton>
-      <div className="learning-progress" aria-label={`${modeLabel}进度`}>
-        <span className="learning-progress__mode">{modeLabel}</span>
-        <div className="learning-progress__track" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={progress}><span style={{ width: `${progress}%` }} /></div>
-        <span className="learning-progress__count">{completed ? '完成' : `${index + 1} / ${total}`}</span>
-      </div>
-      <div className="learning-topbar__actions">
-        {canUndo && <ApplePressable type="button" className="learning-undo" onClick={onUndo}><Undo2 size={15} /> 撤销</ApplePressable>}
-        <IconButton label="查看键盘帮助" onClick={onHelp}><HelpCircle size={19} /></IconButton>
-      </div>
-    </header>
-  )
-}
-
 function LearningHelp({ onClose }: { onClose: () => void }) {
   return (
     <div className="learning-help-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose() }}>
       <section className="learning-help" role="dialog" aria-modal="true" aria-labelledby="learning-help-title">
-        <div className="learning-help__header"><div><p className="learning-section-kicker">Keyboard</p><h2 id="learning-help-title">用键盘保持节奏</h2></div><IconButton label="关闭键盘帮助" onClick={onClose}><X size={18} /></IconButton></div>
+        <div className="learning-help__header"><div><p className="learning-section-kicker">Keyboard</p><h2 id="learning-help-title">用键盘保持节奏</h2></div><GlassIconButton label="关闭键盘帮助" onClick={onClose}><X size={18} /></GlassIconButton></div>
         <dl className="learning-help__list">
           <div><dt>1 · 认识</dt><dd>能说出大意。</dd></div>
           <div><dt>2 · 模糊</dt><dd>见过，但还不够稳。</dd></div>
