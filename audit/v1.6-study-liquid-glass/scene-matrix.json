@@ -1,0 +1,59 @@
+{
+  "version": "v1.6",
+  "status": "PASS",
+  "captureBrowser": "Chromium",
+  "scenes": [
+    {
+      "id": "bright",
+      "theme": "light",
+      "backgroundId": "plateau-kiang-01",
+      "viewport": "390x844",
+      "meaningScreenshot": "screenshots/after-meaning-bright-390.png",
+      "status": "PASS"
+    },
+    {
+      "id": "dark",
+      "theme": "dark",
+      "backgroundId": "stars-02",
+      "viewport": "390x844",
+      "meaningScreenshot": "screenshots/after-meaning-dark-390.png",
+      "status": "PASS"
+    },
+    {
+      "id": "textured",
+      "theme": "light",
+      "backgroundId": "aurora-01",
+      "viewport": "390x844",
+      "meaningScreenshot": "screenshots/after-meaning-textured-390.png",
+      "status": "PASS"
+    },
+    {
+      "id": "medium",
+      "theme": "light",
+      "backgroundId": "waterfall-02",
+      "viewport": "390x844",
+      "meaningScreenshot": "screenshots/after-meaning-medium-390.png",
+      "status": "PASS"
+    }
+  ],
+  "interactionStates": [
+    { "id": "direct-expand", "screenshot": "screenshots/after-direct-expand-390.png", "status": "PASS" },
+    { "id": "bookmark-selected", "screenshot": "screenshots/after-bookmark-selected-390.png", "status": "PASS" },
+    { "id": "scroll-edge-inactive", "screenshot": "screenshots/after-scroll-edge-inactive-390.png", "status": "PASS" },
+    { "id": "scroll-edge-active", "viewport": "1112x834", "screenshot": "screenshots/after-scroll-edge-active-1112.png", "status": "PASS" },
+    { "id": "continue", "screenshot": "screenshots/after-continue-390.png", "status": "PASS" },
+    { "id": "reduced-motion", "screenshot": "screenshots/after-meaning-reduced-motion-390.png", "status": "PASS" },
+    { "id": "high-contrast", "screenshot": "screenshots/after-meaning-high-contrast-390.png", "status": "PASS" }
+  ],
+  "responsiveViewports": [
+    "390x844",
+    "430x932",
+    "844x390",
+    "852x393",
+    "768x1024",
+    "1112x834",
+    "1440x900",
+    "1920x1080"
+  ],
+  "meaningSurfaceRule": "stable semantic content material; no lensing, pointer light, backdrop-filter, or nested Glass"
+}

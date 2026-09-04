@@ -1,0 +1,24 @@
+{
+  "version": "v1.6",
+  "status": "PASS",
+  "warmStudyTransition": {
+    "runs": 5,
+    "longTaskThresholdMs": 50,
+    "longTasksDuringMotion": 0,
+    "backgroundLayersAfterSettle": 1,
+    "durationsMs": [239.4, 199.2, 204.4, 236.7, 205.6]
+  },
+  "fullE2E": {
+    "discovered": 129,
+    "passed": 102,
+    "skipped": 27,
+    "failed": 0
+  },
+  "build": {
+    "modulesTransformed": 2040,
+    "status": "PASS",
+    "note": "Vite emitted the existing advisory about a >500 kB JavaScript chunk; no build failure."
+  },
+  "runtimeConsoleErrors": 0,
+  "runtimePageErrors": 0
+}

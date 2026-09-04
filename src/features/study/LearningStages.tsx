@@ -1,9 +1,13 @@
-import { Bookmark, Check, ChevronDown, Home, Undo2, Volume2 } from 'lucide-react'
-import { AudioButton } from '@/components/AppShell'
-import { Button, IconButton } from '@/components/ui'
-import { ApplePressable, ReadingSurface } from '@/design-system/components'
+import { Check, ChevronDown, ChevronRight, Home, Undo2, Volume2 } from 'lucide-react'
+import { Button } from '@/components/ui'
+import { ApplePressable } from '@/design-system/components'
+import { TintedGlassPrimaryAction } from '@/design-system/glass/GlassControls'
+import { GlassSurface } from '@/design-system/glass/GlassSurface'
 import { hasLearningDetails, recognitionLabel, recognitionOptions, type RecognitionChoice } from '@/features/study/learning'
 import type { Word } from '@/types'
+import { BottomActionDock } from './BottomActionDock'
+import { MeaningReadingSurface } from './MeaningReadingSurface'
+import { StudyHero } from './StudyHero'
 
 interface LearningWordHeaderProps {
   word: Word
@@ -14,23 +18,7 @@ interface LearningWordHeaderProps {
 }
 
 export function LearningWordHeader({ word, starred, compact = false, onSpeak, onToggleStar }: LearningWordHeaderProps) {
-  const length = [...word.word].length
-  const lengthClass = length <= 10 ? 'short' : length <= 14 ? 'medium' : length <= 18 ? 'long' : 'very-long'
-
-  return (
-    <header className={`learning-word-header learning-word-header--length-${lengthClass} ${compact ? 'learning-word-header--compact' : ''}`}>
-      <div className="learning-word-header__copy">
-        <h1>{word.word}</h1>
-        <div className="learning-word-header__phonetic">
-          <span>{word.phonetic || '/—/'}</span>
-          <AudioButton onClick={onSpeak} label="播放发音" />
-        </div>
-      </div>
-      <IconButton label={starred ? '取消重点标记' : '标记重点'} variant={starred ? 'secondary' : 'ghost'} onClick={onToggleStar}>
-        <Bookmark size={19} fill={starred ? 'currentColor' : 'none'} />
-      </IconButton>
-    </header>
-  )
+  return <StudyHero word={word} starred={starred} compact={compact} onSpeak={onSpeak} onToggleStar={onToggleStar} />
 }
 
 export function LearningAtmosphere() {
@@ -82,16 +70,16 @@ export function ContextStage({ word, choice, starred, onSpeak, onToggleStar, onB
   return (
     <section className="learning-stage learning-stage--context" aria-labelledby="learning-context-title">
       <LearningWordHeader word={word} starred={starred} compact onSpeak={onSpeak} onToggleStar={onToggleStar} />
-      <ReadingSurface tone="learning" className="learning-reading-surface learning-context-surface">
+      <MeaningReadingSurface className="learning-context-surface">
         <p id="learning-context-title" className="learning-section-kicker">语境提示</p>
         <p className="learning-example learning-example--large">{highlightExample(example.en, word.word)}</p>
         <p className="learning-context-surface__note">再读一遍，看看它在句子里承担什么含义。</p>
         <span className="learning-choice-chip">你的判断：{recognitionLabel(choice)}</span>
-      </ReadingSurface>
-      <div className="learning-stage-actions">
+      </MeaningReadingSurface>
+      <BottomActionDock>
         <Button variant="ghost" onClick={onBack}>重新判断</Button>
-        <Button onClick={onContinue}>查看核心词义 <ChevronDown size={16} /></Button>
-      </div>
+        <TintedGlassPrimaryAction onClick={onContinue}>查看核心词义 <ChevronDown size={16} /></TintedGlassPrimaryAction>
+      </BottomActionDock>
     </section>
   )
 }
@@ -111,17 +99,17 @@ export function MeaningStage({ word, starred, onSpeak, onToggleStar, onBack, onE
   return (
     <section className="learning-stage learning-stage--meaning" aria-labelledby="learning-meaning-title">
       <LearningWordHeader word={word} starred={starred} compact onSpeak={onSpeak} onToggleStar={onToggleStar} />
-      <ReadingSurface tone="learning" className="learning-reading-surface learning-meaning-surface">
+      <MeaningReadingSurface className="learning-meaning-surface">
         <p id="learning-meaning-title" className="learning-section-kicker">核心词义</p>
         <p className="learning-core-meaning">{normalizeText(word.meaningZh[0])}</p>
         {word.pos?.length ? <p className="learning-pos">{word.pos.join(' · ')}</p> : null}
         {example && <div className="learning-example-block"><span>例句</span><p>{highlightExample(example.en, word.word)}</p>{example.zh && <small>{example.zh}</small>}</div>}
-      </ReadingSurface>
-      <div className="learning-stage-actions">
+      </MeaningReadingSurface>
+      <BottomActionDock>
         <Button variant="ghost" className="learning-stage-actions__secondary" onClick={onBack}>返回</Button>
-        {canExpand && <Button variant="ghost" className="learning-stage-actions__secondary" onClick={onExpand}>更多 <ChevronDown size={16} /></Button>}
-        <Button className="learning-stage-actions__primary" onClick={onConfirm}>继续</Button>
-      </div>
+        {canExpand && <GlassSurface as="button" type="button" variant="regular" interactive className="learning-stage-actions__expand" onClick={onExpand} aria-label="扩展理解"><span>扩展理解</span><ChevronRight size={16} aria-hidden="true" /></GlassSurface>}
+        <TintedGlassPrimaryAction onClick={onConfirm}>继续</TintedGlassPrimaryAction>
+      </BottomActionDock>
     </section>
   )
 }
@@ -141,7 +129,7 @@ export function DetailStage({ word, starred, onSpeak, onToggleStar, onBack, onCo
   return (
     <section className="learning-stage learning-stage--detail" aria-labelledby="learning-detail-title">
       <LearningWordHeader word={word} starred={starred} compact onSpeak={onSpeak} onToggleStar={onToggleStar} />
-      <ReadingSurface tone="learning" className="learning-reading-surface learning-detail-surface">
+      <MeaningReadingSurface className="learning-detail-surface">
         <p id="learning-detail-title" className="learning-section-kicker">扩展理解</p>
         <p className="learning-core-meaning learning-core-meaning--detail">{normalizeText(word.meaningZh[0])}</p>
         {extraMeanings.length > 0 && <DetailBlock label="更多中文义"><ul>{extraMeanings.map((meaning) => <li key={meaning}>{normalizeText(meaning)}</li>)}</ul></DetailBlock>}
@@ -149,11 +137,11 @@ export function DetailStage({ word, starred, onSpeak, onToggleStar, onBack, onCo
         {examples.length > 0 && <DetailBlock label="更多例句"><div className="learning-detail-list">{examples.map((example) => <div key={example.en}><p>{highlightExample(normalizeText(example.en), word.word)}</p>{example.zh && <small>{normalizeText(example.zh)}</small>}</div>)}</div></DetailBlock>}
         {word.collocations?.length ? <DetailBlock label="搭配"><ul>{word.collocations.map((item) => <li key={item}>{normalizeText(item)}</li>)}</ul></DetailBlock> : null}
         {wordForms.length > 0 && <DetailBlock label="词形变化"><dl>{wordForms.map(([form, value]) => <div key={form}><dt>{form}</dt><dd>{normalizeText(value)}</dd></div>)}</dl></DetailBlock>}
-      </ReadingSurface>
-      <div className="learning-stage-actions">
+      </MeaningReadingSurface>
+      <BottomActionDock sticky>
         <Button variant="ghost" className="learning-stage-actions__secondary" onClick={onBack}>返回核心词义</Button>
-        <Button className="learning-stage-actions__primary" onClick={onConfirm}>继续</Button>
-      </div>
+        <TintedGlassPrimaryAction onClick={onConfirm}>继续</TintedGlassPrimaryAction>
+      </BottomActionDock>
     </section>
   )
 }

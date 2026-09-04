@@ -1,0 +1,12 @@
+{
+  "version": "v1.6-r1",
+  "status": "PASS",
+  "checks": [
+    { "name": "single-item More removed", "status": "PASS", "evidence": "StudyOverflowMenu deleted; no Study More button, menu, or morph CSS remains" },
+    { "name": "direct Expand path", "status": "PASS", "evidence": "Meaning renders one direct Expand button when learning details exist" },
+    { "name": "action hierarchy", "status": "PASS", "evidence": "Back is ghost, Expand is neutral Regular, Continue is the only strong tinted action" },
+    { "name": "icon geometry", "status": "PASS", "evidence": "icon-only controls are square and circular at mobile/desktop sizes" },
+    { "name": "Meaning content freeze", "status": "PASS", "evidence": "MeaningReadingSurface markup and semantic content remain unchanged" },
+    { "name": "dead-path cleanup", "status": "PASS", "evidence": "old More component/imports/styles and stale More screenshot removed" }
+  ]
+}

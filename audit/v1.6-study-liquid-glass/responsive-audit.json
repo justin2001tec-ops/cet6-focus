@@ -1,0 +1,22 @@
+{
+  "version": "v1.6",
+  "status": "PASS",
+  "testedProjects": ["chromium", "mobile", "webkit-readability"],
+  "viewports": [
+    { "width": 390, "height": 844, "status": "PASS" },
+    { "width": 430, "height": 932, "status": "PASS" },
+    { "width": 390, "height": 667, "status": "PASS", "evidence": "existing readability short-height assertions" },
+    { "width": 844, "height": 390, "status": "PASS" },
+    { "width": 852, "height": 393, "status": "PASS", "evidence": "existing responsive assertions" },
+    { "width": 768, "height": 1024, "status": "PASS", "evidence": "existing iPad assertions" },
+    { "width": 1112, "height": 834, "status": "PASS" },
+    { "width": 1440, "height": 900, "status": "PASS" },
+    { "width": 1920, "height": 1080, "status": "PASS" }
+  ],
+  "layoutRules": {
+    "longWordMobile": "very-long word copy receives its own row before controls",
+    "bottomActions": "Continue spans the primary row on mobile; Back/direct Expand remain secondary",
+    "safeArea": "existing independent left/right safe-area assertions remain green",
+    "scrollEdge": "bottom actions expose data-scroll-edge=conditional; the edge is only visible during real sticky overlap"
+  }
+}

@@ -1,0 +1,210 @@
+/* v1.6 R1: Study is content-first. Glass belongs to functional controls only. */
+.app-frame--learning .app-background { filter: saturate(1) brightness(1) contrast(1); }
+.app-frame--learning[data-study-scene-tone="bright"] .app-background { filter: saturate(1.04) brightness(1.02) contrast(1.01); }
+.app-frame--learning[data-study-scene-tone="dark"] .app-background { filter: saturate(.98) brightness(1.01) contrast(1.02); }
+.app-frame--learning[data-study-scene-tone="textured"] .app-background { filter: saturate(1.02) brightness(1.01) contrast(1.01); }
+.app-frame--learning[data-study-scene-tone="medium"] .app-background { filter: saturate(1.01) brightness(1) contrast(1.01); }
+
+/* The scene changes optical contrast, not the material family or the content layer. */
+.app-frame--learning[data-study-scene-tone="bright"] .learning-shell {
+  --glass-scene-fill: rgba(255, 255, 255, .28);
+  --glass-scene-rim: rgba(255, 255, 255, .58);
+  --glass-scene-rim-dark: rgba(31, 43, 46, .2);
+  --glass-scene-highlight: rgba(255, 255, 255, .4);
+  --glass-scene-specular: rgba(255, 255, 255, .48);
+  --glass-scene-ink: #17231f;
+  --glass-scene-shadow: rgba(26, 35, 36, .22);
+  --glass-fallback-fill: rgba(248, 250, 249, .96);
+}
+.app-frame--learning[data-study-scene-tone="medium"] .learning-shell {
+  --glass-scene-fill: rgba(239, 245, 243, .2);
+  --glass-scene-rim: rgba(255, 255, 255, .46);
+  --glass-scene-rim-dark: rgba(21, 31, 32, .2);
+  --glass-scene-highlight: rgba(255, 255, 255, .3);
+  --glass-scene-specular: rgba(255, 255, 255, .36);
+  --glass-scene-ink: #17231f;
+  --glass-scene-shadow: rgba(16, 27, 27, .2);
+  --glass-fallback-fill: rgba(245, 248, 247, .96);
+}
+.app-frame--learning[data-study-scene-tone="textured"] .learning-shell {
+  --glass-scene-fill: rgba(239, 245, 243, .2);
+  --glass-scene-rim: rgba(255, 255, 255, .48);
+  --glass-scene-rim-dark: rgba(18, 27, 29, .22);
+  --glass-scene-highlight: rgba(255, 255, 255, .32);
+  --glass-scene-specular: rgba(255, 255, 255, .4);
+  --glass-scene-ink: #17231f;
+  --glass-scene-shadow: rgba(15, 24, 26, .24);
+  --glass-fallback-fill: rgba(245, 248, 247, .96);
+}
+.app-frame--learning[data-study-scene-tone="dark"] .learning-shell,
+.app-frame--learning[data-study-scene-tone="plain"] .learning-shell {
+  --glass-scene-fill: rgba(236, 243, 240, .14);
+  --glass-scene-rim: rgba(235, 245, 239, .36);
+  --glass-scene-rim-dark: rgba(6, 13, 15, .3);
+  --glass-scene-highlight: rgba(255, 255, 255, .2);
+  --glass-scene-specular: rgba(255, 255, 255, .28);
+  --glass-scene-ink: #f1f7f3;
+  --glass-scene-shadow: rgba(3, 9, 11, .28);
+  --glass-fallback-fill: rgba(20, 29, 27, .94);
+}
+.app-frame--learning[data-study-scene-tone="plain"] .learning-shell {
+  --learning-photo-primary: #14231c;
+  --learning-photo-secondary: #385148;
+  --learning-photo-muted: #5e6e65;
+  --learning-photo-accent: #1f6751;
+  --learning-ink: #14231c;
+  --learning-ink-soft: #385148;
+  --learning-muted: #5e6e65;
+  --learning-accent: #1f6751;
+  --learning-accent-strong: #164b39;
+  --glass-scene-fill: rgba(255, 255, 255, .68);
+  --glass-scene-rim: rgba(255, 255, 255, .84);
+  --glass-scene-rim-dark: rgba(30, 45, 40, .18);
+  --glass-scene-highlight: rgba(255, 255, 255, .62);
+  --glass-scene-specular: rgba(255, 255, 255, .7);
+  --glass-scene-ink: #14231c;
+  --glass-scene-shadow: rgba(31, 43, 40, .2);
+  --glass-fallback-fill: rgba(255, 255, 255, .96);
+}
+:root[data-theme="dark"] .app-frame--learning[data-study-scene-tone="plain"] .learning-shell {
+  --learning-photo-primary: #f7fff8;
+  --learning-photo-secondary: #d8eade;
+  --learning-photo-muted: #bdd1c3;
+  --learning-photo-accent: #c8edcf;
+  --learning-ink: #f7fff8;
+  --learning-ink-soft: #d8eade;
+  --learning-muted: #bdd1c3;
+  --learning-accent: #c8edcf;
+  --learning-accent-strong: #e0f6e4;
+  --glass-scene-fill: rgba(236, 243, 240, .14);
+  --glass-scene-rim: rgba(235, 245, 239, .36);
+  --glass-scene-ink: #f1f7f3;
+  --glass-fallback-fill: rgba(20, 29, 27, .94);
+}
+
+.learning-topbar {
+  display: grid;
+  grid-template-columns: 46px minmax(220px, 720px) auto;
+  align-items: center;
+  gap: 18px;
+  width: min(980px, 100%);
+  margin: 0 auto;
+}
+
+.study-session-chrome__status { display: grid; gap: 9px; min-width: 0; color: var(--learning-muted); font-size: 12px; }
+.study-session-chrome__status-line { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; min-width: 0; }
+.learning-progress__mode { min-width: 0; overflow: hidden; color: var(--learning-ink-soft); font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
+.learning-progress__count { min-width: 46px; color: var(--learning-photo-primary); text-align: right; white-space: nowrap; }
+.learning-progress__track { height: 3px; overflow: hidden; border-radius: 99px; background: rgba(240, 248, 244, .22); }
+.learning-progress__track span { display: block; height: 100%; border-radius: inherit; background: var(--learning-accent); transition: width 240ms cubic-bezier(.2, .8, .2, 1); }
+.study-session-chrome__actions { display: flex; align-items: center; justify-content: flex-end; gap: 8px; }
+
+.learning-shell .study-session-chrome .glass-icon-button,
+.learning-shell .learning-undo { flex: 0 0 auto; }
+.learning-shell .study-session-chrome .glass-icon-button { width: 46px; height: 46px; border-radius: 50%; }
+.learning-shell .learning-undo { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 12px; border-radius: var(--radius-capsule); font-size: 12px; }
+
+.study-hero { position: relative; isolation: isolate; }
+.learning-word-header { display: flex; align-items: flex-end; justify-content: space-between; gap: 26px; width: min(760px, 100%); margin: 0 auto; }
+.learning-word-header__copy { min-width: 0; }
+.learning-word-header h1 { max-width: 100%; color: var(--learning-photo-primary); font-family: var(--font-learning-word); font-size: clamp(52px, 6vw, 88px); font-weight: 600; letter-spacing: -.05em; line-height: .98; overflow-wrap: break-word; word-break: normal; }
+.learning-word-header__phonetic { display: flex; align-items: center; gap: 12px; margin-top: 14px; color: var(--learning-photo-secondary); font-family: var(--font-learning-word); font-size: 18px; letter-spacing: -.02em; }
+.learning-word-header__actions { display: flex; align-items: center; gap: 8px; flex: 0 0 auto; padding-bottom: 2px; }
+.glass-audio-control, .glass-icon-button { display: inline-grid; place-items: center; }
+.learning-shell .glass-audio-control, .learning-shell .glass-icon-button { min-width: 46px; min-height: 46px; }
+.learning-shell .glass-audio-control { padding: 0 14px; border-radius: var(--radius-capsule); }
+.learning-shell .glass-icon-button { width: 46px; height: 46px; border-radius: 50%; }
+.learning-shell .glass-icon-button.is-selected {
+  --glass-fill: rgba(186, 222, 204, .25);
+  --glass-rim: rgba(205, 239, 219, .48);
+  --glass-specular: rgba(238, 255, 245, .38);
+  color: var(--learning-accent-strong);
+}
+
+.learning-stage--recall .learning-word-header { align-items: center; justify-content: center; padding-inline: 58px; text-align: center; }
+.learning-stage--recall .learning-word-header__copy { display: grid; justify-items: center; width: 100%; }
+.learning-stage--recall .learning-word-header__phonetic { justify-content: center; }
+.learning-stage--recall .learning-word-header__actions { position: absolute; right: 0; bottom: 0; }
+.learning-word-header--compact h1 { font-size: clamp(38px, 4.4vw, 60px); }
+.learning-word-header--compact .learning-word-header__phonetic { margin-top: 9px; font-size: 17px; }
+.learning-word-header--length-medium h1 { font-size: clamp(34px, 4vw, 52px); letter-spacing: -.04em; }
+.learning-word-header--length-long h1 { font-size: clamp(24px, 3.2vw, 42px); letter-spacing: -.04em; }
+.learning-word-header--length-very-long h1 { font-size: clamp(21px, 2.8vw, 36px); letter-spacing: -.045em; }
+.learning-recall__prompt { margin-top: clamp(38px, 7vh, 70px); text-align: center; }
+
+.learning-stage-actions { position: relative; width: min(720px, 100%); margin: 26px auto 0; }
+.bottom-action-dock__sentinel { display: block; width: 100%; height: 0; margin: 0; pointer-events: none; }
+.bottom-action-dock__edge { display: none; position: absolute; z-index: -1; top: -18px; right: -20px; left: -20px; height: 42px; background: linear-gradient(180deg, transparent, rgba(18, 26, 28, .24)); filter: blur(12px); opacity: .74; pointer-events: none; }
+.bottom-action-dock[data-scroll-overlap="true"] .bottom-action-dock__edge { display: block; }
+.bottom-action-dock__actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 8px; }
+.bottom-action-dock .button, .learning-stage-actions__expand { min-height: 48px; }
+.bottom-action-dock .button--ghost { border-color: transparent; color: var(--learning-photo-secondary); }
+.bottom-action-dock .button--ghost:hover:not(:disabled) { background: rgba(240, 248, 244, .1); color: var(--learning-photo-primary); }
+.learning-stage-actions__expand { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 0 17px; border-radius: var(--radius-capsule); color: var(--glass-ink); font-size: 13px; font-weight: 720; }
+.tinted-glass-primary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-width: 164px; min-height: 48px; padding: 0 22px; border-radius: var(--radius-capsule); --glass-fill: rgba(185, 239, 199, .38); --glass-rim: rgba(218, 255, 226, .52); --glass-highlight: rgba(255, 255, 255, .4); --glass-specular: rgba(255, 255, 255, .3); --glass-shadow-color: rgba(2, 12, 6, .24); color: #123b28; font-size: 15px; font-weight: 760; text-shadow: 0 1px 0 rgba(255, 255, 255, .26); }
+.tinted-glass-primary:hover:not(:disabled) { --glass-fill: rgba(198, 245, 209, .48); }
+.tinted-glass-primary[data-press-state="pressed"] { --glass-fill: rgba(182, 236, 197, .52); }
+
+/* Only reading content gets a short arrival cue; the Hero, chrome and photo
+   remain spatially anchored while the Study state machine settles. */
+.learning-stage:not(.learning-stage--recall):not(.learning-stage--transitioning) .learning-reading-surface { animation: learning-reading-surface-enter 180ms cubic-bezier(.16, 1, .3, 1) both; }
+@keyframes learning-reading-surface-enter { from { opacity: .72; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
+
+.learning-help__intro { margin-top: 9px; color: var(--learning-ink-soft); font-size: 13px; line-height: 1.55; }
+
+@media (max-width: 700px) {
+  .learning-topbar { grid-template-columns: 46px minmax(0, 1fr) auto; gap: 9px; }
+  .study-session-chrome__status { gap: 7px; }
+  .study-session-chrome__actions { gap: 5px; }
+  .learning-shell .study-session-chrome .glass-icon-button { width: 44px; height: 44px; }
+  .learning-shell .learning-undo { min-width: 44px; min-height: 40px; padding: 0 10px; }
+  .learning-undo svg { display: none; }
+  .learning-word-header { align-items: flex-end; gap: 14px; }
+  .learning-word-header h1 { font-size: clamp(40px, 11vw, 58px); }
+  .learning-word-header__phonetic { margin-top: 12px; font-size: 16px; }
+  .learning-word-header__actions { gap: 6px; }
+  .learning-shell .glass-audio-control, .learning-shell .glass-icon-button { min-width: 44px; min-height: 44px; }
+  .learning-shell .glass-icon-button { width: 44px; height: 44px; }
+  .learning-shell .glass-audio-control { padding-inline: 12px; }
+  .learning-stage--recall .learning-word-header { padding-inline: 54px; }
+  .learning-word-header--compact h1 { font-size: clamp(34px, 9vw, 48px); }
+  .learning-word-header--compact .learning-word-header__phonetic { font-size: 16px; }
+  .learning-word-header--compact.learning-word-header--length-medium h1 { font-size: clamp(30px, 7.4vw, 42px); }
+  .learning-word-header--compact.learning-word-header--length-long h1 { font-size: clamp(24px, 6.2vw, 36px); }
+  .learning-word-header--compact.learning-word-header--length-very-long h1 { font-size: clamp(21px, 5.6vw, 32px); }
+  .learning-stage:not(.learning-stage--recall) .learning-word-header--length-very-long { flex-wrap: wrap; }
+  .learning-stage:not(.learning-stage--recall) .learning-word-header--length-very-long .learning-word-header__copy { flex: 1 1 100%; }
+  .learning-stage:not(.learning-stage--recall) .learning-word-header--length-very-long .learning-word-header__actions { margin-left: auto; padding-top: 8px; }
+  .bottom-action-dock { width: 100%; margin-top: 24px; padding-bottom: max(4px, env(safe-area-inset-bottom, 0px)); }
+  .bottom-action-dock__actions { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); width: 100%; gap: 6px; }
+  .bottom-action-dock__actions > .tinted-glass-primary { grid-column: 1 / -1; grid-row: 1; width: 100%; }
+  .bottom-action-dock__actions > .learning-stage-actions__secondary { grid-row: 2; }
+  .bottom-action-dock__actions > .learning-stage-actions__expand { grid-row: 2; width: 100%; }
+  .bottom-action-dock__actions > .button--ghost { justify-self: stretch; }
+  .learning-stage-actions__expand { padding-inline: 12px; }
+  .tinted-glass-primary { min-height: 50px; }
+}
+
+@media (max-width: 390px) {
+  .learning-word-header__actions { gap: 4px; }
+  .learning-stage--recall .learning-word-header { padding-inline: 51px; }
+  .learning-topbar { gap: 6px; }
+  .study-session-chrome__status-line { gap: 8px; }
+  .bottom-action-dock__actions { gap: 5px; }
+  .learning-stage-actions__expand { font-size: 12px; }
+}
+
+@media (min-width: 701px) {
+  .bottom-action-dock--sticky { position: sticky; bottom: 0; z-index: 4; padding-bottom: max(10px, env(safe-area-inset-bottom, 0px)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .learning-stage:not(.learning-stage--recall):not(.learning-stage--transitioning) .learning-reading-surface { animation: none; }
+  .bottom-action-dock__edge { filter: none; }
+}
+
+:root[data-reduced-motion="true"] .learning-stage:not(.learning-stage--recall):not(.learning-stage--transitioning) .learning-reading-surface { animation: none; }
+
+@media (prefers-contrast: more), (forced-colors: active) {
+  .bottom-action-dock__edge { display: none !important; }
+}

@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { HelpCircle, Undo2, X } from 'lucide-react'
+import { X } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { useApp } from '@/app/providers'
 import { EmptyState } from '@/components/States'
-import { IconButton } from '@/components/ui'
+import { GlassIconButton } from '@/design-system/glass/GlassControls'
 import { ApplePressable } from '@/design-system/components'
 import { createSession, finishSession, getCardsByIds, getQueue, getWordsByIds, recordReview, toggleStar, undoLastReview } from '@/db/db'
 import { scheduleCard } from '@/lib/fsrs'
@@ -19,6 +19,7 @@ import {
   MeaningStage,
   RecognitionActions,
 } from '@/features/study/LearningStages'
+import { StudySessionChrome } from '@/features/study/StudySessionChrome'
 import {
   hasLearningDetails,
   nextLearningState,
@@ -228,7 +229,7 @@ export function Study({ mode, onComplete }: StudyProps) {
     <div className={shellClass} data-learning-mode={mode} data-learning-state={presentation}>
       <LearningAtmosphere />
       <div className="learning-shell__inner">
-        {items.length > 0 && <LearningTopbar modeLabel={modeLabel} progress={progress} index={index} total={items.length} completed={completed} canUndo={ratedStack.length > 0} onUndo={() => void undo()} onHelp={() => setShowHelp(true)} onExit={() => navigate('/')} />}
+        {items.length > 0 && <StudySessionChrome modeLabel={modeLabel} progress={progress} index={index} total={items.length} completed={completed} canUndo={ratedStack.length > 0} onUndo={() => void undo()} onHelp={() => setShowHelp(true)} onExit={() => navigate('/')} />}
         {completed ? (
           <LearningComplete mode={mode} count={items.length} onUndo={ratedStack.length ? () => void undo() : undefined} onContinue={onComplete} onAgain={resetRound} onHome={() => navigate('/')} />
         ) : current ? (
@@ -237,7 +238,7 @@ export function Study({ mode, onComplete }: StudyProps) {
             {presentation === 'context' && recognition && <ContextStage word={current.word} choice={recognition} starred={current.card.starred} onSpeak={() => speakWord(current.word.word, settings.pronunciation)} onToggleStar={() => void toggleCurrentStar()} onBack={() => { setRecognition(null); setPresentation('recall') }} onContinue={() => setPresentation('meaning')} />}
             {presentation === 'meaning' && recognition && <MeaningStage word={current.word} starred={current.card.starred} onSpeak={() => speakWord(current.word.word, settings.pronunciation)} onToggleStar={() => void toggleCurrentStar()} onBack={() => { setRecognition(null); setPresentation('recall') }} onExpand={() => setPresentation('detail')} onConfirm={() => void rate()} />}
             {presentation === 'detail' && recognition && <DetailStage word={current.word} starred={current.card.starred} onSpeak={() => speakWord(current.word.word, settings.pronunciation)} onToggleStar={() => void toggleCurrentStar()} onBack={() => setPresentation('meaning')} onConfirm={() => void rate()} />}
-            {presentation === 'transitioning' && <TransitionStage word={current.word} nextWord={items[index + 1]?.word} />}
+            {presentation === 'transitioning' && <TransitionStage word={current.word} nextWord={items[index + 1]?.word} starred={current.card.starred} onSpeak={() => speakWord(current.word.word, settings.pronunciation)} onToggleStar={() => void toggleCurrentStar()} />}
           </>
         ) : (
           <LearningEmpty mode={mode} onExit={() => navigate('/')} />
@@ -267,9 +268,10 @@ function RecallStage({ item, recognition, disabled, onChoose, onSpeak, onToggleS
   )
 }
 
-function TransitionStage({ word, nextWord }: { word: Word; nextWord?: Word }) {
+function TransitionStage({ word, nextWord, starred, onSpeak, onToggleStar }: { word: Word; nextWord?: Word; starred: boolean; onSpeak: () => void; onToggleStar: () => void }) {
   return (
     <section className="learning-stage learning-stage--transitioning" aria-live="polite">
+      <LearningWordHeader word={word} starred={starred} compact onSpeak={onSpeak} onToggleStar={onToggleStar} />
       <div className="learning-transition-words">
         <span className="learning-transition-word learning-transition-word--current">{word.word}</span>
         {nextWord && <span className="learning-transition-word learning-transition-word--next">{nextWord.word}</span>}
@@ -279,35 +281,19 @@ function TransitionStage({ word, nextWord }: { word: Word; nextWord?: Word }) {
   )
 }
 
-function LearningTopbar({ modeLabel, progress, index, total, completed, canUndo, onUndo, onHelp, onExit }: { modeLabel: string; progress: number; index: number; total: number; completed: boolean; canUndo: boolean; onUndo: () => void; onHelp: () => void; onExit: () => void }) {
-  return (
-    <header className="learning-topbar">
-      <IconButton label="退出学习" onClick={onExit}><X size={19} /></IconButton>
-      <div className="learning-progress" aria-label={`${modeLabel}进度`}>
-        <span className="learning-progress__mode">{modeLabel}</span>
-        <div className="learning-progress__track" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={progress}><span style={{ width: `${progress}%` }} /></div>
-        <span className="learning-progress__count">{completed ? '完成' : `${index + 1} / ${total}`}</span>
-      </div>
-      <div className="learning-topbar__actions">
-        {canUndo && <ApplePressable type="button" className="learning-undo" onClick={onUndo}><Undo2 size={15} /> 撤销</ApplePressable>}
-        <IconButton label="查看键盘帮助" onClick={onHelp}><HelpCircle size={19} /></IconButton>
-      </div>
-    </header>
-  )
-}
-
 function LearningHelp({ onClose }: { onClose: () => void }) {
   return (
     <div className="learning-help-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose() }}>
       <section className="learning-help" role="dialog" aria-modal="true" aria-labelledby="learning-help-title">
-        <div className="learning-help__header"><div><p className="learning-section-kicker">Keyboard</p><h2 id="learning-help-title">用键盘保持节奏</h2></div><IconButton label="关闭键盘帮助" onClick={onClose}><X size={18} /></IconButton></div>
+        <div className="learning-help__header"><div><p className="learning-section-kicker">学习操作</p><h2 id="learning-help-title">保持学习节奏</h2><p className="learning-help__intro">触控、鼠标和键盘都可以完成全部学习操作。</p></div><GlassIconButton label="关闭学习操作帮助" variant="regular" onClick={onClose}><X size={18} /></GlassIconButton></div>
         <dl className="learning-help__list">
+          <div><dt>点击 / 轻触</dt><dd>选择、继续或展开内容。</dd></div>
           <div><dt>1 · 认识</dt><dd>能说出大意。</dd></div>
           <div><dt>2 · 模糊</dt><dd>见过，但还不够稳。</dd></div>
           <div><dt>3 · 不认识</dt><dd>需要重新建立记忆。</dd></div>
           <div><dt>Space / Enter</dt><dd>继续或展开</dd></div>
           <div><dt>Z</dt><dd>撤销上一词</dd></div>
-          <div><dt>P · S · Esc</dt><dd>发音 · 收藏 · 退出</dd></div>
+          <div><dt>P · S · Esc</dt><dd>发音 · 重点标记 · 退出</dd></div>
         </dl>
       </section>
     </div>

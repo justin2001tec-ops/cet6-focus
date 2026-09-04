@@ -1,0 +1,15 @@
+{
+  "version": "v1.6-r1",
+  "status": "PASS",
+  "principles": [
+    { "id": "purpose-over-effect", "status": "PASS", "evidence": "Meaning stays the semantic reading layer; Glass is limited to functional controls." },
+    { "id": "directness", "status": "PASS", "evidence": "Single-item More path removed; Expand is directly available." },
+    { "id": "material-continuity", "status": "PASS", "evidence": "Study controls use one Regular family role." },
+    { "id": "quiet", "status": "PASS", "evidence": "Neutral scene-adaptive Glass; mint reserved for primary/selected states." },
+    { "id": "spatial-continuity", "status": "PASS", "evidence": "Whole learning stage animation removed; Hero/session/background anchors remain stable." },
+    { "id": "input-appropriateness", "status": "PASS", "evidence": "Touch origin and differentiated pen/mouse feedback are exercised in the contract." },
+    { "id": "conditionality", "status": "PASS", "evidence": "Scroll Edge appears only under actual sticky overlap." },
+    { "id": "accessibility", "status": "PASS", "evidence": "Generic Help semantics, circular icon geometry, reduced-motion, contrast, and focus regressions." }
+  ],
+  "frozen": ["Meaning non-Glass content", "FSRS", "ReviewLog", "Context/Vocabulary data", "DB", "PWA", "Home", "Settings", "background assets"]
+}
