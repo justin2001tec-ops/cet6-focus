@@ -1,0 +1,17 @@
+{
+  "version": "v1.6-r1",
+  "status": "PASS",
+  "profiles": {
+    "mouse": { "intensity": 0.55, "behavior": "rAF-throttled pointer-follow" },
+    "pen": { "intensity": 0.8, "behavior": "middle-weight pointer-follow" },
+    "touch": { "intensity": 1, "behavior": "pointerdown origin; pointermove does not follow" }
+  },
+  "checks": [
+    { "name": "touch origin remains stable", "status": "PASS", "evidence": "R1 contract dispatches touch down then move and compares --glass-light-x" },
+    { "name": "mouse pointer-follow is throttled", "status": "PASS", "evidence": "R1 contract observes non-center CSS light after a mouse move and GlassSurface rAF path" },
+    { "name": "reduced motion", "status": "PASS", "evidence": "existing motion/readability reduced-motion regression remains green" },
+    { "name": "press feedback is bounded", "status": "PASS", "evidence": "profile-specific scale only; reduced motion removes transform" },
+    { "name": "stage continuity", "status": "PASS", "evidence": "stage animation disabled; reading surface owns short arrival cue" },
+    { "name": "Meaning has no motion primitive", "status": "PASS", "evidence": "reading surface has no pointer events or Glass light variables" }
+  ]
+}

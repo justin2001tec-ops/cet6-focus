@@ -21,6 +21,14 @@ import { ApplePressable } from '@/design-system/components'
 import type { Background } from '@/config/backgrounds'
 import { useNavigationMotion } from '@/design-system/motion/navigation-motion'
 
+function getStudySceneTone(background: Background | null): 'bright' | 'dark' | 'textured' | 'medium' | 'plain' {
+  if (!background) return 'plain'
+  if (background.id === 'stars-02') return 'dark'
+  if (background.category.includes('极光')) return 'textured'
+  if (background.category.includes('水景')) return 'medium'
+  return 'bright'
+}
+
 const desktopNav = [
   { to: '/', label: '今日', icon: Home, end: true },
   { to: '/learn', label: '学习', icon: BookOpen },
@@ -135,8 +143,8 @@ export function AppShell() {
   }, [])
 
   return (
-      <div className={`app-frame ${background ? 'app-frame--with-background' : 'app-frame--plain'} ${isImmersiveHome ? 'app-frame--immersive-home' : ''} ${isLearningRoute ? 'app-frame--learning' : ''} ${keyboardInputFocused ? 'app-frame--keyboard-input' : ''}`}>
-      <div className="app-background" aria-hidden="true" data-background-layer-count={backgroundLayers.length} data-background-active-id={backgroundLayers.at(-1)?.id ?? ''} data-background-generation={backgroundGenerationRef.current} data-background-transition={backgroundTransition?.phase ?? 'settled'}>
+      <div className={`app-frame ${background ? 'app-frame--with-background' : 'app-frame--plain'} ${isImmersiveHome ? 'app-frame--immersive-home' : ''} ${isLearningRoute ? 'app-frame--learning' : ''} ${keyboardInputFocused ? 'app-frame--keyboard-input' : ''}`} data-study-scene-tone={getStudySceneTone(background)}>
+      <div className="app-background" aria-hidden="true" data-study-scene-tone={getStudySceneTone(background)} data-background-layer-count={backgroundLayers.length} data-background-active-id={backgroundLayers.at(-1)?.id ?? ''} data-background-generation={backgroundGenerationRef.current} data-background-transition={backgroundTransition?.phase ?? 'settled'}>
         {backgroundLayers.map((layer, index) => {
           const active = index === backgroundLayers.length - 1
           const entering = active && backgroundTransition?.phase === 'entering'

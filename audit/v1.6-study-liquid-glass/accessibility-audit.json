@@ -1,0 +1,16 @@
+{
+  "version": "v1.6",
+  "status": "PASS",
+  "checks": [
+    { "name": "keyboard focus", "status": "PASS", "evidence": "full E2E motion/readability focus assertions" },
+    { "name": "aria labels and direct actions", "status": "PASS", "evidence": "v1.6 R1 Study/Glass contract: direct Expand and generic Help" },
+    { "name": "reduced motion", "status": "PASS", "evidence": "v1.6 screenshot plus existing motion suite" },
+    { "name": "reduced transparency fallback", "status": "PASS", "evidence": "Glass CSS media fallback" },
+    { "name": "forced colors", "status": "PASS", "evidence": "existing readability high-contrast assertions" },
+    { "name": "prefers-contrast: more", "status": "PASS", "evidence": "existing readability assertions and v1.6 screenshot" },
+    { "name": "reading content remains stable", "status": "PASS", "evidence": "reading surface has no backdrop filter, pointer light, or Glass attributes" },
+    { "name": "input modality feedback", "status": "PASS", "evidence": "touch origin and mouse rAF pointer-follow assertions" },
+    { "name": "conditional scroll edge", "status": "PASS", "evidence": "inactive Meaning and active sticky Detail assertions" }
+  ],
+  "contrastRule": "mint is restricted to Continue, kicker, semantic selection, and selected Bookmark; text remains on stable reading material"
+}

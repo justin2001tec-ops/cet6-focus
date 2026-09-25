@@ -1,0 +1,16 @@
+{
+  "version": "v1.6-r1",
+  "status": "PASS",
+  "implementation": {
+    "observer": "IntersectionObserver with dock-height rootMargin and ResizeObserver rebuild",
+    "geometry": "sticky bottom dock plus zero-height sentinel exclusion-zone check",
+    "inactiveValue": "data-scroll-overlap=false",
+    "activeValue": "data-scroll-overlap=true"
+  },
+  "checks": [
+    { "name": "Meaning inactive", "status": "PASS", "evidence": "non-sticky Meaning dock reports false and renders no edge" },
+    { "name": "Detail active", "status": "PASS", "evidence": "1112x834 sticky Detail fixture reports true only while sentinel is under dock" },
+    { "name": "bottom-of-document reset", "status": "PASS", "evidence": "edge is not inferred from reaching document bottom; it requires physical sticky overlap" },
+    { "name": "accessibility fallback", "status": "PASS", "evidence": "contrast/forced-colors hide decorative edge" }
+  ]
+}

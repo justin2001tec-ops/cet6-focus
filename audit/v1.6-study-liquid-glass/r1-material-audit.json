@@ -1,0 +1,18 @@
+{
+  "version": "v1.6-r1",
+  "status": "PASS",
+  "family": {
+    "studyFunctionalRole": "regular",
+    "clearRole": "available for compact non-Study consumers",
+    "expandedRole": "reserved; no single-item More surface",
+    "sceneAdaptation": "neutral fill/rim/ink/shadow variables keyed to coarse scene tone"
+  },
+  "checks": [
+    { "name": "all Study Glass controls use Regular", "status": "PASS", "evidence": "audio, Bookmark, Close, Help, Undo, and direct Expand DOM variants" },
+    { "name": "Bookmark variant is stable", "status": "PASS", "evidence": "selected/unselected state changes aria-pressed, icon fill, and tint only" },
+    { "name": "primary tint is selective", "status": "PASS", "evidence": "Continue fill differs from neutral Audio/Expand control family" },
+    { "name": "no global green-glass bias", "status": "PASS", "evidence": "Glass primitive defaults to neutral scene-adaptive colors" },
+    { "name": "one physical rim", "status": "PASS", "evidence": "GlassSurface has one border; ::after has no border and only localized refraction" },
+    { "name": "Meaning remains non-Glass", "status": "PASS", "evidence": "no Glass attributes, backdrop-filter, or pointer light on reading surface" }
+  ]
+}
