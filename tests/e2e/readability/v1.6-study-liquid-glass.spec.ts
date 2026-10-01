@@ -143,7 +143,12 @@ test('v1.6 Continue preserves tinted Glass identity on hover', async ({ page }, 
     probe.remove()
     return colors
   })
+  await expect.poll(async () => {
+    const colors = await readColors()
+    return !colors.hovered && colors.background === colors.fill
+  }).toBe(true)
   const idle = await readColors()
+  expect(idle.hovered).toBe(false)
   expect(idle.background).toBe(idle.fill)
   await continueButton.hover()
   await expect.poll(async () => {
