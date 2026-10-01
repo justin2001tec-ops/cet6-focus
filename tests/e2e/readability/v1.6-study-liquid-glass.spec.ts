@@ -119,6 +119,53 @@ test('v1.6 R1 Study controls use one material family while Meaning stays semanti
   expect(pageErrors, pageErrors.join('\n')).toHaveLength(0)
 })
 
+test('v1.6 Continue preserves tinted Glass identity on hover', async ({ page }, testInfo) => {
+  await openFixtureMeaning(page, testInfo.project.name)
+  const continueButton = page.getByRole('button', { name: '继续', exact: true })
+  await expect(continueButton).toBeVisible()
+  await page.mouse.move(0, 0)
+  const readColors = () => continueButton.evaluate((button) => {
+    const style = getComputedStyle(button)
+    const probe = document.createElement('span')
+    probe.hidden = true
+    button.parentElement!.append(probe)
+    const resolve = (value: string) => {
+      probe.style.backgroundColor = value
+      return getComputedStyle(probe).backgroundColor
+    }
+    const colors = {
+      background: style.backgroundColor,
+      fill: resolve(style.getPropertyValue('--glass-fill')),
+      genericPrimary: resolve(style.getPropertyValue('--accent-strong')),
+      text: style.color,
+      hovered: button.matches(':hover'),
+    }
+    probe.remove()
+    return colors
+  })
+  await expect.poll(async () => {
+    const colors = await readColors()
+    return !colors.hovered && colors.background === colors.fill
+  }).toBe(true)
+  const idle = await readColors()
+  expect(idle.hovered).toBe(false)
+  expect(idle.background).toBe(idle.fill)
+  await continueButton.hover()
+  await expect.poll(async () => {
+    const colors = await readColors()
+    return colors.hovered && colors.background === colors.fill
+  }).toBe(true)
+  const hover = await readColors()
+  expect(hover.hovered).toBe(true)
+  expect(hover.background).toBe(hover.fill)
+  expect(hover.background).not.toBe(hover.genericPrimary)
+  expect(hover.background).not.toBe('rgb(29, 85, 70)')
+  expect(hover.text).toBe(idle.text)
+  expect(hover.text).toBe('rgb(18, 59, 40)')
+  await testInfo.attach('Continue hover computed colors', { body: JSON.stringify({ idle, hover }, null, 2), contentType: 'application/json' })
+  await testInfo.attach('Continue hover', { body: await page.screenshot({ fullPage: true }), contentType: 'image/png' })
+})
+
 test('v1.6 R1 Study Meaning captures the scene, input, and accessibility matrix', async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== 'chromium', 'Chromium scene capture is the audit source of truth')
   await mkdir(auditScreenshots, { recursive: true })

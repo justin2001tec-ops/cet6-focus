@@ -142,7 +142,7 @@
 .bottom-action-dock .button--ghost:hover:not(:disabled) { background: rgba(240, 248, 244, .1); color: var(--learning-photo-primary); }
 .learning-stage-actions__expand { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 0 17px; border-radius: var(--radius-capsule); color: var(--glass-ink); font-size: 13px; font-weight: 720; }
 .tinted-glass-primary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-width: 164px; min-height: 48px; padding: 0 22px; border-radius: var(--radius-capsule); --glass-fill: rgba(185, 239, 199, .38); --glass-rim: rgba(218, 255, 226, .52); --glass-highlight: rgba(255, 255, 255, .4); --glass-specular: rgba(255, 255, 255, .3); --glass-shadow-color: rgba(2, 12, 6, .24); color: #123b28; font-size: 15px; font-weight: 760; text-shadow: 0 1px 0 rgba(255, 255, 255, .26); }
-.tinted-glass-primary:hover:not(:disabled) { --glass-fill: rgba(198, 245, 209, .48); }
+.tinted-glass-primary:hover:not(:disabled) { --glass-fill: rgba(198, 245, 209, .48); background: var(--glass-fill); }
 .tinted-glass-primary[data-press-state="pressed"] { --glass-fill: rgba(182, 236, 197, .52); }
 
 /* Only reading content gets a short arrival cue; the Hero, chrome and photo
